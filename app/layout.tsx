@@ -4,6 +4,7 @@ import type { ReactNode } from 'react';
 
 import { SkipLink } from '@/components/layout/SkipLink';
 import { ServiceWorkerRegistration } from '@/components/pwa/ServiceWorkerRegistration';
+import { publicAsset } from '@/lib/asset';
 import { t } from '@/lib/content/ui';
 import { SessionProvider } from '@/lib/session/SessionProvider';
 import { siteUrl } from '@/lib/site';
@@ -19,9 +20,6 @@ const lexend = localFont({
   variable: '--font-lexend',
   fallback: ['ui-sans-serif', 'system-ui', 'sans-serif'],
 });
-
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
-const publicAsset = (path: string) => `${basePath}${path}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

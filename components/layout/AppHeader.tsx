@@ -16,7 +16,7 @@ export function AppHeader({ back }: Props) {
     <header className="sticky top-0 z-20 border-b border-line/70 bg-background/90 backdrop-blur-md">
       <PageContainer className="flex h-16 items-center justify-between gap-3">
         <Link href="/" className="rounded-xl" aria-label={`${t('appName')}: início`}>
-          <Brand />
+          <Brand className="h-9 sm:h-10" />
         </Link>
         {back ? (
           <Link

@@ -25,8 +25,18 @@ export default function manifest(): MetadataRoute.Manifest {
     background_color: brand.backgroundColor,
     categories: ['education', 'kids'],
     icons: [
-      { src: publicAsset('/icons/icon-192.png'), sizes: '192x192', type: 'image/png', purpose: 'any' },
-      { src: publicAsset('/icons/icon-512.png'), sizes: '512x512', type: 'image/png', purpose: 'any' },
+      {
+        src: publicAsset('/icons/icon-192.png'),
+        sizes: '192x192',
+        type: 'image/png',
+        purpose: 'any',
+      },
+      {
+        src: publicAsset('/icons/icon-512.png'),
+        sizes: '512x512',
+        type: 'image/png',
+        purpose: 'any',
+      },
       {
         src: publicAsset('/icons/icon-maskable-512.png'),
         sizes: '512x512',
