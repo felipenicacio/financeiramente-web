@@ -1,34 +1,25 @@
 {
   "brand": "Econominho",
-  "source": "econominho-assets-v1 (identidade e personagem aprovados)",
+  "source": "Assets individuais aprovados — pasta Google Drive Econominho (2026-10-03)",
   "character": {
-    "default": "/econominho/character/feliz.png",
-    "ask": "/econominho/character/curioso.png",
-    "discover": "/econominho/character/surpreso.png",
-    "compare": "/econominho/character/atencao.png",
-    "consequence": "/econominho/character/explicando.png",
-    "summary": "/econominho/character/feliz.png",
-    "reflect": "/econominho/character/pensando.png",
-    "fullbody": "/econominho/character/fullbody.png"
-  },
-  "poses": {
-    "apresentacao": "/econominho/character/pose-apresentacao.png",
-    "comparando": "/econominho/character/pose-comparando.png",
-    "mostrando-ideia": "/econominho/character/pose-mostrando-ideia.png",
-    "com-lupa": "/econominho/character/pose-com-lupa.png",
-    "com-tablet": "/econominho/character/pose-com-tablet.png",
-    "lendo": "/econominho/character/pose-lendo.png",
-    "pensando": "/econominho/character/pose-pensando.png",
-    "comemorando": "/econominho/character/pose-comemorando.png"
+    "default": "/econominho/character/fullbody-v2.png",
+    "ask": "/econominho/character/pensando-v2.png",
+    "discover": "/econominho/character/descoberta-v2.png",
+    "compare": "/econominho/character/comparando-v2.png",
+    "consequence": "/econominho/character/explicando-v2.png",
+    "summary": "/econominho/character/feliz-v2.png",
+    "reflect": "/econominho/character/pensando-v2.png",
+    "reading": "/econominho/character/lendo-v2.png",
+    "fullbody": "/econominho/character/fullbody-v2.png"
   },
   "themes": {
-    "m01": "/econominho/themes/m01_escolhas.png",
-    "m02": "/econominho/themes/m02_dinheiro_preco.png",
-    "m03": "/econominho/themes/m03_publicidade.png",
-    "m04": "/econominho/themes/m04_trabalho_renda.png"
+    "m01": "/econominho/character/comparando-v2.png",
+    "m02": "/econominho/character/explicando-v2.png",
+    "m03": "/econominho/character/descoberta-v2.png",
+    "m04": "/econominho/character/lendo-v2.png"
   },
   "brandAssets": {
-    "wordmark": "/econominho/logo/wordmark.png",
+    "wordmark": "/econominho/logo/wordmark-v2.png",
     "monogram": "/econominho/logo/icon.svg"
   }
 }
