@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 
+import { EconominhoGuide } from '@/components/econominho/EconominhoGuide';
 import { Button } from '@/components/ui/Button';
 import { t } from '@/lib/content/ui';
 
@@ -39,6 +40,9 @@ export function QuizStep({ bundle }: StepProps) {
         </Button>
       }
     >
+      {index === 0 ? (
+        <EconominhoGuide state={module.guide.quiz.state} text={module.guide.quiz.text} />
+      ) : null}
       <QuizQuestion
         key={question.id}
         question={question}

@@ -8,6 +8,7 @@ import { DoneStep } from './DoneStep';
 import { QuizStep } from './QuizStep';
 import { SimulationStep } from './SimulationStep';
 import { StoryStep } from './StoryStep';
+import type { LessonNav } from './types';
 
 const steps = {
   story: StoryStep,
@@ -16,10 +17,21 @@ const steps = {
   simulation: SimulationStep,
   quiz: QuizStep,
   done: DoneStep,
-} satisfies Record<LessonStepId, (props: { bundle: ModuleBundle }) => React.ReactNode>;
+} satisfies Record<
+  LessonStepId,
+  (props: { bundle: ModuleBundle; nav?: LessonNav }) => React.ReactNode
+>;
 
 /** Renderiza a etapa pedida. Estado de cada etapa vive só em memória. */
-export function LessonStep({ step, bundle }: { step: LessonStepId; bundle: ModuleBundle }) {
+export function LessonStep({
+  step,
+  bundle,
+  nav,
+}: {
+  step: LessonStepId;
+  bundle: ModuleBundle;
+  nav: LessonNav;
+}) {
   const Step = steps[step];
-  return <Step bundle={bundle} />;
+  return <Step bundle={bundle} nav={nav} />;
 }
