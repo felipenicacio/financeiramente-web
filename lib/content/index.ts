@@ -1,8 +1,12 @@
-import { catalogSchema, validateModuleBundle } from '@/lib/validation/contentSchemas';
+import {
+  catalogSchema,
+  cycleSummarySchema,
+  validateModuleBundle,
+} from '@/lib/validation/contentSchemas';
 import type { ValidationIssue } from '@/lib/validation/schema';
 
-import { rawCatalog, rawModules } from './registry';
-import type { Catalog, CycleEntry, CycleId, Journey, ModuleBundle } from './types';
+import { rawCatalog, rawCycleSummaries, rawModules } from './registry';
+import type { Catalog, CycleEntry, CycleId, CycleSummary, Journey, ModuleBundle } from './types';
 
 export type LoadResult<T> = { ok: true; data: T } | { ok: false; issues: ValidationIssue[] };
 
@@ -61,6 +65,33 @@ export function availableModules(): { cycle: CycleId; moduleId: string; journeyI
 }
 
 export { t } from './ui';
+
+export function loadCycleSummary(cycle: string): LoadResult<CycleSummary> | null {
+  const raw = rawCycleSummaries[cycle];
+  if (!raw) return null;
+  return memo(`cycle:${cycle}`, () => {
+    const issues = cycleSummarySchema(raw, `${cycle}/cycle.json`);
+    if (issues.length > 0) {
+      reportIssues(`${cycle}/cycle.json`, issues);
+      return { ok: false, issues };
+    }
+    return { ok: true, data: raw as CycleSummary };
+  });
+}
+
+/** Módulos publicados de um ciclo, na ordem do catálogo. */
+export function cycleModules(cycle: string): string[] {
+  return availableModules()
+    .filter((entry) => entry.cycle === cycle)
+    .map((entry) => entry.moduleId);
+}
+
+/** Próximo módulo publicado do mesmo ciclo, ou null se este for o último. */
+export function nextModuleId(cycle: string, moduleId: string): string | null {
+  const ids = cycleModules(cycle);
+  const index = ids.indexOf(moduleId);
+  return index >= 0 && index < ids.length - 1 ? (ids[index + 1] ?? null) : null;
+}
 
 export function findCycle(catalog: Catalog, cycle: string): CycleEntry | undefined {
   return catalog.cycles.find((entry) => entry.id === cycle);
