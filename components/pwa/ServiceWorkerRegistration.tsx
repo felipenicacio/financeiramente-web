@@ -6,18 +6,18 @@ import { t } from '@/lib/content/ui';
 
 /**
  * Registra o service worker (public/sw.js) em produção.
- *
- * Estratégia de atualização (docs/architecture.md#pwa):
- * - páginas são buscadas primeiro na rede; o cache só é usado sem conexão;
- * - quando um deploy publica um sw.js novo, ele fica "em espera" e um aviso
- *   discreto oferece "Atualizar". Ao tocar, o novo worker assume e a página
- *   recarrega. Sem toque, a troca acontece na próxima abertura do site.
+ * Compatível tanto com raiz de domínio (Cloudflare Pages) quanto com
+ * subcaminho do GitHub Pages via NEXT_PUBLIC_BASE_PATH.
  */
 export function ServiceWorkerRegistration() {
   const [waiting, setWaiting] = useState<ServiceWorker | null>(null);
 
   useEffect(() => {
     if (process.env.NODE_ENV !== 'production' || !('serviceWorker' in navigator)) return;
+
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+    const workerUrl = `${basePath}/sw.js`;
+    const scope = `${basePath || ''}/`;
 
     let reloading = false;
     const onControllerChange = () => {
@@ -27,7 +27,7 @@ export function ServiceWorkerRegistration() {
     };
 
     navigator.serviceWorker
-      .register('/sw.js', { scope: '/', updateViaCache: 'none' })
+      .register(workerUrl, { scope, updateViaCache: 'none' })
       .then((registration) => {
         const track = (worker: ServiceWorker | null) => {
           if (!worker) return;
