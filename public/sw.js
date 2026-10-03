@@ -12,7 +12,12 @@ const MAX_ENTRIES = { [PAGES]: 60, [STATIC]: 150, [ASSETS]: 40 };
 const scopePath = new URL(self.registration.scope).pathname.replace(/\/$/, '');
 const BASE = scopePath === '' ? '' : scopePath;
 const atBase = (path) => `${BASE}${path}`;
-const PRECACHE = [atBase('/'), atBase('/idade/'), atBase('/manifest.webmanifest'), atBase('/icons/icon-192.png')];
+const PRECACHE = [
+  atBase('/'),
+  atBase('/idade/'),
+  atBase('/manifest.webmanifest'),
+  atBase('/icons/icon-192.png'),
+];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(

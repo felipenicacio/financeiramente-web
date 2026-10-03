@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="#0F172A"/><ellipse cx="9" cy="23" rx="4.5" ry="2.6" fill="#14B8A6"/><ellipse cx="16" cy="17" rx="4.5" ry="2.6" fill="#FB7185"/><ellipse cx="23" cy="11" rx="4.5" ry="2.6" fill="#F59E0B"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+<title id="title">Ícone Econominho</title>
+<rect width="256" height="256" rx="58" fill="#0B3B75"/>
+<g fill="#FFC83D">
+  <rect x="78" y="24" width="14" height="40" rx="7" transform="rotate(-28 85 44)"/>
+  <rect x="121" y="16" width="14" height="44" rx="7"/>
+  <rect x="164" y="24" width="14" height="40" rx="7" transform="rotate(28 171 44)"/>
+  <path d="M78 82h101v31h-63v24h55v29h-55v27h66v31H78z"/>
+</g>
+</svg>
