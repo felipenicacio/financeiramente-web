@@ -1,0 +1,39 @@
+{
+  "kind": "budget",
+  "title": "O passeio de sábado",
+  "intro": "A família do Caio separou {budget} para o passeio. Escolha o que entra. No próximo passeio, a família separa {nextBudget} de novo.",
+  "budget": 30,
+  "nextBudget": 30,
+  "nextLabel": "No próximo passeio",
+  "items": [
+    {
+      "id": "snack",
+      "label": "Lanche no parque",
+      "cost": 10,
+      "illustration": "item-bread"
+    },
+    {
+      "id": "boat",
+      "label": "Passeio de barquinho",
+      "cost": 15,
+      "illustration": "item-boat"
+    },
+    {
+      "id": "icecream",
+      "label": "Picolés",
+      "cost": 5,
+      "illustration": "item-icecream"
+    },
+    {
+      "id": "paints",
+      "label": "Kit de pintura",
+      "cost": 20,
+      "illustration": "item-paints",
+      "payLater": {
+        "now": 10,
+        "later": 10
+      }
+    }
+  ],
+  "wrapUp": "Cada escolha diminui o que sobra para as outras. E o que fica para pagar depois já tem destino."
+}

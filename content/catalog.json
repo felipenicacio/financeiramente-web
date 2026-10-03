@@ -4,14 +4,31 @@
       "id": "c1",
       "label": "Descoberta",
       "ageRange": "6 a 8 anos",
-      "description": "Escolhas do dia a dia, com histórias e muito apoio visual.",
+      "description": "Escolhas, preços, anúncios e trabalho, com histórias e muito apoio visual.",
       "status": "available",
       "journeys": [
         {
           "id": "escolhas-e-valor",
-          "title": "Descobrir escolhas e valor",
-          "description": "O que a gente precisa, o que a gente quer e o que pode esperar.",
-          "modules": [{ "id": "m01", "status": "available" }]
+          "title": "Escolhas, dinheiro e o dia a dia",
+          "description": "Escolher, entender preços, perceber anúncios e conhecer trabalho e renda.",
+          "modules": [
+            {
+              "id": "m01",
+              "status": "available"
+            },
+            {
+              "id": "m02",
+              "status": "available"
+            },
+            {
+              "id": "m03",
+              "status": "available"
+            },
+            {
+              "id": "m04",
+              "status": "available"
+            }
+          ]
         }
       ]
     },

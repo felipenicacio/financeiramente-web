@@ -1,0 +1,80 @@
+{
+  "id": "m03",
+  "cycle": "c1",
+  "journeyId": "escolhas-e-valor",
+  "stage": "Eu percebo o que influencia",
+  "title": "Publicidade e escolhas",
+  "headline": "Esse anúncio explica ou tenta convencer?",
+  "summary": "Um anúncio de brinquedo para perceber como cores, frases e personagens chamam a nossa atenção, e para pensar antes de escolher.",
+  "competencies": [
+    {
+      "code": "F-D2-C1-01",
+      "description": "Reconhecer que a publicidade busca influenciar escolhas."
+    }
+  ],
+  "sensitivity": "N1",
+  "objectives": [
+    "Reconhecer um anúncio.",
+    "Compreender que anúncios tentam chamar atenção.",
+    "Reconhecer técnicas simples de convencimento.",
+    "Distinguir informação de tentativa de convencimento.",
+    "Perceber a influência de cores, frases e personagens.",
+    "Compreender que querer algo depois de um anúncio é normal.",
+    "Pensar antes de fazer uma escolha."
+  ],
+  "centralMessage": "Um anúncio pode informar e também tentar convencer. Dá para perceber.",
+  "estimatedMinutes": 9,
+  "illustration": "module-ads",
+  "cta": "Vamos olhar de perto",
+  "guide": {
+    "opening": {
+      "state": "ask",
+      "text": "Por que será que alguns vídeos têm música alta e muitas cores?"
+    },
+    "story": {
+      "state": "ask",
+      "text": "A Bia viu um anúncio. O que será que ele queria?"
+    },
+    "concept": {
+      "state": "discover",
+      "text": "Vamos descobrir a diferença entre informar e convencer."
+    },
+    "activity": {
+      "state": "compare",
+      "text": "Essa frase conta algo que dá para conferir? Vamos ver cada uma."
+    },
+    "simulation": {
+      "state": "compare",
+      "text": "Vamos comparar? É o mesmo produto, mostrado de dois jeitos."
+    },
+    "quiz": {
+      "state": "reflect",
+      "text": "Vamos pensar juntos antes de escolher?"
+    },
+    "done": {
+      "state": "summary",
+      "text": "Querer depois de um anúncio é normal. Perceber o que ele faz também é."
+    }
+  },
+  "conclusion": {
+    "title": "Você concluiu o módulo",
+    "message": "Anúncios mostram produtos e tentam chamar atenção. Dá para separar o que informa do que tenta convencer.",
+    "recap": [
+      {
+        "icon": "ad",
+        "tone": "purple",
+        "text": "Anúncio: mensagem para mostrar algo e chamar atenção."
+      },
+      {
+        "icon": "info",
+        "tone": "cyan",
+        "text": "Informação: conta algo que dá para conferir."
+      },
+      {
+        "icon": "persuade",
+        "tone": "coral",
+        "text": "Convencimento: tenta fazer você querer."
+      }
+    ]
+  }
+}

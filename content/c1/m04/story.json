@@ -1,0 +1,62 @@
+{
+  "title": "O sábado do Caio",
+  "values": {
+    "budget": 30,
+    "cinemaPrice": 30,
+    "picnicPrice": 20
+  },
+  "derived": [
+    {
+      "name": "leftPicnic",
+      "expr": "budget - picnicPrice"
+    }
+  ],
+  "panels": [
+    {
+      "id": "p1",
+      "illustration": "story-street",
+      "text": "No sábado, o Caio passeou pelo bairro com a mãe. Muita gente estava trabalhando."
+    },
+    {
+      "id": "p2",
+      "illustration": "story-bakery",
+      "text": "Na padaria, o seu Jorge fazia pão. O pão é um bem: uma coisa que dá para pegar."
+    },
+    {
+      "id": "p3",
+      "illustration": "story-bus",
+      "text": "No ônibus, a motorista Lúcia levava as pessoas. Isso é um serviço: um trabalho que ajuda alguém."
+    },
+    {
+      "id": "p4",
+      "illustration": "story-income",
+      "text": "Quem trabalha recebe dinheiro. Esse dinheiro faz parte da renda da família, que pode vir de jeitos diferentes."
+    },
+    {
+      "id": "p5",
+      "illustration": "story-family-choice",
+      "text": "Em casa, a família tinha {budget} para o fim de semana. Dava para o cinema ou para um piquenique com sorvete."
+    }
+  ],
+  "question": {
+    "prompt": "Se você fosse da família do Caio, o que escolheria?",
+    "options": [
+      {
+        "id": "cinema",
+        "label": "Cinema",
+        "reflection": "O cinema custa {cinemaPrice} e usa todo o dinheiro do fim de semana. O piquenique fica para outro dia."
+      },
+      {
+        "id": "picnic",
+        "label": "Piquenique com sorvete",
+        "reflection": "O piquenique custa {picnicPrice}. Sobram {leftPicnic} para outra escolha."
+      },
+      {
+        "id": "talk",
+        "label": "Conversar com a família antes",
+        "reflection": "Cada família decide junto o que faz mais sentido. O dinheiro não dá para tudo ao mesmo tempo."
+      }
+    ]
+  },
+  "closing": "O dinheiro que a família tem não é infinito. Escolher uma coisa pode significar esperar por outra."
+}

@@ -1,0 +1,94 @@
+{
+  "id": "m02",
+  "cycle": "c1",
+  "journeyId": "escolhas-e-valor",
+  "stage": "Eu entendo dinheiro e preço",
+  "title": "Dinheiro, preço e cuidado",
+  "headline": "Quanto custa? E o que volta de troco?",
+  "summary": "Uma ida à feira para conhecer moedas e cédulas, comparar preços, entender o troco e cuidar do que é nosso e do que é de todos.",
+  "competencies": [
+    {
+      "code": "F-D4-C1-01",
+      "description": "Reconhecer função do dinheiro, moedas, cédulas, preços e comparação."
+    },
+    {
+      "code": "F-D8-C1-01",
+      "description": "Cuidar de pertences, guardar dinheiro e proteger informações básicas."
+    },
+    {
+      "code": "F-D9-C1-01",
+      "description": "Reconhecer bens coletivos, regras e convivência econômica."
+    }
+  ],
+  "sensitivity": "N2",
+  "objectives": [
+    "Compreender que o dinheiro facilita trocas.",
+    "Reconhecer moedas e cédulas.",
+    "Compreender que produtos e serviços têm preços.",
+    "Comparar preços simples.",
+    "Compreender a noção básica de troco.",
+    "Diferenciar preço de importância pessoal.",
+    "Cuidar dos próprios pertences.",
+    "Compreender que alguns recursos são compartilhados."
+  ],
+  "centralMessage": "O preço mostra quanto pagar, não o quanto algo vale para você.",
+  "estimatedMinutes": 10,
+  "illustration": "module-market",
+  "cta": "Vamos à feira",
+  "guide": {
+    "opening": {
+      "state": "ask",
+      "text": "Você já reparou nas plaquinhas de preço na feira?"
+    },
+    "story": {
+      "state": "ask",
+      "text": "A Nina levou dinheiro para a feira. O que será que dá para levar?"
+    },
+    "concept": {
+      "state": "discover",
+      "text": "Vamos descobrir o que são dinheiro, preço, troco e cuidado."
+    },
+    "activity": {
+      "state": "compare",
+      "text": "Vamos comparar preços? Olhe com calma antes de escolher."
+    },
+    "simulation": {
+      "state": "consequence",
+      "text": "O que muda se escolhermos esta opção? Veja o troco de cada uma."
+    },
+    "quiz": {
+      "state": "reflect",
+      "text": "Vamos pensar juntos sobre dinheiro e cuidado."
+    },
+    "done": {
+      "state": "summary",
+      "text": "Dinheiro, preço e troco aparecem todo dia. Agora você sabe olhar para eles."
+    }
+  },
+  "conclusion": {
+    "title": "Você concluiu o módulo",
+    "message": "O preço mostra quanto pagar. O troco é o que volta. E cuidar das coisas ajuda tudo a durar.",
+    "recap": [
+      {
+        "icon": "money",
+        "tone": "teal",
+        "text": "Dinheiro ajuda a pagar por coisas e serviços."
+      },
+      {
+        "icon": "price",
+        "tone": "coral",
+        "text": "Preço mostra quanto precisamos pagar."
+      },
+      {
+        "icon": "change",
+        "tone": "amber",
+        "text": "Troco é o dinheiro que volta."
+      },
+      {
+        "icon": "care",
+        "tone": "cyan",
+        "text": "Cuidar das coisas ajuda elas a durar."
+      }
+    ]
+  }
+}

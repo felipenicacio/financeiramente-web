@@ -1,0 +1,62 @@
+{
+  "title": "Informar ou convencer?",
+  "intro": "Um anúncio pode fazer duas coisas ao mesmo tempo: contar algo e chamar a nossa vontade.",
+  "concepts": [
+    {
+      "id": "ad",
+      "label": "Anúncio",
+      "short": "Mostra algo e chama atenção.",
+      "description": "É uma mensagem criada para mostrar um produto. Aparece em vídeos, na TV, em cartazes e em embalagens.",
+      "icon": "ad",
+      "tone": "purple",
+      "examples": [
+        {
+          "label": "Cartaz",
+          "illustration": "item-poster"
+        },
+        {
+          "label": "Vídeo",
+          "illustration": "item-tablet"
+        }
+      ]
+    },
+    {
+      "id": "info",
+      "label": "Informação",
+      "short": "Conta algo que dá para conferir.",
+      "description": "Diz o tamanho, o peso, quantas peças tem ou como funciona. Dá para ver se é verdade.",
+      "icon": "info",
+      "tone": "cyan",
+      "examples": [
+        {
+          "label": "Quatro peças",
+          "illustration": "item-blocks"
+        },
+        {
+          "label": "Pacote de 200 g",
+          "illustration": "item-snack"
+        }
+      ]
+    },
+    {
+      "id": "persuade",
+      "label": "Convencimento",
+      "short": "Tenta fazer você querer.",
+      "description": "Usa frases fortes, cores, música e personagens para chamar a sua vontade. Querer depois de um anúncio é normal.",
+      "icon": "persuade",
+      "tone": "coral",
+      "examples": [
+        {
+          "label": "Frases fortes",
+          "illustration": "item-megaphone"
+        },
+        {
+          "label": "Brilho e cores",
+          "illustration": "item-sparkles"
+        }
+      ]
+    }
+  ],
+  "keyIdea": "Antes de escolher, dá para perguntar: o que esse anúncio me conta de verdade?",
+  "keyIdeaIllustration": "item-magnifier"
+}

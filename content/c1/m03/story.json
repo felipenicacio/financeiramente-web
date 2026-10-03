@@ -1,0 +1,48 @@
+{
+  "title": "O anúncio do robô",
+  "values": {},
+  "derived": [],
+  "panels": [
+    {
+      "id": "p1",
+      "illustration": "story-ad-tablet",
+      "text": "A Bia estava vendo um vídeo no tablet. De repente, apareceu um anúncio de um robô de brinquedo."
+    },
+    {
+      "id": "p2",
+      "illustration": "story-ad-loud",
+      "text": "O anúncio tinha música alta, luzes e estrelas. Uma voz dizia: “Todo mundo quer!”"
+    },
+    {
+      "id": "p3",
+      "illustration": "story-ad-claim",
+      "text": "Depois, veio outra frase: “Você precisa ter!” A Bia ficou com muita vontade do robô."
+    },
+    {
+      "id": "p4",
+      "illustration": "story-thinking",
+      "text": "Querer algo depois de um anúncio é normal. Ele foi feito para chamar a nossa atenção."
+    }
+  ],
+  "question": {
+    "prompt": "Essas frases explicam como o brinquedo funciona ou tentam convencer você?",
+    "options": [
+      {
+        "id": "explain",
+        "label": "Explicam como ele funciona",
+        "reflection": "Vamos olhar de novo? “Todo mundo quer!” não conta o que o robô faz nem o tamanho dele. A frase fala sobre vontade."
+      },
+      {
+        "id": "convince",
+        "label": "Tentam me convencer",
+        "reflection": "As frases não contam o que o robô faz. Elas tentam fazer você querer o robô."
+      },
+      {
+        "id": "unsure",
+        "label": "Não tenho certeza",
+        "reflection": "Tudo bem ter dúvida. Uma dica: informação conta algo que dá para conferir, como o tamanho ou as peças."
+      }
+    ]
+  },
+  "closing": "Anúncios não são sempre mentira. Mas é bom perceber quando uma frase informa e quando tenta convencer."
+}
