@@ -20,6 +20,9 @@ const lexend = localFont({
   fallback: ['ui-sans-serif', 'system-ui', 'sans-serif'],
 });
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+const publicAsset = (path: string) => `${basePath}${path}`;
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
@@ -33,10 +36,10 @@ export const metadata: Metadata = {
   appleWebApp: { capable: true, title: t('appName'), statusBarStyle: 'default' },
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: '32x32' },
-      { url: '/icons/icon.svg', type: 'image/svg+xml' },
+      { url: publicAsset('/favicon.ico'), sizes: '32x32' },
+      { url: publicAsset('/icons/icon.svg'), type: 'image/svg+xml' },
     ],
-    apple: '/icons/apple-touch-icon.png',
+    apple: publicAsset('/icons/apple-touch-icon.png'),
   },
   openGraph: {
     type: 'website',
@@ -44,7 +47,7 @@ export const metadata: Metadata = {
     siteName: t('appName'),
     title: t('appName'),
     description: t('siteDescription'),
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: t('appName') }],
+    images: [{ url: publicAsset('/og.png'), width: 1200, height: 630, alt: t('appName') }],
   },
   twitter: { card: 'summary_large_image' },
 };
