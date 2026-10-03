@@ -10,6 +10,8 @@ import {
 import { econominhoAssets } from '@/components/econominho/assets';
 import { competencyCodes, sourceCodes } from '@/lib/validation/contentSchemas';
 import type { Lesson } from '@/lib/content/types';
+import competencyCatalog from '@/content/competencies.json';
+import { competencyDescription } from '@/lib/content/competencies';
 
 /**
  * Guarda de conteúdo do currículo C1 (v2.0). Valida a arquitetura
@@ -64,6 +66,17 @@ describe('módulos e lições do C1', () => {
     for (const lesson of allLessons()) {
       expect(lesson.content.length).toBeGreaterThanOrEqual(2);
       expect(lesson.content.length).toBeLessThanOrEqual(4);
+    }
+  });
+});
+
+describe('catálogo de competências', () => {
+  it('contém as 36 competências oficiais com descrição legível', () => {
+    expect(competencyCatalog.competencies).toHaveLength(36);
+    for (const item of competencyCatalog.competencies) {
+      expect(item.code).toBeTruthy();
+      expect(item.description.trim().length).toBeGreaterThan(10);
+      expect(competencyDescription(item.code)).toBe(item.description);
     }
   });
 });
