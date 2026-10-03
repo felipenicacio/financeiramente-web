@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useMemo, useState, type ReactNode } from 'react';
+import { Fragment, useMemo, useState, type ReactNode } from 'react';
 
 import { Icon } from '@/components/ui/Icon';
 import { EconominhoGuide } from '@/components/econominho/EconominhoGuide';
@@ -253,7 +253,9 @@ export function LessonRunner({ cycle, moduleId, stepLabels, currentStep, lesson,
           {t('screenCounter', { current: index + 1, total: screens.length - 1 })}
         </p>
       ) : null}
-      {screen.render({ onComplete: () => setUnlocked(true) })}
+      {/* key por tela: remonta o objeto e zera o estado interno (escolha/resposta)
+          ao trocar de tela, mesmo entre objetos do mesmo tipo. */}
+      <Fragment key={screen.key}>{screen.render({ onComplete: () => setUnlocked(true) })}</Fragment>
     </LessonShell>
   );
 }
