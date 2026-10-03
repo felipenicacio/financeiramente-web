@@ -1,5 +1,5 @@
 /*
- * Service worker do Financeiramente.
+ * Service worker do Econominho (caches com prefixo técnico "fm-", mantido).
  *
  * Objetivo: abrir rápido e funcionar sem conexão nas páginas já visitadas,
  * sem nunca prender o visitante numa versão antiga do conteúdo.
@@ -15,7 +15,7 @@
  * Ao publicar mudança NESTE arquivo, incrementar VERSION: o worker antigo
  * apaga os caches de versões anteriores na ativação.
  */
-const VERSION = 'v1';
+const VERSION = 'v2';
 const PAGES = `fm-pages-${VERSION}`;
 const STATIC = `fm-static-${VERSION}`;
 const ASSETS = `fm-assets-${VERSION}`;

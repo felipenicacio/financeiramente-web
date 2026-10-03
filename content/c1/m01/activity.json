@@ -1,8 +1,32 @@
 {
   "title": "Onde cada coisa se encaixa?",
   "instructions": "Leia a situação e escolha: preciso, quero ou posso esperar.",
+  "categories": [
+    {
+      "id": "need",
+      "label": "Preciso",
+      "short": "É importante agora.",
+      "icon": "need",
+      "tone": "teal"
+    },
+    {
+      "id": "want",
+      "label": "Quero",
+      "short": "Eu gostaria de ter.",
+      "icon": "want",
+      "tone": "coral"
+    },
+    {
+      "id": "wait",
+      "label": "Posso esperar",
+      "short": "Quero, mas pode ser depois.",
+      "icon": "wait",
+      "tone": "amber"
+    }
+  ],
   "items": [
     {
+      "kind": "classify",
       "id": "toothbrush",
       "label": "Escova de dente",
       "situation": "A escova do Téo ficou velha e toda desfiada.",
@@ -11,6 +35,7 @@
       "feedback": "A escova cuida da saúde dos dentes. Quando a velha não funciona mais, é preciso trocar."
     },
     {
+      "kind": "classify",
       "id": "robot",
       "label": "Robô de brinquedo",
       "situation": "Apareceu num vídeo e todo mundo está falando dele.",
@@ -20,6 +45,7 @@
       "contextNote": "Quero e posso esperar andam juntos: muita coisa que a gente quer pode ficar para outro momento."
     },
     {
+      "kind": "classify",
       "id": "coat",
       "label": "Casaco",
       "situation": "Está muito frio e o casaco antigo ficou pequeno.",
@@ -29,6 +55,7 @@
       "contextNote": "No calor, um casaco novo poderia esperar."
     },
     {
+      "kind": "classify",
       "id": "water",
       "label": "Água para beber",
       "situation": "Está muito calor na escola e o Téo está com sede.",
@@ -37,6 +64,7 @@
       "feedback": "Beber água é cuidar do corpo. Com sede, ter água para beber é preciso."
     },
     {
+      "kind": "classify",
       "id": "stickers",
       "label": "Figurinhas",
       "situation": "Faltam só três para completar o álbum.",
@@ -46,6 +74,7 @@
       "contextNote": "Quero e posso esperar andam juntos aqui. Você decide quando vale a pena."
     },
     {
+      "kind": "classify",
       "id": "sneaker",
       "label": "Tênis novo",
       "situation": "O tênis do Téo ainda serve, mas ele viu um mais bonito.",

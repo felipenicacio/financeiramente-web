@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, type ReactNode } from 'react';
 
 import { Icon } from '@/components/ui/Icon';
 
@@ -9,6 +9,8 @@ type Props = {
   title: string;
   body: string;
   note?: { title: string; body: string };
+  /** Números calculados que explicam o retorno (preços, troco, diferença). */
+  facts?: ReactNode;
 };
 
 /**
@@ -16,7 +18,7 @@ type Props = {
  * resposta não é a esperada, o tom é de conversa ("Vamos pensar juntos").
  * role="status" faz o leitor de tela anunciar o retorno.
  */
-export function FeedbackCard({ tone, title, body, note }: Props) {
+export function FeedbackCard({ tone, title, body, note, facts }: Props) {
   const ref = useRef<HTMLDivElement>(null);
 
   // O retorno aparece abaixo das alternativas: traz para a área visível,
@@ -37,6 +39,7 @@ export function FeedbackCard({ tone, title, body, note }: Props) {
         {title}
       </p>
       <p className="mt-1.5">{body}</p>
+      {facts ? <div className="mt-4">{facts}</div> : null}
       {note ? (
         <div className="mt-4 rounded-control bg-surface/80 p-4">
           <p className="text-label font-semibold">{note.title}</p>

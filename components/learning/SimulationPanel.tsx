@@ -1,21 +1,27 @@
 import { t } from '@/lib/content/ui';
-import { formatMoney, type SimulationOutcome } from '@/lib/learning';
+import { fillTemplate, formatMoney, type SpendOutcome } from '@/lib/learning';
+
+type Props = {
+  budget: number;
+  outcome: SpendOutcome;
+  /** Com meta, o que sobra vai para o pote ("Sobrou"); sem meta, é "Troco". */
+  hasGoal: boolean;
+  templateValues: Record<string, string>;
+};
 
 /**
- * Resultado de uma escolha na simulação: recurso, gasto, saldo, o que
- * acontece agora e depois. Os números chegam calculados (simulateChoice).
+ * Resultado de uma escolha: recurso, gasto, saldo, agora e depois.
+ * Os números chegam calculados (simulateChoice).
  */
-export function SimulationPanel({
-  budget,
-  outcome,
-}: {
-  budget: number;
-  outcome: SimulationOutcome;
-}) {
+export function SimulationPanel({ budget, outcome, hasGoal, templateValues }: Props) {
   const rows = [
     { label: t('simBudget'), value: formatMoney(budget) },
     { label: t('simSpent'), value: formatMoney(outcome.spent) },
-    { label: t('simLeft'), value: formatMoney(outcome.left), strong: true },
+    {
+      label: hasGoal ? t('simLeft') : t('simChange'),
+      value: formatMoney(outcome.left),
+      strong: true,
+    },
   ];
   return (
     <div className="flex flex-col gap-3">
@@ -36,13 +42,13 @@ export function SimulationPanel({
       </dl>
 
       <div className="grid gap-2 sm:grid-cols-2">
-        <div className="tone-want rounded-card bg-(--tone-soft) p-4">
+        <div className="tone-coral rounded-card bg-(--tone-soft) p-4">
           <p className="text-label font-semibold text-(--tone-strong)">{t('simNow')}</p>
-          <p className="mt-1">{outcome.option.now}</p>
+          <p className="mt-1">{fillTemplate(outcome.option.now, templateValues)}</p>
         </div>
         <div className="tone-guide rounded-card bg-(--tone-soft) p-4">
           <p className="text-label font-semibold text-(--tone-strong)">{t('simLater')}</p>
-          <p className="mt-1">{outcome.option.later}</p>
+          <p className="mt-1">{fillTemplate(outcome.option.later, templateValues)}</p>
         </div>
       </div>
     </div>

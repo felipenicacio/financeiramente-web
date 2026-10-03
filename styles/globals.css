@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 /*
- * Design System do Financeiramente
+ * Design System do Econominho
  * ---------------------------------
  * Camadas:
  * 1. Paleta (@theme): valores crus da marca. Espelhada em theme/tokens.ts.
@@ -137,25 +137,49 @@
   --shadow-raised: 0 2px 4px rgb(15 23 42 / 0.05), 0 12px 32px -12px rgb(15 23 42 / 0.18);
 }
 
-/* Tons de categoria. Usados como .tone-need + bg-(--tone-soft) etc. */
-.tone-need {
+/*
+ * Tons de conteúdo: cada conceito/categoria declara um tom no JSON
+ * (teal, coral, amber, cyan, purple, green). Usados como .tone-teal +
+ * bg-(--tone-soft), text-(--tone-strong) etc.
+ */
+.tone-teal {
   --tone: var(--color-teal-500);
   --tone-strong: var(--color-teal-700);
   --tone-soft: var(--color-teal-50);
   --tone-tint: var(--color-teal-100);
 }
-.tone-want {
+.tone-coral {
   --tone: var(--color-coral-500);
   --tone-strong: var(--color-coral-700);
   --tone-soft: var(--color-coral-50);
   --tone-tint: var(--color-coral-100);
 }
-.tone-wait {
+.tone-amber {
   --tone: var(--color-amber-500);
   --tone-strong: var(--color-amber-700);
   --tone-soft: var(--color-amber-50);
   --tone-tint: var(--color-amber-100);
 }
+.tone-cyan {
+  --tone: var(--color-cyan-500);
+  --tone-strong: var(--color-cyan-700);
+  --tone-soft: var(--color-cyan-50);
+  --tone-tint: var(--color-cyan-100);
+}
+.tone-purple {
+  --tone: var(--color-purple-500);
+  --tone-strong: var(--color-purple-700);
+  --tone-soft: var(--color-purple-50);
+  --tone-tint: var(--color-purple-100);
+}
+.tone-green {
+  --tone: var(--color-green-500);
+  --tone-strong: var(--color-green-700);
+  --tone-soft: var(--color-green-50);
+  --tone-tint: var(--color-green-100);
+}
+
+/* Tons semânticos de retorno. */
 .tone-positive {
   --tone: var(--color-green-500);
   --tone-strong: var(--color-green-700);

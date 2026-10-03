@@ -1,0 +1,72 @@
+{
+  "title": "Do trabalho às escolhas",
+  "intro": "Pessoas trabalham, recebem renda e decidem como usar o dinheiro. Vamos ver cada parte.",
+  "concepts": [
+    {
+      "id": "work",
+      "label": "Trabalho",
+      "short": "Produz bens ou presta serviços.",
+      "description": "Algumas pessoas fazem coisas, como pão e móveis. Outras ajudam pessoas, como ensinar, cuidar da saúde e dirigir.",
+      "icon": "work",
+      "tone": "teal",
+      "examples": [
+        {
+          "label": "Pão: um bem",
+          "illustration": "item-bread"
+        },
+        {
+          "label": "Aula: um serviço",
+          "illustration": "item-chalkboard"
+        }
+      ]
+    },
+    {
+      "id": "income",
+      "label": "Renda",
+      "short": "Dinheiro que a família recebe.",
+      "description": "Renda é o dinheiro que uma pessoa ou família recebe, de diferentes formas. O trabalho é uma delas.",
+      "icon": "income",
+      "tone": "green",
+      "examples": [
+        {
+          "label": "Dinheiro recebido",
+          "illustration": "item-wallet"
+        }
+      ]
+    },
+    {
+      "id": "limit",
+      "label": "Limite",
+      "short": "O dinheiro não é infinito.",
+      "description": "Quando usamos dinheiro em uma coisa, talvez seja preciso esperar para escolher outra. Toda família faz escolhas assim.",
+      "icon": "limit",
+      "tone": "amber",
+      "examples": [
+        {
+          "label": "Pote da família",
+          "illustration": "item-jar"
+        }
+      ]
+    },
+    {
+      "id": "later",
+      "label": "Pagar depois",
+      "short": "O pagamento continua existindo.",
+      "description": "Comprar agora e pagar depois quer dizer que uma parte do pagamento fica combinada para mais tarde.",
+      "icon": "later",
+      "tone": "purple",
+      "examples": [
+        {
+          "label": "Parte agora",
+          "illustration": "item-coins"
+        },
+        {
+          "label": "Parte depois",
+          "illustration": "item-calendar"
+        }
+      ]
+    }
+  ],
+  "keyIdea": "Trabalho gera bens, serviços e renda. E a renda precisa ser dividida entre várias escolhas.",
+  "keyIdeaIllustration": "item-wallet"
+}

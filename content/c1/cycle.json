@@ -1,0 +1,48 @@
+{
+  "cycle": "c1",
+  "title": "O que descobrimos?",
+  "intro": "Depois dos quatro módulos, olha só quantas ideias a gente encontrou.",
+  "discoveries": [
+    {
+      "text": "Eu posso escolher.",
+      "icon": "choice",
+      "tone": "teal",
+      "module": "m01"
+    },
+    {
+      "text": "Dinheiro é limitado.",
+      "icon": "limit",
+      "tone": "amber",
+      "module": "m01"
+    },
+    {
+      "text": "As coisas têm preços.",
+      "icon": "price",
+      "tone": "coral",
+      "module": "m02"
+    },
+    {
+      "text": "Anúncios podem influenciar escolhas.",
+      "icon": "ad",
+      "tone": "purple",
+      "module": "m03"
+    },
+    {
+      "text": "Pessoas trabalham e recebem renda.",
+      "icon": "income",
+      "tone": "green",
+      "module": "m04"
+    },
+    {
+      "text": "Escolhas mudam o que podemos fazer depois.",
+      "icon": "later",
+      "tone": "cyan",
+      "module": "m04"
+    }
+  ],
+  "guide": {
+    "state": "reflect",
+    "text": "Qual dessas descobertas apareceu no seu dia hoje?"
+  },
+  "closing": "Essas ideias aparecem na feira, num anúncio, num passeio. Dá para conversar sobre elas em família, sempre que surgirem."
+}

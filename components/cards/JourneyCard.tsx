@@ -17,7 +17,7 @@ export function JourneyCard({ id, title, description, children }: Props) {
         </h2>
         <p className="mt-1 text-ink-soft">{description}</p>
       </div>
-      <div className="flex flex-col gap-3">{children}</div>
+      <div className="grid gap-4 md:grid-cols-2">{children}</div>
     </section>
   );
 }

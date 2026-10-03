@@ -4,7 +4,7 @@ import { Icon } from '@/components/ui/Icon';
 import { t } from '@/lib/content/ui';
 import type { ChoiceResult } from '@/lib/learning';
 
-export type ChoiceState = ChoiceResult | 'selected' | 'expected';
+export type ChoiceState = ChoiceResult | 'selected';
 
 type Props = {
   label: string;

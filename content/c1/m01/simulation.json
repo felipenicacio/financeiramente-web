@@ -1,4 +1,5 @@
 {
+  "kind": "spend",
   "title": "E se fosse com você?",
   "intro": "Você tem {budget} para usar. Escolha uma opção e veja o que acontece.",
   "budget": 20,
@@ -32,7 +33,7 @@
       "cost": 0,
       "illustration": "item-jar",
       "now": "Hoje você não compra nada.",
-      "later": "A caixa de lápis está garantida. Mas hoje não teve sorvete nem carrinho."
+      "later": "Agora você já juntou os {goalPrice} para a caixa de lápis. Hoje não teve sorvete nem carrinho."
     }
   ],
   "wrapUp": "Toda escolha dá alguma coisa agora e muda o que acontece depois. Teste outra opção para comparar."

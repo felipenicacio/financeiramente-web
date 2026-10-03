@@ -2,7 +2,7 @@
 
 ## Visão geral
 
-Site educacional **100% estático**, gerado com Next.js (App Router) em modo `output: 'export'`. O build produz a pasta `out/`, publicada no Cloudflare Pages. Não há servidor, banco de dados, API própria, autenticação nem chamadas externas para exibir o conteúdo.
+Site educacional do **Econominho**, **100% estático**, gerado com Next.js (App Router) em modo `output: 'export'`. O build produz a pasta `out/`, publicada no Cloudflare Pages. Não há servidor, banco de dados, API própria, autenticação nem chamadas externas para exibir o conteúdo.
 
 ```
 content/*.json ──► lib/content (registro + validação) ──► páginas (geradas no build)
@@ -31,33 +31,35 @@ content/*.json ──► lib/content (registro + validação) ──► páginas
 
 ## Rotas
 
-| URL                                   | Arquivo                                          | Conteúdo                                                                      |
-| ------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------- |
-| `/`                                   | `app/(site)/page.tsx`                            | Início                                                                        |
-| `/idade/`                             | `app/(site)/idade/page.tsx`                      | Seleção de faixa etária                                                       |
-| `/jornadas/[ciclo]/`                  | `app/(site)/jornadas/[ciclo]/page.tsx`           | Jornadas do ciclo (c1 a c4; c2–c4 mostram "em preparação")                    |
-| `/modulos/[ciclo]/[modulo]/`          | `app/(site)/modulos/[ciclo]/[modulo]/page.tsx`   | Apresentação do módulo                                                        |
-| `/aprender/[ciclo]/[modulo]/[etapa]/` | `app/aprender/[ciclo]/[modulo]/[etapa]/page.tsx` | Etapas: `historia`, `conceito`, `atividade`, `simulacao`, `quiz`, `conclusao` |
+| URL                                    | Arquivo                                                  | Conteúdo                                                                      |
+| -------------------------------------- | -------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `/`                                    | `app/(site)/page.tsx`                                    | Início                                                                        |
+| `/idade/`                              | `app/(site)/idade/page.tsx`                              | Seleção de faixa etária                                                       |
+| `/jornadas/[ciclo]/`                   | `app/(site)/jornadas/[ciclo]/page.tsx`                   | Página do ciclo com os módulos, em qualquer ordem (c2–c4: "em preparação")    |
+| `/jornadas/[ciclo]/o-que-descobrimos/` | `app/(site)/jornadas/[ciclo]/o-que-descobrimos/page.tsx` | Resumo conceitual do ciclo ("O que descobrimos?")                             |
+| `/modulos/[ciclo]/[modulo]/`           | `app/(site)/modulos/[ciclo]/[modulo]/page.tsx`           | Apresentação do módulo                                                        |
+| `/aprender/[ciclo]/[modulo]/[etapa]/`  | `app/aprender/[ciclo]/[modulo]/[etapa]/page.tsx`         | Etapas: `historia`, `conceito`, `atividade`, `simulacao`, `quiz`, `conclusao` |
 
-Cada etapa é uma página estática própria: o botão "voltar" do navegador funciona, e cada etapa pode ser aberta direto. Dentro da etapa, as telas internas (quadros da história, itens da atividade, perguntas do quiz) são estado em memória do componente.
+Cada etapa é uma página estática própria: o botão "voltar" do navegador funciona, e cada etapa pode ser aberta direto. A conclusão de cada módulo leva ao próximo módulo do ciclo e, no último, ao "O que descobrimos?" (calculado no build pelo catálogo). Dentro da etapa, as telas internas (quadros da história, itens da atividade, perguntas do quiz) são estado em memória do componente.
 
 ## Estrutura de pastas
 
 ```
 app/                    rotas, layout raiz, manifest, robots, sitemap, fonte
 components/
-  cards/                CycleCard, JourneyCard, ModuleCard
-  illustrations/        SVGs (itens 120×120, cenas 320×200) e ícones de categoria
+  cards/                CycleCard, JourneyCard, ModuleCard, CycleProgress
+  econominho/           guia pedagógico (EconominhoGuide) e ponto de integração da arte
+  illustrations/        SVGs (itens 120×120, cenas 320×200) e ícones de conceito
   layout/               PageContainer, AppHeader, SiteFooter, SkipLink, ContentError
   learning/             LessonShell, ProgressIndicator, ChoiceCard, FeedbackCard,
                         StoryCard, ConceptCard, GoalMeter, SimulationPanel, QuizQuestion
   learning/steps/       uma etapa por arquivo + despachante
   pwa/                  registro do service worker e aviso de atualização
   ui/                   Button/ButtonLink, Icon, Brand
-content/                catálogo, textos de interface e módulos (JSON)
+content/                catálogo, textos de interface, módulos e resumo de ciclo (JSON)
 lib/content/            tipos, registro estático, carregamento, textos de interface
 lib/validation/         validador genérico e schemas do conteúdo
-lib/learning/           regras: simulação, atividade, quiz, templates, etapas e rotas
+lib/learning/           regras: simulações, atividades, quiz, templates, expressões, etapas e rotas
 lib/session/            progresso da visita, só em memória
 styles/globals.css      tokens do Design System
 theme/                  paleta e expressões por ciclo em TypeScript

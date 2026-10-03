@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 
+import { EconominhoGuide } from '@/components/econominho/EconominhoGuide';
 import { Button } from '@/components/ui/Button';
 import { t } from '@/lib/content/ui';
 import { fillTemplate, storyMoneyLabels } from '@/lib/learning';
@@ -19,7 +20,7 @@ export function StoryStep({ bundle }: StepProps) {
   const goNext = useLessonNav(module.cycle, module.id, 'story');
   const [page, setPage] = useState(0);
   const [choice, setChoice] = useState<string | null>(null);
-  const money = useMemo(() => storyMoneyLabels(story.money), [story.money]);
+  const money = useMemo(() => storyMoneyLabels(story), [story]);
 
   const total = story.panels.length;
   const onQuestion = page >= total;
@@ -69,6 +70,9 @@ export function StoryStep({ bundle }: StepProps) {
       {!onQuestion && panel ? (
         <>
           <ScreenTitle>{story.title}</ScreenTitle>
+          {page === 0 ? (
+            <EconominhoGuide state={module.guide.story.state} text={module.guide.story.text} />
+          ) : null}
           <StoryCard
             key={panel.id}
             illustration={panel.illustration}
@@ -99,7 +103,7 @@ export function StoryStep({ bundle }: StepProps) {
               tone="neutral"
               title={t('anyAnswer')}
               body={fillTemplate(chosen.reflection, money)}
-              note={{ title: t('rememberTitle'), body: story.closing }}
+              note={{ title: t('rememberTitle'), body: fillTemplate(story.closing, money) }}
             />
           ) : null}
         </>

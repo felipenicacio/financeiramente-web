@@ -23,7 +23,7 @@ const lexend = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${t('appName')}: ${t('appTagline')}`,
+    default: `${t('appName')} — ${t('appTagline')}`,
     template: `%s | ${t('appName')}`,
   },
   description: t('siteDescription'),

@@ -1,0 +1,47 @@
+{
+  "kind": "presentation",
+  "title": "Dois jeitos de mostrar",
+  "intro": "Olhe as duas versões do anúncio. Depois, responda a pergunta.",
+  "product": {
+    "label": "Garrafinha de água",
+    "illustration": "item-bottle",
+    "facts": ["Guarda meio litro de água.", "Tem tampa que não vaza.", "É azul."]
+  },
+  "versions": [
+    {
+      "id": "a",
+      "label": "Versão A",
+      "style": "plain",
+      "headline": "Garrafinha azul",
+      "lines": ["Guarda meio litro de água.", "Tem tampa que não vaza."]
+    },
+    {
+      "id": "b",
+      "label": "Versão B",
+      "style": "loud",
+      "headline": "A garrafinha MAIS INCRÍVEL!",
+      "lines": ["Todo mundo quer uma!", "Você não pode ficar sem!", "Só hoje!"]
+    }
+  ],
+  "question": {
+    "prompt": "O produto mudou ou foi a forma de apresentar?",
+    "options": [
+      {
+        "id": "same",
+        "label": "É a mesma garrafinha",
+        "reflection": "As duas versões mostram a mesma garrafinha. Mudaram as cores e as frases."
+      },
+      {
+        "id": "better",
+        "label": "A versão B parece melhor",
+        "reflection": "Vamos conferir? Tamanho, tampa e cor são iguais. O que mudou foi o jeito de mostrar."
+      },
+      {
+        "id": "unsure",
+        "label": "Não sei dizer",
+        "reflection": "Compare o que dá para conferir: tamanho, tampa e cor. Isso é igual nas duas versões."
+      }
+    ]
+  },
+  "wrapUp": "A forma de apresentar pode mudar a nossa vontade, mesmo quando o produto é o mesmo."
+}

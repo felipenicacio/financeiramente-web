@@ -1,0 +1,92 @@
+{
+  "id": "m04",
+  "cycle": "c1",
+  "journeyId": "escolhas-e-valor",
+  "stage": "Eu entendo trabalho e limites",
+  "title": "Trabalho, renda e limites",
+  "headline": "De onde vem o dinheiro? E por que ele não dá para tudo?",
+  "summary": "Um passeio pelo bairro para conhecer trabalhos, bens e serviços, entender o que é renda e ver por que as famílias fazem escolhas.",
+  "competencies": [
+    {
+      "code": "F-D3-C1-01",
+      "description": "Reconhecer que famílias fazem escolhas porque recursos são limitados."
+    },
+    {
+      "code": "F-D6-C1-01",
+      "description": "Reconhecer que pagar depois cria compromisso futuro."
+    },
+    {
+      "code": "F-D7-C1-01",
+      "description": "Relacionar trabalho, produção de bens e serviços e renda."
+    }
+  ],
+  "sensitivity": "N2",
+  "objectives": [
+    "Reconhecer diferentes tipos de trabalho.",
+    "Compreender o que são bens e serviços.",
+    "Compreender que o trabalho pode gerar renda.",
+    "Compreender que famílias precisam fazer escolhas.",
+    "Reconhecer que o dinheiro disponível é limitado.",
+    "Compreender que pagar depois continua sendo um compromisso."
+  ],
+  "centralMessage": "O dinheiro não dá para tudo ao mesmo tempo. Por isso, as famílias escolhem.",
+  "estimatedMinutes": 11,
+  "illustration": "module-work",
+  "cta": "Vamos passear",
+  "guide": {
+    "opening": {
+      "state": "ask",
+      "text": "Você já pensou em quantas pessoas trabalham perto da sua casa?"
+    },
+    "story": {
+      "state": "ask",
+      "text": "O Caio vai passear pelo bairro. Quem ele vai encontrar trabalhando?"
+    },
+    "concept": {
+      "state": "discover",
+      "text": "Vamos descobrir o que são trabalho, renda, limite e pagar depois."
+    },
+    "activity": {
+      "state": "ask",
+      "text": "Isso é um bem, um serviço ou renda? Vamos ver um de cada vez."
+    },
+    "simulation": {
+      "state": "consequence",
+      "text": "Vamos descobrir o que acontece depois? Cada escolha muda o que sobra."
+    },
+    "quiz": {
+      "state": "reflect",
+      "text": "Vamos pensar juntos sobre trabalho e escolhas."
+    },
+    "done": {
+      "state": "summary",
+      "text": "Trabalho gera bens, serviços e renda. E a renda é dividida entre escolhas."
+    }
+  },
+  "conclusion": {
+    "title": "Você concluiu o módulo",
+    "message": "Pessoas trabalham, fazem coisas e ajudam outras pessoas. O dinheiro que a família tem não é infinito, então ela escolhe.",
+    "recap": [
+      {
+        "icon": "work",
+        "tone": "teal",
+        "text": "Trabalho: produz bens ou presta serviços."
+      },
+      {
+        "icon": "income",
+        "tone": "green",
+        "text": "Renda: dinheiro que a família recebe."
+      },
+      {
+        "icon": "limit",
+        "tone": "amber",
+        "text": "Limite: o dinheiro não dá para tudo ao mesmo tempo."
+      },
+      {
+        "icon": "later",
+        "tone": "purple",
+        "text": "Pagar depois: o pagamento continua existindo."
+      }
+    ]
+  }
+}

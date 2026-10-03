@@ -1,0 +1,154 @@
+{
+  "title": "Vamos ver o que ficou?",
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "recognition",
+      "prompt": "Qual destes é um serviço?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Cortar o cabelo de alguém"
+        },
+        {
+          "id": "b",
+          "label": "Um pão"
+        },
+        {
+          "id": "c",
+          "label": "Uma cadeira"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correctOptionId": "a"
+      },
+      "explanation": "Cortar o cabelo é um trabalho que ajuda alguém. Pão e cadeira são bens."
+    },
+    {
+      "id": "q2",
+      "kind": "recognition",
+      "prompt": "O que é renda?",
+      "illustration": "item-wallet",
+      "options": [
+        {
+          "id": "a",
+          "label": "O dinheiro que uma pessoa ou família recebe"
+        },
+        {
+          "id": "b",
+          "label": "Só o dinheiro do cofrinho"
+        },
+        {
+          "id": "c",
+          "label": "O preço das coisas"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correctOptionId": "a"
+      },
+      "explanation": "Renda é o dinheiro que alguém recebe, de diferentes formas. O trabalho é uma delas."
+    },
+    {
+      "id": "q3",
+      "kind": "recognition",
+      "prompt": "Qual trabalho produz um bem?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Fazer pão"
+        },
+        {
+          "id": "b",
+          "label": "Dirigir o ônibus"
+        },
+        {
+          "id": "c",
+          "label": "Dar aula"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correctOptionId": "a"
+      },
+      "explanation": "O pão é uma coisa que dá para pegar. Dirigir e dar aula são serviços."
+    },
+    {
+      "id": "q4",
+      "kind": "situation",
+      "prompt": "A família consertou a geladeira. O passeio ficou para depois. Por quê?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Porque o dinheiro não dá para tudo ao mesmo tempo"
+        },
+        {
+          "id": "b",
+          "label": "Porque passeio é proibido"
+        },
+        {
+          "id": "c",
+          "label": "Porque a geladeira é mais bonita"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correctOptionId": "a"
+      },
+      "explanation": "Quando o dinheiro vai para uma coisa, outra pode precisar esperar."
+    },
+    {
+      "id": "q5",
+      "kind": "explanation",
+      "prompt": "A Bia comprou uma mochila e vai pagar uma parte depois. O que isso quer dizer?",
+      "illustration": "item-calendar",
+      "options": [
+        {
+          "id": "a",
+          "label": "Uma parte do pagamento ficou combinada para depois"
+        },
+        {
+          "id": "b",
+          "label": "Ela não precisa mais pagar",
+          "feedback": "O pagamento continua existindo. Só muda o momento."
+        },
+        {
+          "id": "c",
+          "label": "A mochila ficou de graça"
+        }
+      ],
+      "answer": {
+        "type": "single",
+        "correctOptionId": "a"
+      },
+      "explanation": "Comprar agora e pagar depois quer dizer que o pagamento continua existindo."
+    },
+    {
+      "id": "q6",
+      "kind": "decision",
+      "prompt": "Sua família vai escolher entre duas coisas para o fim de semana. Como você ajuda?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Conto o que eu prefiro",
+          "feedback": "Sua opinião ajuda a família a decidir."
+        },
+        {
+          "id": "b",
+          "label": "Ouço o que cada um prefere",
+          "feedback": "Ouvir ajuda todos a se sentirem parte."
+        },
+        {
+          "id": "c",
+          "label": "Ajudo a ver quanto custa cada uma",
+          "feedback": "Saber o preço ajuda a ver o que cabe."
+        }
+      ],
+      "answer": {
+        "type": "open"
+      },
+      "explanation": "Todas ajudam. Escolher em família é conversar sobre o que cabe e o que pode esperar."
+    }
+  ]
+}

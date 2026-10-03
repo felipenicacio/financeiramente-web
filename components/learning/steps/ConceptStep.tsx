@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 
+import { EconominhoGuide } from '@/components/econominho/EconominhoGuide';
 import { Illustration } from '@/components/illustrations';
 import { Button } from '@/components/ui/Button';
 import { t } from '@/lib/content/ui';
@@ -16,8 +17,8 @@ export function ConceptStep({ bundle }: StepProps) {
   const { module, infographic } = bundle;
   const goNext = useLessonNav(module.cycle, module.id, 'concept');
   const [page, setPage] = useState(0);
-  const total = infographic.categories.length + 1;
-  const category = infographic.categories[page];
+  const total = infographic.concepts.length + 1;
+  const concept = infographic.concepts[page];
   const isLast = page === total - 1;
 
   return (
@@ -50,12 +51,19 @@ export function ConceptStep({ bundle }: StepProps) {
       <div className="flex flex-col gap-2">
         <ScreenTitle>{infographic.title}</ScreenTitle>
         {page === 0 ? <p className="text-ink-soft">{infographic.intro}</p> : null}
+        {page === 0 ? (
+          <EconominhoGuide
+            state={module.guide.concept.state}
+            text={module.guide.concept.text}
+            className="mt-2"
+          />
+        ) : null}
       </div>
 
       <PageDots current={page} total={total} />
 
-      {category ? (
-        <ConceptCard key={category.id} category={category} />
+      {concept ? (
+        <ConceptCard key={concept.id} concept={concept} />
       ) : (
         <div className="animate-enter-side flex flex-col items-center gap-4 rounded-hero bg-surface p-6 text-center shadow-card">
           <p className="text-label font-semibold text-accent-strong">{t('rememberTitle')}</p>

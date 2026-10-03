@@ -1,11 +1,25 @@
 {
   "title": "O presente do Téo",
-  "money": {
+  "values": {
     "gift": 10,
     "saved": 15,
-    "goal": { "label": "bola nova", "price": 30 },
-    "temptation": { "label": "pacote de figurinhas", "price": 5 }
+    "goalPrice": 30,
+    "temptationPrice": 5
   },
+  "derived": [
+    {
+      "name": "leftIfBuy",
+      "expr": "gift - temptationPrice"
+    },
+    {
+      "name": "missingIfBuy",
+      "expr": "goalPrice - saved - leftIfBuy"
+    },
+    {
+      "name": "missingIfSave",
+      "expr": "goalPrice - saved - gift"
+    }
+  ],
   "panels": [
     {
       "id": "p1",

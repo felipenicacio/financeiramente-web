@@ -39,6 +39,7 @@ export const routes = {
   home: '/',
   age: '/idade/',
   journeys: (cycle: string) => `/jornadas/${cycle}/`,
+  cycleSummary: (cycle: string) => `/jornadas/${cycle}/o-que-descobrimos/`,
   module: (cycle: string, moduleId: string) => `/modulos/${cycle}/${moduleId}/`,
   lesson: (cycle: string, moduleId: string, slug: LessonStepSlug) =>
     `/aprender/${cycle}/${moduleId}/${slug}/`,

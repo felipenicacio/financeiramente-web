@@ -15,6 +15,7 @@ type Props = {
   headline: string;
   minutes: number;
   illustration: string;
+  stage: string;
   position: number;
 };
 
@@ -26,6 +27,7 @@ export function ModuleCard({
   headline,
   minutes,
   illustration,
+  stage,
   position,
 }: Props) {
   const { completedModules } = useSession();
@@ -39,10 +41,11 @@ export function ModuleCard({
       <span className="block bg-accent-soft px-6 pt-4">
         <Illustration name={illustration} className="mx-auto w-full max-w-[18rem]" />
       </span>
-      <span className="flex min-w-0 flex-col gap-1 p-5">
-        <span className="flex items-center gap-3 text-caption text-ink-muted">
-          <span>
-            {t('moduleEyebrow')} {position}
+      <span className="flex min-w-0 flex-1 flex-col gap-1 p-5">
+        <span className="flex flex-wrap items-center gap-x-3 gap-y-1 text-caption text-ink-muted">
+          <span className="font-semibold text-accent-strong">
+            <span className="sr-only">{t('moduleEyebrow')} </span>
+            {position}. {stage}
           </span>
           <span className="inline-flex items-center gap-1">
             <Icon name="clock" className="size-3.5" />

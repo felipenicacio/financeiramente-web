@@ -1,5 +1,5 @@
 /**
- * Design System do Financeiramente — tokens em TypeScript.
+ * Design System do Econominho — tokens em TypeScript.
  *
  * Fonte única das cores usadas fora do CSS (ilustrações SVG, manifest do PWA,
  * metadata). O CSS (styles/globals.css) declara os mesmos valores como

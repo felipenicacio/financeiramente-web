@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+import { CycleProgress } from '@/components/cards/CycleProgress';
 import { JourneyCard } from '@/components/cards/JourneyCard';
 import { ModuleCard } from '@/components/cards/ModuleCard';
 import { Illustration } from '@/components/illustrations';
@@ -8,7 +10,15 @@ import { AppHeader } from '@/components/layout/AppHeader';
 import { ContentError } from '@/components/layout/ContentError';
 import { PageContainer } from '@/components/layout/PageContainer';
 import { ButtonLink } from '@/components/ui/Button';
-import { cycleIds, findCycle, loadCatalog, loadModule } from '@/lib/content';
+import { Icon } from '@/components/ui/Icon';
+import {
+  cycleIds,
+  cycleModules,
+  findCycle,
+  loadCatalog,
+  loadCycleSummary,
+  loadModule,
+} from '@/lib/content';
 import { t } from '@/lib/content/ui';
 import { routes } from '@/lib/learning/steps';
 
@@ -26,7 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const cycle = catalog.ok ? findCycle(catalog.data, ciclo) : undefined;
   return cycle
     ? {
-        title: `${t('journeysTitle')}: ${cycle.ageRange}`,
+        title: `${cycle.label}: ${cycle.ageRange}`,
         description: cycle.description,
         alternates: { canonical: routes.journeys(ciclo) },
         robots: cycle.status === 'available' ? undefined : { index: false },
@@ -48,17 +58,18 @@ export default async function JourneysPage({ params }: { params: Promise<Params>
   if (!cycle) notFound();
 
   const available = cycle.status === 'available' && cycle.journeys.length > 0;
+  const summary = loadCycleSummary(cycle.id);
 
   return (
     <div data-cycle={cycle.id} className="flex flex-1 flex-col">
       <AppHeader back={{ href: routes.age, label: t('back') }} />
       <main id="conteudo" className="flex-1 pb-16 pt-6 md:pt-12">
-        <PageContainer width="reading">
+        <PageContainer>
           <p className="inline-flex rounded-full bg-accent-soft px-3 py-1 text-caption font-medium text-accent-strong">
             {cycle.ageRange}
           </p>
           <h1 className="mt-3 text-display font-bold tracking-[-0.03em]">{cycle.label}</h1>
-          <p className="mt-2 text-lead text-ink-soft">{cycle.description}</p>
+          <p className="mt-2 max-w-[38rem] text-lead text-ink-soft">{cycle.description}</p>
 
           {available ? (
             <div className="mt-10 flex flex-col gap-10">
@@ -91,13 +102,36 @@ export default async function JourneysPage({ params }: { params: Promise<Params>
                         headline={module.headline}
                         minutes={module.estimatedMinutes}
                         illustration={module.illustration}
+                        stage={module.stage}
                         position={index + 1}
                       />
                     );
                   })}
-                  <p className="text-caption text-ink-muted">{t('journeySoon')}</p>
                 </JourneyCard>
               ))}
+              <CycleProgress
+                cycle={cycle.id}
+                moduleIds={cycleModules(cycle.id)}
+                hint={t('journeySoon')}
+              />
+              {summary?.ok ? (
+                <Link
+                  href={routes.cycleSummary(cycle.id)}
+                  className="group flex items-center gap-4 rounded-hero bg-ink p-5 text-white shadow-raised sm:p-6"
+                >
+                  <span className="grid size-14 shrink-0 place-items-center rounded-full bg-white/10">
+                    <Icon name="check" className="size-7" />
+                  </span>
+                  <span className="flex flex-1 flex-col">
+                    <span className="text-heading font-semibold">{summary.data.title}</span>
+                    <span className="text-label text-slate-300">{t('cycleSummaryHint')}</span>
+                  </span>
+                  <Icon
+                    name="arrow-right"
+                    className="size-6 transition-transform group-hover:translate-x-0.5"
+                  />
+                </Link>
+              ) : null}
             </div>
           ) : (
             <div className="mt-10 flex flex-col items-start gap-4 rounded-hero bg-surface p-6 shadow-card sm:p-8">
