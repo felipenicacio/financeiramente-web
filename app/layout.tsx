@@ -45,7 +45,8 @@ export const metadata: Metadata = {
     siteName: t('appName'),
     title: t('appName'),
     description: t('siteDescription'),
-    images: [{ url: publicAsset('/og.png'), width: 1200, height: 630, alt: t('appName') }],
+    // Relativo a metadataBase (siteUrl), que já inclui o subcaminho no GitHub Pages.
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: t('appName') }],
   },
   twitter: { card: 'summary_large_image' },
 };
