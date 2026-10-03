@@ -1,0 +1,102 @@
+{
+  "id": "c1-m06-l05",
+  "cycle": "c1",
+  "module": "m06",
+  "order": 5,
+  "title": "Cuidar do que é de todos",
+  "headline": "Alguns lugares e coisas são de todo mundo; cuidar deles ajuda a comunidade.",
+  "objectives": [
+    "Reconhecer bens coletivos",
+    "Perceber que cuidar deles ajuda a todos"
+  ],
+  "competencies": [
+    "F-D9-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "FB2",
+      "reference": "L30",
+      "role": "principal"
+    },
+    {
+      "source": "MC",
+      "reference": "D9",
+      "role": "complementar"
+    },
+    {
+      "source": "BNCC",
+      "reference": "tema transversal",
+      "role": "complementar"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "body": "Algumas coisas são de todo mundo, como a praça, a biblioteca e a lixeira da rua. Quando a gente cuida delas, todos podem usar por mais tempo.",
+      "title": "Coisas de todo mundo",
+      "illustration": "item-bench"
+    },
+    {
+      "type": "classify",
+      "categories": [
+        {
+          "id": "care",
+          "label": "Cuida do que é de todos",
+          "short": "Ajuda a comunidade.",
+          "icon": "shared",
+          "tone": "teal"
+        },
+        {
+          "id": "nocare",
+          "label": "Atrapalha os outros",
+          "short": "Estraga o que é de todos.",
+          "icon": "limit",
+          "tone": "coral"
+        }
+      ],
+      "items": [
+        {
+          "id": "trash",
+          "label": "Jogar o lixo na lixeira",
+          "situation": "Você termina o lanche na praça.",
+          "accepted": [
+            "care"
+          ],
+          "feedback": "Assim a praça fica limpa para todos."
+        },
+        {
+          "id": "book",
+          "label": "Devolver o livro da biblioteca no prazo",
+          "situation": "Você terminou de ler o livro emprestado.",
+          "accepted": [
+            "care"
+          ],
+          "feedback": "Devolver deixa o livro pronto para outra pessoa ler.",
+          "illustration": "item-book"
+        },
+        {
+          "id": "break",
+          "label": "Quebrar o brinquedo do parquinho",
+          "situation": "Você usa o brinquedo da pracinha com força demais.",
+          "accepted": [
+            "nocare"
+          ],
+          "feedback": "Assim ninguém mais consegue brincar. Melhor cuidar."
+        }
+      ],
+      "prompt": "Cuida ou atrapalha?",
+      "instructions": "Essa atitude cuida do que é de todos ou atrapalha os outros?"
+    },
+    {
+      "type": "reflection",
+      "state": "summary",
+      "text": "Cuidar do que é de todos faz o lugar durar mais e ajuda a comunidade inteira."
+    }
+  ],
+  "summary": [
+    "Alguns lugares e coisas são de todo mundo.",
+    "Cuidar deles ajuda toda a comunidade."
+  ]
+}

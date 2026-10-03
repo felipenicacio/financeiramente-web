@@ -1,0 +1,69 @@
+{
+  "id": "c1-m05-l05",
+  "cycle": "c1",
+  "module": "m05",
+  "order": 5,
+  "title": "Guardar com segurança",
+  "headline": "Dá para guardar o dinheiro num lugar seguro e pedir ajuda de um adulto de confiança.",
+  "objectives": [
+    "Reconhecer lugares seguros para guardar",
+    "Saber pedir ajuda de um adulto de confiança"
+  ],
+  "competencies": [
+    "F-D8-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "FB2",
+      "reference": "L24",
+      "role": "principal"
+    },
+    {
+      "source": "FB1",
+      "reference": "cap. 7",
+      "role": "complementar"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "body": "Dá para guardar o dinheiro num lugar seguro, como um cofrinho ou um pote só para isso. E um adulto de confiança pode ajudar a guardar e a cuidar.",
+      "title": "Um lugar seguro",
+      "illustration": "item-jar"
+    },
+    {
+      "type": "trueFalse",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Um cofrinho ou um pote é um lugar bom para guardar dinheiro.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: um lugar só para isso ajuda a não perder."
+        },
+        {
+          "id": "s2",
+          "text": "Posso pedir ajuda a um adulto de confiança para guardar.",
+          "isTrue": true,
+          "explanation": "Sim: um adulto de confiança ajuda a cuidar do dinheiro."
+        },
+        {
+          "id": "s3",
+          "text": "É seguro deixar o dinheiro largado em qualquer lugar.",
+          "isTrue": false,
+          "explanation": "Melhor guardar num lugar certo para não perder."
+        }
+      ],
+      "prompt": "Sobre guardar com segurança:"
+    }
+  ],
+  "summary": [
+    "Dá para guardar o dinheiro num lugar seguro.",
+    "Um adulto de confiança pode ajudar."
+  ],
+  "guide": {
+    "state": "consequence",
+    "text": "O que acontece se a gente guarda num lugar seguro? Vamos ver."
+  }
+}

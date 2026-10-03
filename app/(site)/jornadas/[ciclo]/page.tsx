@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { CycleProgress } from '@/components/cards/CycleProgress';
-import { JourneyCard } from '@/components/cards/JourneyCard';
 import { ModuleCard } from '@/components/cards/ModuleCard';
 import { Illustration } from '@/components/illustrations';
 import { AppHeader } from '@/components/layout/AppHeader';
@@ -17,12 +16,17 @@ import {
   findCycle,
   loadCatalog,
   loadCycleSummary,
-  loadModule,
+  loadModuleBundle,
 } from '@/lib/content';
 import { t } from '@/lib/content/ui';
 import { routes } from '@/lib/learning/steps';
 
 type Params = { ciclo: string };
+
+const THEME_KEYS = ['m01', 'm02', 'm03', 'm04'] as const;
+type ThemeKey = (typeof THEME_KEYS)[number];
+const themeOf = (value: string | undefined): ThemeKey | undefined =>
+  (THEME_KEYS as readonly string[]).includes(value ?? '') ? (value as ThemeKey) : undefined;
 
 export const dynamicParams = false;
 
@@ -57,7 +61,7 @@ export default async function JourneysPage({ params }: { params: Promise<Params>
   const cycle = findCycle(catalog.data, ciclo);
   if (!cycle) notFound();
 
-  const available = cycle.status === 'available' && cycle.journeys.length > 0;
+  const available = cycle.status === 'available' && cycle.modules.length > 0;
   const summary = loadCycleSummary(cycle.id);
 
   return (
@@ -72,43 +76,37 @@ export default async function JourneysPage({ params }: { params: Promise<Params>
           <p className="mt-2 max-w-[38rem] text-lead text-ink-soft">{cycle.description}</p>
 
           {available ? (
-            <div className="mt-10 flex flex-col gap-10">
-              {cycle.journeys.map((journey) => (
-                <JourneyCard
-                  key={journey.id}
-                  id={journey.id}
-                  title={journey.title}
-                  description={journey.description}
-                >
-                  {journey.modules.map((ref, index) => {
-                    const bundle = ref.status === 'available' ? loadModule(cycle.id, ref.id) : null;
-                    if (!bundle || !bundle.ok) {
-                      return (
-                        <p
-                          key={ref.id}
-                          className="rounded-card border-2 border-dashed border-line p-5 text-ink-muted"
-                        >
-                          {t('moduleEyebrow')} {index + 1}: {t('journeyModuleSoon')}
-                        </p>
-                      );
-                    }
-                    const { module } = bundle.data;
+            <div className="mt-10 flex flex-col gap-6">
+              <div className="grid gap-4 md:grid-cols-2">
+                {cycle.modules.map((ref) => {
+                  if (ref.status !== 'available') {
                     return (
-                      <ModuleCard
+                      <p
                         key={ref.id}
-                        cycle={cycle.id}
-                        moduleId={module.id}
-                        title={module.title}
-                        headline={module.headline}
-                        minutes={module.estimatedMinutes}
-                        illustration={module.illustration}
-                        stage={module.stage}
-                        position={index + 1}
-                      />
+                        className="rounded-card border-2 border-dashed border-line p-5 text-ink-muted"
+                      >
+                        {t('journeyModuleSoon')}
+                      </p>
                     );
-                  })}
-                </JourneyCard>
-              ))}
+                  }
+                  const bundle = loadModuleBundle(cycle.id, ref.id);
+                  if (!bundle.ok) return null;
+                  const { module, lessons } = bundle.data;
+                  return (
+                    <ModuleCard
+                      key={ref.id}
+                      cycle={cycle.id}
+                      moduleId={module.id}
+                      code={module.code}
+                      title={module.title}
+                      headline={module.headline}
+                      minutes={lessons.reduce((sum, lesson) => sum + lesson.estimatedMinutes, 0)}
+                      lessonsCount={lessons.length}
+                      theme={themeOf(module.theme)}
+                    />
+                  );
+                })}
+              </div>
               <CycleProgress
                 cycle={cycle.id}
                 moduleIds={cycleModules(cycle.id)}
@@ -138,12 +136,7 @@ export default async function JourneysPage({ params }: { params: Promise<Params>
               <Illustration name="home-hero" className="w-48" />
               <h2 className="text-heading font-semibold">{t('cycleSoonTitle')}</h2>
               <p className="text-ink-soft">{t('cycleSoonBody')}</p>
-              <ButtonLink
-                href={routes.age}
-                variant="secondary"
-                icon="arrow-left"
-                iconPosition="start"
-              >
+              <ButtonLink href={routes.age} variant="secondary" icon="arrow-left" iconPosition="start">
                 {t('cycleSoonCta')}
               </ButtonLink>
             </div>

@@ -1,24 +1,18 @@
 /**
- * Tipos do conteúdo educacional do Econominho.
+ * Modelo de conteúdo do Econominho — currículo C1–C4 v2.0.
  *
- * O conteúdo vive em content/ como JSON, revisado editorialmente de forma
- * independente do código. Regra central: todo número que pode ser calculado
- * é calculado no código. Os textos citam valores por template ({nome}) e os
- * componentes mostram contas (saldo, troco, diferença) a partir dos números
- * declarados.
+ * Hierarquia: ciclo → módulo → lição → objetos de conteúdo.
+ * Cada lição carrega rastreabilidade (competências, fontes, sensibilidade) e
+ * uma sequência de 2 a 4 objetos educacionais de tipos variados. O módulo
+ * termina com uma avaliação integradora e a síntese "O que descobrimos?".
+ *
+ * Regra de ouro: todo número que pode ser calculado é calculado no código.
+ * Textos citam valores por template ({nome}) resolvidos em lib/learning.
  */
 
 export type CycleId = 'c1' | 'c2' | 'c3' | 'c4';
 
-export type LessonStepId = 'story' | 'concept' | 'activity' | 'simulation' | 'quiz' | 'done';
-
-/** Nome de uma ilustração do catálogo em components/illustrations. */
-export type IllustrationKey = string;
-
-/** Família de cor do Design System usada para diferenciar conceitos e categorias. */
-export type Tone = 'teal' | 'coral' | 'amber' | 'cyan' | 'purple' | 'green';
-
-/** Ícones de conceito (components/illustrations/ConceptIcon). */
+/** Ícone de conceito (components/illustrations/ConceptIcon). */
 export type ConceptIconName =
   | 'need'
   | 'want'
@@ -37,111 +31,54 @@ export type ConceptIconName =
   | 'income'
   | 'limit'
   | 'later'
-  | 'choice';
+  | 'choice'
+  | 'trade'
+  | 'save'
+  | 'goal'
+  | 'safe';
 
-// ---------- Econominho (função editorial) ----------
+/** Família de cor do Design System. */
+export type Tone = 'teal' | 'coral' | 'amber' | 'cyan' | 'purple' | 'green';
 
-/**
- * Intenção de cada fala do guia. Define a expressão/pose futura do
- * personagem (docs/econominho-guide.md). Nunca há estado de "bronca" ou
- * "parabéns por guardar".
- */
+export type IllustrationKey = string;
+
+// ---------- rastreabilidade ----------
+
+/** Códigos de fonte usados na matriz curricular. */
+export type SourceCode = 'FB1' | 'FB2' | 'AV-C' | 'AV-P' | 'MC' | 'BNCC';
+
+export type SourceRef = { source: SourceCode; reference: string; role: 'principal' | 'complementar' };
+
+/** N1 comum · N2 sensível · N3 alta sensibilidade (Child Safety Policy). */
+export type Sensitivity = 'N1' | 'N2' | 'N3';
+
+// ---------- Econominho ----------
+
 export type GuideState = 'ask' | 'discover' | 'compare' | 'consequence' | 'summary' | 'reflect';
-
 export type GuideLine = { state: GuideState; text: string };
 
-/** Falas do Econominho em cada momento do módulo. */
-export type ModuleGuide = {
-  opening: GuideLine;
-  story: GuideLine;
-  concept: GuideLine;
-  activity: GuideLine;
-  simulation: GuideLine;
-  quiz: GuideLine;
-  done: GuideLine;
+// ---------- objetos de conteúdo de uma lição ----------
+
+export type ExplanationObject = {
+  type: 'explanation';
+  title?: string;
+  body: string;
+  illustration?: IllustrationKey;
+  bullets?: { icon?: ConceptIconName; tone?: Tone; text: string }[];
 };
-
-// ---------- catálogo ----------
-
-export type ModuleRef = { id: string; status: 'available' | 'soon' };
-
-export type Journey = {
-  id: string;
-  title: string;
-  description: string;
-  modules: ModuleRef[];
-};
-
-export type CycleEntry = {
-  id: CycleId;
-  label: string;
-  ageRange: string;
-  description: string;
-  status: 'available' | 'soon';
-  journeys: Journey[];
-};
-
-export type Catalog = { cycles: CycleEntry[] };
-
-/** Página "O que descobrimos?" ao fim de um ciclo (content/<ciclo>/cycle.json). */
-export type CycleSummary = {
-  cycle: CycleId;
-  title: string;
-  intro: string;
-  discoveries: { text: string; icon: ConceptIconName; tone: Tone; module: string }[];
-  guide: GuideLine;
-  closing: string;
-};
-
-// ---------- módulo ----------
-
-export type Module = {
-  id: string;
-  cycle: CycleId;
-  journeyId: string;
-  /** Etapa da progressão do ciclo, na voz da criança (ex.: "Eu escolho"). */
-  stage: string;
-  title: string;
-  headline: string;
-  summary: string;
-  competencies: { code: string; description: string }[];
-  /** N1 (baixa) ou N2 (média): orienta a revisão editorial. */
-  sensitivity: 'N1' | 'N2';
-  objectives: string[];
-  centralMessage: string;
-  estimatedMinutes: number;
-  illustration: IllustrationKey;
-  cta: string;
-  guide: ModuleGuide;
-  conclusion: {
-    title: string;
-    message: string;
-    recap: { icon: ConceptIconName; tone: Tone; text: string }[];
-  };
-};
-
-// ---------- história ----------
 
 export type StoryPanel = { id: string; illustration: IllustrationKey; text: string };
-
-/** Valor calculado a partir de outros, ex.: { name: "troco", expr: "dinheiro - preco" }. */
 export type DerivedValue = { name: string; expr: string };
-
-export type Story = {
-  title: string;
-  /** Valores em reais citados na história. */
-  values: Record<string, number>;
-  /** Valores calculados, na ordem; podem usar valores e derivados anteriores. */
-  derived: DerivedValue[];
+export type StoryObject = {
+  type: 'story';
+  title?: string;
+  /** Valores em reais citados nos textos; opcional. */
+  values?: Record<string, number>;
+  derived?: DerivedValue[];
   panels: StoryPanel[];
-  question: {
-    prompt: string;
-    options: { id: string; label: string; reflection: string }[];
-  };
-  closing: string;
+  question?: { prompt: string; options: { id: string; label: string; reflection: string }[] };
+  closing?: string;
 };
-
-// ---------- conceito ----------
 
 export type Concept = {
   id: string;
@@ -150,18 +87,16 @@ export type Concept = {
   description: string;
   icon: ConceptIconName;
   tone: Tone;
-  examples: { label: string; illustration: IllustrationKey }[];
+  examples?: { label: string; illustration: IllustrationKey }[];
 };
-
-export type Infographic = {
-  title: string;
-  intro: string;
+export type ConceptsObject = {
+  type: 'concepts';
+  title?: string;
+  intro?: string;
   concepts: Concept[];
-  keyIdea: string;
-  keyIdeaIllustration: IllustrationKey;
+  keyIdea?: string;
+  keyIdeaIllustration?: IllustrationKey;
 };
-
-// ---------- atividade ----------
 
 export type ActivityCategory = {
   id: string;
@@ -171,50 +106,45 @@ export type ActivityCategory = {
   tone: Tone;
 };
 
+export type ClassifyItem = {
+  id: string;
+  label: string;
+  situation: string;
+  illustration?: IllustrationKey;
+  accepted: string[];
+  feedback: string;
+  contextNote?: string;
+};
+export type ClassifyObject = {
+  type: 'classify';
+  prompt?: string;
+  instructions?: string;
+  categories: ActivityCategory[];
+  items: ClassifyItem[];
+};
+
 export type PricedProduct = {
   id: string;
   label: string;
   price: number;
   illustration: IllustrationKey;
 };
-
-/** Classificar uma situação em uma (ou mais) categorias. */
-export type ClassifyItem = {
-  kind: 'classify';
-  id: string;
-  label: string;
-  situation: string;
-  illustration?: IllustrationKey;
-  /** Mais de uma resposta quando o contexto muda a classificação. */
-  accepted: string[];
-  feedback: string;
-  contextNote?: string;
-};
-
-/** "Qual custa mais/menos?" A resposta é calculada pelos preços. */
-export type CompareItem = {
-  kind: 'compare';
-  id: string;
+export type CompareObject = {
+  type: 'compare';
   prompt: string;
   target: 'most' | 'least';
   products: PricedProduct[];
   feedback: string;
 };
-
-/** "Tenho R$ X. O que posso comprar?" Valem todas as opções que cabem. */
-export type AffordItem = {
-  kind: 'afford';
-  id: string;
+export type AffordObject = {
+  type: 'afford';
   prompt: string;
   budget: number;
   products: PricedProduct[];
   feedback: string;
 };
-
-/** "Quanto sobra / qual é o troco?" A resposta é paid - price. */
-export type ChangeItem = {
-  kind: 'change';
-  id: string;
+export type ChangeObject = {
+  type: 'change';
   prompt: string;
   paid: number;
   product: PricedProduct;
@@ -222,114 +152,137 @@ export type ChangeItem = {
   feedback: string;
 };
 
-export type ActivityItem = ClassifyItem | CompareItem | AffordItem | ChangeItem;
-
-export type Activity = {
-  title: string;
-  instructions: string;
-  /** Obrigatório quando há itens "classify". */
-  categories: ActivityCategory[];
-  items: ActivityItem[];
+/** Escolha reflexiva: toda opção é válida, cada uma com sua consequência. */
+export type ChoiceObject = {
+  type: 'choice';
+  prompt: string;
+  illustration?: IllustrationKey;
+  options: { id: string; label: string; reflection: string }[];
+  note?: { title: string; body: string };
 };
 
-// ---------- simulação ----------
-
-export type SpendOption = {
-  id: string;
-  label: string;
-  cost: number;
-  illustration: IllustrationKey;
-  now: string;
-  later: string;
+/** Ordenação: colocar passos/etapas na ordem certa. */
+export type OrderingObject = {
+  type: 'ordering';
+  prompt: string;
+  instructions?: string;
+  items: { id: string; label: string; illustration?: IllustrationKey }[];
+  /** Ordem correta (ids). A tela embaralha para apresentar. */
+  correct: string[];
+  feedback: string;
 };
 
-/** Escolher uma opção com um valor fictício; o que sobra vai para a meta ou vira troco. */
-export type SpendSimulation = {
-  kind: 'spend';
-  title: string;
-  /** Pode citar {budget}. */
-  intro: string;
-  budget: number;
-  goal?: { label: string; price: number; saved: number; illustration: IllustrationKey };
-  leftoverRule: string;
-  options: SpendOption[];
-  wrapUp: string;
+/** Verdadeiro ou falso contextualizado — nunca pegadinha. */
+export type TrueFalseObject = {
+  type: 'trueFalse';
+  prompt?: string;
+  statements: { id: string; text: string; isTrue: boolean; explanation: string }[];
 };
-
-/** O mesmo produto apresentado de dois jeitos. */
-export type PresentationSimulation = {
-  kind: 'presentation';
-  title: string;
-  intro: string;
-  product: { label: string; illustration: IllustrationKey; facts: string[] };
-  versions: {
-    id: string;
-    label: string;
-    style: 'plain' | 'loud';
-    headline: string;
-    lines: string[];
-  }[];
-  question: {
-    prompt: string;
-    options: { id: string; label: string; reflection: string }[];
-  };
-  wrapUp: string;
-};
-
-export type BudgetItem = {
-  id: string;
-  label: string;
-  cost: number;
-  illustration: IllustrationKey;
-  /** Comprar agora e pagar depois: parte agora, parte no próximo período. */
-  payLater?: { now: number; later: number };
-};
-
-/** Orçamento simples: escolher várias opções sem passar do valor disponível. */
-export type BudgetSimulation = {
-  kind: 'budget';
-  title: string;
-  /** Pode citar {budget} e {nextBudget}. */
-  intro: string;
-  budget: number;
-  /** Valor do próximo período, para mostrar o compromisso de "pagar depois". */
-  nextBudget?: number;
-  nextLabel?: string;
-  items: BudgetItem[];
-  wrapUp: string;
-};
-
-export type Simulation = SpendSimulation | PresentationSimulation | BudgetSimulation;
-
-// ---------- quiz ----------
 
 export type QuizKind = 'recognition' | 'situation' | 'decision' | 'explanation';
-
-export type QuizOption = { id: string; label: string; feedback?: string };
-
 export type QuizQuestion = {
   id: string;
   kind: QuizKind;
   prompt: string;
   illustration?: IllustrationKey;
-  options: QuizOption[];
-  /** Resposta esperada, ou pergunta aberta (de reflexão) em que todas as opções valem. */
+  options: { id: string; label: string; feedback?: string }[];
   answer: { type: 'single'; correctOptionId: string } | { type: 'open' };
   explanation: string;
 };
+export type QuizObject = { type: 'quiz'; title?: string; questions: QuizQuestion[] };
 
-export type Quiz = { title: string; questions: QuizQuestion[] };
+export type ReflectionObject = {
+  type: 'reflection';
+  state: GuideState;
+  text: string;
+  body?: string;
+};
+
+export type LessonObject =
+  | ExplanationObject
+  | StoryObject
+  | ConceptsObject
+  | ClassifyObject
+  | CompareObject
+  | AffordObject
+  | ChangeObject
+  | ChoiceObject
+  | OrderingObject
+  | TrueFalseObject
+  | QuizObject
+  | ReflectionObject;
+
+export type LessonObjectType = LessonObject['type'];
+
+// ---------- lição ----------
+
+export type Lesson = {
+  id: string;
+  cycle: CycleId;
+  module: string;
+  order: number;
+  title: string;
+  headline: string;
+  objectives: string[];
+  competencies: string[];
+  sources: SourceRef[];
+  sensitivity: Sensitivity;
+  estimatedMinutes: number;
+  /** Fala de abertura do Econominho (opcional). */
+  guide?: GuideLine;
+  content: LessonObject[];
+  /** Síntese curta ao fim da lição (1 a 3 ideias). */
+  summary: string[];
+};
+
+// ---------- módulo ----------
+
+export type Module = {
+  id: string;
+  cycle: CycleId;
+  order: number;
+  /** Código curricular, ex.: "C1.1". */
+  code: string;
+  title: string;
+  headline: string;
+  summary: string;
+  /** Imagem temática do Econominho (m01..m04) ou ausente. */
+  theme?: string;
+  competencies: string[];
+  /** Avaliação integradora do módulo. */
+  integrative: { title: string; intro: string; object: LessonObject };
+  conclusion: {
+    title: string;
+    message: string;
+    recap: { icon: ConceptIconName; tone: Tone; text: string }[];
+  };
+};
+
+/** Pacote de um módulo: metadados + lições na ordem. */
+export type ModuleBundle = { module: Module; lessons: Lesson[] };
+
+// ---------- catálogo e ciclo ----------
+
+export type ModuleRef = { id: string; status: 'available' | 'soon' };
+export type CycleEntry = {
+  id: CycleId;
+  label: string;
+  ageRange: string;
+  description: string;
+  status: 'available' | 'soon';
+  modules: ModuleRef[];
+};
+export type Catalog = { cycles: CycleEntry[] };
+
+export type CycleSummary = {
+  cycle: CycleId;
+  title: string;
+  intro: string;
+  discoveries: { text: string; icon: ConceptIconName; tone: Tone; module: string }[];
+  guide: GuideLine;
+  closing: string;
+};
 
 // ---------- textos de interface ----------
 
 export type UiStrings = Record<string, string>;
-
-/** Pacote completo de um módulo, já validado. */
-export type ModuleBundle = {
-  module: Module;
-  story: Story;
-  infographic: Infographic;
-  activity: Activity;
-  simulation: Simulation;
-  quiz: Quiz;
-};

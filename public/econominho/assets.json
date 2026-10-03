@@ -1,0 +1,34 @@
+{
+  "brand": "Econominho",
+  "source": "econominho-assets-v1 (identidade e personagem aprovados)",
+  "character": {
+    "default": "/econominho/character/feliz.png",
+    "ask": "/econominho/character/curioso.png",
+    "discover": "/econominho/character/surpreso.png",
+    "compare": "/econominho/character/atencao.png",
+    "consequence": "/econominho/character/explicando.png",
+    "summary": "/econominho/character/feliz.png",
+    "reflect": "/econominho/character/pensando.png",
+    "fullbody": "/econominho/character/fullbody.png"
+  },
+  "poses": {
+    "apresentacao": "/econominho/character/pose-apresentacao.png",
+    "comparando": "/econominho/character/pose-comparando.png",
+    "mostrando-ideia": "/econominho/character/pose-mostrando-ideia.png",
+    "com-lupa": "/econominho/character/pose-com-lupa.png",
+    "com-tablet": "/econominho/character/pose-com-tablet.png",
+    "lendo": "/econominho/character/pose-lendo.png",
+    "pensando": "/econominho/character/pose-pensando.png",
+    "comemorando": "/econominho/character/pose-comemorando.png"
+  },
+  "themes": {
+    "m01": "/econominho/themes/m01_escolhas.png",
+    "m02": "/econominho/themes/m02_dinheiro_preco.png",
+    "m03": "/econominho/themes/m03_publicidade.png",
+    "m04": "/econominho/themes/m04_trabalho_renda.png"
+  },
+  "brandAssets": {
+    "wordmark": "/econominho/logo/wordmark.png",
+    "monogram": "/econominho/logo/icon.svg"
+  }
+}

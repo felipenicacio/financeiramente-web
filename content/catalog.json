@@ -4,57 +4,19 @@
       "id": "c1",
       "label": "Descoberta",
       "ageRange": "6 a 8 anos",
-      "description": "Escolhas, preços, anúncios e trabalho, com histórias e muito apoio visual.",
+      "description": "Dinheiro, escolhas e o dia a dia, com histórias e muito apoio visual.",
       "status": "available",
-      "journeys": [
-        {
-          "id": "escolhas-e-valor",
-          "title": "Escolhas, dinheiro e o dia a dia",
-          "description": "Escolher, entender preços, perceber anúncios e conhecer trabalho e renda.",
-          "modules": [
-            {
-              "id": "m01",
-              "status": "available"
-            },
-            {
-              "id": "m02",
-              "status": "available"
-            },
-            {
-              "id": "m03",
-              "status": "available"
-            },
-            {
-              "id": "m04",
-              "status": "available"
-            }
-          ]
-        }
+      "modules": [
+        { "id": "m01", "status": "available" },
+        { "id": "m02", "status": "available" },
+        { "id": "m03", "status": "available" },
+        { "id": "m04", "status": "available" },
+        { "id": "m05", "status": "available" },
+        { "id": "m06", "status": "available" }
       ]
     },
-    {
-      "id": "c2",
-      "label": "Escolhas",
-      "ageRange": "9 a 11 anos",
-      "description": "Metas, planejamento e consumo, com mais autonomia.",
-      "status": "soon",
-      "journeys": []
-    },
-    {
-      "id": "c3",
-      "label": "Autonomia inicial",
-      "ageRange": "12 a 14 anos",
-      "description": "Orçamento, crédito, golpes e decisões com consequências.",
-      "status": "soon",
-      "journeys": []
-    },
-    {
-      "id": "c4",
-      "label": "Vida econômica",
-      "ageRange": "15 a 17 anos",
-      "description": "Trabalho, impostos, risco e escolhas de longo prazo.",
-      "status": "soon",
-      "journeys": []
-    }
+    { "id": "c2", "label": "Escolhas", "ageRange": "9 a 11 anos", "description": "Planejar, comparar e decidir com mais autonomia.", "status": "soon", "modules": [] },
+    { "id": "c3", "label": "Autonomia inicial", "ageRange": "12 a 14 anos", "description": "Orçamento, crédito, juros, economia e risco.", "status": "soon", "modules": [] },
+    { "id": "c4", "label": "Vida econômica", "ageRange": "15 a 17 anos", "description": "Trabalho, impostos, investimentos e análise econômica.", "status": "soon", "modules": [] }
   ]
 }

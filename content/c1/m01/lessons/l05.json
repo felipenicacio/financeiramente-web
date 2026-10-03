@@ -1,0 +1,117 @@
+{
+  "id": "c1-m01-l05",
+  "cycle": "c1",
+  "module": "m01",
+  "order": 5,
+  "title": "Comprar coisas e serviços",
+  "headline": "Com dinheiro a gente paga por coisas (como um pão) e por serviços (como um corte de cabelo).",
+  "objectives": [
+    "Compreender que o dinheiro paga coisas e serviços",
+    "Diferenciar comprar uma coisa de pagar por um serviço"
+  ],
+  "competencies": [
+    "F-D4-C1-01",
+    "F-D7-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF12LF01/03",
+      "role": "principal"
+    },
+    {
+      "source": "FB1",
+      "reference": "cap. 2",
+      "role": "complementar"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "body": "Com dinheiro, a gente paga por coisas que dá para pegar, como pão e lápis. E também paga por serviços, que são trabalhos que alguém faz, como cortar o cabelo ou consertar algo.",
+      "title": "Coisas e serviços",
+      "illustration": "item-wallet",
+      "bullets": [
+        {
+          "text": "Coisa: dá para pegar e guardar (pão, lápis).",
+          "icon": "good",
+          "tone": "teal"
+        },
+        {
+          "text": "Serviço: é um trabalho que alguém faz (corte de cabelo).",
+          "icon": "service",
+          "tone": "cyan"
+        }
+      ]
+    },
+    {
+      "type": "classify",
+      "categories": [
+        {
+          "id": "good",
+          "label": "Coisa",
+          "short": "Dá para pegar.",
+          "icon": "good",
+          "tone": "teal"
+        },
+        {
+          "id": "service",
+          "label": "Serviço",
+          "short": "Um trabalho que alguém faz.",
+          "icon": "service",
+          "tone": "cyan"
+        }
+      ],
+      "items": [
+        {
+          "id": "bread",
+          "label": "Comprar um pão",
+          "situation": "Você compra um pão na padaria.",
+          "accepted": [
+            "good"
+          ],
+          "feedback": "O pão dá para pegar e comer. É uma coisa.",
+          "illustration": "item-bread"
+        },
+        {
+          "id": "haircut",
+          "label": "Cortar o cabelo",
+          "situation": "Alguém corta o seu cabelo.",
+          "accepted": [
+            "service"
+          ],
+          "feedback": "Cortar cabelo é um trabalho que alguém faz. É um serviço.",
+          "illustration": "item-chair"
+        },
+        {
+          "id": "book",
+          "label": "Comprar um livro",
+          "situation": "Você compra um livro de histórias.",
+          "accepted": [
+            "good"
+          ],
+          "feedback": "O livro dá para pegar e ler. É uma coisa.",
+          "illustration": "item-book"
+        },
+        {
+          "id": "repair",
+          "label": "Consertar um brinquedo",
+          "situation": "Alguém conserta o seu brinquedo quebrado.",
+          "accepted": [
+            "service"
+          ],
+          "feedback": "Consertar é um trabalho. É um serviço.",
+          "illustration": "item-laptop"
+        }
+      ],
+      "prompt": "Coisa ou serviço?",
+      "instructions": "O dinheiro está pagando por uma coisa ou por um serviço?"
+    }
+  ],
+  "summary": [
+    "Dinheiro paga por coisas e por serviços.",
+    "Coisa dá para pegar; serviço é um trabalho que alguém faz."
+  ]
+}

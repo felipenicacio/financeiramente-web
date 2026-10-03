@@ -1,0 +1,62 @@
+{
+  "id": "c1-m01-l03",
+  "cycle": "c1",
+  "module": "m01",
+  "order": 3,
+  "title": "Por que usamos dinheiro?",
+  "headline": "O dinheiro facilita as trocas: com ele, todo mundo aceita pagar e receber.",
+  "objectives": [
+    "Entender que o dinheiro facilita as trocas",
+    "Reconhecer o dinheiro como algo que todos aceitam"
+  ],
+  "competencies": [
+    "F-D4-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "FB1",
+      "reference": "cap. 2",
+      "role": "principal"
+    },
+    {
+      "source": "AV-C",
+      "reference": "EF12LF01",
+      "role": "complementar"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 3,
+  "content": [
+    {
+      "type": "explanation",
+      "body": "O dinheiro resolveu um problema das trocas. Em vez de procurar alguém que queira exatamente o que você tem, você usa dinheiro: todo mundo aceita. Assim fica mais fácil comprar e vender.",
+      "title": "O dinheiro facilita tudo",
+      "illustration": "item-banknote"
+    },
+    {
+      "type": "choice",
+      "prompt": "Por que é mais fácil comprar com dinheiro do que trocando coisas?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Porque todo mundo aceita dinheiro",
+          "reflection": "Isso mesmo: como todos aceitam, fica fácil comprar de qualquer pessoa."
+        },
+        {
+          "id": "b",
+          "label": "Porque dinheiro é bonito",
+          "reflection": "A cor não importa. O que importa é que todos aceitam o dinheiro."
+        },
+        {
+          "id": "c",
+          "label": "Porque trocar é proibido",
+          "reflection": "Trocar não é proibido. O dinheiro só facilita quando as pessoas querem coisas diferentes."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "O dinheiro facilita as trocas.",
+    "Todos aceitam dinheiro, por isso comprar fica mais fácil."
+  ]
+}

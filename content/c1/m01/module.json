@@ -1,82 +1,172 @@
 {
   "id": "m01",
   "cycle": "c1",
-  "journeyId": "escolhas-e-valor",
-  "stage": "Eu escolho",
-  "title": "Quero, preciso ou posso esperar?",
-  "headline": "Você quer muitas coisas. Mas precisa de todas elas agora?",
-  "summary": "Uma história, uma ideia nova, uma atividade, uma simulação e um quiz para descobrir que escolher também é decidir o que fica para depois.",
+  "order": 1,
+  "code": "C1.1",
+  "title": "O dinheiro está por toda parte",
+  "headline": "De onde vem o dinheiro e para que ele serve, das trocas antigas às moedas e cédulas de hoje.",
+  "summary": "O dinheiro aparece o tempo todo: para comprar coisas, pagar serviços e facilitar as trocas entre as pessoas.",
   "competencies": [
-    {
-      "code": "F-D1-C1-01",
-      "description": "Distinguir necessidade de desejo em situações cotidianas."
-    },
-    {
-      "code": "F-D5-C1-01",
-      "description": "Usar planejamento para organizar uma escolha simples."
-    }
+    "F-D4-C1-01",
+    "F-D7-C1-01"
   ],
-  "sensitivity": "N1",
-  "objectives": [
-    "Diferenciar necessidade e desejo.",
-    "Reconhecer prioridades.",
-    "Compreender que nem todo desejo precisa ser atendido imediatamente.",
-    "Compreender a espera como uma escolha.",
-    "Reconhecer que os recursos são limitados."
-  ],
-  "centralMessage": "Nem tudo que queremos precisa ser comprado agora.",
-  "estimatedMinutes": 10,
-  "illustration": "module-three-choices",
-  "cta": "Vamos descobrir",
-  "guide": {
-    "opening": {
-      "state": "ask",
-      "text": "Será que tudo que a gente quer precisa ser agora?"
-    },
-    "story": {
-      "state": "ask",
-      "text": "O Téo ganhou um presente. O que será que ele vai fazer?"
-    },
-    "concept": {
-      "state": "discover",
-      "text": "Vamos descobrir três jeitos de olhar para uma vontade."
-    },
-    "activity": {
-      "state": "ask",
-      "text": "Essa situação pode mudar? Vamos ver uma de cada vez."
-    },
-    "simulation": {
-      "state": "compare",
-      "text": "Vamos comparar? Escolha uma opção e veja o que acontece depois."
-    },
-    "quiz": {
-      "state": "reflect",
-      "text": "Vamos pensar juntos em algumas perguntas."
-    },
-    "done": {
-      "state": "summary",
-      "text": "Escolher também é decidir o que pode ficar para depois."
+  "integrative": {
+    "title": "Juntando tudo",
+    "intro": "Vamos ver o que você descobriu sobre o dinheiro?",
+    "object": {
+      "type": "quiz",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Para que serve o dinheiro?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Para pagar coisas e serviços"
+            },
+            {
+              "id": "b",
+              "label": "Só para enfeitar"
+            },
+            {
+              "id": "c",
+              "label": "Só para adultos"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "O dinheiro facilita comprar coisas e pagar serviços.",
+          "illustration": "item-banknote"
+        },
+        {
+          "id": "q2",
+          "kind": "recognition",
+          "prompt": "O que é uma cédula?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Dinheiro de papel"
+            },
+            {
+              "id": "b",
+              "label": "Dinheiro de metal"
+            },
+            {
+              "id": "c",
+              "label": "Um tipo de troca"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Cédula é o dinheiro de papel; moeda é a de metal."
+        },
+        {
+          "id": "q3",
+          "kind": "situation",
+          "prompt": "Antes do dinheiro, como as pessoas conseguiam coisas?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Trocando uma coisa por outra"
+            },
+            {
+              "id": "b",
+              "label": "Usando cartão",
+              "feedback": "Cartão é bem mais recente que o dinheiro."
+            },
+            {
+              "id": "c",
+              "label": "Não conseguiam nada"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Elas trocavam: uma coisa pela outra. O dinheiro veio depois para facilitar."
+        },
+        {
+          "id": "q4",
+          "kind": "decision",
+          "prompt": "Qual destes é um serviço?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Cortar o cabelo de alguém"
+            },
+            {
+              "id": "b",
+              "label": "Um pão"
+            },
+            {
+              "id": "c",
+              "label": "Uma moeda"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Cortar cabelo é um trabalho que alguém faz: um serviço."
+        },
+        {
+          "id": "q5",
+          "kind": "recognition",
+          "prompt": "O que quer dizer “finanças”?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Cuidar do dinheiro no dia a dia"
+            },
+            {
+              "id": "b",
+              "label": "Guardar brinquedos"
+            },
+            {
+              "id": "c",
+              "label": "Um tipo de moeda"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Finanças é lidar com o dinheiro: ganhar, gastar, trocar e guardar."
+        }
+      ],
+      "title": "O que você descobriu"
     }
   },
   "conclusion": {
     "title": "Você concluiu o módulo",
-    "message": "Escolher é decidir o que faz sentido agora e o que pode ficar para depois.",
+    "message": "O dinheiro facilita as trocas e serve para pagar coisas e serviços. Ele aparece como moedas e cédulas.",
     "recap": [
       {
-        "icon": "need",
-        "tone": "teal",
-        "text": "Preciso: o que é importante naquele momento."
+        "icon": "trade",
+        "tone": "cyan",
+        "text": "Antes do dinheiro, as pessoas trocavam coisas."
       },
       {
-        "icon": "want",
-        "tone": "coral",
-        "text": "Quero: o que eu gostaria de ter."
-      },
-      {
-        "icon": "wait",
+        "icon": "money",
         "tone": "amber",
-        "text": "Posso esperar: o que eu quero, mas pode ser depois."
+        "text": "O dinheiro facilita as trocas: todos aceitam."
+      },
+      {
+        "icon": "good",
+        "tone": "teal",
+        "text": "Com dinheiro, pagamos coisas e serviços."
+      },
+      {
+        "icon": "price",
+        "tone": "coral",
+        "text": "Moeda é de metal; cédula é de papel."
       }
     ]
-  }
+  },
+  "theme": "m02"
 }

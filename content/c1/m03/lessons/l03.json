@@ -1,0 +1,76 @@
+{
+  "id": "c1-m03-l03",
+  "cycle": "c1",
+  "module": "m03",
+  "order": 3,
+  "title": "Comparando dois produtos",
+  "headline": "Antes de escolher, dá para comparar e pensar no que faz mais sentido.",
+  "objectives": [
+    "Comparar dois produtos pelo preço",
+    "Entender que preço não decide tudo"
+  ],
+  "competencies": [
+    "F-D4-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "FB2",
+      "reference": "L5",
+      "role": "principal"
+    },
+    {
+      "source": "AV-C",
+      "reference": "EF12LF04",
+      "role": "complementar"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "compare",
+      "prompt": "Qual caixa de lápis custa menos?",
+      "target": "least",
+      "products": [
+        {
+          "id": "big",
+          "label": "Caixa grande",
+          "price": 15,
+          "illustration": "item-pencils"
+        },
+        {
+          "id": "small",
+          "label": "Caixa pequena",
+          "price": 8,
+          "illustration": "item-pencils"
+        }
+      ],
+      "feedback": "A caixa pequena custa menos. A grande tem mais lápis, mas custa mais. Você escolhe o que faz sentido."
+    },
+    {
+      "type": "choice",
+      "prompt": "A caixa grande custa mais. Isso quer dizer que você deve comprar sempre a mais cara?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Não. Depende do que eu preciso",
+          "reflection": "Isso mesmo: às vezes a pequena já resolve. O preço maior não decide por você."
+        },
+        {
+          "id": "b",
+          "label": "Sim, a mais cara é sempre melhor",
+          "reflection": "Nem sempre. Se você usa poucos lápis, a pequena pode bastar."
+        },
+        {
+          "id": "c",
+          "label": "Devo comprar sempre a mais barata",
+          "reflection": "Nem sempre também. Depende de quanto você vai usar."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Comparar ajuda a escolher o que faz mais sentido.",
+    "O preço não decide tudo sozinho."
+  ]
+}

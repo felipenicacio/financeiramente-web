@@ -1,0 +1,111 @@
+{
+  "id": "c1-m04-l04",
+  "cycle": "c1",
+  "module": "m04",
+  "order": 4,
+  "title": "Bem, serviço ou renda?",
+  "headline": "Além de bens e serviços, existe a renda: o dinheiro que as pessoas recebem.",
+  "objectives": [
+    "Diferenciar bem, serviço e renda",
+    "Reconhecer a renda como dinheiro recebido"
+  ],
+  "competencies": [
+    "F-D7-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "FB1",
+      "reference": "cap. 3",
+      "role": "principal"
+    },
+    {
+      "source": "MC",
+      "reference": "D7",
+      "role": "complementar"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "body": "Renda é o dinheiro que uma pessoa ou família recebe. O trabalho é uma forma de ter renda: quem trabalha costuma receber por isso.",
+      "title": "Renda é o dinheiro que entra",
+      "illustration": "item-wallet"
+    },
+    {
+      "type": "classify",
+      "categories": [
+        {
+          "id": "good",
+          "label": "Bem",
+          "short": "Uma coisa.",
+          "icon": "good",
+          "tone": "teal"
+        },
+        {
+          "id": "service",
+          "label": "Serviço",
+          "short": "Ajudar alguém.",
+          "icon": "service",
+          "tone": "cyan"
+        },
+        {
+          "id": "income",
+          "label": "Renda",
+          "short": "Dinheiro recebido.",
+          "icon": "income",
+          "tone": "green"
+        }
+      ],
+      "items": [
+        {
+          "id": "bread",
+          "label": "Pão da padaria",
+          "situation": "O seu Jorge faz pães.",
+          "accepted": [
+            "good"
+          ],
+          "feedback": "O pão é uma coisa. É um bem.",
+          "illustration": "item-bread"
+        },
+        {
+          "id": "repair",
+          "label": "Conserto do computador",
+          "situation": "A técnica Rita arruma o computador.",
+          "accepted": [
+            "service"
+          ],
+          "feedback": "Consertar ajuda alguém. É um serviço.",
+          "illustration": "item-laptop"
+        },
+        {
+          "id": "payment",
+          "label": "Pagamento do cozinheiro",
+          "situation": "O Luís cozinha e recebe pelo trabalho.",
+          "accepted": [
+            "income"
+          ],
+          "feedback": "O dinheiro que ele recebe é a renda dele.",
+          "illustration": "item-wallet"
+        },
+        {
+          "id": "health",
+          "label": "Consulta no posto",
+          "situation": "A enfermeira Sônia cuida de quem está doente.",
+          "accepted": [
+            "service"
+          ],
+          "feedback": "Cuidar da saúde é um serviço.",
+          "illustration": "item-stethoscope"
+        }
+      ],
+      "prompt": "Bem, serviço ou renda?",
+      "instructions": "Leia e escolha: é um bem, um serviço ou renda?"
+    }
+  ],
+  "summary": [
+    "Renda é o dinheiro que a família recebe.",
+    "Bem é coisa, serviço é ajuda, renda é dinheiro recebido."
+  ]
+}

@@ -1,7 +1,6 @@
 /**
- * Textos de interface (content/ui.json). Módulo separado do registro de
- * conteúdo para que componentes de cliente importem só os rótulos, sem
- * carregar todos os módulos no bundle do navegador.
+ * Textos de interface (content/ui.json), separados do registro de conteúdo
+ * para que componentes de cliente importem só os rótulos.
  */
 import ui from '@/content/ui.json';
 import { uiStringsSchema } from '@/lib/validation/contentSchemas';
@@ -13,7 +12,6 @@ if (issues.length > 0 && process.env.NODE_ENV !== 'production') {
   console.warn(`[conteúdo] ui.json tem ${issues.length} problema(s)`, issues);
 }
 
-/** Chave ausente cai no próprio nome da chave, sem quebrar a tela. */
 const strings: UiStrings = issues.length === 0 ? (ui as UiStrings) : {};
 
 export function t(key: string, vars?: Record<string, string | number>): string {

@@ -24,7 +24,7 @@ export function ConceptCard({ concept }: { concept: Concept }) {
       </div>
       <div className="flex flex-col gap-5 p-5 sm:p-6">
         <p className="text-ink-soft">{concept.description}</p>
-        {concept.examples.length > 0 ? (
+        {concept.examples && concept.examples.length > 0 ? (
           <ul
             className={`grid gap-3 ${concept.examples.length === 1 ? 'grid-cols-1' : 'grid-cols-2'}`}
           >

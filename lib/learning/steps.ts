@@ -1,46 +1,40 @@
-import type { LessonStepId } from '@/lib/content/types';
-
 /**
- * Ordem fixa das etapas de um módulo. Todo módulo segue o mesmo padrão.
- * `slug` é o trecho da URL (em português) e `labelKey` aponta para ui.json.
+ * Slugs de lição e rotas do produto.
+ *
+ * Um módulo tem 5 lições (l01..l05) e um fechamento (avaliação integradora +
+ * "O que descobrimos?"). A navegação é livre: nada bloqueia a próxima lição.
  */
-export const lessonSteps = [
-  { id: 'story', slug: 'historia', labelKey: 'stepStory' },
-  { id: 'concept', slug: 'conceito', labelKey: 'stepConcept' },
-  { id: 'activity', slug: 'atividade', labelKey: 'stepActivity' },
-  { id: 'simulation', slug: 'simulacao', labelKey: 'stepSimulation' },
-  { id: 'quiz', slug: 'quiz', labelKey: 'stepQuiz' },
-  { id: 'done', slug: 'conclusao', labelKey: 'stepDone' },
-] as const satisfies readonly { id: LessonStepId; slug: string; labelKey: string }[];
+export const LESSON_SLUGS = ['l01', 'l02', 'l03', 'l04', 'l05'] as const;
+export const CLOSING_SLUG = 'fechamento';
 
-export type LessonStep = (typeof lessonSteps)[number];
-export type LessonStepSlug = LessonStep['slug'];
+export type LessonSlug = (typeof LESSON_SLUGS)[number] | typeof CLOSING_SLUG;
 
-export function stepBySlug(slug: string): LessonStep | undefined {
-  return lessonSteps.find((step) => step.slug === slug);
+export function orderFromSlug(slug: string): number | null {
+  const index = (LESSON_SLUGS as readonly string[]).indexOf(slug);
+  return index >= 0 ? index + 1 : null;
 }
 
-export function stepIndex(id: LessonStepId): number {
-  return lessonSteps.findIndex((step) => step.id === id);
+export function slugFromOrder(order: number): string {
+  return `l${String(order).padStart(2, '0')}`;
 }
 
-export function nextStep(id: LessonStepId): LessonStep | null {
-  const index = stepIndex(id);
-  return index >= 0 && index < lessonSteps.length - 1 ? (lessonSteps[index + 1] ?? null) : null;
+export function isLessonSlug(slug: string): slug is LessonSlug {
+  return slug === CLOSING_SLUG || orderFromSlug(slug) !== null;
 }
 
-export function previousStep(id: LessonStepId): LessonStep | null {
-  const index = stepIndex(id);
-  return index > 0 ? (lessonSteps[index - 1] ?? null) : null;
+/** Todas as etapas navegáveis de um módulo, na ordem. */
+export function moduleSteps(lessonCount: number): string[] {
+  return [...LESSON_SLUGS.slice(0, lessonCount), CLOSING_SLUG];
 }
 
-/** Rotas do produto, centralizadas para não espalhar strings de URL. */
 export const routes = {
   home: '/',
   age: '/idade/',
+  /** Página da fase: lista os módulos do ciclo. */
+  cycle: (cycle: string) => `/jornadas/${cycle}/`,
   journeys: (cycle: string) => `/jornadas/${cycle}/`,
   cycleSummary: (cycle: string) => `/jornadas/${cycle}/o-que-descobrimos/`,
   module: (cycle: string, moduleId: string) => `/modulos/${cycle}/${moduleId}/`,
-  lesson: (cycle: string, moduleId: string, slug: LessonStepSlug) =>
+  lesson: (cycle: string, moduleId: string, slug: string) =>
     `/aprender/${cycle}/${moduleId}/${slug}/`,
 };

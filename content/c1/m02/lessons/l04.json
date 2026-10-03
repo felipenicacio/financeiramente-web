@@ -1,0 +1,119 @@
+{
+  "id": "c1-m02-l04",
+  "cycle": "c1",
+  "module": "m02",
+  "order": 4,
+  "title": "Nem toda vontade é para agora",
+  "headline": "Dá para olhar uma vontade de três jeitos: preciso, quero ou posso esperar.",
+  "objectives": [
+    "Conhecer as três categorias de escolha",
+    "Entender que esperar é uma opção"
+  ],
+  "competencies": [
+    "F-D1-C1-01",
+    "F-D5-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "FB2",
+      "reference": "L4",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "concepts",
+      "concepts": [
+        {
+          "id": "need",
+          "label": "Preciso",
+          "short": "É importante agora.",
+          "description": "Algo que faz falta para cuidar da saúde, aprender ou ficar seguro.",
+          "icon": "need",
+          "tone": "teal",
+          "examples": [
+            {
+              "label": "Água",
+              "illustration": "item-bottle"
+            },
+            {
+              "label": "Escova de dente",
+              "illustration": "item-toothbrush"
+            }
+          ]
+        },
+        {
+          "id": "want",
+          "label": "Quero",
+          "short": "Eu gostaria de ter.",
+          "description": "Algo que deixa a gente feliz, mas que não faz falta para o dia a dia.",
+          "icon": "want",
+          "tone": "coral",
+          "examples": [
+            {
+              "label": "Figurinhas",
+              "illustration": "item-stickers"
+            },
+            {
+              "label": "Brinquedo",
+              "illustration": "item-robot"
+            }
+          ]
+        },
+        {
+          "id": "wait",
+          "label": "Posso esperar",
+          "short": "Quero, mas pode ser depois.",
+          "description": "Algo que eu quero e posso planejar para outro momento. Esperar não é desistir.",
+          "icon": "wait",
+          "tone": "amber",
+          "examples": [
+            {
+              "label": "Jogo novo",
+              "illustration": "item-boardgame"
+            },
+            {
+              "label": "Tênis novo",
+              "illustration": "item-sneaker"
+            }
+          ]
+        }
+      ],
+      "title": "Três jeitos de olhar uma vontade",
+      "intro": "Quando bate uma vontade, dá para perguntar: eu preciso, eu quero ou posso esperar?",
+      "keyIdea": "A mesma coisa pode mudar de lugar: um casaco é preciso no frio, mas pode esperar no calor.",
+      "keyIdeaIllustration": "item-coat"
+    },
+    {
+      "type": "choice",
+      "prompt": "A Bia quer um jogo novo, mas está juntando para uma bicicleta. O que ela pode fazer?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Pensar no que é mais importante para ela",
+          "reflection": "Pensar antes ajuda a Bia a decidir com calma."
+        },
+        {
+          "id": "b",
+          "label": "Comprar o jogo sem pensar",
+          "reflection": "Ela pode, mas a bicicleta vai demorar mais. Vale pensar antes."
+        },
+        {
+          "id": "c",
+          "label": "Nunca mais querer nada",
+          "reflection": "Querer é normal! O importante é escolher com calma."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Dá para olhar uma vontade como preciso, quero ou posso esperar.",
+    "Esperar também é uma escolha."
+  ],
+  "guide": {
+    "state": "discover",
+    "text": "Vamos descobrir três jeitos de olhar para uma vontade?"
+  }
+}

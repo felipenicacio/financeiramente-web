@@ -1,0 +1,83 @@
+{
+  "id": "c1-m01-l01",
+  "cycle": "c1",
+  "module": "m01",
+  "order": 1,
+  "title": "O que são finanças?",
+  "headline": "Finanças é um nome grande para algo do dia a dia: cuidar do dinheiro.",
+  "objectives": [
+    "Entender que finanças é lidar com o dinheiro no dia a dia",
+    "Perceber que crianças também fazem escolhas com dinheiro"
+  ],
+  "competencies": [
+    "F-D4-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "FB1",
+      "reference": "cap. 1",
+      "role": "principal"
+    },
+    {
+      "source": "MC",
+      "reference": "D4/D5",
+      "role": "complementar"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 3,
+  "content": [
+    {
+      "type": "explanation",
+      "body": "Toda vez que alguém ganha, gasta, troca ou guarda dinheiro, está lidando com finanças. Não é coisa só de adulto: você também escolhe o que fazer com uma moeda.",
+      "title": "Finanças é cuidar do dinheiro",
+      "illustration": "item-coins",
+      "bullets": [
+        {
+          "text": "Ganhar: receber dinheiro, como um presente.",
+          "icon": "income",
+          "tone": "green"
+        },
+        {
+          "text": "Gastar: usar para comprar algo.",
+          "icon": "price",
+          "tone": "coral"
+        },
+        {
+          "text": "Guardar: deixar para depois.",
+          "icon": "save",
+          "tone": "teal"
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Você ganhou uma moeda. O que isso tem a ver com finanças?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Posso decidir o que fazer com ela",
+          "reflection": "Isso mesmo: decidir o que fazer com o dinheiro já é cuidar das finanças."
+        },
+        {
+          "id": "b",
+          "label": "Nada, finanças é só de adulto",
+          "reflection": "Finanças é de todo mundo que lida com dinheiro, inclusive você."
+        },
+        {
+          "id": "c",
+          "label": "Preciso gastar agora",
+          "reflection": "Você pode gastar, guardar ou esperar. A escolha é sua."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Finanças é lidar com o dinheiro no dia a dia.",
+    "Crianças também fazem escolhas com dinheiro."
+  ],
+  "guide": {
+    "state": "ask",
+    "text": "Será que finanças é só coisa de adulto? Vamos descobrir."
+  }
+}
