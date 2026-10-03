@@ -8,7 +8,7 @@ export const dynamic = 'force-static';
 export default function manifest(): MetadataRoute.Manifest {
   return {
     id: '/',
-    name: `${t('appName')}: ${t('appTagline')}`,
+    name: `${t('appName')} — ${t('appTagline')}`,
     short_name: t('appName'),
     description: t('siteDescription'),
     lang: 'pt-BR',

@@ -39,9 +39,9 @@ const og = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" vi
     <rect width="88" height="88" rx="25" fill="${navy}"/>
     ${stones(2.75)}
   </g>
-  <text x="96" y="300" font-family="Lexend" font-weight="700" font-size="76" fill="${navy}" letter-spacing="-2">Financeiramente</text>
+  <text x="96" y="300" font-family="Lexend" font-weight="700" font-size="76" fill="${navy}" letter-spacing="-2">Econominho</text>
   <text x="96" y="370" font-family="Lexend" font-weight="400" font-size="36" fill="#334155">Aprender a escolher, juntos.</text>
-  <text x="96" y="430" font-family="Lexend" font-weight="400" font-size="26" fill="#64748B">Educação financeira para estudar em família</text>
+  <text x="96" y="430" font-family="Lexend" font-weight="400" font-size="26" fill="#64748B">Educação financeira para crianças</text>
 </svg>`;
 
 const png = (svg, size, file) =>
