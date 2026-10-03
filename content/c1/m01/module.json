@@ -1,0 +1,29 @@
+{
+  "id": "m01",
+  "cycle": "c1",
+  "journeyId": "escolhas-e-valor",
+  "title": "Quero, preciso ou posso esperar?",
+  "headline": "Você quer muitas coisas. Mas precisa de todas elas agora?",
+  "summary": "Uma história, uma ideia nova, uma atividade, uma simulação e um quiz para descobrir que escolher também é decidir o que fica para depois.",
+  "competencies": ["F-D1-C1-01", "F-D5-C1-01"],
+  "objectives": [
+    "Diferenciar necessidade e desejo.",
+    "Reconhecer prioridades.",
+    "Compreender que nem todo desejo precisa ser atendido imediatamente.",
+    "Conhecer a ideia de esperar como uma escolha.",
+    "Compreender que o dinheiro disponível é limitado."
+  ],
+  "centralMessage": "Nem tudo que queremos precisa ser comprado agora.",
+  "estimatedMinutes": 10,
+  "illustration": "module-three-choices",
+  "cta": "Vamos descobrir",
+  "conclusion": {
+    "title": "Você concluiu o módulo",
+    "message": "Escolher é decidir o que faz sentido agora e o que pode ficar para depois.",
+    "recap": [
+      { "category": "need", "text": "Preciso: o que é importante naquele momento." },
+      { "category": "want", "text": "Quero: o que eu gostaria de ter." },
+      { "category": "wait", "text": "Posso esperar: o que eu quero, mas pode ser depois." }
+    ]
+  }
+}

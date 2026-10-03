@@ -1,0 +1,83 @@
+{
+  "title": "Vamos ver o que ficou?",
+  "questions": [
+    {
+      "id": "q1",
+      "kind": "recognition",
+      "prompt": "Está fazendo muito frio. O que é preciso?",
+      "illustration": "item-coat",
+      "options": [
+        { "id": "a", "label": "Um casaco" },
+        { "id": "b", "label": "Uma pipa" },
+        { "id": "c", "label": "Um jogo novo" }
+      ],
+      "answer": { "type": "single", "correctOptionId": "a" },
+      "explanation": "No frio, o casaco protege o corpo. Por isso ele é preciso naquele momento."
+    },
+    {
+      "id": "q2",
+      "kind": "situation",
+      "prompt": "A Bia quer um jogo novo, mas está juntando dinheiro para uma bicicleta. O que ela pode fazer?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Comprar o jogo sem pensar",
+          "feedback": "Ela pode escolher o jogo, mas vale pensar antes: a bicicleta vai demorar mais."
+        },
+        { "id": "b", "label": "Pensar no que é mais importante para ela" },
+        {
+          "id": "c",
+          "label": "Nunca mais querer nada",
+          "feedback": "Querer coisas é normal! O importante é escolher com calma."
+        }
+      ],
+      "answer": { "type": "single", "correctOptionId": "b" },
+      "explanation": "Pensar antes de decidir ajuda a Bia a escolher o que faz sentido para ela agora."
+    },
+    {
+      "id": "q3",
+      "kind": "decision",
+      "prompt": "Hoje dá para escolher uma coisa só. O que você escolhe?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Um livro novo",
+          "feedback": "Você ganha uma história nova para ler hoje."
+        },
+        { "id": "b", "label": "Um lanche gostoso", "feedback": "Você aproveita o lanche agora." },
+        {
+          "id": "c",
+          "label": "Guardar para depois",
+          "feedback": "O dinheiro fica no pote para algo que você quer mais."
+        }
+      ],
+      "answer": { "type": "open" },
+      "explanation": "Aqui não tem resposta errada. O importante é saber o que você ganha agora e o que fica para depois."
+    },
+    {
+      "id": "q4",
+      "kind": "explanation",
+      "prompt": "Por que um tênis novo pode esperar?",
+      "illustration": "item-sneaker",
+      "options": [
+        { "id": "a", "label": "Porque o tênis de agora ainda serve" },
+        { "id": "b", "label": "Porque tênis nunca é importante" },
+        { "id": "c", "label": "Porque comprar é sempre ruim" }
+      ],
+      "answer": { "type": "single", "correctOptionId": "a" },
+      "explanation": "Se o tênis de agora ainda funciona, dá para esperar. Se ele rasgar, a situação muda."
+    },
+    {
+      "id": "q5",
+      "kind": "recognition",
+      "prompt": "O que quer dizer “posso esperar”?",
+      "options": [
+        { "id": "a", "label": "Eu quero, mas pode ser depois" },
+        { "id": "b", "label": "Eu nunca vou ter" },
+        { "id": "c", "label": "Eu não gosto disso" }
+      ],
+      "answer": { "type": "single", "correctOptionId": "a" },
+      "explanation": "Esperar não é desistir. É escolher um momento melhor."
+    }
+  ]
+}

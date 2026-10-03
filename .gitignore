@@ -1,3 +1,15 @@
+# dependências
 node_modules/
+
+# build
 .next/
 out/
+next-env.d.ts
+*.tsbuildinfo
+
+# ambiente local (nenhuma variável é necessária no MVP)
+.env*
+
+# sistema
+.DS_Store
+coverage/
