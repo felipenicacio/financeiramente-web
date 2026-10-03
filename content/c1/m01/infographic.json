@@ -1,12 +1,14 @@
 {
   "title": "Três jeitos de olhar para uma vontade",
   "intro": "Quando aparece algo que a gente quer, dá para perguntar: eu preciso, eu quero ou eu posso esperar?",
-  "categories": [
+  "concepts": [
     {
       "id": "need",
       "label": "Preciso",
       "short": "É importante agora.",
       "description": "Algo que faz falta naquele momento, para cuidar da saúde, aprender ou ficar seguro.",
+      "icon": "need",
+      "tone": "teal",
       "examples": [
         {
           "label": "Escova de dente",
@@ -23,6 +25,8 @@
       "label": "Quero",
       "short": "Eu gostaria de ter.",
       "description": "Algo que deixa a gente feliz, mas que não faz falta para o dia a dia. Querer coisas é normal.",
+      "icon": "want",
+      "tone": "coral",
       "examples": [
         {
           "label": "Figurinhas",
@@ -39,14 +43,16 @@
       "label": "Posso esperar",
       "short": "Quero, mas pode ser depois.",
       "description": "Algo que eu quero e posso planejar para outro momento. Esperar não é desistir: é escolher quando.",
+      "icon": "wait",
+      "tone": "amber",
       "examples": [
         {
           "label": "Tênis novo",
           "illustration": "item-sneaker"
         },
         {
-          "label": "Bola nova",
-          "illustration": "item-ball"
+          "label": "Jogo novo",
+          "illustration": "item-boardgame"
         }
       ]
     }

@@ -2,28 +2,81 @@
   "id": "m01",
   "cycle": "c1",
   "journeyId": "escolhas-e-valor",
+  "stage": "Eu escolho",
   "title": "Quero, preciso ou posso esperar?",
   "headline": "Você quer muitas coisas. Mas precisa de todas elas agora?",
   "summary": "Uma história, uma ideia nova, uma atividade, uma simulação e um quiz para descobrir que escolher também é decidir o que fica para depois.",
-  "competencies": ["F-D1-C1-01", "F-D5-C1-01"],
+  "competencies": [
+    {
+      "code": "F-D1-C1-01",
+      "description": "Distinguir necessidade de desejo em situações cotidianas."
+    },
+    {
+      "code": "F-D5-C1-01",
+      "description": "Usar planejamento para organizar uma escolha simples."
+    }
+  ],
+  "sensitivity": "N1",
   "objectives": [
     "Diferenciar necessidade e desejo.",
     "Reconhecer prioridades.",
     "Compreender que nem todo desejo precisa ser atendido imediatamente.",
-    "Conhecer a ideia de esperar como uma escolha.",
-    "Compreender que o dinheiro disponível é limitado."
+    "Compreender a espera como uma escolha.",
+    "Reconhecer que os recursos são limitados."
   ],
   "centralMessage": "Nem tudo que queremos precisa ser comprado agora.",
   "estimatedMinutes": 10,
   "illustration": "module-three-choices",
   "cta": "Vamos descobrir",
+  "guide": {
+    "opening": {
+      "state": "ask",
+      "text": "Será que tudo que a gente quer precisa ser agora?"
+    },
+    "story": {
+      "state": "ask",
+      "text": "O Téo ganhou um presente. O que será que ele vai fazer?"
+    },
+    "concept": {
+      "state": "discover",
+      "text": "Vamos descobrir três jeitos de olhar para uma vontade."
+    },
+    "activity": {
+      "state": "ask",
+      "text": "Essa situação pode mudar? Vamos ver uma de cada vez."
+    },
+    "simulation": {
+      "state": "compare",
+      "text": "Vamos comparar? Escolha uma opção e veja o que acontece depois."
+    },
+    "quiz": {
+      "state": "reflect",
+      "text": "Vamos pensar juntos em algumas perguntas."
+    },
+    "done": {
+      "state": "summary",
+      "text": "Escolher também é decidir o que pode ficar para depois."
+    }
+  },
   "conclusion": {
     "title": "Você concluiu o módulo",
     "message": "Escolher é decidir o que faz sentido agora e o que pode ficar para depois.",
     "recap": [
-      { "category": "need", "text": "Preciso: o que é importante naquele momento." },
-      { "category": "want", "text": "Quero: o que eu gostaria de ter." },
-      { "category": "wait", "text": "Posso esperar: o que eu quero, mas pode ser depois." }
+      {
+        "icon": "need",
+        "tone": "teal",
+        "text": "Preciso: o que é importante naquele momento."
+      },
+      {
+        "icon": "want",
+        "tone": "coral",
+        "text": "Quero: o que eu gostaria de ter."
+      },
+      {
+        "icon": "wait",
+        "tone": "amber",
+        "text": "Posso esperar: o que eu quero, mas pode ser depois."
+      }
     ]
   }
 }
