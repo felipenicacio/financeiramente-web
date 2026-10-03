@@ -17,7 +17,7 @@ type Props = {
 };
 
 /**
- * Econominho, o guia pedagógico (personagem aprovado, pacote econominho-assets-v1).
+ * Econominho, o guia pedagógico (personagem oficial aprovado, assets individuais v2).
  * Só função pedagógica: perguntar, apresentar descobertas, comparar, explicar
  * consequências, resumir e provocar reflexão. Nunca dá ordens financeiras.
  */
