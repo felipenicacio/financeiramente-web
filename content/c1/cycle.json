@@ -1,43 +1,43 @@
 {
   "cycle": "c1",
   "title": "O que descobrimos?",
-  "intro": "Depois dos quatro módulos, olha só quantas ideias a gente encontrou.",
+  "intro": "Depois dos seis módulos, olha quantas ideias a gente encontrou no C1.",
   "discoveries": [
     {
-      "text": "Eu posso escolher.",
-      "icon": "choice",
-      "tone": "teal",
-      "module": "m01"
-    },
-    {
-      "text": "Dinheiro é limitado.",
-      "icon": "limit",
+      "text": "O dinheiro facilita as trocas.",
+      "icon": "money",
       "tone": "amber",
       "module": "m01"
     },
     {
-      "text": "As coisas têm preços.",
-      "icon": "price",
-      "tone": "coral",
+      "text": "Eu posso escolher: preciso, quero ou posso esperar.",
+      "icon": "choice",
+      "tone": "teal",
       "module": "m02"
     },
     {
-      "text": "Anúncios podem influenciar escolhas.",
-      "icon": "ad",
-      "tone": "purple",
+      "text": "O preço mostra quanto pagar, e existe o troco.",
+      "icon": "price",
+      "tone": "coral",
       "module": "m03"
     },
     {
       "text": "Pessoas trabalham e recebem renda.",
-      "icon": "income",
+      "icon": "work",
       "tone": "green",
       "module": "m04"
     },
     {
-      "text": "Escolhas mudam o que podemos fazer depois.",
-      "icon": "later",
+      "text": "Guardar e cuidar faz diferença.",
+      "icon": "save",
       "tone": "cyan",
-      "module": "m04"
+      "module": "m05"
+    },
+    {
+      "text": "Anúncios influenciam, e cuidamos do que é de todos.",
+      "icon": "shared",
+      "tone": "purple",
+      "module": "m06"
     }
   ],
   "guide": {

@@ -1,0 +1,57 @@
+{
+  "id": "c1-m04-l02",
+  "cycle": "c1",
+  "module": "m04",
+  "order": 2,
+  "title": "Trabalhar para alguém",
+  "headline": "Muita gente trabalha numa loja, escola ou empresa e recebe por isso.",
+  "objectives": [
+    "Entender o trabalho para alguém",
+    "Dar exemplos de quem trabalha para outra pessoa"
+  ],
+  "competencies": [
+    "F-D7-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "FB1",
+      "reference": "cap. 3A",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 3,
+  "content": [
+    {
+      "type": "explanation",
+      "body": "Muitas pessoas trabalham para alguém: numa loja, numa escola ou numa empresa. Elas fazem o trabalho combinado e recebem dinheiro por isso.",
+      "title": "Trabalhar para alguém",
+      "illustration": "item-chalkboard"
+    },
+    {
+      "type": "choice",
+      "prompt": "A professora Marta dá aula numa escola. Por que ela recebe dinheiro?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Porque faz um trabalho: ensinar a turma",
+          "reflection": "Isso mesmo: ela ensina e recebe pelo trabalho dela."
+        },
+        {
+          "id": "b",
+          "label": "Porque pediu com jeitinho",
+          "reflection": "O dinheiro vem do trabalho, não de pedir."
+        },
+        {
+          "id": "c",
+          "label": "Porque é obrigada a receber",
+          "reflection": "Ela recebe porque faz um trabalho que ajuda as pessoas."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Muita gente trabalha para alguém e recebe por isso.",
+    "O dinheiro vem do trabalho."
+  ]
+}

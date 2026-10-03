@@ -1,0 +1,123 @@
+{
+  "id": "m06",
+  "cycle": "c1",
+  "order": 6,
+  "code": "C1.6",
+  "title": "Escolhas, influência e convivência",
+  "headline": "Como os anúncios influenciam escolhas, por que cuidar das nossas informações e do que é de todos.",
+  "summary": "Anúncios tentam chamar a atenção; dá para pensar antes de escolher. E cuidar das informações e do que é de todos faz bem para a convivência.",
+  "competencies": [
+    "F-D2-C1-01",
+    "F-D8-C1-01",
+    "F-D9-C1-01"
+  ],
+  "integrative": {
+    "title": "Informa ou convence?",
+    "intro": "Vamos juntar tudo: separe o que informa do que tenta convencer.",
+    "object": {
+      "type": "classify",
+      "categories": [
+        {
+          "id": "info",
+          "label": "Informação",
+          "short": "Dá para conferir.",
+          "icon": "info",
+          "tone": "cyan"
+        },
+        {
+          "id": "persuade",
+          "label": "Convencer",
+          "short": "Tenta fazer querer.",
+          "icon": "persuade",
+          "tone": "coral"
+        }
+      ],
+      "items": [
+        {
+          "id": "pieces",
+          "label": "“Este brinquedo tem quatro peças.”",
+          "situation": "Frase da caixa.",
+          "accepted": [
+            "info"
+          ],
+          "feedback": "Dá para contar as peças. É informação."
+        },
+        {
+          "id": "everyone",
+          "label": "“Todo mundo vai querer um!”",
+          "situation": "Frase de vídeo.",
+          "accepted": [
+            "persuade"
+          ],
+          "feedback": "Não dá para conferir. Tenta despertar vontade."
+        },
+        {
+          "id": "weight",
+          "label": "“O pacote pesa 200 gramas.”",
+          "situation": "Frase da embalagem.",
+          "accepted": [
+            "info"
+          ],
+          "feedback": "Dá para pesar e conferir. É informação."
+        },
+        {
+          "id": "without",
+          "label": "“Você não pode ficar sem isso!”",
+          "situation": "Frase de cartaz.",
+          "accepted": [
+            "persuade"
+          ],
+          "feedback": "Tenta convencer. Ninguém precisa disso para viver."
+        },
+        {
+          "id": "batteries",
+          "label": "“Funciona com duas pilhas.”",
+          "situation": "Frase do manual.",
+          "accepted": [
+            "info"
+          ],
+          "feedback": "Dá para ver onde entram as pilhas. É informação."
+        },
+        {
+          "id": "flavor",
+          "label": "“Novo sabor morango!”",
+          "situation": "Frase grande no pacote.",
+          "accepted": [
+            "info",
+            "persuade"
+          ],
+          "feedback": "Dá para conferir o sabor, e a frase grande também chama atenção.",
+          "contextNote": "Uma frase pode informar e chamar atenção ao mesmo tempo."
+        }
+      ],
+      "instructions": "Leia a frase e escolha: informação ou tentativa de convencer."
+    }
+  },
+  "conclusion": {
+    "title": "Você concluiu o módulo",
+    "message": "Anúncios tentam chamar a atenção, e dá para pensar antes de escolher. Cuidar das informações e do que é de todos faz bem para todos.",
+    "recap": [
+      {
+        "icon": "ad",
+        "tone": "purple",
+        "text": "Anúncio mostra algo e chama atenção."
+      },
+      {
+        "icon": "info",
+        "tone": "cyan",
+        "text": "Informação é o que dá para conferir."
+      },
+      {
+        "icon": "safe",
+        "tone": "amber",
+        "text": "Minhas informações pessoais precisam de cuidado."
+      },
+      {
+        "icon": "shared",
+        "tone": "green",
+        "text": "Cuidar do que é de todos ajuda a comunidade."
+      }
+    ]
+  },
+  "theme": "m03"
+}

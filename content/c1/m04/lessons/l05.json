@@ -1,0 +1,57 @@
+{
+  "id": "c1-m04-l05",
+  "cycle": "c1",
+  "module": "m04",
+  "order": 5,
+  "title": "Trabalho vira renda",
+  "headline": "Quem trabalha costuma receber dinheiro, e a renda pode vir de formas diferentes.",
+  "objectives": [
+    "Relacionar trabalho e renda",
+    "Perceber que a renda pode vir de diferentes formas"
+  ],
+  "competencies": [
+    "F-D7-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "FB1",
+      "reference": "cap. 3",
+      "role": "principal"
+    },
+    {
+      "source": "MC",
+      "reference": "D7",
+      "role": "complementar"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "story",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "story-income",
+          "text": "Quem trabalha recebe dinheiro pelo trabalho. Esse dinheiro faz parte da renda da família."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-family-choice",
+          "text": "A renda pode vir de formas diferentes, e a família decide junto como usar."
+        }
+      ],
+      "title": "Do trabalho à renda"
+    },
+    {
+      "type": "reflection",
+      "state": "summary",
+      "text": "Trabalho vira bens, serviços e renda. E a renda é dividida entre as escolhas da família.",
+      "body": "Por isso a família conversa para decidir o que faz sentido com o dinheiro que entra."
+    }
+  ],
+  "summary": [
+    "Quem trabalha costuma receber renda.",
+    "A renda pode vir de formas diferentes."
+  ]
+}

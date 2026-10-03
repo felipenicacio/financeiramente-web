@@ -6,18 +6,20 @@ Conteúdo fixo, escrito, revisado e aprovado antes da publicação. **Sem login,
 
 ## Status
 
-Ciclo **C1 (6–8 anos)** completo, com quatro módulos abertos em qualquer ordem:
+Ciclo **C1 (6–8 anos)** completo no currículo v2.0: 6 módulos, 30 lições, abertos em qualquer ordem.
 
-| Módulo                               | Etapa                         |
-| ------------------------------------ | ----------------------------- |
-| M01 Quero, preciso ou posso esperar? | Eu escolho                    |
-| M02 Dinheiro, preço e cuidado        | Eu entendo dinheiro e preço   |
-| M03 Publicidade e escolhas           | Eu percebo o que influencia   |
-| M04 Trabalho, renda e limites        | Eu entendo trabalho e limites |
+| Módulo | Título                              |
+| ------ | ----------------------------------- |
+| C1.1   | O dinheiro está por toda parte      |
+| C1.2   | Quero, preciso ou posso esperar?    |
+| C1.3   | Preço, comparação e troco           |
+| C1.4   | Trabalho, renda, bens e serviços    |
+| C1.5   | Guardar e cuidar                    |
+| C1.6   | Escolhas, influência e convivência  |
 
-Cada módulo: abertura → história → pergunta → conceito → atividade → simulação → quiz → conclusão. Ao fim do ciclo, a página "O que descobrimos?".
+Arquitetura **ciclo → módulo → lição → objetos**: cada módulo tem 5 lições; cada lição tem de 2 a 4 objetos educacionais de tipos variados (explicação, história, conceitos, classificação, comparação, troco, escolha, ordenação, V/F, quiz, reflexão). Cada módulo fecha com avaliação integradora e a síntese "O que descobrimos?" — sem nota e sem certificado. Ciclos C2–C4 em preparação. Detalhes em [docs/content-architecture.md](docs/content-architecture.md).
 
-O guia **Econominho** já tem sua função editorial (falas em cada etapa). **Visual do personagem: pendente de aprovação**; a interface usa um marcador neutro.
+O guia **Econominho** usa o personagem oficial aprovado (pacote `econominho-assets-v1`, em `public/econominho/`), com falas por estado pedagógico.
 
 ## Comandos
 

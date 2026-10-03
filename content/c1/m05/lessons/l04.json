@@ -1,0 +1,89 @@
+{
+  "id": "c1-m05-l04",
+  "cycle": "c1",
+  "module": "m05",
+  "order": 4,
+  "title": "Cuidar faz diferença",
+  "headline": "Cuidar das coisas ajuda elas a durar mais, e assim a gente economiza.",
+  "objectives": [
+    "Perceber que cuidar faz as coisas durarem",
+    "Reconhecer atitudes de cuidado"
+  ],
+  "competencies": [
+    "F-D8-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "FB2",
+      "reference": "L25",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "body": "Cuidar das coisas faz elas durarem mais. Uma mochila bem cuidada e um livro bem guardado servem por muito mais tempo. Cuidar também é um jeito de economizar.",
+      "title": "Cuidar é economizar",
+      "illustration": "item-backpack"
+    },
+    {
+      "type": "classify",
+      "categories": [
+        {
+          "id": "care",
+          "label": "Cuida bem",
+          "short": "Faz durar mais.",
+          "icon": "care",
+          "tone": "teal"
+        },
+        {
+          "id": "nocare",
+          "label": "Estraga rápido",
+          "short": "Dura menos.",
+          "icon": "limit",
+          "tone": "coral"
+        }
+      ],
+      "items": [
+        {
+          "id": "bag",
+          "label": "Guardar a mochila no lugar",
+          "situation": "Depois da aula, você guarda a mochila com cuidado.",
+          "accepted": [
+            "care"
+          ],
+          "feedback": "Assim ela dura muito mais. É cuidar.",
+          "illustration": "item-backpack"
+        },
+        {
+          "id": "book",
+          "label": "Deixar o livro no chão molhado",
+          "situation": "Você deixa o livro largado num lugar molhado.",
+          "accepted": [
+            "nocare"
+          ],
+          "feedback": "Assim o livro estraga rápido. Melhor guardar com cuidado.",
+          "illustration": "item-book"
+        },
+        {
+          "id": "toy",
+          "label": "Limpar e guardar o brinquedo",
+          "situation": "Depois de brincar, você limpa e guarda.",
+          "accepted": [
+            "care"
+          ],
+          "feedback": "Cuidar faz o brinquedo durar mais.",
+          "illustration": "item-robot"
+        }
+      ],
+      "prompt": "Isso cuida ou estraga?",
+      "instructions": "Essa atitude faz a coisa durar mais ou estragar antes?"
+    }
+  ],
+  "summary": [
+    "Cuidar das coisas faz elas durarem mais.",
+    "Cuidar também é economizar."
+  ]
+}

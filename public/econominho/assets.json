@@ -1,0 +1,25 @@
+{
+  "brand": "Econominho",
+  "source": "Assets individuais aprovados — pasta Google Drive Econominho (2026-10-03)",
+  "character": {
+    "default": "/econominho/character/fullbody-v2.png",
+    "ask": "/econominho/character/pensando-v2.png",
+    "discover": "/econominho/character/descoberta-v2.png",
+    "compare": "/econominho/character/comparando-v2.png",
+    "consequence": "/econominho/character/explicando-v2.png",
+    "summary": "/econominho/character/feliz-v2.png",
+    "reflect": "/econominho/character/pensando-v2.png",
+    "reading": "/econominho/character/lendo-v2.png",
+    "fullbody": "/econominho/character/fullbody-v2.png"
+  },
+  "themes": {
+    "m01": "/econominho/character/comparando-v2.png",
+    "m02": "/econominho/character/explicando-v2.png",
+    "m03": "/econominho/character/descoberta-v2.png",
+    "m04": "/econominho/character/lendo-v2.png"
+  },
+  "brandAssets": {
+    "wordmark": "/econominho/logo/wordmark-v2.png",
+    "monogram": "/econominho/logo/icon.svg"
+  }
+}

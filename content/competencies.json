@@ -1,0 +1,258 @@
+{
+  "version": "1.0",
+  "source": "Notion — Matriz Curricular — Competências",
+  "competencies": [
+    {
+      "code": "F-D1-C1-01",
+      "description": "Distinguir necessidade de desejo em situações cotidianas",
+      "cycle": "c1",
+      "domain": "D1",
+      "sensitivity": "N1"
+    },
+    {
+      "code": "F-D2-C1-01",
+      "description": "Reconhecer que publicidade busca influenciar escolhas",
+      "cycle": "c1",
+      "domain": "D2",
+      "sensitivity": "N1"
+    },
+    {
+      "code": "F-D3-C1-01",
+      "description": "Reconhecer que famílias fazem escolhas porque recursos são limitados",
+      "cycle": "c1",
+      "domain": "D3",
+      "sensitivity": "N2"
+    },
+    {
+      "code": "F-D4-C1-01",
+      "description": "Reconhecer função do dinheiro moedas cédulas preços e comparação",
+      "cycle": "c1",
+      "domain": "D4",
+      "sensitivity": "N1"
+    },
+    {
+      "code": "F-D5-C1-01",
+      "description": "Usar planejamento para organizar uma escolha simples",
+      "cycle": "c1",
+      "domain": "D5",
+      "sensitivity": "N1"
+    },
+    {
+      "code": "F-D6-C1-01",
+      "description": "Reconhecer que pagar depois cria compromisso futuro",
+      "cycle": "c1",
+      "domain": "D6",
+      "sensitivity": "N2"
+    },
+    {
+      "code": "F-D7-C1-01",
+      "description": "Relacionar trabalho produção de bens e serviços e renda",
+      "cycle": "c1",
+      "domain": "D7",
+      "sensitivity": "N1"
+    },
+    {
+      "code": "F-D8-C1-01",
+      "description": "Cuidar de pertences guardar dinheiro e proteger informações básicas",
+      "cycle": "c1",
+      "domain": "D8",
+      "sensitivity": "N2"
+    },
+    {
+      "code": "F-D9-C1-01",
+      "description": "Reconhecer bens coletivos regras e convivência econômica",
+      "cycle": "c1",
+      "domain": "D9",
+      "sensitivity": "N1"
+    },
+    {
+      "code": "F-D1-C2-01",
+      "description": "Definir prioridades e adiar uma compra para alcançar uma meta",
+      "cycle": "c2",
+      "domain": "D1",
+      "sensitivity": "N1"
+    },
+    {
+      "code": "F-D2-C2-01",
+      "description": "Comparar preço qualidade marca e promoção",
+      "cycle": "c2",
+      "domain": "D2",
+      "sensitivity": "N1"
+    },
+    {
+      "code": "F-D3-C2-01",
+      "description": "Compreender receitas despesas e imprevistos familiares sem culpabilização",
+      "cycle": "c2",
+      "domain": "D3",
+      "sensitivity": "N2"
+    },
+    {
+      "code": "F-D4-C2-01",
+      "description": "Comparar meios de pagamento troco desconto preço e valor",
+      "cycle": "c2",
+      "domain": "D4",
+      "sensitivity": "N1"
+    },
+    {
+      "code": "F-D5-C2-01",
+      "description": "Construir orçamento simples com meta receita despesa e saldo",
+      "cycle": "c2",
+      "domain": "D5",
+      "sensitivity": "N1"
+    },
+    {
+      "code": "F-D6-C2-01",
+      "description": "Diferenciar pagamento à vista e a prazo",
+      "cycle": "c2",
+      "domain": "D6",
+      "sensitivity": "N2"
+    },
+    {
+      "code": "F-D7-C2-01",
+      "description": "Distinguir formas de obter renda e criar valor",
+      "cycle": "c2",
+      "domain": "D7",
+      "sensitivity": "N1"
+    },
+    {
+      "code": "F-D8-C2-01",
+      "description": "Poupar para metas e imprevistos e adotar segurança digital básica",
+      "cycle": "c2",
+      "domain": "D8",
+      "sensitivity": "N2"
+    },
+    {
+      "code": "F-D9-C2-01",
+      "description": "Reconhecer impostos em nível introdutório e direitos básicos do consumidor",
+      "cycle": "c2",
+      "domain": "D9",
+      "sensitivity": "N2"
+    },
+    {
+      "code": "F-D1-C3-01",
+      "description": "Analisar impulsividade e consumo emocional",
+      "cycle": "c3",
+      "domain": "D1",
+      "sensitivity": "N2"
+    },
+    {
+      "code": "F-D2-C3-01",
+      "description": "Analisar influência social publicidade e pressão de pares",
+      "cycle": "c3",
+      "domain": "D2",
+      "sensitivity": "N2"
+    },
+    {
+      "code": "F-D3-C3-01",
+      "description": "Analisar causas múltiplas de endividamento e perda de renda",
+      "cycle": "c3",
+      "domain": "D3",
+      "sensitivity": "N3"
+    },
+    {
+      "code": "F-D4-C3-01",
+      "description": "Analisar oferta demanda formação de preços inflação e meios digitais",
+      "cycle": "c3",
+      "domain": "D4",
+      "sensitivity": "N2"
+    },
+    {
+      "code": "F-D5-C3-01",
+      "description": "Planejar orçamento com renda variável reserva e imprevistos",
+      "cycle": "c3",
+      "domain": "D5",
+      "sensitivity": "N2"
+    },
+    {
+      "code": "F-D6-C3-01",
+      "description": "Analisar cartão parcelamento juros custo total e inadimplência",
+      "cycle": "c3",
+      "domain": "D6",
+      "sensitivity": "N2"
+    },
+    {
+      "code": "F-D7-C3-01",
+      "description": "Diferenciar renda formal informal frequente e esporádica",
+      "cycle": "c3",
+      "domain": "D7",
+      "sensitivity": "N2"
+    },
+    {
+      "code": "F-D8-C3-01",
+      "description": "Reconhecer golpes juros compostos e fundamentos de risco e retorno",
+      "cycle": "c3",
+      "domain": "D8",
+      "sensitivity": "N2"
+    },
+    {
+      "code": "F-D9-C3-01",
+      "description": "Analisar inflação desemprego desigualdade e papel de instituições",
+      "cycle": "c3",
+      "domain": "D9",
+      "sensitivity": "N3"
+    },
+    {
+      "code": "F-D1-C4-01",
+      "description": "Avaliar escolhas intertemporais e custo de oportunidade",
+      "cycle": "c4",
+      "domain": "D1",
+      "sensitivity": "N2"
+    },
+    {
+      "code": "F-D2-C4-01",
+      "description": "Avaliar estratégias comerciais e vieses de consumo",
+      "cycle": "c4",
+      "domain": "D2",
+      "sensitivity": "N2"
+    },
+    {
+      "code": "F-D3-C4-01",
+      "description": "Relacionar condições familiares a emprego inflação crédito e contexto econômico",
+      "cycle": "c4",
+      "domain": "D3",
+      "sensitivity": "N3"
+    },
+    {
+      "code": "F-D4-C4-01",
+      "description": "Analisar câmbio poder de compra e fatores macroeconômicos que afetam preços",
+      "cycle": "c4",
+      "domain": "D4",
+      "sensitivity": "N2"
+    },
+    {
+      "code": "F-D5-C4-01",
+      "description": "Avaliar cenários custo de oportunidade e planejamento de vida",
+      "cycle": "c4",
+      "domain": "D5",
+      "sensitivity": "N2"
+    },
+    {
+      "code": "F-D6-C4-01",
+      "description": "Comparar modalidades de crédito e riscos de endividamento",
+      "cycle": "c4",
+      "domain": "D6",
+      "sensitivity": "N3"
+    },
+    {
+      "code": "F-D7-C4-01",
+      "description": "Analisar mercado de trabalho produtividade remuneração tributos custos e lucro",
+      "cycle": "c4",
+      "domain": "D7",
+      "sensitivity": "N2"
+    },
+    {
+      "code": "F-D8-C4-01",
+      "description": "Analisar liquidez diversificação classes de ativos e possibilidade de perda",
+      "cycle": "c4",
+      "domain": "D8",
+      "sensitivity": "N2"
+    },
+    {
+      "code": "F-D9-C4-01",
+      "description": "Analisar políticas econômicas tributação dívida pública e efeitos distributivos",
+      "cycle": "c4",
+      "domain": "D9",
+      "sensitivity": "N3"
+    }
+  ]
+}

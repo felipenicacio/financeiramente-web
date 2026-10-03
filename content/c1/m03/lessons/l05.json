@@ -1,0 +1,70 @@
+{
+  "id": "c1-m03-l05",
+  "cycle": "c1",
+  "module": "m03",
+  "order": 5,
+  "title": "O que é troco?",
+  "headline": "Quando pagamos com mais do que o preço, uma parte do dinheiro volta: isso é o troco.",
+  "objectives": [
+    "Compreender a noção de troco",
+    "Calcular um troco simples"
+  ],
+  "competencies": [
+    "F-D4-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF05 (adaptado ao C1)",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "body": "Às vezes pagamos com mais dinheiro do que o preço. A diferença volta para a gente. Esse dinheiro que volta é o troco.",
+      "title": "Troco é o que volta",
+      "illustration": "item-coins"
+    },
+    {
+      "type": "change",
+      "prompt": "A pipa custa {price}. Você paga com {paid}. Quanto volta?",
+      "paid": 10,
+      "product": {
+        "id": "kite",
+        "label": "Pipa",
+        "price": 8,
+        "illustration": "item-kite"
+      },
+      "options": [
+        2,
+        3,
+        8
+      ],
+      "feedback": "O troco é a diferença entre o que você pagou e o preço."
+    },
+    {
+      "type": "change",
+      "prompt": "O pão custa {price}. Você paga com {paid}. Quanto volta?",
+      "paid": 5,
+      "product": {
+        "id": "bread",
+        "label": "Pão",
+        "price": 2,
+        "illustration": "item-bread"
+      },
+      "options": [
+        2,
+        3,
+        5
+      ],
+      "feedback": "Pagamos mais do que o preço, então uma parte volta. Esse é o troco."
+    }
+  ],
+  "summary": [
+    "Troco é o dinheiro que volta quando pagamos mais que o preço.",
+    "Dá para calcular: pago menos preço."
+  ]
+}

@@ -85,16 +85,16 @@ export const object =
 
 /** Garante que os valores de `field` sejam únicos dentro de uma lista. */
 export const uniqueBy =
-  (field: string): Validator =>
+  (field?: string): Validator =>
   (value, path) => {
     if (!Array.isArray(value)) return [];
     const seen = new Set<unknown>();
     const problems: ValidationIssue[] = [];
     value.forEach((entry, index) => {
-      const key = (entry as Record<string, unknown> | null)?.[field];
+      const key = field ? (entry as Record<string, unknown> | null)?.[field] : entry;
       if (seen.has(key))
         problems.push({
-          path: `${path}[${index}].${field}`,
+          path: field ? `${path}[${index}].${field}` : `${path}[${index}]`,
           message: `valor repetido: ${String(key)}`,
         });
       seen.add(key);

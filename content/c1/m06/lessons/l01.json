@@ -1,0 +1,61 @@
+{
+  "id": "c1-m06-l01",
+  "cycle": "c1",
+  "module": "m06",
+  "order": 1,
+  "title": "O que é um anúncio?",
+  "headline": "Anúncio é uma mensagem feita para mostrar algo e chamar a nossa atenção.",
+  "objectives": [
+    "Reconhecer um anúncio",
+    "Perceber onde os anúncios aparecem"
+  ],
+  "competencies": [
+    "F-D2-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "FB2",
+      "reference": "L15",
+      "role": "principal"
+    },
+    {
+      "source": "MC",
+      "reference": "D2",
+      "role": "complementar"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 3,
+  "content": [
+    {
+      "type": "story",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "story-ad-tablet",
+          "text": "A Bia estava vendo um vídeo no tablet. De repente, apareceu um anúncio de um robô de brinquedo."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-ad-loud",
+          "text": "O anúncio tinha música alta, luzes e uma voz dizendo: “Todo mundo quer!”"
+        }
+      ],
+      "title": "O anúncio do robô"
+    },
+    {
+      "type": "explanation",
+      "body": "Um anúncio é uma mensagem criada para mostrar um produto e chamar a nossa atenção. Ele aparece em vídeos, na TV, em cartazes e nas embalagens.",
+      "title": "Anúncio chama atenção",
+      "illustration": "item-poster"
+    }
+  ],
+  "summary": [
+    "Anúncio é uma mensagem para mostrar algo e chamar atenção.",
+    "Ele aparece em vídeos, cartazes e embalagens."
+  ],
+  "guide": {
+    "state": "ask",
+    "text": "Por que será que alguns vídeos têm música alta e muitas cores?"
+  }
+}

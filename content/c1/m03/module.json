@@ -1,80 +1,175 @@
 {
   "id": "m03",
   "cycle": "c1",
-  "journeyId": "escolhas-e-valor",
-  "stage": "Eu percebo o que influencia",
-  "title": "Publicidade e escolhas",
-  "headline": "Esse anúncio explica ou tenta convencer?",
-  "summary": "Um anúncio de brinquedo para perceber como cores, frases e personagens chamam a nossa atenção, e para pensar antes de escolher.",
+  "order": 3,
+  "code": "C1.3",
+  "title": "Preço, comparação e troco",
+  "headline": "Como ler preços, comparar produtos, ver o que cabe no dinheiro e entender o troco.",
+  "summary": "O preço mostra quanto pagar, não o quanto algo vale para você. Comparar e calcular o troco ajuda a escolher melhor.",
   "competencies": [
-    {
-      "code": "F-D2-C1-01",
-      "description": "Reconhecer que a publicidade busca influenciar escolhas."
-    }
+    "F-D4-C1-01",
+    "F-D5-C1-01"
   ],
-  "sensitivity": "N1",
-  "objectives": [
-    "Reconhecer um anúncio.",
-    "Compreender que anúncios tentam chamar atenção.",
-    "Reconhecer técnicas simples de convencimento.",
-    "Distinguir informação de tentativa de convencimento.",
-    "Perceber a influência de cores, frases e personagens.",
-    "Compreender que querer algo depois de um anúncio é normal.",
-    "Pensar antes de fazer uma escolha."
-  ],
-  "centralMessage": "Um anúncio pode informar e também tentar convencer. Dá para perceber.",
-  "estimatedMinutes": 9,
-  "illustration": "module-ads",
-  "cta": "Vamos olhar de perto",
-  "guide": {
-    "opening": {
-      "state": "ask",
-      "text": "Por que será que alguns vídeos têm música alta e muitas cores?"
-    },
-    "story": {
-      "state": "ask",
-      "text": "A Bia viu um anúncio. O que será que ele queria?"
-    },
-    "concept": {
-      "state": "discover",
-      "text": "Vamos descobrir a diferença entre informar e convencer."
-    },
-    "activity": {
-      "state": "compare",
-      "text": "Essa frase conta algo que dá para conferir? Vamos ver cada uma."
-    },
-    "simulation": {
-      "state": "compare",
-      "text": "Vamos comparar? É o mesmo produto, mostrado de dois jeitos."
-    },
-    "quiz": {
-      "state": "reflect",
-      "text": "Vamos pensar juntos antes de escolher?"
-    },
-    "done": {
-      "state": "summary",
-      "text": "Querer depois de um anúncio é normal. Perceber o que ele faz também é."
+  "integrative": {
+    "title": "Na papelaria",
+    "intro": "Vamos juntar tudo: preço, comparação e troco.",
+    "object": {
+      "type": "quiz",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "O que o preço mostra?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Quanto precisamos pagar"
+            },
+            {
+              "id": "b",
+              "label": "Se a coisa é boa"
+            },
+            {
+              "id": "c",
+              "label": "Quem fez a coisa"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "O preço mostra quanto pagar. O que é bom depende de cada pessoa.",
+          "illustration": "item-pricetag"
+        },
+        {
+          "id": "q2",
+          "kind": "situation",
+          "prompt": "A pipa custa mais que o lápis. Ela é melhor por isso?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Não, o preço só mostra quanto pagar"
+            },
+            {
+              "id": "b",
+              "label": "Sim, o mais caro é sempre melhor",
+              "feedback": "Preço maior não quer dizer melhor."
+            },
+            {
+              "id": "c",
+              "label": "Sim, porque é maior"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Preço maior não quer dizer melhor. Depende do que você precisa."
+        },
+        {
+          "id": "q3",
+          "kind": "recognition",
+          "prompt": "O que é troco?",
+          "options": [
+            {
+              "id": "a",
+              "label": "O dinheiro que volta quando pagamos a mais"
+            },
+            {
+              "id": "b",
+              "label": "O preço da coisa"
+            },
+            {
+              "id": "c",
+              "label": "Um tipo de moeda"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Troco é a diferença entre o que você pagou e o preço.",
+          "illustration": "item-coins"
+        },
+        {
+          "id": "q4",
+          "kind": "decision",
+          "prompt": "Você tem R$ 10. O que dá para levar?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Uma pipa de R$ 8"
+            },
+            {
+              "id": "b",
+              "label": "Um livro de R$ 15",
+              "feedback": "R$ 15 é mais do que você tem; não cabe agora."
+            },
+            {
+              "id": "c",
+              "label": "Nada, porque R$ 10 é pouco",
+              "feedback": "R$ 10 dá para comprar o que custa até R$ 10."
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Cabe o que custa até o valor que você tem. A pipa de R$ 8 cabe."
+        },
+        {
+          "id": "q5",
+          "kind": "explanation",
+          "prompt": "Por que comparar preços ajuda?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Para ver o que cabe e escolher com calma"
+            },
+            {
+              "id": "b",
+              "label": "Para comprar sempre o mais caro"
+            },
+            {
+              "id": "c",
+              "label": "Para nunca comprar nada"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Comparar ajuda a ver o que cabe no seu dinheiro e a escolher com calma."
+        }
+      ],
+      "title": "Juntando preço e troco"
     }
   },
   "conclusion": {
     "title": "Você concluiu o módulo",
-    "message": "Anúncios mostram produtos e tentam chamar atenção. Dá para separar o que informa do que tenta convencer.",
+    "message": "O preço mostra quanto pagar. O troco é o que volta. Comparar ajuda a escolher.",
     "recap": [
       {
-        "icon": "ad",
-        "tone": "purple",
-        "text": "Anúncio: mensagem para mostrar algo e chamar atenção."
-      },
-      {
-        "icon": "info",
-        "tone": "cyan",
-        "text": "Informação: conta algo que dá para conferir."
-      },
-      {
-        "icon": "persuade",
+        "icon": "price",
         "tone": "coral",
-        "text": "Convencimento: tenta fazer você querer."
+        "text": "Preço mostra quanto precisamos pagar."
+      },
+      {
+        "icon": "money",
+        "tone": "teal",
+        "text": "Comparar é ver qual custa mais e qual custa menos."
+      },
+      {
+        "icon": "change",
+        "tone": "amber",
+        "text": "Troco é o dinheiro que volta."
+      },
+      {
+        "icon": "choice",
+        "tone": "cyan",
+        "text": "O preço não decide tudo: você escolhe."
       }
     ]
-  }
+  },
+  "theme": "m02"
 }

@@ -2,7 +2,7 @@
  * Service worker do Econominho (caches com prefixo técnico "fm-", mantido).
  * Compatível com domínio raiz e com GitHub Pages em subcaminho.
  */
-const VERSION = 'v3';
+const VERSION = 'v4';
 const PAGES = `fm-pages-${VERSION}`;
 const STATIC = `fm-static-${VERSION}`;
 const ASSETS = `fm-assets-${VERSION}`;

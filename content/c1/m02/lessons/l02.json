@@ -1,0 +1,57 @@
+{
+  "id": "c1-m02-l02",
+  "cycle": "c1",
+  "module": "m02",
+  "order": 2,
+  "title": "O que eu quero?",
+  "headline": "Querer é ter vontade de algo que deixa a gente feliz, mas que não faz falta para viver.",
+  "objectives": [
+    "Reconhecer o que é um desejo",
+    "Entender que querer coisas é normal"
+  ],
+  "competencies": [
+    "F-D1-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "FB2",
+      "reference": "L2",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 3,
+  "content": [
+    {
+      "type": "explanation",
+      "body": "Querer é ter vontade de algo que deixa a gente feliz, mas que não faz falta para o dia a dia. Querer coisas é totalmente normal.",
+      "title": "Querer é ter vontade",
+      "illustration": "item-stickers"
+    },
+    {
+      "type": "choice",
+      "prompt": "Você viu um brinquedo novo e ficou com muita vontade. Isso quer dizer que você precisa dele?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Não, é um desejo. Querer é normal",
+          "reflection": "Isso mesmo: dá para querer sem precisar. Querer é normal."
+        },
+        {
+          "id": "b",
+          "label": "Sim, preciso ter agora",
+          "reflection": "Vontade não é o mesmo que precisar. Dá para pensar com calma."
+        },
+        {
+          "id": "c",
+          "label": "Querer é errado",
+          "reflection": "Querer não é errado! Só é diferente de precisar."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Querer é ter vontade de algo que não faz falta para viver.",
+    "Querer coisas é normal."
+  ]
+}

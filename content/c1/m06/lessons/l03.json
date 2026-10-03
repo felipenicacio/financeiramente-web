@@ -1,0 +1,62 @@
+{
+  "id": "c1-m06-l03",
+  "cycle": "c1",
+  "module": "m06",
+  "order": 3,
+  "title": "Querer é normal",
+  "headline": "Depois de um anúncio é normal bater vontade; dá para pensar antes de escolher.",
+  "objectives": [
+    "Entender que querer após um anúncio é normal",
+    "Pensar antes de uma escolha"
+  ],
+  "competencies": [
+    "F-D2-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "FB2",
+      "reference": "L15",
+      "role": "principal"
+    },
+    {
+      "source": "MC",
+      "reference": "D2",
+      "role": "complementar"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 3,
+  "content": [
+    {
+      "type": "explanation",
+      "body": "Depois de ver um anúncio, é normal ficar com vontade. O anúncio foi feito para chamar a nossa atenção. O que dá para fazer é perceber a vontade e pensar com calma antes de escolher.",
+      "title": "Vontade é normal",
+      "illustration": "item-magnifier"
+    },
+    {
+      "type": "choice",
+      "prompt": "Você viu um anúncio de um jogo e ficou com muita vontade. O que fazer primeiro?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Perguntar o que o jogo faz de verdade",
+          "reflection": "Isso ajuda a separar a informação da vontade que o anúncio criou."
+        },
+        {
+          "id": "b",
+          "label": "Comprar na hora, sem pensar",
+          "reflection": "Dá para esperar e pensar. A vontade pode continuar ou passar."
+        },
+        {
+          "id": "c",
+          "label": "Achar que preciso do jogo",
+          "reflection": "Vontade não é o mesmo que precisar. Vale pensar com calma."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Querer depois de um anúncio é normal.",
+    "Dá para pensar com calma antes de escolher."
+  ]
+}

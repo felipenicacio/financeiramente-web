@@ -1,0 +1,69 @@
+{
+  "id": "c1-m06-l04",
+  "cycle": "c1",
+  "module": "m06",
+  "order": 4,
+  "title": "Minhas informações têm valor",
+  "headline": "Nome, endereço e telefone são informações pessoais que precisam de cuidado.",
+  "objectives": [
+    "Reconhecer informações pessoais",
+    "Saber pedir ajuda de um adulto de confiança"
+  ],
+  "competencies": [
+    "F-D8-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "FB2",
+      "reference": "L26/27",
+      "role": "principal"
+    },
+    {
+      "source": "MC",
+      "reference": "D8",
+      "role": "complementar"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "body": "Nome completo, endereço, telefone e o nome da escola são informações pessoais. Elas precisam de cuidado. Antes de escrever esses dados num site ou jogo, é bom chamar um adulto de confiança.",
+      "title": "Cuidar das minhas informações",
+      "illustration": "item-tablet"
+    },
+    {
+      "type": "trueFalse",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Meu endereço é uma informação pessoal que precisa de cuidado.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: endereço, telefone e nome da escola são pessoais."
+        },
+        {
+          "id": "s2",
+          "text": "Posso escrever meus dados em qualquer site sozinho, sem avisar ninguém.",
+          "isTrue": false,
+          "explanation": "Antes de escrever dados pessoais, é bom chamar um adulto de confiança."
+        },
+        {
+          "id": "s3",
+          "text": "Um adulto de confiança pode me ajudar a decidir o que compartilhar.",
+          "isTrue": true,
+          "explanation": "Sim: pedir ajuda é um jeito de se cuidar."
+        }
+      ],
+      "prompt": "Sobre as suas informações:"
+    }
+  ],
+  "summary": [
+    "Nome, endereço e telefone são informações pessoais.",
+    "Antes de compartilhar, chame um adulto de confiança."
+  ],
+  "guide": {
+    "state": "consequence",
+    "text": "O que pode acontecer se a gente compartilha dados sem pensar? Vamos ver."
+  }
+}

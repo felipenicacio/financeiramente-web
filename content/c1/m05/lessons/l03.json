@@ -1,0 +1,57 @@
+{
+  "id": "c1-m05-l03",
+  "cycle": "c1",
+  "module": "m05",
+  "order": 3,
+  "title": "Guardar para o inesperado",
+  "headline": "Às vezes acontece algo de surpresa, e ter um pouquinho guardado ajuda.",
+  "objectives": [
+    "Compreender a ideia de guardar para imprevistos",
+    "Perceber que isso traz tranquilidade"
+  ],
+  "competencies": [
+    "F-D8-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "FB1",
+      "reference": "cap. 7A2 (simplificado)",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 3,
+  "content": [
+    {
+      "type": "explanation",
+      "body": "Nem tudo a gente planeja. Às vezes o brinquedo quebra ou aparece uma coisa de última hora. Ter um pouquinho guardado ajuda a resolver sem susto.",
+      "title": "Uma reserva para surpresas",
+      "illustration": "item-jar"
+    },
+    {
+      "type": "choice",
+      "prompt": "A bola do Téo furou de surpresa. O que ajuda numa hora dessas?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Ter um pouquinho guardado para imprevistos",
+          "reflection": "Isso mesmo: uma reserva ajuda a resolver sem susto."
+        },
+        {
+          "id": "b",
+          "label": "Ficar triste e não fazer nada",
+          "reflection": "Dá para resolver melhor quando temos um pouco guardado."
+        },
+        {
+          "id": "c",
+          "label": "Gastar sempre tudo na hora",
+          "reflection": "Se a gente gasta tudo, não sobra para as surpresas."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Guardar um pouco ajuda quando acontece algo de surpresa.",
+    "Uma reserva traz tranquilidade."
+  ]
+}

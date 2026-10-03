@@ -1,0 +1,79 @@
+{
+  "id": "c1-m01-l02",
+  "cycle": "c1",
+  "module": "m01",
+  "order": 2,
+  "title": "Antes do dinheiro: as trocas",
+  "headline": "Antes de existir dinheiro, as pessoas trocavam uma coisa por outra.",
+  "objectives": [
+    "Compreender que a troca veio antes do dinheiro",
+    "Perceber por que trocar direto nem sempre é fácil"
+  ],
+  "competencies": [
+    "F-D4-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "FB1",
+      "reference": "cap. 2",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "story",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "story-fruit-stand",
+          "text": "Há muito tempo não existia dinheiro. Para conseguir uma coisa, as pessoas trocavam outra."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-two-choices",
+          "text": "Quem tinha maçãs podia trocar por pão. Quem tinha peixe podia trocar por frutas."
+        },
+        {
+          "id": "p3",
+          "illustration": "story-thinking",
+          "text": "Mas às vezes dava trabalho: quem queria pão nem sempre tinha o que o padeiro queria em troca."
+        }
+      ],
+      "title": "Quando não existia dinheiro"
+    },
+    {
+      "type": "trueFalse",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Antes do dinheiro, as pessoas trocavam uma coisa por outra.",
+          "isTrue": true,
+          "explanation": "Isso se chama troca ou escambo. Veio antes do dinheiro."
+        },
+        {
+          "id": "s2",
+          "text": "Na troca, era sempre fácil achar quem queria o que você tinha.",
+          "isTrue": false,
+          "explanation": "Nem sempre. Por isso o dinheiro depois facilitou as trocas."
+        },
+        {
+          "id": "s3",
+          "text": "Trocar maçãs por pão é um exemplo de troca.",
+          "isTrue": true,
+          "explanation": "Exato: uma coisa pela outra, sem dinheiro."
+        }
+      ],
+      "prompt": "Sobre as trocas de antigamente:"
+    }
+  ],
+  "summary": [
+    "Antes do dinheiro, as pessoas trocavam uma coisa por outra.",
+    "Trocar direto nem sempre era fácil."
+  ],
+  "guide": {
+    "state": "discover",
+    "text": "Como será que as pessoas compravam antes do dinheiro existir?"
+  }
+}

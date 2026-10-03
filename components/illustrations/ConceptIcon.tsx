@@ -128,6 +128,36 @@ const glyphs: Record<ConceptIconName, React.ReactNode> = {
       <path d="m13.5 20 2 2 4-4.5" />
     </>
   ),
+  // setas trocando (troca/escambo)
+  trade: (
+    <>
+      <path d="M7 11h15l-4-4M25 21H10l4 4" />
+    </>
+  ),
+  // cofrinho / guardar
+  save: (
+    <>
+      <path d="M5 17a9 7 0 0 1 18 0v4a2 2 0 0 1-2 2h-2l-1 2h-6l-1-2H7a2 2 0 0 1-2-2Z" />
+      <path d="M23 15a3 3 0 0 1 3 3M10 12a9 9 0 0 1 8 0" />
+      <circle cx={9} cy={16} r={1.2} fill="currentColor" stroke="none" />
+    </>
+  ),
+  // alvo / meta
+  goal: (
+    <>
+      <circle cx={16} cy={16} r={11} />
+      <circle cx={16} cy={16} r={6} />
+      <circle cx={16} cy={16} r={1.6} fill="currentColor" stroke="none" />
+    </>
+  ),
+  // cadeado / segurança
+  safe: (
+    <>
+      <rect x={7} y={14} width={18} height={13} rx={2.5} />
+      <path d="M11 14v-3a5 5 0 0 1 10 0v3" />
+      <circle cx={16} cy={20} r={1.6} fill="currentColor" stroke="none" />
+    </>
+  ),
   // caminho que se divide
   choice: (
     <>

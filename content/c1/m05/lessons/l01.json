@@ -1,0 +1,61 @@
+{
+  "id": "c1-m05-l01",
+  "cycle": "c1",
+  "module": "m05",
+  "order": 1,
+  "title": "Por que guardar dinheiro?",
+  "headline": "Guardar um pouco ajuda a alcançar algo maior lá na frente.",
+  "objectives": [
+    "Entender por que guardar dinheiro",
+    "Relacionar guardar a alcançar uma meta"
+  ],
+  "competencies": [
+    "F-D8-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "FB1",
+      "reference": "cap. 7",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 3,
+  "content": [
+    {
+      "type": "explanation",
+      "body": "Guardar é deixar um pouco de dinheiro para depois, em vez de gastar tudo agora. Guardando um pouco de cada vez, dá para alcançar algo maior lá na frente.",
+      "title": "Guardar é para depois",
+      "illustration": "item-jar"
+    },
+    {
+      "type": "choice",
+      "prompt": "Você quer uma bola que custa mais do que você tem hoje. O que ajuda a conseguir?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Guardar um pouco de cada vez",
+          "reflection": "Isso mesmo: juntando aos poucos, a bola fica cada vez mais perto."
+        },
+        {
+          "id": "b",
+          "label": "Gastar tudo em outra coisa",
+          "reflection": "Aí o dinheiro acaba e a bola fica longe."
+        },
+        {
+          "id": "c",
+          "label": "Desistir da bola",
+          "reflection": "Você pode escolher outra coisa, mas guardar também é um caminho para conseguir."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Guardar é deixar um pouco para depois.",
+    "Guardando aos poucos, uma meta fica mais perto."
+  ],
+  "guide": {
+    "state": "ask",
+    "text": "Por que será que as pessoas guardam dinheiro em vez de gastar tudo?"
+  }
+}

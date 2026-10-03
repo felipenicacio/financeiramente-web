@@ -6,7 +6,7 @@ import {
 import type { ValidationIssue } from '@/lib/validation/schema';
 
 import { rawCatalog, rawCycleSummaries, rawModules } from './registry';
-import type { Catalog, CycleEntry, CycleId, CycleSummary, Journey, ModuleBundle } from './types';
+import type { Catalog, CycleEntry, CycleId, CycleSummary, Lesson, Module, ModuleBundle } from './types';
 
 export type LoadResult<T> = { ok: true; data: T } | { ok: false; issues: ValidationIssue[] };
 
@@ -19,7 +19,6 @@ function memo<T>(key: string, load: () => LoadResult<T>): LoadResult<T> {
 }
 
 function reportIssues(source: string, issues: ValidationIssue[]) {
-  // Aparece no terminal do build e do `next dev`, nunca para o visitante.
   console.warn(
     `[conteúdo] ${source} tem ${issues.length} problema(s):\n` +
       issues.map((item) => `  • ${item.path}: ${item.message}`).join('\n'),
@@ -37,12 +36,12 @@ export function loadCatalog(): LoadResult<Catalog> {
   });
 }
 
-export function loadModule(cycle: string, moduleId: string): LoadResult<ModuleBundle> {
+export function loadModuleBundle(cycle: string, moduleId: string): LoadResult<ModuleBundle> {
   const key = `${cycle}/${moduleId}`;
   return memo(`module:${key}`, () => {
     const raw = rawModules[key];
     if (!raw) return { ok: false, issues: [{ path: key, message: 'módulo não registrado' }] };
-    const result = validateModuleBundle(raw);
+    const result = validateModuleBundle(raw.module, raw.lessons);
     if (!result.ok) {
       reportIssues(key, result.issues);
       return { ok: false, issues: result.issues };
@@ -51,20 +50,19 @@ export function loadModule(cycle: string, moduleId: string): LoadResult<ModuleBu
   });
 }
 
-/** Lista os módulos publicados (status "available"), usada para gerar as páginas estáticas. */
-export function availableModules(): { cycle: CycleId; moduleId: string; journeyId: string }[] {
-  const catalog = loadCatalog();
-  if (!catalog.ok) return [];
-  return catalog.data.cycles.flatMap((cycle) =>
-    cycle.journeys.flatMap((journey) =>
-      journey.modules
-        .filter((ref) => ref.status === 'available' && rawModules[`${cycle.id}/${ref.id}`])
-        .map((ref) => ({ cycle: cycle.id, moduleId: ref.id, journeyId: journey.id })),
-    ),
-  );
+export function loadLesson(cycle: string, moduleId: string, order: number): LoadResult<Lesson> {
+  const bundle = loadModuleBundle(cycle, moduleId);
+  if (!bundle.ok) return bundle;
+  const lesson = bundle.data.lessons.find((entry) => entry.order === order);
+  return lesson
+    ? { ok: true, data: lesson }
+    : { ok: false, issues: [{ path: `${cycle}/${moduleId}`, message: `lição ${order} não existe` }] };
 }
 
-export { t } from './ui';
+export function loadModule(cycle: string, moduleId: string): LoadResult<Module> {
+  const bundle = loadModuleBundle(cycle, moduleId);
+  return bundle.ok ? { ok: true, data: bundle.data.module } : bundle;
+}
 
 export function loadCycleSummary(cycle: string): LoadResult<CycleSummary> | null {
   const raw = rawCycleSummaries[cycle];
@@ -79,30 +77,33 @@ export function loadCycleSummary(cycle: string): LoadResult<CycleSummary> | null
   });
 }
 
-/** Módulos publicados de um ciclo, na ordem do catálogo. */
+/** Lista de módulos publicados, na ordem do catálogo. */
+export function availableModules(): { cycle: CycleId; moduleId: string }[] {
+  const catalog = loadCatalog();
+  if (!catalog.ok) return [];
+  return catalog.data.cycles.flatMap((cycle) =>
+    cycle.modules
+      .filter((ref) => ref.status === 'available' && rawModules[`${cycle.id}/${ref.id}`])
+      .map((ref) => ({ cycle: cycle.id, moduleId: ref.id })),
+  );
+}
+
 export function cycleModules(cycle: string): string[] {
   return availableModules()
     .filter((entry) => entry.cycle === cycle)
     .map((entry) => entry.moduleId);
 }
 
-/** Próximo módulo publicado do mesmo ciclo, ou null se este for o último. */
 export function nextModuleId(cycle: string, moduleId: string): string | null {
   const ids = cycleModules(cycle);
   const index = ids.indexOf(moduleId);
   return index >= 0 && index < ids.length - 1 ? (ids[index + 1] ?? null) : null;
 }
 
+export { t } from './ui';
+
 export function findCycle(catalog: Catalog, cycle: string): CycleEntry | undefined {
   return catalog.cycles.find((entry) => entry.id === cycle);
-}
-
-export function findJourney(
-  catalog: Catalog,
-  cycle: string,
-  journeyId: string,
-): Journey | undefined {
-  return findCycle(catalog, cycle)?.journeys.find((journey) => journey.id === journeyId);
 }
 
 export const cycleIds: CycleId[] = ['c1', 'c2', 'c3', 'c4'];

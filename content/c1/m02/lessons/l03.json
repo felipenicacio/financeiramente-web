@@ -1,0 +1,110 @@
+{
+  "id": "c1-m02-l03",
+  "cycle": "c1",
+  "module": "m02",
+  "order": 3,
+  "title": "A mesma coisa pode mudar",
+  "headline": "Dependendo da situação, a mesma coisa pode ser necessidade ou desejo.",
+  "objectives": [
+    "Perceber que o contexto muda a classificação",
+    "Dar um exemplo em que algo muda de necessidade para desejo"
+  ],
+  "competencies": [
+    "F-D1-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "FB2",
+      "reference": "L2",
+      "role": "principal"
+    },
+    {
+      "source": "MC",
+      "reference": "D1",
+      "role": "complementar"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "story",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-coat",
+          "text": "Está muito frio e o casaco do Téo ficou pequeno. Ele precisa de um casaco."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-sneaker",
+          "text": "No calor, um casaco novo não faz falta. Aí ele vira um desejo, não uma necessidade."
+        }
+      ],
+      "title": "Depende da situação"
+    },
+    {
+      "type": "classify",
+      "categories": [
+        {
+          "id": "need",
+          "label": "Preciso",
+          "short": "Faz falta agora.",
+          "icon": "need",
+          "tone": "teal"
+        },
+        {
+          "id": "wait",
+          "label": "Posso esperar",
+          "short": "Quero, mas pode ser depois.",
+          "icon": "wait",
+          "tone": "amber"
+        }
+      ],
+      "items": [
+        {
+          "id": "coat-cold",
+          "label": "Casaco no frio",
+          "situation": "Está muito frio e o antigo não serve mais.",
+          "accepted": [
+            "need"
+          ],
+          "feedback": "No frio, o casaco protege o corpo. É preciso.",
+          "illustration": "item-coat",
+          "contextNote": "No calor, um casaco novo poderia esperar."
+        },
+        {
+          "id": "sneaker",
+          "label": "Tênis novo e bonito",
+          "situation": "O tênis de agora ainda serve, mas você viu um mais bonito.",
+          "accepted": [
+            "wait"
+          ],
+          "feedback": "O tênis de agora funciona, então o novo pode esperar.",
+          "illustration": "item-sneaker",
+          "contextNote": "Se o tênis rasgar, ele passa a ser preciso."
+        },
+        {
+          "id": "water",
+          "label": "Água com sede",
+          "situation": "Está calor e você está com sede.",
+          "accepted": [
+            "need"
+          ],
+          "feedback": "Beber água cuida do corpo. É preciso.",
+          "illustration": "item-bottle"
+        }
+      ],
+      "prompt": "Preciso ou posso esperar?",
+      "instructions": "A resposta pode mudar conforme a situação. Pense com calma."
+    }
+  ],
+  "summary": [
+    "A mesma coisa pode ser necessidade ou desejo.",
+    "Depende da situação."
+  ],
+  "guide": {
+    "state": "discover",
+    "text": "Será que uma coisa pode ser necessidade hoje e desejo amanhã?"
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "id": "m05",
+  "cycle": "c1",
+  "order": 5,
+  "code": "C1.5",
+  "title": "Guardar e cuidar",
+  "headline": "Por que guardar dinheiro, como juntar para uma meta e cuidar do que é nosso.",
+  "summary": "Guardar um pouco ajuda a alcançar metas e a resolver surpresas. Cuidar das coisas faz tudo durar mais.",
+  "competencies": [
+    "F-D8-C1-01",
+    "F-D5-C1-01"
+  ],
+  "integrative": {
+    "title": "O cofrinho da turma",
+    "intro": "Vamos juntar tudo sobre guardar e cuidar.",
+    "object": {
+      "type": "quiz",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Por que a gente guarda dinheiro?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Para alcançar algo maior depois"
+            },
+            {
+              "id": "b",
+              "label": "Para nunca mais usar"
+            },
+            {
+              "id": "c",
+              "label": "Porque é obrigatório"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Guardando aos poucos, uma meta fica mais perto.",
+          "illustration": "item-jar"
+        },
+        {
+          "id": "q2",
+          "kind": "situation",
+          "prompt": "O brinquedo quebrou de surpresa. O que ajuda?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Ter um pouquinho guardado"
+            },
+            {
+              "id": "b",
+              "label": "Gastar tudo sempre",
+              "feedback": "Se gastamos tudo, não sobra para as surpresas."
+            },
+            {
+              "id": "c",
+              "label": "Ficar sem fazer nada"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Uma reserva ajuda a resolver as surpresas sem susto."
+        },
+        {
+          "id": "q3",
+          "kind": "decision",
+          "prompt": "Qual atitude faz as coisas durarem mais?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Guardar e cuidar dos pertences"
+            },
+            {
+              "id": "b",
+              "label": "Deixar tudo largado",
+              "feedback": "Largado, estraga mais rápido."
+            },
+            {
+              "id": "c",
+              "label": "Usar sem nenhum cuidado"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Cuidar faz durar mais e é um jeito de economizar."
+        },
+        {
+          "id": "q4",
+          "kind": "recognition",
+          "prompt": "Onde é mais seguro guardar dinheiro?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Num cofrinho ou pote só para isso"
+            },
+            {
+              "id": "b",
+              "label": "Largado em qualquer lugar"
+            },
+            {
+              "id": "c",
+              "label": "Dado para um desconhecido"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Um lugar certo ajuda a não perder. Um adulto de confiança também pode ajudar.",
+          "illustration": "item-jar"
+        },
+        {
+          "id": "q5",
+          "kind": "explanation",
+          "prompt": "Qual é o primeiro passo para juntar para uma meta?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Escolher a meta e ver o preço"
+            },
+            {
+              "id": "b",
+              "label": "Gastar o dinheiro em outra coisa"
+            },
+            {
+              "id": "c",
+              "label": "Esquecer a meta"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Primeiro escolhemos a meta e vemos o preço; depois guardamos aos poucos."
+        }
+      ],
+      "title": "Guardar e cuidar"
+    }
+  },
+  "conclusion": {
+    "title": "Você concluiu o módulo",
+    "message": "Guardar ajuda a alcançar metas e a resolver surpresas. Cuidar faz as coisas durarem mais.",
+    "recap": [
+      {
+        "icon": "save",
+        "tone": "teal",
+        "text": "Guardar é deixar um pouco para depois."
+      },
+      {
+        "icon": "goal",
+        "tone": "amber",
+        "text": "Juntando aos poucos, a meta fica perto."
+      },
+      {
+        "icon": "safe",
+        "tone": "cyan",
+        "text": "Um lugar seguro protege o dinheiro."
+      },
+      {
+        "icon": "care",
+        "tone": "green",
+        "text": "Cuidar faz as coisas durarem mais."
+      }
+    ]
+  }
+}

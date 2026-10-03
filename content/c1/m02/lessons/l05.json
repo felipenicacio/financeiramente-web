@@ -1,0 +1,100 @@
+{
+  "id": "c1-m02-l05",
+  "cycle": "c1",
+  "module": "m02",
+  "order": 5,
+  "title": "Esperar também é escolher",
+  "headline": "Esperar não é perder: é decidir o melhor momento para algo que a gente quer.",
+  "objectives": [
+    "Compreender a espera como uma escolha",
+    "Relacionar esperar a alcançar uma meta"
+  ],
+  "competencies": [
+    "F-D1-C1-01",
+    "F-D5-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "FB2",
+      "reference": "L4",
+      "role": "principal"
+    },
+    {
+      "source": "AV-P",
+      "reference": "EF12LF06/07",
+      "role": "complementar"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "story",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "story-gift",
+          "text": "No aniversário, o Téo ganhou {gift} de presente da tia Rosa."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-jar",
+          "text": "Ele está juntando para uma bola de {goalPrice}. Já tem {saved} no pote."
+        },
+        {
+          "id": "p3",
+          "illustration": "story-shop",
+          "text": "Na banca, ele viu figurinhas por {temptationPrice}. O Téo adora figurinhas!"
+        }
+      ],
+      "title": "O presente do Téo",
+      "values": {
+        "gift": 10,
+        "saved": 15,
+        "goalPrice": 30,
+        "temptationPrice": 5
+      },
+      "derived": [
+        {
+          "name": "missingIfSave",
+          "expr": "goalPrice - saved - gift"
+        },
+        {
+          "name": "missingIfBuy",
+          "expr": "goalPrice - saved - (gift - temptationPrice)"
+        }
+      ],
+      "question": {
+        "prompt": "O que você faria no lugar do Téo?",
+        "options": [
+          {
+            "id": "save",
+            "label": "Guardo tudo no pote",
+            "reflection": "A bola fica mais perto: faltam só {missingIfSave}. As figurinhas ficam para outro dia."
+          },
+          {
+            "id": "buy",
+            "label": "Compro as figurinhas",
+            "reflection": "Você ganha as figurinhas hoje. Faltam {missingIfBuy} para a bola: ela demora um pouco mais."
+          },
+          {
+            "id": "think",
+            "label": "Espero e decido amanhã",
+            "reflection": "Esperar ajuda a pensar com calma. O dinheiro continua lá enquanto você decide."
+          }
+        ]
+      },
+      "closing": "Não existe uma única resposta certa. Cada escolha traz algo agora e muda o que acontece depois."
+    },
+    {
+      "type": "reflection",
+      "state": "reflect",
+      "text": "Esperar não é desistir. É escolher o melhor momento para algo que a gente quer.",
+      "body": "Quando você espera para juntar, uma meta maior fica mais perto."
+    }
+  ],
+  "summary": [
+    "Esperar é escolher o melhor momento.",
+    "Esperar ajuda a alcançar uma meta maior."
+  ]
+}

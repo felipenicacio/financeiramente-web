@@ -1,0 +1,66 @@
+{
+  "id": "c1-m04-l01",
+  "cycle": "c1",
+  "module": "m04",
+  "order": 1,
+  "title": "Por que as pessoas trabalham?",
+  "headline": "As pessoas trabalham para fazer coisas, ajudar outras pessoas e receber dinheiro.",
+  "objectives": [
+    "Reconhecer motivos para o trabalho",
+    "Perceber trabalhos perto de casa"
+  ],
+  "competencies": [
+    "F-D7-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "FB1",
+      "reference": "cap. 3",
+      "role": "principal"
+    },
+    {
+      "source": "MC",
+      "reference": "D7",
+      "role": "complementar"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 3,
+  "content": [
+    {
+      "type": "story",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "story-street",
+          "text": "No sábado, o Caio passeou pelo bairro. Muita gente estava trabalhando."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-bakery",
+          "text": "O seu Jorge fazia pão na padaria."
+        },
+        {
+          "id": "p3",
+          "illustration": "story-bus",
+          "text": "A motorista Lúcia levava as pessoas no ônibus."
+        }
+      ],
+      "title": "Um passeio pelo bairro"
+    },
+    {
+      "type": "explanation",
+      "body": "As pessoas trabalham por vários motivos: para fazer coisas que os outros precisam, para ajudar quem precisa e para receber dinheiro pelo trabalho.",
+      "title": "Para que serve o trabalho",
+      "illustration": "item-wallet"
+    }
+  ],
+  "summary": [
+    "As pessoas trabalham para fazer coisas e ajudar outras pessoas.",
+    "O trabalho também traz dinheiro."
+  ],
+  "guide": {
+    "state": "ask",
+    "text": "Você já reparou quantas pessoas trabalham perto da sua casa?"
+  }
+}

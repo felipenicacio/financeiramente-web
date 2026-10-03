@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useEffect, useRef, type ReactNode } from 'react';
 
 import { Icon } from '@/components/ui/Icon';
-import type { LessonStepId } from '@/lib/content/types';
 import { t } from '@/lib/content/ui';
 import { routes } from '@/lib/learning/steps';
 
@@ -13,22 +12,28 @@ import { ProgressIndicator } from './ProgressIndicator';
 type Props = {
   cycle: string;
   moduleId: string;
-  step: LessonStepId;
+  /** Rótulos de todas as etapas do módulo (5 lições + fechamento). */
+  stepLabels: string[];
+  currentStep: number;
   /**
-   * Muda a cada tela interna (quadro da história, item da atividade...).
-   * Na mudança, a página volta ao topo e o foco vai para o título da tela,
-   * para quem navega por teclado ou leitor de tela saber que algo mudou.
+   * Muda a cada tela interna (objeto da lição). Na mudança, a página volta ao
+   * topo e o foco vai para o título, para quem navega por teclado ou leitor.
    */
   screenKey: string;
   footer: ReactNode;
   children: ReactNode;
 };
 
-/**
- * Estrutura comum de toda etapa: trilha de progresso, uma tarefa por tela e
- * ações fixas no rodapé, ao alcance do polegar.
- */
-export function LessonShell({ cycle, moduleId, step, screenKey, footer, children }: Props) {
+/** Estrutura comum de toda lição: progresso, uma tela por objeto e ações fixas no rodapé. */
+export function LessonShell({
+  cycle,
+  moduleId,
+  stepLabels,
+  currentStep,
+  screenKey,
+  footer,
+  children,
+}: Props) {
   const mainRef = useRef<HTMLElement>(null);
   const firstRender = useRef(true);
 
@@ -54,7 +59,7 @@ export function LessonShell({ cycle, moduleId, step, screenKey, footer, children
           >
             <Icon name="close" className="size-6" />
           </Link>
-          <ProgressIndicator current={step} />
+          <ProgressIndicator labels={stepLabels} current={currentStep} />
         </div>
       </header>
 

@@ -1,0 +1,67 @@
+{
+  "id": "c1-m03-l04",
+  "cycle": "c1",
+  "module": "m03",
+  "order": 4,
+  "title": "O que dá para comprar?",
+  "headline": "Com um valor na mão, dá para ver o que cabe e o que fica para depois.",
+  "objectives": [
+    "Ver o que cabe num valor disponível",
+    "Perceber que o resto pode esperar"
+  ],
+  "competencies": [
+    "F-D4-C1-01",
+    "F-D5-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF12LF02/03",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "body": "Quando você tem um valor na mão, dá para olhar os preços e ver o que cabe. O que custa mais do que você tem pode ficar para outro dia.",
+      "title": "O que cabe no meu dinheiro",
+      "illustration": "item-wallet"
+    },
+    {
+      "type": "afford",
+      "prompt": "Você tem {budget}. O que dá para comprar?",
+      "budget": 10,
+      "products": [
+        {
+          "id": "kite",
+          "label": "Pipa",
+          "price": 8,
+          "illustration": "item-kite"
+        },
+        {
+          "id": "bookstory",
+          "label": "Livro de histórias",
+          "price": 15,
+          "illustration": "item-book"
+        },
+        {
+          "id": "pencils",
+          "label": "Lápis de cor",
+          "price": 5,
+          "illustration": "item-pencils"
+        }
+      ],
+      "feedback": "Cabe o que custa o mesmo ou menos do que você tem. O resto pode esperar ou entrar em outro plano."
+    }
+  ],
+  "summary": [
+    "Com um valor na mão, dá para ver o que cabe.",
+    "O que não cabe pode esperar."
+  ],
+  "guide": {
+    "state": "consequence",
+    "text": "O que muda se escolhermos esta ou aquela opção? Veja o que cabe."
+  }
+}

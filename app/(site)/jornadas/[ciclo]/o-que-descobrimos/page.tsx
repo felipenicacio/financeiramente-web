@@ -76,7 +76,7 @@ export default async function CycleSummaryPage({ params }: { params: Promise<Par
                       <span className="text-lead font-semibold">{discovery.text}</span>
                       {moduleResult.ok ? (
                         <span className="text-caption text-ink-soft">
-                          {moduleResult.data.module.title}
+                          {moduleResult.data.title}
                         </span>
                       ) : null}
                     </span>

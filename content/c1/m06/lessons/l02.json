@@ -1,0 +1,128 @@
+{
+  "id": "c1-m06-l02",
+  "cycle": "c1",
+  "module": "m06",
+  "order": 2,
+  "title": "Informar ou convencer?",
+  "headline": "Um anúncio pode contar algo que dá para conferir e também tentar convencer.",
+  "objectives": [
+    "Diferenciar informação de convencimento",
+    "Reconhecer frases que tentam convencer"
+  ],
+  "competencies": [
+    "F-D2-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "FB2",
+      "reference": "L15",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "concepts",
+      "concepts": [
+        {
+          "id": "info",
+          "label": "Informação",
+          "short": "Conta algo que dá para conferir.",
+          "description": "Diz o tamanho, o peso ou como funciona. Dá para ver se é verdade.",
+          "icon": "info",
+          "tone": "cyan",
+          "examples": [
+            {
+              "label": "Quatro peças",
+              "illustration": "item-blocks"
+            }
+          ]
+        },
+        {
+          "id": "persuade",
+          "label": "Convencimento",
+          "short": "Tenta fazer você querer.",
+          "description": "Usa frases fortes, cores e música para chamar a vontade. Querer depois é normal.",
+          "icon": "persuade",
+          "tone": "coral",
+          "examples": [
+            {
+              "label": "Frases fortes",
+              "illustration": "item-megaphone"
+            }
+          ]
+        }
+      ],
+      "title": "Dois lados de um anúncio",
+      "intro": "Um anúncio pode fazer duas coisas ao mesmo tempo:"
+    },
+    {
+      "type": "classify",
+      "categories": [
+        {
+          "id": "info",
+          "label": "Informação",
+          "short": "Dá para conferir.",
+          "icon": "info",
+          "tone": "cyan"
+        },
+        {
+          "id": "persuade",
+          "label": "Convencer",
+          "short": "Tenta fazer querer.",
+          "icon": "persuade",
+          "tone": "coral"
+        }
+      ],
+      "items": [
+        {
+          "id": "pieces",
+          "label": "“Este brinquedo tem quatro peças.”",
+          "situation": "Frase da caixa de um brinquedo.",
+          "accepted": [
+            "info"
+          ],
+          "feedback": "Dá para abrir e contar as peças. É informação."
+        },
+        {
+          "id": "everyone",
+          "label": "“Todo mundo vai querer um!”",
+          "situation": "Frase de um anúncio em vídeo.",
+          "accepted": [
+            "persuade"
+          ],
+          "feedback": "Não dá para conferir se todo mundo quer. Tenta despertar vontade."
+        },
+        {
+          "id": "weight",
+          "label": "“O pacote pesa 200 gramas.”",
+          "situation": "Frase da embalagem de um biscoito.",
+          "accepted": [
+            "info"
+          ],
+          "feedback": "Dá para pesar e conferir. É informação."
+        },
+        {
+          "id": "without",
+          "label": "“Você não pode ficar sem isso!”",
+          "situation": "Frase de um cartaz de loja.",
+          "accepted": [
+            "persuade"
+          ],
+          "feedback": "Ninguém precisa de um brinquedo para viver. Tenta convencer."
+        }
+      ],
+      "prompt": "Informa ou convence?",
+      "instructions": "A frase conta algo que dá para conferir ou tenta fazer você querer?"
+    }
+  ],
+  "summary": [
+    "Informação conta algo que dá para conferir.",
+    "Convencimento tenta fazer você querer."
+  ],
+  "guide": {
+    "state": "discover",
+    "text": "Vamos descobrir a diferença entre informar e convencer?"
+  }
+}

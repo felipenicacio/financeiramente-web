@@ -1,0 +1,64 @@
+{
+  "id": "c1-m03-l01",
+  "cycle": "c1",
+  "module": "m03",
+  "order": 1,
+  "title": "O que é preço?",
+  "headline": "O preço é o número que mostra quanto precisamos pagar por uma coisa.",
+  "objectives": [
+    "Compreender o que é preço",
+    "Perceber que preço não é o mesmo que importância"
+  ],
+  "competencies": [
+    "F-D4-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF12LF03",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 3,
+  "content": [
+    {
+      "type": "explanation",
+      "body": "O preço é o número escrito na plaquinha. Ele mostra quanto precisamos pagar por uma coisa. Um preço maior não quer dizer que a coisa é melhor ou mais importante para você.",
+      "title": "Preço mostra quanto pagar",
+      "illustration": "item-pricetag"
+    },
+    {
+      "type": "trueFalse",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "O preço mostra quanto precisamos pagar por uma coisa.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: o preço é quanto custa."
+        },
+        {
+          "id": "s2",
+          "text": "Um preço maior quer dizer que a coisa é sempre melhor.",
+          "isTrue": false,
+          "explanation": "Preço maior não quer dizer melhor. Depende do que você precisa e quer."
+        },
+        {
+          "id": "s3",
+          "text": "O preço fica escrito numa plaquinha ou etiqueta.",
+          "isTrue": true,
+          "explanation": "Sim: dá para conferir o preço antes de escolher."
+        }
+      ],
+      "prompt": "Sobre o preço:"
+    }
+  ],
+  "summary": [
+    "O preço mostra quanto precisamos pagar.",
+    "Preço maior não quer dizer melhor."
+  ],
+  "guide": {
+    "state": "ask",
+    "text": "Você já reparou nas plaquinhas de preço na feira?"
+  }
+}

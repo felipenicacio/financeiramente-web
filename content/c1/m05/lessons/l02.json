@@ -1,0 +1,90 @@
+{
+  "id": "c1-m05-l02",
+  "cycle": "c1",
+  "module": "m05",
+  "order": 2,
+  "title": "Guardar para uma meta",
+  "headline": "Para juntar para algo que a gente quer, dá para seguir alguns passos.",
+  "objectives": [
+    "Reconhecer os passos de juntar para uma meta",
+    "Ordenar as etapas de um plano simples"
+  ],
+  "competencies": [
+    "F-D8-C1-01",
+    "F-D5-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "FB1",
+      "reference": "cap. 7A1",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "story",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-pencils",
+          "text": "A Nina quer uma caixa de lápis de cor. Ela vira a meta dela."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-jar",
+          "text": "Ela separou um pote só para juntar para a caixa."
+        },
+        {
+          "id": "p3",
+          "illustration": "story-jar",
+          "text": "Cada vez que sobra um pouco, a Nina coloca no pote. Aos poucos, a caixa fica mais perto."
+        }
+      ],
+      "title": "A meta da Nina"
+    },
+    {
+      "type": "ordering",
+      "prompt": "Coloque os passos de juntar para uma meta na ordem.",
+      "items": [
+        {
+          "id": "goal",
+          "label": "Escolher a meta (a caixa de lápis)",
+          "illustration": "item-pencils"
+        },
+        {
+          "id": "price",
+          "label": "Descobrir quanto ela custa",
+          "illustration": "item-pricetag"
+        },
+        {
+          "id": "save",
+          "label": "Guardar um pouco de cada vez",
+          "illustration": "item-jar"
+        },
+        {
+          "id": "reach",
+          "label": "Juntar o bastante e alcançar a meta",
+          "illustration": "item-coins"
+        }
+      ],
+      "correct": [
+        "goal",
+        "price",
+        "save",
+        "reach"
+      ],
+      "feedback": "Primeiro escolhemos a meta e vemos o preço. Depois guardamos aos poucos até alcançar.",
+      "instructions": "Toque para colocar na ordem, do primeiro ao último passo."
+    }
+  ],
+  "summary": [
+    "Para uma meta, escolhemos, vemos o preço e guardamos aos poucos.",
+    "Juntando um pouco de cada vez, a meta é alcançada."
+  ],
+  "guide": {
+    "state": "discover",
+    "text": "Como será que a gente junta dinheiro para algo que quer muito?"
+  }
+}

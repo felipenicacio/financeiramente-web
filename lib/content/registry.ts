@@ -1,80 +1,64 @@
 /**
- * Registro estático do conteúdo.
+ * Registro estático do conteúdo do C1 (currículo v2.0).
  *
- * Os JSON são importados em tempo de build: o site final não busca nada em
- * rede para exibir o conteúdo. Para publicar um novo módulo: criar a pasta em
- * content/<ciclo>/<módulo>, adicionar a entrada abaixo e marcá-lo como
- * "available" em content/catalog.json.
+ * Importado em tempo de build: o site não busca nada em rede para exibir o
+ * conteúdo. Para publicar um novo ciclo/módulo, criar as pastas em content/ e
+ * adicionar as importações aqui, além de content/catalog.json.
  */
-import c1M01Activity from '@/content/c1/m01/activity.json';
-import c1M01Infographic from '@/content/c1/m01/infographic.json';
-import c1M01Module from '@/content/c1/m01/module.json';
-import c1M01Quiz from '@/content/c1/m01/quiz.json';
-import c1M01Simulation from '@/content/c1/m01/simulation.json';
-import c1M01Story from '@/content/c1/m01/story.json';
-import c1M02Activity from '@/content/c1/m02/activity.json';
-import c1M02Infographic from '@/content/c1/m02/infographic.json';
-import c1M02Module from '@/content/c1/m02/module.json';
-import c1M02Quiz from '@/content/c1/m02/quiz.json';
-import c1M02Simulation from '@/content/c1/m02/simulation.json';
-import c1M02Story from '@/content/c1/m02/story.json';
-import c1M03Activity from '@/content/c1/m03/activity.json';
-import c1M03Infographic from '@/content/c1/m03/infographic.json';
-import c1M03Module from '@/content/c1/m03/module.json';
-import c1M03Quiz from '@/content/c1/m03/quiz.json';
-import c1M03Simulation from '@/content/c1/m03/simulation.json';
-import c1M03Story from '@/content/c1/m03/story.json';
-import c1M04Activity from '@/content/c1/m04/activity.json';
-import c1M04Infographic from '@/content/c1/m04/infographic.json';
-import c1M04Module from '@/content/c1/m04/module.json';
-import c1M04Quiz from '@/content/c1/m04/quiz.json';
-import c1M04Simulation from '@/content/c1/m04/simulation.json';
-import c1M04Story from '@/content/c1/m04/story.json';
+import M01Module from '@/content/c1/m01/module.json';
+import M01L1 from '@/content/c1/m01/lessons/l01.json';
+import M01L2 from '@/content/c1/m01/lessons/l02.json';
+import M01L3 from '@/content/c1/m01/lessons/l03.json';
+import M01L4 from '@/content/c1/m01/lessons/l04.json';
+import M01L5 from '@/content/c1/m01/lessons/l05.json';
+import M02Module from '@/content/c1/m02/module.json';
+import M02L1 from '@/content/c1/m02/lessons/l01.json';
+import M02L2 from '@/content/c1/m02/lessons/l02.json';
+import M02L3 from '@/content/c1/m02/lessons/l03.json';
+import M02L4 from '@/content/c1/m02/lessons/l04.json';
+import M02L5 from '@/content/c1/m02/lessons/l05.json';
+import M03Module from '@/content/c1/m03/module.json';
+import M03L1 from '@/content/c1/m03/lessons/l01.json';
+import M03L2 from '@/content/c1/m03/lessons/l02.json';
+import M03L3 from '@/content/c1/m03/lessons/l03.json';
+import M03L4 from '@/content/c1/m03/lessons/l04.json';
+import M03L5 from '@/content/c1/m03/lessons/l05.json';
+import M04Module from '@/content/c1/m04/module.json';
+import M04L1 from '@/content/c1/m04/lessons/l01.json';
+import M04L2 from '@/content/c1/m04/lessons/l02.json';
+import M04L3 from '@/content/c1/m04/lessons/l03.json';
+import M04L4 from '@/content/c1/m04/lessons/l04.json';
+import M04L5 from '@/content/c1/m04/lessons/l05.json';
+import M05Module from '@/content/c1/m05/module.json';
+import M05L1 from '@/content/c1/m05/lessons/l01.json';
+import M05L2 from '@/content/c1/m05/lessons/l02.json';
+import M05L3 from '@/content/c1/m05/lessons/l03.json';
+import M05L4 from '@/content/c1/m05/lessons/l04.json';
+import M05L5 from '@/content/c1/m05/lessons/l05.json';
+import M06Module from '@/content/c1/m06/module.json';
+import M06L1 from '@/content/c1/m06/lessons/l01.json';
+import M06L2 from '@/content/c1/m06/lessons/l02.json';
+import M06L3 from '@/content/c1/m06/lessons/l03.json';
+import M06L4 from '@/content/c1/m06/lessons/l04.json';
+import M06L5 from '@/content/c1/m06/lessons/l05.json';
 import c1Cycle from '@/content/c1/cycle.json';
 import catalog from '@/content/catalog.json';
 import ui from '@/content/ui.json';
 
-import type { ModuleBundle } from './types';
+import type { CycleSummary } from './types';
 
 export const rawCatalog: unknown = catalog;
 export const rawUiStrings: unknown = ui;
 
-export const rawModules: Record<string, Record<keyof ModuleBundle, unknown>> = {
-  'c1/m01': {
-    module: c1M01Module,
-    story: c1M01Story,
-    infographic: c1M01Infographic,
-    activity: c1M01Activity,
-    simulation: c1M01Simulation,
-    quiz: c1M01Quiz,
-  },
-  'c1/m02': {
-    module: c1M02Module,
-    story: c1M02Story,
-    infographic: c1M02Infographic,
-    activity: c1M02Activity,
-    simulation: c1M02Simulation,
-    quiz: c1M02Quiz,
-  },
-  'c1/m03': {
-    module: c1M03Module,
-    story: c1M03Story,
-    infographic: c1M03Infographic,
-    activity: c1M03Activity,
-    simulation: c1M03Simulation,
-    quiz: c1M03Quiz,
-  },
-  'c1/m04': {
-    module: c1M04Module,
-    story: c1M04Story,
-    infographic: c1M04Infographic,
-    activity: c1M04Activity,
-    simulation: c1M04Simulation,
-    quiz: c1M04Quiz,
-  },
+/** Para cada módulo: metadados crus + lições cruas na ordem l01..l05. */
+export const rawModules: Record<string, { module: unknown; lessons: unknown[] }> = {
+  'c1/m01': { module: M01Module, lessons: [M01L1, M01L2, M01L3, M01L4, M01L5] },
+  'c1/m02': { module: M02Module, lessons: [M02L1, M02L2, M02L3, M02L4, M02L5] },
+  'c1/m03': { module: M03Module, lessons: [M03L1, M03L2, M03L3, M03L4, M03L5] },
+  'c1/m04': { module: M04Module, lessons: [M04L1, M04L2, M04L3, M04L4, M04L5] },
+  'c1/m05': { module: M05Module, lessons: [M05L1, M05L2, M05L3, M05L4, M05L5] },
+  'c1/m06': { module: M06Module, lessons: [M06L1, M06L2, M06L3, M06L4, M06L5] },
 };
 
-/** Página "O que descobrimos?" de cada ciclo. */
-export const rawCycleSummaries: Record<string, unknown> = {
-  c1: c1Cycle,
-};
+export const rawCycleSummaries: Record<string, unknown> = { c1: c1Cycle };
+export type { CycleSummary };

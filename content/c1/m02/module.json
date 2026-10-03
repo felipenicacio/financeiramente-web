@@ -1,94 +1,135 @@
 {
   "id": "m02",
   "cycle": "c1",
-  "journeyId": "escolhas-e-valor",
-  "stage": "Eu entendo dinheiro e preço",
-  "title": "Dinheiro, preço e cuidado",
-  "headline": "Quanto custa? E o que volta de troco?",
-  "summary": "Uma ida à feira para conhecer moedas e cédulas, comparar preços, entender o troco e cuidar do que é nosso e do que é de todos.",
+  "order": 2,
+  "code": "C1.2",
+  "title": "Quero, preciso ou posso esperar?",
+  "headline": "A diferença entre necessidade e desejo, e por que nem toda vontade precisa ser atendida agora.",
+  "summary": "Você quer muitas coisas, mas não precisa de todas elas agora. Escolher também é decidir o que fica para depois.",
   "competencies": [
-    {
-      "code": "F-D4-C1-01",
-      "description": "Reconhecer função do dinheiro, moedas, cédulas, preços e comparação."
-    },
-    {
-      "code": "F-D8-C1-01",
-      "description": "Cuidar de pertences, guardar dinheiro e proteger informações básicas."
-    },
-    {
-      "code": "F-D9-C1-01",
-      "description": "Reconhecer bens coletivos, regras e convivência econômica."
-    }
+    "F-D1-C1-01",
+    "F-D5-C1-01"
   ],
-  "sensitivity": "N2",
-  "objectives": [
-    "Compreender que o dinheiro facilita trocas.",
-    "Reconhecer moedas e cédulas.",
-    "Compreender que produtos e serviços têm preços.",
-    "Comparar preços simples.",
-    "Compreender a noção básica de troco.",
-    "Diferenciar preço de importância pessoal.",
-    "Cuidar dos próprios pertences.",
-    "Compreender que alguns recursos são compartilhados."
-  ],
-  "centralMessage": "O preço mostra quanto pagar, não o quanto algo vale para você.",
-  "estimatedMinutes": 10,
-  "illustration": "module-market",
-  "cta": "Vamos à feira",
-  "guide": {
-    "opening": {
-      "state": "ask",
-      "text": "Você já reparou nas plaquinhas de preço na feira?"
-    },
-    "story": {
-      "state": "ask",
-      "text": "A Nina levou dinheiro para a feira. O que será que dá para levar?"
-    },
-    "concept": {
-      "state": "discover",
-      "text": "Vamos descobrir o que são dinheiro, preço, troco e cuidado."
-    },
-    "activity": {
-      "state": "compare",
-      "text": "Vamos comparar preços? Olhe com calma antes de escolher."
-    },
-    "simulation": {
-      "state": "consequence",
-      "text": "O que muda se escolhermos esta opção? Veja o troco de cada uma."
-    },
-    "quiz": {
-      "state": "reflect",
-      "text": "Vamos pensar juntos sobre dinheiro e cuidado."
-    },
-    "done": {
-      "state": "summary",
-      "text": "Dinheiro, preço e troco aparecem todo dia. Agora você sabe olhar para eles."
+  "integrative": {
+    "title": "Onde cada coisa se encaixa?",
+    "intro": "Leia cada situação e escolha: preciso, quero ou posso esperar.",
+    "object": {
+      "type": "classify",
+      "categories": [
+        {
+          "id": "need",
+          "label": "Preciso",
+          "short": "É importante agora.",
+          "icon": "need",
+          "tone": "teal"
+        },
+        {
+          "id": "want",
+          "label": "Quero",
+          "short": "Eu gostaria de ter.",
+          "icon": "want",
+          "tone": "coral"
+        },
+        {
+          "id": "wait",
+          "label": "Posso esperar",
+          "short": "Quero, mas pode ser depois.",
+          "icon": "wait",
+          "tone": "amber"
+        }
+      ],
+      "items": [
+        {
+          "id": "toothbrush",
+          "label": "Escova de dente",
+          "situation": "A escova do Téo ficou velha e desfiada.",
+          "accepted": [
+            "need"
+          ],
+          "feedback": "A escova cuida dos dentes. Quando a velha não serve, é preciso trocar.",
+          "illustration": "item-toothbrush"
+        },
+        {
+          "id": "robot",
+          "label": "Robô de brinquedo",
+          "situation": "Apareceu num vídeo e todo mundo fala dele.",
+          "accepted": [
+            "want",
+            "wait"
+          ],
+          "feedback": "É legal querer! O robô não faz falta agora, então dá para planejar.",
+          "illustration": "item-robot",
+          "contextNote": "Quero e posso esperar andam juntos: muita coisa que queremos pode ficar para depois."
+        },
+        {
+          "id": "coat",
+          "label": "Casaco",
+          "situation": "Está muito frio e o antigo ficou pequeno.",
+          "accepted": [
+            "need"
+          ],
+          "feedback": "No frio, o casaco protege o corpo. É preciso.",
+          "illustration": "item-coat",
+          "contextNote": "No calor, um casaco novo poderia esperar."
+        },
+        {
+          "id": "stickers",
+          "label": "Figurinhas",
+          "situation": "Faltam três para completar o álbum.",
+          "accepted": [
+            "want",
+            "wait"
+          ],
+          "feedback": "Completar o álbum é divertido. É uma vontade, e pode esperar um pouco.",
+          "illustration": "item-stickers",
+          "contextNote": "Quero e posso esperar andam juntos aqui. Você decide quando vale a pena."
+        },
+        {
+          "id": "water",
+          "label": "Água para beber",
+          "situation": "Está calor na escola e você está com sede.",
+          "accepted": [
+            "need"
+          ],
+          "feedback": "Beber água cuida do corpo. É preciso.",
+          "illustration": "item-bottle"
+        },
+        {
+          "id": "sneaker",
+          "label": "Tênis novo",
+          "situation": "O seu ainda serve, mas você viu um mais bonito.",
+          "accepted": [
+            "wait",
+            "want"
+          ],
+          "feedback": "O tênis de agora ainda funciona, então o novo pode esperar.",
+          "illustration": "item-sneaker",
+          "contextNote": "Se o tênis rasgar ou apertar, ele passa a ser preciso."
+        }
+      ],
+      "instructions": "Leia a situação e escolha: preciso, quero ou posso esperar."
     }
   },
   "conclusion": {
     "title": "Você concluiu o módulo",
-    "message": "O preço mostra quanto pagar. O troco é o que volta. E cuidar das coisas ajuda tudo a durar.",
+    "message": "Escolher é decidir o que faz sentido agora e o que pode ficar para depois.",
     "recap": [
       {
-        "icon": "money",
+        "icon": "need",
         "tone": "teal",
-        "text": "Dinheiro ajuda a pagar por coisas e serviços."
+        "text": "Preciso: o que é importante naquele momento."
       },
       {
-        "icon": "price",
+        "icon": "want",
         "tone": "coral",
-        "text": "Preço mostra quanto precisamos pagar."
+        "text": "Quero: o que eu gostaria de ter."
       },
       {
-        "icon": "change",
+        "icon": "wait",
         "tone": "amber",
-        "text": "Troco é o dinheiro que volta."
-      },
-      {
-        "icon": "care",
-        "tone": "cyan",
-        "text": "Cuidar das coisas ajuda elas a durar."
+        "text": "Posso esperar: o que eu quero, mas pode ser depois."
       }
     ]
-  }
+  },
+  "theme": "m01"
 }

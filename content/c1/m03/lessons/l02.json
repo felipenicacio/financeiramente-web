@@ -1,0 +1,86 @@
+{
+  "id": "c1-m03-l02",
+  "cycle": "c1",
+  "module": "m03",
+  "order": 2,
+  "title": "Mais caro e mais barato",
+  "headline": "Comparar preços é ver qual custa mais e qual custa menos.",
+  "objectives": [
+    "Comparar preços de produtos",
+    "Identificar o mais caro e o mais barato"
+  ],
+  "competencies": [
+    "F-D4-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF12LF04",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "compare",
+      "prompt": "Qual custa mais?",
+      "target": "most",
+      "products": [
+        {
+          "id": "notebook",
+          "label": "Caderno",
+          "price": 5,
+          "illustration": "item-notebook"
+        },
+        {
+          "id": "book",
+          "label": "Livro",
+          "price": 10,
+          "illustration": "item-book"
+        },
+        {
+          "id": "pencil",
+          "label": "Lápis",
+          "price": 2,
+          "illustration": "item-pencil"
+        }
+      ],
+      "feedback": "O livro tem o maior preço. Isso não quer dizer que é melhor: só custa mais."
+    },
+    {
+      "type": "compare",
+      "prompt": "Qual custa menos?",
+      "target": "least",
+      "products": [
+        {
+          "id": "juice",
+          "label": "Suco",
+          "price": 5,
+          "illustration": "item-juice"
+        },
+        {
+          "id": "bread",
+          "label": "Pão",
+          "price": 2,
+          "illustration": "item-bread"
+        },
+        {
+          "id": "kite",
+          "label": "Pipa",
+          "price": 8,
+          "illustration": "item-kite"
+        }
+      ],
+      "feedback": "O pão tem o menor preço. Comparar ajuda a saber quanto vamos usar do dinheiro."
+    }
+  ],
+  "summary": [
+    "Comparar preços é ver qual custa mais e qual custa menos.",
+    "O preço maior nem sempre é o melhor."
+  ],
+  "guide": {
+    "state": "compare",
+    "text": "Vamos comparar? Olhe os preços com calma antes de escolher."
+  }
+}

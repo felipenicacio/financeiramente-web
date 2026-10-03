@@ -1,0 +1,140 @@
+{
+  "id": "c1-m04-l03",
+  "cycle": "c1",
+  "module": "m04",
+  "order": 3,
+  "title": "Fazer algo ou ajudar alguém",
+  "headline": "Alguns trabalhos produzem coisas (bens); outros ajudam pessoas (serviços).",
+  "objectives": [
+    "Diferenciar bem e serviço",
+    "Dar exemplos de bens e de serviços"
+  ],
+  "competencies": [
+    "F-D7-C1-01"
+  ],
+  "sources": [
+    {
+      "source": "FB1",
+      "reference": "cap. 3B",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "concepts",
+      "concepts": [
+        {
+          "id": "good",
+          "label": "Bem",
+          "short": "Uma coisa que dá para pegar.",
+          "description": "É algo produzido que dá para pegar e usar, como um pão ou uma cadeira.",
+          "icon": "good",
+          "tone": "teal",
+          "examples": [
+            {
+              "label": "Pão",
+              "illustration": "item-bread"
+            },
+            {
+              "label": "Cadeira",
+              "illustration": "item-chair"
+            }
+          ]
+        },
+        {
+          "id": "service",
+          "label": "Serviço",
+          "short": "Um trabalho que ajuda alguém.",
+          "description": "É um trabalho que ajuda uma pessoa, como ensinar, dirigir ou cuidar da saúde.",
+          "icon": "service",
+          "tone": "cyan",
+          "examples": [
+            {
+              "label": "Aula",
+              "illustration": "item-chalkboard"
+            },
+            {
+              "label": "Consulta",
+              "illustration": "item-stethoscope"
+            }
+          ]
+        }
+      ],
+      "title": "Bens e serviços",
+      "intro": "O trabalho pode produzir coisas ou ajudar pessoas:"
+    },
+    {
+      "type": "classify",
+      "categories": [
+        {
+          "id": "good",
+          "label": "Bem",
+          "short": "Uma coisa que dá para pegar.",
+          "icon": "good",
+          "tone": "teal"
+        },
+        {
+          "id": "service",
+          "label": "Serviço",
+          "short": "Um trabalho que ajuda alguém.",
+          "icon": "service",
+          "tone": "cyan"
+        }
+      ],
+      "items": [
+        {
+          "id": "bread",
+          "label": "Pão da padaria",
+          "situation": "O seu Jorge faz pão de manhã.",
+          "accepted": [
+            "good"
+          ],
+          "feedback": "O pão dá para pegar e comer. É um bem.",
+          "illustration": "item-bread"
+        },
+        {
+          "id": "class",
+          "label": "Aula da professora",
+          "situation": "Ela ensina a turma a ler.",
+          "accepted": [
+            "service"
+          ],
+          "feedback": "Ensinar ajuda outras pessoas. É um serviço.",
+          "illustration": "item-chalkboard"
+        },
+        {
+          "id": "chair",
+          "label": "Cadeira do marceneiro",
+          "situation": "O Davi fez uma cadeira nova.",
+          "accepted": [
+            "good"
+          ],
+          "feedback": "A cadeira dá para pegar e usar. É um bem.",
+          "illustration": "item-chair"
+        },
+        {
+          "id": "bus",
+          "label": "Viagem de ônibus",
+          "situation": "A Lúcia leva as pessoas no ônibus.",
+          "accepted": [
+            "service"
+          ],
+          "feedback": "Levar as pessoas é um trabalho que ajuda. É um serviço.",
+          "illustration": "item-bus"
+        }
+      ],
+      "prompt": "Bem ou serviço?",
+      "instructions": "O trabalho produziu uma coisa ou ajudou alguém?"
+    }
+  ],
+  "summary": [
+    "Bem é uma coisa que dá para pegar.",
+    "Serviço é um trabalho que ajuda alguém."
+  ],
+  "guide": {
+    "state": "discover",
+    "text": "Alguns trabalhos fazem coisas, outros ajudam pessoas. Vamos ver?"
+  }
+}
