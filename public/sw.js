@@ -1,27 +1,18 @@
 /*
  * Service worker do Econominho (caches com prefixo técnico "fm-", mantido).
- *
- * Objetivo: abrir rápido e funcionar sem conexão nas páginas já visitadas,
- * sem nunca prender o visitante numa versão antiga do conteúdo.
- *
- * - Páginas (HTML e payloads de navegação do Next): REDE PRIMEIRO. O cache
- *   só responde quando não há conexão.
- * - /_next/static/*: CACHE PRIMEIRO. Os nomes têm hash do conteúdo, então um
- *   deploy novo gera arquivos novos e nunca reaproveita um antigo por engano.
- * - Fontes, ícones e imagens de public/: atualiza em segundo plano
- *   (stale-while-revalidate).
- * - Nada de terceiros é interceptado; nenhuma resposta é enviada a lugar algum.
- *
- * Ao publicar mudança NESTE arquivo, incrementar VERSION: o worker antigo
- * apaga os caches de versões anteriores na ativação.
+ * Compatível com domínio raiz e com GitHub Pages em subcaminho.
  */
-const VERSION = 'v2';
+const VERSION = 'v3';
 const PAGES = `fm-pages-${VERSION}`;
 const STATIC = `fm-static-${VERSION}`;
 const ASSETS = `fm-assets-${VERSION}`;
 const KEEP = [PAGES, STATIC, ASSETS];
 const MAX_ENTRIES = { [PAGES]: 60, [STATIC]: 150, [ASSETS]: 40 };
-const PRECACHE = ['/', '/idade/', '/manifest.webmanifest', '/icons/icon-192.png'];
+
+const scopePath = new URL(self.registration.scope).pathname.replace(/\/$/, '');
+const BASE = scopePath === '' ? '' : scopePath;
+const atBase = (path) => `${BASE}${path}`;
+const PRECACHE = [atBase('/'), atBase('/idade/'), atBase('/manifest.webmanifest'), atBase('/icons/icon-192.png')];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -43,7 +34,6 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// A página pede a troca quando a pessoa toca em "Atualizar".
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') self.skipWaiting();
 });
@@ -59,15 +49,13 @@ async function networkFirst(request) {
   const cache = await caches.open(PAGES);
   try {
     const response = await fetch(request);
-    if (response.ok) {
-      cache.put(request, response.clone()).then(() => trim(PAGES));
-    }
+    if (response.ok) cache.put(request, response.clone()).then(() => trim(PAGES));
     return response;
   } catch (error) {
     const cached = await cache.match(request, { ignoreVary: true });
     if (cached) return cached;
     if (request.mode === 'navigate') {
-      const home = await cache.match('/');
+      const home = await cache.match(atBase('/'));
       if (home) return home;
     }
     throw error;
@@ -100,9 +88,9 @@ self.addEventListener('fetch', (event) => {
   if (request.method !== 'GET') return;
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
-  if (url.pathname === '/sw.js') return;
+  if (url.pathname === atBase('/sw.js')) return;
 
-  if (url.pathname.startsWith('/_next/static/')) {
+  if (url.pathname.startsWith(atBase('/_next/static/'))) {
     event.respondWith(cacheFirst(request));
     return;
   }
@@ -110,6 +98,5 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(staleWhileRevalidate(request));
     return;
   }
-  // HTML e payloads de navegação (.txt / ?_rsc) da exportação estática.
   event.respondWith(networkFirst(request));
 });
