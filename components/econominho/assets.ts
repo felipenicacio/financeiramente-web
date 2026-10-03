@@ -2,16 +2,15 @@ import type { GuideState } from '@/lib/content/types';
 import { publicAsset } from '@/lib/asset';
 
 /**
- * Ponto único de integração da arte do Econominho.
+ * Ponto único de integração da arte oficial do Econominho.
  *
- * Identidade e personagem APROVADOS (pacote econominho-assets-v1). Os arquivos
- * ficam em public/econominho/ e o manifesto público é public/econominho/assets.json.
- * Para trocar uma pose/expressão, basta alterar o caminho aqui.
+ * Os PNGs v2 foram gerados individualmente e aprovados, sem recortes de
+ * folhas de personagem. Para trocar uma pose/expressão, altere somente
+ * este mapeamento e o manifesto public/econominho/assets.json.
  */
 export type GuidePose = 'wave' | 'point' | 'think' | 'show' | 'celebrate-idea';
 export type GuideExpression = 'curious' | 'surprised' | 'attentive' | 'calm' | 'happy';
 
-/** Pose e expressão de referência para cada intenção de fala (docs/econominho-guide.md). */
 export const guideStatePresentation: Record<
   GuideState,
   { pose: GuidePose; expression: GuideExpression }
@@ -24,23 +23,27 @@ export const guideStatePresentation: Record<
   reflect: { pose: 'think', expression: 'calm' },
 };
 
-/** Avatar do personagem (busto) por estado de fala. */
 const avatarByState: Record<GuideState, string> = {
-  ask: '/econominho/character/curioso.png',
-  discover: '/econominho/character/surpreso.png',
-  compare: '/econominho/character/atencao.png',
-  consequence: '/econominho/character/explicando.png',
-  summary: '/econominho/character/feliz.png',
-  reflect: '/econominho/character/pensando.png',
+  ask: '/econominho/character/pensando-v2.png',
+  discover: '/econominho/character/descoberta-v2.png',
+  compare: '/econominho/character/comparando-v2.png',
+  consequence: '/econominho/character/explicando-v2.png',
+  summary: '/econominho/character/feliz-v2.png',
+  reflect: '/econominho/character/pensando-v2.png',
 };
+
+const themeByKey = {
+  m01: '/econominho/character/comparando-v2.png',
+  m02: '/econominho/character/explicando-v2.png',
+  m03: '/econominho/character/descoberta-v2.png',
+  m04: '/econominho/character/lendo-v2.png',
+} as const;
 
 export const econominhoAssets = {
   enabled: true,
-  /** Caminho (com base path do deploy) da imagem por estado. */
   avatar(state: GuideState): string {
     return publicAsset(avatarByState[state]);
   },
-  fullbody: () => publicAsset('/econominho/character/fullbody.png'),
-  theme: (module: 'm01' | 'm02' | 'm03' | 'm04') =>
-    publicAsset(`/econominho/themes/${{ m01: 'm01_escolhas', m02: 'm02_dinheiro_preco', m03: 'm03_publicidade', m04: 'm04_trabalho_renda' }[module]}.png`),
+  fullbody: () => publicAsset('/econominho/character/fullbody-v2.png'),
+  theme: (module: keyof typeof themeByKey) => publicAsset(themeByKey[module]),
 };
