@@ -1,4 +1,4 @@
-# Design System
+# Design System do Econominho
 
 Fonte única: `styles/globals.css` (tokens CSS usados pelo Tailwind) e `theme/tokens.ts` (mesma paleta para SVGs, manifest e metadata). O teste `theme/tokens.test.ts` garante que os dois não divergem.
 
@@ -23,20 +23,21 @@ Fonte única: `styles/globals.css` (tokens CSS usados pelo Tailwind) e `theme/to
 
 Escalas tonais (50 / 100 / 500 / 700) existem para contraste WCAG AA: tons 500 servem para preenchimentos e ilustrações; **texto colorido usa sempre 700**.
 
-### Tons semânticos
+### Tons de conteúdo e de retorno
 
 Classes `.tone-*` definem `--tone`, `--tone-strong`, `--tone-soft`, `--tone-tint`, usadas como `bg-(--tone-soft)`, `text-(--tone-strong)`.
 
-| Classe          | Uso                                 | Base  |
-| --------------- | ----------------------------------- | ----- |
-| `tone-need`     | Preciso                             | Teal  |
-| `tone-want`     | Quero                               | Coral |
-| `tone-wait`     | Posso esperar                       | Amber |
-| `tone-positive` | Resposta esperada, "também combina" | Green |
-| `tone-guide`    | "Vamos pensar juntos", "Depois"     | Cyan  |
-| `tone-neutral`  | Perguntas abertas, reflexão         | Slate |
+**Tons de conteúdo**: cada conceito, categoria e item de resumo declara no JSON um tom de uma família de cor: `tone-teal`, `tone-coral`, `tone-amber`, `tone-cyan`, `tone-purple`, `tone-green`. Exemplos no C1: Preciso (teal), Quero (coral), Posso esperar (amber); Dinheiro (teal), Preço (coral), Troco (amber), Cuidado (cyan); Anúncio (purple), Informação (cyan), Convencimento (coral); Renda (green), Pagar depois (purple).
 
-Cada categoria também tem **ícone próprio** (casa, coração, ampulheta) e rótulo: nunca depende só da cor. Purple fica reservado para o acento do C3.
+**Tons de retorno** (semânticos, fixos):
+
+| Classe          | Uso                                                 | Base  |
+| --------------- | --------------------------------------------------- | ----- |
+| `tone-positive` | Resposta esperada, "também combina", "combina mais" | Green |
+| `tone-guide`    | "Vamos pensar juntos", "Depois"                     | Cyan  |
+| `tone-neutral`  | Perguntas abertas, reflexão                         | Slate |
+
+Todo tom vem acompanhado de **ícone próprio** (`ConceptIcon`: casa, coração, ampulheta, moeda, etiqueta, troco, escudo, megafone, lupa, brilho, maleta, caixa, mãos, carteira, pote, calendário, caminho) e de rótulo: a cor nunca é a única pista.
 
 ## Expressão por ciclo
 
@@ -50,6 +51,10 @@ Cada categoria também tem **ícone próprio** (casa, coração, ampulheta) e r�
 | C4 Vida econômica    | 15–17 | Slate  | 1.00            | 0.70           | baixo        |
 
 A tela de idades mostra as quatro expressões lado a lado.
+
+## Marca
+
+Nome visível: **Econominho**. Identificadores técnicos (nome do repositório e do pacote, domínio, prefixo de cache `fm-`) continuam com o nome anterior nesta etapa. O símbolo de três pedras e os ícones do PWA são provisórios. A arte do personagem Econominho está **pendente de aprovação** e não faz parte deste Design System.
 
 ## Tipografia
 
@@ -101,11 +106,14 @@ Duração 320–700 ms, sem loop. `prefers-reduced-motion: reduce` reduz todas a
 | `ProgressIndicator`                                      | Seis segmentos + nome da etapa + texto para leitor de tela                                                                   |
 | `ChoiceCard`                                             | Alternativa (`aria-pressed`) com estados: `idle`, `selected`, `chosen-ok`, `chosen-rethink`, `also-ok`, `expected`, `dimmed` |
 | `FeedbackCard`                                           | Retorno imediato (`role="status"`), rola até ficar visível                                                                   |
-| `StoryCard`, `ConceptCard`                               | Quadro da história, categoria do conceito                                                                                    |
+| `StoryCard`, `ConceptCard`                               | Quadro da história; conceito com ícone, tom e exemplos                                                                       |
 | `GoalMeter`                                              | Pote da meta (`role="meter"`), valor em texto e barra                                                                        |
 | `SimulationPanel`                                        | Recurso, gasto, saldo, agora e depois                                                                                        |
 | `QuizQuestion`                                           | Pergunta com retorno; aberta aceita qualquer opção                                                                           |
-| `Illustration`, `CategoryIcon`                           | SVGs inline; nome desconhecido vira forma neutra                                                                             |
+| `Illustration`, `ConceptIcon`                            | SVGs inline; nome desconhecido vira forma neutra                                                                             |
+| `EconominhoGuide`                                        | Fala do guia (`bubble` ou `inline`); avatar provisório neutro, ver [econominho-guide.md](econominho-guide.md)                |
+| `CycleProgress`                                          | Módulos concluídos nesta visita (só informa, não bloqueia)                                                                   |
+| Simulações                                               | `spend` (troco/meta), `presentation` (versão `plain` × `loud`), `budget` (várias escolhas e pagar depois)                    |
 
 ## Acessibilidade (WCAG 2.1 AA como referência)
 
