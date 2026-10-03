@@ -1,0 +1,265 @@
+@import 'tailwindcss';
+
+/*
+ * Design System do Financeiramente
+ * ---------------------------------
+ * Camadas:
+ * 1. Paleta (@theme): valores crus da marca. Espelhada em theme/tokens.ts.
+ * 2. Expressão por ciclo ([data-cycle]): acento, escala de texto e raio.
+ * 3. Papéis (@theme inline): nomes semânticos usados pelos componentes.
+ * 4. Tons de categoria (.tone-*): preciso / quero / posso esperar.
+ * 5. Movimento: entradas curtas, desligadas com prefers-reduced-motion.
+ */
+
+@theme {
+  --color-*: initial;
+
+  --color-navy: #0f172a;
+  --color-slate: #334155;
+  --color-slate-500: #64748b;
+  --color-slate-300: #cbd5e1;
+  --color-slate-200: #e2e8f0;
+  --color-slate-100: #f1f5f9;
+  --color-background: #f8fafc;
+  --color-white: #ffffff;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+
+  --color-teal-50: #f0fdfa;
+  --color-teal-100: #ccfbf1;
+  --color-teal-500: #14b8a6;
+  --color-teal-700: #0f766e;
+
+  --color-cyan-50: #f0f9ff;
+  --color-cyan-100: #e0f2fe;
+  --color-cyan-500: #38bdf8;
+  --color-cyan-700: #0369a1;
+
+  --color-amber-50: #fffbeb;
+  --color-amber-100: #fef3c7;
+  --color-amber-500: #f59e0b;
+  --color-amber-700: #b45309;
+
+  --color-coral-50: #fff1f2;
+  --color-coral-100: #ffe4e6;
+  --color-coral-500: #fb7185;
+  --color-coral-700: #be123c;
+
+  --color-green-50: #f0fdf4;
+  --color-green-100: #dcfce7;
+  --color-green-500: #22c55e;
+  --color-green-700: #15803d;
+
+  --color-purple-50: #f5f3ff;
+  --color-purple-100: #ede9fe;
+  --color-purple-500: #8b5cf6;
+  --color-purple-700: #6d28d9;
+
+  --font-sans: var(--font-lexend), ui-sans-serif, system-ui, sans-serif;
+
+  --breakpoint-sm: 30rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Expressão por ciclo: mesma marca, maturidade progressiva. */
+:root,
+[data-cycle='c1'] {
+  --accent: var(--color-teal-500);
+  --accent-strong: var(--color-teal-700);
+  --accent-soft: var(--color-teal-50);
+  --accent-tint: var(--color-teal-100);
+  --type-scale: 1.1;
+  --radius-scale: 1.15;
+}
+[data-cycle='c2'] {
+  --accent: var(--color-cyan-500);
+  --accent-strong: var(--color-cyan-700);
+  --accent-soft: var(--color-cyan-50);
+  --accent-tint: var(--color-cyan-100);
+  --type-scale: 1.05;
+  --radius-scale: 1;
+}
+[data-cycle='c3'] {
+  --accent: var(--color-purple-500);
+  --accent-strong: var(--color-purple-700);
+  --accent-soft: var(--color-purple-50);
+  --accent-tint: var(--color-purple-100);
+  --type-scale: 1;
+  --radius-scale: 0.85;
+}
+[data-cycle='c4'] {
+  --accent: var(--color-slate);
+  --accent-strong: var(--color-navy);
+  --accent-soft: var(--color-slate-100);
+  --accent-tint: var(--color-slate-200);
+  --type-scale: 1;
+  --radius-scale: 0.7;
+}
+
+/* Papéis semânticos. Resolvidos no elemento, então respeitam o ciclo. */
+@theme inline {
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-tint: var(--accent-tint);
+  --color-ink: var(--color-navy);
+  --color-ink-soft: var(--color-slate);
+  --color-ink-muted: var(--color-slate-500);
+  --color-surface: var(--color-white);
+  --color-line: var(--color-slate-200);
+  --color-line-strong: var(--color-slate-300);
+
+  /* Escala tipográfica: base 16px, razão ~1.25, ampliada no C1. */
+  --text-caption: calc(0.8125rem * var(--type-scale));
+  --text-caption--line-height: 1.4;
+  --text-label: calc(0.9375rem * var(--type-scale));
+  --text-label--line-height: 1.35;
+  --text-body: calc(1rem * var(--type-scale));
+  --text-body--line-height: 1.6;
+  --text-lead: calc(1.125rem * var(--type-scale));
+  --text-lead--line-height: 1.55;
+  --text-heading: calc(1.25rem * var(--type-scale));
+  --text-heading--line-height: 1.3;
+  --text-title: calc(1.625rem * var(--type-scale));
+  --text-title--line-height: 1.2;
+  --text-display: calc(2.125rem * var(--type-scale));
+  --text-display--line-height: 1.1;
+
+  /* Raios com hierarquia: herói > card > controle. Botões são pílulas. */
+  --radius-control: calc(0.875rem * var(--radius-scale));
+  --radius-card: calc(1.25rem * var(--radius-scale));
+  --radius-hero: calc(1.75rem * var(--radius-scale));
+
+  --shadow-card: 0 1px 2px rgb(15 23 42 / 0.04), 0 4px 16px -6px rgb(15 23 42 / 0.08);
+  --shadow-raised: 0 2px 4px rgb(15 23 42 / 0.05), 0 12px 32px -12px rgb(15 23 42 / 0.18);
+}
+
+/* Tons de categoria. Usados como .tone-need + bg-(--tone-soft) etc. */
+.tone-need {
+  --tone: var(--color-teal-500);
+  --tone-strong: var(--color-teal-700);
+  --tone-soft: var(--color-teal-50);
+  --tone-tint: var(--color-teal-100);
+}
+.tone-want {
+  --tone: var(--color-coral-500);
+  --tone-strong: var(--color-coral-700);
+  --tone-soft: var(--color-coral-50);
+  --tone-tint: var(--color-coral-100);
+}
+.tone-wait {
+  --tone: var(--color-amber-500);
+  --tone-strong: var(--color-amber-700);
+  --tone-soft: var(--color-amber-50);
+  --tone-tint: var(--color-amber-100);
+}
+.tone-positive {
+  --tone: var(--color-green-500);
+  --tone-strong: var(--color-green-700);
+  --tone-soft: var(--color-green-50);
+  --tone-tint: var(--color-green-100);
+}
+.tone-guide {
+  --tone: var(--color-cyan-500);
+  --tone-strong: var(--color-cyan-700);
+  --tone-soft: var(--color-cyan-50);
+  --tone-tint: var(--color-cyan-100);
+}
+.tone-neutral {
+  --tone: var(--color-slate-300);
+  --tone-strong: var(--color-slate);
+  --tone-soft: var(--color-slate-100);
+  --tone-tint: var(--color-slate-200);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    background: var(--color-background);
+  }
+  body {
+    min-height: 100dvh;
+    background: var(--color-background);
+    color: var(--color-navy);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  /* Foco sempre visível no teclado, com contraste sobre qualquer fundo. */
+  :focus-visible {
+    outline: 3px solid var(--color-cyan-700);
+    outline-offset: 3px;
+    border-radius: 0.5rem;
+  }
+  ::selection {
+    background: var(--color-teal-100);
+  }
+}
+
+/* ---------- Movimento ---------- */
+
+@keyframes fm-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+@keyframes fm-enter-side {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+}
+@keyframes fm-pop {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.08);
+  }
+}
+@keyframes fm-grow {
+  from {
+    transform: scaleX(var(--from, 0));
+  }
+}
+
+@utility animate-enter {
+  animation: fm-enter 320ms var(--ease-out-soft) both;
+}
+@utility animate-enter-side {
+  animation: fm-enter-side 360ms var(--ease-out-soft) both;
+}
+@utility animate-pop {
+  animation: fm-pop 360ms var(--ease-out-soft) both;
+}
+@utility animate-grow {
+  transform-origin: left center;
+  animation: fm-grow 700ms var(--ease-out-soft) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}
