@@ -1,0 +1,56 @@
+{
+  "title": "Três jeitos de olhar para uma vontade",
+  "intro": "Quando aparece algo que a gente quer, dá para perguntar: eu preciso, eu quero ou eu posso esperar?",
+  "categories": [
+    {
+      "id": "need",
+      "label": "Preciso",
+      "short": "É importante agora.",
+      "description": "Algo que faz falta naquele momento, para cuidar da saúde, aprender ou ficar seguro.",
+      "examples": [
+        {
+          "label": "Escova de dente",
+          "illustration": "item-toothbrush"
+        },
+        {
+          "label": "Água",
+          "illustration": "item-bottle"
+        }
+      ]
+    },
+    {
+      "id": "want",
+      "label": "Quero",
+      "short": "Eu gostaria de ter.",
+      "description": "Algo que deixa a gente feliz, mas que não faz falta para o dia a dia. Querer coisas é normal.",
+      "examples": [
+        {
+          "label": "Figurinhas",
+          "illustration": "item-stickers"
+        },
+        {
+          "label": "Brinquedo novo",
+          "illustration": "item-robot"
+        }
+      ]
+    },
+    {
+      "id": "wait",
+      "label": "Posso esperar",
+      "short": "Quero, mas pode ser depois.",
+      "description": "Algo que eu quero e posso planejar para outro momento. Esperar não é desistir: é escolher quando.",
+      "examples": [
+        {
+          "label": "Tênis novo",
+          "illustration": "item-sneaker"
+        },
+        {
+          "label": "Bola nova",
+          "illustration": "item-ball"
+        }
+      ]
+    }
+  ],
+  "keyIdea": "A mesma coisa pode mudar de lugar. Um casaco é preciso no frio, mas pode esperar no calor.",
+  "keyIdeaIllustration": "item-coat"
+}

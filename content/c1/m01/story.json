@@ -1,0 +1,52 @@
+{
+  "title": "O presente do Téo",
+  "money": {
+    "gift": 10,
+    "saved": 15,
+    "goal": { "label": "bola nova", "price": 30 },
+    "temptation": { "label": "pacote de figurinhas", "price": 5 }
+  },
+  "panels": [
+    {
+      "id": "p1",
+      "illustration": "story-gift",
+      "text": "No aniversário, o Téo ganhou {gift} de presente da tia Rosa."
+    },
+    {
+      "id": "p2",
+      "illustration": "story-jar",
+      "text": "Ele tinha combinado com a família: está juntando dinheiro para uma bola nova de {goalPrice}. Já tem {saved} guardados no pote."
+    },
+    {
+      "id": "p3",
+      "illustration": "story-shop",
+      "text": "Na banca perto de casa, ele viu um pacote de figurinhas por {temptationPrice}. O Téo adora figurinhas!"
+    },
+    {
+      "id": "p4",
+      "illustration": "story-crossroads",
+      "text": "Se comprar as figurinhas, sobram {leftIfBuy} para o pote. Se guardar tudo, a bola fica mais perto."
+    }
+  ],
+  "question": {
+    "prompt": "O que você faria?",
+    "options": [
+      {
+        "id": "buy",
+        "label": "Compro as figurinhas",
+        "reflection": "Você ganha as figurinhas hoje. No pote, faltam {missingIfBuy} para a bola: ela vai demorar um pouco mais."
+      },
+      {
+        "id": "save",
+        "label": "Guardo tudo no pote",
+        "reflection": "A bola fica mais perto: faltam só {missingIfSave}. As figurinhas ficam para outro dia."
+      },
+      {
+        "id": "think",
+        "label": "Espero e decido amanhã",
+        "reflection": "Esperar um pouco ajuda a pensar com calma. O dinheiro continua lá enquanto você decide."
+      }
+    ]
+  },
+  "closing": "Não existe uma única resposta certa. Cada escolha traz algo agora e muda o que acontece depois."
+}

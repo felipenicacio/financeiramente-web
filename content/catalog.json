@@ -1,0 +1,43 @@
+{
+  "cycles": [
+    {
+      "id": "c1",
+      "label": "Descoberta",
+      "ageRange": "6 a 8 anos",
+      "description": "Escolhas do dia a dia, com histórias e muito apoio visual.",
+      "status": "available",
+      "journeys": [
+        {
+          "id": "escolhas-e-valor",
+          "title": "Descobrir escolhas e valor",
+          "description": "O que a gente precisa, o que a gente quer e o que pode esperar.",
+          "modules": [{ "id": "m01", "status": "available" }]
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "label": "Escolhas",
+      "ageRange": "9 a 11 anos",
+      "description": "Metas, planejamento e consumo, com mais autonomia.",
+      "status": "soon",
+      "journeys": []
+    },
+    {
+      "id": "c3",
+      "label": "Autonomia inicial",
+      "ageRange": "12 a 14 anos",
+      "description": "Orçamento, crédito, golpes e decisões com consequências.",
+      "status": "soon",
+      "journeys": []
+    },
+    {
+      "id": "c4",
+      "label": "Vida econômica",
+      "ageRange": "15 a 17 anos",
+      "description": "Trabalho, impostos, risco e escolhas de longo prazo.",
+      "status": "soon",
+      "journeys": []
+    }
+  ]
+}

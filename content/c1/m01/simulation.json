@@ -1,0 +1,39 @@
+{
+  "title": "E se fosse com você?",
+  "intro": "Você tem {budget} para usar. Escolha uma opção e veja o que acontece.",
+  "budget": 20,
+  "goal": {
+    "label": "Caixa de lápis de cor",
+    "price": 30,
+    "saved": 10,
+    "illustration": "item-pencils"
+  },
+  "leftoverRule": "O que sobrar vai para o pote da meta.",
+  "options": [
+    {
+      "id": "icecream",
+      "label": "Sorvete",
+      "cost": 5,
+      "illustration": "item-icecream",
+      "now": "Você toma um sorvete gelado hoje.",
+      "later": "A caixa de lápis fica só um pouquinho mais longe."
+    },
+    {
+      "id": "car",
+      "label": "Carrinho",
+      "cost": 15,
+      "illustration": "item-car",
+      "now": "Você leva o carrinho para casa hoje.",
+      "later": "A caixa de lápis fica mais longe. Vai levar mais tempo para juntar o resto."
+    },
+    {
+      "id": "save",
+      "label": "Guardar tudo",
+      "cost": 0,
+      "illustration": "item-jar",
+      "now": "Hoje você não compra nada.",
+      "later": "A caixa de lápis está garantida. Mas hoje não teve sorvete nem carrinho."
+    }
+  ],
+  "wrapUp": "Toda escolha dá alguma coisa agora e muda o que acontece depois. Teste outra opção para comparar."
+}
