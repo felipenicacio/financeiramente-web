@@ -9,6 +9,7 @@ import { ContentError } from '@/components/layout/ContentError';
 import { PageContainer } from '@/components/layout/PageContainer';
 import { Icon } from '@/components/ui/Icon';
 import { availableModules, loadModuleBundle } from '@/lib/content';
+import { competencyDescription } from '@/lib/content/competencies';
 import type { Lesson } from '@/lib/content/types';
 import { t } from '@/lib/content/ui';
 import { routes, slugFromOrder } from '@/lib/learning/steps';
@@ -54,7 +55,7 @@ function AdultsPanel({ lessons }: { lessons: Lesson[] }) {
           </ul>
           <p className="mt-2">
             <span className="font-semibold text-ink">{t('moduleCompetencies')}: </span>
-            {lesson.competencies.join(', ')}
+            {lesson.competencies.map((code) => `${code} — ${competencyDescription(code)}`).join('; ')}
           </p>
           <p className="mt-1">
             <span className="font-semibold text-ink">Fontes: </span>
