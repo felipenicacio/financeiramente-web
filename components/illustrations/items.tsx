@@ -5,6 +5,8 @@
 
 import { palette as p } from '@/theme/tokens';
 
+import { itemShapesC1 } from './itemsC1';
+
 type Shape = () => React.ReactElement;
 
 const Toothbrush: Shape = () => (
@@ -238,6 +240,7 @@ export const itemShapes = {
   'item-icecream': IceCream,
   'item-car': Car,
   'item-jar': Jar,
+  ...itemShapesC1,
 } satisfies Record<string, Shape>;
 
 export type ItemKey = keyof typeof itemShapes;
