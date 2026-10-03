@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 
 import { ContentError } from '@/components/layout/ContentError';
 import { LessonStep } from '@/components/learning/steps';
-import { availableModules, loadModule } from '@/lib/content';
+import { availableModules, loadCycleSummary, loadModule, nextModuleId } from '@/lib/content';
 import { t } from '@/lib/content/ui';
 import { lessonSteps, routes, stepBySlug } from '@/lib/learning/steps';
 
@@ -44,5 +44,11 @@ export default async function LessonPage({ params }: { params: Promise<Params> }
       </main>
     );
   }
-  return <LessonStep step={step.id} bundle={result.data} />;
+  const nextId = nextModuleId(ciclo, modulo);
+  const next = nextId ? loadModule(ciclo, nextId) : null;
+  const nav = {
+    nextModule: nextId && next?.ok ? { id: nextId, title: next.data.module.title } : null,
+    hasCycleSummary: loadCycleSummary(ciclo)?.ok ?? false,
+  };
+  return <LessonStep step={step.id} bundle={result.data} nav={nav} />;
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
+import { EconominhoGuide } from '@/components/econominho/EconominhoGuide';
 import { Illustration } from '@/components/illustrations';
 import { AppHeader } from '@/components/layout/AppHeader';
 import { ContentError } from '@/components/layout/ContentError';
@@ -55,13 +56,24 @@ export default async function ModulePage({ params }: { params: Promise<Params> }
           </div>
 
           <div className="flex flex-col gap-3">
-            <p className="flex items-center gap-1.5 text-caption text-ink-muted">
-              <Icon name="clock" className="size-4" />
-              {module.estimatedMinutes} {t('moduleMinutes')}
+            <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-caption text-ink-muted">
+              <span className="rounded-full bg-accent-soft px-3 py-1 font-medium text-accent-strong">
+                {module.stage}
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                <Icon name="clock" className="size-4" />
+                {module.estimatedMinutes} {t('moduleMinutes')}
+              </span>
             </p>
             <h1 className="text-display font-bold tracking-[-0.03em]">{module.title}</h1>
             <p className="text-lead text-ink-soft">{module.headline}</p>
           </div>
+
+          <EconominhoGuide
+            variant="bubble"
+            state={module.guide.opening.state}
+            text={module.guide.opening.text}
+          />
 
           <section aria-labelledby="etapas">
             <h2 id="etapas" className="text-heading font-semibold">
@@ -111,9 +123,20 @@ export default async function ModulePage({ params }: { params: Promise<Params> }
                   ))}
                 </ul>
               </div>
+              <div>
+                <h3 className="font-semibold text-ink">{t('moduleCompetencies')}</h3>
+                <ul className="mt-1 space-y-1">
+                  {module.competencies.map((competency) => (
+                    <li key={competency.code}>
+                      <span className="font-semibold text-ink">{competency.code}</span>:{' '}
+                      {competency.description}
+                    </li>
+                  ))}
+                </ul>
+              </div>
               <p>
-                <span className="font-semibold text-ink">{t('moduleCompetencies')}: </span>
-                {module.competencies.join(', ')}
+                <span className="font-semibold text-ink">{t('moduleSensitivity')}: </span>
+                {module.sensitivity}
               </p>
             </div>
           </details>
