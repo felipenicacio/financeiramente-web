@@ -54,7 +54,19 @@ A tela de idades mostra as quatro expressões lado a lado.
 
 ## Marca
 
-Nome visível: **Econominho**. Identificadores técnicos (nome do repositório e do pacote, domínio, prefixo de cache `fm-`) continuam com o nome anterior nesta etapa. O símbolo de três pedras e os ícones do PWA são provisórios. A arte do personagem Econominho está **pendente de aprovação** e não faz parte deste Design System.
+Fonte: pacote `econominho-assets-v1` (arquivos de marca técnicos provisórios, direção visual aprovada).
+
+| Arquivo                                     | Uso                                                                          |
+| ------------------------------------------- | ---------------------------------------------------------------------------- |
+| `public/brand/econominho-wordmark.png`      | Logotipo "Econominho" no cabeçalho (`Brand`) e na imagem Open Graph          |
+| `public/brand/econominho-wordmark-mono.png` | Versão monocromática, para fundos de uma cor                                 |
+| `public/brand/econominho-icon.svg`          | Ícone "E" com raios; origem de `public/icons/*`, `favicon.ico` e `BrandMark` |
+
+Cores da marca: navy `#0B3B75` e amarelo `#FFC83D`. Ficam restritas ao logotipo e aos ícones; a interface continua usando a paleta abaixo.
+
+Para regenerar favicon, ícones do PWA e `og.png` depois de mudar a marca: `node scripts/generate-icons.mjs`.
+
+Nome visível: **Econominho**. Identificadores técnicos (repositório, pacote, domínio, prefixo de cache `fm-`) continuam com o nome anterior nesta etapa.
 
 ## Tipografia
 
