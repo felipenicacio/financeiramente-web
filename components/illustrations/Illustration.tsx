@@ -6,12 +6,17 @@ import { itemShapes, type ItemKey } from './items';
 import { sceneShapes, type SceneKey, type SceneLabels } from './scenes';
 
 const rasterIllustrations = {
-  'c1-m01-l01-p1': '/econominho/lessons/c1/m01/l01-p1.webp',
-  'c1-m01-l01-p2': '/econominho/lessons/c1/m01/l01-p2.webp',
-  'c1-m01-l01-p3': '/econominho/lessons/c1/m01/l01-p3.webp',
-  'c1-m01-l02-p1': '/econominho/lessons/c1/m01/l02-p1.webp',
-  'c1-m01-l02-p2': '/econominho/lessons/c1/m01/l02-p2.webp',
-  'c1-m01-l02-p3': '/econominho/lessons/c1/m01/l02-p3.webp',
+  'c1-m01-l01-p1': '/econominho/lessons/c1/m01/l01-p1.png',
+  'c1-m01-l01-p2': '/econominho/lessons/c1/m01/l01-p2.png',
+  'c1-m01-l01-p3': '/econominho/lessons/c1/m01/l01-p3.png',
+  'c1-m01-l02-p1': '/econominho/lessons/c1/m01/l02-p1.png',
+  'c1-m01-l02-p2': '/econominho/lessons/c1/m01/l02-p2.png',
+  'c1-m01-l02-p3': '/econominho/lessons/c1/m01/l02-p3.png',
+  'c1-m01-l03-p1': '/econominho/lessons/c1/m01/l03-p1.png',
+  'c1-m01-l04-coin': '/econominho/lessons/c1/m01/l04-coin.png',
+  'c1-m01-l04-banknote': '/econominho/lessons/c1/m01/l04-banknote.png',
+  'c1-m01-l04-coins': '/econominho/lessons/c1/m01/l04-coins.png',
+  'c1-m01-l05-main': '/econominho/lessons/c1/m01/l05-main.png',
 } as const;
 
 type RasterKey = keyof typeof rasterIllustrations;
