@@ -5,13 +5,8 @@
   "order": 1,
   "title": "O que é preço?",
   "headline": "O preço é o número que mostra quanto precisamos pagar por uma coisa.",
-  "objectives": [
-    "Compreender o que é preço",
-    "Perceber que preço não é o mesmo que importância"
-  ],
-  "competencies": [
-    "F-D4-C1-01"
-  ],
+  "objectives": ["Compreender o que é preço", "Perceber que preço não é o mesmo que importância"],
+  "competencies": ["F-D4-C1-01"],
   "sources": [
     {
       "source": "AV-C",
@@ -70,10 +65,7 @@
       "prompt": "Sobre o preço:"
     }
   ],
-  "summary": [
-    "O preço mostra quanto precisamos pagar.",
-    "Preço maior não quer dizer melhor."
-  ],
+  "summary": ["O preço mostra quanto precisamos pagar.", "Preço maior não quer dizer melhor."],
   "guide": {
     "state": "ask",
     "text": "Você já reparou nas plaquinhas de preço na feira?"

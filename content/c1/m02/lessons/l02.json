@@ -5,13 +5,8 @@
   "order": 2,
   "title": "O que eu quero?",
   "headline": "Querer é ter vontade de algo que deixa a gente feliz, mas que não faz falta para viver.",
-  "objectives": [
-    "Reconhecer o que é um desejo",
-    "Entender que querer coisas é normal"
-  ],
-  "competencies": [
-    "F-D1-C1-01"
-  ],
+  "objectives": ["Reconhecer o que é um desejo", "Entender que querer coisas é normal"],
+  "competencies": ["F-D1-C1-01"],
   "sources": [
     {
       "source": "FB2",

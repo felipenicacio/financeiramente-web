@@ -5,13 +5,8 @@
   "order": 4,
   "title": "Cuidar faz diferença",
   "headline": "Cuidar das coisas ajuda elas a durar mais, e assim a gente economiza.",
-  "objectives": [
-    "Perceber que cuidar faz as coisas durarem",
-    "Reconhecer atitudes de cuidado"
-  ],
-  "competencies": [
-    "F-D8-C1-01"
-  ],
+  "objectives": ["Perceber que cuidar faz as coisas durarem", "Reconhecer atitudes de cuidado"],
+  "competencies": ["F-D8-C1-01"],
   "sources": [
     {
       "source": "FB2",
@@ -68,9 +63,7 @@
           "id": "bag",
           "label": "Guardar a mochila no lugar",
           "situation": "Depois da aula, você guarda a mochila com cuidado.",
-          "accepted": [
-            "care"
-          ],
+          "accepted": ["care"],
           "feedback": "Assim ela dura muito mais. É cuidar.",
           "illustration": "item-backpack"
         },
@@ -78,9 +71,7 @@
           "id": "book",
           "label": "Deixar o livro no chão molhado",
           "situation": "Você deixa o livro largado num lugar molhado.",
-          "accepted": [
-            "nocare"
-          ],
+          "accepted": ["nocare"],
           "feedback": "Assim o livro estraga rápido. Melhor guardar com cuidado.",
           "illustration": "item-book"
         },
@@ -88,9 +79,7 @@
           "id": "toy",
           "label": "Limpar e guardar o brinquedo",
           "situation": "Depois de brincar, você limpa e guarda.",
-          "accepted": [
-            "care"
-          ],
+          "accepted": ["care"],
           "feedback": "Cuidar faz o brinquedo durar mais.",
           "illustration": "item-robot"
         }
@@ -99,8 +88,5 @@
       "instructions": "Essa atitude faz a coisa durar mais ou estragar antes?"
     }
   ],
-  "summary": [
-    "Cuidar das coisas faz elas durarem mais.",
-    "Cuidar também é economizar."
-  ]
+  "summary": ["Cuidar das coisas faz elas durarem mais.", "Cuidar também é economizar."]
 }

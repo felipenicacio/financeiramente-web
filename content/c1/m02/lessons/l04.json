@@ -5,14 +5,8 @@
   "order": 4,
   "title": "Nem toda vontade é para agora",
   "headline": "Dá para olhar uma vontade de três jeitos: preciso, quero ou posso esperar.",
-  "objectives": [
-    "Conhecer as três categorias de escolha",
-    "Entender que esperar é uma opção"
-  ],
-  "competencies": [
-    "F-D1-C1-01",
-    "F-D5-C1-01"
-  ],
+  "objectives": ["Conhecer as três categorias de escolha", "Entender que esperar é uma opção"],
+  "competencies": ["F-D1-C1-01", "F-D5-C1-01"],
   "sources": [
     {
       "source": "FB2",

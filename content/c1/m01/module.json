@@ -6,10 +6,7 @@
   "title": "O dinheiro está por toda parte",
   "headline": "De onde vem o dinheiro e para que ele serve, das trocas antigas às moedas e cédulas de hoje.",
   "summary": "O dinheiro aparece o tempo todo: para comprar coisas, pagar serviços e facilitar as trocas entre as pessoas.",
-  "competencies": [
-    "F-D4-C1-01",
-    "F-D7-C1-01"
-  ],
+  "competencies": ["F-D4-C1-01", "F-D7-C1-01"],
   "integrative": {
     "title": "Juntando tudo",
     "intro": "Vamos ver o que você descobriu sobre o dinheiro?",

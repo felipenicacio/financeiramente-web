@@ -100,7 +100,9 @@ const continuar = () => screen.getByRole('button', { name: /continuar/i });
 const marcados = () =>
   screen.queryAllByRole('button').filter((b) => b.getAttribute('aria-pressed') === 'true');
 const cartoesDesabilitados = () =>
-  screen.queryAllByRole('button').filter((b) => b.hasAttribute('aria-pressed') && (b as HTMLButtonElement).disabled);
+  screen
+    .queryAllByRole('button')
+    .filter((b) => b.hasAttribute('aria-pressed') && (b as HTMLButtonElement).disabled);
 
 /** A tela nova não pode trazer nada marcado, desabilitado ou liberado. */
 function expectTelaLimpa() {
@@ -120,7 +122,10 @@ describe('LessonRunner: estado não vaza entre telas', () => {
       await user.click(continuar());
     }
     // Depois da última pergunta vem a síntese, com link para a próxima lição.
-    expect(screen.getByRole('link', { name: /próxima lição/i })).toHaveAttribute('href', expect.stringMatching(/^\/proxima\/?$/));
+    expect(screen.getByRole('link', { name: /próxima lição/i })).toHaveAttribute(
+      'href',
+      expect.stringMatching(/^\/proxima\/?$/),
+    );
   });
 
   it('classify com vários itens: cada item nasce sem classificação', async () => {

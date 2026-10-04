@@ -5,13 +5,8 @@
   "order": 2,
   "title": "Mais caro e mais barato",
   "headline": "Comparar preços é ver qual custa mais e qual custa menos.",
-  "objectives": [
-    "Comparar preços de produtos",
-    "Identificar o mais caro e o mais barato"
-  ],
-  "competencies": [
-    "F-D4-C1-01"
-  ],
+  "objectives": ["Comparar preços de produtos", "Identificar o mais caro e o mais barato"],
+  "competencies": ["F-D4-C1-01"],
   "sources": [
     {
       "source": "AV-C",

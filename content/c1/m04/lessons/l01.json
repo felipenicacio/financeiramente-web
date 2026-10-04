@@ -5,13 +5,8 @@
   "order": 1,
   "title": "Por que as pessoas trabalham?",
   "headline": "As pessoas trabalham para fazer coisas, ajudar outras pessoas e receber dinheiro.",
-  "objectives": [
-    "Reconhecer motivos para o trabalho",
-    "Perceber trabalhos perto de casa"
-  ],
-  "competencies": [
-    "F-D7-C1-01"
-  ],
+  "objectives": ["Reconhecer motivos para o trabalho", "Perceber trabalhos perto de casa"],
+  "competencies": ["F-D7-C1-01"],
   "sources": [
     {
       "source": "FB1",

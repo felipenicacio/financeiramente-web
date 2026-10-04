@@ -79,7 +79,9 @@ function QuizScreen({
 export function screensForObject(object: LessonObject, keyBase: string): Screen[] {
   switch (object.type) {
     case 'explanation':
-      return [{ key: keyBase, interactive: false, render: () => <ExplanationView object={object} /> }];
+      return [
+        { key: keyBase, interactive: false, render: () => <ExplanationView object={object} /> },
+      ];
     case 'story':
       return [
         {
@@ -91,7 +93,9 @@ export function screensForObject(object: LessonObject, keyBase: string): Screen[
     case 'concepts':
       return [{ key: keyBase, interactive: false, render: () => <ConceptsView object={object} /> }];
     case 'reflection':
-      return [{ key: keyBase, interactive: false, render: () => <ReflectionView object={object} /> }];
+      return [
+        { key: keyBase, interactive: false, render: () => <ReflectionView object={object} /> },
+      ];
     case 'classify':
       return object.items.map((item) => ({
         key: `${keyBase}-${item.id}`,

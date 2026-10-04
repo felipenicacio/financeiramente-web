@@ -53,7 +53,9 @@ function AdultsPanel({ lessons }: { lessons: Lesson[] }) {
           </ul>
           <p className="mt-2">
             <span className="font-semibold text-ink">{t('moduleCompetencies')}: </span>
-            {lesson.competencies.map((code) => `${code} — ${competencyDescription(code)}`).join('; ')}
+            {lesson.competencies
+              .map((code) => `${code} — ${competencyDescription(code)}`)
+              .join('; ')}
           </p>
           <p className="mt-1">
             <span className="font-semibold text-ink">Fontes: </span>

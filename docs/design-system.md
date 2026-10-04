@@ -56,12 +56,12 @@ A tela de idades mostra as quatro expressões lado a lado.
 
 Fonte: assets individuais aprovados (v2), gerados um a um, sem recortes de folhas de personagem. O manifesto é `public/econominho/assets.json`.
 
-| Arquivo                                          | Uso                                                                                  |
-| ------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `public/econominho/logo/wordmark-v2.png`         | Logotipo original aprovado                                                           |
-| `public/econominho/logo/wordmark-v2-header.png`  | Mesma arte, reduzida (640 px) para o cabeçalho (`Brand`) e a imagem Open Graph      |
-| `public/econominho/character/*-v2.png`           | Personagem: avatar de fala por estado, poses de módulo e corpo inteiro               |
-| `public/brand/econominho-icon.svg`               | **Pendente de versão v2:** origem de `public/icons/*` e `favicon.ico` (ver limitação) |
+| Arquivo                                         | Uso                                                                                   |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `public/econominho/logo/wordmark-v2.png`        | Logotipo original aprovado                                                            |
+| `public/econominho/logo/wordmark-v2-header.png` | Mesma arte, reduzida (640 px) para o cabeçalho (`Brand`) e a imagem Open Graph        |
+| `public/econominho/character/*-v2.png`          | Personagem: avatar de fala por estado, poses de módulo e corpo inteiro                |
+| `public/brand/econominho-icon.svg`              | **Pendente de versão v2:** origem de `public/icons/*` e `favicon.ico` (ver limitação) |
 
 **Limitação conhecida:** ainda não existe um ícone de aplicativo (favicon, ícones do PWA) aprovado na linha v2. Enquanto isso, os ícones usam o "E" técnico anterior. Trocar exige um arquivo de ícone aprovado; depois, `node scripts/generate-icons.mjs`.
 

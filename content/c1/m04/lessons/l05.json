@@ -9,9 +9,7 @@
     "Relacionar trabalho e renda",
     "Perceber que a renda pode vir de diferentes formas"
   ],
-  "competencies": [
-    "F-D7-C1-01"
-  ],
+  "competencies": ["F-D7-C1-01"],
   "sources": [
     {
       "source": "FB1",
@@ -71,8 +69,5 @@
       "body": "Por isso a família conversa para decidir o que faz sentido com o dinheiro que entra."
     }
   ],
-  "summary": [
-    "Quem trabalha costuma receber renda.",
-    "A renda pode vir de formas diferentes."
-  ]
+  "summary": ["Quem trabalha costuma receber renda.", "A renda pode vir de formas diferentes."]
 }

@@ -1,12 +1,7 @@
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
 
-import {
-  availableModules,
-  loadCatalog,
-  loadCycleSummary,
-  loadModuleBundle,
-} from '@/lib/content';
+import { availableModules, loadCatalog, loadCycleSummary, loadModuleBundle } from '@/lib/content';
 import { econominhoAssets, themePoses } from '@/components/econominho/assets';
 import { moduleThemes } from '@/lib/content/types';
 import ui from '@/content/ui.json';
@@ -233,7 +228,15 @@ describe('assets do Econominho: somente v2 individuais aprovados', () => {
   const pacoteAntigo = ['econominho', 'assets', 'v1'].join('-');
 
   it('nenhum código ou documentação ativa cita o pacote antigo', () => {
-    const files = textFiles(['app', 'components', 'lib', 'content', 'docs', 'public/econominho', 'scripts']);
+    const files = textFiles([
+      'app',
+      'components',
+      'lib',
+      'content',
+      'docs',
+      'public/econominho',
+      'scripts',
+    ]);
     files.push({ path: 'README.md', text: readFileSync(join(root, 'README.md'), 'utf8') });
     const ofensores = files.filter((f) => f.text.includes(pacoteAntigo)).map((f) => f.path);
     expect(ofensores).toEqual([]);
@@ -243,7 +246,9 @@ describe('assets do Econominho: somente v2 individuais aprovados', () => {
     const files = textFiles(['app', 'components', 'lib', 'content', 'public/econominho']);
     const padrao = /econominho\/character\/[\w-]+\.png/g;
     const ruins = files.flatMap((f) =>
-      (f.text.match(padrao) ?? []).filter((caminho) => !caminho.endsWith('-v2.png')).map((c) => `${f.path}: ${c}`),
+      (f.text.match(padrao) ?? [])
+        .filter((caminho) => !caminho.endsWith('-v2.png'))
+        .map((c) => `${f.path}: ${c}`),
     );
     expect(ruins).toEqual([]);
   });
@@ -300,7 +305,8 @@ describe('competências: catálogo oficial', () => {
       if (bundle.ok) bundle.data.module.competencies.forEach((code) => usadas.add(code));
     }
     expect(usadas.size).toBeGreaterThan(0);
-    for (const code of usadas) expect(competencyDescription(code)?.trim().length).toBeGreaterThan(10);
+    for (const code of usadas)
+      expect(competencyDescription(code)?.trim().length).toBeGreaterThan(10);
   });
 });
 
@@ -314,7 +320,25 @@ describe('personagens das histórias', () => {
     const textos: string[] = [];
     const coletar = (valor: unknown, chave = '') => {
       if (typeof valor === 'string') {
-        if (!['id', 'type', 'illustration', 'icon', 'tone', 'state', 'kind', 'source', 'reference', 'role', 'sensitivity', 'cycle', 'module', 'theme', 'code'].includes(chave)) {
+        if (
+          ![
+            'id',
+            'type',
+            'illustration',
+            'icon',
+            'tone',
+            'state',
+            'kind',
+            'source',
+            'reference',
+            'role',
+            'sensitivity',
+            'cycle',
+            'module',
+            'theme',
+            'code',
+          ].includes(chave)
+        ) {
           textos.push(valor);
         }
       } else if (Array.isArray(valor)) valor.forEach((item) => coletar(item, chave));
@@ -352,15 +376,14 @@ describe('personagens das histórias', () => {
 });
 
 describe('sem nota, ranking, certificado ou gamificação', () => {
-  const proibidos = /\b(ranking|certificado|pontua[çc][ãa]o|pontos?|placar|notas?|medalha|estrelas?|troféu|streak)\b|%/i;
+  const proibidos =
+    /\b(ranking|certificado|pontua[çc][ãa]o|pontos?|placar|notas?|medalha|estrelas?|troféu|streak)\b|%/i;
 
   it('o conteúdo do C1 e os textos da interface não usam esse vocabulário', () => {
     const arquivos = textFiles(['content/c1']).concat([
       { path: 'content/ui.json', text: JSON.stringify(ui) },
     ]);
-    const ofensores = arquivos
-      .filter((f) => proibidos.test(f.text))
-      .map((f) => f.path);
+    const ofensores = arquivos.filter((f) => proibidos.test(f.text)).map((f) => f.path);
     expect(ofensores).toEqual([]);
   });
 

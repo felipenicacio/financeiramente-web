@@ -9,9 +9,7 @@
     "Entender o trabalho para alguém",
     "Dar exemplos de quem trabalha para outra pessoa"
   ],
-  "competencies": [
-    "F-D7-C1-01"
-  ],
+  "competencies": ["F-D7-C1-01"],
   "sources": [
     {
       "source": "FB1",
@@ -67,8 +65,5 @@
       ]
     }
   ],
-  "summary": [
-    "Muita gente trabalha para alguém e recebe por isso.",
-    "O dinheiro vem do trabalho."
-  ]
+  "summary": ["Muita gente trabalha para alguém e recebe por isso.", "O dinheiro vem do trabalho."]
 }

@@ -5,13 +5,8 @@
   "order": 5,
   "title": "O que é troco?",
   "headline": "Quando pagamos com mais do que o preço, uma parte do dinheiro volta: isso é o troco.",
-  "objectives": [
-    "Compreender a noção de troco",
-    "Calcular um troco simples"
-  ],
-  "competencies": [
-    "F-D4-C1-01"
-  ],
+  "objectives": ["Compreender a noção de troco", "Calcular um troco simples"],
+  "competencies": ["F-D4-C1-01"],
   "sources": [
     {
       "source": "AV-C",
@@ -38,11 +33,7 @@
         "price": 8,
         "illustration": "item-kite"
       },
-      "options": [
-        2,
-        3,
-        8
-      ],
+      "options": [2, 3, 8],
       "feedback": "O troco é a diferença entre o que você pagou e o preço."
     },
     {

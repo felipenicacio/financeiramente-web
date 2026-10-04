@@ -5,14 +5,8 @@
   "order": 4,
   "title": "O que dá para comprar?",
   "headline": "Com um valor na mão, dá para ver o que cabe e o que fica para depois.",
-  "objectives": [
-    "Ver o que cabe num valor disponível",
-    "Perceber que o resto pode esperar"
-  ],
-  "competencies": [
-    "F-D4-C1-01",
-    "F-D5-C1-01"
-  ],
+  "objectives": ["Ver o que cabe num valor disponível", "Perceber que o resto pode esperar"],
+  "competencies": ["F-D4-C1-01", "F-D5-C1-01"],
   "sources": [
     {
       "source": "AV-C",
@@ -73,10 +67,7 @@
       "feedback": "Cabe o que custa o mesmo ou menos do que você tem. O resto pode esperar ou entrar em outro plano."
     }
   ],
-  "summary": [
-    "Com um valor na mão, dá para ver o que cabe.",
-    "O que não cabe pode esperar."
-  ],
+  "summary": ["Com um valor na mão, dá para ver o que cabe.", "O que não cabe pode esperar."],
   "guide": {
     "state": "consequence",
     "text": "O que muda se escolhermos esta ou aquela opção? Veja o que cabe."

@@ -5,13 +5,8 @@
   "order": 1,
   "title": "O que é um anúncio?",
   "headline": "Anúncio é uma mensagem feita para mostrar algo e chamar a nossa atenção.",
-  "objectives": [
-    "Reconhecer um anúncio",
-    "Perceber onde os anúncios aparecem"
-  ],
-  "competencies": [
-    "F-D2-C1-01"
-  ],
+  "objectives": ["Reconhecer um anúncio", "Perceber onde os anúncios aparecem"],
+  "competencies": ["F-D2-C1-01"],
   "sources": [
     {
       "source": "FB2",

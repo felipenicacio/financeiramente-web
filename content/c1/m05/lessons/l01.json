@@ -5,13 +5,8 @@
   "order": 1,
   "title": "Por que guardar dinheiro?",
   "headline": "Guardar um pouco ajuda a alcançar algo maior lá na frente.",
-  "objectives": [
-    "Entender por que guardar dinheiro",
-    "Relacionar guardar a alcançar uma meta"
-  ],
-  "competencies": [
-    "F-D8-C1-01"
-  ],
+  "objectives": ["Entender por que guardar dinheiro", "Relacionar guardar a alcançar uma meta"],
+  "competencies": ["F-D8-C1-01"],
   "sources": [
     {
       "source": "FB1",

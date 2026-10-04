@@ -6,10 +6,7 @@
   "title": "Quero, preciso ou posso esperar?",
   "headline": "A diferença entre necessidade e desejo, e por que nem toda vontade precisa ser atendida agora.",
   "summary": "Você quer muitas coisas, mas não precisa de todas elas agora. Escolher também é decidir o que fica para depois.",
-  "competencies": [
-    "F-D1-C1-01",
-    "F-D5-C1-01"
-  ],
+  "competencies": ["F-D1-C1-01", "F-D5-C1-01"],
   "integrative": {
     "title": "Onde cada coisa se encaixa?",
     "intro": "Leia cada situação e escolha: preciso, quero ou posso esperar.",
@@ -43,9 +40,7 @@
           "id": "toothbrush",
           "label": "Escova de dente",
           "situation": "A escova do Téo ficou velha e desfiada.",
-          "accepted": [
-            "need"
-          ],
+          "accepted": ["need"],
           "feedback": "A escova cuida dos dentes. Quando a velha não serve, é preciso trocar.",
           "illustration": "item-toothbrush"
         },
@@ -53,10 +48,7 @@
           "id": "robot",
           "label": "Robô de brinquedo",
           "situation": "Apareceu num vídeo e todo mundo fala dele.",
-          "accepted": [
-            "want",
-            "wait"
-          ],
+          "accepted": ["want", "wait"],
           "feedback": "É legal querer! O robô não faz falta agora, então dá para planejar.",
           "illustration": "item-robot",
           "contextNote": "Quero e posso esperar andam juntos: muita coisa que queremos pode ficar para depois."
@@ -65,9 +57,7 @@
           "id": "coat",
           "label": "Casaco",
           "situation": "Está muito frio e o antigo ficou pequeno.",
-          "accepted": [
-            "need"
-          ],
+          "accepted": ["need"],
           "feedback": "No frio, o casaco protege o corpo. É preciso.",
           "illustration": "item-coat",
           "contextNote": "No calor, um casaco novo poderia esperar."
@@ -76,10 +66,7 @@
           "id": "stickers",
           "label": "Figurinhas",
           "situation": "Faltam três para completar o álbum.",
-          "accepted": [
-            "want",
-            "wait"
-          ],
+          "accepted": ["want", "wait"],
           "feedback": "Completar o álbum é divertido. É uma vontade, e pode esperar um pouco.",
           "illustration": "item-stickers",
           "contextNote": "Quero e posso esperar andam juntos aqui. Você decide quando vale a pena."
@@ -88,9 +75,7 @@
           "id": "water",
           "label": "Água para beber",
           "situation": "Está calor na escola e você está com sede.",
-          "accepted": [
-            "need"
-          ],
+          "accepted": ["need"],
           "feedback": "Beber água cuida do corpo. É preciso.",
           "illustration": "item-bottle"
         },
@@ -98,10 +83,7 @@
           "id": "sneaker",
           "label": "Tênis novo",
           "situation": "O seu ainda serve, mas você viu um mais bonito.",
-          "accepted": [
-            "wait",
-            "want"
-          ],
+          "accepted": ["wait", "want"],
           "feedback": "O tênis de agora ainda funciona, então o novo pode esperar.",
           "illustration": "item-sneaker",
           "contextNote": "Se o tênis rasgar ou apertar, ele passa a ser preciso."

@@ -15,8 +15,29 @@
         { "id": "m06", "status": "available" }
       ]
     },
-    { "id": "c2", "label": "Escolhas", "ageRange": "9 a 11 anos", "description": "Planejar, comparar e decidir com mais autonomia.", "status": "soon", "modules": [] },
-    { "id": "c3", "label": "Autonomia inicial", "ageRange": "12 a 14 anos", "description": "Orçamento, crédito, juros, economia e risco.", "status": "soon", "modules": [] },
-    { "id": "c4", "label": "Vida econômica", "ageRange": "15 a 17 anos", "description": "Trabalho, impostos, investimentos e análise econômica.", "status": "soon", "modules": [] }
+    {
+      "id": "c2",
+      "label": "Escolhas",
+      "ageRange": "9 a 11 anos",
+      "description": "Planejar, comparar e decidir com mais autonomia.",
+      "status": "soon",
+      "modules": []
+    },
+    {
+      "id": "c3",
+      "label": "Autonomia inicial",
+      "ageRange": "12 a 14 anos",
+      "description": "Orçamento, crédito, juros, economia e risco.",
+      "status": "soon",
+      "modules": []
+    },
+    {
+      "id": "c4",
+      "label": "Vida econômica",
+      "ageRange": "15 a 17 anos",
+      "description": "Trabalho, impostos, investimentos e análise econômica.",
+      "status": "soon",
+      "modules": []
+    }
   ]
 }

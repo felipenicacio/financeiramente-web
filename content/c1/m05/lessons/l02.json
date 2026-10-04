@@ -9,10 +9,7 @@
     "Reconhecer os passos de juntar para uma meta",
     "Ordenar as etapas de um plano simples"
   ],
-  "competencies": [
-    "F-D8-C1-01",
-    "F-D5-C1-01"
-  ],
+  "competencies": ["F-D8-C1-01", "F-D5-C1-01"],
   "sources": [
     {
       "source": "FB1",
@@ -92,12 +89,7 @@
           "illustration": "item-coins"
         }
       ],
-      "correct": [
-        "goal",
-        "price",
-        "save",
-        "reach"
-      ],
+      "correct": ["goal", "price", "save", "reach"],
       "feedback": "Primeiro escolhemos a meta e vemos o preço. Depois guardamos aos poucos até alcançar.",
       "instructions": "Toque para colocar na ordem, do primeiro ao último passo."
     }

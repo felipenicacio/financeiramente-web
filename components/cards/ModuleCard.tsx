@@ -41,7 +41,12 @@ export function ModuleCard({
       <span className="grid place-items-center bg-accent-soft px-6 pt-5">
         {theme ? (
           // eslint-disable-next-line @next/next/no-img-element -- arte local e estática
-          <img src={econominhoAssets.theme(theme)} alt="" className="w-full max-w-[14rem]" decoding="async" />
+          <img
+            src={econominhoAssets.theme(theme)}
+            alt=""
+            className="w-full max-w-[14rem]"
+            decoding="async"
+          />
         ) : (
           // eslint-disable-next-line @next/next/no-img-element -- arte local e estática
           <img

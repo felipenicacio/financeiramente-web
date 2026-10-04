@@ -6,10 +6,7 @@
   "title": "Preço, comparação e troco",
   "headline": "Como ler preços, comparar produtos, ver o que cabe no dinheiro e entender o troco.",
   "summary": "O preço mostra quanto pagar, não o quanto algo vale para você. Comparar e calcular o troco ajuda a escolher melhor.",
-  "competencies": [
-    "F-D4-C1-01",
-    "F-D5-C1-01"
-  ],
+  "competencies": ["F-D4-C1-01", "F-D5-C1-01"],
   "integrative": {
     "title": "Na papelaria",
     "intro": "Vamos juntar tudo: preço, comparação e troco.",

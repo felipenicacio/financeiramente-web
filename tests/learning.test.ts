@@ -1,7 +1,13 @@
 import { describe, expect, it } from 'vitest';
 
 import { rawModules } from '@/lib/content/registry';
-import type { AffordObject, ChangeObject, ClassifyItem, CompareObject, QuizQuestion } from '@/lib/content/types';
+import type {
+  AffordObject,
+  ChangeObject,
+  ClassifyItem,
+  CompareObject,
+  QuizQuestion,
+} from '@/lib/content/types';
 import {
   affordResult,
   changeAnswer,
@@ -45,7 +51,9 @@ describe('expressões seguras (sem eval)', () => {
     expect(
       resolveValues({ money: 10, kitePrice: 8 }, [{ name: 'change', expr: 'money - kitePrice' }]),
     ).toMatchObject({ change: 2 });
-    expect(storyValues({ values: { a: 5 }, derived: [{ name: 'b', expr: 'a + 1' }] })).toMatchObject({ b: 6 });
+    expect(
+      storyValues({ values: { a: 5 }, derived: [{ name: 'b', expr: 'a + 1' }] }),
+    ).toMatchObject({ b: 6 });
   });
 
   it('recusa código arbitrário e variável desconhecida', () => {
@@ -55,7 +63,12 @@ describe('expressões seguras (sem eval)', () => {
 });
 
 describe('atividades de preço', () => {
-  const produto = (id: string, price: number) => ({ id, label: id, price, illustration: 'item-coin' });
+  const produto = (id: string, price: number) => ({
+    id,
+    label: id,
+    price,
+    illustration: 'item-coin',
+  });
 
   it('compare: o resultado vem dos preços, não do conteúdo', () => {
     const base: CompareObject = {
@@ -124,7 +137,10 @@ describe('classificação e quiz', () => {
       id: 'q',
       kind: 'decision',
       prompt: '?',
-      options: [{ id: 'a', label: 'A' }, { id: 'b', label: 'B' }],
+      options: [
+        { id: 'a', label: 'A' },
+        { id: 'b', label: 'B' },
+      ],
       answer,
       explanation: '.',
     });
@@ -141,8 +157,11 @@ describe('classificação e quiz', () => {
 });
 
 describe('o schema recusa conteúdo inválido', () => {
-  const clone = <T,>(value: T): T => structuredClone(value);
-  const raw = rawModules['c1/m01'] as { module: Record<string, unknown>; lessons: Record<string, unknown>[] };
+  const clone = <T>(value: T): T => structuredClone(value);
+  const raw = rawModules['c1/m01'] as {
+    module: Record<string, unknown>;
+    lessons: Record<string, unknown>[];
+  };
 
   it('o módulo publicado valida', () => {
     expect(validateModuleBundle(raw.module, raw.lessons).ok).toBe(true);

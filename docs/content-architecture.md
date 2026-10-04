@@ -18,14 +18,14 @@ content/
 
 ## Ciclo C1 (6–8 anos) — Descoberta
 
-| Módulo | Título                              | Competências                       | Tema |
-| ------ | ----------------------------------- | ---------------------------------- | ---- |
-| C1.1   | O dinheiro está por toda parte      | F-D4-C1-01, F-D7-C1-01             | descoberta |
-| C1.2   | Quero, preciso ou posso esperar?    | F-D1-C1-01, F-D5-C1-01             | pensando |
-| C1.3   | Preço, comparação e troco           | F-D4-C1-01, F-D5-C1-01             | comparando |
-| C1.4   | Trabalho, renda, bens e serviços    | F-D7-C1-01                         | lendo |
-| C1.5   | Guardar e cuidar                    | F-D8-C1-01, F-D5-C1-01             | feliz |
-| C1.6   | Escolhas, influência e convivência  | F-D2-C1-01, F-D8-C1-01, F-D9-C1-01 | explicando |
+| Módulo | Título                             | Competências                       | Tema       |
+| ------ | ---------------------------------- | ---------------------------------- | ---------- |
+| C1.1   | O dinheiro está por toda parte     | F-D4-C1-01, F-D7-C1-01             | descoberta |
+| C1.2   | Quero, preciso ou posso esperar?   | F-D1-C1-01, F-D5-C1-01             | pensando   |
+| C1.3   | Preço, comparação e troco          | F-D4-C1-01, F-D5-C1-01             | comparando |
+| C1.4   | Trabalho, renda, bens e serviços   | F-D7-C1-01                         | lendo      |
+| C1.5   | Guardar e cuidar                   | F-D8-C1-01, F-D5-C1-01             | feliz      |
+| C1.6   | Escolhas, influência e convivência | F-D2-C1-01, F-D8-C1-01, F-D9-C1-01 | explicando |
 
 Navegação livre: módulos e lições podem ser abertos em qualquer ordem. Nada é bloqueado e nada é salvo entre visitas.
 
@@ -43,20 +43,20 @@ Rastreabilidade obrigatória por lição:
 
 Discriminados por `type`. O motor (`components/learning/LessonRunner.tsx`) achata os objetos em telas: `classify` vira uma tela por item, `quiz` uma tela por pergunta, os demais uma tela cada. Telas interativas liberam o avanço só depois da resposta.
 
-| `type`        | Papel           | Interativo | Retorno                                                     |
-| ------------- | --------------- | ---------- | ----------------------------------------------------------- |
-| `explanation` | explicar        | não        | —                                                           |
-| `story`       | situação        | se tem pergunta | reflexão da opção escolhida                            |
-| `concepts`    | explicar        | não        | ideia-chave                                                 |
-| `reflection`  | provocar        | não        | fala do Econominho                                          |
-| `classify`    | classificar     | sim        | `accepted` (uma ou mais; mais de uma pede `contextNote`)    |
-| `compare`     | comparar preços | sim        | calculado por `target` (`most`/`least`); empate é erro      |
-| `afford`      | cabe no valor?  | sim        | compara ao `budget`; mostra sobra ou falta                  |
-| `change`      | troco           | sim        | `paid - product.price`; precisa estar em `options`          |
-| `choice`      | escolha reflexiva | sim      | toda opção é válida, cada uma com sua consequência          |
-| `ordering`    | ordenar passos  | sim        | compara com `correct[]`                                     |
-| `trueFalse`   | verdadeiro/falso| sim        | `isTrue` por afirmação, nunca pegadinha                     |
-| `quiz`        | recapitular     | sim        | `single` (uma certa) ou `open` (qualquer resposta reflete)  |
+| `type`        | Papel             | Interativo      | Retorno                                                    |
+| ------------- | ----------------- | --------------- | ---------------------------------------------------------- |
+| `explanation` | explicar          | não             | —                                                          |
+| `story`       | situação          | se tem pergunta | reflexão da opção escolhida                                |
+| `concepts`    | explicar          | não             | ideia-chave                                                |
+| `reflection`  | provocar          | não             | fala do Econominho                                         |
+| `classify`    | classificar       | sim             | `accepted` (uma ou mais; mais de uma pede `contextNote`)   |
+| `compare`     | comparar preços   | sim             | calculado por `target` (`most`/`least`); empate é erro     |
+| `afford`      | cabe no valor?    | sim             | compara ao `budget`; mostra sobra ou falta                 |
+| `change`      | troco             | sim             | `paid - product.price`; precisa estar em `options`         |
+| `choice`      | escolha reflexiva | sim             | toda opção é válida, cada uma com sua consequência         |
+| `ordering`    | ordenar passos    | sim             | compara com `correct[]`                                    |
+| `trueFalse`   | verdadeiro/falso  | sim             | `isTrue` por afirmação, nunca pegadinha                    |
+| `quiz`        | recapitular       | sim             | `single` (uma certa) ou `open` (qualquer resposta reflete) |
 
 ## O módulo (`module.json`)
 
@@ -78,16 +78,16 @@ Guia pedagógico único (assets individuais aprovados v2, em `public/econominho/
 
 ## Regras codificadas em testes (`tests/content.test.ts`)
 
-| Regra                                                            |
-| ---------------------------------------------------------------- |
-| Catálogo e ciclo válidos; C1 publica 6 módulos, 30 lições        |
-| Cada módulo tem 5 lições na ordem 1–5                            |
-| IDs de lição únicos                                              |
-| Cada lição tem de 2 a 4 objetos                                 |
-| Toda competência citada existe na matriz (36 códigos)            |
-| Toda fonte usa código conhecido e tem referência                |
-| Toda lição declara sensibilidade N1/N2/N3                        |
-| Cada módulo fecha com avaliação integradora e síntese           |
+| Regra                                                             |
+| ----------------------------------------------------------------- |
+| Catálogo e ciclo válidos; C1 publica 6 módulos, 30 lições         |
+| Cada módulo tem 5 lições na ordem 1–5                             |
+| IDs de lição únicos                                               |
+| Cada lição tem de 2 a 4 objetos                                   |
+| Toda competência citada existe na matriz (36 códigos)             |
+| Toda fonte usa código conhecido e tem referência                  |
+| Toda lição declara sensibilidade N1/N2/N3                         |
+| Cada módulo fecha com avaliação integradora e síntese             |
 | Assets oficiais do Econominho (avatares e temas) existem no disco |
 
 As guardas editoriais e de privacidade seguem em `tests/privacy.test.ts` e nos schemas (`lib/validation/contentSchemas.ts`).

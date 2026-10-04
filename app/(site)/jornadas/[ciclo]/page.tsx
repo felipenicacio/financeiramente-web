@@ -135,7 +135,12 @@ export default async function JourneysPage({ params }: { params: Promise<Params>
               <Illustration name="home-hero" className="w-48" />
               <h2 className="text-heading font-semibold">{t('cycleSoonTitle')}</h2>
               <p className="text-ink-soft">{t('cycleSoonBody')}</p>
-              <ButtonLink href={routes.age} variant="secondary" icon="arrow-left" iconPosition="start">
+              <ButtonLink
+                href={routes.age}
+                variant="secondary"
+                icon="arrow-left"
+                iconPosition="start"
+              >
                 {t('cycleSoonCta')}
               </ButtonLink>
             </div>

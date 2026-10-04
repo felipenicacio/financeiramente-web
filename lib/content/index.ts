@@ -6,7 +6,15 @@ import {
 import type { ValidationIssue } from '@/lib/validation/schema';
 
 import { rawCatalog, rawCycleSummaries, rawModules } from './registry';
-import type { Catalog, CycleEntry, CycleId, CycleSummary, Lesson, Module, ModuleBundle } from './types';
+import type {
+  Catalog,
+  CycleEntry,
+  CycleId,
+  CycleSummary,
+  Lesson,
+  Module,
+  ModuleBundle,
+} from './types';
 
 export type LoadResult<T> = { ok: true; data: T } | { ok: false; issues: ValidationIssue[] };
 
@@ -56,7 +64,10 @@ export function loadLesson(cycle: string, moduleId: string, order: number): Load
   const lesson = bundle.data.lessons.find((entry) => entry.order === order);
   return lesson
     ? { ok: true, data: lesson }
-    : { ok: false, issues: [{ path: `${cycle}/${moduleId}`, message: `lição ${order} não existe` }] };
+    : {
+        ok: false,
+        issues: [{ path: `${cycle}/${moduleId}`, message: `lição ${order} não existe` }],
+      };
 }
 
 export function loadModule(cycle: string, moduleId: string): LoadResult<Module> {

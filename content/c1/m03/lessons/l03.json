@@ -5,13 +5,8 @@
   "order": 3,
   "title": "Comparando dois produtos",
   "headline": "Antes de escolher, dá para comparar e pensar no que faz mais sentido.",
-  "objectives": [
-    "Comparar dois produtos pelo preço",
-    "Entender que preço não decide tudo"
-  ],
-  "competencies": [
-    "F-D4-C1-01"
-  ],
+  "objectives": ["Comparar dois produtos pelo preço", "Entender que preço não decide tudo"],
+  "competencies": ["F-D4-C1-01"],
   "sources": [
     {
       "source": "FB2",

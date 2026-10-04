@@ -5,14 +5,8 @@
   "order": 5,
   "title": "Esperar também é escolher",
   "headline": "Esperar não é perder: é decidir o melhor momento para algo que a gente quer.",
-  "objectives": [
-    "Compreender a espera como uma escolha",
-    "Relacionar esperar a alcançar uma meta"
-  ],
-  "competencies": [
-    "F-D1-C1-01",
-    "F-D5-C1-01"
-  ],
+  "objectives": ["Compreender a espera como uma escolha", "Relacionar esperar a alcançar uma meta"],
+  "competencies": ["F-D1-C1-01", "F-D5-C1-01"],
   "sources": [
     {
       "source": "FB2",
@@ -114,8 +108,5 @@
       "body": "Quando você espera para juntar, uma meta maior fica mais perto."
     }
   ],
-  "summary": [
-    "Esperar é escolher o melhor momento.",
-    "Esperar ajuda a alcançar uma meta maior."
-  ]
+  "summary": ["Esperar é escolher o melhor momento.", "Esperar ajuda a alcançar uma meta maior."]
 }

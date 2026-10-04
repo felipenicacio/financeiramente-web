@@ -5,13 +5,8 @@
   "order": 3,
   "title": "Querer é normal",
   "headline": "Depois de um anúncio é normal bater vontade; dá para pensar antes de escolher.",
-  "objectives": [
-    "Entender que querer após um anúncio é normal",
-    "Pensar antes de uma escolha"
-  ],
-  "competencies": [
-    "F-D2-C1-01"
-  ],
+  "objectives": ["Entender que querer após um anúncio é normal", "Pensar antes de uma escolha"],
+  "competencies": ["F-D2-C1-01"],
   "sources": [
     {
       "source": "FB2",

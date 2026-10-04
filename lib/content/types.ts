@@ -47,12 +47,7 @@ export type IllustrationKey = string;
  * módulo). Cada valor corresponde a um PNG individual aprovado (v2).
  */
 export type ModuleTheme =
-  | 'descoberta'
-  | 'pensando'
-  | 'comparando'
-  | 'lendo'
-  | 'feliz'
-  | 'explicando';
+  'descoberta' | 'pensando' | 'comparando' | 'lendo' | 'feliz' | 'explicando';
 
 export const moduleThemes: readonly ModuleTheme[] = [
   'descoberta',
@@ -68,7 +63,11 @@ export const moduleThemes: readonly ModuleTheme[] = [
 /** Códigos de fonte usados na matriz curricular. */
 export type SourceCode = 'FB1' | 'FB2' | 'AV-C' | 'AV-P' | 'MC' | 'BNCC';
 
-export type SourceRef = { source: SourceCode; reference: string; role: 'principal' | 'complementar' };
+export type SourceRef = {
+  source: SourceCode;
+  reference: string;
+  role: 'principal' | 'complementar';
+};
 
 /** N1 comum · N2 sensível · N3 alta sensibilidade (Child Safety Policy). */
 export type Sensitivity = 'N1' | 'N2' | 'N3';

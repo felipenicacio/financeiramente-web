@@ -6,9 +6,7 @@
   "title": "Trabalho, renda, bens e serviços",
   "headline": "Por que as pessoas trabalham, o que são bens e serviços e como o trabalho vira renda.",
   "summary": "Pessoas trabalham, fazem coisas e ajudam outras pessoas. O trabalho gera bens, serviços e renda.",
-  "competencies": [
-    "F-D7-C1-01"
-  ],
+  "competencies": ["F-D7-C1-01"],
   "integrative": {
     "title": "Bem, serviço ou renda?",
     "intro": "Vamos juntar tudo: cada situação é um bem, um serviço ou renda.",
@@ -42,9 +40,7 @@
           "id": "bread",
           "label": "Pão da padaria",
           "situation": "O seu Jorge faz pão todo dia.",
-          "accepted": [
-            "good"
-          ],
+          "accepted": ["good"],
           "feedback": "O pão é uma coisa que dá para pegar. É um bem.",
           "illustration": "item-bread"
         },
@@ -52,9 +48,7 @@
           "id": "class",
           "label": "Aula da professora Marta",
           "situation": "Ela ensina a turma a ler e a contar.",
-          "accepted": [
-            "service"
-          ],
+          "accepted": ["service"],
           "feedback": "Ensinar é um trabalho que ajuda. É um serviço.",
           "illustration": "item-chalkboard"
         },
@@ -62,9 +56,7 @@
           "id": "chair",
           "label": "Cadeira de madeira",
           "situation": "O marceneiro Davi fez uma cadeira.",
-          "accepted": [
-            "good"
-          ],
+          "accepted": ["good"],
           "feedback": "A cadeira dá para pegar e usar. É um bem.",
           "illustration": "item-chair"
         },
@@ -72,9 +64,7 @@
           "id": "payment",
           "label": "Pagamento do cozinheiro Luís",
           "situation": "Ele cozinha no restaurante e recebe.",
-          "accepted": [
-            "income"
-          ],
+          "accepted": ["income"],
           "feedback": "O dinheiro que o Luís recebe é renda.",
           "illustration": "item-wallet"
         },
@@ -82,9 +72,7 @@
           "id": "health",
           "label": "Consulta da enfermeira Sônia",
           "situation": "Ela cuida de quem está doente.",
-          "accepted": [
-            "service"
-          ],
+          "accepted": ["service"],
           "feedback": "Cuidar da saúde é um serviço.",
           "illustration": "item-stethoscope"
         }

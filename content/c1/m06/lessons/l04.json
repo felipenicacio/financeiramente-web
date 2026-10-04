@@ -5,13 +5,8 @@
   "order": 4,
   "title": "Minhas informações têm valor",
   "headline": "Nome, endereço e telefone são informações pessoais que precisam de cuidado.",
-  "objectives": [
-    "Reconhecer informações pessoais",
-    "Saber pedir ajuda de um adulto de confiança"
-  ],
-  "competencies": [
-    "F-D8-C1-01"
-  ],
+  "objectives": ["Reconhecer informações pessoais", "Saber pedir ajuda de um adulto de confiança"],
+  "competencies": ["F-D8-C1-01"],
   "sources": [
     {
       "source": "FB2",
