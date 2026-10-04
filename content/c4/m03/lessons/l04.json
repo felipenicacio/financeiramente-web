@@ -1,0 +1,112 @@
+{
+  "id": "c4-m03-l04",
+  "cycle": "c4",
+  "module": "m03",
+  "order": 4,
+  "title": "Construindo um cenário pessoal",
+  "headline": "Montar um cenário pessoal ajuda a organizar metas, recursos e prazos.",
+  "objectives": [
+    "Aplicar o conceito de cenário a um planejamento pessoal",
+    "Organizar metas, recursos e prazos em um cenário simples"
+  ],
+  "competencies": ["F-D5-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF05",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Três perguntas simples",
+      "body": "Para montar um cenário pessoal, vale perguntar: qual é a meta, quais recursos são necessários e em quanto tempo ela pode ser alcançada. Essas três perguntas organizam um cenário simples de planejamento.",
+      "illustration": "item-notebook"
+    },
+    {
+      "type": "ordering",
+      "prompt": "Ordene os passos para montar um cenário pessoal:",
+      "items": [
+        {
+          "id": "step1",
+          "label": "Definir a meta de longo prazo"
+        },
+        {
+          "id": "step2",
+          "label": "Listar os recursos necessários"
+        },
+        {
+          "id": "step3",
+          "label": "Estimar o prazo para alcançar a meta"
+        },
+        {
+          "id": "step4",
+          "label": "Comparar esse cenário com outras alternativas"
+        }
+      ],
+      "correct": ["step1", "step2", "step3", "step4"],
+      "feedback": "Definir a meta, listar recursos, estimar o prazo e comparar alternativas organiza um cenário pessoal."
+    },
+    {
+      "type": "quiz",
+      "title": "Pensando em cenários pessoais",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "decision",
+          "prompt": "Antes de definir os recursos necessários para uma meta, é preciso",
+          "options": [
+            {
+              "id": "a",
+              "label": "Definir claramente qual é a meta"
+            },
+            {
+              "id": "b",
+              "label": "Ignorar completamente o prazo"
+            },
+            {
+              "id": "c",
+              "label": "Comparar alternativas sem nenhuma meta definida"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "A meta é o início do planejamento: a partir dela se organizam os recursos e o prazo."
+        },
+        {
+          "id": "q2",
+          "kind": "decision",
+          "prompt": "Comparar o cenário montado com outras alternativas serve para",
+          "options": [
+            {
+              "id": "a",
+              "label": "Avaliar se essa é realmente a melhor opção disponível"
+            },
+            {
+              "id": "b",
+              "label": "Eliminar qualquer necessidade de decidir depois"
+            },
+            {
+              "id": "c",
+              "label": "Garantir que o cenário nunca precisará de ajustes"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "A comparação ajuda a avaliar se o cenário escolhido é mesmo a melhor opção disponível."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Montar um cenário pessoal envolve meta, recursos e prazo.",
+    "Comparar esse cenário com alternativas apoia a decisão final."
+  ]
+}

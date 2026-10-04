@@ -1,0 +1,134 @@
+{
+  "id": "c4-m03-l05",
+  "cycle": "c4",
+  "module": "m03",
+  "order": 5,
+  "title": "Revisando o plano com o tempo",
+  "headline": "Circunstâncias e metas pessoais podem mudar, então o plano merece revisão periódica.",
+  "objectives": [
+    "Reconhecer a importância de revisar um plano de vida periodicamente",
+    "Revisar os conceitos de cenário e custo de oportunidade"
+  ],
+  "competencies": ["F-D5-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF05",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Um plano vivo",
+      "body": "Um plano de vida não precisa ser fixo para sempre. Circunstâncias mudam, novas informações aparecem e metas pessoais podem se transformar. Revisar o plano periodicamente mantém ele conectado com a realidade.",
+      "illustration": "item-calendar"
+    },
+    {
+      "type": "classify",
+      "prompt": "Classifique cada situação como motivo para revisar o plano ou não:",
+      "categories": [
+        {
+          "id": "revisit",
+          "label": "Motivo para revisar",
+          "short": "Vale repensar",
+          "icon": "later",
+          "tone": "teal"
+        },
+        {
+          "id": "keep",
+          "label": "Não exige revisão",
+          "short": "Plano segue igual",
+          "icon": "safe",
+          "tone": "amber"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "label": "A meta de carreira da pessoa mudou",
+          "situation": "A pessoa passou a se interessar por uma área diferente da planejada.",
+          "accepted": ["revisit"],
+          "feedback": "Uma mudança de meta é um bom motivo para revisar o plano.",
+          "illustration": "item-book"
+        },
+        {
+          "id": "i2",
+          "label": "Um gasto pequeno e esperado do mês",
+          "situation": "A pessoa fez uma compra já prevista no orçamento do mês.",
+          "accepted": ["keep"],
+          "feedback": "Um gasto já previsto não costuma exigir revisão do plano de vida.",
+          "illustration": "item-wallet"
+        },
+        {
+          "id": "i3",
+          "label": "Uma mudança relevante na renda da família",
+          "situation": "A renda disponível para os planos mudou de forma significativa.",
+          "accepted": ["revisit"],
+          "feedback": "Uma mudança relevante na renda costuma exigir revisão do plano.",
+          "illustration": "item-coins"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Revisando o módulo",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Revisar um plano de vida periodicamente é importante porque",
+          "options": [
+            {
+              "id": "a",
+              "label": "Circunstâncias e metas pessoais podem mudar com o tempo"
+            },
+            {
+              "id": "b",
+              "label": "Um plano, uma vez feito, nunca deveria mudar"
+            },
+            {
+              "id": "c",
+              "label": "Revisar substitui qualquer necessidade de planejar"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Mudanças de circunstância pedem ajustes no plano original."
+        },
+        {
+          "id": "q2",
+          "kind": "explanation",
+          "prompt": "Comparar cenários e considerar o custo de oportunidade ajudam a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Planejar decisões de vida com mais clareza"
+            },
+            {
+              "id": "b",
+              "label": "Eliminar qualquer incerteza sobre o futuro"
+            },
+            {
+              "id": "c",
+              "label": "Garantir que nenhuma decisão precise ser revista"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Esses conceitos ajudam a planejar com mais clareza, não a eliminar incertezas."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Revisar o plano de vida periodicamente acompanha mudanças nas circunstâncias.",
+    "Comparar cenários e considerar o custo de oportunidade apoiam decisões mais claras."
+  ]
+}

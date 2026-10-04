@@ -1,0 +1,134 @@
+{
+  "id": "c4-m01-l03",
+  "cycle": "c4",
+  "module": "m01",
+  "order": 3,
+  "title": "Estratégias comerciais e decisão de compra",
+  "headline": "Algumas estratégias comerciais buscam acelerar a decisão de compra.",
+  "objectives": [
+    "Reconhecer estratégias comerciais comuns",
+    "Perceber o efeito dessas estratégias na decisão de compra"
+  ],
+  "competencies": ["F-D2-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF02",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Pressa e escassez",
+      "body": "Criar senso de urgência, sugerir que a oferta está quase esgotada ou destacar que outras pessoas já compraram são estratégias comerciais comuns. Todas buscam acelerar a decisão, muitas vezes antes de uma análise mais calma.",
+      "illustration": "story-ad-loud"
+    },
+    {
+      "type": "classify",
+      "prompt": "Classifique cada frase de anúncio pela estratégia usada:",
+      "categories": [
+        {
+          "id": "urgency",
+          "label": "Urgência",
+          "short": "Pressa para decidir",
+          "icon": "ad",
+          "tone": "coral"
+        },
+        {
+          "id": "social",
+          "label": "Prova social",
+          "short": "Outros já compraram",
+          "icon": "shared",
+          "tone": "teal"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "label": "Restam só algumas peças, corra",
+          "situation": "O anúncio sugere que o estoque está quase no fim.",
+          "accepted": ["urgency"],
+          "feedback": "Sugerir estoque quase esgotado é uma forma de criar urgência.",
+          "illustration": "item-pricetag"
+        },
+        {
+          "id": "i2",
+          "label": "Milhares de pessoas já compraram",
+          "situation": "O anúncio destaca o número de pessoas que já escolheram o produto.",
+          "accepted": ["social"],
+          "feedback": "Mostrar que muita gente já comprou é um exemplo de prova social.",
+          "illustration": "item-megaphone"
+        },
+        {
+          "id": "i3",
+          "label": "Oferta válida só até hoje à meia-noite",
+          "situation": "O anúncio dá um prazo curto para a decisão.",
+          "accepted": ["urgency"],
+          "feedback": "Um prazo curto é uma forma clássica de gerar urgência na decisão.",
+          "illustration": "item-calendar"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Pensando em estratégias comerciais",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "decision",
+          "prompt": "Ao notar uma estratégia de urgência, um cuidado útil é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Parar um momento antes de decidir, mesmo sob pressa"
+            },
+            {
+              "id": "b",
+              "label": "Decidir imediatamente, sem pensar"
+            },
+            {
+              "id": "c",
+              "label": "Ignorar completamente qualquer anúncio"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Pausar antes de decidir ajuda a avaliar a compra com mais calma."
+        },
+        {
+          "id": "q2",
+          "kind": "recognition",
+          "prompt": "Prova social, em um anúncio, busca",
+          "options": [
+            {
+              "id": "a",
+              "label": "Mostrar que outras pessoas já escolheram aquele produto"
+            },
+            {
+              "id": "b",
+              "label": "Provar cientificamente a qualidade do produto"
+            },
+            {
+              "id": "c",
+              "label": "Garantir reembolso automático"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Prova social usa a escolha de outras pessoas como argumento de venda."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Urgência e prova social são estratégias comerciais comuns.",
+    "Pausar antes de decidir ajuda a avaliar a compra com mais calma."
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": "c4-m02-l02",
+  "cycle": "c4",
+  "module": "m02",
+  "order": 2,
+  "title": "Quando o real se desvaloriza",
+  "headline": "Quando o real se desvaloriza, produtos importados tendem a ficar mais caros.",
+  "objectives": [
+    "Compreender o efeito da desvalorização do real sobre preços",
+    "Diferenciar desvalorização de valorização"
+  ],
+  "competencies": ["F-D4-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF03",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Mais reais para a mesma coisa",
+      "body": "Quando o real se desvaloriza frente a outra moeda, é preciso mais reais para comprar a mesma quantidade dessa moeda. Por isso, produtos importados e viagens ao exterior tendem a ficar mais caros em reais.",
+      "illustration": "item-pricetag"
+    },
+    {
+      "type": "story",
+      "title": "A viagem de Marta",
+      "values": {
+        "before": 5,
+        "after": 6
+      },
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-boat",
+          "text": "Antes, Marta trocava reais por dólares a uma taxa de {before} por dólar."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-coins",
+          "text": "Com o real desvalorizado, a taxa passou para {after} por dólar: a mesma viagem passou a custar mais em reais."
+        }
+      ],
+      "closing": "A desvalorização do real faz com que a mesma quantidade de moeda estrangeira custe mais em reais."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre desvalorização do real:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Com o real desvalorizado, é preciso mais reais para comprar a mesma moeda estrangeira.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: a desvalorização aumenta a quantidade de reais necessária."
+        },
+        {
+          "id": "s2",
+          "text": "A desvalorização do real deixa produtos importados mais baratos.",
+          "isTrue": false,
+          "explanation": "Pelo contrário: produtos importados tendem a ficar mais caros."
+        },
+        {
+          "id": "s3",
+          "text": "Viagens internacionais tendem a custar mais com o real desvalorizado.",
+          "isTrue": true,
+          "explanation": "Exato: a mesma quantidade de moeda estrangeira passa a custar mais em reais."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Com o real desvalorizado, produtos importados e viagens tendem a custar mais.",
+    "A taxa de câmbio determina quantos reais equivalem a uma moeda estrangeira."
+  ]
+}

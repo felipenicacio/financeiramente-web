@@ -1,0 +1,108 @@
+{
+  "id": "c4-m06-l05",
+  "cycle": "c4",
+  "module": "m06",
+  "order": 5,
+  "title": "Dívida pública e vida econômica",
+  "headline": "Entender dívida pública e políticas econômicas ajuda a interpretar notícias com mais contexto.",
+  "objectives": [
+    "Compreender o conceito de dívida pública",
+    "Revisar os conceitos do módulo sobre investimentos e políticas econômicas"
+  ],
+  "competencies": ["F-D9-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF10",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N3",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "O governo também pode tomar dívida",
+      "body": "Dívida pública é o total que o governo deve, geralmente contraído para financiar serviços, obras ou outras despesas. Assim como uma dívida pessoal, ela tem custo e precisa ser paga, afetando decisões econômicas futuras.",
+      "illustration": "item-notebook"
+    },
+    {
+      "type": "ordering",
+      "prompt": "Ordene os passos para interpretar uma notícia sobre política econômica:",
+      "items": [
+        {
+          "id": "step1",
+          "label": "Identificar qual política econômica está sendo anunciada"
+        },
+        {
+          "id": "step2",
+          "label": "Pensar em quais grupos podem ser mais afetados"
+        },
+        {
+          "id": "step3",
+          "label": "Relacionar o efeito possível ao próprio contexto familiar"
+        }
+      ],
+      "correct": ["step1", "step2", "step3"],
+      "feedback": "Identificar a política, pensar nos grupos afetados e relacionar ao próprio contexto ajuda a interpretar a notícia."
+    },
+    {
+      "type": "quiz",
+      "title": "Revisando o currículo",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Dívida pública é",
+          "options": [
+            {
+              "id": "a",
+              "label": "O total que o governo deve, contraído para financiar despesas"
+            },
+            {
+              "id": "b",
+              "label": "Um valor que nunca precisa ser pago"
+            },
+            {
+              "id": "c",
+              "label": "O mesmo que uma dívida pessoal de cartão de crédito"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Dívida pública é o total devido pelo governo, usado para financiar despesas e obras."
+        },
+        {
+          "id": "q2",
+          "kind": "explanation",
+          "prompt": "Entender dívida pública e políticas econômicas ajuda a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Interpretar notícias econômicas com mais contexto"
+            },
+            {
+              "id": "b",
+              "label": "Controlar sozinho as decisões do governo"
+            },
+            {
+              "id": "c",
+              "label": "Eliminar qualquer dívida existente automaticamente"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Esse entendimento apoia uma leitura mais informada das notícias econômicas."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Dívida pública é o total que o governo deve, com custo próprio.",
+    "Entender políticas econômicas ajuda a interpretar notícias com mais contexto."
+  ]
+}

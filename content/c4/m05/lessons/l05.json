@@ -1,0 +1,108 @@
+{
+  "id": "c4-m05-l05",
+  "cycle": "c4",
+  "module": "m05",
+  "order": 5,
+  "title": "Trabalho, tributos e lucro no dia a dia",
+  "headline": "Entender esses conceitos ajuda a interpretar contracheques e resultados de um negócio.",
+  "objectives": [
+    "Revisar os conceitos de produtividade, tributos, salário e lucro",
+    "Relacionar esses conceitos a situações práticas"
+  ],
+  "competencies": ["F-D7-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF07",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Conceitos que se encontram",
+      "body": "Produtividade, remuneração, tributos e lucro se encontram tanto na vida de quem trabalha com carteira assinada quanto na vida de quem toca um pequeno negócio. Entender esses conceitos ajuda a interpretar valores do dia a dia.",
+      "illustration": "item-notebook"
+    },
+    {
+      "type": "ordering",
+      "prompt": "Ordene os passos para entender o resultado financeiro de um mês de trabalho:",
+      "items": [
+        {
+          "id": "step1",
+          "label": "Identificar a receita ou o salário bruto do período"
+        },
+        {
+          "id": "step2",
+          "label": "Listar os descontos ou custos envolvidos"
+        },
+        {
+          "id": "step3",
+          "label": "Calcular o valor líquido ou o lucro final"
+        }
+      ],
+      "correct": ["step1", "step2", "step3"],
+      "feedback": "Identificar o valor bruto, listar os descontos e calcular o valor final organiza essa análise."
+    },
+    {
+      "type": "quiz",
+      "title": "Revisando o módulo",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "explanation",
+          "prompt": "Entender a diferença entre salário bruto e líquido ajuda a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Interpretar melhor o próprio contracheque"
+            },
+            {
+              "id": "b",
+              "label": "Eliminar qualquer desconto obrigatório"
+            },
+            {
+              "id": "c",
+              "label": "Aumentar automaticamente a remuneração"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Esse entendimento ajuda a interpretar os valores que aparecem no contracheque."
+        },
+        {
+          "id": "q2",
+          "kind": "recognition",
+          "prompt": "Calcular o lucro de um negócio exige conhecer",
+          "options": [
+            {
+              "id": "a",
+              "label": "A receita total e todos os custos envolvidos"
+            },
+            {
+              "id": "b",
+              "label": "Apenas o valor de uma única venda"
+            },
+            {
+              "id": "c",
+              "label": "Apenas o número de clientes atendidos"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "O lucro depende da receita total e de todos os custos do período."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Produtividade, tributos, salário e lucro se conectam na vida econômica.",
+    "Entender esses conceitos ajuda a interpretar contracheques e resultados de negócios."
+  ]
+}

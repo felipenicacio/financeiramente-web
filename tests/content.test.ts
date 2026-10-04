@@ -11,7 +11,7 @@ import competencyCatalog from '@/content/competencies.json';
 import { competencyDescription } from '@/lib/content/competencies';
 
 /**
- * Guarda de conteúdo do currículo C1–C3 (v2.0). Valida a arquitetura
+ * Guarda de conteúdo do currículo C1–C4 (v2.0). Valida a arquitetura
  * ciclo → módulo → lição, a rastreabilidade (competências, fontes,
  * sensibilidade) e a existência dos assets oficiais do Econominho.
  */
@@ -48,9 +48,14 @@ describe('catálogo', () => {
     const c3 = modules.filter((entry) => entry.cycle === 'c3');
     expect(c3).toHaveLength(6);
   });
+
+  it('publica o C4 com 6 módulos', () => {
+    const c4 = modules.filter((entry) => entry.cycle === 'c4');
+    expect(c4).toHaveLength(6);
+  });
 });
 
-describe('módulos e lições (C1, C2 e C3)', () => {
+describe('módulos e lições (C1, C2, C3 e C4)', () => {
   it.each(modules)('o módulo %s valida e tem 5 lições', ({ cycle, moduleId }) => {
     const bundle = loadModuleBundle(cycle, moduleId);
     expect(bundle.ok).toBe(true);
@@ -60,8 +65,8 @@ describe('módulos e lições (C1, C2 e C3)', () => {
     expect(bundle.data.lessons.map((lesson) => lesson.order)).toEqual([1, 2, 3, 4, 5]);
   });
 
-  it('tem 90 lições no total (C1 + C2 + C3)', () => {
-    expect(allLessons()).toHaveLength(90);
+  it('tem 120 lições no total (C1 + C2 + C3 + C4)', () => {
+    expect(allLessons()).toHaveLength(120);
   });
 
   it('não repete o id de nenhuma lição', () => {
@@ -168,6 +173,11 @@ describe('resumo do ciclo', () => {
     const summary = loadCycleSummary('c3');
     expect(summary?.ok).toBe(true);
   });
+
+  it('o C4 tem "O que descobrimos?"', () => {
+    const summary = loadCycleSummary('c4');
+    expect(summary?.ok).toBe(true);
+  });
 });
 
 describe('assets oficiais do Econominho', () => {
@@ -264,6 +274,22 @@ describe('módulos: tema (pose do Econominho)', () => {
     };
     for (const [moduleId, theme] of Object.entries(esperado)) {
       const bundle = loadModuleBundle('c3', moduleId);
+      expect(bundle.ok).toBe(true);
+      if (bundle.ok) expect(bundle.data.module.theme).toBe(theme);
+    }
+  });
+
+  it('cada módulo do C4 usa a pose combinada, nunca um id de módulo', () => {
+    const esperado: Record<string, string> = {
+      m01: 'pensando',
+      m02: 'comparando',
+      m03: 'explicando',
+      m04: 'lendo',
+      m05: 'descoberta',
+      m06: 'feliz',
+    };
+    for (const [moduleId, theme] of Object.entries(esperado)) {
+      const bundle = loadModuleBundle('c4', moduleId);
       expect(bundle.ok).toBe(true);
       if (bundle.ok) expect(bundle.data.module.theme).toBe(theme);
     }
@@ -431,8 +457,8 @@ describe('sem nota, ranking, certificado ou gamificação', () => {
   const proibidos =
     /\b(ranking|certificado|pontua[çc][ãa]o|pontos?|placar|notas?|medalha|estrelas?|troféu|streak)\b|%/i;
 
-  it('o conteúdo do C1, do C2, do C3 e os textos da interface não usam esse vocabulário', () => {
-    const arquivos = textFiles(['content/c1', 'content/c2', 'content/c3']).concat([
+  it('o conteúdo do C1, do C2, do C3, do C4 e os textos da interface não usam esse vocabulário', () => {
+    const arquivos = textFiles(['content/c1', 'content/c2', 'content/c3', 'content/c4']).concat([
       { path: 'content/ui.json', text: JSON.stringify(ui) },
     ]);
     const ofensores = arquivos.filter((f) => proibidos.test(f.text)).map((f) => f.path);

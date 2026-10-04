@@ -1,0 +1,168 @@
+{
+  "id": "m02",
+  "cycle": "c4",
+  "order": 2,
+  "code": "C4.2",
+  "title": "Câmbio e fatores macroeconômicos",
+  "headline": "O valor do real frente a outras moedas afeta o preço de produtos e viagens.",
+  "summary": "Câmbio, poder de compra e fatores macroeconômicos influenciam os preços do dia a dia.",
+  "competencies": ["F-D4-C4-01"],
+  "integrative": {
+    "title": "Juntando tudo",
+    "intro": "Vamos ver o que você descobriu sobre câmbio e fatores macroeconômicos?",
+    "object": {
+      "type": "quiz",
+      "title": "O que você descobriu",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Taxa de câmbio é",
+          "options": [
+            {
+              "id": "a",
+              "label": "O valor de uma moeda em relação a outra"
+            },
+            {
+              "id": "b",
+              "label": "Um imposto cobrado sobre produtos importados"
+            },
+            {
+              "id": "c",
+              "label": "O preço fixo de qualquer produto no mundo"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "A taxa de câmbio mostra quanto de uma moeda equivale a outra.",
+          "illustration": "item-coins"
+        },
+        {
+          "id": "q2",
+          "kind": "explanation",
+          "prompt": "Quando o real se desvaloriza frente ao dólar, produtos importados tendem a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Ficar mais caros em reais"
+            },
+            {
+              "id": "b",
+              "label": "Ficar mais baratos em reais"
+            },
+            {
+              "id": "c",
+              "label": "Não sofrer nenhuma alteração"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Com o real mais desvalorizado, é preciso mais reais para comprar a mesma quantidade de dólares."
+        },
+        {
+          "id": "q3",
+          "kind": "recognition",
+          "prompt": "Fatores macroeconômicos são",
+          "options": [
+            {
+              "id": "a",
+              "label": "Condições amplas da economia que afetam preços e renda em geral"
+            },
+            {
+              "id": "b",
+              "label": "Decisões pessoais de uma única família"
+            },
+            {
+              "id": "c",
+              "label": "Promoções específicas de uma única loja"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Fatores macroeconômicos afetam a economia como um todo, não só uma compra isolada."
+        },
+        {
+          "id": "q4",
+          "kind": "explanation",
+          "prompt": "O poder de compra em relação a produtos importados muda quando",
+          "options": [
+            {
+              "id": "a",
+              "label": "A taxa de câmbio muda de forma significativa"
+            },
+            {
+              "id": "b",
+              "label": "A cor do produto muda"
+            },
+            {
+              "id": "c",
+              "label": "O produto troca de prateleira na loja"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Mudanças na taxa de câmbio afetam diretamente o custo de produtos importados."
+        },
+        {
+          "id": "q5",
+          "kind": "decision",
+          "prompt": "Acompanhar fatores macroeconômicos ajuda a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Entender mudanças mais amplas que afetam o orçamento"
+            },
+            {
+              "id": "b",
+              "label": "Controlar sozinho o valor da taxa de câmbio"
+            },
+            {
+              "id": "c",
+              "label": "Eliminar qualquer variação de preço"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Entender esses fatores ajuda a interpretar mudanças mais amplas na economia."
+        }
+      ]
+    }
+  },
+  "conclusion": {
+    "title": "Você concluiu o módulo",
+    "message": "Câmbio e fatores macroeconômicos afetam preços de formas que vão além de uma única compra. Entender isso ajuda a interpretar mudanças mais amplas na economia.",
+    "recap": [
+      {
+        "icon": "money",
+        "tone": "coral",
+        "text": "Taxa de câmbio é o valor de uma moeda em relação a outra."
+      },
+      {
+        "icon": "price",
+        "tone": "amber",
+        "text": "Real desvalorizado deixa produtos importados mais caros."
+      },
+      {
+        "icon": "info",
+        "tone": "teal",
+        "text": "Fatores macroeconômicos afetam a economia como um todo."
+      },
+      {
+        "icon": "change",
+        "tone": "cyan",
+        "text": "Mudanças cambiais afetam o poder de compra sobre produtos importados."
+      }
+    ]
+  },
+  "theme": "comparando"
+}

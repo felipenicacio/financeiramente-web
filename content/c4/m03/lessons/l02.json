@@ -1,0 +1,75 @@
+{
+  "id": "c4-m03-l02",
+  "cycle": "c4",
+  "module": "m03",
+  "order": 2,
+  "title": "O que é um cenário financeiro",
+  "headline": "Um cenário organiza decisões possíveis e seus resultados esperados ao longo do tempo.",
+  "objectives": [
+    "Compreender o conceito de cenário financeiro",
+    "Reconhecer exemplos de cenários de vida"
+  ],
+  "competencies": ["F-D5-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF05",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Uma história possível",
+      "body": "Um cenário financeiro organiza uma possível sequência de decisões e seus resultados esperados ao longo do tempo. Comparar diferentes cenários ajuda a visualizar caminhos antes de escolher um deles.",
+      "illustration": "item-notebook"
+    },
+    {
+      "type": "story",
+      "title": "Dois cenários de Luís",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "story-crossroads",
+          "text": "No cenário 1, Luís estuda em tempo integral por dois anos antes de começar a trabalhar."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-laptop",
+          "text": "No cenário 2, Luís trabalha e estuda ao mesmo tempo, num ritmo mais lento de formação."
+        }
+      ],
+      "closing": "Cada cenário tem vantagens, riscos e um custo de oportunidade diferente."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre cenários financeiros:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Um cenário financeiro organiza decisões possíveis e seus resultados esperados.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: ele ajuda a visualizar um caminho possível ao longo do tempo."
+        },
+        {
+          "id": "s2",
+          "text": "Só existe um único cenário possível para qualquer decisão de vida.",
+          "isTrue": false,
+          "explanation": "Geralmente existem vários cenários possíveis para a mesma decisão."
+        },
+        {
+          "id": "s3",
+          "text": "Comparar cenários ajuda a visualizar caminhos antes de escolher.",
+          "isTrue": true,
+          "explanation": "Exato: essa é a principal utilidade de montar cenários."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Um cenário organiza decisões possíveis e seus resultados esperados.",
+    "Comparar cenários ajuda a visualizar caminhos antes de escolher."
+  ]
+}

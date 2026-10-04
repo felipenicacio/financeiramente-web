@@ -1,0 +1,134 @@
+{
+  "id": "c4-m06-l02",
+  "cycle": "c4",
+  "module": "m06",
+  "order": 2,
+  "title": "Classes de ativos e diversificação",
+  "headline": "Diversificar é distribuir recursos entre opções diferentes, em vez de concentrar tudo numa só.",
+  "objectives": [
+    "Compreender o conceito de classe de ativo",
+    "Compreender o conceito de diversificação"
+  ],
+  "competencies": ["F-D8-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF09",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Tipos diferentes de recurso",
+      "body": "Uma classe de ativo é um grupo de opções com características parecidas, como imóveis, aplicações de renda fixa ou participações em empresas. Diversificar é distribuir recursos entre classes diferentes, em vez de concentrar tudo numa única opção.",
+      "illustration": "item-notebook"
+    },
+    {
+      "type": "classify",
+      "prompt": "Classifique cada situação como diversificação ou concentração:",
+      "categories": [
+        {
+          "id": "diverse",
+          "label": "Diversificação",
+          "short": "Opções diferentes",
+          "icon": "save",
+          "tone": "teal"
+        },
+        {
+          "id": "concentrated",
+          "label": "Concentração",
+          "short": "Uma única opção",
+          "icon": "limit",
+          "tone": "coral"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "label": "Distribuir o valor entre classes diferentes",
+          "situation": "A pessoa divide seus recursos entre opções com características distintas.",
+          "accepted": ["diverse"],
+          "feedback": "Distribuir entre classes diferentes é um exemplo de diversificação.",
+          "illustration": "item-notebook"
+        },
+        {
+          "id": "i2",
+          "label": "Colocar todo o valor disponível numa única opção",
+          "situation": "A pessoa decide concentrar todos os recursos numa única alternativa.",
+          "accepted": ["concentrated"],
+          "feedback": "Concentrar tudo numa única opção é o oposto da diversificação.",
+          "illustration": "item-wallet"
+        },
+        {
+          "id": "i3",
+          "label": "Combinar uma opção estável e outra variável",
+          "situation": "A pessoa mistura características diferentes de risco entre as opções escolhidas.",
+          "accepted": ["diverse"],
+          "feedback": "Combinar opções com riscos diferentes também é uma forma de diversificação.",
+          "illustration": "item-coins"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Pensando em diversificação",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "A principal ideia da diversificação é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Distribuir recursos para não depender de uma única opção"
+            },
+            {
+              "id": "b",
+              "label": "Garantir que nenhuma opção jamais perca valor"
+            },
+            {
+              "id": "c",
+              "label": "Escolher sempre a opção de maior retorno possível"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Diversificar reduz a dependência de uma única opção, sem eliminar todo risco."
+        },
+        {
+          "id": "q2",
+          "kind": "recognition",
+          "prompt": "Uma classe de ativo reúne opções que",
+          "options": [
+            {
+              "id": "a",
+              "label": "Têm características parecidas entre si"
+            },
+            {
+              "id": "b",
+              "label": "São sempre exatamente idênticas em tudo"
+            },
+            {
+              "id": "c",
+              "label": "Nunca podem ser comparadas entre si"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Uma classe de ativo agrupa opções com características parecidas."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Uma classe de ativo é um grupo de opções com características parecidas.",
+    "Diversificar é distribuir recursos entre opções diferentes."
+  ]
+}

@@ -48,6 +48,9 @@ jobs:
                    jornadas/c3/index.html modulos/c3/m01/index.html \
                    aprender/c3/m01/l01/index.html aprender/c3/m06/fechamento/index.html \
                    jornadas/c3/o-que-descobrimos/index.html \
+                   jornadas/c4/index.html modulos/c4/m01/index.html \
+                   aprender/c4/m01/l01/index.html aprender/c4/m06/fechamento/index.html \
+                   jornadas/c4/o-que-descobrimos/index.html \
                    manifest.webmanifest sw.js robots.txt sitemap.xml _headers 404.html; do
             test -f "out/$f" || { echo "faltando: out/$f"; exit 1; }
           done

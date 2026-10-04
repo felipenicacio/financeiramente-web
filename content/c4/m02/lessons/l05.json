@@ -1,0 +1,108 @@
+{
+  "id": "c4-m02-l05",
+  "cycle": "c4",
+  "module": "m02",
+  "order": 5,
+  "title": "Acompanhando fatores macroeconômicos",
+  "headline": "Acompanhar fatores macroeconômicos ajuda a entender mudanças mais amplas no orçamento.",
+  "objectives": [
+    "Reconhecer a utilidade de acompanhar notícias econômicas",
+    "Revisar os conceitos de câmbio e fatores macroeconômicos"
+  ],
+  "competencies": ["F-D4-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF04",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Notícias que afetam o bolso",
+      "body": "Acompanhar notícias sobre câmbio, inflação e outros fatores macroeconômicos ajuda a entender mudanças mais amplas que podem afetar o orçamento pessoal e familiar, mesmo sem nenhuma decisão de compra ter sido feita.",
+      "illustration": "item-notebook"
+    },
+    {
+      "type": "ordering",
+      "prompt": "Ordene os passos para acompanhar um fator macroeconômico:",
+      "items": [
+        {
+          "id": "step1",
+          "label": "Notar a notícia sobre câmbio ou inflação"
+        },
+        {
+          "id": "step2",
+          "label": "Relacionar a notícia a produtos ou planos pessoais"
+        },
+        {
+          "id": "step3",
+          "label": "Avaliar se algum ajuste no orçamento é necessário"
+        }
+      ],
+      "correct": ["step1", "step2", "step3"],
+      "feedback": "Notar, relacionar e avaliar ajuda a transformar uma notícia econômica em uma decisão prática."
+    },
+    {
+      "type": "quiz",
+      "title": "Revisando o módulo",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Acompanhar fatores macroeconômicos serve principalmente para",
+          "options": [
+            {
+              "id": "a",
+              "label": "Entender mudanças amplas que podem afetar o orçamento"
+            },
+            {
+              "id": "b",
+              "label": "Controlar sozinho a taxa de câmbio do país"
+            },
+            {
+              "id": "c",
+              "label": "Eliminar qualquer necessidade de planejamento"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "O acompanhamento ajuda a interpretar mudanças mais amplas, não a controlá-las."
+        },
+        {
+          "id": "q2",
+          "kind": "explanation",
+          "prompt": "Relacionar uma notícia de câmbio a planos pessoais ajuda a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Avaliar se algum ajuste no orçamento é necessário"
+            },
+            {
+              "id": "b",
+              "label": "Garantir que o câmbio nunca mude de novo"
+            },
+            {
+              "id": "c",
+              "label": "Ignorar completamente o planejamento financeiro"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Relacionar a notícia aos próprios planos ajuda a decidir se um ajuste é necessário."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Acompanhar fatores macroeconômicos ajuda a entender mudanças mais amplas no orçamento.",
+    "Notar, relacionar e avaliar transforma uma notícia econômica em decisão prática."
+  ]
+}

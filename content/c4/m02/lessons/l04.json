@@ -1,0 +1,111 @@
+{
+  "id": "c4-m02-l04",
+  "cycle": "c4",
+  "module": "m02",
+  "order": 4,
+  "title": "Câmbio e poder de compra",
+  "headline": "Mudanças na taxa de câmbio afetam o poder de compra sobre produtos importados.",
+  "objectives": [
+    "Relacionar a taxa de câmbio ao poder de compra",
+    "Comparar o efeito do câmbio sobre produtos nacionais e importados"
+  ],
+  "competencies": ["F-D4-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF04",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Dois tipos de produto",
+      "body": "O poder de compra sobre produtos nacionais depende principalmente de preços internos. Já o poder de compra sobre produtos importados também depende da taxa de câmbio, que pode mudar o preço em reais mesmo sem o produto mudar.",
+      "illustration": "item-pricetag"
+    },
+    {
+      "type": "classify",
+      "prompt": "Classifique o efeito de cada cenário sobre o preço em reais de um produto importado:",
+      "categories": [
+        {
+          "id": "cheaper",
+          "label": "Fica mais barato",
+          "short": "Menos reais",
+          "icon": "price",
+          "tone": "teal"
+        },
+        {
+          "id": "pricier",
+          "label": "Fica mais caro",
+          "short": "Mais reais",
+          "icon": "limit",
+          "tone": "coral"
+        },
+        {
+          "id": "same",
+          "label": "Não muda por esse motivo",
+          "short": "Câmbio estável",
+          "icon": "info",
+          "tone": "amber"
+        }
+      ],
+      "items": [
+        {
+          "id": "strong",
+          "label": "O real se valoriza frente à outra moeda",
+          "situation": "É preciso menos reais para comprar a mesma quantidade da outra moeda.",
+          "accepted": ["cheaper"],
+          "feedback": "Com o real valorizado, o produto importado tende a ficar mais barato em reais.",
+          "illustration": "item-coins"
+        },
+        {
+          "id": "weak",
+          "label": "O real se desvaloriza frente à outra moeda",
+          "situation": "É preciso mais reais para comprar a mesma quantidade da outra moeda.",
+          "accepted": ["pricier"],
+          "feedback": "Com o real desvalorizado, o produto importado tende a ficar mais caro em reais.",
+          "illustration": "item-pricetag"
+        },
+        {
+          "id": "stable",
+          "label": "A taxa de câmbio permanece praticamente igual",
+          "situation": "O valor do real em relação à outra moeda não muda de forma relevante.",
+          "accepted": ["same"],
+          "feedback": "Sem mudança relevante no câmbio, o preço em reais tende a não variar por esse motivo.",
+          "illustration": "item-notebook"
+        }
+      ]
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre câmbio e poder de compra:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "O poder de compra sobre produtos importados depende também da taxa de câmbio.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: o câmbio influencia o preço em reais do produto importado."
+        },
+        {
+          "id": "s2",
+          "text": "Produtos nacionais nunca têm o preço influenciado pela taxa de câmbio.",
+          "isTrue": false,
+          "explanation": "Mesmo produtos nacionais podem usar insumos importados, sofrendo influência indireta."
+        },
+        {
+          "id": "s3",
+          "text": "Com o real mais valorizado, produtos importados tendem a ficar mais baratos em reais.",
+          "isTrue": true,
+          "explanation": "Exato: um real mais valorizado reduz o custo em reais de produtos importados."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "O poder de compra sobre produtos importados depende da taxa de câmbio.",
+    "Um real mais valorizado tende a baratear produtos importados em reais."
+  ]
+}

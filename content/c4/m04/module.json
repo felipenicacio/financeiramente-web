@@ -1,0 +1,168 @@
+{
+  "id": "m04",
+  "cycle": "c4",
+  "order": 4,
+  "code": "C4.4",
+  "title": "Crédito e modalidades de financiamento",
+  "headline": "Cada modalidade de crédito tem um custo e um risco diferentes.",
+  "summary": "Comparar modalidades de crédito e reconhecer riscos de endividamento apoia decisões mais seguras.",
+  "competencies": ["F-D6-C4-01"],
+  "integrative": {
+    "title": "Juntando tudo",
+    "intro": "Vamos ver o que você descobriu sobre crédito e modalidades de financiamento?",
+    "object": {
+      "type": "quiz",
+      "title": "O que você descobriu",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Uma modalidade de crédito é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Uma forma específica de tomar dinheiro emprestado, com regras próprias"
+            },
+            {
+              "id": "b",
+              "label": "O mesmo que pagar uma compra à vista"
+            },
+            {
+              "id": "c",
+              "label": "Um tipo de conta de poupança"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Cada modalidade de crédito tem regras próprias de prazo, garantia e custo.",
+          "illustration": "item-wallet"
+        },
+        {
+          "id": "q2",
+          "kind": "explanation",
+          "prompt": "Comparar o custo total de diferentes modalidades de crédito ajuda a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Identificar qual delas é mais cara no total"
+            },
+            {
+              "id": "b",
+              "label": "Garantir que todas custam exatamente o mesmo"
+            },
+            {
+              "id": "c",
+              "label": "Evitar qualquer tipo de comparação"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Modalidades diferentes podem ter custos totais bem diferentes para o mesmo valor emprestado."
+        },
+        {
+          "id": "q3",
+          "kind": "recognition",
+          "prompt": "Um sinal de risco de endividamento é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Usar crédito novo repetidamente só para pagar dívidas antigas"
+            },
+            {
+              "id": "b",
+              "label": "Pagar uma fatura inteira na data combinada"
+            },
+            {
+              "id": "c",
+              "label": "Guardar parte da renda todo mês"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Recorrer a crédito novo para pagar dívidas antigas é um sinal de alerta de endividamento."
+        },
+        {
+          "id": "q4",
+          "kind": "explanation",
+          "prompt": "Uma garantia, numa modalidade de crédito, serve para",
+          "options": [
+            {
+              "id": "a",
+              "label": "Reduzir o risco de quem empresta o dinheiro"
+            },
+            {
+              "id": "b",
+              "label": "Eliminar completamente os juros cobrados"
+            },
+            {
+              "id": "c",
+              "label": "Aumentar sempre o valor emprestado"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "A garantia protege quem empresta, caso a dívida não seja paga."
+        },
+        {
+          "id": "q5",
+          "kind": "decision",
+          "prompt": "Antes de escolher uma modalidade de crédito, vale",
+          "options": [
+            {
+              "id": "a",
+              "label": "Comparar o custo total e avaliar a própria capacidade de pagamento"
+            },
+            {
+              "id": "b",
+              "label": "Escolher apenas a opção com a parcela mais baixa"
+            },
+            {
+              "id": "c",
+              "label": "Ignorar completamente o prazo de pagamento"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "O custo total e a capacidade real de pagamento são critérios centrais nessa escolha."
+        }
+      ]
+    }
+  },
+  "conclusion": {
+    "title": "Você concluiu o módulo",
+    "message": "Cada modalidade de crédito tem um custo e um risco próprios. Comparar o custo total e reconhecer sinais de endividamento ajuda a decidir com mais segurança.",
+    "recap": [
+      {
+        "icon": "money",
+        "tone": "coral",
+        "text": "Cada modalidade de crédito tem regras próprias de prazo e custo."
+      },
+      {
+        "icon": "limit",
+        "tone": "amber",
+        "text": "Comparar o custo total revela qual opção é mais cara."
+      },
+      {
+        "icon": "info",
+        "tone": "teal",
+        "text": "Usar crédito novo para pagar dívidas antigas é sinal de alerta."
+      },
+      {
+        "icon": "safe",
+        "tone": "cyan",
+        "text": "Uma garantia reduz o risco de quem empresta o dinheiro."
+      }
+    ]
+  },
+  "theme": "lendo"
+}

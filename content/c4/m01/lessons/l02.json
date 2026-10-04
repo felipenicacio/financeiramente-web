@@ -1,0 +1,83 @@
+{
+  "id": "c4-m01-l02",
+  "cycle": "c4",
+  "module": "m01",
+  "order": 2,
+  "title": "Escolhas entre presente e futuro",
+  "headline": "Uma escolha intertemporal pesa um benefício agora contra um benefício depois.",
+  "objectives": [
+    "Compreender o conceito de escolha intertemporal",
+    "Relacionar esse conceito a decisões financeiras do dia a dia"
+  ],
+  "competencies": ["F-D1-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF01",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Hoje ou depois",
+      "body": "Uma escolha intertemporal compara um benefício disponível agora com um benefício maior, mas que só chega depois de esperar. Guardar parte da renda em vez de gastar tudo agora é um exemplo comum.",
+      "illustration": "item-jar"
+    },
+    {
+      "type": "concepts",
+      "title": "Duas lógicas possíveis",
+      "intro": "Em uma escolha intertemporal, duas lógicas entram em jogo.",
+      "concepts": [
+        {
+          "id": "now",
+          "label": "Benefício imediato",
+          "short": "Agora",
+          "description": "Um ganho ou prazer disponível no momento presente.",
+          "icon": "want",
+          "tone": "coral"
+        },
+        {
+          "id": "later",
+          "label": "Benefício futuro",
+          "short": "Depois",
+          "description": "Um ganho maior, que só se realiza após um período de espera.",
+          "icon": "later",
+          "tone": "teal"
+        }
+      ],
+      "keyIdea": "Decidir entre presente e futuro é uma escolha intertemporal, presente em metas, estudos e planejamento financeiro.",
+      "keyIdeaIllustration": "item-notebook"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre escolhas intertemporais:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Uma escolha intertemporal compara um benefício agora com um benefício futuro.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: ela pesa o presente contra o futuro."
+        },
+        {
+          "id": "s2",
+          "text": "Guardar parte da renda para o futuro é um exemplo de escolha intertemporal.",
+          "isTrue": true,
+          "explanation": "Exato: envolve abrir mão de algo agora por um benefício futuro."
+        },
+        {
+          "id": "s3",
+          "text": "Escolhas intertemporais nunca envolvem espera.",
+          "isTrue": false,
+          "explanation": "A espera é justamente parte central desse tipo de escolha."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Uma escolha intertemporal compara o presente e o futuro.",
+    "Guardar parte da renda é um exemplo comum desse tipo de escolha."
+  ]
+}

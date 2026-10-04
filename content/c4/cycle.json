@@ -1,0 +1,48 @@
+{
+  "cycle": "c4",
+  "title": "O que descobrimos?",
+  "intro": "Depois dos seis módulos, veja quantas ideias você já consegue aplicar na vida econômica.",
+  "discoveries": [
+    {
+      "text": "Toda escolha financeira tem um custo de oportunidade: o que fica de lado.",
+      "icon": "choice",
+      "tone": "amber",
+      "module": "m01"
+    },
+    {
+      "text": "Câmbio e fatores macroeconômicos afetam preços além de uma única compra.",
+      "icon": "change",
+      "tone": "teal",
+      "module": "m02"
+    },
+    {
+      "text": "Comparar cenários ajuda a planejar decisões de vida com mais clareza.",
+      "icon": "goal",
+      "tone": "cyan",
+      "module": "m03"
+    },
+    {
+      "text": "Cada modalidade de crédito tem um custo e um risco próprios.",
+      "icon": "limit",
+      "tone": "purple",
+      "module": "m04"
+    },
+    {
+      "text": "Produtividade, tributos e lucro se conectam na vida econômica do trabalho.",
+      "icon": "work",
+      "tone": "green",
+      "module": "m05"
+    },
+    {
+      "text": "Contexto econômico, investimentos e políticas públicas afetam a vida financeira de todos.",
+      "icon": "info",
+      "tone": "coral",
+      "module": "m06"
+    }
+  ],
+  "guide": {
+    "state": "reflect",
+    "text": "Qual desses temas você já pode acompanhar com mais atenção nas notícias desta semana?"
+  },
+  "closing": "Essas ideias aparecem numa decisão de carreira, numa notícia sobre juros, num contracheque. Vale revisitar sempre que surgir uma dessas situações."
+}

@@ -1,0 +1,64 @@
+{
+  "id": "c4-m04-l03",
+  "cycle": "c4",
+  "module": "m04",
+  "order": 3,
+  "title": "Sinais de risco de endividamento",
+  "headline": "Alguns sinais ajudam a reconhecer um risco crescente de endividamento.",
+  "objectives": [
+    "Reconhecer sinais de risco de endividamento",
+    "Entender a importância de agir diante desses sinais"
+  ],
+  "competencies": ["F-D6-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF06",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N3",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Quando a dívida começa a pesar",
+      "body": "Usar crédito novo repetidamente só para pagar dívidas antigas, não conseguir quitar o valor mínimo de uma fatura por vários meses seguidos e perder o controle sobre quanto se deve são sinais de risco de endividamento crescente.",
+      "illustration": "item-wallet"
+    },
+    {
+      "type": "reflection",
+      "state": "reflect",
+      "text": "Notar um sinal de alerta é o primeiro passo para buscar ajuda.",
+      "body": "Conversar com alguém de confiança ou buscar orientação é um passo válido diante de sinais de endividamento crescente."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre sinais de risco de endividamento:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Usar crédito novo repetidamente só para pagar dívidas antigas é um sinal de alerta.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: esse padrão costuma indicar uma dívida crescente."
+        },
+        {
+          "id": "s2",
+          "text": "Perder o controle sobre quanto se deve nunca é motivo de atenção.",
+          "isTrue": false,
+          "explanation": "Perder esse controle é justamente um sinal importante de alerta."
+        },
+        {
+          "id": "s3",
+          "text": "Buscar orientação diante de sinais de endividamento é um passo válido.",
+          "isTrue": true,
+          "explanation": "Exato: conversar com alguém de confiança ajuda a lidar com a situação."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Usar crédito novo para pagar dívidas antigas é um sinal de alerta.",
+    "Buscar orientação diante desses sinais é um passo importante."
+  ]
+}

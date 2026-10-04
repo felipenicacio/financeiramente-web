@@ -1,0 +1,83 @@
+{
+  "id": "c4-m01-l04",
+  "cycle": "c4",
+  "module": "m01",
+  "order": 4,
+  "title": "Vieses de consumo",
+  "headline": "Um viés de consumo afasta a decisão de uma análise puramente racional.",
+  "objectives": [
+    "Reconhecer vieses de consumo comuns",
+    "Relacionar vieses a decisões de compra do dia a dia"
+  ],
+  "competencies": ["F-D2-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF02",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Nem sempre é só razão",
+      "body": "Vieses de consumo são tendências que influenciam a decisão de compra além de uma análise puramente racional de preço e necessidade. Comprar por impulso, por comparação social ou por um desconto chamativo são exemplos comuns.",
+      "illustration": "item-pricetag"
+    },
+    {
+      "type": "concepts",
+      "title": "Alguns vieses comuns",
+      "intro": "Conhecer alguns vieses ajuda a reconhecê-los na prática.",
+      "concepts": [
+        {
+          "id": "anchor",
+          "label": "Ancoragem",
+          "short": "Primeiro preço visto",
+          "description": "Comparar um preço com o primeiro valor visto, mesmo que ele não seja o mais relevante.",
+          "icon": "price",
+          "tone": "amber"
+        },
+        {
+          "id": "impulse",
+          "label": "Decisão por impulso",
+          "short": "Sem pausa",
+          "description": "Decidir rápido, sem comparar outras opções ou avaliar a real necessidade.",
+          "icon": "wait",
+          "tone": "coral"
+        }
+      ],
+      "keyIdea": "Reconhecer esses padrões ajuda a decidir com mais consciência, sem eliminar o prazer de comprar algo que faça sentido.",
+      "keyIdeaIllustration": "item-notebook"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre vieses de consumo:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Um viés de consumo afasta a decisão de uma análise puramente racional.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: é uma tendência que influencia a decisão além do preço e da necessidade."
+        },
+        {
+          "id": "s2",
+          "text": "Ancoragem é comparar um preço com o primeiro valor visto.",
+          "isTrue": true,
+          "explanation": "Exato: o primeiro valor visto costuma servir de referência, mesmo sem ser o mais relevante."
+        },
+        {
+          "id": "s3",
+          "text": "Reconhecer um viés de consumo é impossível.",
+          "isTrue": false,
+          "explanation": "Com atenção, é possível reconhecer e considerar esses padrões antes de decidir."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Vieses de consumo afastam a decisão de uma análise puramente racional.",
+    "Ancoragem e decisão por impulso são exemplos comuns."
+  ]
+}
