@@ -1,0 +1,36 @@
+name: Format visual changes
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/format-visual.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Format changed visual/content files
+        run: |
+          npx prettier --write             components/illustrations/Illustration.tsx             components/illustrations/scenes.tsx             components/illustrations/itemsC1.tsx             content/c1/m01/lessons/*.json             content/c1/m02/lessons/*.json
+      - name: Commit formatting
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add components/illustrations content/c1/m01/lessons content/c1/m02/lessons
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "style: formatar alterações visuais"
+          git push origin HEAD:main
