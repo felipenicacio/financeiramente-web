@@ -1,8 +1,8 @@
-import { Illustration } from '@/components/illustrations';
 import { AppHeader } from '@/components/layout/AppHeader';
 import { PageContainer } from '@/components/layout/PageContainer';
 import { ButtonLink } from '@/components/ui/Button';
 import { Icon } from '@/components/ui/Icon';
+import { publicAsset } from '@/lib/asset';
 import { t } from '@/lib/content/ui';
 import { routes } from '@/lib/learning/steps';
 
@@ -36,7 +36,14 @@ export default function HomePage() {
           </div>
           <div className="order-1 md:order-2">
             <div className="rounded-hero bg-surface p-4 shadow-card sm:p-8">
-              <Illustration name="home-hero" className="w-full" />
+              {/* eslint-disable-next-line @next/next/no-img-element -- exportação estática, sem otimizador de imagem */}
+              <img
+                src={publicAsset('/images/home-hero.webp')}
+                alt="Uma família reunida à mesa conversando sobre escolhas financeiras, com moedas e um pote de poupança"
+                width={1100}
+                height={825}
+                className="w-full rounded-card"
+              />
             </div>
           </div>
         </PageContainer>
