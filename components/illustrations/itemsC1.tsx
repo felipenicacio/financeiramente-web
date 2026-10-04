@@ -195,58 +195,103 @@ const FinanceBasics: Shape = () => (
 
 const CoinModern: Shape = () => (
   <g>
-    <ellipse cx={60} cy={92} rx={36} ry={9} fill={p.amber100} />
-    <circle cx={60} cy={58} r={39} fill={p.amber700} opacity={0.28} />
-    <circle cx={60} cy={54} r={39} fill={p.amber500} stroke={p.amber700} strokeWidth={3} />
-    <circle cx={60} cy={54} r={29} fill={p.amber100} opacity={0.38} />
-    <circle cx={60} cy={54} r={23} fill="none" stroke={p.amber700} strokeWidth={3} />
-    <path d="M46 53h28M60 39v30" stroke={p.amber700} strokeWidth={4} strokeLinecap="round" />
-    <ellipse cx={46} cy={37} rx={8} ry={4} fill={p.white} opacity={0.55} transform="rotate(-28 46 37)" />
+    <defs>
+      <radialGradient id="coinGoldC1" cx="38%" cy="30%" r="70%">
+        <stop offset="0%" stopColor="#fff2a6" />
+        <stop offset="45%" stopColor="#f9c64a" />
+        <stop offset="100%" stopColor="#d7830d" />
+      </radialGradient>
+      <filter id="coinShadowC1" x="-30%" y="-30%" width="160%" height="180%">
+        <feDropShadow dx="0" dy="5" stdDeviation="4" floodColor="#7a4a13" floodOpacity="0.24" />
+      </filter>
+    </defs>
+    <ellipse cx={60} cy={99} rx={38} ry={8} fill={p.amber700} opacity={0.16} />
+    <g filter="url(#coinShadowC1)">
+      <circle cx={60} cy={55} r={39} fill="url(#coinGoldC1)" stroke={p.amber700} strokeWidth={3} />
+      <circle cx={60} cy={55} r={30} fill="none" stroke="#fff1a6" strokeWidth={3} opacity={0.9} />
+      <path
+        d="m60 35 6.2 12.5 13.8 2-10 9.7 2.4 13.8L60 66.5 47.6 73 50 59.2l-10-9.7 13.8-2Z"
+        fill="#fff0a0"
+        stroke={p.amber700}
+        strokeWidth={2}
+        strokeLinejoin="round"
+      />
+      <ellipse cx={46} cy={36} rx={9} ry={4} fill={p.white} opacity={0.68} transform="rotate(-30 46 36)" />
+    </g>
   </g>
 );
 
 const BanknoteModern: Shape = () => (
-  <g transform="rotate(-6 60 60)">
-    <rect x={10} y={34} width={100} height={58} rx={10} fill={p.green700} opacity={0.18} />
-    <rect x={10} y={29} width={100} height={58} rx={10} fill={p.green100} stroke={p.green700} strokeWidth={3} />
-    <rect x={18} y={37} width={84} height={42} rx={7} fill={p.white} opacity={0.42} />
-    <circle cx={60} cy={58} r={15} fill={p.green500} />
-    <circle cx={60} cy={58} r={9} fill="none" stroke={p.green700} strokeWidth={2.5} />
-    <path d="M25 45h16M79 71h16" stroke={p.green700} strokeWidth={4} strokeLinecap="round" />
-    <ellipse cx={34} cy={41} rx={7} ry={3} fill={p.white} opacity={0.65} />
+  <g>
+    <defs>
+      <linearGradient id="noteGreenC1" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stopColor="#dff7d8" />
+        <stop offset="55%" stopColor="#8fd08a" />
+        <stop offset="100%" stopColor="#4b9b65" />
+      </linearGradient>
+      <filter id="noteShadowC1" x="-30%" y="-40%" width="170%" height="190%">
+        <feDropShadow dx="0" dy="5" stdDeviation="4" floodColor="#214b34" floodOpacity="0.22" />
+      </filter>
+    </defs>
+    <g transform="rotate(-6 60 60)" filter="url(#noteShadowC1)">
+      <rect x={9} y={29} width={102} height={60} rx={11} fill="url(#noteGreenC1)" stroke={p.green700} strokeWidth={3} />
+      <rect x={18} y={38} width={84} height={42} rx={8} fill={p.white} opacity={0.26} />
+      <circle cx={60} cy={59} r={16} fill={p.green100} stroke={p.green700} strokeWidth={2.5} />
+      <path d="M54 66c2-7 10-7 12 0M54 54c3-5 9-5 12 0" stroke={p.green700} strokeWidth={2.5} fill="none" strokeLinecap="round" />
+      <circle cx={60} cy={51} r={4} fill={p.green700} />
+      <path d="M23 45h15M82 73h15" stroke={p.green700} strokeWidth={4} strokeLinecap="round" />
+      <ellipse cx={31} cy={39} rx={8} ry={3} fill={p.white} opacity={0.72} />
+    </g>
   </g>
 );
 
 const CoinsModern: Shape = () => (
   <g>
-    <ellipse cx={60} cy={100} rx={43} ry={8} fill={p.amber100} />
-    {[84, 72, 60].map((y, index) => (
+    <defs>
+      <linearGradient id="stackGoldC1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor="#ffe992" />
+        <stop offset="55%" stopColor="#f4b52e" />
+        <stop offset="100%" stopColor="#c8740a" />
+      </linearGradient>
+    </defs>
+    <ellipse cx={60} cy={101} rx={44} ry={8} fill={p.amber700} opacity={0.18} />
+    {[86, 74, 62].map((y) => (
       <g key={y}>
-        <ellipse cx={44} cy={y + 5} rx={25} ry={8} fill={p.amber700} opacity={0.36} />
-        <ellipse cx={44} cy={y} rx={25} ry={8} fill={p.amber500} stroke={p.amber700} strokeWidth={2} />
-        {index === 0 ? <ellipse cx={37} cy={y - 2} rx={8} ry={2.5} fill={p.white} opacity={0.5} /> : null}
+        <ellipse cx={44} cy={y + 5} rx={26} ry={8} fill={p.amber700} opacity={0.38} />
+        <ellipse cx={44} cy={y} rx={26} ry={8} fill="url(#stackGoldC1)" stroke={p.amber700} strokeWidth={2} />
       </g>
     ))}
-    <circle cx={82} cy={48} r={24} fill={p.amber500} stroke={p.amber700} strokeWidth={3} />
-    <circle cx={82} cy={48} r={15} fill="none" stroke={p.amber700} strokeWidth={2.5} />
-    <ellipse cx={73} cy={38} rx={7} ry={3} fill={p.white} opacity={0.55} transform="rotate(-25 73 38)" />
+    <circle cx={82} cy={47} r={25} fill="url(#stackGoldC1)" stroke={p.amber700} strokeWidth={3} />
+    <circle cx={82} cy={47} r={17} fill="none" stroke="#fff0a1" strokeWidth={2.5} />
+    <path
+      d="m82 36 3.5 7.1 7.8 1.1-5.7 5.5 1.4 7.8-7-3.7-7 3.7 1.4-7.8-5.7-5.5 7.8-1.1Z"
+      fill="#fff0a1"
+      stroke={p.amber700}
+      strokeWidth={1.5}
+    />
+    <ellipse cx={73} cy={37} rx={7} ry={3} fill={p.white} opacity={0.62} transform="rotate(-25 73 37)" />
   </g>
 );
 
 const ToyRepair: Shape = () => (
   <g>
-    <rect x={24} y={42} width={52} height={42} rx={12} fill={p.purple500} />
-    <circle cx={40} cy={59} r={6} fill={p.white} />
-    <circle cx={60} cy={59} r={6} fill={p.white} />
-    <rect x={36} y={72} width={28} height={18} rx={7} fill={p.purple100} />
-    <path d="M50 42V30" stroke={p.purple700} strokeWidth={4} strokeLinecap="round" />
-    <circle cx={50} cy={27} r={5} fill={p.coral500} />
-    <g transform="translate(66 50) rotate(-35)">
-      <rect x={0} y={0} width={12} height={48} rx={6} fill={p.cyan700} />
-      <path d="M-3 0h18l-3 14H0Z" fill={p.cyan500} />
-      <circle cx={6} cy={41} r={3} fill={p.white} />
+    <ellipse cx={60} cy={102} rx={42} ry={7} fill={p.slate200} opacity={0.65} />
+    <g transform="translate(4 4)">
+      <rect x={20} y={40} width={56} height={44} rx={13} fill={p.purple500} stroke={p.purple700} strokeWidth={2.5} />
+      <circle cx={38} cy={58} r={7} fill={p.white} />
+      <circle cx={58} cy={58} r={7} fill={p.white} />
+      <circle cx={39} cy={59} r={2.5} fill={p.navy} />
+      <circle cx={59} cy={59} r={2.5} fill={p.navy} />
+      <path d="M39 74q9 7 18 0" stroke={p.navy} strokeWidth={2.5} fill="none" strokeLinecap="round" />
+      <path d="M48 40V28" stroke={p.purple700} strokeWidth={4} strokeLinecap="round" />
+      <circle cx={48} cy={25} r={5} fill={p.coral500} />
     </g>
-    <path d="M22 96h76" stroke={p.slate200} strokeWidth={6} strokeLinecap="round" />
+    <g transform="translate(69 43) rotate(-35)">
+      <rect width={13} height={51} rx={6.5} fill={p.cyan700} />
+      <path d="M-3 0h19l-3 15H0Z" fill={p.cyan500} stroke={p.cyan700} strokeWidth={1.5} />
+      <circle cx={6.5} cy={42} r={3} fill={p.white} />
+    </g>
+    <circle cx={84} cy={91} r={7} fill={p.amber500} stroke={p.amber700} strokeWidth={2} />
   </g>
 );
 
