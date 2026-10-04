@@ -20,12 +20,12 @@ content/
 
 | Módulo | Título                              | Competências                       | Tema |
 | ------ | ----------------------------------- | ---------------------------------- | ---- |
-| C1.1   | O dinheiro está por toda parte      | F-D4-C1-01, F-D7-C1-01             | m02  |
-| C1.2   | Quero, preciso ou posso esperar?    | F-D1-C1-01, F-D5-C1-01             | m01  |
-| C1.3   | Preço, comparação e troco           | F-D4-C1-01, F-D5-C1-01             | m02  |
-| C1.4   | Trabalho, renda, bens e serviços    | F-D7-C1-01                         | m04  |
-| C1.5   | Guardar e cuidar                    | F-D8-C1-01, F-D5-C1-01             | —    |
-| C1.6   | Escolhas, influência e convivência  | F-D2-C1-01, F-D8-C1-01, F-D9-C1-01 | m03  |
+| C1.1   | O dinheiro está por toda parte      | F-D4-C1-01, F-D7-C1-01             | descoberta |
+| C1.2   | Quero, preciso ou posso esperar?    | F-D1-C1-01, F-D5-C1-01             | pensando |
+| C1.3   | Preço, comparação e troco           | F-D4-C1-01, F-D5-C1-01             | comparando |
+| C1.4   | Trabalho, renda, bens e serviços    | F-D7-C1-01                         | lendo |
+| C1.5   | Guardar e cuidar                    | F-D8-C1-01, F-D5-C1-01             | feliz |
+| C1.6   | Escolhas, influência e convivência  | F-D2-C1-01, F-D8-C1-01, F-D9-C1-01 | explicando |
 
 Navegação livre: módulos e lições podem ser abertos em qualquer ordem. Nada é bloqueado e nada é salvo entre visitas.
 
@@ -60,7 +60,7 @@ Discriminados por `type`. O motor (`components/learning/LessonRunner.tsx`) achat
 
 ## O módulo (`module.json`)
 
-Campos: `id`, `cycle`, `order`, `code` (ex. `C1.1`), `title`, `headline`, `summary`, `theme?` (`m01`–`m04`, imagem temática do Econominho), `competencies[]`, `integrative` (`title`, `intro`, `object`: um objeto de conteúdo, em geral um `quiz`) e `conclusion` (`title`, `message`, `recap[]` com ícone, tom e texto).
+Campos: `id`, `cycle`, `order`, `code` (ex. `C1.1`), `title`, `headline`, `summary`, `theme?` (`ModuleTheme`: `descoberta`, `pensando`, `comparando`, `lendo`, `feliz` ou `explicando` — a pose do Econominho, nunca um id de módulo), `competencies[]`, `integrative` (`title`, `intro`, `object`: um objeto de conteúdo, em geral um `quiz`) e `conclusion` (`title`, `message`, `recap[]` com ícone, tom e texto).
 
 O fechamento (`/aprender/<ciclo>/<módulo>/fechamento`) roda a avaliação integradora e mostra "O que descobrimos?". Sem nota, sem percentual, sem certificado.
 
@@ -74,7 +74,7 @@ Regra: **número que aparece na tela e pode ser calculado é calculado no códig
 
 ## Econominho
 
-Guia pedagógico único (personagem aprovado, pacote `econominho-assets-v1`, em `public/econominho/`). Fala por estados: `ask`, `discover`, `compare`, `consequence`, `summary`, `reflect`. Nunca dá ordens financeiras. Regras de voz em [econominho-guide.md](econominho-guide.md).
+Guia pedagógico único (assets individuais aprovados v2, em `public/econominho/`; manifesto em `public/econominho/assets.json`). Fala por estados: `ask`, `discover`, `compare`, `consequence`, `summary`, `reflect`. Nunca dá ordens financeiras. Regras de voz em [econominho-guide.md](econominho-guide.md).
 
 ## Regras codificadas em testes (`tests/content.test.ts`)
 

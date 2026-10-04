@@ -54,17 +54,20 @@ A tela de idades mostra as quatro expressões lado a lado.
 
 ## Marca
 
-Fonte: pacote `econominho-assets-v1` (arquivos de marca técnicos provisórios, direção visual aprovada).
+Fonte: assets individuais aprovados (v2), gerados um a um, sem recortes de folhas de personagem. O manifesto é `public/econominho/assets.json`.
 
-| Arquivo                                     | Uso                                                                          |
-| ------------------------------------------- | ---------------------------------------------------------------------------- |
-| `public/brand/econominho-wordmark.png`      | Logotipo "Econominho" no cabeçalho (`Brand`) e na imagem Open Graph          |
-| `public/brand/econominho-wordmark-mono.png` | Versão monocromática, para fundos de uma cor                                 |
-| `public/brand/econominho-icon.svg`          | Ícone "E" com raios; origem de `public/icons/*`, `favicon.ico` e `BrandMark` |
+| Arquivo                                          | Uso                                                                                  |
+| ------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `public/econominho/logo/wordmark-v2.png`         | Logotipo original aprovado                                                           |
+| `public/econominho/logo/wordmark-v2-header.png`  | Mesma arte, reduzida (640 px) para o cabeçalho (`Brand`) e a imagem Open Graph      |
+| `public/econominho/character/*-v2.png`           | Personagem: avatar de fala por estado, poses de módulo e corpo inteiro               |
+| `public/brand/econominho-icon.svg`               | **Pendente de versão v2:** origem de `public/icons/*` e `favicon.ico` (ver limitação) |
+
+**Limitação conhecida:** ainda não existe um ícone de aplicativo (favicon, ícones do PWA) aprovado na linha v2. Enquanto isso, os ícones usam o "E" técnico anterior. Trocar exige um arquivo de ícone aprovado; depois, `node scripts/generate-icons.mjs`.
 
 Cores da marca: navy `#0B3B75` e amarelo `#FFC83D`. Ficam restritas ao logotipo e aos ícones; a interface continua usando a paleta abaixo.
 
-Para regenerar favicon, ícones do PWA e `og.png` depois de mudar a marca: `node scripts/generate-icons.mjs`.
+Para regenerar favicon e ícones do PWA depois de mudar o ícone: `node scripts/generate-icons.mjs`. A `og.png` usa o wordmark v2.
 
 Nome visível: **Econominho**. Identificadores técnicos (repositório, pacote, domínio, prefixo de cache `fm-`) continuam com o nome anterior nesta etapa.
 

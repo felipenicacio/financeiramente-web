@@ -22,7 +22,10 @@
   },
   "brandAssets": {
     "wordmark": "/econominho/logo/wordmark-v2.png",
-    "appWordmark": "/brand/econominho-wordmark.png",
-    "appMonogram": "/brand/econominho-icon.svg"
+    "wordmarkHeader": "/econominho/logo/wordmark-v2-header.png"
+  },
+  "pending": {
+    "appIcon": "/brand/econominho-icon.svg",
+    "note": "Ainda não há ícone de aplicativo aprovado na linha v2. Este arquivo provisório é a origem de favicon e ícones do PWA até haver um ícone v2."
   }
 }

@@ -1,4 +1,4 @@
-import type { Lesson, Module } from '@/lib/content/types';
+import { moduleThemes, type Lesson, type Module } from '@/lib/content/types';
 import { resolveValues } from '@/lib/learning/expr';
 import { templateTokens } from '@/lib/learning';
 
@@ -413,7 +413,7 @@ export const moduleSchema: Validator = object({
   title: line,
   headline: line,
   summary: paragraph,
-  theme: optional(short),
+  theme: optional(literal(...moduleThemes)),
   competencies: all(array(competency, { min: 1, max: 9 }), uniqueBy()),
   integrative: object({ title: line, intro: paragraph, object: lessonObjectSchema }),
   conclusion: object({

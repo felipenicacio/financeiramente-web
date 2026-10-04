@@ -1,5 +1,5 @@
-import { existsSync, readdirSync } from 'node:fs';
-import { join } from 'node:path';
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
+import { join, relative } from 'node:path';
 
 import {
   availableModules,
@@ -8,6 +8,8 @@ import {
   loadModuleBundle,
 } from '@/lib/content';
 import { econominhoAssets, themePoses } from '@/components/econominho/assets';
+import { moduleThemes } from '@/lib/content/types';
+import ui from '@/content/ui.json';
 import { competencyCodes, sourceCodes } from '@/lib/validation/contentSchemas';
 import type { Lesson } from '@/lib/content/types';
 import competencyCatalog from '@/content/competencies.json';
@@ -179,10 +181,194 @@ describe('assets oficiais do Econominho', () => {
     }
   });
 
-  it('não sobra nenhum asset do pacote antigo (econominho-assets-v1)', () => {
+  it('todo PNG de personagem é um asset individual aprovado (v2)', () => {
     const dir = join(root, 'public', 'econominho', 'character');
     const pngs = readdirSync(dir).filter((name) => name.endsWith('.png'));
     // Todos os PNGs de personagem devem ser os v2 aprovados.
     for (const name of pngs) expect(name.endsWith('-v2.png')).toBe(true);
+  });
+});
+
+// ---------- guardas adicionais da revisão final do C1 ----------
+
+function walk(dir: string): string[] {
+  return readdirSync(dir).flatMap((name) => {
+    if (['node_modules', '.next', 'out', '.git', 'screenshots'].includes(name)) return [];
+    const path = join(dir, name);
+    return statSync(path).isDirectory() ? walk(path) : [path];
+  });
+}
+
+const textFiles = (dirs: string[]) =>
+  dirs
+    .flatMap((dir) => walk(join(root, dir)))
+    .filter((path) => /\.(tsx?|json|md|css|mjs|js)$/.test(path))
+    .map((path) => ({ path: relative(root, path), text: readFileSync(path, 'utf8') }));
+
+describe('módulos: tema (pose do Econominho)', () => {
+  it('cada módulo do C1 usa a pose combinada, nunca um id de módulo', () => {
+    const esperado: Record<string, string> = {
+      m01: 'descoberta',
+      m02: 'pensando',
+      m03: 'comparando',
+      m04: 'lendo',
+      m05: 'feliz',
+      m06: 'explicando',
+    };
+    for (const [moduleId, theme] of Object.entries(esperado)) {
+      const bundle = loadModuleBundle('c1', moduleId);
+      expect(bundle.ok).toBe(true);
+      if (bundle.ok) expect(bundle.data.module.theme).toBe(theme);
+    }
+  });
+
+  it('o tipo ModuleTheme cobre exatamente as poses com arte disponível', () => {
+    expect([...moduleThemes].sort()).toEqual([...themePoses].sort());
+    expect(moduleThemes).not.toContain('m01');
+  });
+});
+
+describe('assets do Econominho: somente v2 individuais aprovados', () => {
+  // A palavra é montada por partes para o próprio teste não acusar a si mesmo.
+  const pacoteAntigo = ['econominho', 'assets', 'v1'].join('-');
+
+  it('nenhum código ou documentação ativa cita o pacote antigo', () => {
+    const files = textFiles(['app', 'components', 'lib', 'content', 'docs', 'public/econominho', 'scripts']);
+    files.push({ path: 'README.md', text: readFileSync(join(root, 'README.md'), 'utf8') });
+    const ofensores = files.filter((f) => f.text.includes(pacoteAntigo)).map((f) => f.path);
+    expect(ofensores).toEqual([]);
+  });
+
+  it('nenhum caminho aponta para arte de personagem sem sufixo -v2', () => {
+    const files = textFiles(['app', 'components', 'lib', 'content', 'public/econominho']);
+    const padrao = /econominho\/character\/[\w-]+\.png/g;
+    const ruins = files.flatMap((f) =>
+      (f.text.match(padrao) ?? []).filter((caminho) => !caminho.endsWith('-v2.png')).map((c) => `${f.path}: ${c}`),
+    );
+    expect(ruins).toEqual([]);
+  });
+
+  it('não restam pastas ou arquivos do pacote antigo em public/econominho', () => {
+    expect(existsSync(join(root, 'public/econominho/themes'))).toBe(false);
+    const logos = readdirSync(join(root, 'public/econominho/logo'));
+    expect(logos.every((name) => name.includes('-v2'))).toBe(true);
+  });
+
+  it('o manifesto declara assets individuais aprovados e todos os caminhos existem', () => {
+    const manifest = JSON.parse(readFileSync(join(root, 'public/econominho/assets.json'), 'utf8'));
+    expect(manifest.source).toMatch(/individuais aprovados/i);
+    const caminhos: string[] = [];
+    const coletar = (valor: unknown) => {
+      if (typeof valor === 'string' && valor.startsWith('/')) caminhos.push(valor);
+      else if (valor && typeof valor === 'object') Object.values(valor).forEach(coletar);
+    };
+    coletar(manifest);
+    expect(caminhos.length).toBeGreaterThan(0);
+    for (const caminho of caminhos) expect(existsSync(join(root, 'public', caminho))).toBe(true);
+  });
+
+  it('o logotipo do cabeçalho usa o wordmark v2', () => {
+    const brand = readFileSync(join(root, 'components/ui/Brand.tsx'), 'utf8');
+    expect(brand).toContain('wordmark-v2');
+    expect(existsSync(join(root, 'public/brand/econominho-wordmark.png'))).toBe(false);
+  });
+});
+
+describe('competências: catálogo oficial', () => {
+  it('cada competência tem código, descrição, ciclo, domínio e sensibilidade', () => {
+    for (const item of competencyCatalog.competencies) {
+      expect(item.code).toMatch(/^F-D[1-9]-C[1-4]-\d{2}$/);
+      expect(item.description.trim().length).toBeGreaterThan(10);
+      expect(item.cycle).toBe(`c${item.code.charAt(6)}`);
+      expect(item.domain).toBe(item.code.slice(2, 4).replace('-', ''));
+      expect(['N1', 'N2', 'N3']).toContain(item.sensitivity);
+    }
+    const codigos = competencyCatalog.competencies.map((item) => item.code);
+    expect(new Set(codigos).size).toBe(36);
+  });
+
+  it('o catálogo e a lista de códigos validados coincidem', () => {
+    const catalogo = competencyCatalog.competencies.map((item) => item.code).sort();
+    expect([...competencyCodes].sort()).toEqual(catalogo);
+  });
+
+  it('toda competência usada por módulos e lições tem descrição legível', () => {
+    const usadas = new Set<string>();
+    for (const lesson of allLessons()) lesson.competencies.forEach((code) => usadas.add(code));
+    for (const { cycle, moduleId } of modules) {
+      const bundle = loadModuleBundle(cycle, moduleId);
+      if (bundle.ok) bundle.data.module.competencies.forEach((code) => usadas.add(code));
+    }
+    expect(usadas.size).toBeGreaterThan(0);
+    for (const code of usadas) expect(competencyDescription(code)?.trim().length).toBeGreaterThan(10);
+  });
+});
+
+describe('personagens das histórias', () => {
+  const criancas = ['Téo', 'Nina', 'Bia', 'Caio'];
+  const adultos = ['Jorge', 'Lúcia', 'Marta', 'Luís', 'Davi', 'Sônia', 'Rosa', 'Rita'];
+  const lugares = ['Brasil'];
+
+  /** Nomes próprios no meio de frases, vindos de todo o texto do C1. */
+  function nomesPropriosNoConteudo(): Set<string> {
+    const textos: string[] = [];
+    const coletar = (valor: unknown, chave = '') => {
+      if (typeof valor === 'string') {
+        if (!['id', 'type', 'illustration', 'icon', 'tone', 'state', 'kind', 'source', 'reference', 'role', 'sensitivity', 'cycle', 'module', 'theme', 'code'].includes(chave)) {
+          textos.push(valor);
+        }
+      } else if (Array.isArray(valor)) valor.forEach((item) => coletar(item, chave));
+      else if (valor && typeof valor === 'object') {
+        Object.entries(valor).forEach(([k, v]) => coletar(v, k));
+      }
+    };
+    for (const lesson of allLessons()) coletar(lesson);
+    for (const { cycle, moduleId } of modules) {
+      const bundle = loadModuleBundle(cycle, moduleId);
+      if (bundle.ok) coletar(bundle.data.module);
+    }
+    const nomes = new Set<string>();
+    for (const texto of textos) {
+      for (const m of texto.matchAll(/\s([A-ZÁÉÍÓÚÂÊÔÃÕÇ][a-záéíóúâêôãõç]+)/g)) {
+        const antes = texto.slice(0, m.index).trimEnd();
+        if (antes === '' || /[.!?:“"”—]$/.test(antes)) continue;
+        nomes.add(m[1] as string);
+      }
+    }
+    return nomes;
+  }
+
+  it('mantém Téo, Nina, Bia e Caio e não cria outros personagens', () => {
+    const nomes = nomesPropriosNoConteudo();
+    for (const nome of criancas) expect(nomes.has(nome)).toBe(true);
+    const conhecidos = new Set([...criancas, ...adultos, ...lugares]);
+    const desconhecidos = [...nomes].filter((nome) => !conhecidos.has(nome));
+    expect(desconhecidos).toEqual([]);
+  });
+
+  it('no máximo quatro crianças recorrentes', () => {
+    expect(criancas).toHaveLength(4);
+  });
+});
+
+describe('sem nota, ranking, certificado ou gamificação', () => {
+  const proibidos = /\b(ranking|certificado|pontua[çc][ãa]o|pontos?|placar|notas?|medalha|estrelas?|troféu|streak)\b|%/i;
+
+  it('o conteúdo do C1 e os textos da interface não usam esse vocabulário', () => {
+    const arquivos = textFiles(['content/c1']).concat([
+      { path: 'content/ui.json', text: JSON.stringify(ui) },
+    ]);
+    const ofensores = arquivos
+      .filter((f) => proibidos.test(f.text))
+      .map((f) => f.path);
+    expect(ofensores).toEqual([]);
+  });
+
+  it('as lições não são bloqueadas: nada no código impede abrir qualquer módulo ou lição', () => {
+    const files = textFiles(['app', 'components', 'lib']);
+    const bloqueios = files
+      .filter((f) => /\b(locked|isLocked|unlockModule|requiresCompletion)\b/.test(f.text))
+      .map((f) => f.path);
+    expect(bloqueios).toEqual([]);
   });
 });

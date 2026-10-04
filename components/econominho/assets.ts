@@ -1,4 +1,4 @@
-import type { GuideState } from '@/lib/content/types';
+import { moduleThemes, type GuideState, type ModuleTheme } from '@/lib/content/types';
 import { publicAsset } from '@/lib/asset';
 
 /**
@@ -36,17 +36,17 @@ const avatarByState: Record<GuideState, string> = {
  * Pose de herói de cada módulo. A chave é a POSE (não o número do módulo),
  * escolhida pelo tema da lição — assim "theme" no conteúdo nunca parece um id.
  */
-const poseByKey = {
+const poseByKey: Record<ModuleTheme, string> = {
   descoberta: '/econominho/character/descoberta-v2.png',
   comparando: '/econominho/character/comparando-v2.png',
   explicando: '/econominho/character/explicando-v2.png',
   lendo: '/econominho/character/lendo-v2.png',
   pensando: '/econominho/character/pensando-v2.png',
   feliz: '/econominho/character/feliz-v2.png',
-} as const;
+};
 
-export type ThemePose = keyof typeof poseByKey;
-export const themePoses = Object.keys(poseByKey) as ThemePose[];
+export type ThemePose = ModuleTheme;
+export const themePoses: readonly ThemePose[] = moduleThemes;
 
 export const econominhoAssets = {
   enabled: true,

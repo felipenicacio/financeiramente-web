@@ -42,6 +42,27 @@ export type Tone = 'teal' | 'coral' | 'amber' | 'cyan' | 'purple' | 'green';
 
 export type IllustrationKey = string;
 
+/**
+ * Pose do Econominho que ilustra o módulo. Nomeia a pose (nunca um id de
+ * módulo). Cada valor corresponde a um PNG individual aprovado (v2).
+ */
+export type ModuleTheme =
+  | 'descoberta'
+  | 'pensando'
+  | 'comparando'
+  | 'lendo'
+  | 'feliz'
+  | 'explicando';
+
+export const moduleThemes: readonly ModuleTheme[] = [
+  'descoberta',
+  'pensando',
+  'comparando',
+  'lendo',
+  'feliz',
+  'explicando',
+];
+
 // ---------- rastreabilidade ----------
 
 /** Códigos de fonte usados na matriz curricular. */
@@ -246,8 +267,8 @@ export type Module = {
   title: string;
   headline: string;
   summary: string;
-  /** Imagem temática do Econominho (m01..m04) ou ausente. */
-  theme?: string;
+  /** Pose do Econominho no cabeçalho do módulo. */
+  theme?: ModuleTheme;
   competencies: string[];
   /** Avaliação integradora do módulo. */
   integrative: { title: string; intro: string; object: LessonObject };
