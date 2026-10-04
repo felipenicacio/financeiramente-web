@@ -33,7 +33,7 @@
           "examples": [
             {
               "label": "Moeda de metal",
-              "illustration": "item-coin"
+              "illustration": "item-coin-modern"
             }
           ]
         },
@@ -47,7 +47,7 @@
           "examples": [
             {
               "label": "Cédula de papel",
-              "illustration": "item-banknote"
+              "illustration": "item-banknote-modern"
             }
           ]
         }
@@ -80,7 +80,7 @@
           "situation": "Você acha no bolso uma pecinha de metal.",
           "accepted": ["coin"],
           "feedback": "Peça de metal e redonda é moeda.",
-          "illustration": "item-coin"
+          "illustration": "item-coin-modern"
         },
         {
           "id": "c2",
@@ -88,7 +88,7 @@
           "situation": "Você recebe um papel colorido de troco.",
           "accepted": ["banknote"],
           "feedback": "Papel colorido com valor é cédula.",
-          "illustration": "item-banknote"
+          "illustration": "item-banknote-modern"
         },
         {
           "id": "c3",
@@ -96,7 +96,7 @@
           "situation": "Você junta várias pecinhas no cofre.",
           "accepted": ["coin"],
           "feedback": "Pecinhas de metal são moedas.",
-          "illustration": "item-coins"
+          "illustration": "item-coins-modern"
         }
       ],
       "prompt": "Moeda ou cédula?",
@@ -111,13 +111,13 @@
           "id": "coin",
           "label": "Uma moeda",
           "price": 1,
-          "illustration": "item-coin"
+          "illustration": "item-coin-modern"
         },
         {
           "id": "note",
           "label": "Uma cédula",
           "price": 10,
-          "illustration": "item-banknote"
+          "illustration": "item-banknote-modern"
         }
       ],
       "feedback": "As cédulas costumam valer mais que as moedas. Por isso guardamos as duas com cuidado."
