@@ -118,7 +118,11 @@ export function StoryView({ object, onComplete }: { object: StoryObject } & Done
               tone="neutral"
               title={t('anyAnswer')}
               body={fillTemplate(chosen.reflection, labels)}
-              note={object.closing ? { title: t('rememberTitle'), body: fillTemplate(object.closing, labels) } : undefined}
+              note={
+                object.closing
+                  ? { title: t('rememberTitle'), body: fillTemplate(object.closing, labels) }
+                  : undefined
+              }
             />
           ) : null}
         </>
@@ -294,7 +298,10 @@ export function CompareView({ object, onComplete }: { object: CompareObject } & 
             <PriceFacts
               rows={[
                 ...object.products.map((p) => ({ label: p.label, value: formatMoney(p.price) })),
-                { label: t('activityDifference'), value: formatMoney(Math.max(...prices) - Math.min(...prices)) },
+                {
+                  label: t('activityDifference'),
+                  value: formatMoney(Math.max(...prices) - Math.min(...prices)),
+                },
               ]}
             />
           }
@@ -309,7 +316,9 @@ export function AffordView({ object, onComplete }: { object: AffordObject } & Do
   const result = choice ? affordResult(object, choice) : null;
   return (
     <section className="flex flex-col gap-5">
-      <ScreenTitle>{fillTemplate(object.prompt, { budget: formatMoney(object.budget) })}</ScreenTitle>
+      <ScreenTitle>
+        {fillTemplate(object.prompt, { budget: formatMoney(object.budget) })}
+      </ScreenTitle>
       <div className="flex flex-col gap-3">
         {object.products.map((product) => (
           <ChoiceCard
@@ -369,7 +378,10 @@ export function ChangeView({ object, onComplete }: { object: ChangeObject } & Do
         <Illustration name="item-banknote" className="size-16" />
       </div>
       <ScreenTitle>
-        {fillTemplate(object.prompt, { paid: formatMoney(object.paid), price: formatMoney(object.product.price) })}
+        {fillTemplate(object.prompt, {
+          paid: formatMoney(object.paid),
+          price: formatMoney(object.product.price),
+        })}
       </ScreenTitle>
       <div className="flex flex-col gap-3">
         {object.options.map((value) => (
@@ -473,7 +485,9 @@ export function OrderingView({ object, onComplete }: { object: OrderingObject } 
 
   return (
     <section className="flex flex-col gap-5">
-      {object.instructions ? <p className="text-label text-ink-soft">{object.instructions}</p> : null}
+      {object.instructions ? (
+        <p className="text-label text-ink-soft">{object.instructions}</p>
+      ) : null}
       <ScreenTitle>{object.prompt}</ScreenTitle>
 
       <ol className="flex flex-col gap-2">
@@ -487,7 +501,9 @@ export function OrderingView({ object, onComplete }: { object: OrderingObject } 
               <span className="grid size-8 shrink-0 place-items-center rounded-full bg-accent-strong text-caption font-bold text-white">
                 {index + 1}
               </span>
-              {item.illustration ? <Illustration name={item.illustration} className="size-9" /> : null}
+              {item.illustration ? (
+                <Illustration name={item.illustration} className="size-9" />
+              ) : null}
               <span className="font-medium">{item.label}</span>
             </li>
           );
@@ -503,7 +519,11 @@ export function OrderingView({ object, onComplete }: { object: OrderingObject } 
               <ChoiceCard
                 key={item.id}
                 label={item.label}
-                leading={item.illustration ? <Illustration name={item.illustration} className="size-10" /> : undefined}
+                leading={
+                  item.illustration ? (
+                    <Illustration name={item.illustration} className="size-10" />
+                  ) : undefined
+                }
                 onSelect={() => {
                   const next = [...picked, item.id];
                   setPicked(next);
@@ -575,7 +595,8 @@ export function TrueFalseView({ object, onComplete }: { object: TrueFalseObject 
                   { v: false, label: t('isFalse') },
                 ].map((opt) => {
                   const chosen = picked === opt.v;
-                  const base = 'min-h-11 flex-1 rounded-full px-4 text-label font-semibold ring-2 ring-inset transition-colors';
+                  const base =
+                    'min-h-11 flex-1 rounded-full px-4 text-label font-semibold ring-2 ring-inset transition-colors';
                   const style = !answered
                     ? 'ring-line hover:ring-line-strong'
                     : chosen
@@ -600,7 +621,10 @@ export function TrueFalseView({ object, onComplete }: { object: TrueFalseObject 
                 })}
               </div>
               {answered ? (
-                <p role="status" className={`text-label ${right ? 'text-green-700' : 'text-cyan-700'}`}>
+                <p
+                  role="status"
+                  className={`text-label ${right ? 'text-green-700' : 'text-cyan-700'}`}
+                >
                   {right ? t('great') : t('thinkAgain')} {s.explanation}
                 </p>
               ) : null}

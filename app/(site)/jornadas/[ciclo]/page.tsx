@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 
 import { CycleProgress } from '@/components/cards/CycleProgress';
 import { ModuleCard } from '@/components/cards/ModuleCard';
+import { themePoses, type ThemePose } from '@/components/econominho/assets';
 import { Illustration } from '@/components/illustrations';
 import { AppHeader } from '@/components/layout/AppHeader';
 import { ContentError } from '@/components/layout/ContentError';
@@ -23,10 +24,8 @@ import { routes } from '@/lib/learning/steps';
 
 type Params = { ciclo: string };
 
-const THEME_KEYS = ['m01', 'm02', 'm03', 'm04'] as const;
-type ThemeKey = (typeof THEME_KEYS)[number];
-const themeOf = (value: string | undefined): ThemeKey | undefined =>
-  (THEME_KEYS as readonly string[]).includes(value ?? '') ? (value as ThemeKey) : undefined;
+const themeOf = (value: string | undefined): ThemePose | undefined =>
+  (themePoses as readonly string[]).includes(value ?? '') ? (value as ThemePose) : undefined;
 
 export const dynamicParams = false;
 
@@ -136,7 +135,12 @@ export default async function JourneysPage({ params }: { params: Promise<Params>
               <Illustration name="home-hero" className="w-48" />
               <h2 className="text-heading font-semibold">{t('cycleSoonTitle')}</h2>
               <p className="text-ink-soft">{t('cycleSoonBody')}</p>
-              <ButtonLink href={routes.age} variant="secondary" icon="arrow-left" iconPosition="start">
+              <ButtonLink
+                href={routes.age}
+                variant="secondary"
+                icon="arrow-left"
+                iconPosition="start"
+              >
                 {t('cycleSoonCta')}
               </ButtonLink>
             </div>

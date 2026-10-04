@@ -5,14 +5,8 @@
   "order": 5,
   "title": "Esperar também é escolher",
   "headline": "Esperar não é perder: é decidir o melhor momento para algo que a gente quer.",
-  "objectives": [
-    "Compreender a espera como uma escolha",
-    "Relacionar esperar a alcançar uma meta"
-  ],
-  "competencies": [
-    "F-D1-C1-01",
-    "F-D5-C1-01"
-  ],
+  "objectives": ["Compreender a espera como uma escolha", "Relacionar esperar a alcançar uma meta"],
+  "competencies": ["F-D1-C1-01", "F-D5-C1-01"],
   "sources": [
     {
       "source": "FB2",
@@ -87,14 +81,32 @@
       "closing": "Não existe uma única resposta certa. Cada escolha traz algo agora e muda o que acontece depois."
     },
     {
+      "type": "choice",
+      "prompt": "Você ganhou um dinheiro de presente e está juntando para uma bola. O que ajuda a juntar mais rápido?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Guardar uma partinha agora",
+          "reflection": "Boa: guardar um pouco de cada vez deixa a meta mais perto."
+        },
+        {
+          "id": "b",
+          "label": "Gastar tudo em outra coisa",
+          "reflection": "Você pode, mas aí a bola vai demorar mais para chegar."
+        },
+        {
+          "id": "c",
+          "label": "Esperar e pensar com calma",
+          "reflection": "Esperar é uma escolha esperta quando você quer algo maior."
+        }
+      ]
+    },
+    {
       "type": "reflection",
       "state": "reflect",
       "text": "Esperar não é desistir. É escolher o melhor momento para algo que a gente quer.",
       "body": "Quando você espera para juntar, uma meta maior fica mais perto."
     }
   ],
-  "summary": [
-    "Esperar é escolher o melhor momento.",
-    "Esperar ajuda a alcançar uma meta maior."
-  ]
+  "summary": ["Esperar é escolher o melhor momento.", "Esperar ajuda a alcançar uma meta maior."]
 }

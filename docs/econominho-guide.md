@@ -2,7 +2,7 @@
 
 > **VISUAL DO PERSONAGEM — PENDENTE DE APROVAÇÃO**
 >
-> Este documento define só a função pedagógica, a personalidade, o tom de voz, o uso no UX e os estados necessários. Aparência, formas, cores, poses desenhadas e expressões visuais do personagem estão sendo criadas fora desta etapa. Até a aprovação, a interface usa um marcador neutro (balão de fala num círculo tracejado), que não é o personagem.
+> Este documento define a função pedagógica, a personalidade, o tom de voz, o uso no UX e os estados do Econominho. A arte é composta pelos PNGs individuais aprovados (v2) em `public/econominho/character/`, mapeados por estado em `components/econominho/assets.ts`.
 
 ## Função pedagógica
 

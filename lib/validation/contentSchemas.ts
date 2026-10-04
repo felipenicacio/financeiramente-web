@@ -1,4 +1,4 @@
-import type { Lesson, Module } from '@/lib/content/types';
+import { moduleThemes, type Lesson, type Module } from '@/lib/content/types';
 import { resolveValues } from '@/lib/learning/expr';
 import { templateTokens } from '@/lib/learning';
 
@@ -17,23 +17,70 @@ import {
 
 /** Catálogo oficial das 36 competências (Matriz Curricular v1.0). */
 export const competencyCodes = [
-  'F-D1-C1-01','F-D1-C2-01','F-D1-C3-01','F-D1-C4-01',
-  'F-D2-C1-01','F-D2-C2-01','F-D2-C3-01','F-D2-C4-01',
-  'F-D3-C1-01','F-D3-C2-01','F-D3-C3-01','F-D3-C4-01',
-  'F-D4-C1-01','F-D4-C2-01','F-D4-C3-01','F-D4-C4-01',
-  'F-D5-C1-01','F-D5-C2-01','F-D5-C3-01','F-D5-C4-01',
-  'F-D6-C1-01','F-D6-C2-01','F-D6-C3-01','F-D6-C4-01',
-  'F-D7-C1-01','F-D7-C2-01','F-D7-C3-01','F-D7-C4-01',
-  'F-D8-C1-01','F-D8-C2-01','F-D8-C3-01','F-D8-C4-01',
-  'F-D9-C1-01','F-D9-C2-01','F-D9-C3-01','F-D9-C4-01',
+  'F-D1-C1-01',
+  'F-D1-C2-01',
+  'F-D1-C3-01',
+  'F-D1-C4-01',
+  'F-D2-C1-01',
+  'F-D2-C2-01',
+  'F-D2-C3-01',
+  'F-D2-C4-01',
+  'F-D3-C1-01',
+  'F-D3-C2-01',
+  'F-D3-C3-01',
+  'F-D3-C4-01',
+  'F-D4-C1-01',
+  'F-D4-C2-01',
+  'F-D4-C3-01',
+  'F-D4-C4-01',
+  'F-D5-C1-01',
+  'F-D5-C2-01',
+  'F-D5-C3-01',
+  'F-D5-C4-01',
+  'F-D6-C1-01',
+  'F-D6-C2-01',
+  'F-D6-C3-01',
+  'F-D6-C4-01',
+  'F-D7-C1-01',
+  'F-D7-C2-01',
+  'F-D7-C3-01',
+  'F-D7-C4-01',
+  'F-D8-C1-01',
+  'F-D8-C2-01',
+  'F-D8-C3-01',
+  'F-D8-C4-01',
+  'F-D9-C1-01',
+  'F-D9-C2-01',
+  'F-D9-C3-01',
+  'F-D9-C4-01',
 ] as const;
 const competencySet = new Set<string>(competencyCodes);
 
 export const sourceCodes = ['FB1', 'FB2', 'AV-C', 'AV-P', 'MC', 'BNCC'] as const;
 export const toneValues = ['teal', 'coral', 'amber', 'cyan', 'purple', 'green'] as const;
 export const conceptIconValues = [
-  'need','want','wait','money','price','change','care','shared','ad','info','persuade',
-  'work','good','service','income','limit','later','choice','trade','save','goal','safe',
+  'need',
+  'want',
+  'wait',
+  'money',
+  'price',
+  'change',
+  'care',
+  'shared',
+  'ad',
+  'info',
+  'persuade',
+  'work',
+  'good',
+  'service',
+  'income',
+  'limit',
+  'later',
+  'choice',
+  'trade',
+  'save',
+  'goal',
+  'safe',
 ] as const;
 
 const short = string({ maxLength: 48 });
@@ -117,12 +164,20 @@ const story = withRules(
         ...money(v, `${path}.${k}`),
       ]);
     }),
-    derived: optional(all(array(object({ name, expr: string({ maxLength: 120 }) })), uniqueBy('name'))),
-    panels: all(array(object({ id, illustration, text: paragraph }), { min: 1, max: 6 }), uniqueBy('id')),
+    derived: optional(
+      all(array(object({ name, expr: string({ maxLength: 120 }) })), uniqueBy('name')),
+    ),
+    panels: all(
+      array(object({ id, illustration, text: paragraph }), { min: 1, max: 6 }),
+      uniqueBy('id'),
+    ),
     question: optional(
       object({
         prompt: line,
-        options: all(array(object({ id, label: line, reflection: paragraph }), { min: 2, max: 3 }), uniqueBy('id')),
+        options: all(
+          array(object({ id, label: line, reflection: paragraph }), { min: 2, max: 3 }),
+          uniqueBy('id'),
+        ),
       }),
     ),
     closing: optional(paragraph),
@@ -150,9 +205,13 @@ const story = withRules(
     }
     const allowed = Object.keys(resolved);
     const issues: ValidationIssue[] = [];
-    obj.panels.forEach((p, i) => issues.push(...templated(paragraph, allowed)(p.text, `${path}.panels[${i}].text`)));
+    obj.panels.forEach((p, i) =>
+      issues.push(...templated(paragraph, allowed)(p.text, `${path}.panels[${i}].text`)),
+    );
     obj.question?.options.forEach((o, i) =>
-      issues.push(...templated(paragraph, allowed)(o.reflection, `${path}.question.options[${i}].reflection`)),
+      issues.push(
+        ...templated(paragraph, allowed)(o.reflection, `${path}.question.options[${i}].reflection`),
+      ),
     );
     if (obj.closing) issues.push(...templated(paragraph, allowed)(obj.closing, `${path}.closing`));
     return issues;
@@ -199,7 +258,9 @@ const classify = withRules(
           situation: line,
           illustration: optional(illustration),
           accepted: all(array(id, { min: 1, max: 4 }), (v, p) =>
-            Array.isArray(v) && new Set(v).size !== v.length ? [{ path: p, message: 'categoria repetida' }] : [],
+            Array.isArray(v) && new Set(v).size !== v.length
+              ? [{ path: p, message: 'categoria repetida' }]
+              : [],
           ),
           feedback: paragraph,
           contextNote: optional(paragraph),
@@ -214,7 +275,11 @@ const classify = withRules(
     const issues: ValidationIssue[] = [];
     obj.items.forEach((it, i) => {
       for (const a of it.accepted) {
-        if (!known.has(a)) issues.push({ path: `${path}.items[${i}].accepted`, message: `categoria inexistente: ${a}` });
+        if (!known.has(a))
+          issues.push({
+            path: `${path}.items[${i}].accepted`,
+            message: `categoria inexistente: ${a}`,
+          });
       }
     });
     return issues;
@@ -264,10 +329,16 @@ const change = withRules(
   (obj: { paid: number; product: { price: number }; options: number[] }, path) => {
     const answer = obj.paid - obj.product.price;
     if (answer < 0) return [{ path, message: 'valor pago é menor que o preço' }];
-    if (new Set(obj.options).size !== obj.options.length) return [{ path: `${path}.options`, message: 'opções repetidas' }];
+    if (new Set(obj.options).size !== obj.options.length)
+      return [{ path: `${path}.options`, message: 'opções repetidas' }];
     return obj.options.includes(answer)
       ? []
-      : [{ path: `${path}.options`, message: `as opções precisam incluir o troco calculado (${answer})` }];
+      : [
+          {
+            path: `${path}.options`,
+            message: `as opções precisam incluir o troco calculado (${answer})`,
+          },
+        ];
   },
 );
 
@@ -275,7 +346,10 @@ const choice = object({
   type: literal('choice'),
   prompt: line,
   illustration: optional(illustration),
-  options: all(array(object({ id, label: line, reflection: paragraph }), { min: 2, max: 3 }), uniqueBy('id')),
+  options: all(
+    array(object({ id, label: line, reflection: paragraph }), { min: 2, max: 3 }),
+    uniqueBy('id'),
+  ),
   note: optional(object({ title: line, body: paragraph })),
 });
 
@@ -284,14 +358,19 @@ const ordering = withRules(
     type: literal('ordering'),
     prompt: line,
     instructions: optional(line),
-    items: all(array(object({ id, label: line, illustration: optional(illustration) }), { min: 3, max: 5 }), uniqueBy('id')),
+    items: all(
+      array(object({ id, label: line, illustration: optional(illustration) }), { min: 3, max: 5 }),
+      uniqueBy('id'),
+    ),
     correct: array(id, { min: 3, max: 5 }),
     feedback: paragraph,
   }),
   (obj: { items: { id: string }[]; correct: string[] }, path) => {
     const ids = new Set(obj.items.map((i) => i.id));
-    if (obj.correct.length !== obj.items.length) return [{ path: `${path}.correct`, message: 'correct deve listar todos os itens' }];
-    for (const c of obj.correct) if (!ids.has(c)) return [{ path: `${path}.correct`, message: `item inexistente: ${c}` }];
+    if (obj.correct.length !== obj.items.length)
+      return [{ path: `${path}.correct`, message: 'correct deve listar todos os itens' }];
+    for (const c of obj.correct)
+      if (!ids.has(c)) return [{ path: `${path}.correct`, message: `item inexistente: ${c}` }];
     return [];
   },
 );
@@ -301,7 +380,13 @@ const trueFalse = object({
   prompt: optional(line),
   statements: all(
     array(
-      object({ id, text: paragraph, isTrue: (v, p) => (typeof v === 'boolean' ? [] : [{ path: p, message: 'isTrue deve ser booleano' }]), explanation: paragraph }),
+      object({
+        id,
+        text: paragraph,
+        isTrue: (v, p) =>
+          typeof v === 'boolean' ? [] : [{ path: p, message: 'isTrue deve ser booleano' }],
+        explanation: paragraph,
+      }),
       { min: 3, max: 5 },
     ),
     uniqueBy('id'),
@@ -326,7 +411,10 @@ const quiz = withRules(
           kind: literal('recognition', 'situation', 'decision', 'explanation'),
           prompt: paragraph,
           illustration: optional(illustration),
-          options: all(array(object({ id, label: line, feedback: optional(paragraph) }), { min: 2, max: 4 }), uniqueBy('id')),
+          options: all(
+            array(object({ id, label: line, feedback: optional(paragraph) }), { min: 2, max: 4 }),
+            uniqueBy('id'),
+          ),
           answer: quizAnswer,
           explanation: paragraph,
         }),
@@ -335,10 +423,21 @@ const quiz = withRules(
       uniqueBy('id'),
     ),
   }),
-  (obj: { questions: { id: string; options: { id: string }[]; answer: { type: string; correctOptionId?: string } }[] }, path) => {
+  (
+    obj: {
+      questions: {
+        id: string;
+        options: { id: string }[];
+        answer: { type: string; correctOptionId?: string };
+      }[];
+    },
+    path,
+  ) => {
     for (const q of obj.questions) {
       if (q.answer.type === 'single' && !q.options.some((o) => o.id === q.answer.correctOptionId)) {
-        return [{ path, message: `pergunta "${q.id}": correctOptionId não corresponde a nenhuma opção` }];
+        return [
+          { path, message: `pergunta "${q.id}": correctOptionId não corresponde a nenhuma opção` },
+        ];
       }
     }
     return [];
@@ -413,7 +512,7 @@ export const moduleSchema: Validator = object({
   title: line,
   headline: line,
   summary: paragraph,
-  theme: optional(short),
+  theme: optional(literal(...moduleThemes)),
   competencies: all(array(competency, { min: 1, max: 9 }), uniqueBy()),
   integrative: object({ title: line, intro: paragraph, object: lessonObjectSchema }),
   conclusion: object({
@@ -446,7 +545,10 @@ export const cycleSummarySchema: Validator = object({
   cycle: literal('c1', 'c2', 'c3', 'c4'),
   title: line,
   intro: paragraph,
-  discoveries: array(object({ text: line, icon: conceptIcon, tone, module: id }), { min: 4, max: 8 }),
+  discoveries: array(object({ text: line, icon: conceptIcon, tone, module: id }), {
+    min: 4,
+    max: 8,
+  }),
   guide: guideLine,
   closing: paragraph,
 });

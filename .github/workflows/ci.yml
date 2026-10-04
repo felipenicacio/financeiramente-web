@@ -39,7 +39,7 @@ jobs:
       - name: Verifica a saída estática
         run: |
           for f in index.html idade/index.html jornadas/c1/index.html modulos/c1/m01/index.html \
-                   aprender/c1/m01/historia/index.html aprender/c1/m04/conclusao/index.html \
+                   aprender/c1/m01/l01/index.html aprender/c1/m04/fechamento/index.html \
                    modulos/c1/m02/index.html modulos/c1/m03/index.html modulos/c1/m04/index.html \
                    jornadas/c1/o-que-descobrimos/index.html \
                    manifest.webmanifest sw.js robots.txt sitemap.xml _headers 404.html; do

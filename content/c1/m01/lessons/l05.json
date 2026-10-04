@@ -9,10 +9,7 @@
     "Compreender que o dinheiro paga coisas e serviços",
     "Diferenciar comprar uma coisa de pagar por um serviço"
   ],
-  "competencies": [
-    "F-D4-C1-01",
-    "F-D7-C1-01"
-  ],
+  "competencies": ["F-D4-C1-01", "F-D7-C1-01"],
   "sources": [
     {
       "source": "AV-C",
@@ -47,6 +44,27 @@
       ]
     },
     {
+      "type": "choice",
+      "prompt": "No salão você paga pelo corte de cabelo. E se levar também um shampoo?",
+      "options": [
+        {
+          "id": "a",
+          "label": "O corte é serviço e o shampoo é coisa",
+          "reflection": "Isso mesmo: às vezes você paga por um serviço e por uma coisa na mesma hora."
+        },
+        {
+          "id": "b",
+          "label": "Os dois são coisas",
+          "reflection": "O shampoo dá para pegar (coisa), mas cortar o cabelo é um trabalho que alguém faz (serviço)."
+        },
+        {
+          "id": "c",
+          "label": "Os dois são serviços",
+          "reflection": "Cortar é serviço, mas o shampoo você leva para casa: é uma coisa."
+        }
+      ]
+    },
+    {
       "type": "classify",
       "categories": [
         {
@@ -69,9 +87,7 @@
           "id": "bread",
           "label": "Comprar um pão",
           "situation": "Você compra um pão na padaria.",
-          "accepted": [
-            "good"
-          ],
+          "accepted": ["good"],
           "feedback": "O pão dá para pegar e comer. É uma coisa.",
           "illustration": "item-bread"
         },
@@ -79,9 +95,7 @@
           "id": "haircut",
           "label": "Cortar o cabelo",
           "situation": "Alguém corta o seu cabelo.",
-          "accepted": [
-            "service"
-          ],
+          "accepted": ["service"],
           "feedback": "Cortar cabelo é um trabalho que alguém faz. É um serviço.",
           "illustration": "item-chair"
         },
@@ -89,9 +103,7 @@
           "id": "book",
           "label": "Comprar um livro",
           "situation": "Você compra um livro de histórias.",
-          "accepted": [
-            "good"
-          ],
+          "accepted": ["good"],
           "feedback": "O livro dá para pegar e ler. É uma coisa.",
           "illustration": "item-book"
         },
@@ -99,9 +111,7 @@
           "id": "repair",
           "label": "Consertar um brinquedo",
           "situation": "Alguém conserta o seu brinquedo quebrado.",
-          "accepted": [
-            "service"
-          ],
+          "accepted": ["service"],
           "feedback": "Consertar é um trabalho. É um serviço.",
           "illustration": "item-laptop"
         }

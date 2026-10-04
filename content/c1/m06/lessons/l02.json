@@ -9,9 +9,7 @@
     "Diferenciar informação de convencimento",
     "Reconhecer frases que tentam convencer"
   ],
-  "competencies": [
-    "F-D2-C1-01"
-  ],
+  "competencies": ["F-D2-C1-01"],
   "sources": [
     {
       "source": "FB2",
@@ -58,6 +56,23 @@
       "intro": "Um anúncio pode fazer duas coisas ao mesmo tempo:"
     },
     {
+      "type": "story",
+      "title": "Dois tipos de frase",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "story-ad-claim",
+          "text": "O anúncio diz: “Este robô tem quatro peças.” Isso dá para conferir."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-ad-loud",
+          "text": "E também diz: “Todo mundo quer!”, com música alta. Isso é para te convencer."
+        }
+      ],
+      "closing": "Um anúncio costuma misturar informação com frases que tentam convencer."
+    },
+    {
       "type": "classify",
       "categories": [
         {
@@ -80,36 +95,28 @@
           "id": "pieces",
           "label": "“Este brinquedo tem quatro peças.”",
           "situation": "Frase da caixa de um brinquedo.",
-          "accepted": [
-            "info"
-          ],
+          "accepted": ["info"],
           "feedback": "Dá para abrir e contar as peças. É informação."
         },
         {
           "id": "everyone",
           "label": "“Todo mundo vai querer um!”",
           "situation": "Frase de um anúncio em vídeo.",
-          "accepted": [
-            "persuade"
-          ],
+          "accepted": ["persuade"],
           "feedback": "Não dá para conferir se todo mundo quer. Tenta despertar vontade."
         },
         {
           "id": "weight",
           "label": "“O pacote pesa 200 gramas.”",
           "situation": "Frase da embalagem de um biscoito.",
-          "accepted": [
-            "info"
-          ],
+          "accepted": ["info"],
           "feedback": "Dá para pesar e conferir. É informação."
         },
         {
           "id": "without",
           "label": "“Você não pode ficar sem isso!”",
           "situation": "Frase de um cartaz de loja.",
-          "accepted": [
-            "persuade"
-          ],
+          "accepted": ["persuade"],
           "feedback": "Ninguém precisa de um brinquedo para viver. Tenta convencer."
         }
       ],

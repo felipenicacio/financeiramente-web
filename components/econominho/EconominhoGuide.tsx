@@ -21,15 +21,20 @@ type Props = {
  * Só função pedagógica: perguntar, apresentar descobertas, comparar, explicar
  * consequências, resumir e provocar reflexão. Nunca dá ordens financeiras.
  */
-export function EconominhoGuide({ text, state, variant = 'inline', avatar, className = '' }: Props) {
+export function EconominhoGuide({
+  text,
+  state,
+  variant = 'inline',
+  avatar,
+  className = '',
+}: Props) {
   const size = variant === 'bubble' ? 'size-14' : 'size-11';
 
   return (
-    <figure
-      data-guide-state={state}
-      className={`flex items-start gap-3 ${className}`}
-    >
-      <span className={`${size} shrink-0 overflow-hidden rounded-full bg-accent-soft ring-1 ring-inset ring-accent-tint`}>
+    <figure data-guide-state={state} className={`flex items-start gap-3 ${className}`}>
+      <span
+        className={`${size} shrink-0 overflow-hidden rounded-full bg-accent-soft ring-1 ring-inset ring-accent-tint`}
+      >
         {avatar ?? (
           // eslint-disable-next-line @next/next/no-img-element -- arte local e estática
           <img
@@ -48,8 +53,12 @@ export function EconominhoGuide({ text, state, variant = 'inline', avatar, class
           (variant === 'bubble' ? 'bg-surface shadow-card' : 'bg-accent-soft')
         }
       >
-        <span className="block text-caption font-semibold text-accent-strong">{t('guideName')}</span>
-        <span className={variant === 'bubble' ? 'text-lead font-medium' : 'font-medium'}>{text}</span>
+        <span className="block text-caption font-semibold text-accent-strong">
+          {t('guideName')}
+        </span>
+        <span className={variant === 'bubble' ? 'text-lead font-medium' : 'font-medium'}>
+          {text}
+        </span>
       </figcaption>
     </figure>
   );

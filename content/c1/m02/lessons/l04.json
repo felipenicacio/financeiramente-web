@@ -5,14 +5,8 @@
   "order": 4,
   "title": "Nem toda vontade é para agora",
   "headline": "Dá para olhar uma vontade de três jeitos: preciso, quero ou posso esperar.",
-  "objectives": [
-    "Conhecer as três categorias de escolha",
-    "Entender que esperar é uma opção"
-  ],
-  "competencies": [
-    "F-D1-C1-01",
-    "F-D5-C1-01"
-  ],
+  "objectives": ["Conhecer as três categorias de escolha", "Entender que esperar é uma opção"],
+  "competencies": ["F-D1-C1-01", "F-D5-C1-01"],
   "sources": [
     {
       "source": "FB2",
@@ -85,6 +79,23 @@
       "intro": "Quando bate uma vontade, dá para perguntar: eu preciso, eu quero ou posso esperar?",
       "keyIdea": "A mesma coisa pode mudar de lugar: um casaco é preciso no frio, mas pode esperar no calor.",
       "keyIdeaIllustration": "item-coat"
+    },
+    {
+      "type": "story",
+      "title": "Jogo agora ou bicicleta depois?",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-boardgame",
+          "text": "A Bia viu um jogo novo e deu vontade de comprar."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-jar",
+          "text": "Mas ela está juntando para uma bicicleta. Ela para e pensa qual é mais importante para ela agora."
+        }
+      ],
+      "closing": "Nem toda vontade precisa ser atendida na hora."
     },
     {
       "type": "choice",

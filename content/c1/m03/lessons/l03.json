@@ -5,13 +5,8 @@
   "order": 3,
   "title": "Comparando dois produtos",
   "headline": "Antes de escolher, dá para comparar e pensar no que faz mais sentido.",
-  "objectives": [
-    "Comparar dois produtos pelo preço",
-    "Entender que preço não decide tudo"
-  ],
-  "competencies": [
-    "F-D4-C1-01"
-  ],
+  "objectives": ["Comparar dois produtos pelo preço", "Entender que preço não decide tudo"],
+  "competencies": ["F-D4-C1-01"],
   "sources": [
     {
       "source": "FB2",
@@ -46,6 +41,24 @@
         }
       ],
       "feedback": "A caixa pequena custa menos. A grande tem mais lápis, mas custa mais. Você escolhe o que faz sentido."
+    },
+    {
+      "type": "explanation",
+      "title": "Comparar é pensar junto",
+      "body": "Comparar não é só olhar o preço. Também dá para pensar quanto você vai usar e se precisa de muito ou de pouco.",
+      "illustration": "item-magnifier",
+      "bullets": [
+        {
+          "text": "Quanto custa cada um.",
+          "icon": "price",
+          "tone": "amber"
+        },
+        {
+          "text": "Do que você precisa de verdade.",
+          "icon": "need",
+          "tone": "teal"
+        }
+      ]
     },
     {
       "type": "choice",

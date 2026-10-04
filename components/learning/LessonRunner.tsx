@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useMemo, useState, type ReactNode } from 'react';
+import { Fragment, useMemo, useState, type ReactNode } from 'react';
 
 import { Icon } from '@/components/ui/Icon';
 import { EconominhoGuide } from '@/components/econominho/EconominhoGuide';
@@ -79,7 +79,9 @@ function QuizScreen({
 export function screensForObject(object: LessonObject, keyBase: string): Screen[] {
   switch (object.type) {
     case 'explanation':
-      return [{ key: keyBase, interactive: false, render: () => <ExplanationView object={object} /> }];
+      return [
+        { key: keyBase, interactive: false, render: () => <ExplanationView object={object} /> },
+      ];
     case 'story':
       return [
         {
@@ -91,7 +93,9 @@ export function screensForObject(object: LessonObject, keyBase: string): Screen[
     case 'concepts':
       return [{ key: keyBase, interactive: false, render: () => <ConceptsView object={object} /> }];
     case 'reflection':
-      return [{ key: keyBase, interactive: false, render: () => <ReflectionView object={object} /> }];
+      return [
+        { key: keyBase, interactive: false, render: () => <ReflectionView object={object} /> },
+      ];
     case 'classify':
       return object.items.map((item) => ({
         key: `${keyBase}-${item.id}`,
@@ -253,7 +257,9 @@ export function LessonRunner({ cycle, moduleId, stepLabels, currentStep, lesson,
           {t('screenCounter', { current: index + 1, total: screens.length - 1 })}
         </p>
       ) : null}
-      {screen.render({ onComplete: () => setUnlocked(true) })}
+      {/* key por tela: remonta o objeto e zera o estado interno (escolha/resposta)
+          ao trocar de tela, mesmo entre objetos do mesmo tipo. */}
+      <Fragment key={screen.key}>{screen.render({ onComplete: () => setUnlocked(true) })}</Fragment>
     </LessonShell>
   );
 }

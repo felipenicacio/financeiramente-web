@@ -5,13 +5,8 @@
   "order": 3,
   "title": "Querer é normal",
   "headline": "Depois de um anúncio é normal bater vontade; dá para pensar antes de escolher.",
-  "objectives": [
-    "Entender que querer após um anúncio é normal",
-    "Pensar antes de uma escolha"
-  ],
-  "competencies": [
-    "F-D2-C1-01"
-  ],
+  "objectives": ["Entender que querer após um anúncio é normal", "Pensar antes de uma escolha"],
+  "competencies": ["F-D2-C1-01"],
   "sources": [
     {
       "source": "FB2",
@@ -25,13 +20,30 @@
     }
   ],
   "sensitivity": "N1",
-  "estimatedMinutes": 3,
+  "estimatedMinutes": 4,
   "content": [
     {
       "type": "explanation",
       "body": "Depois de ver um anúncio, é normal ficar com vontade. O anúncio foi feito para chamar a nossa atenção. O que dá para fazer é perceber a vontade e pensar com calma antes de escolher.",
       "title": "Vontade é normal",
       "illustration": "item-magnifier"
+    },
+    {
+      "type": "story",
+      "title": "Bateu a vontade",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "story-ad-tablet",
+          "text": "Você vê um anúncio de um jogo e bate aquela vontade de ter."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-thinking",
+          "text": "Você respira e pensa: o que esse jogo faz de verdade?"
+        }
+      ],
+      "closing": "Perceber a vontade e pensar com calma ajuda a escolher melhor."
     },
     {
       "type": "choice",

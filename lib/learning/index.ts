@@ -42,11 +42,15 @@ const asMoney = (values: Record<string, number>) =>
 
 // ---------- história ----------
 
-export function storyValues(story: Pick<StoryObject, 'values' | 'derived'>): Record<string, number> {
+export function storyValues(
+  story: Pick<StoryObject, 'values' | 'derived'>,
+): Record<string, number> {
   return resolveValues(story.values ?? {}, story.derived ?? []);
 }
 
-export function storyMoneyLabels(story: Pick<StoryObject, 'values' | 'derived'>): Record<string, string> {
+export function storyMoneyLabels(
+  story: Pick<StoryObject, 'values' | 'derived'>,
+): Record<string, string> {
   return asMoney(storyValues(story));
 }
 
@@ -84,9 +88,14 @@ export function classifyDependsOnContext(item: ClassifyItem): boolean {
   return item.accepted.length > 1 || Boolean(item.contextNote);
 }
 
-export type ChoiceResult = 'idle' | 'chosen-ok' | 'chosen-rethink' | 'also-ok' | 'expected' | 'dimmed';
+export type ChoiceResult =
+  'idle' | 'chosen-ok' | 'chosen-rethink' | 'also-ok' | 'expected' | 'dimmed';
 
-export function classifyChoiceState(item: ClassifyItem, category: string, choice: string | null): ChoiceResult {
+export function classifyChoiceState(
+  item: ClassifyItem,
+  category: string,
+  choice: string | null,
+): ChoiceResult {
   if (choice === null) return 'idle';
   if (category === choice) return isAcceptedCategory(item, choice) ? 'chosen-ok' : 'chosen-rethink';
   return isAcceptedCategory(item, category) ? 'also-ok' : 'dimmed';

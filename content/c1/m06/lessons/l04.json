@@ -5,13 +5,8 @@
   "order": 4,
   "title": "Minhas informações têm valor",
   "headline": "Nome, endereço e telefone são informações pessoais que precisam de cuidado.",
-  "objectives": [
-    "Reconhecer informações pessoais",
-    "Saber pedir ajuda de um adulto de confiança"
-  ],
-  "competencies": [
-    "F-D8-C1-01"
-  ],
+  "objectives": ["Reconhecer informações pessoais", "Saber pedir ajuda de um adulto de confiança"],
+  "competencies": ["F-D8-C1-01"],
   "sources": [
     {
       "source": "FB2",
@@ -32,6 +27,23 @@
       "body": "Nome completo, endereço, telefone e o nome da escola são informações pessoais. Elas precisam de cuidado. Antes de escrever esses dados num site ou jogo, é bom chamar um adulto de confiança.",
       "title": "Cuidar das minhas informações",
       "illustration": "item-tablet"
+    },
+    {
+      "type": "story",
+      "title": "O jogo pede dados",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-tablet",
+          "text": "Um jogo pede seu nome, endereço e telefone para continuar."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-thinking",
+          "text": "Antes de escrever qualquer coisa, você chama um adulto de confiança."
+        }
+      ],
+      "closing": "Informações pessoais pedem cuidado: um adulto de confiança ajuda a decidir."
     },
     {
       "type": "trueFalse",

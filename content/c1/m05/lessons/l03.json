@@ -9,9 +9,7 @@
     "Compreender a ideia de guardar para imprevistos",
     "Perceber que isso traz tranquilidade"
   ],
-  "competencies": [
-    "F-D8-C1-01"
-  ],
+  "competencies": ["F-D8-C1-01"],
   "sources": [
     {
       "source": "FB1",
@@ -20,13 +18,30 @@
     }
   ],
   "sensitivity": "N2",
-  "estimatedMinutes": 3,
+  "estimatedMinutes": 4,
   "content": [
     {
       "type": "explanation",
       "body": "Nem tudo a gente planeja. Às vezes o brinquedo quebra ou aparece uma coisa de última hora. Ter um pouquinho guardado ajuda a resolver sem susto.",
       "title": "Uma reserva para surpresas",
       "illustration": "item-jar"
+    },
+    {
+      "type": "story",
+      "title": "Uma surpresa",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-ball",
+          "text": "A bola do Téo furou sem avisar."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-jar",
+          "text": "Como ele tinha um pouquinho guardado, deu para resolver sem susto."
+        }
+      ],
+      "closing": "Uma reserva ajuda quando acontece algo de surpresa."
     },
     {
       "type": "choice",

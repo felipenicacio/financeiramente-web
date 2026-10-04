@@ -5,13 +5,8 @@
   "order": 1,
   "title": "Por que as pessoas trabalham?",
   "headline": "As pessoas trabalham para fazer coisas, ajudar outras pessoas e receber dinheiro.",
-  "objectives": [
-    "Reconhecer motivos para o trabalho",
-    "Perceber trabalhos perto de casa"
-  ],
-  "competencies": [
-    "F-D7-C1-01"
-  ],
+  "objectives": ["Reconhecer motivos para o trabalho", "Perceber trabalhos perto de casa"],
+  "competencies": ["F-D7-C1-01"],
   "sources": [
     {
       "source": "FB1",
@@ -25,7 +20,7 @@
     }
   ],
   "sensitivity": "N1",
-  "estimatedMinutes": 3,
+  "estimatedMinutes": 4,
   "content": [
     {
       "type": "story",
@@ -53,6 +48,27 @@
       "body": "As pessoas trabalham por vários motivos: para fazer coisas que os outros precisam, para ajudar quem precisa e para receber dinheiro pelo trabalho.",
       "title": "Para que serve o trabalho",
       "illustration": "item-wallet"
+    },
+    {
+      "type": "choice",
+      "prompt": "Pense nas pessoas que trabalham no seu bairro. Por que elas recebem dinheiro?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Porque fazem um trabalho que os outros precisam",
+          "reflection": "Isso mesmo: o dinheiro vem do trabalho feito."
+        },
+        {
+          "id": "b",
+          "label": "Porque está um dia bonito",
+          "reflection": "O dinheiro vem do trabalho, não do clima."
+        },
+        {
+          "id": "c",
+          "label": "Porque pediram com jeitinho",
+          "reflection": "Receber pelo trabalho é diferente de pedir."
+        }
+      ]
     }
   ],
   "summary": [

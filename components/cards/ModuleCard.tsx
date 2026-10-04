@@ -2,13 +2,11 @@
 
 import Link from 'next/link';
 
-import { econominhoAssets } from '@/components/econominho/assets';
+import { econominhoAssets, type ThemePose } from '@/components/econominho/assets';
 import { Icon } from '@/components/ui/Icon';
 import { t } from '@/lib/content/ui';
 import { routes } from '@/lib/learning/steps';
 import { moduleKey, useSession } from '@/lib/session/SessionProvider';
-
-type ThemeKey = 'm01' | 'm02' | 'm03' | 'm04';
 
 type Props = {
   cycle: string;
@@ -18,7 +16,7 @@ type Props = {
   headline: string;
   minutes: number;
   lessonsCount: number;
-  theme?: ThemeKey;
+  theme?: ThemePose;
 };
 
 /** Cartão de módulo dentro da fase. Mostra se foi concluído nesta visita. */
@@ -43,7 +41,12 @@ export function ModuleCard({
       <span className="grid place-items-center bg-accent-soft px-6 pt-5">
         {theme ? (
           // eslint-disable-next-line @next/next/no-img-element -- arte local e estática
-          <img src={econominhoAssets.theme(theme)} alt="" className="w-full max-w-[14rem]" decoding="async" />
+          <img
+            src={econominhoAssets.theme(theme)}
+            alt=""
+            className="w-full max-w-[14rem]"
+            decoding="async"
+          />
         ) : (
           // eslint-disable-next-line @next/next/no-img-element -- arte local e estática
           <img

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useMemo, useState, type ReactNode } from 'react';
+import { Fragment, useEffect, useMemo, useState, type ReactNode } from 'react';
 
 import { ConceptIcon } from '@/components/illustrations';
 import { Icon } from '@/components/ui/Icon';
@@ -161,7 +161,7 @@ export function ModuleClosing({ cycle, moduleId, stepLabels, currentStep, module
           <p className="text-lead text-ink-soft">{module.integrative.intro}</p>
         </header>
       ) : null}
-      {screen.render({ onComplete: () => setUnlocked(true) })}
+      <Fragment key={screen.key}>{screen.render({ onComplete: () => setUnlocked(true) })}</Fragment>
     </LessonShell>
   );
 }

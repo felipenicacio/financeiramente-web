@@ -9,9 +9,7 @@
     "Reconhecer lugares seguros para guardar",
     "Saber pedir ajuda de um adulto de confiança"
   ],
-  "competencies": [
-    "F-D8-C1-01"
-  ],
+  "competencies": ["F-D8-C1-01"],
   "sources": [
     {
       "source": "FB2",
@@ -32,6 +30,23 @@
       "body": "Dá para guardar o dinheiro num lugar seguro, como um cofrinho ou um pote só para isso. E um adulto de confiança pode ajudar a guardar e a cuidar.",
       "title": "Um lugar seguro",
       "illustration": "item-jar"
+    },
+    {
+      "type": "story",
+      "title": "Num lugar seguro",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-jar",
+          "text": "Você guarda o dinheiro num cofrinho só para isso."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-family-choice",
+          "text": "Um adulto de confiança ajuda a guardar e a lembrar da sua meta."
+        }
+      ],
+      "closing": "Guardar em lugar seguro e com ajuda de quem você confia deixa tudo mais tranquilo."
     },
     {
       "type": "trueFalse",

@@ -9,9 +9,7 @@
     "Perceber que o contexto muda a classificação",
     "Dar um exemplo em que algo muda de necessidade para desejo"
   ],
-  "competencies": [
-    "F-D1-C1-01"
-  ],
+  "competencies": ["F-D1-C1-01"],
   "sources": [
     {
       "source": "FB2",
@@ -44,6 +42,24 @@
       "title": "Depende da situação"
     },
     {
+      "type": "explanation",
+      "title": "Depende da situação",
+      "body": "A mesma coisa pode ser necessidade numa hora e desejo em outra. O que muda é a situação: o clima, o momento, o que já se tem.",
+      "illustration": "item-coat",
+      "bullets": [
+        {
+          "text": "Casaco no frio: faz falta agora.",
+          "icon": "need",
+          "tone": "teal"
+        },
+        {
+          "text": "Casaco no calor: dá para esperar.",
+          "icon": "wait",
+          "tone": "amber"
+        }
+      ]
+    },
+    {
       "type": "classify",
       "categories": [
         {
@@ -66,9 +82,7 @@
           "id": "coat-cold",
           "label": "Casaco no frio",
           "situation": "Está muito frio e o antigo não serve mais.",
-          "accepted": [
-            "need"
-          ],
+          "accepted": ["need"],
           "feedback": "No frio, o casaco protege o corpo. É preciso.",
           "illustration": "item-coat",
           "contextNote": "No calor, um casaco novo poderia esperar."
@@ -77,9 +91,7 @@
           "id": "sneaker",
           "label": "Tênis novo e bonito",
           "situation": "O tênis de agora ainda serve, mas você viu um mais bonito.",
-          "accepted": [
-            "wait"
-          ],
+          "accepted": ["wait"],
           "feedback": "O tênis de agora funciona, então o novo pode esperar.",
           "illustration": "item-sneaker",
           "contextNote": "Se o tênis rasgar, ele passa a ser preciso."
@@ -88,9 +100,7 @@
           "id": "water",
           "label": "Água com sede",
           "situation": "Está calor e você está com sede.",
-          "accepted": [
-            "need"
-          ],
+          "accepted": ["need"],
           "feedback": "Beber água cuida do corpo. É preciso.",
           "illustration": "item-bottle"
         }
@@ -99,10 +109,7 @@
       "instructions": "A resposta pode mudar conforme a situação. Pense com calma."
     }
   ],
-  "summary": [
-    "A mesma coisa pode ser necessidade ou desejo.",
-    "Depende da situação."
-  ],
+  "summary": ["A mesma coisa pode ser necessidade ou desejo.", "Depende da situação."],
   "guide": {
     "state": "discover",
     "text": "Será que uma coisa pode ser necessidade hoje e desejo amanhã?"

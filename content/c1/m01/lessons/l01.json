@@ -9,9 +9,7 @@
     "Entender que finanças é lidar com o dinheiro no dia a dia",
     "Perceber que crianças também fazem escolhas com dinheiro"
   ],
-  "competencies": [
-    "F-D4-C1-01"
-  ],
+  "competencies": ["F-D4-C1-01"],
   "sources": [
     {
       "source": "FB1",
@@ -25,7 +23,7 @@
     }
   ],
   "sensitivity": "N1",
-  "estimatedMinutes": 3,
+  "estimatedMinutes": 4,
   "content": [
     {
       "type": "explanation",
@@ -49,6 +47,23 @@
           "tone": "teal"
         }
       ]
+    },
+    {
+      "type": "story",
+      "title": "A sua moeda",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "story-gift",
+          "text": "Você ganha uma moeda de presente."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-pocket",
+          "text": "Agora é com você: dá para gastar agora, guardar no cofrinho ou esperar para juntar com outras moedas."
+        }
+      ],
+      "closing": "Decidir o que fazer com a moeda já é cuidar das suas finanças."
     },
     {
       "type": "choice",

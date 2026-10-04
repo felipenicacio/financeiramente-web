@@ -5,13 +5,8 @@
   "order": 1,
   "title": "O que é preço?",
   "headline": "O preço é o número que mostra quanto precisamos pagar por uma coisa.",
-  "objectives": [
-    "Compreender o que é preço",
-    "Perceber que preço não é o mesmo que importância"
-  ],
-  "competencies": [
-    "F-D4-C1-01"
-  ],
+  "objectives": ["Compreender o que é preço", "Perceber que preço não é o mesmo que importância"],
+  "competencies": ["F-D4-C1-01"],
   "sources": [
     {
       "source": "AV-C",
@@ -20,13 +15,30 @@
     }
   ],
   "sensitivity": "N1",
-  "estimatedMinutes": 3,
+  "estimatedMinutes": 4,
   "content": [
     {
       "type": "explanation",
       "body": "O preço é o número escrito na plaquinha. Ele mostra quanto precisamos pagar por uma coisa. Um preço maior não quer dizer que a coisa é melhor ou mais importante para você.",
       "title": "Preço mostra quanto pagar",
       "illustration": "item-pricetag"
+    },
+    {
+      "type": "story",
+      "title": "O número na plaquinha",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "story-shop",
+          "text": "Na loja, cada coisa tem uma plaquinha com um número."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-pricetag",
+          "text": "Esse número é o preço: mostra quanto você paga por aquilo."
+        }
+      ],
+      "closing": "Um preço maior não quer dizer que a coisa é melhor para você."
     },
     {
       "type": "trueFalse",
@@ -53,10 +65,7 @@
       "prompt": "Sobre o preço:"
     }
   ],
-  "summary": [
-    "O preço mostra quanto precisamos pagar.",
-    "Preço maior não quer dizer melhor."
-  ],
+  "summary": ["O preço mostra quanto precisamos pagar.", "Preço maior não quer dizer melhor."],
   "guide": {
     "state": "ask",
     "text": "Você já reparou nas plaquinhas de preço na feira?"

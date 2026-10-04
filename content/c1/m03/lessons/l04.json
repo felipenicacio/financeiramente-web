@@ -5,14 +5,8 @@
   "order": 4,
   "title": "O que dá para comprar?",
   "headline": "Com um valor na mão, dá para ver o que cabe e o que fica para depois.",
-  "objectives": [
-    "Ver o que cabe num valor disponível",
-    "Perceber que o resto pode esperar"
-  ],
-  "competencies": [
-    "F-D4-C1-01",
-    "F-D5-C1-01"
-  ],
+  "objectives": ["Ver o que cabe num valor disponível", "Perceber que o resto pode esperar"],
+  "competencies": ["F-D4-C1-01", "F-D5-C1-01"],
   "sources": [
     {
       "source": "AV-C",
@@ -28,6 +22,23 @@
       "body": "Quando você tem um valor na mão, dá para olhar os preços e ver o que cabe. O que custa mais do que você tem pode ficar para outro dia.",
       "title": "O que cabe no meu dinheiro",
       "illustration": "item-wallet"
+    },
+    {
+      "type": "story",
+      "title": "O que cabe hoje",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-wallet",
+          "text": "Você tem um dinheiro no bolso para gastar hoje."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-shop",
+          "text": "Você olha os preços: o que cabe dá para levar; o que custa mais fica para outro dia."
+        }
+      ],
+      "closing": "Ver o que cabe ajuda a escolher sem susto na hora de pagar."
     },
     {
       "type": "afford",
@@ -56,10 +67,7 @@
       "feedback": "Cabe o que custa o mesmo ou menos do que você tem. O resto pode esperar ou entrar em outro plano."
     }
   ],
-  "summary": [
-    "Com um valor na mão, dá para ver o que cabe.",
-    "O que não cabe pode esperar."
-  ],
+  "summary": ["Com um valor na mão, dá para ver o que cabe.", "O que não cabe pode esperar."],
   "guide": {
     "state": "consequence",
     "text": "O que muda se escolhermos esta ou aquela opção? Veja o que cabe."

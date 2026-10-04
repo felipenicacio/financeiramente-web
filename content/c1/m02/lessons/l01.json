@@ -9,9 +9,7 @@
     "Reconhecer o que é uma necessidade",
     "Dar exemplos de coisas que a gente precisa"
   ],
-  "competencies": [
-    "F-D1-C1-01"
-  ],
+  "competencies": ["F-D1-C1-01"],
   "sources": [
     {
       "source": "FB2",
@@ -25,13 +23,30 @@
     }
   ],
   "sensitivity": "N1",
-  "estimatedMinutes": 3,
+  "estimatedMinutes": 4,
   "content": [
     {
       "type": "explanation",
       "body": "Precisar é quando algo faz falta de verdade. Comida, água, um lugar para dormir e cuidar da saúde são coisas que a gente precisa.",
       "title": "Precisar é o que faz falta",
       "illustration": "item-bottle"
+    },
+    {
+      "type": "story",
+      "title": "Quando faz falta de verdade",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "story-street",
+          "text": "Num dia muito quente, você fica com sede de verdade."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-bottle",
+          "text": "Água não é só vontade: o corpo precisa dela. Isso é uma necessidade."
+        }
+      ],
+      "closing": "Necessidade é o que faz falta mesmo, não só o que dá vontade."
     },
     {
       "type": "classify",
@@ -56,9 +71,7 @@
           "id": "water",
           "label": "Água para beber",
           "situation": "Está muito calor e você está com sede.",
-          "accepted": [
-            "need"
-          ],
+          "accepted": ["need"],
           "feedback": "Beber água cuida do corpo. É uma necessidade.",
           "illustration": "item-bottle"
         },
@@ -66,9 +79,7 @@
           "id": "food",
           "label": "Comida no almoço",
           "situation": "Chegou a hora do almoço.",
-          "accepted": [
-            "need"
-          ],
+          "accepted": ["need"],
           "feedback": "Comer é cuidar da saúde. É uma necessidade.",
           "illustration": "item-bread"
         },
@@ -76,9 +87,7 @@
           "id": "toy",
           "label": "Mais um brinquedo igual",
           "situation": "Você já tem vários brinquedos parecidos.",
-          "accepted": [
-            "other"
-          ],
+          "accepted": ["other"],
           "feedback": "É gostoso ter, mas não faz falta agora. Pode esperar.",
           "illustration": "item-robot"
         }
@@ -87,10 +96,7 @@
       "instructions": "Leia e escolha: isso faz falta de verdade agora?"
     }
   ],
-  "summary": [
-    "Precisar é o que faz falta de verdade.",
-    "Comida, água e saúde são necessidades."
-  ],
+  "summary": ["Precisar é o que faz falta de verdade.", "Comida, água e saúde são necessidades."],
   "guide": {
     "state": "ask",
     "text": "Será que a gente precisa de tudo que tem vontade?"

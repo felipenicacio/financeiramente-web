@@ -8,18 +8,18 @@ Conteúdo fixo, escrito, revisado e aprovado antes da publicação. **Sem login,
 
 Ciclo **C1 (6–8 anos)** completo no currículo v2.0: 6 módulos, 30 lições, abertos em qualquer ordem.
 
-| Módulo | Título                              |
-| ------ | ----------------------------------- |
-| C1.1   | O dinheiro está por toda parte      |
-| C1.2   | Quero, preciso ou posso esperar?    |
-| C1.3   | Preço, comparação e troco           |
-| C1.4   | Trabalho, renda, bens e serviços    |
-| C1.5   | Guardar e cuidar                    |
-| C1.6   | Escolhas, influência e convivência  |
+| Módulo | Título                             |
+| ------ | ---------------------------------- |
+| C1.1   | O dinheiro está por toda parte     |
+| C1.2   | Quero, preciso ou posso esperar?   |
+| C1.3   | Preço, comparação e troco          |
+| C1.4   | Trabalho, renda, bens e serviços   |
+| C1.5   | Guardar e cuidar                   |
+| C1.6   | Escolhas, influência e convivência |
 
 Arquitetura **ciclo → módulo → lição → objetos**: cada módulo tem 5 lições; cada lição tem de 2 a 4 objetos educacionais de tipos variados (explicação, história, conceitos, classificação, comparação, troco, escolha, ordenação, V/F, quiz, reflexão). Cada módulo fecha com avaliação integradora e a síntese "O que descobrimos?" — sem nota e sem certificado. Ciclos C2–C4 em preparação. Detalhes em [docs/content-architecture.md](docs/content-architecture.md).
 
-O guia **Econominho** usa o personagem oficial aprovado (pacote `econominho-assets-v1`, em `public/econominho/`), com falas por estado pedagógico.
+O guia **Econominho** usa os assets individuais aprovados (v2, em `public/econominho/`), com falas por estado pedagógico.
 
 ## Comandos
 

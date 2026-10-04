@@ -5,13 +5,8 @@
   "order": 3,
   "title": "Fazer algo ou ajudar alguém",
   "headline": "Alguns trabalhos produzem coisas (bens); outros ajudam pessoas (serviços).",
-  "objectives": [
-    "Diferenciar bem e serviço",
-    "Dar exemplos de bens e de serviços"
-  ],
-  "competencies": [
-    "F-D7-C1-01"
-  ],
+  "objectives": ["Diferenciar bem e serviço", "Dar exemplos de bens e de serviços"],
+  "competencies": ["F-D7-C1-01"],
   "sources": [
     {
       "source": "FB1",
@@ -66,6 +61,23 @@
       "intro": "O trabalho pode produzir coisas ou ajudar pessoas:"
     },
     {
+      "type": "story",
+      "title": "Fazendo e ajudando",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "story-bakery",
+          "text": "O seu Jorge faz pães na padaria: ele produz um bem, uma coisa que dá para pegar."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-bus",
+          "text": "A motorista Lúcia leva as pessoas no ônibus: ela faz um serviço, ajuda alguém."
+        }
+      ],
+      "closing": "Tem trabalho que produz coisas e tem trabalho que ajuda pessoas."
+    },
+    {
       "type": "classify",
       "categories": [
         {
@@ -88,9 +100,7 @@
           "id": "bread",
           "label": "Pão da padaria",
           "situation": "O seu Jorge faz pão de manhã.",
-          "accepted": [
-            "good"
-          ],
+          "accepted": ["good"],
           "feedback": "O pão dá para pegar e comer. É um bem.",
           "illustration": "item-bread"
         },
@@ -98,9 +108,7 @@
           "id": "class",
           "label": "Aula da professora",
           "situation": "Ela ensina a turma a ler.",
-          "accepted": [
-            "service"
-          ],
+          "accepted": ["service"],
           "feedback": "Ensinar ajuda outras pessoas. É um serviço.",
           "illustration": "item-chalkboard"
         },
@@ -108,9 +116,7 @@
           "id": "chair",
           "label": "Cadeira do marceneiro",
           "situation": "O Davi fez uma cadeira nova.",
-          "accepted": [
-            "good"
-          ],
+          "accepted": ["good"],
           "feedback": "A cadeira dá para pegar e usar. É um bem.",
           "illustration": "item-chair"
         },
@@ -118,9 +124,7 @@
           "id": "bus",
           "label": "Viagem de ônibus",
           "situation": "A Lúcia leva as pessoas no ônibus.",
-          "accepted": [
-            "service"
-          ],
+          "accepted": ["service"],
           "feedback": "Levar as pessoas é um trabalho que ajuda. É um serviço.",
           "illustration": "item-bus"
         }
@@ -129,10 +133,7 @@
       "instructions": "O trabalho produziu uma coisa ou ajudou alguém?"
     }
   ],
-  "summary": [
-    "Bem é uma coisa que dá para pegar.",
-    "Serviço é um trabalho que ajuda alguém."
-  ],
+  "summary": ["Bem é uma coisa que dá para pegar.", "Serviço é um trabalho que ajuda alguém."],
   "guide": {
     "state": "discover",
     "text": "Alguns trabalhos fazem coisas, outros ajudam pessoas. Vamos ver?"

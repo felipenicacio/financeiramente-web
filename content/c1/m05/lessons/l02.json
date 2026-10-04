@@ -9,10 +9,7 @@
     "Reconhecer os passos de juntar para uma meta",
     "Ordenar as etapas de um plano simples"
   ],
-  "competencies": [
-    "F-D8-C1-01",
-    "F-D5-C1-01"
-  ],
+  "competencies": ["F-D8-C1-01", "F-D5-C1-01"],
   "sources": [
     {
       "source": "FB1",
@@ -45,6 +42,29 @@
       "title": "A meta da Nina"
     },
     {
+      "type": "explanation",
+      "title": "Juntar para uma meta",
+      "body": "Meta é algo que você quer e vai juntando aos poucos para conseguir. Para chegar lá, alguns passos ajudam.",
+      "illustration": "item-jar",
+      "bullets": [
+        {
+          "text": "Escolher a meta.",
+          "icon": "goal",
+          "tone": "purple"
+        },
+        {
+          "text": "Saber quanto ela custa.",
+          "icon": "price",
+          "tone": "amber"
+        },
+        {
+          "text": "Guardar um pouco de cada vez.",
+          "icon": "save",
+          "tone": "teal"
+        }
+      ]
+    },
+    {
       "type": "ordering",
       "prompt": "Coloque os passos de juntar para uma meta na ordem.",
       "items": [
@@ -69,12 +89,7 @@
           "illustration": "item-coins"
         }
       ],
-      "correct": [
-        "goal",
-        "price",
-        "save",
-        "reach"
-      ],
+      "correct": ["goal", "price", "save", "reach"],
       "feedback": "Primeiro escolhemos a meta e vemos o preço. Depois guardamos aos poucos até alcançar.",
       "instructions": "Toque para colocar na ordem, do primeiro ao último passo."
     }

@@ -9,9 +9,7 @@
     "Reconhecer moedas e cédulas brasileiras",
     "Perceber que cada uma vale um valor diferente"
   ],
-  "competencies": [
-    "F-D4-C1-01"
-  ],
+  "competencies": ["F-D4-C1-01"],
   "sources": [
     {
       "source": "AV-C",
@@ -80,9 +78,7 @@
           "id": "c1",
           "label": "Uma peça de metal, redonda",
           "situation": "Você acha no bolso uma pecinha de metal.",
-          "accepted": [
-            "coin"
-          ],
+          "accepted": ["coin"],
           "feedback": "Peça de metal e redonda é moeda.",
           "illustration": "item-coin"
         },
@@ -90,9 +86,7 @@
           "id": "c2",
           "label": "Um papel colorido com um número grande",
           "situation": "Você recebe um papel colorido de troco.",
-          "accepted": [
-            "banknote"
-          ],
+          "accepted": ["banknote"],
           "feedback": "Papel colorido com valor é cédula.",
           "illustration": "item-banknote"
         },
@@ -100,21 +94,36 @@
           "id": "c3",
           "label": "Várias pecinhas de metal juntas",
           "situation": "Você junta várias pecinhas no cofre.",
-          "accepted": [
-            "coin"
-          ],
+          "accepted": ["coin"],
           "feedback": "Pecinhas de metal são moedas.",
           "illustration": "item-coins"
         }
       ],
       "prompt": "Moeda ou cédula?",
       "instructions": "Leia e escolha: isso é moeda ou cédula?"
+    },
+    {
+      "type": "compare",
+      "prompt": "Qual costuma valer mais?",
+      "target": "most",
+      "products": [
+        {
+          "id": "coin",
+          "label": "Uma moeda",
+          "price": 1,
+          "illustration": "item-coin"
+        },
+        {
+          "id": "note",
+          "label": "Uma cédula",
+          "price": 10,
+          "illustration": "item-banknote"
+        }
+      ],
+      "feedback": "As cédulas costumam valer mais que as moedas. Por isso guardamos as duas com cuidado."
     }
   ],
-  "summary": [
-    "Moeda é de metal; cédula é de papel.",
-    "Cada uma vale um valor diferente."
-  ],
+  "summary": ["Moeda é de metal; cédula é de papel.", "Cada uma vale um valor diferente."],
   "guide": {
     "state": "discover",
     "text": "Vamos conhecer o dinheiro do Brasil de pertinho?"

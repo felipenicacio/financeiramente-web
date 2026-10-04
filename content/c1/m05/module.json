@@ -6,10 +6,7 @@
   "title": "Guardar e cuidar",
   "headline": "Por que guardar dinheiro, como juntar para uma meta e cuidar do que é nosso.",
   "summary": "Guardar um pouco ajuda a alcançar metas e a resolver surpresas. Cuidar das coisas faz tudo durar mais.",
-  "competencies": [
-    "F-D8-C1-01",
-    "F-D5-C1-01"
-  ],
+  "competencies": ["F-D8-C1-01", "F-D5-C1-01"],
   "integrative": {
     "title": "O cofrinho da turma",
     "intro": "Vamos juntar tudo sobre guardar e cuidar.",
@@ -169,5 +166,6 @@
         "text": "Cuidar faz as coisas durarem mais."
       }
     ]
-  }
+  },
+  "theme": "feliz"
 }

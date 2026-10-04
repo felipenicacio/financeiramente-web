@@ -9,9 +9,7 @@
     "Entender que o dinheiro facilita as trocas",
     "Reconhecer o dinheiro como algo que todos aceitam"
   ],
-  "competencies": [
-    "F-D4-C1-01"
-  ],
+  "competencies": ["F-D4-C1-01"],
   "sources": [
     {
       "source": "FB1",
@@ -25,13 +23,30 @@
     }
   ],
   "sensitivity": "N1",
-  "estimatedMinutes": 3,
+  "estimatedMinutes": 4,
   "content": [
     {
       "type": "explanation",
       "body": "O dinheiro resolveu um problema das trocas. Em vez de procurar alguém que queira exatamente o que você tem, você usa dinheiro: todo mundo aceita. Assim fica mais fácil comprar e vender.",
       "title": "O dinheiro facilita tudo",
       "illustration": "item-banknote"
+    },
+    {
+      "type": "story",
+      "title": "Com troca e com dinheiro",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "story-fruit-stand",
+          "text": "Sem dinheiro, para conseguir pão você precisa achar um padeiro que queira justo o que você tem para trocar."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-shop",
+          "text": "Com dinheiro é mais rápido: você paga, o padeiro aceita e pronto."
+        }
+      ],
+      "closing": "Como todo mundo aceita dinheiro, comprar fica muito mais fácil."
     },
     {
       "type": "choice",

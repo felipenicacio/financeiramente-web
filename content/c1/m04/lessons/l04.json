@@ -5,13 +5,8 @@
   "order": 4,
   "title": "Bem, serviço ou renda?",
   "headline": "Além de bens e serviços, existe a renda: o dinheiro que as pessoas recebem.",
-  "objectives": [
-    "Diferenciar bem, serviço e renda",
-    "Reconhecer a renda como dinheiro recebido"
-  ],
-  "competencies": [
-    "F-D7-C1-01"
-  ],
+  "objectives": ["Diferenciar bem, serviço e renda", "Reconhecer a renda como dinheiro recebido"],
+  "competencies": ["F-D7-C1-01"],
   "sources": [
     {
       "source": "FB1",
@@ -32,6 +27,23 @@
       "body": "Renda é o dinheiro que uma pessoa ou família recebe. O trabalho é uma forma de ter renda: quem trabalha costuma receber por isso.",
       "title": "Renda é o dinheiro que entra",
       "illustration": "item-wallet"
+    },
+    {
+      "type": "story",
+      "title": "O dinheiro que entra",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-wallet",
+          "text": "Quando alguém da casa trabalha, entra um dinheiro: é a renda."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-family-choice",
+          "text": "Com a renda, a família decide junto o que comprar e o que guardar."
+        }
+      ],
+      "closing": "Bens e serviços são o trabalho; a renda é o dinheiro que entra por ele."
     },
     {
       "type": "classify",
@@ -63,9 +75,7 @@
           "id": "bread",
           "label": "Pão da padaria",
           "situation": "O seu Jorge faz pães.",
-          "accepted": [
-            "good"
-          ],
+          "accepted": ["good"],
           "feedback": "O pão é uma coisa. É um bem.",
           "illustration": "item-bread"
         },
@@ -73,9 +83,7 @@
           "id": "repair",
           "label": "Conserto do computador",
           "situation": "A técnica Rita arruma o computador.",
-          "accepted": [
-            "service"
-          ],
+          "accepted": ["service"],
           "feedback": "Consertar ajuda alguém. É um serviço.",
           "illustration": "item-laptop"
         },
@@ -83,9 +91,7 @@
           "id": "payment",
           "label": "Pagamento do cozinheiro",
           "situation": "O Luís cozinha e recebe pelo trabalho.",
-          "accepted": [
-            "income"
-          ],
+          "accepted": ["income"],
           "feedback": "O dinheiro que ele recebe é a renda dele.",
           "illustration": "item-wallet"
         },
@@ -93,9 +99,7 @@
           "id": "health",
           "label": "Consulta no posto",
           "situation": "A enfermeira Sônia cuida de quem está doente.",
-          "accepted": [
-            "service"
-          ],
+          "accepted": ["service"],
           "feedback": "Cuidar da saúde é um serviço.",
           "illustration": "item-stethoscope"
         }

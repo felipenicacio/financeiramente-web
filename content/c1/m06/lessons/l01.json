@@ -5,13 +5,8 @@
   "order": 1,
   "title": "O que é um anúncio?",
   "headline": "Anúncio é uma mensagem feita para mostrar algo e chamar a nossa atenção.",
-  "objectives": [
-    "Reconhecer um anúncio",
-    "Perceber onde os anúncios aparecem"
-  ],
-  "competencies": [
-    "F-D2-C1-01"
-  ],
+  "objectives": ["Reconhecer um anúncio", "Perceber onde os anúncios aparecem"],
+  "competencies": ["F-D2-C1-01"],
   "sources": [
     {
       "source": "FB2",
@@ -25,7 +20,7 @@
     }
   ],
   "sensitivity": "N1",
-  "estimatedMinutes": 3,
+  "estimatedMinutes": 4,
   "content": [
     {
       "type": "story",
@@ -48,6 +43,27 @@
       "body": "Um anúncio é uma mensagem criada para mostrar um produto e chamar a nossa atenção. Ele aparece em vídeos, na TV, em cartazes e nas embalagens.",
       "title": "Anúncio chama atenção",
       "illustration": "item-poster"
+    },
+    {
+      "type": "choice",
+      "prompt": "Por que o anúncio do robô tinha música alta e luzes?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Para chamar a sua atenção",
+          "reflection": "Isso mesmo: o anúncio é feito para chamar a atenção."
+        },
+        {
+          "id": "b",
+          "label": "Porque robôs fazem barulho",
+          "reflection": "O barulho é do anúncio, não do robô: é para você olhar."
+        },
+        {
+          "id": "c",
+          "label": "Para te ensinar uma música",
+          "reflection": "A música serve para chamar a atenção para o produto."
+        }
+      ]
     }
   ],
   "summary": [
