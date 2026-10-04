@@ -113,7 +113,7 @@
           "situation": "Alguém conserta o seu brinquedo quebrado.",
           "accepted": ["service"],
           "feedback": "Consertar é um trabalho. É um serviço.",
-          "illustration": "item-robot"
+          "illustration": "item-toy-repair"
         }
       ],
       "prompt": "Coisa ou serviço?",
