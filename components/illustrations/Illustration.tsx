@@ -9,6 +9,9 @@ const rasterIllustrations = {
   'c1-m01-l01-p1': '/econominho/lessons/c1/m01/l01-p1.webp',
   'c1-m01-l01-p2': '/econominho/lessons/c1/m01/l01-p2.webp',
   'c1-m01-l01-p3': '/econominho/lessons/c1/m01/l01-p3.webp',
+  'c1-m01-l02-p1': '/econominho/lessons/c1/m01/l02-p1.webp',
+  'c1-m01-l02-p2': '/econominho/lessons/c1/m01/l02-p2.webp',
+  'c1-m01-l02-p3': '/econominho/lessons/c1/m01/l02-p3.webp',
 } as const;
 
 type RasterKey = keyof typeof rasterIllustrations;

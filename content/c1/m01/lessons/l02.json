@@ -25,17 +25,17 @@
       "panels": [
         {
           "id": "p1",
-          "illustration": "c1-barter-start",
+          "illustration": "c1-m01-l02-p1",
           "text": "Há muito tempo não existia dinheiro. Para conseguir uma coisa, as pessoas trocavam outra."
         },
         {
           "id": "p2",
-          "illustration": "c1-barter-examples",
+          "illustration": "c1-m01-l02-p2",
           "text": "Quem tinha maçãs podia trocar por pão. Quem tinha peixe podia trocar por frutas."
         },
         {
           "id": "p3",
-          "illustration": "c1-barter-problem",
+          "illustration": "c1-m01-l02-p3",
           "text": "Mas às vezes dava trabalho: quem queria pão nem sempre tinha o que o padeiro queria em troca."
         }
       ],
@@ -45,7 +45,7 @@
       "type": "explanation",
       "title": "Isso se chama troca",
       "body": "Quando você dá uma coisa para receber outra, sem usar dinheiro, isso é uma troca (também chamada de escambo).",
-      "illustration": "c1-barter-examples",
+      "illustration": "c1-m01-l02-p2",
       "bullets": [
         {
           "text": "Você dá o que tem de sobra.",
