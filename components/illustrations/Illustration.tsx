@@ -1,14 +1,29 @@
+import Image from 'next/image';
+
 import { palette } from '@/theme/tokens';
 
 import { itemShapes, type ItemKey } from './items';
 import { sceneShapes, type SceneKey, type SceneLabels } from './scenes';
 
-export type IllustrationName = ItemKey | SceneKey;
+const rasterIllustrations = {
+  'c1-m01-l01-p1': '/econominho/lessons/c1/m01/l01-p1.webp',
+  'c1-m01-l01-p2': '/econominho/lessons/c1/m01/l01-p2.webp',
+  'c1-m01-l01-p3': '/econominho/lessons/c1/m01/l01-p3.webp',
+} as const;
+
+type RasterKey = keyof typeof rasterIllustrations;
+
+export type IllustrationName = ItemKey | SceneKey | RasterKey;
 
 export const illustrationKeys = [
   ...Object.keys(itemShapes),
   ...Object.keys(sceneShapes),
+  ...Object.keys(rasterIllustrations),
 ] as IllustrationName[];
+
+function isRasterKey(name: string): name is RasterKey {
+  return name in rasterIllustrations;
+}
 
 export function isSceneKey(name: string): name is SceneKey {
   return name in sceneShapes;
@@ -24,14 +39,28 @@ type Props = {
 };
 
 /**
- * Ilustração vetorial inline, sem requisição de rede. Nome desconhecido
- * mostra uma forma neutra, para a tela nunca quebrar por um erro de digitação
+ * Ilustração do conteúdo: aceita cenas vetoriais inline e assets raster locais.
+ * Nome desconhecido mostra uma forma neutra, para a tela nunca quebrar por um erro de digitação
  * no conteúdo (os testes acusam o nome inválido antes da publicação).
  */
 export function Illustration({ name, alt, labels = {}, className }: Props) {
   const a11y = alt
     ? ({ role: 'img', 'aria-label': alt } as const)
     : ({ 'aria-hidden': true, focusable: false } as const);
+
+  if (isRasterKey(name)) {
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+    return (
+      <Image
+        src={`${basePath}${rasterIllustrations[name]}`}
+        alt={alt ?? ''}
+        width={288}
+        height={216}
+        className={className}
+        unoptimized
+      />
+    );
+  }
 
   if (isSceneKey(name)) {
     const Scene = sceneShapes[name];

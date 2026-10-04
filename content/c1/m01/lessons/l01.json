@@ -29,7 +29,7 @@
       "type": "explanation",
       "body": "Toda vez que alguém ganha, gasta, troca ou guarda dinheiro, está lidando com finanças. Não é coisa só de adulto: você também escolhe o que fazer com uma moeda.",
       "title": "Finanças é cuidar do dinheiro",
-      "illustration": "c1-finance-actions",
+      "illustration": "c1-m01-l01-p1",
       "bullets": [
         {
           "text": "Ganhar: receber dinheiro, como um presente.",
@@ -54,12 +54,12 @@
       "panels": [
         {
           "id": "p1",
-          "illustration": "story-gift",
+          "illustration": "c1-m01-l01-p3",
           "text": "Você ganha uma moeda de presente."
         },
         {
           "id": "p2",
-          "illustration": "story-pocket",
+          "illustration": "c1-m01-l01-p2",
           "text": "Agora é com você: dá para gastar agora, guardar no cofrinho ou esperar para juntar com outras moedas."
         }
       ],
@@ -67,6 +67,7 @@
     },
     {
       "type": "choice",
+      "illustration": "c1-m01-l01-p2",
       "prompt": "Você ganhou uma moeda. O que isso tem a ver com finanças?",
       "options": [
         {
