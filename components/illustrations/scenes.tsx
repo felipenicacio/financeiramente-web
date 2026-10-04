@@ -1,7 +1,7 @@
 /**
- * Cenas ilustradas (viewBox 320×200). Compostas com as formas de items.tsx,
- * sem rostos nem pessoas desenhadas: a criança se projeta na história pelo
- * texto, e a ilustração mostra os objetos da decisão.
+ * Cenas ilustradas (viewBox 320×200). As cenas do C1.1 usam personagens
+ * e contexto cotidiano para aproximar o visual do padrão editorial do
+ * Econominho; os demais módulos continuam reutilizando formas de items.tsx.
  */
 
 import { palette as p } from '@/theme/tokens';
@@ -377,7 +377,7 @@ const C1BarterExamples: Shape = () => (
     <path d="M143 139l-8-7 9-5" stroke={p.cyan700} strokeWidth={4} fill="none" strokeLinecap="round" strokeLinejoin="round" />
     <g transform="translate(134 29)">
       <rect width={52} height={36} rx={18} fill={p.white} stroke={p.slate200} strokeWidth={2} />
-      {place('item-fish', 4, -4, 42)}
+      {place('item-apple', 7, -1, 36)}
     </g>
   </g>
 );
