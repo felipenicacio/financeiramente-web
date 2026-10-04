@@ -1,0 +1,38 @@
+name: Import C1.1 L5 activity assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/import-c1-l5-assets.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  import-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Download L5 activity assets
+        env:
+          BREAD: 'https://dnznrvs05pmza.cloudfront.net/gemini/gemini-3-pro-image/images/3f4d3f3e-1195-475b-8221-447def02930c/4d45665d-029c-4a36-960b-87347f430843/Single_standalone_illustration_only__no_UI__no_text__no_labe.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiZjc3MjE0MzBiZjk5MzNlMCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5MTI1OTgyNH0.hoCHa6Yjkr4KVC_aV8ka_YsRBaYrMOkgv4a3NaQtT5k'
+          HAIRCUT: 'https://dnznrvs05pmza.cloudfront.net/gemini/gemini-3-pro-image/images/2d339403-bcb7-4053-8ffc-5fca8116564c/d55d64e2-252a-4cf7-a2db-c9e8f36ee6c3/Single_standalone_illustration_only__no_UI__no_text__no_labe.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiODkxODk5OGY1YmE3YTc1MiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5MTI4MTE2N30.B2zPvCnTF-VoOvL7y5C_h1G-45kUSqmdh8OXS3U9FB4'
+          BOOK: 'https://dnznrvs05pmza.cloudfront.net/gemini/gemini-3-pro-image/images/31cb19fe-4b77-4949-81d0-809d1f1ab472/4c0e237b-395f-4e00-829d-76276ca81082/Single_standalone_illustration_only__no_UI__no_text__no_labe.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiOGNlOTE5MDRjZjNkOTNmNCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5MTI1NDUzMn0.tHMuhFxL97HBV_VNKCkVLYfYML1FSSKE6QmG1FLXnnI'
+          REPAIR: 'https://dnznrvs05pmza.cloudfront.net/gemini/gemini-3-pro-image/images/b6ba9567-ac13-4e2d-82c9-7e12bc7cf4d1/c00506fe-a741-4e01-a071-4b85eb686ff4/Single_standalone_illustration_only__no_UI__no_text__no_labe.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiZGUzNmI3NzFjNWJmNmQyZSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5MTI5OTA1N30.bTBwFbFX1H19Cj9Sev5nH_w2I3L_QWVDSglbYMF8Ktc'
+        run: |
+          set -euo pipefail
+          mkdir -p public/econominho/lessons/c1/m01
+          curl -L --fail --retry 3 "$BREAD" -o public/econominho/lessons/c1/m01/l05-bread.png
+          curl -L --fail --retry 3 "$HAIRCUT" -o public/econominho/lessons/c1/m01/l05-haircut.png
+          curl -L --fail --retry 3 "$BOOK" -o public/econominho/lessons/c1/m01/l05-book.png
+          curl -L --fail --retry 3 "$REPAIR" -o public/econominho/lessons/c1/m01/l05-repair.png
+      - name: Commit imported assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/econominho/lessons/c1/m01
+          git commit -m "chore(visual): importar assets de atividade L5 C1.1"
+          git push origin HEAD:main
