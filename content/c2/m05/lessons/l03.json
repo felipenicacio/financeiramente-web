@@ -1,0 +1,150 @@
+{
+  "id": "c2-m05-l03",
+  "cycle": "c2",
+  "module": "m05",
+  "order": 3,
+  "title": "Renda fixa e renda variável",
+  "headline": "Algumas rendas se repetem sempre iguais; outras mudam a cada período.",
+  "objectives": ["Diferenciar renda fixa de renda variável", "Classificar exemplos do dia a dia"],
+  "competencies": ["F-D7-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF13",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "concepts",
+      "title": "Dois tipos de renda",
+      "intro": "A renda pode se repetir sempre igual ou variar de um período para outro.",
+      "concepts": [
+        {
+          "id": "fixed",
+          "label": "Renda fixa",
+          "short": "Sempre o mesmo valor",
+          "description": "Chega regularmente, com o mesmo valor, como um salário mensal.",
+          "icon": "income",
+          "tone": "teal"
+        },
+        {
+          "id": "variable",
+          "label": "Renda variável",
+          "short": "Muda a cada vez",
+          "description": "Muda de valor dependendo do período, como vendas ou trabalhos extras.",
+          "icon": "income",
+          "tone": "amber"
+        }
+      ],
+      "keyIdea": "Saber se a renda é fixa ou variável ajuda a planejar melhor o orçamento.",
+      "keyIdeaIllustration": "item-calendar"
+    },
+    {
+      "type": "classify",
+      "prompt": "Classifique cada exemplo de renda.",
+      "categories": [
+        {
+          "id": "fixed",
+          "label": "Fixa",
+          "short": "Sempre igual",
+          "icon": "income",
+          "tone": "teal"
+        },
+        {
+          "id": "variable",
+          "label": "Variável",
+          "short": "Muda sempre",
+          "icon": "income",
+          "tone": "amber"
+        }
+      ],
+      "items": [
+        {
+          "id": "salary",
+          "label": "Salário mensal de um emprego fixo",
+          "situation": "O valor combinado chega todo mês, sempre igual.",
+          "accepted": ["fixed"],
+          "feedback": "Um salário combinado é um exemplo clássico de renda fixa.",
+          "illustration": "item-chair"
+        },
+        {
+          "id": "sales",
+          "label": "Vender doces em datas comemorativas",
+          "situation": "Em alguns meses vende mais, em outros vende menos.",
+          "accepted": ["variable"],
+          "feedback": "Como o valor muda bastante, essa é uma renda variável.",
+          "illustration": "item-cake"
+        },
+        {
+          "id": "freelance",
+          "label": "Jardinagem quando alguém chama",
+          "situation": "Alguns meses tem mais pedidos, outros menos.",
+          "accepted": ["variable"],
+          "feedback": "Como depende da demanda, essa renda varia de período para período.",
+          "illustration": "item-bench"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Pensando em renda",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "decision",
+          "prompt": "Uma família que depende de renda variável precisa",
+          "options": [
+            {
+              "id": "a",
+              "label": "Planejar com mais cuidado, já que o valor muda"
+            },
+            {
+              "id": "b",
+              "label": "Gastar sempre o mesmo valor todo mês"
+            },
+            {
+              "id": "c",
+              "label": "Ignorar qualquer planejamento"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Como o valor varia, o planejamento precisa considerar os meses de menor renda."
+        },
+        {
+          "id": "q2",
+          "kind": "recognition",
+          "prompt": "Um salário mensal fixo é exemplo de",
+          "options": [
+            {
+              "id": "a",
+              "label": "Renda fixa"
+            },
+            {
+              "id": "b",
+              "label": "Renda variável"
+            },
+            {
+              "id": "c",
+              "label": "Despesa"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Um valor que se repete igual todo mês é renda fixa."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Renda fixa se repete sempre igual; renda variável muda a cada período.",
+    "Saber qual tipo de renda a família tem ajuda a planejar melhor."
+  ]
+}

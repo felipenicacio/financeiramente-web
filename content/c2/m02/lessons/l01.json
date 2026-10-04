@@ -1,0 +1,93 @@
+{
+  "id": "c2-m02-l01",
+  "cycle": "c2",
+  "module": "m02",
+  "order": 1,
+  "title": "O que é uma meta financeira",
+  "headline": "Meta é um objetivo com valor, prazo e um caminho para chegar lá.",
+  "objectives": [
+    "Entender o que caracteriza uma meta financeira",
+    "Diferenciar meta de vontade passageira"
+  ],
+  "competencies": ["F-D1-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF10",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "guide": {
+    "state": "ask",
+    "text": "Você já juntou dinheiro para alcançar alguma coisa?"
+  },
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Uma vontade organizada",
+      "body": "Toda meta começa com uma vontade. Mas vira meta quando ganha um valor, um prazo e passos para chegar lá: não é só querer, é planejar.",
+      "illustration": "item-jar",
+      "bullets": [
+        {
+          "text": "Valor: quanto custa alcançar.",
+          "icon": "money",
+          "tone": "amber"
+        },
+        {
+          "text": "Prazo: até quando.",
+          "icon": "later",
+          "tone": "coral"
+        },
+        {
+          "text": "Passos: como juntar aos poucos.",
+          "icon": "goal",
+          "tone": "teal"
+        }
+      ]
+    },
+    {
+      "type": "story",
+      "title": "A meta do Caio",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-boardgame",
+          "text": "Caio quer um jogo novo que custa R$ 60."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-jar",
+          "text": "Em vez de só desejar, ele decide juntar R$ 10 por mês durante seis meses."
+        }
+      ],
+      "closing": "A vontade virou meta quando ganhou um valor, um prazo e um plano."
+    },
+    {
+      "type": "choice",
+      "prompt": "Qual destas frases descreve melhor uma meta financeira?",
+      "options": [
+        {
+          "id": "a",
+          "label": "“Vou juntar R$ 60 em seis meses para o jogo”",
+          "reflection": "Isso mesmo: tem valor, prazo e um plano por trás."
+        },
+        {
+          "id": "b",
+          "label": "“Um dia eu quero um jogo novo”",
+          "reflection": "É um desejo, mas ainda sem prazo nem plano: falta virar meta."
+        },
+        {
+          "id": "c",
+          "label": "“Vou comprar tudo que eu ver”",
+          "reflection": "Isso não é meta: é gastar sem planejar nada."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Meta é uma vontade com valor, prazo e um plano para alcançar.",
+    "Um plano simples já transforma desejo em meta."
+  ]
+}

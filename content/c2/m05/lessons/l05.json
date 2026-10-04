@@ -1,0 +1,76 @@
+{
+  "id": "c2-m05-l05",
+  "cycle": "c2",
+  "module": "m05",
+  "order": 5,
+  "title": "Pagar a prazo: o compromisso do depois",
+  "headline": "Dividir em parcelas pede lembrar de pagar até a última delas.",
+  "objectives": [
+    "Entender o que é pagamento a prazo",
+    "Reconhecer o compromisso contínuo de uma compra parcelada"
+  ],
+  "competencies": ["F-D6-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF45LF01",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "guide": {
+    "state": "consequence",
+    "text": "O que muda quando uma compra é dividida em partes?"
+  },
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Um compromisso que continua",
+      "body": "Pagar a prazo divide o valor em partes, pagas em datas combinadas. Até a última parcela ser paga, o compromisso continua existindo: não acaba na hora da compra.",
+      "illustration": "item-calendar"
+    },
+    {
+      "type": "story",
+      "title": "O carnê da família de Rosa",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-bus",
+          "text": "A família de Rosa comprou uma bicicleta em cinco parcelas."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-calendar",
+          "text": "Mesmo depois de levar a bicicleta para casa, ainda faltavam parcelas para pagar todo mês."
+        }
+      ],
+      "closing": "O compromisso de pagar a prazo continua até a última parcela ser quitada."
+    },
+    {
+      "type": "choice",
+      "prompt": "Antes de comprar algo a prazo, o que vale mais a pena verificar?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Se vai dar para pagar todas as parcelas até o fim",
+          "reflection": "Isso mesmo: o compromisso só termina com a última parcela paga."
+        },
+        {
+          "id": "b",
+          "label": "Só o valor da primeira parcela",
+          "reflection": "Olhar só a primeira parcela esconde o compromisso das próximas."
+        },
+        {
+          "id": "c",
+          "label": "Nada, parcelar nunca traz nenhum compromisso",
+          "reflection": "Parcelar sempre cria um compromisso até a última parcela ser paga."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Pagar a prazo divide o valor em partes combinadas.",
+    "O compromisso continua até a última parcela ser paga."
+  ]
+}

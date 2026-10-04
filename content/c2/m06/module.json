@@ -1,0 +1,168 @@
+{
+  "id": "m06",
+  "cycle": "c2",
+  "order": 6,
+  "code": "C2.6",
+  "title": "Guardar, proteger e contribuir",
+  "headline": "Poupar com um motivo, cuidar dos seus dados e entender para que servem os impostos.",
+  "summary": "Guardar dinheiro, proteger informações e entender a vida em comunidade fecham o olhar sobre finanças do C2.",
+  "competencies": ["F-D8-C2-01", "F-D9-C2-01"],
+  "integrative": {
+    "title": "Juntando tudo",
+    "intro": "Vamos ver o que você descobriu sobre guardar, proteger e contribuir?",
+    "object": {
+      "type": "quiz",
+      "title": "O que você descobriu",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Poupar com um motivo significa",
+          "options": [
+            {
+              "id": "a",
+              "label": "Guardar dinheiro pensando em uma meta ou imprevisto"
+            },
+            {
+              "id": "b",
+              "label": "Guardar sem nenhum propósito"
+            },
+            {
+              "id": "c",
+              "label": "Nunca gastar nada"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Poupar com um motivo torna o hábito mais claro e fácil de manter.",
+          "illustration": "item-jar"
+        },
+        {
+          "id": "q2",
+          "kind": "decision",
+          "prompt": "Uma reserva para imprevistos serve para",
+          "options": [
+            {
+              "id": "a",
+              "label": "Cobrir gastos inesperados sem bagunçar o orçamento"
+            },
+            {
+              "id": "b",
+              "label": "Ser gasta assim que surge qualquer vontade"
+            },
+            {
+              "id": "c",
+              "label": "Nunca ser usada"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "A reserva existe justamente para amortecer imprevistos sem desorganizar o orçamento."
+        },
+        {
+          "id": "q3",
+          "kind": "decision",
+          "prompt": "Proteger uma senha significa",
+          "options": [
+            {
+              "id": "a",
+              "label": "Não compartilhar com estranhos nem deixar visível"
+            },
+            {
+              "id": "b",
+              "label": "Usar a mesma senha em tudo e contar para os amigos"
+            },
+            {
+              "id": "c",
+              "label": "Escrever em qualquer lugar público"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Senhas protegem contas e dados: por isso não devem ser compartilhadas."
+        },
+        {
+          "id": "q4",
+          "kind": "explanation",
+          "prompt": "Impostos servem, entre outras coisas, para",
+          "options": [
+            {
+              "id": "a",
+              "label": "Financiar escolas, hospitais e serviços públicos"
+            },
+            {
+              "id": "b",
+              "label": "Desaparecer sem nenhuma utilidade"
+            },
+            {
+              "id": "c",
+              "label": "Pagar só despesas de uma única pessoa"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Impostos ajudam a financiar serviços usados por toda a comunidade."
+        },
+        {
+          "id": "q5",
+          "kind": "situation",
+          "prompt": "Quando um produto chega com defeito, o consumidor tem direito a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Buscar troca, conserto ou reembolso, conforme a situação"
+            },
+            {
+              "id": "b",
+              "label": "Nenhum direito"
+            },
+            {
+              "id": "c",
+              "label": "Ficar com o produto sem poder reclamar"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "O consumidor tem direitos básicos quando um produto apresenta problema."
+        }
+      ]
+    }
+  },
+  "conclusion": {
+    "title": "Você concluiu o módulo",
+    "message": "Poupar com um motivo, proteger informações pessoais e entender impostos e direitos fecham uma visão mais completa das finanças.",
+    "recap": [
+      {
+        "icon": "save",
+        "tone": "teal",
+        "text": "Poupar com um motivo torna o hábito mais fácil."
+      },
+      {
+        "icon": "safe",
+        "tone": "cyan",
+        "text": "Proteger senhas e dados é cuidado básico."
+      },
+      {
+        "icon": "shared",
+        "tone": "purple",
+        "text": "Impostos financiam serviços usados por todos."
+      },
+      {
+        "icon": "info",
+        "tone": "amber",
+        "text": "O consumidor tem direitos quando algo dá errado."
+      }
+    ]
+  },
+  "theme": "feliz"
+}

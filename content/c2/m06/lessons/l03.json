@@ -1,0 +1,158 @@
+{
+  "id": "c2-m06-l03",
+  "cycle": "c2",
+  "module": "m06",
+  "order": 3,
+  "title": "Cuidando das suas senhas e dados",
+  "headline": "Proteger informações pessoais também é cuidar do seu dinheiro.",
+  "objectives": [
+    "Reconhecer boas práticas simples de segurança digital",
+    "Perceber a relação entre dados pessoais e segurança financeira"
+  ],
+  "competencies": ["F-D8-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF10",
+      "role": "principal"
+    },
+    {
+      "source": "BNCC",
+      "reference": "EF04CO",
+      "role": "complementar"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "concepts",
+      "title": "Cuidados simples",
+      "intro": "Algumas atitudes simples já ajudam a proteger seus dados.",
+      "concepts": [
+        {
+          "id": "password",
+          "label": "Senha só sua",
+          "short": "Não compartilhar",
+          "description": "Uma senha não deve ser contada nem para amigos próximos.",
+          "icon": "safe",
+          "tone": "teal"
+        },
+        {
+          "id": "ask",
+          "label": "Pedir ajuda a um adulto",
+          "short": "Em caso de dúvida",
+          "description": "Diante de uma mensagem estranha pedindo dados, pedir ajuda a um adulto de confiança.",
+          "icon": "care",
+          "tone": "amber"
+        }
+      ],
+      "keyIdea": "Proteger senhas e dados é uma forma simples de cuidar também do seu dinheiro.",
+      "keyIdeaIllustration": "item-tablet"
+    },
+    {
+      "type": "classify",
+      "prompt": "Classifique cada atitude sobre segurança digital.",
+      "categories": [
+        {
+          "id": "safe",
+          "label": "Atitude segura",
+          "short": "Protege",
+          "icon": "safe",
+          "tone": "teal"
+        },
+        {
+          "id": "risky",
+          "label": "Pede cuidado",
+          "short": "Risco",
+          "icon": "limit",
+          "tone": "coral"
+        }
+      ],
+      "items": [
+        {
+          "id": "share",
+          "label": "Contar a senha para um colega da escola",
+          "situation": "O colega pediu para usar a senha de um aplicativo só uma vez.",
+          "accepted": ["risky"],
+          "feedback": "Uma senha não deve ser compartilhada, nem com pessoas próximas.",
+          "illustration": "item-tablet"
+        },
+        {
+          "id": "askadult",
+          "label": "Perguntar a um adulto antes de clicar num link",
+          "situation": "Chegou uma mensagem estranha pedindo dados pessoais.",
+          "accepted": ["safe"],
+          "feedback": "Pedir ajuda a um adulto de confiança é uma atitude segura diante de dúvidas.",
+          "illustration": "item-tablet"
+        },
+        {
+          "id": "public",
+          "label": "Escrever a senha num papel colado no computador",
+          "situation": "Alguém sugeriu colar a senha para não esquecer.",
+          "accepted": ["risky"],
+          "feedback": "Deixar a senha visível facilita que outras pessoas a vejam.",
+          "illustration": "item-notebook"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Pensando em segurança",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "decision",
+          "prompt": "Diante de uma mensagem estranha pedindo dados pessoais, o melhor é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Pedir ajuda a um adulto de confiança antes de responder"
+            },
+            {
+              "id": "b",
+              "label": "Responder na hora com todos os dados"
+            },
+            {
+              "id": "c",
+              "label": "Compartilhar com amigos para ver o que acham"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Pedir ajuda a um adulto é o caminho mais seguro diante de uma dúvida assim."
+        },
+        {
+          "id": "q2",
+          "kind": "recognition",
+          "prompt": "Uma senha deve ser",
+          "options": [
+            {
+              "id": "a",
+              "label": "Mantida só com você, sem compartilhar"
+            },
+            {
+              "id": "b",
+              "label": "Compartilhada com todos os amigos"
+            },
+            {
+              "id": "c",
+              "label": "Escrita em qualquer lugar visível"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Manter a senha só com você é uma das formas mais simples de se proteger."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Proteger senhas e dados é uma forma de cuidar também do seu dinheiro.",
+    "Diante de dúvidas, pedir ajuda a um adulto de confiança é o caminho mais seguro."
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "id": "c2-m03-l03",
+  "cycle": "c2",
+  "module": "m03",
+  "order": 3,
+  "title": "Propaganda quer te convencer",
+  "headline": "Todo anúncio tem um objetivo: fazer você escolher aquele produto.",
+  "objectives": [
+    "Reconhecer a intenção persuasiva da propaganda",
+    "Perceber recursos usados para chamar atenção"
+  ],
+  "competencies": ["F-D2-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF04",
+      "role": "principal"
+    },
+    {
+      "source": "BNCC",
+      "reference": "EF04ER",
+      "role": "complementar"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "concepts",
+      "title": "Como a propaganda chama atenção",
+      "intro": "Anúncios usam recursos para parecer mais interessantes do que talvez sejam.",
+      "concepts": [
+        {
+          "id": "loud",
+          "label": "Palavras fortes",
+          "short": "“Imperdível”, “único”",
+          "description": "Palavras que criam urgência, como se fosse preciso decidir rápido.",
+          "icon": "ad",
+          "tone": "coral"
+        },
+        {
+          "id": "image",
+          "label": "Imagens bonitas",
+          "short": "Cenas perfeitas",
+          "description": "Fotos e cenas que mostram só o lado mais atraente do produto.",
+          "icon": "ad",
+          "tone": "purple"
+        },
+        {
+          "id": "fame",
+          "label": "Pessoas famosas",
+          "short": "Quem usa",
+          "description": "Mostrar alguém popular usando o produto para despertar vontade.",
+          "icon": "persuade",
+          "tone": "amber"
+        }
+      ],
+      "keyIdea": "Reconhecer esses recursos ajuda a separar o que é informação do que é persuasão.",
+      "keyIdeaIllustration": "item-poster"
+    },
+    {
+      "type": "story",
+      "title": "O anúncio do Caio",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "story-ad-loud",
+          "text": "Caio viu um anúncio dizendo que um brinquedo era “o melhor do mundo” e “só hoje”."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-thinking",
+          "text": "Ele parou para pensar: será que é mesmo o melhor, ou é só uma forma de chamar atenção rápido?"
+        }
+      ],
+      "closing": "Parar para pensar antes de decidir ajuda a não se deixar levar só pela propaganda."
+    },
+    {
+      "type": "quiz",
+      "title": "Pensando sobre propaganda",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "O objetivo principal de uma propaganda é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Convencer você a escolher aquele produto"
+            },
+            {
+              "id": "b",
+              "label": "Explicar só os defeitos do produto"
+            },
+            {
+              "id": "c",
+              "label": "Nunca ter nenhuma intenção"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Toda propaganda busca convencer, por isso vale pensar antes de decidir."
+        },
+        {
+          "id": "q2",
+          "kind": "decision",
+          "prompt": "Ao ver uma palavra como “imperdível” em um anúncio, o que ajuda?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Parar e pensar se você realmente precisa daquilo"
+            },
+            {
+              "id": "b",
+              "label": "Comprar na hora, sem pensar"
+            },
+            {
+              "id": "c",
+              "label": "Ignorar que existe um objetivo por trás"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Parar para pensar ajuda a separar necessidade real de urgência criada pelo anúncio."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Propaganda usa recursos para convencer, não só informar.",
+    "Parar para pensar antes de decidir ajuda a escolher melhor."
+  ]
+}

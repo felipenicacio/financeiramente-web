@@ -1,0 +1,109 @@
+{
+  "id": "c2-m02-l05",
+  "cycle": "c2",
+  "module": "m02",
+  "order": 5,
+  "title": "Construindo um plano para a meta",
+  "headline": "Um plano simples transforma uma meta grande em passos pequenos.",
+  "objectives": [
+    "Montar um plano simples com valor, prazo e passos",
+    "Perceber que metas grandes se tornam possíveis em partes"
+  ],
+  "competencies": ["F-D1-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF10",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "De objetivo a plano",
+      "body": "Um plano simples responde três perguntas: quanto custa, até quando e quanto juntar em cada parte do caminho. Dividir em partes pequenas torna a meta mais fácil de alcançar.",
+      "illustration": "item-notebook"
+    },
+    {
+      "type": "story",
+      "title": "O plano da Bia",
+      "values": {
+        "goal": 80,
+        "share": 20
+      },
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-robot",
+          "text": "Bia quer um robô de montar que custa {goal}."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-calendar",
+          "text": "Ela decide juntar {share} por mês, durante 4 meses, até alcançar o valor todo."
+        }
+      ],
+      "closing": "Dividir a meta em partes menores deixa o caminho mais claro."
+    },
+    {
+      "type": "quiz",
+      "title": "Montando um plano",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "explanation",
+          "prompt": "Por que dividir uma meta grande em partes menores ajuda?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Porque fica mais fácil acompanhar o progresso aos poucos"
+            },
+            {
+              "id": "b",
+              "label": "Porque o valor total muda"
+            },
+            {
+              "id": "c",
+              "label": "Porque não precisa mais esperar"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Partes menores tornam o caminho mais visível e menos cansativo."
+        },
+        {
+          "id": "q2",
+          "kind": "decision",
+          "prompt": "Um bom plano para uma meta costuma incluir",
+          "options": [
+            {
+              "id": "a",
+              "label": "Valor, prazo e quanto juntar em cada etapa"
+            },
+            {
+              "id": "b",
+              "label": "Só o desejo de ter algo"
+            },
+            {
+              "id": "c",
+              "label": "Nenhuma organização de tempo"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Um plano organiza o caminho: quanto, até quando e como juntar aos poucos."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Um plano simples organiza valor, prazo e passos até a meta.",
+    "Dividir em partes menores torna a meta mais fácil de alcançar."
+  ]
+}

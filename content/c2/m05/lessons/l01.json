@@ -1,0 +1,108 @@
+{
+  "id": "c2-m05-l01",
+  "cycle": "c2",
+  "module": "m05",
+  "order": 1,
+  "title": "De onde vem a renda",
+  "headline": "A renda nasce do trabalho, de serviços prestados ou de negócios.",
+  "objectives": [
+    "Reconhecer diferentes origens de renda",
+    "Relacionar renda a um trabalho ou serviço prestado"
+  ],
+  "competencies": ["F-D7-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF13",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "guide": {
+    "state": "ask",
+    "text": "De onde vem o dinheiro que entra na casa de uma família?"
+  },
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Trabalho vira renda",
+      "body": "Quando alguém trabalha, presta um serviço ou vende algo que fez, recebe uma renda em troca. É assim que o dinheiro entra na maioria das famílias.",
+      "illustration": "item-chair"
+    },
+    {
+      "type": "classify",
+      "prompt": "Classifique cada situação como fonte de renda ou não.",
+      "categories": [
+        {
+          "id": "income",
+          "label": "É renda",
+          "short": "Gera dinheiro",
+          "icon": "income",
+          "tone": "green"
+        },
+        {
+          "id": "notincome",
+          "label": "Não é renda",
+          "short": "Não gera dinheiro",
+          "icon": "info",
+          "tone": "cyan"
+        }
+      ],
+      "items": [
+        {
+          "id": "job",
+          "label": "Trabalhar numa loja e receber salário",
+          "situation": "A pessoa presta um serviço todos os dias e recebe por isso.",
+          "accepted": ["income"],
+          "feedback": "Salário é renda: o pagamento por um trabalho feito.",
+          "illustration": "item-chair"
+        },
+        {
+          "id": "craft",
+          "label": "Vender bijuterias feitas à mão",
+          "situation": "Alguém cria pulseiras e vende para quem se interessa.",
+          "accepted": ["income"],
+          "feedback": "Vender algo que você criou também gera renda.",
+          "illustration": "item-paints"
+        },
+        {
+          "id": "watch",
+          "label": "Assistir TV no fim de semana",
+          "situation": "É um momento de lazer, sem troca de valor.",
+          "accepted": ["notincome"],
+          "feedback": "Assistir TV é lazer: não gera renda para ninguém.",
+          "illustration": "item-chair"
+        }
+      ]
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre a origem da renda:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Renda normalmente vem de um trabalho, serviço ou venda.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: é a troca de algo útil por um pagamento."
+        },
+        {
+          "id": "s2",
+          "text": "Toda atividade do dia a dia gera renda.",
+          "isTrue": false,
+          "explanation": "Nem toda atividade gera renda: lazer e descanso, por exemplo, não geram."
+        },
+        {
+          "id": "s3",
+          "text": "Vender algo que você mesmo fez também pode gerar renda.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: vender um produto feito por você é uma forma de criar valor."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Renda normalmente vem de trabalho, serviço ou venda.",
+    "É a troca de algo útil por um pagamento."
+  ]
+}

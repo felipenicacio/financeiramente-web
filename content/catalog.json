@@ -20,8 +20,15 @@
       "label": "Escolhas",
       "ageRange": "9 a 11 anos",
       "description": "Planejar, comparar e decidir com mais autonomia.",
-      "status": "soon",
-      "modules": []
+      "status": "available",
+      "modules": [
+        { "id": "m01", "status": "available" },
+        { "id": "m02", "status": "available" },
+        { "id": "m03", "status": "available" },
+        { "id": "m04", "status": "available" },
+        { "id": "m05", "status": "available" },
+        { "id": "m06", "status": "available" }
+      ]
     },
     {
       "id": "c3",

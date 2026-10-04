@@ -1,0 +1,168 @@
+{
+  "id": "m03",
+  "cycle": "c2",
+  "order": 3,
+  "code": "C2.3",
+  "title": "Comparar de verdade: preço, qualidade e promoção",
+  "headline": "Nem toda promoção é vantagem, e preço baixo nem sempre é a melhor escolha.",
+  "summary": "Comparar de verdade olha além do preço: qualidade, tamanho e o que a propaganda quer vender.",
+  "competencies": ["F-D2-C2-01"],
+  "integrative": {
+    "title": "Juntando tudo",
+    "intro": "Vamos ver o que você descobriu sobre comparar de verdade?",
+    "object": {
+      "type": "quiz",
+      "title": "O que você descobriu",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Comparar de verdade significa olhar",
+          "options": [
+            {
+              "id": "a",
+              "label": "Preço, qualidade e o que você realmente precisa"
+            },
+            {
+              "id": "b",
+              "label": "Só o preço mais baixo"
+            },
+            {
+              "id": "c",
+              "label": "Só a cor da embalagem"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Comparar bem envolve vários fatores, não só o número do preço.",
+          "illustration": "item-magnifier"
+        },
+        {
+          "id": "q2",
+          "kind": "decision",
+          "prompt": "Uma promoção vale a pena quando",
+          "options": [
+            {
+              "id": "a",
+              "label": "Você realmente vai usar o produto"
+            },
+            {
+              "id": "b",
+              "label": "A loja anuncia com letras grandes"
+            },
+            {
+              "id": "c",
+              "label": "O preço parece baixo, mesmo sem comparar"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Uma promoção só é vantagem se o produto realmente serve para você."
+        },
+        {
+          "id": "q3",
+          "kind": "explanation",
+          "prompt": "Propaganda tem como objetivo",
+          "options": [
+            {
+              "id": "a",
+              "label": "Convencer você a escolher aquele produto"
+            },
+            {
+              "id": "b",
+              "label": "Informar só os defeitos do produto"
+            },
+            {
+              "id": "c",
+              "label": "Nunca influenciar ninguém"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Propaganda é feita para convencer: por isso vale pensar com calma antes de decidir."
+        },
+        {
+          "id": "q4",
+          "kind": "situation",
+          "prompt": "Duas embalagens têm preços parecidos, mas tamanhos diferentes. Para comparar de verdade, você olha",
+          "options": [
+            {
+              "id": "a",
+              "label": "O preço por unidade ou por quantidade"
+            },
+            {
+              "id": "b",
+              "label": "Só a cor da embalagem"
+            },
+            {
+              "id": "c",
+              "label": "Qual tem o nome mais bonito"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Comparar o preço pela quantidade mostra qual opção realmente custa menos."
+        },
+        {
+          "id": "q5",
+          "kind": "decision",
+          "prompt": "Antes de decidir uma compra, uma lista ajuda porque",
+          "options": [
+            {
+              "id": "a",
+              "label": "Organiza o que realmente é necessário comprar"
+            },
+            {
+              "id": "b",
+              "label": "Faz você gastar mais rápido"
+            },
+            {
+              "id": "c",
+              "label": "Não tem nenhuma utilidade"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Uma lista ajuda a comparar com calma, sem decidir só pelo impulso."
+        }
+      ]
+    }
+  },
+  "conclusion": {
+    "title": "Você concluiu o módulo",
+    "message": "Comparar de verdade olha preço, qualidade e necessidade real. Propaganda e promoção pedem atenção antes de decidir.",
+    "recap": [
+      {
+        "icon": "ad",
+        "tone": "purple",
+        "text": "Propaganda quer convencer, não só informar."
+      },
+      {
+        "icon": "price",
+        "tone": "coral",
+        "text": "Promoção só vale se o produto serve para você."
+      },
+      {
+        "icon": "info",
+        "tone": "cyan",
+        "text": "Comparar bem olha preço, qualidade e quantidade."
+      },
+      {
+        "icon": "choice",
+        "tone": "teal",
+        "text": "Uma lista ajuda a decidir com calma."
+      }
+    ]
+  },
+  "theme": "comparando"
+}

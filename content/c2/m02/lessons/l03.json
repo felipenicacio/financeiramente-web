@@ -1,0 +1,138 @@
+{
+  "id": "c2-m02-l03",
+  "cycle": "c2",
+  "module": "m02",
+  "order": 3,
+  "title": "Curto, médio e longo prazo",
+  "headline": "Metas podem ser alcançadas logo, em alguns meses ou depois de muito tempo.",
+  "objectives": [
+    "Diferenciar metas de curto, médio e longo prazo",
+    "Relacionar o prazo ao tempo necessário de planejamento"
+  ],
+  "competencies": ["F-D1-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF10",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "concepts",
+      "title": "Três tamanhos de prazo",
+      "intro": "O tempo até alcançar uma meta pode ser curto, médio ou longo.",
+      "concepts": [
+        {
+          "id": "short",
+          "label": "Curto prazo",
+          "short": "Semanas",
+          "description": "Uma meta que dá para alcançar em pouco tempo, como algumas semanas.",
+          "icon": "goal",
+          "tone": "teal"
+        },
+        {
+          "id": "mid",
+          "label": "Médio prazo",
+          "short": "Alguns meses",
+          "description": "Uma meta que leva alguns meses de planejamento e espera.",
+          "icon": "later",
+          "tone": "amber"
+        },
+        {
+          "id": "long",
+          "label": "Longo prazo",
+          "short": "Mais de um ano",
+          "description": "Uma meta que leva bastante tempo, às vezes mais de um ano.",
+          "icon": "wait",
+          "tone": "coral"
+        }
+      ],
+      "keyIdea": "Quanto maior a meta, maior costuma ser o prazo e o planejamento necessário.",
+      "keyIdeaIllustration": "item-calendar"
+    },
+    {
+      "type": "ordering",
+      "prompt": "Ordene essas metas do prazo mais curto para o mais longo.",
+      "items": [
+        {
+          "id": "snack",
+          "label": "Juntar para um lanche especial no fim de semana",
+          "illustration": "item-icecream"
+        },
+        {
+          "id": "game",
+          "label": "Juntar para um jogo de tabuleiro em três meses",
+          "illustration": "item-boardgame"
+        },
+        {
+          "id": "bike",
+          "label": "Juntar para uma bicicleta em mais de um ano",
+          "illustration": "item-bus"
+        }
+      ],
+      "correct": ["snack", "game", "bike"],
+      "feedback": "O lanche é mais rápido de alcançar; a bicicleta pede bem mais tempo de planejamento."
+    },
+    {
+      "type": "quiz",
+      "title": "Pensando em prazos",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "situation",
+          "prompt": "Uma meta de longo prazo costuma precisar de",
+          "options": [
+            {
+              "id": "a",
+              "label": "Mais tempo e planejamento constante"
+            },
+            {
+              "id": "b",
+              "label": "Nenhum planejamento"
+            },
+            {
+              "id": "c",
+              "label": "Ser alcançada em um único dia"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Metas maiores pedem acompanhamento ao longo do tempo para não serem esquecidas."
+        },
+        {
+          "id": "q2",
+          "kind": "recognition",
+          "prompt": "Uma meta de curto prazo é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Alcançada em poucas semanas"
+            },
+            {
+              "id": "b",
+              "label": "Sempre a mais cara"
+            },
+            {
+              "id": "c",
+              "label": "Impossível de planejar"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Curto prazo significa pouco tempo até alcançar o objetivo."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Metas podem ser de curto, médio ou longo prazo.",
+    "Quanto maior o prazo, mais planejamento costuma ser necessário."
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "id": "c2-m01-l04",
+  "cycle": "c2",
+  "module": "m01",
+  "order": 4,
+  "title": "Desconto: pagar menos pelo mesmo produto",
+  "headline": "Desconto reduz o preço. Mas vale sempre comparar com o valor original.",
+  "objectives": ["Entender o que é um desconto", "Comparar preços com e sem desconto"],
+  "competencies": ["F-D4-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF01/02",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "O que é desconto",
+      "body": "Desconto é quando o vendedor reduz o preço de um produto. Em vez de pagar o valor cheio, você paga um pouco menos. Vale comparar sempre com o preço original para saber se vale a pena.",
+      "illustration": "item-pricetag"
+    },
+    {
+      "type": "compare",
+      "prompt": "Qual mochila tem o preço mais baixo com desconto?",
+      "target": "least",
+      "products": [
+        {
+          "id": "a",
+          "label": "Mochila A: de R$ 90 por",
+          "price": 72,
+          "illustration": "item-backpack"
+        },
+        {
+          "id": "b",
+          "label": "Mochila B: de R$ 80 por",
+          "price": 68,
+          "illustration": "item-backpack"
+        },
+        {
+          "id": "c",
+          "label": "Mochila C: de R$ 100 por",
+          "price": 75,
+          "illustration": "item-backpack"
+        }
+      ],
+      "feedback": "A mochila B tem o menor preço final. Comparar o valor final, não só o desconto, ajuda a decidir melhor."
+    },
+    {
+      "type": "quiz",
+      "title": "Pensando em desconto",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "situation",
+          "prompt": "Um tênis custa R$ 150 e tem 20 por cento de desconto. O valor final é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Menor que R$ 150"
+            },
+            {
+              "id": "b",
+              "label": "Igual a R$ 150"
+            },
+            {
+              "id": "c",
+              "label": "Maior que R$ 150"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Desconto sempre reduz o preço original: o valor final fica menor."
+        },
+        {
+          "id": "q2",
+          "kind": "decision",
+          "prompt": "Antes de aproveitar um desconto, o que vale a pena verificar?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Se o preço final realmente cabe no que você tem disponível"
+            },
+            {
+              "id": "b",
+              "label": "Só o tamanho da porcentagem anunciada"
+            },
+            {
+              "id": "c",
+              "label": "Nada, desconto é sempre vantagem"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Uma porcentagem grande em um produto caro ainda pode custar mais do que você tem disponível."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Desconto reduz o preço original de um produto.",
+    "Vale comparar o preço final, não só a porcentagem anunciada."
+  ]
+}

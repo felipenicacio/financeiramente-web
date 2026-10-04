@@ -1,0 +1,125 @@
+{
+  "id": "c2-m01-l01",
+  "cycle": "c2",
+  "module": "m01",
+  "order": 1,
+  "title": "Tantas formas de pagar",
+  "headline": "Dinheiro não é mais só cédula e moeda: tem cartão, pix e carnê também.",
+  "objectives": [
+    "Reconhecer diferentes formas de pagamento usadas no dia a dia",
+    "Perceber que todas elas representam o mesmo dinheiro"
+  ],
+  "competencies": ["F-D4-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF01",
+      "role": "principal"
+    },
+    {
+      "source": "MC",
+      "reference": "D4",
+      "role": "complementar"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "guide": {
+    "state": "ask",
+    "text": "Quantas formas diferentes de pagar você já viu alguém usar?"
+  },
+  "content": [
+    {
+      "type": "explanation",
+      "title": "O dinheiro mudou de forma",
+      "body": "Hoje dá para pagar com cédula e moeda, cartão de débito ou crédito, pix pelo celular ou carnê de loja. Todas são formas de mover o mesmo dinheiro de um lugar para outro.",
+      "illustration": "item-wallet",
+      "bullets": [
+        {
+          "text": "Dinheiro: cédulas e moedas na mão.",
+          "icon": "money",
+          "tone": "amber"
+        },
+        {
+          "text": "Cartão: liga a uma conta no banco.",
+          "icon": "money",
+          "tone": "cyan"
+        },
+        {
+          "text": "Pix: transferência instantânea pelo celular.",
+          "icon": "money",
+          "tone": "teal"
+        }
+      ]
+    },
+    {
+      "type": "concepts",
+      "title": "Quatro formas de pagar",
+      "intro": "Cada forma de pagamento move o dinheiro de um jeito diferente.",
+      "concepts": [
+        {
+          "id": "cash",
+          "label": "Dinheiro",
+          "short": "Cédulas e moedas",
+          "description": "Você entrega o valor na hora, em papel ou metal.",
+          "icon": "money",
+          "tone": "amber"
+        },
+        {
+          "id": "card",
+          "label": "Cartão",
+          "short": "Débito ou crédito",
+          "description": "O valor sai de uma conta ligada ao cartão, na hora ou depois.",
+          "icon": "money",
+          "tone": "cyan"
+        },
+        {
+          "id": "pix",
+          "label": "Pix",
+          "short": "Transferência pelo celular",
+          "description": "O dinheiro sai de uma conta e chega em outra na mesma hora.",
+          "icon": "money",
+          "tone": "teal"
+        },
+        {
+          "id": "installment",
+          "label": "Carnê",
+          "short": "Parcelas combinadas",
+          "description": "O valor é dividido em partes pagas em datas combinadas.",
+          "icon": "later",
+          "tone": "coral"
+        }
+      ],
+      "keyIdea": "Formas diferentes, mesmo dinheiro: o que muda é o caminho que ele percorre até a loja.",
+      "keyIdeaIllustration": "item-pricetag"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre as formas de pagar:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Cartão e pix movem dinheiro de uma conta, não da carteira.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: o dinheiro sai de uma conta bancária, mesmo sem aparecer em papel."
+        },
+        {
+          "id": "s2",
+          "text": "Pagar com pix é mais caro do que pagar em dinheiro.",
+          "isTrue": false,
+          "explanation": "O preço do produto é o mesmo; muda só a forma de mover o dinheiro."
+        },
+        {
+          "id": "s3",
+          "text": "O carnê divide um valor em partes pagas aos poucos.",
+          "isTrue": true,
+          "explanation": "Exatamente: o carnê organiza um pagamento em parcelas combinadas."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Dinheiro, cartão, pix e carnê são formas diferentes de pagar.",
+    "Todas movem o mesmo valor, cada uma de um jeito."
+  ]
+}

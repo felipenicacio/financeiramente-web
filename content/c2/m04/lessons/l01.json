@@ -1,0 +1,95 @@
+{
+  "id": "c2-m04-l01",
+  "cycle": "c2",
+  "module": "m04",
+  "order": 1,
+  "title": "O que é um orçamento",
+  "headline": "Orçamento é um jeito de organizar o que entra e o que sai do dinheiro.",
+  "objectives": [
+    "Entender para que serve um orçamento",
+    "Reconhecer ferramentas usadas para organizar um orçamento"
+  ],
+  "competencies": ["F-D5-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF11",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "guide": {
+    "state": "ask",
+    "text": "Você já viu alguém da sua família anotar gastos num caderno ou aplicativo?"
+  },
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Um mapa do dinheiro",
+      "body": "Orçamento é como um mapa: mostra de onde vem o dinheiro e para onde ele vai. Com esse mapa, fica mais fácil planejar e evitar surpresas no fim do mês.",
+      "illustration": "item-notebook"
+    },
+    {
+      "type": "concepts",
+      "title": "Ferramentas para organizar",
+      "intro": "Existem várias formas de registrar um orçamento.",
+      "concepts": [
+        {
+          "id": "notebook",
+          "label": "Caderno",
+          "short": "Anotações à mão",
+          "description": "Um caderno simples onde se anota o que entra e o que sai.",
+          "icon": "info",
+          "tone": "amber"
+        },
+        {
+          "id": "sheet",
+          "label": "Planilha",
+          "short": "No computador",
+          "description": "Uma planilha eletrônica que soma e organiza os valores automaticamente.",
+          "icon": "info",
+          "tone": "cyan"
+        },
+        {
+          "id": "app",
+          "label": "Aplicativo",
+          "short": "No celular",
+          "description": "Um aplicativo que registra gastos e mostra gráficos do orçamento.",
+          "icon": "info",
+          "tone": "teal"
+        }
+      ],
+      "keyIdea": "A ferramenta importa menos do que o hábito de registrar com regularidade.",
+      "keyIdeaIllustration": "item-tablet"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre orçamento:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Orçamento serve para organizar o que entra e o que sai do dinheiro.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: é um mapa do dinheiro da família."
+        },
+        {
+          "id": "s2",
+          "text": "Só existe uma forma certa de fazer orçamento.",
+          "isTrue": false,
+          "explanation": "Caderno, planilha ou aplicativo: o importante é o hábito de registrar."
+        },
+        {
+          "id": "s3",
+          "text": "Registrar o orçamento com regularidade ajuda a perceber problemas cedo.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: o hábito de registrar é o que faz o orçamento funcionar."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Orçamento organiza o que entra e o que sai do dinheiro.",
+    "Existem várias ferramentas; o importante é o hábito de registrar."
+  ]
+}

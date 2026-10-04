@@ -1,0 +1,109 @@
+{
+  "id": "c2-m06-l05",
+  "cycle": "c2",
+  "module": "m06",
+  "order": 5,
+  "title": "Direitos quando algo dá errado numa compra",
+  "headline": "Quando um produto vem com defeito, o consumidor tem direitos básicos.",
+  "objectives": [
+    "Reconhecer direitos básicos do consumidor",
+    "Relacionar um problema de compra a uma solução possível"
+  ],
+  "competencies": ["F-D9-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF04",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Quando algo não sai como deveria",
+      "body": "Se um produto chega com defeito ou diferente do combinado, o consumidor tem direitos: pode pedir troca, conserto ou reembolso, dependendo da situação. Guardar o comprovante ajuda nesse momento.",
+      "illustration": "item-pricetag"
+    },
+    {
+      "type": "choice",
+      "prompt": "Um brinquedo comprado parou de funcionar no primeiro dia de uso. O que é mais sensato fazer?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Voltar à loja com o comprovante e pedir troca ou conserto",
+          "reflection": "Isso mesmo: o comprovante ajuda a garantir o direito à troca ou ao conserto."
+        },
+        {
+          "id": "b",
+          "label": "Jogar fora e não falar nada",
+          "reflection": "Isso significa abrir mão de um direito que o consumidor tem nessa situação."
+        },
+        {
+          "id": "c",
+          "label": "Guardar sem usar e sem reclamar",
+          "reflection": "O consumidor pode buscar uma solução em vez de simplesmente guardar o problema."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Pensando em direitos do consumidor",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "situation",
+          "prompt": "Diante de um produto com defeito, o consumidor pode buscar",
+          "options": [
+            {
+              "id": "a",
+              "label": "Troca, conserto ou reembolso, conforme a situação"
+            },
+            {
+              "id": "b",
+              "label": "Nenhuma solução possível"
+            },
+            {
+              "id": "c",
+              "label": "Apenas desculpas da loja"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Esses são caminhos comuns quando um produto apresenta problema."
+        },
+        {
+          "id": "q2",
+          "kind": "decision",
+          "prompt": "Guardar o comprovante de uma compra ajuda porque",
+          "options": [
+            {
+              "id": "a",
+              "label": "Comprova a compra caso seja preciso buscar um direito"
+            },
+            {
+              "id": "b",
+              "label": "Não serve para nada"
+            },
+            {
+              "id": "c",
+              "label": "Só é útil para produtos caros"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "O comprovante ajuda a comprovar a compra e facilita buscar uma solução."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "O consumidor tem direitos quando um produto apresenta problema.",
+    "Guardar o comprovante da compra ajuda a buscar uma solução."
+  ]
+}

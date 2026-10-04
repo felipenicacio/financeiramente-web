@@ -1,0 +1,168 @@
+{
+  "id": "m05",
+  "cycle": "c2",
+  "order": 5,
+  "code": "C2.5",
+  "title": "Trabalho, renda e compromisso",
+  "headline": "De onde vem a renda, e o que muda entre pagar à vista ou aos poucos.",
+  "summary": "Trabalho cria valor e gera renda. Pagar a prazo cria um compromisso que precisa ser cumprido até o fim.",
+  "competencies": ["F-D7-C2-01", "F-D6-C2-01"],
+  "integrative": {
+    "title": "Juntando tudo",
+    "intro": "Vamos ver o que você descobriu sobre trabalho, renda e compromisso?",
+    "object": {
+      "type": "quiz",
+      "title": "O que você descobriu",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Renda é",
+          "options": [
+            {
+              "id": "a",
+              "label": "O dinheiro que uma pessoa recebe pelo seu trabalho"
+            },
+            {
+              "id": "b",
+              "label": "Um tipo de desconto"
+            },
+            {
+              "id": "c",
+              "label": "Um produto à venda"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Renda é o que a pessoa recebe, geralmente em troca de um trabalho ou serviço.",
+          "illustration": "item-chair"
+        },
+        {
+          "id": "q2",
+          "kind": "explanation",
+          "prompt": "Criar valor significa",
+          "options": [
+            {
+              "id": "a",
+              "label": "Oferecer algo útil que outra pessoa está disposta a pagar"
+            },
+            {
+              "id": "b",
+              "label": "Ganhar dinheiro sem fazer nada"
+            },
+            {
+              "id": "c",
+              "label": "Gastar menos do que se tem"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Criar valor é oferecer algo útil, um produto ou serviço, em troca de uma renda."
+        },
+        {
+          "id": "q3",
+          "kind": "recognition",
+          "prompt": "Renda fixa é aquela que",
+          "options": [
+            {
+              "id": "a",
+              "label": "Chega sempre no mesmo valor e período"
+            },
+            {
+              "id": "b",
+              "label": "Muda todo mês sem nenhum padrão"
+            },
+            {
+              "id": "c",
+              "label": "Nunca é recebida"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Renda fixa se repete com regularidade, como um salário mensal."
+        },
+        {
+          "id": "q4",
+          "kind": "recognition",
+          "prompt": "Pagar à vista significa",
+          "options": [
+            {
+              "id": "a",
+              "label": "Pagar o valor todo de uma vez, na hora da compra"
+            },
+            {
+              "id": "b",
+              "label": "Pagar em partes ao longo do tempo"
+            },
+            {
+              "id": "c",
+              "label": "Não pagar nada"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "À vista é pagar tudo de uma vez, sem dividir em parcelas."
+        },
+        {
+          "id": "q5",
+          "kind": "decision",
+          "prompt": "Ao pagar a prazo, o compromisso",
+          "options": [
+            {
+              "id": "a",
+              "label": "Continua até a última parcela ser paga"
+            },
+            {
+              "id": "b",
+              "label": "Termina assim que a compra é feita"
+            },
+            {
+              "id": "c",
+              "label": "Não existe, porque é pago depois"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Pagar a prazo cria um compromisso que só termina quando a última parcela é quitada."
+        }
+      ]
+    }
+  },
+  "conclusion": {
+    "title": "Você concluiu o módulo",
+    "message": "Trabalho cria valor e gera renda. Pagar à vista resolve na hora; pagar a prazo cria um compromisso até o fim.",
+    "recap": [
+      {
+        "icon": "work",
+        "tone": "green",
+        "text": "Trabalho cria valor que vira renda."
+      },
+      {
+        "icon": "income",
+        "tone": "amber",
+        "text": "Renda pode ser fixa ou variável."
+      },
+      {
+        "icon": "money",
+        "tone": "teal",
+        "text": "À vista é pagar tudo de uma vez."
+      },
+      {
+        "icon": "later",
+        "tone": "coral",
+        "text": "A prazo é um compromisso até a última parcela."
+      }
+    ]
+  },
+  "theme": "lendo"
+}

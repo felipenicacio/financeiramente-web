@@ -1,0 +1,108 @@
+{
+  "id": "c2-m03-l01",
+  "cycle": "c2",
+  "module": "m03",
+  "order": 1,
+  "title": "Promoção: vantagem ou armadilha?",
+  "headline": "Nem toda promoção economiza dinheiro de verdade.",
+  "objectives": [
+    "Reconhecer quando uma promoção é realmente vantajosa",
+    "Perceber armadilhas comuns em anúncios de promoção"
+  ],
+  "competencies": ["F-D2-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF04",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "guide": {
+    "state": "ask",
+    "text": "Toda promoção é mesmo uma vantagem?"
+  },
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Promoção também pede atenção",
+      "body": "Uma promoção pode ser uma boa oportunidade, mas também pode levar a comprar algo que você não precisava. Vale perguntar: eu usaria isso mesmo sem desconto?",
+      "illustration": "item-megaphone"
+    },
+    {
+      "type": "classify",
+      "prompt": "Classifique cada situação de promoção.",
+      "categories": [
+        {
+          "id": "good",
+          "label": "Vantagem real",
+          "short": "Vale a pena",
+          "icon": "price",
+          "tone": "teal"
+        },
+        {
+          "id": "trap",
+          "label": "Pede cuidado",
+          "short": "Pensar antes",
+          "icon": "info",
+          "tone": "coral"
+        }
+      ],
+      "items": [
+        {
+          "id": "needed",
+          "label": "Desconto em algo que você já ia comprar",
+          "situation": "O produto já estava na sua lista de necessidades.",
+          "accepted": ["good"],
+          "feedback": "Quando o produto já era necessário, o desconto é economia de verdade.",
+          "illustration": "item-bread"
+        },
+        {
+          "id": "impulse",
+          "label": "Comprar algo só porque está 'imperdível'",
+          "situation": "Você nunca tinha pensado nesse produto antes de ver o anúncio.",
+          "accepted": ["trap"],
+          "feedback": "Comprar por impulso, só pelo anúncio, pode gastar dinheiro com algo que não serve.",
+          "illustration": "item-poster"
+        },
+        {
+          "id": "bulk",
+          "label": "Comprar uma quantidade enorme só pelo desconto",
+          "situation": "O preço é bom, mas você não vai usar tudo antes de estragar.",
+          "accepted": ["trap"],
+          "feedback": "Se vai sobrar ou estragar, o desconto deixa de ser vantagem.",
+          "illustration": "item-bottle"
+        }
+      ]
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre promoções:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Toda promoção economiza dinheiro de verdade.",
+          "isTrue": false,
+          "explanation": "Só economiza se o produto realmente servir para você."
+        },
+        {
+          "id": "s2",
+          "text": "Vale perguntar se você compraria aquilo mesmo sem desconto.",
+          "isTrue": true,
+          "explanation": "Essa pergunta ajuda a separar necessidade de impulso."
+        },
+        {
+          "id": "s3",
+          "text": "Comprar por impulso, só pelo anúncio, pode gastar com algo desnecessário.",
+          "isTrue": true,
+          "explanation": "Exato: por isso vale parar e pensar antes de decidir."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Promoção só é vantagem se o produto realmente serve para você.",
+    "Perguntar antes de comprar ajuda a evitar gasto por impulso."
+  ]
+}
