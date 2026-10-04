@@ -29,7 +29,7 @@
       "type": "explanation",
       "body": "Com dinheiro, a gente paga por coisas que dá para pegar, como pão e lápis. E também paga por serviços, que são trabalhos que alguém faz, como cortar o cabelo ou consertar algo.",
       "title": "Coisas e serviços",
-      "illustration": "item-wallet",
+      "illustration": "c1-goods-services",
       "bullets": [
         {
           "text": "Coisa: dá para pegar e guardar (pão, lápis).",
@@ -113,7 +113,7 @@
           "situation": "Alguém conserta o seu brinquedo quebrado.",
           "accepted": ["service"],
           "feedback": "Consertar é um trabalho. É um serviço.",
-          "illustration": "item-laptop"
+          "illustration": "item-robot"
         }
       ],
       "prompt": "Coisa ou serviço?",
