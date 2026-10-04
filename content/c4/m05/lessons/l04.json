@@ -1,0 +1,78 @@
+{
+  "id": "c4-m05-l04",
+  "cycle": "c4",
+  "module": "m05",
+  "order": 4,
+  "title": "Custos e lucro de um negócio",
+  "headline": "O lucro de um negócio é a receita menos todos os custos envolvidos.",
+  "objectives": [
+    "Compreender o conceito de custo e de lucro",
+    "Calcular um exemplo simples de lucro"
+  ],
+  "competencies": ["F-D7-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF07",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "O que resta no final",
+      "body": "Receita é o valor total recebido pelas vendas. Custos incluem insumos, tributos e outras despesas do negócio. Lucro é o que resta da receita depois de pagos todos os custos envolvidos.",
+      "illustration": "item-notebook"
+    },
+    {
+      "type": "afford",
+      "prompt": "Com uma receita de {budget}, qual combinação de custos ainda deixa lucro positivo?",
+      "budget": 500,
+      "products": [
+        {
+          "id": "low",
+          "label": "Custos totais do mês",
+          "price": 350,
+          "illustration": "item-notebook"
+        },
+        {
+          "id": "high",
+          "label": "Custos totais de um mês mais caro",
+          "price": 600,
+          "illustration": "item-pricetag"
+        }
+      ],
+      "feedback": "Só a opção de custos totais dentro da receita disponível deixa lucro positivo no mês."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre custos e lucro:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Lucro é a receita menos todos os custos envolvidos.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: é o que resta depois de pagar todos os custos."
+        },
+        {
+          "id": "s2",
+          "text": "Receita e lucro são sempre o mesmo valor.",
+          "isTrue": false,
+          "explanation": "Lucro é a receita menos os custos; normalmente é um valor menor que a receita."
+        },
+        {
+          "id": "s3",
+          "text": "Tributos podem fazer parte dos custos de um negócio.",
+          "isTrue": true,
+          "explanation": "Exato: tributos sobre vendas ou renda entram no cálculo dos custos."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Lucro é a receita menos todos os custos envolvidos.",
+    "Tributos, insumos e outras despesas compõem os custos de um negócio."
+  ]
+}

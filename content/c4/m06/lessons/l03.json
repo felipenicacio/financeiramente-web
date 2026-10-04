@@ -1,0 +1,64 @@
+{
+  "id": "c4-m06-l03",
+  "cycle": "c4",
+  "module": "m06",
+  "order": 3,
+  "title": "Liquidez e possibilidade de perda",
+  "headline": "Liquidez é a facilidade de transformar um ativo em dinheiro disponível.",
+  "objectives": [
+    "Compreender o conceito de liquidez",
+    "Reconhecer que toda aplicação envolve alguma possibilidade de perda"
+  ],
+  "competencies": ["F-D8-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF09",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Rápido de resgatar ou não",
+      "body": "Liquidez descreve a facilidade de transformar um ativo em dinheiro disponível. Algumas opções têm liquidez alta, podendo ser resgatadas rapidamente; outras exigem mais tempo. Toda aplicação, além disso, envolve alguma possibilidade de perda.",
+      "illustration": "item-wallet"
+    },
+    {
+      "type": "reflection",
+      "state": "reflect",
+      "text": "Nenhuma aplicação é inteiramente livre de risco.",
+      "body": "Mesmo opções consideradas mais seguras envolvem algum grau de possibilidade de perda, que vale conhecer antes de decidir."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre liquidez e possibilidade de perda:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Liquidez é a facilidade de transformar um ativo em dinheiro disponível.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: é sobre a rapidez de resgate, não sobre o retorno."
+        },
+        {
+          "id": "s2",
+          "text": "Toda opção de aplicação é inteiramente livre de qualquer possibilidade de perda.",
+          "isTrue": false,
+          "explanation": "Mesmo opções mais seguras envolvem algum grau de possibilidade de perda."
+        },
+        {
+          "id": "s3",
+          "text": "Opções de alta liquidez costumam poder ser resgatadas rapidamente.",
+          "isTrue": true,
+          "explanation": "Exato: essa é justamente a característica de uma liquidez mais alta."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Liquidez é a facilidade de transformar um ativo em dinheiro disponível.",
+    "Toda aplicação envolve alguma possibilidade de perda."
+  ]
+}

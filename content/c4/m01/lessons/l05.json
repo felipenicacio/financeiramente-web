@@ -1,0 +1,104 @@
+{
+  "id": "c4-m01-l05",
+  "cycle": "c4",
+  "module": "m01",
+  "order": 5,
+  "title": "Decidindo com custo de oportunidade em mente",
+  "headline": "Aplicar o custo de oportunidade a uma decisão real ajuda a escolher com mais clareza.",
+  "objectives": [
+    "Aplicar o conceito de custo de oportunidade a uma decisão prática",
+    "Revisar estratégias comerciais e vieses de consumo"
+  ],
+  "competencies": ["F-D1-C4-01", "F-D2-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF01",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Juntando os conceitos",
+      "body": "Antes de uma decisão de consumo, vale perguntar: o que fica de lado com essa escolha? Existe alguma estratégia comercial ou viés influenciando essa decisão agora?",
+      "illustration": "item-notebook"
+    },
+    {
+      "type": "choice",
+      "prompt": "Davi viu uma oferta com prazo curto para um fone de ouvido que queria. O que fazer?",
+      "options": [
+        {
+          "id": "pause",
+          "label": "Pausar e avaliar o custo de oportunidade antes de decidir",
+          "reflection": "Ele ganha tempo para comparar o que deixaria de fazer com esse valor, mesmo sob prazo curto."
+        },
+        {
+          "id": "immediate",
+          "label": "Decidir imediatamente, para não perder a oferta",
+          "reflection": "Ele evita perder o prazo, mas corre o risco de não considerar o custo de oportunidade com calma."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Revisando o módulo",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "decision",
+          "prompt": "Antes de decidir sob pressão de tempo, uma pergunta útil é",
+          "options": [
+            {
+              "id": "a",
+              "label": "O que eu deixaria de fazer com esse valor?"
+            },
+            {
+              "id": "b",
+              "label": "Qual é a cor mais bonita disponível?"
+            },
+            {
+              "id": "c",
+              "label": "Quantas pessoas estão vendo esse anúncio agora?"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Essa pergunta coloca o custo de oportunidade no centro da decisão."
+        },
+        {
+          "id": "q2",
+          "kind": "explanation",
+          "prompt": "Reconhecer um viés de consumo antes de decidir ajuda a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Tomar uma decisão mais consciente"
+            },
+            {
+              "id": "b",
+              "label": "Eliminar qualquer prazer na compra"
+            },
+            {
+              "id": "c",
+              "label": "Garantir o menor preço do mercado"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Reconhecer o viés não elimina o prazer, mas ajuda a decidir com mais consciência."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Pensar no custo de oportunidade ajuda a decidir com mais clareza.",
+    "Reconhecer estratégias comerciais e vieses apoia decisões mais conscientes."
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "id": "m06",
+  "cycle": "c4",
+  "order": 6,
+  "code": "C4.6",
+  "title": "Investimentos, políticas econômicas e contexto",
+  "headline": "Contexto econômico, investimentos e políticas públicas se conectam na vida financeira.",
+  "summary": "Contexto familiar e econômico, classes de ativos e políticas econômicas fazem parte da vida financeira.",
+  "competencies": ["F-D3-C4-01", "F-D8-C4-01", "F-D9-C4-01"],
+  "integrative": {
+    "title": "Juntando tudo",
+    "intro": "Vamos ver o que você descobriu sobre investimentos, políticas econômicas e contexto?",
+    "object": {
+      "type": "quiz",
+      "title": "O que você descobriu",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "O contexto econômico de uma família pode ser afetado por",
+          "options": [
+            {
+              "id": "a",
+              "label": "Emprego, inflação e acesso a crédito, entre outros fatores"
+            },
+            {
+              "id": "b",
+              "label": "Apenas a vontade pessoal de cada um"
+            },
+            {
+              "id": "c",
+              "label": "Nenhum fator externo à própria família"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Fatores econômicos mais amplos afetam diretamente as condições de cada família.",
+          "illustration": "item-notebook"
+        },
+        {
+          "id": "q2",
+          "kind": "explanation",
+          "prompt": "Diversificação, entre classes de ativos, significa",
+          "options": [
+            {
+              "id": "a",
+              "label": "Distribuir recursos entre opções diferentes, em vez de concentrar tudo numa só"
+            },
+            {
+              "id": "b",
+              "label": "Colocar todo o valor disponível numa única opção"
+            },
+            {
+              "id": "c",
+              "label": "Evitar qualquer tipo de planejamento financeiro"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Diversificar é distribuir recursos entre opções diferentes, reduzindo a concentração de risco."
+        },
+        {
+          "id": "q3",
+          "kind": "recognition",
+          "prompt": "Liquidez é",
+          "options": [
+            {
+              "id": "a",
+              "label": "A facilidade de transformar um ativo em dinheiro disponível"
+            },
+            {
+              "id": "b",
+              "label": "A garantia de que um ativo nunca perderá valor"
+            },
+            {
+              "id": "c",
+              "label": "O mesmo que lucro garantido"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Liquidez descreve a facilidade de converter um ativo em dinheiro disponível."
+        },
+        {
+          "id": "q4",
+          "kind": "explanation",
+          "prompt": "Políticas econômicas, como mudanças na tributação, podem",
+          "options": [
+            {
+              "id": "a",
+              "label": "Afetar de forma diferente grupos distintos da população"
+            },
+            {
+              "id": "b",
+              "label": "Afetar sempre exatamente da mesma forma todas as pessoas"
+            },
+            {
+              "id": "c",
+              "label": "Nunca ter relação com o orçamento das famílias"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Políticas econômicas costumam ter efeitos distributivos, afetando grupos de forma diferente."
+        },
+        {
+          "id": "q5",
+          "kind": "decision",
+          "prompt": "Entender dívida pública e políticas econômicas ajuda a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Interpretar notícias econômicas com mais contexto"
+            },
+            {
+              "id": "b",
+              "label": "Controlar sozinho as decisões do governo"
+            },
+            {
+              "id": "c",
+              "label": "Eliminar qualquer necessidade de acompanhar a economia"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Esse entendimento ajuda a interpretar notícias econômicas com mais contexto."
+        }
+      ]
+    }
+  },
+  "conclusion": {
+    "title": "Você concluiu o currículo",
+    "message": "Contexto econômico, investimentos e políticas públicas se conectam na vida financeira de cada pessoa e de cada família. Entender esses temas apoia decisões mais informadas ao longo da vida.",
+    "recap": [
+      {
+        "icon": "shared",
+        "tone": "coral",
+        "text": "Emprego, inflação e crédito afetam o contexto econômico das famílias."
+      },
+      {
+        "icon": "save",
+        "tone": "amber",
+        "text": "Diversificação distribui recursos entre opções diferentes."
+      },
+      {
+        "icon": "change",
+        "tone": "teal",
+        "text": "Liquidez é a facilidade de transformar um ativo em dinheiro."
+      },
+      {
+        "icon": "info",
+        "tone": "cyan",
+        "text": "Políticas econômicas têm efeitos distributivos sobre grupos diferentes."
+      }
+    ]
+  },
+  "theme": "feliz"
+}

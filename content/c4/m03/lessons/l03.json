@@ -1,0 +1,64 @@
+{
+  "id": "c4-m03-l03",
+  "cycle": "c4",
+  "module": "m03",
+  "order": 3,
+  "title": "Custo de oportunidade em decisões de vida",
+  "headline": "Decisões de vida, como carreira e estudo, também envolvem custo de oportunidade.",
+  "objectives": [
+    "Relacionar custo de oportunidade a decisões de vida de longo prazo",
+    "Reconhecer que decisões de vida também têm alternativas deixadas de lado"
+  ],
+  "competencies": ["F-D5-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF05",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Além do dinheiro",
+      "body": "O custo de oportunidade de uma decisão de vida, como escolher um curso ou uma cidade para morar, inclui tempo, experiências e outras alternativas que ficam de lado, além de qualquer valor em dinheiro envolvido.",
+      "illustration": "item-book"
+    },
+    {
+      "type": "reflection",
+      "state": "reflect",
+      "text": "Nenhuma escolha de vida é livre de custo de oportunidade.",
+      "body": "Reconhecer o que fica de lado não torna a escolha errada: ajuda a decidir de olhos abertos."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre custo de oportunidade em decisões de vida:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Decisões de vida também envolvem custo de oportunidade.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: escolher um caminho sempre deixa outro de lado."
+        },
+        {
+          "id": "s2",
+          "text": "O custo de oportunidade de uma decisão de vida é sempre apenas em dinheiro.",
+          "isTrue": false,
+          "explanation": "Também envolve tempo, experiências e outras alternativas."
+        },
+        {
+          "id": "s3",
+          "text": "Reconhecer o custo de oportunidade ajuda a decidir de olhos abertos.",
+          "isTrue": true,
+          "explanation": "Exato: conhecer o que fica de lado apoia uma escolha mais consciente."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Decisões de vida também envolvem custo de oportunidade.",
+    "Esse custo inclui tempo e experiências, além de valores em dinheiro."
+  ]
+}

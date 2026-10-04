@@ -1,0 +1,87 @@
+{
+  "id": "c4-m03-l01",
+  "cycle": "c4",
+  "module": "m03",
+  "order": 1,
+  "title": "O que é planejamento de vida financeiro",
+  "headline": "Planejamento de vida olha para metas de longo prazo e os recursos para alcançá-las.",
+  "objectives": [
+    "Compreender o conceito de planejamento de vida financeiro",
+    "Diferenciar metas de curto e de longo prazo"
+  ],
+  "competencies": ["F-D5-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF05",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "guide": {
+    "state": "ask",
+    "text": "Você já pensou em alguma meta sua para os próximos anos?"
+  },
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Olhando além do mês",
+      "body": "Planejamento de vida financeiro envolve pensar em metas de longo prazo, como estudar, mudar de cidade ou construir uma carreira, e nos recursos necessários para alcançá-las. Vai além de decisões do dia a dia.",
+      "illustration": "item-notebook"
+    },
+    {
+      "type": "concepts",
+      "title": "Curto e longo prazo",
+      "intro": "Metas financeiras podem ter horizontes diferentes.",
+      "concepts": [
+        {
+          "id": "short",
+          "label": "Curto prazo",
+          "short": "Meses",
+          "description": "Metas que podem ser alcançadas em poucos meses.",
+          "icon": "wait",
+          "tone": "amber"
+        },
+        {
+          "id": "long",
+          "label": "Longo prazo",
+          "short": "Anos",
+          "description": "Metas que exigem planejamento ao longo de vários anos.",
+          "icon": "goal",
+          "tone": "teal"
+        }
+      ],
+      "keyIdea": "Planejamento de vida combina metas de curto e de longo prazo, cada uma com seu próprio horizonte de tempo.",
+      "keyIdeaIllustration": "item-calendar"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre planejamento de vida financeiro:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Planejamento de vida financeiro envolve metas de longo prazo.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: ele olha além das decisões do dia a dia."
+        },
+        {
+          "id": "s2",
+          "text": "Toda meta financeira é sempre de curto prazo.",
+          "isTrue": false,
+          "explanation": "Existem metas de curto e de longo prazo, cada uma com seu horizonte."
+        },
+        {
+          "id": "s3",
+          "text": "Planejar os recursos necessários faz parte do planejamento de vida.",
+          "isTrue": true,
+          "explanation": "Exato: a meta e os recursos para alcançá-la caminham juntos."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Planejamento de vida financeiro olha para metas de longo prazo.",
+    "Ele combina metas de curto e de longo prazo, com os recursos necessários."
+  ]
+}

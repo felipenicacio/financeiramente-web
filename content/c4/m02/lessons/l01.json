@@ -1,0 +1,87 @@
+{
+  "id": "c4-m02-l01",
+  "cycle": "c4",
+  "module": "m02",
+  "order": 1,
+  "title": "O que é taxa de câmbio",
+  "headline": "A taxa de câmbio mostra quanto de uma moeda equivale a outra.",
+  "objectives": [
+    "Compreender o conceito de taxa de câmbio",
+    "Reconhecer sua presença em produtos e viagens"
+  ],
+  "competencies": ["F-D4-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF03",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "guide": {
+    "state": "ask",
+    "text": "Você sabe o que significa a cotação do dólar que aparece no noticiário?"
+  },
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Uma moeda em relação a outra",
+      "body": "A taxa de câmbio mostra quanto de uma moeda é necessário para comprar uma unidade de outra moeda. Ela aparece em notícias, em compras internacionais e em viagens para outros países.",
+      "illustration": "item-coins"
+    },
+    {
+      "type": "concepts",
+      "title": "Onde o câmbio aparece",
+      "intro": "A taxa de câmbio influencia diferentes situações do dia a dia.",
+      "concepts": [
+        {
+          "id": "travel",
+          "label": "Viagens",
+          "short": "Moeda de outro país",
+          "description": "Ao viajar, é preciso trocar reais pela moeda do país de destino.",
+          "icon": "change",
+          "tone": "teal"
+        },
+        {
+          "id": "imports",
+          "label": "Produtos importados",
+          "short": "Comprados de fora",
+          "description": "O preço em reais de um produto importado depende da taxa de câmbio no momento.",
+          "icon": "price",
+          "tone": "amber"
+        }
+      ],
+      "keyIdea": "A taxa de câmbio conecta o valor do real ao valor de outras moedas, em situações do dia a dia.",
+      "keyIdeaIllustration": "item-notebook"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre taxa de câmbio:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "A taxa de câmbio mostra quanto de uma moeda equivale a outra.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: é a relação de valor entre duas moedas."
+        },
+        {
+          "id": "s2",
+          "text": "A taxa de câmbio nunca muda ao longo do tempo.",
+          "isTrue": false,
+          "explanation": "A taxa de câmbio varia conforme fatores econômicos, podendo mudar diariamente."
+        },
+        {
+          "id": "s3",
+          "text": "Produtos importados e viagens internacionais são afetados pela taxa de câmbio.",
+          "isTrue": true,
+          "explanation": "Exato: ambos dependem da conversão entre moedas."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "A taxa de câmbio mostra quanto de uma moeda equivale a outra.",
+    "Ela afeta produtos importados e viagens internacionais."
+  ]
+}

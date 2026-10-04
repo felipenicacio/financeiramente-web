@@ -1,0 +1,134 @@
+{
+  "id": "c4-m02-l03",
+  "cycle": "c4",
+  "module": "m02",
+  "order": 3,
+  "title": "Fatores macroeconômicos",
+  "headline": "Fatores macroeconômicos afetam a economia como um todo, não só uma compra isolada.",
+  "objectives": [
+    "Compreender o conceito de fator macroeconômico",
+    "Diferenciar decisões pessoais de fatores mais amplos da economia"
+  ],
+  "competencies": ["F-D4-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF04",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Além de uma única compra",
+      "body": "Fatores macroeconômicos, como câmbio, inflação e taxas de juros definidas por autoridades monetárias, afetam a economia de um país como um todo, não apenas uma compra ou um produto isolado.",
+      "illustration": "item-notebook"
+    },
+    {
+      "type": "classify",
+      "prompt": "Classifique cada situação como fator macroeconômico ou decisão pessoal:",
+      "categories": [
+        {
+          "id": "macro",
+          "label": "Fator macroeconômico",
+          "short": "Afeta toda a economia",
+          "icon": "info",
+          "tone": "teal"
+        },
+        {
+          "id": "personal",
+          "label": "Decisão pessoal",
+          "short": "Afeta só uma pessoa",
+          "icon": "choice",
+          "tone": "amber"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "label": "Mudança na taxa de câmbio do país",
+          "situation": "O valor do real em relação a outras moedas muda para todo o país.",
+          "accepted": ["macro"],
+          "feedback": "A taxa de câmbio afeta a economia como um todo, não só uma pessoa.",
+          "illustration": "item-coins"
+        },
+        {
+          "id": "i2",
+          "label": "Escolher economizar num mês específico",
+          "situation": "Uma pessoa decide, por conta própria, gastar menos em um mês.",
+          "accepted": ["personal"],
+          "feedback": "Essa é uma decisão pessoal, que afeta apenas quem a tomou.",
+          "illustration": "item-wallet"
+        },
+        {
+          "id": "i3",
+          "label": "Inflação subindo em todo o país",
+          "situation": "Os preços sobem de forma geral, afetando toda a população.",
+          "accepted": ["macro"],
+          "feedback": "A inflação é um fator macroeconômico que afeta toda a economia.",
+          "illustration": "item-pricetag"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Pensando em fatores macroeconômicos",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Um fator macroeconômico se diferencia de uma decisão pessoal porque",
+          "options": [
+            {
+              "id": "a",
+              "label": "Afeta a economia de forma mais ampla, não só uma pessoa"
+            },
+            {
+              "id": "b",
+              "label": "Depende só da vontade de uma única pessoa"
+            },
+            {
+              "id": "c",
+              "label": "Nunca aparece em notícias ou jornais"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Fatores macroeconômicos têm um alcance mais amplo do que uma decisão individual."
+        },
+        {
+          "id": "q2",
+          "kind": "explanation",
+          "prompt": "A inflação é considerada um fator macroeconômico porque",
+          "options": [
+            {
+              "id": "a",
+              "label": "Afeta os preços de forma geral, em toda a economia"
+            },
+            {
+              "id": "b",
+              "label": "Afeta só o preço de um único produto específico"
+            },
+            {
+              "id": "c",
+              "label": "Depende apenas de uma decisão pessoal isolada"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "A inflação é um fenômeno amplo, que afeta preços em toda a economia."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Fatores macroeconômicos afetam a economia de forma mais ampla.",
+    "Câmbio e inflação são exemplos de fatores macroeconômicos."
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "id": "m03",
+  "cycle": "c4",
+  "order": 3,
+  "code": "C4.3",
+  "title": "Planejamento de vida e cenários financeiros",
+  "headline": "Comparar cenários ajuda a planejar decisões de vida com mais clareza.",
+  "summary": "Planejamento de vida envolve comparar cenários financeiros e considerar o custo de oportunidade.",
+  "competencies": ["F-D5-C4-01"],
+  "integrative": {
+    "title": "Juntando tudo",
+    "intro": "Vamos ver o que você descobriu sobre planejamento de vida e cenários financeiros?",
+    "object": {
+      "type": "quiz",
+      "title": "O que você descobriu",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Planejamento de vida financeiro envolve",
+          "options": [
+            {
+              "id": "a",
+              "label": "Pensar em metas de longo prazo e nos recursos para alcançá-las"
+            },
+            {
+              "id": "b",
+              "label": "Decidir apenas o que comprar no fim de semana"
+            },
+            {
+              "id": "c",
+              "label": "Ignorar qualquer meta futura"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Planejamento de vida olha para metas de longo prazo, não só decisões imediatas.",
+          "illustration": "item-notebook"
+        },
+        {
+          "id": "q2",
+          "kind": "explanation",
+          "prompt": "Um cenário financeiro é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Uma possível sequência de decisões e seus resultados esperados"
+            },
+            {
+              "id": "b",
+              "label": "Um valor fixo que nunca muda"
+            },
+            {
+              "id": "c",
+              "label": "Uma regra obrigatória definida por lei"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Um cenário organiza decisões possíveis e seus resultados esperados ao longo do tempo."
+        },
+        {
+          "id": "q3",
+          "kind": "decision",
+          "prompt": "Comparar dois cenários de carreira ajuda a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Enxergar vantagens, riscos e custo de oportunidade de cada um"
+            },
+            {
+              "id": "b",
+              "label": "Garantir que um deles nunca terá nenhum risco"
+            },
+            {
+              "id": "c",
+              "label": "Eliminar qualquer necessidade de decisão"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "A comparação revela vantagens, riscos e o que fica de lado em cada cenário."
+        },
+        {
+          "id": "q4",
+          "kind": "explanation",
+          "prompt": "Revisar um plano de vida periodicamente é importante porque",
+          "options": [
+            {
+              "id": "a",
+              "label": "Circunstâncias e metas pessoais podem mudar com o tempo"
+            },
+            {
+              "id": "b",
+              "label": "Um plano, uma vez feito, nunca deveria mudar"
+            },
+            {
+              "id": "c",
+              "label": "Revisar é uma obrigação legal"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Circunstâncias mudam, e o plano precisa se ajustar a elas."
+        },
+        {
+          "id": "q5",
+          "kind": "situation",
+          "prompt": "Pensar no custo de oportunidade de uma decisão de vida, como escolher um curso, ajuda a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Considerar o que se deixa de lado com essa escolha"
+            },
+            {
+              "id": "b",
+              "label": "Garantir que a escolha nunca terá nenhuma consequência"
+            },
+            {
+              "id": "c",
+              "label": "Evitar qualquer tipo de planejamento"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "O custo de oportunidade também se aplica a decisões de vida, não só a compras."
+        }
+      ]
+    }
+  },
+  "conclusion": {
+    "title": "Você concluiu o módulo",
+    "message": "Planejar a vida financeira envolve comparar cenários, considerar o custo de oportunidade e revisar o plano com o tempo.",
+    "recap": [
+      {
+        "icon": "goal",
+        "tone": "coral",
+        "text": "Planejamento de vida olha para metas de longo prazo."
+      },
+      {
+        "icon": "choice",
+        "tone": "amber",
+        "text": "Um cenário organiza decisões possíveis e seus resultados esperados."
+      },
+      {
+        "icon": "info",
+        "tone": "teal",
+        "text": "Comparar cenários revela vantagens, riscos e custo de oportunidade."
+      },
+      {
+        "icon": "later",
+        "tone": "cyan",
+        "text": "Revisar o plano com o tempo acompanha mudanças nas circunstâncias."
+      }
+    ]
+  },
+  "theme": "explicando"
+}

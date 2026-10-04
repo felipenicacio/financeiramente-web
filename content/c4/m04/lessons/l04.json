@@ -1,0 +1,134 @@
+{
+  "id": "c4-m04-l04",
+  "cycle": "c4",
+  "module": "m04",
+  "order": 4,
+  "title": "Garantias e consequências do não pagamento",
+  "headline": "Uma garantia reduz o risco de quem empresta; não pagar tem consequências para quem deve.",
+  "objectives": [
+    "Compreender o papel das garantias no crédito",
+    "Reconhecer consequências gerais do não pagamento de uma dívida"
+  ],
+  "competencies": ["F-D6-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF06",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N3",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Proteção para quem empresta",
+      "body": "Uma garantia é um bem ou documento que reduz o risco de quem empresta o dinheiro, caso a dívida não seja paga. Não pagar uma dívida costuma gerar juros adicionais, cobranças e, dependendo do caso, perda da garantia envolvida.",
+      "illustration": "item-wallet"
+    },
+    {
+      "type": "classify",
+      "prompt": "Classifique cada situação:",
+      "categories": [
+        {
+          "id": "guarantee",
+          "label": "Função da garantia",
+          "short": "Reduz o risco",
+          "icon": "safe",
+          "tone": "teal"
+        },
+        {
+          "id": "consequence",
+          "label": "Consequência do não pagamento",
+          "short": "Efeito da dívida",
+          "icon": "limit",
+          "tone": "coral"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "label": "O carro financiado é a garantia do financiamento",
+          "situation": "Caso a dívida não seja paga, o carro pode ser usado para cobrir o valor devido.",
+          "accepted": ["guarantee"],
+          "feedback": "Esse é um exemplo de garantia reduzindo o risco de quem empresta.",
+          "illustration": "item-car"
+        },
+        {
+          "id": "i2",
+          "label": "A dívida cresce com juros por falta de pagamento",
+          "situation": "A pessoa não conseguiu pagar a parcela combinada.",
+          "accepted": ["consequence"],
+          "feedback": "Esse é um exemplo de consequência do não pagamento de uma dívida.",
+          "illustration": "item-pricetag"
+        },
+        {
+          "id": "i3",
+          "label": "O nome da pessoa é negativado por não pagar",
+          "situation": "A dívida ficou sem pagamento por um longo período.",
+          "accepted": ["consequence"],
+          "feedback": "A negativação é uma consequência comum do não pagamento prolongado.",
+          "illustration": "item-notebook"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Pensando em garantias e consequências",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Uma garantia, numa modalidade de crédito, serve para",
+          "options": [
+            {
+              "id": "a",
+              "label": "Reduzir o risco de quem empresta o dinheiro"
+            },
+            {
+              "id": "b",
+              "label": "Eliminar completamente os juros cobrados"
+            },
+            {
+              "id": "c",
+              "label": "Garantir que a dívida nunca precise ser paga"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "A garantia protege quem empresta, caso a dívida não seja paga."
+        },
+        {
+          "id": "q2",
+          "kind": "explanation",
+          "prompt": "Entre as consequências comuns do não pagamento de uma dívida está",
+          "options": [
+            {
+              "id": "a",
+              "label": "A negativação do nome em órgãos de proteção ao crédito"
+            },
+            {
+              "id": "b",
+              "label": "A eliminação automática de toda a dívida"
+            },
+            {
+              "id": "c",
+              "label": "A redução garantida dos juros cobrados"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "A negativação é uma consequência comum do não pagamento prolongado."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Uma garantia reduz o risco de quem empresta o dinheiro.",
+    "O não pagamento de uma dívida costuma gerar juros, cobranças e negativação."
+  ]
+}

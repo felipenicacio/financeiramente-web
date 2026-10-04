@@ -1,0 +1,87 @@
+{
+  "id": "c4-m05-l01",
+  "cycle": "c4",
+  "module": "m05",
+  "order": 1,
+  "title": "Produtividade no mercado de trabalho",
+  "headline": "Produtividade relaciona o que se produz ao tempo ou recurso usado para isso.",
+  "objectives": [
+    "Compreender o conceito de produtividade",
+    "Reconhecer sua relação com a remuneração"
+  ],
+  "competencies": ["F-D7-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF07",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "guide": {
+    "state": "ask",
+    "text": "Você já pensou no que significa ser mais produtivo no trabalho?"
+  },
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Produzir mais com o mesmo recurso",
+      "body": "Produtividade relaciona a quantidade produzida ao tempo ou recurso usado para isso. Uma pessoa ou empresa mais produtiva consegue gerar mais resultado com o mesmo esforço ou tempo disponível.",
+      "illustration": "item-laptop"
+    },
+    {
+      "type": "concepts",
+      "title": "Produtividade e remuneração",
+      "intro": "A produtividade costuma se relacionar à forma como o trabalho é remunerado.",
+      "concepts": [
+        {
+          "id": "productivity",
+          "label": "Produtividade",
+          "short": "Resultado por tempo",
+          "description": "Quanto se produz em relação ao tempo ou recurso investido.",
+          "icon": "work",
+          "tone": "teal"
+        },
+        {
+          "id": "pay",
+          "label": "Remuneração",
+          "short": "Valor recebido",
+          "description": "O valor pago pelo trabalho realizado, que pode variar conforme a produtividade.",
+          "icon": "money",
+          "tone": "amber"
+        }
+      ],
+      "keyIdea": "Em muitas situações, aumentar a produtividade está relacionado a uma remuneração maior ao longo do tempo.",
+      "keyIdeaIllustration": "item-notebook"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre produtividade:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Produtividade relaciona o que se produz ao tempo ou recurso usado.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: é uma relação entre resultado e esforço ou tempo."
+        },
+        {
+          "id": "s2",
+          "text": "Produtividade é sempre a mesma coisa que o número de horas trabalhadas.",
+          "isTrue": false,
+          "explanation": "Produtividade considera o resultado gerado, não só as horas em si."
+        },
+        {
+          "id": "s3",
+          "text": "A produtividade pode se relacionar à remuneração ao longo do tempo.",
+          "isTrue": true,
+          "explanation": "Exato: em muitas situações, uma produtividade maior se conecta a uma remuneração maior."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Produtividade relaciona o que se produz ao tempo ou recurso usado.",
+    "Ela costuma se relacionar à remuneração ao longo do tempo."
+  ]
+}

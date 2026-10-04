@@ -1,0 +1,79 @@
+{
+  "id": "c4-m01-l01",
+  "cycle": "c4",
+  "module": "m01",
+  "order": 1,
+  "title": "O que é custo de oportunidade",
+  "headline": "Toda escolha deixa de lado a melhor alternativa disponível.",
+  "objectives": [
+    "Compreender o conceito de custo de oportunidade",
+    "Reconhecer exemplos no dia a dia"
+  ],
+  "competencies": ["F-D1-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF01",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "guide": {
+    "state": "ask",
+    "text": "Ao escolher gastar um valor de um jeito, o que você deixa de fazer com ele?"
+  },
+  "content": [
+    {
+      "type": "explanation",
+      "title": "O que fica de lado",
+      "body": "Custo de oportunidade é o valor da melhor alternativa que se deixa de lado ao fazer uma escolha. Não é só o preço pago: é também o que se deixaria de ganhar com a opção não escolhida.",
+      "illustration": "item-coins"
+    },
+    {
+      "type": "story",
+      "title": "O fim de semana de Rita",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "story-crossroads",
+          "text": "Rita tinha um valor guardado e duas opções: um curso rápido ou um passeio com amigos."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-book",
+          "text": "Ao escolher o curso, o custo de oportunidade foi o passeio que ela deixou de fazer."
+        }
+      ],
+      "closing": "Escolher uma opção sempre tem um custo de oportunidade: a alternativa deixada de lado."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre custo de oportunidade:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Custo de oportunidade é o valor da melhor alternativa deixada de lado.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: é o que se abre mão ao escolher outra coisa."
+        },
+        {
+          "id": "s2",
+          "text": "Custo de oportunidade é sempre igual ao preço pago pelo produto.",
+          "isTrue": false,
+          "explanation": "O custo de oportunidade vai além do preço: inclui o que se deixou de ganhar."
+        },
+        {
+          "id": "s3",
+          "text": "Toda escolha financeira envolve algum custo de oportunidade.",
+          "isTrue": true,
+          "explanation": "Exato: escolher uma opção sempre deixa outra de lado."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Custo de oportunidade é o valor da melhor alternativa deixada de lado.",
+    "Toda escolha financeira envolve esse tipo de custo."
+  ]
+}

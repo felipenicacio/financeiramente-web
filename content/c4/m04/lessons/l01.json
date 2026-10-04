@@ -1,0 +1,87 @@
+{
+  "id": "c4-m04-l01",
+  "cycle": "c4",
+  "module": "m04",
+  "order": 1,
+  "title": "Modalidades de crédito comuns",
+  "headline": "Diferentes modalidades de crédito têm regras próprias de prazo, garantia e custo.",
+  "objectives": [
+    "Reconhecer modalidades de crédito comuns",
+    "Diferenciar suas principais características"
+  ],
+  "competencies": ["F-D6-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF06",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N3",
+  "estimatedMinutes": 5,
+  "guide": {
+    "state": "ask",
+    "text": "Você sabe diferenciar um empréstimo de um financiamento?"
+  },
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Formas diferentes de tomar crédito",
+      "body": "Cartão de crédito, empréstimo pessoal e financiamento são modalidades diferentes de crédito. Cada uma tem suas próprias regras de prazo, garantia exigida e forma de cobrança de juros.",
+      "illustration": "item-wallet"
+    },
+    {
+      "type": "concepts",
+      "title": "Algumas modalidades",
+      "intro": "Conhecer algumas modalidades ajuda a comparar opções.",
+      "concepts": [
+        {
+          "id": "personal",
+          "label": "Empréstimo pessoal",
+          "short": "Sem destino definido",
+          "description": "Valor emprestado sem exigência de uso específico, geralmente sem garantia de um bem.",
+          "icon": "money",
+          "tone": "amber"
+        },
+        {
+          "id": "financing",
+          "label": "Financiamento",
+          "short": "Com destino definido",
+          "description": "Valor emprestado para comprar um bem específico, que costuma servir de garantia.",
+          "icon": "goal",
+          "tone": "teal"
+        }
+      ],
+      "keyIdea": "Cada modalidade de crédito equilibra prazo, garantia e custo de um jeito diferente.",
+      "keyIdeaIllustration": "item-notebook"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre modalidades de crédito:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Diferentes modalidades de crédito têm regras próprias de prazo e garantia.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: cada modalidade organiza isso de um jeito diferente."
+        },
+        {
+          "id": "s2",
+          "text": "Um financiamento costuma ter o bem comprado como garantia.",
+          "isTrue": true,
+          "explanation": "Exato: o próprio bem financiado costuma servir de garantia."
+        },
+        {
+          "id": "s3",
+          "text": "Todas as modalidades de crédito cobram exatamente o mesmo custo.",
+          "isTrue": false,
+          "explanation": "O custo varia bastante entre as modalidades, mesmo para o mesmo valor."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Diferentes modalidades de crédito têm regras próprias de prazo e garantia.",
+    "Conhecer essas diferenças ajuda a comparar opções antes de decidir."
+  ]
+}

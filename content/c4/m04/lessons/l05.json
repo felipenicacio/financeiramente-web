@@ -1,0 +1,104 @@
+{
+  "id": "c4-m04-l05",
+  "cycle": "c4",
+  "module": "m04",
+  "order": 5,
+  "title": "Escolhendo entre modalidades de crédito",
+  "headline": "Comparar o custo total e avaliar a própria capacidade de pagamento orienta essa escolha.",
+  "objectives": [
+    "Aplicar os conceitos do módulo a uma escolha entre modalidades de crédito",
+    "Revisar os principais critérios de comparação"
+  ],
+  "competencies": ["F-D6-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF06",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N3",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Juntando os critérios",
+      "body": "Antes de escolher uma modalidade de crédito, vale comparar o custo total, considerar o prazo de pagamento e avaliar, com honestidade, a própria capacidade de pagar as parcelas combinadas sem comprometer outras despesas.",
+      "illustration": "item-notebook"
+    },
+    {
+      "type": "choice",
+      "prompt": "Sônia tem duas opções de crédito com o mesmo custo total, mas prazos diferentes. O que considerar?",
+      "options": [
+        {
+          "id": "shorter",
+          "label": "Prazo mais curto, com parcelas maiores",
+          "reflection": "Ela paga a dívida mais rápido, mas precisa ter certeza de que as parcelas maiores cabem no orçamento todo mês."
+        },
+        {
+          "id": "longer",
+          "label": "Prazo mais longo, com parcelas menores",
+          "reflection": "As parcelas ficam mais fáceis de pagar no mês a mês, mas a dívida permanece por mais tempo."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Revisando o módulo",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "decision",
+          "prompt": "Ao comparar modalidades de crédito com o mesmo custo total, o prazo de pagamento",
+          "options": [
+            {
+              "id": "a",
+              "label": "Ainda é um critério relevante, ligado à capacidade de pagar"
+            },
+            {
+              "id": "b",
+              "label": "Deixa de ter qualquer importância"
+            },
+            {
+              "id": "c",
+              "label": "Só importa para quem empresta o dinheiro"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "O prazo afeta o valor da parcela e, por isso, a capacidade real de pagamento."
+        },
+        {
+          "id": "q2",
+          "kind": "explanation",
+          "prompt": "Avaliar a própria capacidade de pagamento antes de assumir uma dívida ajuda a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Reduzir o risco de comprometer outras despesas do orçamento"
+            },
+            {
+              "id": "b",
+              "label": "Garantir que a dívida nunca terá juros"
+            },
+            {
+              "id": "c",
+              "label": "Eliminar qualquer necessidade de comparação"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Essa avaliação ajuda a manter o orçamento equilibrado ao longo do prazo da dívida."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Comparar custo total e prazo orienta a escolha entre modalidades de crédito.",
+    "Avaliar a própria capacidade de pagamento protege o orçamento no longo prazo."
+  ]
+}

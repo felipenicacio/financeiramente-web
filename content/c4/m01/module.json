@@ -1,0 +1,168 @@
+{
+  "id": "m01",
+  "cycle": "c4",
+  "order": 1,
+  "code": "C4.1",
+  "title": "Decisões de consumo e custo de oportunidade",
+  "headline": "Toda escolha financeira deixa algo de lado: entender isso ajuda a decidir melhor.",
+  "summary": "Custo de oportunidade, escolhas intertemporais e estratégias comerciais moldam as decisões de consumo.",
+  "competencies": ["F-D1-C4-01", "F-D2-C4-01"],
+  "integrative": {
+    "title": "Juntando tudo",
+    "intro": "Vamos ver o que você descobriu sobre decisões de consumo?",
+    "object": {
+      "type": "quiz",
+      "title": "O que você descobriu",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Custo de oportunidade é",
+          "options": [
+            {
+              "id": "a",
+              "label": "O valor da melhor alternativa que se deixa de lado ao escolher"
+            },
+            {
+              "id": "b",
+              "label": "O preço exato pago por um produto"
+            },
+            {
+              "id": "c",
+              "label": "Um imposto cobrado sobre a compra"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Custo de oportunidade é o que se deixa de ganhar ao optar por uma alternativa em vez de outra.",
+          "illustration": "item-coins"
+        },
+        {
+          "id": "q2",
+          "kind": "explanation",
+          "prompt": "Uma escolha intertemporal envolve",
+          "options": [
+            {
+              "id": "a",
+              "label": "Comparar um benefício agora com um benefício no futuro"
+            },
+            {
+              "id": "b",
+              "label": "Escolher apenas entre duas cores de um produto"
+            },
+            {
+              "id": "c",
+              "label": "Decidir sem nenhuma consequência futura"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Escolhas intertemporais pesam o presente contra o futuro."
+        },
+        {
+          "id": "q3",
+          "kind": "recognition",
+          "prompt": "Uma estratégia comercial comum é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Criar senso de urgência para antecipar a decisão de compra"
+            },
+            {
+              "id": "b",
+              "label": "Impedir qualquer tipo de anúncio"
+            },
+            {
+              "id": "c",
+              "label": "Garantir que o preço nunca apareça"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Urgência e escassez são estratégias comerciais usadas para acelerar decisões."
+        },
+        {
+          "id": "q4",
+          "kind": "explanation",
+          "prompt": "Um viés de consumo é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Uma tendência que afasta a decisão de uma análise puramente racional"
+            },
+            {
+              "id": "b",
+              "label": "Um cálculo matemático sempre correto"
+            },
+            {
+              "id": "c",
+              "label": "Uma regra oficial de proteção ao consumidor"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Vieses de consumo são tendências que afastam a decisão de uma análise puramente racional."
+        },
+        {
+          "id": "q5",
+          "kind": "decision",
+          "prompt": "Pensar no custo de oportunidade antes de decidir ajuda a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Enxergar o que fica de lado em cada escolha"
+            },
+            {
+              "id": "b",
+              "label": "Garantir que nunca existirá arrependimento"
+            },
+            {
+              "id": "c",
+              "label": "Eliminar qualquer necessidade de decidir"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Reconhecer o que fica de lado é a base de uma decisão mais consciente."
+        }
+      ]
+    }
+  },
+  "conclusion": {
+    "title": "Você concluiu o módulo",
+    "message": "Toda escolha financeira tem um custo de oportunidade. Reconhecer estratégias comerciais e vieses de consumo ajuda a decidir com mais clareza.",
+    "recap": [
+      {
+        "icon": "choice",
+        "tone": "coral",
+        "text": "Custo de oportunidade é o que se deixa de lado ao escolher."
+      },
+      {
+        "icon": "later",
+        "tone": "amber",
+        "text": "Escolhas intertemporais comparam o presente e o futuro."
+      },
+      {
+        "icon": "persuade",
+        "tone": "teal",
+        "text": "Estratégias comerciais buscam acelerar a decisão de compra."
+      },
+      {
+        "icon": "info",
+        "tone": "cyan",
+        "text": "Reconhecer vieses de consumo ajuda a decidir com mais clareza."
+      }
+    ]
+  },
+  "theme": "pensando"
+}

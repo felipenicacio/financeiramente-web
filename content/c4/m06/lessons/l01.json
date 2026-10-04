@@ -1,0 +1,87 @@
+{
+  "id": "c4-m06-l01",
+  "cycle": "c4",
+  "module": "m06",
+  "order": 1,
+  "title": "Contexto econômico e condições familiares",
+  "headline": "Emprego, inflação e acesso a crédito afetam as condições econômicas de uma família.",
+  "objectives": [
+    "Reconhecer fatores do contexto econômico que afetam famílias",
+    "Relacionar esses fatores a mudanças no orçamento familiar"
+  ],
+  "competencies": ["F-D3-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF08",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N3",
+  "estimatedMinutes": 5,
+  "guide": {
+    "state": "ask",
+    "text": "Você já notou como notícias econômicas acabam chegando ao orçamento de uma família?"
+  },
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Fatores que vêm de fora",
+      "body": "Emprego disponível, inflação e acesso a crédito são fatores do contexto econômico mais amplo que afetam diretamente as condições financeiras de uma família, mesmo sem nenhuma decisão pessoal ter sido tomada.",
+      "illustration": "item-notebook"
+    },
+    {
+      "type": "concepts",
+      "title": "Alguns fatores de contexto",
+      "intro": "Esses fatores se conectam ao orçamento familiar de formas diferentes.",
+      "concepts": [
+        {
+          "id": "jobs",
+          "label": "Emprego",
+          "short": "Fonte de renda",
+          "description": "A disponibilidade de trabalho remunerado numa região ou período.",
+          "icon": "work",
+          "tone": "teal"
+        },
+        {
+          "id": "inflation",
+          "label": "Inflação",
+          "short": "Preços gerais",
+          "description": "O aumento geral dos preços, que reduz o poder de compra da renda familiar.",
+          "icon": "limit",
+          "tone": "coral"
+        }
+      ],
+      "keyIdea": "Fatores de contexto econômico afetam famílias de formas distintas, segundo sua situação de emprego, renda e acesso a crédito.",
+      "keyIdeaIllustration": "item-wallet"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre contexto econômico e famílias:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Emprego, inflação e crédito afetam as condições econômicas de uma família.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: são fatores de contexto que vão além de decisões pessoais."
+        },
+        {
+          "id": "s2",
+          "text": "O contexto econômico nunca afeta famílias de formas diferentes.",
+          "isTrue": false,
+          "explanation": "Famílias em situações diferentes podem ser afetadas de formas bem diferentes."
+        },
+        {
+          "id": "s3",
+          "text": "A inflação pode reduzir o poder de compra da renda de uma família.",
+          "isTrue": true,
+          "explanation": "Exato: com preços mais altos, a mesma renda compra menos."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Emprego, inflação e crédito afetam as condições econômicas das famílias.",
+    "Esses fatores vão além de decisões pessoais isoladas."
+  ]
+}

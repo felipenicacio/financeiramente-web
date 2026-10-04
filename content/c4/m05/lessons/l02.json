@@ -1,0 +1,134 @@
+{
+  "id": "c4-m05-l02",
+  "cycle": "c4",
+  "module": "m05",
+  "order": 2,
+  "title": "O que são tributos",
+  "headline": "Tributos são valores cobrados pelo governo para financiar serviços públicos.",
+  "objectives": [
+    "Compreender o conceito de tributo",
+    "Reconhecer sua relação com serviços públicos"
+  ],
+  "competencies": ["F-D7-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF07",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Financiando serviços comuns",
+      "body": "Tributos são valores cobrados pelo governo sobre renda, consumo ou patrimônio, usados para financiar serviços públicos como saúde, educação, segurança e infraestrutura, disponíveis para toda a população.",
+      "illustration": "item-notebook"
+    },
+    {
+      "type": "classify",
+      "prompt": "Classifique cada exemplo:",
+      "categories": [
+        {
+          "id": "tribute",
+          "label": "Tributo",
+          "short": "Cobrado pelo governo",
+          "icon": "shared",
+          "tone": "teal"
+        },
+        {
+          "id": "private",
+          "label": "Cobrança privada",
+          "short": "De uma empresa",
+          "icon": "money",
+          "tone": "amber"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "label": "Imposto cobrado sobre a renda do trabalho",
+          "situation": "O valor é cobrado pelo governo e usado em serviços públicos.",
+          "accepted": ["tribute"],
+          "feedback": "Esse é um exemplo de tributo cobrado pelo governo.",
+          "illustration": "item-notebook"
+        },
+        {
+          "id": "i2",
+          "label": "Mensalidade de um serviço de streaming",
+          "situation": "O valor é cobrado por uma empresa privada pelo uso do serviço.",
+          "accepted": ["private"],
+          "feedback": "Essa é uma cobrança privada, não um tributo.",
+          "illustration": "item-tablet"
+        },
+        {
+          "id": "i3",
+          "label": "Imposto cobrado sobre a venda de um produto",
+          "situation": "O valor é cobrado pelo governo na venda do produto.",
+          "accepted": ["tribute"],
+          "feedback": "Esse também é um exemplo de tributo, cobrado sobre o consumo.",
+          "illustration": "item-pricetag"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Pensando em tributos",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Os tributos arrecadados pelo governo costumam financiar",
+          "options": [
+            {
+              "id": "a",
+              "label": "Serviços públicos como saúde, educação e infraestrutura"
+            },
+            {
+              "id": "b",
+              "label": "Apenas o lucro de empresas privadas"
+            },
+            {
+              "id": "c",
+              "label": "Nenhum tipo de serviço disponível à população"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Tributos financiam serviços públicos disponíveis para toda a população."
+        },
+        {
+          "id": "q2",
+          "kind": "recognition",
+          "prompt": "Tributos podem incidir sobre",
+          "options": [
+            {
+              "id": "a",
+              "label": "Renda, consumo ou patrimônio, dependendo do tributo"
+            },
+            {
+              "id": "b",
+              "label": "Apenas o consumo, nunca sobre a renda"
+            },
+            {
+              "id": "c",
+              "label": "Nenhum tipo de valor ou bem"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Diferentes tributos incidem sobre renda, consumo ou patrimônio."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Tributos são cobrados pelo governo sobre renda, consumo ou patrimônio.",
+    "Eles financiam serviços públicos como saúde, educação e infraestrutura."
+  ]
+}

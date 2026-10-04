@@ -1,0 +1,168 @@
+{
+  "id": "m05",
+  "cycle": "c4",
+  "order": 5,
+  "code": "C4.5",
+  "title": "Trabalho, tributos e lucro",
+  "headline": "Remuneração, tributos, custos e lucro se conectam na vida econômica do trabalho.",
+  "summary": "Mercado de trabalho, produtividade, tributos, custos e lucro fazem parte da vida econômica.",
+  "competencies": ["F-D7-C4-01"],
+  "integrative": {
+    "title": "Juntando tudo",
+    "intro": "Vamos ver o que você descobriu sobre trabalho, tributos e lucro?",
+    "object": {
+      "type": "quiz",
+      "title": "O que você descobriu",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Produtividade no trabalho está relacionada a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Quanto se produz em relação ao tempo ou recurso usado"
+            },
+            {
+              "id": "b",
+              "label": "O número de horas trabalhadas, sem nenhuma outra relação"
+            },
+            {
+              "id": "c",
+              "label": "A idade da pessoa que trabalha"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Produtividade relaciona o que se produz ao tempo ou recurso usado para isso.",
+          "illustration": "item-laptop"
+        },
+        {
+          "id": "q2",
+          "kind": "explanation",
+          "prompt": "Um tributo é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Um valor cobrado pelo governo para financiar serviços públicos"
+            },
+            {
+              "id": "b",
+              "label": "Um valor que a empresa escolhe pagar por vontade própria"
+            },
+            {
+              "id": "c",
+              "label": "Uma taxa cobrada apenas por bancos privados"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Tributos financiam serviços públicos, como saúde, educação e infraestrutura."
+        },
+        {
+          "id": "q3",
+          "kind": "recognition",
+          "prompt": "Salário líquido é",
+          "options": [
+            {
+              "id": "a",
+              "label": "O valor que efetivamente chega à conta, após descontos"
+            },
+            {
+              "id": "b",
+              "label": "O valor combinado antes de qualquer desconto"
+            },
+            {
+              "id": "c",
+              "label": "Sempre maior do que o salário bruto"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "O salário líquido é o que resta após os descontos obrigatórios."
+        },
+        {
+          "id": "q4",
+          "kind": "explanation",
+          "prompt": "O lucro de um negócio é calculado como",
+          "options": [
+            {
+              "id": "a",
+              "label": "A receita menos todos os custos envolvidos"
+            },
+            {
+              "id": "b",
+              "label": "Apenas o valor total das vendas"
+            },
+            {
+              "id": "c",
+              "label": "Apenas o valor gasto com fornecedores"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "O lucro é o que resta da receita depois de pagos todos os custos."
+        },
+        {
+          "id": "q5",
+          "kind": "decision",
+          "prompt": "Entender tributos e custos envolvidos no trabalho ajuda a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Interpretar melhor a diferença entre salário bruto e líquido"
+            },
+            {
+              "id": "b",
+              "label": "Eliminar qualquer desconto sobre o salário"
+            },
+            {
+              "id": "c",
+              "label": "Garantir que o lucro de qualquer negócio será sempre alto"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Esse entendimento ajuda a interpretar valores que aparecem no contracheque e em negócios."
+        }
+      ]
+    }
+  },
+  "conclusion": {
+    "title": "Você concluiu o módulo",
+    "message": "Produtividade, tributos, custos e lucro se conectam na vida econômica do trabalho, seja como empregado, seja à frente de um negócio.",
+    "recap": [
+      {
+        "icon": "work",
+        "tone": "coral",
+        "text": "Produtividade relaciona o que se produz ao tempo ou recurso usado."
+      },
+      {
+        "icon": "shared",
+        "tone": "amber",
+        "text": "Tributos financiam serviços públicos como saúde e educação."
+      },
+      {
+        "icon": "money",
+        "tone": "teal",
+        "text": "Salário líquido é o valor que chega à conta após descontos."
+      },
+      {
+        "icon": "income",
+        "tone": "cyan",
+        "text": "Lucro é a receita menos todos os custos envolvidos."
+      }
+    ]
+  },
+  "theme": "descoberta"
+}

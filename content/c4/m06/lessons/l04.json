@@ -1,0 +1,83 @@
+{
+  "id": "c4-m06-l04",
+  "cycle": "c4",
+  "module": "m06",
+  "order": 4,
+  "title": "Políticas econômicas e tributação",
+  "headline": "Políticas econômicas, como mudanças na tributação, costumam afetar grupos de forma diferente.",
+  "objectives": [
+    "Compreender o conceito de política econômica",
+    "Reconhecer que mudanças na tributação têm efeitos distributivos"
+  ],
+  "competencies": ["F-D9-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF10",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N3",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Decisões que afetam a todos, de formas diferentes",
+      "body": "Uma política econômica é uma decisão do governo, como mudar a tributação ou os juros de referência, que busca influenciar a economia do país. Essas decisões costumam ter efeitos distributivos, afetando grupos diferentes de maneiras diferentes.",
+      "illustration": "item-notebook"
+    },
+    {
+      "type": "concepts",
+      "title": "Efeito distributivo",
+      "intro": "Uma mesma política pode afetar grupos de formas distintas.",
+      "concepts": [
+        {
+          "id": "distributive",
+          "label": "Efeito distributivo",
+          "short": "Impactos diferentes",
+          "description": "O efeito de uma política que favorece ou prejudica grupos diferentes de formas distintas.",
+          "icon": "info",
+          "tone": "amber"
+        },
+        {
+          "id": "taxation",
+          "label": "Tributação",
+          "short": "Arrecadação",
+          "description": "O conjunto de tributos cobrados pelo governo sobre renda, consumo ou patrimônio.",
+          "icon": "shared",
+          "tone": "teal"
+        }
+      ],
+      "keyIdea": "Entender o efeito distributivo de uma política ajuda a interpretar por que ela gera opiniões diferentes entre grupos distintos.",
+      "keyIdeaIllustration": "item-book"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre políticas econômicas e tributação:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Políticas econômicas costumam ter efeitos distributivos.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: diferentes grupos podem ser afetados de formas diferentes."
+        },
+        {
+          "id": "s2",
+          "text": "Toda política econômica afeta exatamente da mesma forma todas as pessoas.",
+          "isTrue": false,
+          "explanation": "Pelo contrário: o efeito costuma variar entre grupos diferentes."
+        },
+        {
+          "id": "s3",
+          "text": "Mudanças na tributação são um exemplo de política econômica.",
+          "isTrue": true,
+          "explanation": "Exato: tributação é uma das ferramentas usadas em políticas econômicas."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Políticas econômicas buscam influenciar a economia do país.",
+    "Elas costumam ter efeitos distributivos, afetando grupos de formas diferentes."
+  ]
+}

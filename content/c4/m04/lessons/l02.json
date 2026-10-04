@@ -1,0 +1,78 @@
+{
+  "id": "c4-m04-l02",
+  "cycle": "c4",
+  "module": "m04",
+  "order": 2,
+  "title": "Comparando o custo total do crédito",
+  "headline": "Comparar o custo total revela qual modalidade é mais cara para o mesmo valor emprestado.",
+  "objectives": [
+    "Comparar o custo total entre modalidades de crédito",
+    "Reconhecer que juros, taxas e prazo afetam esse custo"
+  ],
+  "competencies": ["F-D6-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF06",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N3",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Mais do que a parcela",
+      "body": "Olhar só o valor da parcela não é suficiente para comparar modalidades de crédito. O custo total, que soma juros e taxas ao longo de todo o prazo, mostra o valor real que será pago.",
+      "illustration": "item-notebook"
+    },
+    {
+      "type": "compare",
+      "prompt": "Qual opção tem o custo total maior para o mesmo valor emprestado?",
+      "target": "most",
+      "products": [
+        {
+          "id": "a",
+          "label": "Modalidade A: total a pagar",
+          "price": 1200,
+          "illustration": "item-wallet"
+        },
+        {
+          "id": "b",
+          "label": "Modalidade B: total a pagar",
+          "price": 1450,
+          "illustration": "item-pricetag"
+        }
+      ],
+      "feedback": "A modalidade B tem o custo total maior, mesmo que a parcela pareça menor em algum momento."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre custo total do crédito:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Comparar só o valor da parcela é suficiente para escolher a modalidade mais barata.",
+          "isTrue": false,
+          "explanation": "É preciso olhar o custo total, não apenas o valor isolado da parcela."
+        },
+        {
+          "id": "s2",
+          "text": "O custo total soma juros e taxas ao longo de todo o prazo.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: esse total mostra o valor real que será pago."
+        },
+        {
+          "id": "s3",
+          "text": "Modalidades diferentes podem ter custos totais bem diferentes.",
+          "isTrue": true,
+          "explanation": "Exato: por isso vale comparar antes de decidir."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "O custo total soma juros e taxas ao longo do prazo.",
+    "Comparar o custo total, não só a parcela, revela a opção mais barata."
+  ]
+}

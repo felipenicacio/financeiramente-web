@@ -1,0 +1,79 @@
+{
+  "id": "c4-m05-l03",
+  "cycle": "c4",
+  "module": "m05",
+  "order": 3,
+  "title": "Salário bruto e salário líquido",
+  "headline": "O salário líquido é o valor que efetivamente chega à conta, após descontos.",
+  "objectives": [
+    "Diferenciar salário bruto e salário líquido",
+    "Reconhecer a presença de descontos obrigatórios no salário"
+  ],
+  "competencies": ["F-D7-C4-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF89LF07",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Dois valores, um contracheque",
+      "body": "Salário bruto é o valor combinado antes de qualquer desconto. Salário líquido é o valor que efetivamente chega à conta, depois de descontados tributos e outras contribuições obrigatórias.",
+      "illustration": "item-wallet"
+    },
+    {
+      "type": "story",
+      "title": "O contracheque de Jorge",
+      "values": {
+        "gross": 3000,
+        "net": 2550
+      },
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-notebook",
+          "text": "O salário bruto combinado de Jorge é {gross}."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-wallet",
+          "text": "Depois dos descontos obrigatórios, o salário líquido que chega à conta é {net}."
+        }
+      ],
+      "closing": "A diferença entre salário bruto e líquido são os descontos obrigatórios sobre a renda do trabalho."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre salário bruto e líquido:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Salário líquido é o valor que efetivamente chega à conta.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: é o valor após os descontos obrigatórios."
+        },
+        {
+          "id": "s2",
+          "text": "Salário bruto é sempre igual ao salário líquido.",
+          "isTrue": false,
+          "explanation": "O salário líquido costuma ser menor, por conta dos descontos."
+        },
+        {
+          "id": "s3",
+          "text": "Os descontos entre o salário bruto e líquido incluem tributos e contribuições obrigatórias.",
+          "isTrue": true,
+          "explanation": "Exato: esses descontos compõem a diferença entre os dois valores."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Salário bruto é o valor combinado antes de descontos.",
+    "Salário líquido é o valor que chega à conta após os descontos obrigatórios."
+  ]
+}
