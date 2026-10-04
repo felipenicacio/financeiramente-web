@@ -1,0 +1,109 @@
+{
+  "id": "c3-m02-l03",
+  "cycle": "c3",
+  "module": "m02",
+  "order": 3,
+  "title": "Inflação e o poder de compra",
+  "headline": "Com a inflação, o mesmo valor em dinheiro compra menos coisas.",
+  "objectives": [
+    "Compreender o conceito de poder de compra",
+    "Relacionar inflação à quantidade que um valor consegue comprar"
+  ],
+  "competencies": ["F-D4-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF01",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "O mesmo valor, menos coisas",
+      "body": "Poder de compra é a quantidade de produtos ou serviços que um valor em dinheiro consegue comprar. Quando a inflação sobe, o mesmo valor passa a comprar menos do que antes.",
+      "illustration": "item-wallet"
+    },
+    {
+      "type": "story",
+      "title": "O lanche de Davi",
+      "values": {
+        "before": 10,
+        "after": 13
+      },
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-snack",
+          "text": "Há um ano, Davi comprava um lanche completo por {before}."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-pricetag",
+          "text": "Hoje, o mesmo lanche custa {after}: o valor de antes já não é suficiente para comprar o mesmo lanche."
+        }
+      ],
+      "closing": "Esse é um efeito concreto da inflação: o mesmo valor perde poder de compra com o tempo."
+    },
+    {
+      "type": "quiz",
+      "title": "Pensando em poder de compra",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "situation",
+          "prompt": "Se um lanche custava R$ 10 e agora custa R$ 13, o valor de R$ 10",
+          "options": [
+            {
+              "id": "a",
+              "label": "Já não é suficiente para comprar o mesmo lanche"
+            },
+            {
+              "id": "b",
+              "label": "Continua comprando exatamente o mesmo lanche"
+            },
+            {
+              "id": "c",
+              "label": "Agora compra dois lanches"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Com o preço maior, o valor antigo perdeu parte do seu poder de compra."
+        },
+        {
+          "id": "q2",
+          "kind": "explanation",
+          "prompt": "Perder poder de compra significa que",
+          "options": [
+            {
+              "id": "a",
+              "label": "O mesmo dinheiro compra menos coisas do que antes"
+            },
+            {
+              "id": "b",
+              "label": "O dinheiro deixou de existir"
+            },
+            {
+              "id": "c",
+              "label": "O dinheiro sempre compra mais coisas"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "O valor nominal continua o mesmo, mas rende menos na hora da compra."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Poder de compra é a quantidade que um valor consegue comprar.",
+    "Com inflação, o mesmo valor compra menos do que antes."
+  ]
+}

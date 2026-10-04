@@ -1,0 +1,64 @@
+{
+  "id": "c3-m04-l04",
+  "cycle": "c3",
+  "module": "m04",
+  "order": 4,
+  "title": "Atraso e inadimplência",
+  "headline": "Atrasar o pagamento de uma dívida costuma aumentar o valor devido.",
+  "objectives": [
+    "Entender o conceito de inadimplência",
+    "Reconhecer consequências do atraso em pagamentos"
+  ],
+  "competencies": ["F-D6-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF10",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Uma dívida que cresce",
+      "body": "Inadimplência é não conseguir pagar uma dívida até a data combinada. Quando isso acontece, costumam ser cobrados juros e outras taxas, o que faz o valor devido crescer com o tempo.",
+      "illustration": "item-wallet"
+    },
+    {
+      "type": "reflection",
+      "state": "reflect",
+      "text": "Saber quando cada conta vence ajuda a organizar o pagamento.",
+      "body": "Acompanhar as datas de vencimento evita que os juros aumentem a dívida sem necessidade."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre atraso e inadimplência:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Inadimplência é não conseguir pagar uma dívida na data combinada.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: é o não pagamento dentro do prazo combinado."
+        },
+        {
+          "id": "s2",
+          "text": "Atrasar o pagamento de uma fatura costuma reduzir o valor devido.",
+          "isTrue": false,
+          "explanation": "O atraso costuma aumentar o valor devido, por conta dos juros."
+        },
+        {
+          "id": "s3",
+          "text": "Acompanhar as datas de vencimento ajuda a evitar o acúmulo de juros.",
+          "isTrue": true,
+          "explanation": "Exato: organizar os pagamentos evita que a dívida cresça sem necessidade."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Inadimplência é não pagar uma dívida na data combinada.",
+    "O atraso costuma fazer o valor devido crescer com juros."
+  ]
+}

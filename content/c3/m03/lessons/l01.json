@@ -1,0 +1,79 @@
+{
+  "id": "c3-m03-l01",
+  "cycle": "c3",
+  "module": "m03",
+  "order": 1,
+  "title": "Quando a renda muda todo mês",
+  "headline": "Renda variável pede um jeito diferente de planejar o orçamento.",
+  "objectives": [
+    "Reconhecer situações comuns de renda variável",
+    "Perceber o desafio de planejar com um valor que muda"
+  ],
+  "competencies": ["F-D5-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF10",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "guide": {
+    "state": "ask",
+    "text": "Como planejar um orçamento quando a renda não é sempre igual?"
+  },
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Um valor que muda a cada mês",
+      "body": "Muitas famílias vivem de uma renda que varia: trabalho por conta própria, comissões, trabalhos temporários. Planejar com um valor incerto pede mais atenção do que planejar com um salário fixo.",
+      "illustration": "item-notebook"
+    },
+    {
+      "type": "story",
+      "title": "O mês da família de Rita",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-chair",
+          "text": "Em alguns meses, o trabalho de costura da família de Rita rende bem mais do que em outros."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-notebook",
+          "text": "Por isso, eles aprenderam a planejar os gastos fixos pensando sempre no mês de menor renda."
+        }
+      ],
+      "closing": "Planejar pelo cenário mais apertado ajuda a atravessar os meses mais fracos sem sustos."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre renda variável:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Renda variável muda de valor conforme o período.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: o valor recebido não é sempre o mesmo."
+        },
+        {
+          "id": "s2",
+          "text": "Planejar pelo mês de menor renda é um exagero desnecessário.",
+          "isTrue": false,
+          "explanation": "Planejar pelo pior cenário ajuda a evitar apertos nos meses mais fracos."
+        },
+        {
+          "id": "s3",
+          "text": "Trabalho por conta própria costuma ter renda variável.",
+          "isTrue": true,
+          "explanation": "Exato: o valor recebido muda conforme a demanda de cada período."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Renda variável muda de valor conforme o período.",
+    "Planejar pelo mês de menor renda ajuda a evitar apertos."
+  ]
+}

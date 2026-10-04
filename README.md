@@ -6,18 +6,18 @@ Conteúdo fixo, escrito, revisado e aprovado antes da publicação. **Sem login,
 
 ## Status
 
-Ciclos **C1 (6–8 anos)** e **C2 (9–11 anos)** completos no currículo v2.0: 6 módulos e 30 lições em cada um, abertos em qualquer ordem.
+Ciclos **C1 (6–8 anos)**, **C2 (9–11 anos)** e **C3 (12–14 anos)** completos no currículo v2.0: 6 módulos e 30 lições em cada um, abertos em qualquer ordem.
 
-| C1                                      | C2                                                    |
-| --------------------------------------- | ----------------------------------------------------- |
-| C1.1 O dinheiro está por toda parte     | C2.1 Pagar de um jeito ou de outro                    |
-| C1.2 Quero, preciso ou posso esperar?   | C2.2 Esperar vale a pena: metas e prioridades         |
-| C1.3 Preço, comparação e troco          | C2.3 Comparar de verdade: preço, qualidade e promoção |
-| C1.4 Trabalho, renda, bens e serviços   | C2.4 Orçamento da família: receita, despesa e saldo   |
-| C1.5 Guardar e cuidar                   | C2.5 Trabalho, renda e compromisso                    |
-| C1.6 Escolhas, influência e convivência | C2.6 Guardar, proteger e contribuir                   |
+| C1                                      | C2                                                    | C3                                        |
+| --------------------------------------- | ----------------------------------------------------- | ----------------------------------------- |
+| C1.1 O dinheiro está por toda parte     | C2.1 Pagar de um jeito ou de outro                    | C3.1 Consumo por impulso e pressão social |
+| C1.2 Quero, preciso ou posso esperar?   | C2.2 Esperar vale a pena: metas e prioridades         | C3.2 Preços, oferta, demanda e inflação   |
+| C1.3 Preço, comparação e troco          | C2.3 Comparar de verdade: preço, qualidade e promoção | C3.3 Orçamento com renda variável         |
+| C1.4 Trabalho, renda, bens e serviços   | C2.4 Orçamento da família: receita, despesa e saldo   | C3.4 Cartão, parcelamento e juros         |
+| C1.5 Guardar e cuidar                   | C2.5 Trabalho, renda e compromisso                    | C3.5 Trabalho e renda                     |
+| C1.6 Escolhas, influência e convivência | C2.6 Guardar, proteger e contribuir                   | C3.6 Dívida, golpes e riscos              |
 
-Arquitetura **ciclo → módulo → lição → objetos**: cada módulo tem 5 lições; cada lição tem de 2 a 4 objetos educacionais de tipos variados (explicação, história, conceitos, classificação, comparação, troco, escolha, ordenação, V/F, quiz, reflexão). Cada módulo fecha com avaliação integradora e a síntese "O que descobrimos?" — sem nota e sem certificado. Ciclos C3–C4 em preparação. Detalhes em [docs/content-architecture.md](docs/content-architecture.md).
+Arquitetura **ciclo → módulo → lição → objetos**: cada módulo tem 5 lições; cada lição tem de 2 a 4 objetos educacionais de tipos variados (explicação, história, conceitos, classificação, comparação, troco, escolha, ordenação, V/F, quiz, reflexão). Cada módulo fecha com avaliação integradora e a síntese "O que descobrimos?" — sem nota e sem certificado. Ciclo C4 em preparação. Detalhes em [docs/content-architecture.md](docs/content-architecture.md).
 
 O guia **Econominho** usa os assets individuais aprovados (v2, em `public/econominho/`), com falas por estado pedagógico.
 

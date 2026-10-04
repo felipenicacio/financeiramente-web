@@ -1,0 +1,75 @@
+{
+  "id": "c3-m03-l05",
+  "cycle": "c3",
+  "module": "m03",
+  "order": 5,
+  "title": "Revisando o orçamento com frequência",
+  "headline": "Revisar o orçamento regularmente ajuda a ajustar o plano a tempo.",
+  "objectives": [
+    "Reconhecer a importância da revisão periódica do orçamento",
+    "Relacionar revisão frequente a decisões mais seguras"
+  ],
+  "competencies": ["F-D5-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF10",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Um hábito, não um evento único",
+      "body": "Com renda variável, revisar o orçamento uma vez só não é suficiente. Olhar os números com frequência ajuda a perceber cedo quando algo precisa de ajuste.",
+      "illustration": "item-notebook"
+    },
+    {
+      "type": "story",
+      "title": "A revisão de Marta",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-notebook",
+          "text": "Toda semana, Marta olha rapidamente quanto já recebeu e quanto já gastou."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-calendar",
+          "text": "Assim, se um mês começa mais fraco, ela já ajusta os gastos antes que o problema cresça."
+        }
+      ],
+      "closing": "Revisar com frequência transforma o orçamento num hábito, não numa tarefa única."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre revisar o orçamento:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Revisar o orçamento só precisa ser feito uma vez, no início do ano.",
+          "isTrue": false,
+          "explanation": "Com renda variável, revisões frequentes ajudam a perceber mudanças a tempo."
+        },
+        {
+          "id": "s2",
+          "text": "Revisar com frequência ajuda a ajustar o plano antes de um problema crescer.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: quanto antes se percebe, mais fácil é ajustar."
+        },
+        {
+          "id": "s3",
+          "text": "Olhar os números regularmente é um hábito útil para quem tem renda variável.",
+          "isTrue": true,
+          "explanation": "Exato: o hábito sustenta o planejamento ao longo do tempo."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Revisar o orçamento com frequência ajuda a ajustar o plano a tempo.",
+    "É um hábito contínuo, não uma tarefa feita uma única vez."
+  ]
+}

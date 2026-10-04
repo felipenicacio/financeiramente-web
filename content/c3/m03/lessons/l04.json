@@ -1,0 +1,111 @@
+{
+  "id": "c3-m03-l04",
+  "cycle": "c3",
+  "module": "m03",
+  "order": 4,
+  "title": "Planejando com uma renda que varia",
+  "headline": "Um plano simples também funciona com uma renda que muda de valor.",
+  "objectives": [
+    "Montar um plano de orçamento considerando renda variável",
+    "Perceber a importância de usar uma média conservadora"
+  ],
+  "competencies": ["F-D5-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF10",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Uma base mais segura",
+      "body": "Uma forma prática de planejar com renda variável é usar o valor dos meses mais fracos como base para as despesas fixas. O que vier a mais nos meses melhores pode reforçar a reserva.",
+      "illustration": "item-calendar"
+    },
+    {
+      "type": "ordering",
+      "prompt": "Organize os passos para planejar com renda variável.",
+      "items": [
+        {
+          "id": "lowest",
+          "label": "Identificar o valor do mês mais fraco",
+          "illustration": "item-notebook"
+        },
+        {
+          "id": "base",
+          "label": "Planejar despesas fixas com base nesse valor",
+          "illustration": "item-calendar"
+        },
+        {
+          "id": "extra",
+          "label": "Guardar o que sobrar nos meses melhores",
+          "illustration": "item-jar"
+        }
+      ],
+      "correct": ["lowest", "base", "extra"],
+      "feedback": "Planejar pelo mês mais fraco e guardar o excedente é uma forma segura de lidar com renda variável."
+    },
+    {
+      "type": "quiz",
+      "title": "Planejando com renda variável",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "decision",
+          "prompt": "Usar o valor do mês mais fraco como base do orçamento ajuda a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Reduzir o risco de gastar mais do que a renda permite"
+            },
+            {
+              "id": "b",
+              "label": "Gastar sempre no limite do melhor mês"
+            },
+            {
+              "id": "c",
+              "label": "Eliminar qualquer necessidade de planejamento"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Uma base conservadora reduz o risco de faltar dinheiro num mês mais fraco."
+        },
+        {
+          "id": "q2",
+          "kind": "situation",
+          "prompt": "O valor que sobra num mês de renda melhor pode",
+          "options": [
+            {
+              "id": "a",
+              "label": "Reforçar a reserva para meses mais fracos"
+            },
+            {
+              "id": "b",
+              "label": "Ser sempre gasto imediatamente"
+            },
+            {
+              "id": "c",
+              "label": "Desaparecer sem nenhuma utilidade"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Reforçar a reserva é uma forma útil de aproveitar os meses melhores."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Planejar pelo mês mais fraco reduz o risco de faltar dinheiro.",
+    "O excedente dos meses melhores pode reforçar a reserva."
+  ]
+}

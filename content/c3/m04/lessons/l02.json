@@ -1,0 +1,79 @@
+{
+  "id": "c3-m04-l02",
+  "cycle": "c3",
+  "module": "m04",
+  "order": 2,
+  "title": "O que são juros",
+  "headline": "Juros são o custo extra de atrasar um pagamento ou dividi-lo em parcelas.",
+  "objectives": [
+    "Compreender o conceito de juros",
+    "Reconhecer situações em que juros são cobrados"
+  ],
+  "competencies": ["F-D6-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF09",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Um custo pelo tempo",
+      "body": "Juros são um valor extra cobrado por emprestar dinheiro ou por adiar um pagamento. Quando alguém parcela uma compra ou atrasa uma fatura, costuma pagar juros além do valor original.",
+      "illustration": "item-wallet"
+    },
+    {
+      "type": "story",
+      "title": "A fatura de Lúcia",
+      "values": {
+        "original": 200,
+        "withInterest": 230
+      },
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-wallet",
+          "text": "A fatura de Lúcia era de {original}."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-pricetag",
+          "text": "Como ela pagou só parte na data combinada, o valor seguinte chegou a {withInterest}: a diferença são os juros."
+        }
+      ],
+      "closing": "Os juros aumentam o valor devido quando o pagamento não é feito por completo na data combinada."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre juros:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Juros são um valor extra cobrado por atrasar ou parcelar um pagamento.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: é o custo de adiar o pagamento no tempo."
+        },
+        {
+          "id": "s2",
+          "text": "Pagar a fatura inteira na data combinada nunca gera juros sobre esse valor.",
+          "isTrue": true,
+          "explanation": "Exato: pagar o total evita a cobrança de juros sobre essa fatura."
+        },
+        {
+          "id": "s3",
+          "text": "Juros são sempre iguais a zero, em qualquer situação.",
+          "isTrue": false,
+          "explanation": "Juros variam conforme o prazo, a instituição e a situação de pagamento."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Juros são o custo extra de atrasar ou parcelar um pagamento.",
+    "Pagar o valor completo na data combinada evita a cobrança de juros."
+  ]
+}

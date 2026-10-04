@@ -17,6 +17,9 @@ content/
   c2/
     cycle.json
     m01/ … m06/          mesma estrutura do c1/
+  c3/
+    cycle.json
+    m01/ … m06/          mesma estrutura do c1/
 ```
 
 ## Ciclo C1 (6–8 anos) — Descoberta
@@ -40,6 +43,17 @@ content/
 | C2.4   | Orçamento da família: receita, despesa e saldo   | F-D5-C2-01, F-D3-C2-01 | explicando |
 | C2.5   | Trabalho, renda e compromisso                    | F-D7-C2-01, F-D6-C2-01 | lendo      |
 | C2.6   | Guardar, proteger e contribuir                   | F-D8-C2-01, F-D9-C2-01 | feliz      |
+
+## Ciclo C3 (12–14 anos) — Autonomia inicial
+
+| Módulo | Título                               | Competências                       | Tema       |
+| ------ | ------------------------------------ | ---------------------------------- | ---------- |
+| C3.1   | Consumo por impulso e pressão social | F-D1-C3-01, F-D2-C3-01             | pensando   |
+| C3.2   | Preços, oferta, demanda e inflação   | F-D4-C3-01                         | comparando |
+| C3.3   | Orçamento com renda variável         | F-D5-C3-01                         | explicando |
+| C3.4   | Cartão, parcelamento e juros         | F-D6-C3-01                         | lendo      |
+| C3.5   | Trabalho e renda                     | F-D7-C3-01                         | descoberta |
+| C3.6   | Dívida, golpes e riscos              | F-D3-C3-01, F-D8-C3-01, F-D9-C3-01 | feliz      |
 
 Navegação livre: módulos e lições podem ser abertos em qualquer ordem. Nada é bloqueado e nada é salvo entre visitas.
 
@@ -92,17 +106,17 @@ Guia pedagógico único (assets individuais aprovados v2, em `public/econominho/
 
 ## Regras codificadas em testes (`tests/content.test.ts`)
 
-| Regra                                                                 |
-| --------------------------------------------------------------------- |
-| Catálogo e ciclo válidos; C1 e C2 publicam 6 módulos e 30 lições cada |
-| Cada módulo tem 5 lições na ordem 1–5                                 |
-| IDs de lição únicos                                                   |
-| Cada lição tem de 2 a 4 objetos                                       |
-| Toda competência citada existe na matriz (36 códigos)                 |
-| Toda fonte usa código conhecido e tem referência                      |
-| Toda lição declara sensibilidade N1/N2/N3                             |
-| Cada módulo fecha com avaliação integradora e síntese                 |
-| Assets oficiais do Econominho (avatares e temas) existem no disco     |
+| Regra                                                                     |
+| ------------------------------------------------------------------------- |
+| Catálogo e ciclo válidos; C1, C2 e C3 publicam 6 módulos e 30 lições cada |
+| Cada módulo tem 5 lições na ordem 1–5                                     |
+| IDs de lição únicos                                                       |
+| Cada lição tem de 2 a 4 objetos                                           |
+| Toda competência citada existe na matriz (36 códigos)                     |
+| Toda fonte usa código conhecido e tem referência                          |
+| Toda lição declara sensibilidade N1/N2/N3                                 |
+| Cada módulo fecha com avaliação integradora e síntese                     |
+| Assets oficiais do Econominho (avatares e temas) existem no disco         |
 
 As guardas editoriais e de privacidade seguem em `tests/privacy.test.ts` e nos schemas (`lib/validation/contentSchemas.ts`).
 

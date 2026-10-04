@@ -1,0 +1,48 @@
+{
+  "cycle": "c3",
+  "title": "O que descobrimos?",
+  "intro": "Depois dos seis módulos, veja quantas ideias você já consegue aplicar no dia a dia.",
+  "discoveries": [
+    {
+      "text": "Reconhecer o impulso e a pressão social ajuda a decidir com mais calma.",
+      "icon": "wait",
+      "tone": "amber",
+      "module": "m01"
+    },
+    {
+      "text": "Oferta, demanda e inflação explicam por que os preços mudam.",
+      "icon": "price",
+      "tone": "teal",
+      "module": "m02"
+    },
+    {
+      "text": "Com renda variável, uma reserva ajuda a atravessar os meses difíceis.",
+      "icon": "save",
+      "tone": "cyan",
+      "module": "m03"
+    },
+    {
+      "text": "Somar o custo total do parcelamento revela se há juros embutidos.",
+      "icon": "limit",
+      "tone": "purple",
+      "module": "m04"
+    },
+    {
+      "text": "Trabalho e renda têm formas diferentes, cada uma com suas características.",
+      "icon": "work",
+      "tone": "green",
+      "module": "m05"
+    },
+    {
+      "text": "Reconhecer sinais de golpe e pensar em risco protege o seu dinheiro.",
+      "icon": "info",
+      "tone": "coral",
+      "module": "m06"
+    }
+  ],
+  "guide": {
+    "state": "reflect",
+    "text": "Qual dessas ideias você já pode conversar com a sua família esta semana?"
+  },
+  "closing": "Essas ideias aparecem numa compra parcelada, numa oferta de ganho fácil, na renda do mês. Vale revisitar sempre que surgir uma dessas situações."
+}

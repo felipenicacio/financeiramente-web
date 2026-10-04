@@ -1,0 +1,116 @@
+{
+  "id": "c3-m01-l05",
+  "cycle": "c3",
+  "module": "m01",
+  "order": 5,
+  "title": "Pausar antes de decidir",
+  "headline": "Uma pausa curta é uma estratégia simples contra decisões apressadas.",
+  "objectives": [
+    "Reconhecer a pausa como estratégia prática contra o impulso",
+    "Montar um pequeno roteiro de perguntas antes de decidir uma compra"
+  ],
+  "competencies": ["F-D1-C3-01"],
+  "sources": [
+    {
+      "source": "MC",
+      "reference": "D1",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Um espaço entre a vontade e a decisão",
+      "body": "Uma pausa, mesmo curta, cria espaço entre sentir vontade e decidir comprar. Nesse espaço, cabem perguntas simples: eu preciso disso? Posso esperar? Isso combina com o que já planejei?",
+      "illustration": "item-calendar"
+    },
+    {
+      "type": "ordering",
+      "prompt": "Organize os passos de uma pausa simples antes de decidir.",
+      "items": [
+        {
+          "id": "notice",
+          "label": "Perceber a vontade súbita de comprar",
+          "illustration": "item-tablet"
+        },
+        {
+          "id": "pause",
+          "label": "Esperar um tempo antes de decidir",
+          "illustration": "item-calendar"
+        },
+        {
+          "id": "ask",
+          "label": "Perguntar se realmente faz sentido",
+          "illustration": "item-magnifier"
+        },
+        {
+          "id": "decide",
+          "label": "Decidir com mais calma",
+          "illustration": "item-pricetag"
+        }
+      ],
+      "correct": ["notice", "pause", "ask", "decide"],
+      "feedback": "Perceber, esperar, perguntar e só então decidir: essa ordem ajuda a evitar o impulso."
+    },
+    {
+      "type": "quiz",
+      "title": "Praticando a pausa",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "decision",
+          "prompt": "O principal objetivo de uma pausa antes de decidir é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Dar espaço para pensar com mais calma"
+            },
+            {
+              "id": "b",
+              "label": "Impedir qualquer compra para sempre"
+            },
+            {
+              "id": "c",
+              "label": "Aumentar a pressa de decidir"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "A pausa serve para dar espaço à reflexão, não para proibir a compra."
+        },
+        {
+          "id": "q2",
+          "kind": "situation",
+          "prompt": "Diante de uma vontade súbita de comprar algo caro, uma pergunta útil é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Isso combina com o que eu já tinha planejado?"
+            },
+            {
+              "id": "b",
+              "label": "Todo mundo vai achar legal?"
+            },
+            {
+              "id": "c",
+              "label": "Preciso decidir nos próximos segundos?"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Relacionar a vontade ao próprio planejamento ajuda a decidir com mais clareza."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Uma pausa curta cria espaço para decidir com mais calma.",
+    "Perguntas simples ajudam a avaliar se a compra faz sentido."
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "c3-m03-l03",
+  "cycle": "c3",
+  "module": "m03",
+  "order": 3,
+  "title": "Lidando com imprevistos no orçamento",
+  "headline": "Imprevistos pedem ajuste de plano, não culpa por terem acontecido.",
+  "objectives": [
+    "Reconhecer imprevistos comuns no orçamento familiar",
+    "Perceber a importância de ajustar o plano sem culpabilização"
+  ],
+  "competencies": ["F-D5-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF10",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Nenhum plano prevê tudo",
+      "body": "Mesmo um orçamento bem feito pode ser afetado por algo inesperado: um conserto, uma despesa médica, uma mudança de renda repentina. Isso não é falha de planejamento: é parte da vida financeira real.",
+      "illustration": "item-stethoscope"
+    },
+    {
+      "type": "classify",
+      "prompt": "Classifique cada situação como imprevisto ou despesa planejada.",
+      "categories": [
+        {
+          "id": "unexpected",
+          "label": "Imprevisto",
+          "short": "Surgiu sem aviso",
+          "icon": "limit",
+          "tone": "coral"
+        },
+        {
+          "id": "planned",
+          "label": "Planejada",
+          "short": "Já era esperada",
+          "icon": "care",
+          "tone": "teal"
+        }
+      ],
+      "items": [
+        {
+          "id": "repair",
+          "label": "Um conserto urgente que ninguém esperava",
+          "situation": "O problema apareceu de surpresa, sem nenhum aviso.",
+          "accepted": ["unexpected"],
+          "feedback": "Um problema que surge sem aviso é um imprevisto clássico.",
+          "illustration": "item-bench"
+        },
+        {
+          "id": "rent",
+          "label": "O pagamento mensal já esperado de uma conta fixa",
+          "situation": "A família já sabe o valor e a data há meses.",
+          "accepted": ["planned"],
+          "feedback": "Uma despesa já conhecida e esperada é uma despesa planejada.",
+          "illustration": "item-notebook"
+        },
+        {
+          "id": "medical",
+          "label": "Uma consulta médica não planejada",
+          "situation": "Ninguém esperava precisar desse gasto este mês.",
+          "accepted": ["unexpected"],
+          "feedback": "Um gasto de saúde que surge sem aviso é um imprevisto.",
+          "illustration": "item-stethoscope"
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Diante de um imprevisto que bagunçou o orçamento, o que mais ajuda?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Ajustar o plano com calma, usando reserva se houver",
+          "reflection": "Isso mesmo: ajustar o plano é o caminho mais saudável diante do inesperado."
+        },
+        {
+          "id": "b",
+          "label": "Procurar quem é o culpado pelo imprevisto",
+          "reflection": "Imprevisto não é culpa de ninguém: buscar um culpado não resolve nada."
+        },
+        {
+          "id": "c",
+          "label": "Fingir que não aconteceu nada",
+          "reflection": "Ignorar só adia o ajuste necessário no orçamento."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Imprevistos fazem parte da vida financeira real, sem culpa de ninguém.",
+    "Ajustar o plano com calma é o caminho mais saudável."
+  ]
+}

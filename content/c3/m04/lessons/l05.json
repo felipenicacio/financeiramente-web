@@ -1,0 +1,104 @@
+{
+  "id": "c3-m04-l05",
+  "cycle": "c3",
+  "module": "m04",
+  "order": 5,
+  "title": "Decidir entre à vista e parcelado",
+  "headline": "Comparar o custo total ajuda a decidir entre pagar à vista ou parcelado.",
+  "objectives": [
+    "Aplicar a comparação entre preço à vista e parcelado numa decisão",
+    "Reconhecer fatores a considerar além do valor da parcela"
+  ],
+  "competencies": ["F-D6-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF09",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Mais do que o valor da parcela",
+      "body": "Decidir entre pagar à vista ou parcelado envolve comparar o custo total das duas opções, além de considerar se o orçamento do mês suporta o valor à vista sem comprometer outras despesas.",
+      "illustration": "item-notebook"
+    },
+    {
+      "type": "choice",
+      "prompt": "Rita tem o valor guardado para um fogão parcelado em 10 vezes sem juros. O que ela pode escolher?",
+      "options": [
+        {
+          "id": "upfront",
+          "label": "Pagar à vista para já resolver a compra",
+          "reflection": "Ela usa o valor guardado de uma vez, encerrando a compra sem parcelas pendentes."
+        },
+        {
+          "id": "installments",
+          "label": "Parcelar sem juros e manter o valor guardado disponível",
+          "reflection": "Ela mantém o dinheiro guardado disponível para outras necessidades, já que o parcelamento sem juros não aumenta o custo total."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Pensando na decisão",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "decision",
+          "prompt": "Quando o parcelamento tem juros, o fator mais importante para decidir é",
+          "options": [
+            {
+              "id": "a",
+              "label": "O custo total parcelado comparado ao preço à vista"
+            },
+            {
+              "id": "b",
+              "label": "Apenas o número de parcelas disponíveis"
+            },
+            {
+              "id": "c",
+              "label": "A cor do cartão usado na compra"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "O custo total é o que revela se o parcelamento compensa financeiramente."
+        },
+        {
+          "id": "q2",
+          "kind": "situation",
+          "prompt": "Quando o parcelamento é sem juros e a pessoa já tem o valor guardado, uma vantagem de parcelar é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Manter o valor guardado disponível para outras necessidades"
+            },
+            {
+              "id": "b",
+              "label": "Pagar sempre mais do que o preço à vista"
+            },
+            {
+              "id": "c",
+              "label": "Perder o controle do orçamento"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Sem juros, parcelar não aumenta o custo e ainda mantém o valor guardado disponível."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Comparar o custo total ajuda a decidir entre à vista e parcelado.",
+    "Sem juros, parcelar pode manter o valor guardado disponível para outras necessidades."
+  ]
+}

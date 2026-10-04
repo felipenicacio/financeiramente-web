@@ -1,0 +1,139 @@
+{
+  "id": "c3-m01-l04",
+  "cycle": "c3",
+  "module": "m01",
+  "order": 4,
+  "title": "Publicidade e redes sociais",
+  "headline": "Redes sociais multiplicam anúncios e opiniões que influenciam decisões de compra.",
+  "objectives": [
+    "Reconhecer formas de publicidade presentes nas redes sociais",
+    "Perceber a diferença entre conteúdo pago e opinião espontânea"
+  ],
+  "competencies": ["F-D2-C3-01"],
+  "sources": [
+    {
+      "source": "MC",
+      "reference": "D2",
+      "role": "principal"
+    },
+    {
+      "source": "BNCC",
+      "reference": "EF07ER",
+      "role": "complementar"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Nem tudo que aparece é espontâneo",
+      "body": "Nas redes sociais, algumas publicações são anúncios pagos, outras são indicações combinadas com marcas, e outras são opiniões realmente espontâneas. Diferenciar isso ajuda a entender a intenção por trás do que se vê.",
+      "illustration": "item-tablet"
+    },
+    {
+      "type": "classify",
+      "prompt": "Classifique cada situação de conteúdo nas redes.",
+      "categories": [
+        {
+          "id": "ad",
+          "label": "Publicidade",
+          "short": "Combinado com marca",
+          "icon": "ad",
+          "tone": "purple"
+        },
+        {
+          "id": "opinion",
+          "label": "Opinião espontânea",
+          "short": "Sem combinação",
+          "icon": "info",
+          "tone": "teal"
+        }
+      ],
+      "items": [
+        {
+          "id": "paid",
+          "label": "Uma publicação marcada como “parceria paga”",
+          "situation": "A pessoa recebeu da marca para divulgar o produto.",
+          "accepted": ["ad"],
+          "feedback": "Quando existe um combinado com a marca, é publicidade, mesmo parecendo espontâneo.",
+          "illustration": "story-ad-tablet"
+        },
+        {
+          "id": "random",
+          "label": "Um comentário espontâneo recomendando um livro",
+          "situation": "A pessoa comentou por conta própria, sem nenhum combinado.",
+          "accepted": ["opinion"],
+          "feedback": "Sem combinado com a marca, é uma opinião espontânea.",
+          "illustration": "item-book"
+        },
+        {
+          "id": "sponsor",
+          "label": "Um vídeo que avisa ter apoio de uma marca",
+          "situation": "O criador avisa no início que recebeu apoio da marca para fazer o vídeo.",
+          "accepted": ["ad"],
+          "feedback": "O aviso de apoio da marca indica que é publicidade combinada.",
+          "illustration": "item-tablet"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Pensando em redes sociais",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "decision",
+          "prompt": "Perceber que um conteúdo é publicidade paga ajuda porque",
+          "options": [
+            {
+              "id": "a",
+              "label": "Mostra que existe uma intenção comercial por trás"
+            },
+            {
+              "id": "b",
+              "label": "Significa que o conteúdo é sempre mentira"
+            },
+            {
+              "id": "c",
+              "label": "Não muda nada na forma de ver o conteúdo"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Saber da intenção comercial ajuda a avaliar o conteúdo com mais critério."
+        },
+        {
+          "id": "q2",
+          "kind": "recognition",
+          "prompt": "Um vídeo que avisa ter apoio de uma marca é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Um exemplo de publicidade combinada"
+            },
+            {
+              "id": "b",
+              "label": "Sempre uma opinião totalmente espontânea"
+            },
+            {
+              "id": "c",
+              "label": "Proibido de existir"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "O aviso de apoio já indica uma combinação comercial."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Nem todo conteúdo nas redes é espontâneo: parte é publicidade combinada.",
+    "Perceber a intenção por trás do conteúdo ajuda a avaliar com mais critério."
+  ]
+}

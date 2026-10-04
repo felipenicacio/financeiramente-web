@@ -1,0 +1,104 @@
+{
+  "id": "c3-m05-l02",
+  "cycle": "c3",
+  "module": "m05",
+  "order": 2,
+  "title": "Renda frequente e esporádica",
+  "headline": "Renda frequente chega em intervalos regulares; a esporádica, não.",
+  "objectives": [
+    "Diferenciar renda frequente e esporádica",
+    "Reconhecer o impacto de cada tipo no planejamento"
+  ],
+  "competencies": ["F-D7-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF11",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Regular ou variável",
+      "body": "Renda frequente chega em intervalos regulares, como todo mês. Renda esporádica aparece de forma menos previsível, como um trabalho extra que surge de vez em quando.",
+      "illustration": "item-wallet"
+    },
+    {
+      "type": "classify",
+      "prompt": "Classifique cada fonte de renda:",
+      "categories": [
+        {
+          "id": "frequente",
+          "label": "Frequente",
+          "short": "Intervalos regulares",
+          "icon": "money",
+          "tone": "teal"
+        },
+        {
+          "id": "esporadica",
+          "label": "Esporádica",
+          "short": "Sem regularidade",
+          "icon": "later",
+          "tone": "amber"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1",
+          "label": "Salário mensal fixo",
+          "situation": "O valor chega todo mês, sempre no mesmo dia.",
+          "accepted": ["frequente"],
+          "feedback": "Um valor que se repete todo mês é um exemplo de renda frequente.",
+          "illustration": "item-laptop"
+        },
+        {
+          "id": "i2",
+          "label": "Um bico de um único fim de semana",
+          "situation": "O trabalho acontece uma vez só, sem repetição combinada.",
+          "accepted": ["esporadica"],
+          "feedback": "Um trabalho pontual, sem repetição definida, é renda esporádica.",
+          "illustration": "item-bus"
+        },
+        {
+          "id": "i3",
+          "label": "Mesada paga todo mês, no mesmo dia",
+          "situation": "O valor é combinado para chegar sempre na mesma data.",
+          "accepted": ["frequente"],
+          "feedback": "A regularidade da data mostra que essa é uma renda frequente.",
+          "illustration": "item-wallet"
+        }
+      ]
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre renda frequente e esporádica:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Renda frequente chega em intervalos regulares.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: ela se repete em períodos parecidos, como todo mês."
+        },
+        {
+          "id": "s2",
+          "text": "Renda esporádica é sempre maior do que a frequente.",
+          "isTrue": false,
+          "explanation": "O valor não depende do tipo; depende da situação específica."
+        },
+        {
+          "id": "s3",
+          "text": "Saber se a renda é frequente ou esporádica ajuda a planejar o orçamento.",
+          "isTrue": true,
+          "explanation": "Exato: cada tipo pede uma forma diferente de organizar os gastos."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Renda frequente chega em intervalos regulares.",
+    "Renda esporádica é menos previsível e pede atenção extra no planejamento."
+  ]
+}

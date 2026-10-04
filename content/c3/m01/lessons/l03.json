@@ -1,0 +1,90 @@
+{
+  "id": "c3-m01-l03",
+  "cycle": "c3",
+  "module": "m01",
+  "order": 3,
+  "title": "Pressão de grupo nas compras",
+  "headline": "O que amigos têm ou fazem também pode influenciar uma decisão de compra.",
+  "objectives": [
+    "Reconhecer a influência do grupo em decisões de consumo",
+    "Perceber que seguir o grupo é uma escolha, não uma obrigação"
+  ],
+  "competencies": ["F-D2-C3-01"],
+  "sources": [
+    {
+      "source": "MC",
+      "reference": "D2",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "O que o grupo tem, influencia",
+      "body": "Quando várias pessoas próximas têm ou usam a mesma coisa, surge uma vontade de ter também, mesmo sem uma necessidade clara. Essa é a pressão de grupo agindo sobre uma decisão de compra.",
+      "illustration": "story-two-choices"
+    },
+    {
+      "type": "story",
+      "title": "O tênis do grupo",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-sneaker",
+          "text": "Quase todos os amigos de Caio têm o mesmo modelo de tênis, e ele sente vontade de comprar também."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-thinking",
+          "text": "Ele se pergunta: é porque realmente precisa, ou porque todo mundo tem?"
+        }
+      ],
+      "question": {
+        "prompt": "O que Caio pode fazer com essa dúvida?",
+        "options": [
+          {
+            "id": "a",
+            "label": "Pensar com calma se faz sentido para ele, com ou sem o grupo",
+            "reflection": "Essa reflexão ajuda a decidir por si mesmo, levando o grupo em conta sem depender dele."
+          },
+          {
+            "id": "b",
+            "label": "Comprar na hora, só para ser igual aos amigos",
+            "reflection": "É uma escolha possível, mas vale notar que a motivação principal foi o grupo, não uma necessidade própria."
+          }
+        ]
+      },
+      "closing": "Perceber a influência do grupo não significa ignorá-la, mas decidir de olhos abertos."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre pressão de grupo:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "O que o grupo tem pode influenciar uma vontade de compra.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: a influência social é real e vale a pena reconhecer."
+        },
+        {
+          "id": "s2",
+          "text": "Seguir o grupo numa compra é sempre uma obrigação.",
+          "isTrue": false,
+          "explanation": "É uma escolha, não uma obrigação: dá para decidir de outro jeito."
+        },
+        {
+          "id": "s3",
+          "text": "Notar a influência do grupo ajuda a decidir com mais consciência.",
+          "isTrue": true,
+          "explanation": "Exato: perceber a influência é o que abre espaço para escolher."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "A pressão de grupo pode influenciar decisões de compra.",
+    "Notar essa influência ajuda a decidir com mais consciência."
+  ]
+}

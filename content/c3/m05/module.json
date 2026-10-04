@@ -1,0 +1,168 @@
+{
+  "id": "m05",
+  "cycle": "c3",
+  "order": 5,
+  "code": "C3.5",
+  "title": "Trabalho e renda",
+  "headline": "A renda pode vir de formas diferentes, cada uma com suas características.",
+  "summary": "Trabalho formal, informal, frequente e esporádico geram renda de formas diferentes.",
+  "competencies": ["F-D7-C3-01"],
+  "integrative": {
+    "title": "Juntando tudo",
+    "intro": "Vamos ver o que você descobriu sobre trabalho e renda?",
+    "object": {
+      "type": "quiz",
+      "title": "O que você descobriu",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Trabalho formal é aquele que",
+          "options": [
+            {
+              "id": "a",
+              "label": "Segue regras registradas, com direitos combinados"
+            },
+            {
+              "id": "b",
+              "label": "Nunca tem nenhum tipo de registro"
+            },
+            {
+              "id": "c",
+              "label": "Só existe por um único dia"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "O trabalho formal segue um registro combinado, com direitos e deveres definidos.",
+          "illustration": "item-laptop"
+        },
+        {
+          "id": "q2",
+          "kind": "explanation",
+          "prompt": "Trabalho informal é aquele que",
+          "options": [
+            {
+              "id": "a",
+              "label": "Não segue o mesmo tipo de registro do trabalho formal"
+            },
+            {
+              "id": "b",
+              "label": "Sempre paga mais do que o trabalho formal"
+            },
+            {
+              "id": "c",
+              "label": "É proibido em qualquer situação"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "O trabalho informal não segue o mesmo registro e as mesmas garantias do formal."
+        },
+        {
+          "id": "q3",
+          "kind": "recognition",
+          "prompt": "Renda frequente é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Aquela que chega em intervalos regulares, como todo mês"
+            },
+            {
+              "id": "b",
+              "label": "Aquela que nunca se repete"
+            },
+            {
+              "id": "c",
+              "label": "Sempre maior do que a renda esporádica"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Renda frequente chega em intervalos regulares, o que ajuda a planejar."
+        },
+        {
+          "id": "q4",
+          "kind": "decision",
+          "prompt": "Quando a renda é esporádica, planejar o orçamento pede",
+          "options": [
+            {
+              "id": "a",
+              "label": "Mais atenção aos meses de menor entrada"
+            },
+            {
+              "id": "b",
+              "label": "Gastar sempre o valor do mês de maior entrada"
+            },
+            {
+              "id": "c",
+              "label": "Ignorar os meses seguintes"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Com renda esporádica, é preciso prever os meses em que a entrada é menor."
+        },
+        {
+          "id": "q5",
+          "kind": "situation",
+          "prompt": "Combinar o valor e a forma de pagamento antes de começar um trabalho ajuda a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Evitar mal-entendidos sobre a renda esperada"
+            },
+            {
+              "id": "b",
+              "label": "Garantir que o valor nunca mude"
+            },
+            {
+              "id": "c",
+              "label": "Tornar o combinado desnecessário"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Combinar antes evita mal-entendidos sobre o que foi acordado."
+        }
+      ]
+    }
+  },
+  "conclusion": {
+    "title": "Você concluiu o módulo",
+    "message": "Renda pode vir de formas formais, informais, frequentes ou esporádicas. Entender essas diferenças ajuda a planejar melhor o orçamento.",
+    "recap": [
+      {
+        "icon": "work",
+        "tone": "coral",
+        "text": "Trabalho formal segue um registro combinado, com direitos definidos."
+      },
+      {
+        "icon": "work",
+        "tone": "amber",
+        "text": "Trabalho informal não segue o mesmo registro do formal."
+      },
+      {
+        "icon": "money",
+        "tone": "teal",
+        "text": "Renda frequente chega em intervalos regulares."
+      },
+      {
+        "icon": "limit",
+        "tone": "cyan",
+        "text": "Renda esporádica pede mais atenção ao planejar os meses seguintes."
+      }
+    ]
+  },
+  "theme": "descoberta"
+}
