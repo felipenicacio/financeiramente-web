@@ -216,7 +216,15 @@ const CoinModern: Shape = () => (
         strokeWidth={2}
         strokeLinejoin="round"
       />
-      <ellipse cx={46} cy={36} rx={9} ry={4} fill={p.white} opacity={0.68} transform="rotate(-30 46 36)" />
+      <ellipse
+        cx={46}
+        cy={36}
+        rx={9}
+        ry={4}
+        fill={p.white}
+        opacity={0.68}
+        transform="rotate(-30 46 36)"
+      />
     </g>
   </g>
 );
@@ -234,10 +242,25 @@ const BanknoteModern: Shape = () => (
       </filter>
     </defs>
     <g transform="rotate(-6 60 60)" filter="url(#noteShadowC1)">
-      <rect x={9} y={29} width={102} height={60} rx={11} fill="url(#noteGreenC1)" stroke={p.green700} strokeWidth={3} />
+      <rect
+        x={9}
+        y={29}
+        width={102}
+        height={60}
+        rx={11}
+        fill="url(#noteGreenC1)"
+        stroke={p.green700}
+        strokeWidth={3}
+      />
       <rect x={18} y={38} width={84} height={42} rx={8} fill={p.white} opacity={0.26} />
       <circle cx={60} cy={59} r={16} fill={p.green100} stroke={p.green700} strokeWidth={2.5} />
-      <path d="M54 66c2-7 10-7 12 0M54 54c3-5 9-5 12 0" stroke={p.green700} strokeWidth={2.5} fill="none" strokeLinecap="round" />
+      <path
+        d="M54 66c2-7 10-7 12 0M54 54c3-5 9-5 12 0"
+        stroke={p.green700}
+        strokeWidth={2.5}
+        fill="none"
+        strokeLinecap="round"
+      />
       <circle cx={60} cy={51} r={4} fill={p.green700} />
       <path d="M23 45h15M82 73h15" stroke={p.green700} strokeWidth={4} strokeLinecap="round" />
       <ellipse cx={31} cy={39} rx={8} ry={3} fill={p.white} opacity={0.72} />
@@ -258,7 +281,15 @@ const CoinsModern: Shape = () => (
     {[86, 74, 62].map((y) => (
       <g key={y}>
         <ellipse cx={44} cy={y + 5} rx={26} ry={8} fill={p.amber700} opacity={0.38} />
-        <ellipse cx={44} cy={y} rx={26} ry={8} fill="url(#stackGoldC1)" stroke={p.amber700} strokeWidth={2} />
+        <ellipse
+          cx={44}
+          cy={y}
+          rx={26}
+          ry={8}
+          fill="url(#stackGoldC1)"
+          stroke={p.amber700}
+          strokeWidth={2}
+        />
       </g>
     ))}
     <circle cx={82} cy={47} r={25} fill="url(#stackGoldC1)" stroke={p.amber700} strokeWidth={3} />
@@ -269,7 +300,15 @@ const CoinsModern: Shape = () => (
       stroke={p.amber700}
       strokeWidth={1.5}
     />
-    <ellipse cx={73} cy={37} rx={7} ry={3} fill={p.white} opacity={0.62} transform="rotate(-25 73 37)" />
+    <ellipse
+      cx={73}
+      cy={37}
+      rx={7}
+      ry={3}
+      fill={p.white}
+      opacity={0.62}
+      transform="rotate(-25 73 37)"
+    />
   </g>
 );
 
@@ -277,12 +316,27 @@ const ToyRepair: Shape = () => (
   <g>
     <ellipse cx={60} cy={102} rx={42} ry={7} fill={p.slate200} opacity={0.65} />
     <g transform="translate(4 4)">
-      <rect x={20} y={40} width={56} height={44} rx={13} fill={p.purple500} stroke={p.purple700} strokeWidth={2.5} />
+      <rect
+        x={20}
+        y={40}
+        width={56}
+        height={44}
+        rx={13}
+        fill={p.purple500}
+        stroke={p.purple700}
+        strokeWidth={2.5}
+      />
       <circle cx={38} cy={58} r={7} fill={p.white} />
       <circle cx={58} cy={58} r={7} fill={p.white} />
       <circle cx={39} cy={59} r={2.5} fill={p.navy} />
       <circle cx={59} cy={59} r={2.5} fill={p.navy} />
-      <path d="M39 74q9 7 18 0" stroke={p.navy} strokeWidth={2.5} fill="none" strokeLinecap="round" />
+      <path
+        d="M39 74q9 7 18 0"
+        stroke={p.navy}
+        strokeWidth={2.5}
+        fill="none"
+        strokeLinecap="round"
+      />
       <path d="M48 40V28" stroke={p.purple700} strokeWidth={4} strokeLinecap="round" />
       <circle cx={48} cy={25} r={5} fill={p.coral500} />
     </g>

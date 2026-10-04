@@ -279,7 +279,14 @@ const C1FinanceActions: Shape = () => (
       {place('item-banknote', 28, 20, 56)}
       <circle cx={114} cy={50} r={18} fill={p.amber500} stroke={p.amber700} strokeWidth={2.5} />
       <path d="M95 50h-20" stroke={p.green700} strokeWidth={4} strokeLinecap="round" />
-      <path d="m82 43-9 7 9 7" stroke={p.green700} strokeWidth={4} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="m82 43-9 7 9 7"
+        stroke={p.green700}
+        strokeWidth={4}
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </SoftPanel>
     <SoftPanel x={168} y={12} width={142} height={78} fill={p.coral50}>
       {place('item-pricetag', 185, 19, 58)}
@@ -321,14 +328,16 @@ const CartoonKid = ({
   <g transform={`translate(${x} ${y}) scale(${flip ? -1 : 1} 1)`}>
     <ellipse cx={0} cy={54} rx={34} ry={7} fill={p.slate200} opacity={0.55} />
     <path d="M-25 46q25-24 50 0v28h-50Z" fill={shirt} />
-    <path d="M-18 52q-18 8-22 24M18 52q18 8 22 24" stroke={skin} strokeWidth={9} strokeLinecap="round" />
+    <path
+      d="M-18 52q-18 8-22 24M18 52q18 8 22 24"
+      stroke={skin}
+      strokeWidth={9}
+      strokeLinecap="round"
+    />
     <circle cx={0} cy={18} r={26} fill={skin} />
     <circle cx={-23} cy={20} r={5} fill={skin} />
     <circle cx={23} cy={20} r={5} fill={skin} />
-    <path
-      d="M-24 13c2-22 47-29 52-4 2 9-2 15-6 19-2-14-8-19-15-22-9 8-20 12-31 12Z"
-      fill={hair}
-    />
+    <path d="M-24 13c2-22 47-29 52-4 2 9-2 15-6 19-2-14-8-19-15-22-9 8-20 12-31 12Z" fill={hair} />
     <circle cx={-9} cy={20} r={3.4} fill={p.navy} />
     <circle cx={9} cy={20} r={3.4} fill={p.navy} />
     <circle cx={-8} cy={19} r={1} fill={p.white} />
@@ -371,10 +380,36 @@ const C1BarterExamples: Shape = () => (
     <CartoonKid x={234} y={72} shirt={p.coral500} flip hair="#3f251f" skin="#9d6848" />
     {place('item-apple', 116, 95, 46)}
     {place('item-bread', 160, 95, 50)}
-    <path d="M137 112c16-15 31-15 46 0" stroke={p.teal500} strokeWidth={4} fill="none" strokeLinecap="round" />
-    <path d="M178 105l8 7-9 5" stroke={p.teal500} strokeWidth={4} fill="none" strokeLinecap="round" strokeLinejoin="round" />
-    <path d="M184 132c-16 15-31 15-46 0" stroke={p.cyan700} strokeWidth={4} fill="none" strokeLinecap="round" />
-    <path d="M143 139l-8-7 9-5" stroke={p.cyan700} strokeWidth={4} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+    <path
+      d="M137 112c16-15 31-15 46 0"
+      stroke={p.teal500}
+      strokeWidth={4}
+      fill="none"
+      strokeLinecap="round"
+    />
+    <path
+      d="M178 105l8 7-9 5"
+      stroke={p.teal500}
+      strokeWidth={4}
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M184 132c-16 15-31 15-46 0"
+      stroke={p.cyan700}
+      strokeWidth={4}
+      fill="none"
+      strokeLinecap="round"
+    />
+    <path
+      d="M143 139l-8-7 9-5"
+      stroke={p.cyan700}
+      strokeWidth={4}
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
     <g transform="translate(134 29)">
       <rect width={52} height={36} rx={18} fill={p.white} stroke={p.slate200} strokeWidth={2} />
       {place('item-apple', 7, -1, 36)}
@@ -391,7 +426,12 @@ const C1BarterProblem: Shape = () => (
     {place('item-apple', 116, 96, 44)}
     {place('item-bread', 165, 94, 50)}
     <circle cx={160} cy={110} r={23} fill={p.white} stroke={p.coral500} strokeWidth={3} />
-    <path d="M149 99l22 22M171 99l-22 22" stroke={p.coral500} strokeWidth={5} strokeLinecap="round" />
+    <path
+      d="M149 99l22 22M171 99l-22 22"
+      stroke={p.coral500}
+      strokeWidth={5}
+      strokeLinecap="round"
+    />
     <g transform="translate(120 26)">
       <rect width={80} height={34} rx={17} fill={p.white} stroke={p.slate200} strokeWidth={2} />
       <circle cx={24} cy={17} r={8} fill={p.coral100} />
@@ -410,7 +450,16 @@ const C1MoneyFacilitates: Shape = () => (
       </linearGradient>
     </defs>
     <rect x={8} y={12} width={304} height={176} rx={26} fill="url(#c1shopBg)" />
-    <rect x={174} y={54} width={120} height={100} rx={14} fill={p.white} stroke={p.slate200} strokeWidth={2} />
+    <rect
+      x={174}
+      y={54}
+      width={120}
+      height={100}
+      rx={14}
+      fill={p.white}
+      stroke={p.slate200}
+      strokeWidth={2}
+    />
     <path d="M174 54h120v23H174Z" fill={p.coral500} />
     <rect x={184} y={92} width={100} height={12} rx={6} fill={p.amber100} />
     <rect x={184} y={116} width={100} height={12} rx={6} fill={p.teal100} />
@@ -420,7 +469,14 @@ const C1MoneyFacilitates: Shape = () => (
     {place('item-bread', 178, 96, 52)}
     <Arrow x1={144} y1={111} x2={180} y2={111} color={p.green500} />
     <circle cx={160} cy={48} r={20} fill={p.white} stroke={p.green500} strokeWidth={3} />
-    <path d="M150 48l7 7 14-17" stroke={p.green700} strokeWidth={4} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+    <path
+      d="M150 48l7 7 14-17"
+      stroke={p.green700}
+      strokeWidth={4}
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </g>
 );
 
@@ -530,12 +586,30 @@ const C1NeedNow: Shape = () => (
   <g>
     <rect x={8} y={12} width={304} height={176} rx={26} fill={p.cyan50} />
     <circle cx={270} cy={42} r={22} fill={p.amber100} />
-    <path d="M270 11v14M270 59v14M239 42h14M287 42h14" stroke={p.amber500} strokeWidth={4} strokeLinecap="round" />
+    <path
+      d="M270 11v14M270 59v14M239 42h14M287 42h14"
+      stroke={p.amber500}
+      strokeWidth={4}
+      strokeLinecap="round"
+    />
     <path d="M8 150q58-22 108 0t96 0q52-22 100 0v38H8Z" fill={p.green100} />
     <CartoonKid x={102} y={74} shirt={p.cyan500} />
     {place('item-bottle', 142, 78, 74)}
-    <path d="M132 118c10-10 22-14 34-13" stroke={p.cyan700} strokeWidth={4} fill="none" strokeLinecap="round" />
-    <path d="m160 99 8 6-9 4" stroke={p.cyan700} strokeWidth={4} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+    <path
+      d="M132 118c10-10 22-14 34-13"
+      stroke={p.cyan700}
+      strokeWidth={4}
+      fill="none"
+      strokeLinecap="round"
+    />
+    <path
+      d="m160 99 8 6-9 4"
+      stroke={p.cyan700}
+      strokeWidth={4}
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
     <g transform="translate(205 52)">
       <rect width={75} height={72} rx={18} fill={p.white} stroke={p.slate200} strokeWidth={2} />
       {place('item-bread', 7, 9, 55)}
@@ -547,16 +621,41 @@ const C1NeedNow: Shape = () => (
 const C1WantStickers: Shape = () => (
   <g>
     <rect x={8} y={12} width={304} height={176} rx={26} fill={p.coral50} />
-    <rect x={184} y={28} width={112} height={132} rx={18} fill={p.white} stroke={p.slate200} strokeWidth={2} />
+    <rect
+      x={184}
+      y={28}
+      width={112}
+      height={132}
+      rx={18}
+      fill={p.white}
+      stroke={p.slate200}
+      strokeWidth={2}
+    />
     <rect x={184} y={28} width={112} height={24} rx={12} fill={p.coral100} />
     {place('item-stickers', 200, 58, 80)}
     <CartoonKid x={102} y={76} shirt={p.purple500} />
     <g transform="translate(52 28)">
       <circle cx={22} cy={18} r={18} fill={p.white} stroke={p.slate200} strokeWidth={2} />
-      <path d="m22 7 4.5 9.1 10 1.5-7.2 7 1.7 10-9-4.8-9 4.8 1.7-10-7.2-7 10-1.5Z" fill={p.amber500} />
+      <path
+        d="m22 7 4.5 9.1 10 1.5-7.2 7 1.7 10-9-4.8-9 4.8 1.7-10-7.2-7 10-1.5Z"
+        fill={p.amber500}
+      />
     </g>
-    <path d="M132 72c20-16 42-19 63-14" stroke={p.coral500} strokeWidth={4} fill="none" strokeLinecap="round" />
-    <path d="m188 51 10 7-11 5" stroke={p.coral500} strokeWidth={4} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+    <path
+      d="M132 72c20-16 42-19 63-14"
+      stroke={p.coral500}
+      strokeWidth={4}
+      fill="none"
+      strokeLinecap="round"
+    />
+    <path
+      d="m188 51 10 7-11 5"
+      stroke={p.coral500}
+      strokeWidth={4}
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </g>
 );
 
@@ -565,18 +664,40 @@ const C1ContextChanges: Shape = () => (
     <rect x={8} y={12} width={146} height={176} rx={24} fill={p.cyan50} />
     <rect x={166} y={12} width={146} height={176} rx={24} fill={p.amber50} />
     <circle cx={46} cy={40} r={18} fill={p.white} opacity={0.9} />
-    <path d="M46 18v10M46 52v10M24 40h10M58 40h10" stroke={p.cyan500} strokeWidth={3.5} strokeLinecap="round" />
+    <path
+      d="M46 18v10M46 52v10M24 40h10M58 40h10"
+      stroke={p.cyan500}
+      strokeWidth={3.5}
+      strokeLinecap="round"
+    />
     <CartoonKid x={82} y={76} shirt={p.teal500} />
     {place('item-coat', 99, 88, 60)}
     <circle cx={270} cy={38} r={20} fill={p.amber100} />
-    <path d="M270 9v12M270 55v12M241 38h12M287 38h12" stroke={p.amber500} strokeWidth={3.5} strokeLinecap="round" />
+    <path
+      d="M270 9v12M270 55v12M241 38h12M287 38h12"
+      stroke={p.amber500}
+      strokeWidth={3.5}
+      strokeLinecap="round"
+    />
     <CartoonKid x={238} y={76} shirt={p.coral500} flip />
     {place('item-coat', 178, 92, 56)}
     <path d="M152 38v124" stroke={p.white} strokeWidth={6} strokeLinecap="round" />
     <circle cx={145} cy={110} r={18} fill={p.white} stroke={p.slate200} strokeWidth={2} />
-    <path d="M138 111l6 6 11-15" stroke={p.green700} strokeWidth={3} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+    <path
+      d="M138 111l6 6 11-15"
+      stroke={p.green700}
+      strokeWidth={3}
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
     <circle cx={175} cy={110} r={18} fill={p.white} stroke={p.slate200} strokeWidth={2} />
-    <path d="M167 102l16 16M183 102l-16 16" stroke={p.coral500} strokeWidth={3} strokeLinecap="round" />
+    <path
+      d="M167 102l16 16M183 102l-16 16"
+      stroke={p.coral500}
+      strokeWidth={3}
+      strokeLinecap="round"
+    />
   </g>
 );
 
@@ -589,7 +710,12 @@ const C1ThreeWays: Shape = () => (
     {place('item-bottle', 43, 46, 56)}
     {place('item-stickers', 132, 44, 58)}
     {place('item-sneaker', 219, 44, 60)}
-    <path d="M71 126v32M160 126v32M249 126v32" stroke={p.slate300} strokeWidth={4} strokeLinecap="round" />
+    <path
+      d="M71 126v32M160 126v32M249 126v32"
+      stroke={p.slate300}
+      strokeWidth={4}
+      strokeLinecap="round"
+    />
     <circle cx={71} cy={160} r={10} fill={p.teal500} />
     <circle cx={160} cy={160} r={10} fill={p.coral500} />
     <circle cx={249} cy={160} r={10} fill={p.amber500} />
@@ -605,11 +731,31 @@ const C1GameBike: Shape = () => (
       <circle cx={50} cy={49} r={44} fill={p.white} stroke={p.slate200} strokeWidth={2} />
       <circle cx={32} cy={62} r={14} fill="none" stroke={p.cyan700} strokeWidth={4} />
       <circle cx={68} cy={62} r={14} fill="none" stroke={p.cyan700} strokeWidth={4} />
-      <path d="M32 62 44 38h18l8 24M44 38 56 62M43 45h18" stroke={p.cyan700} strokeWidth={4} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M32 62 44 38h18l8 24M44 38 56 62M43 45h18"
+        stroke={p.cyan700}
+        strokeWidth={4}
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
       <path d="M54 32h11" stroke={p.coral500} strokeWidth={4} strokeLinecap="round" />
     </g>
-    <path d="M129 72c24-18 49-21 70-14" stroke={p.green500} strokeWidth={4} fill="none" strokeLinecap="round" />
-    <path d="m192 52 10 6-10 6" stroke={p.green500} strokeWidth={4} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+    <path
+      d="M129 72c24-18 49-21 70-14"
+      stroke={p.green500}
+      strokeWidth={4}
+      fill="none"
+      strokeLinecap="round"
+    />
+    <path
+      d="m192 52 10 6-10 6"
+      stroke={p.green500}
+      strokeWidth={4}
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </g>
 );
 
@@ -623,7 +769,13 @@ const C1GiftMoney: Shape = ({ labels }) => (
         {labels.gift}
       </text>
     </g>
-    <path d="M138 82c18-10 35-12 50-8" stroke={p.coral500} strokeWidth={4} fill="none" strokeLinecap="round" />
+    <path
+      d="M138 82c18-10 35-12 50-8"
+      stroke={p.coral500}
+      strokeWidth={4}
+      fill="none"
+      strokeLinecap="round"
+    />
   </g>
 );
 
@@ -635,8 +787,21 @@ const C1SavingGoal: Shape = ({ labels }) => (
     {place('item-ball', 230, 78, 62)}
     <PriceTag x={135} y={32} label={labels.saved} color={p.teal500} />
     <PriceTag x={228} y={42} label={labels.goalPrice} color={p.cyan500} />
-    <path d="M187 100c16-10 31-11 45-6" stroke={p.amber700} strokeWidth={4} fill="none" strokeLinecap="round" />
-    <path d="m225 87 10 6-10 6" stroke={p.amber700} strokeWidth={4} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+    <path
+      d="M187 100c16-10 31-11 45-6"
+      stroke={p.amber700}
+      strokeWidth={4}
+      fill="none"
+      strokeLinecap="round"
+    />
+    <path
+      d="m225 87 10 6-10 6"
+      stroke={p.amber700}
+      strokeWidth={4}
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </g>
 );
 
@@ -644,11 +809,33 @@ const C1StickerChoice: Shape = ({ labels }) => (
   <g>
     <rect x={8} y={12} width={304} height={176} rx={26} fill={p.purple50} />
     <CartoonKid x={94} y={78} shirt={p.green500} />
-    <rect x={177} y={34} width={112} height={126} rx={18} fill={p.white} stroke={p.slate200} strokeWidth={2} />
+    <rect
+      x={177}
+      y={34}
+      width={112}
+      height={126}
+      rx={18}
+      fill={p.white}
+      stroke={p.slate200}
+      strokeWidth={2}
+    />
     {place('item-stickers', 196, 52, 78)}
     <PriceTag x={203} y={130} label={labels.temptationPrice} color={p.coral500} />
-    <path d="M127 76c23-17 45-20 67-14" stroke={p.purple500} strokeWidth={4} fill="none" strokeLinecap="round" />
-    <path d="m187 56 10 6-10 6" stroke={p.purple500} strokeWidth={4} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+    <path
+      d="M127 76c23-17 45-20 67-14"
+      stroke={p.purple500}
+      strokeWidth={4}
+      fill="none"
+      strokeLinecap="round"
+    />
+    <path
+      d="m187 56 10 6-10 6"
+      stroke={p.purple500}
+      strokeWidth={4}
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </g>
 );
 
