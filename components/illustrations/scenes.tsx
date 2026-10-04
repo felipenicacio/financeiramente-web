@@ -303,90 +303,142 @@ const C1FinanceActions: Shape = () => (
   </g>
 );
 
+const CartoonKid = ({
+  x,
+  y,
+  shirt,
+  hair = '#5a2f1f',
+  skin = '#f2a06b',
+  flip = false,
+}: {
+  x: number;
+  y: number;
+  shirt: string;
+  hair?: string;
+  skin?: string;
+  flip?: boolean;
+}) => (
+  <g transform={`translate(${x} ${y}) scale(${flip ? -1 : 1} 1)`}>
+    <ellipse cx={0} cy={54} rx={34} ry={7} fill={p.slate200} opacity={0.55} />
+    <path d="M-25 46q25-24 50 0v28h-50Z" fill={shirt} />
+    <path d="M-18 52q-18 8-22 24M18 52q18 8 22 24" stroke={skin} strokeWidth={9} strokeLinecap="round" />
+    <circle cx={0} cy={18} r={26} fill={skin} />
+    <circle cx={-23} cy={20} r={5} fill={skin} />
+    <circle cx={23} cy={20} r={5} fill={skin} />
+    <path
+      d="M-24 13c2-22 47-29 52-4 2 9-2 15-6 19-2-14-8-19-15-22-9 8-20 12-31 12Z"
+      fill={hair}
+    />
+    <circle cx={-9} cy={20} r={3.4} fill={p.navy} />
+    <circle cx={9} cy={20} r={3.4} fill={p.navy} />
+    <circle cx={-8} cy={19} r={1} fill={p.white} />
+    <circle cx={10} cy={19} r={1} fill={p.white} />
+    <path d="M-8 32q8 8 16 0" stroke={p.navy} strokeWidth={2.6} fill="none" strokeLinecap="round" />
+    <circle cx={-18} cy={29} r={4.5} fill={p.coral100} opacity={0.75} />
+    <circle cx={18} cy={29} r={4.5} fill={p.coral100} opacity={0.75} />
+  </g>
+);
+
 const C1BarterStart: Shape = () => (
   <g>
-    <SoftPanel x={22} y={28} width={118} height={138} fill={p.coral50}>
-      {place('item-apple', 49, 48, 64)}
-      <rect x={48} y={121} width={68} height={10} rx={5} fill={p.coral500} opacity={0.5} />
-      <circle cx={82} cy={142} r={7} fill={p.coral500} />
-    </SoftPanel>
-    <SoftPanel x={180} y={28} width={118} height={138} fill={p.amber50}>
-      {place('item-bread', 207, 51, 64)}
-      <rect x={206} y={121} width={68} height={10} rx={5} fill={p.amber500} opacity={0.55} />
-      <circle cx={240} cy={142} r={7} fill={p.amber500} />
-    </SoftPanel>
-    <Arrow x1={132} y1={76} x2={187} y2={76} color={p.teal500} />
-    <Arrow x1={188} y1={120} x2={133} y2={120} color={p.cyan500} />
-    <circle cx={160} cy={99} r={20} fill={p.white} stroke={p.slate200} strokeWidth={2} />
-    <path d="M149 99h22M160 88v22" stroke={p.teal700} strokeWidth={4} strokeLinecap="round" />
+    <defs>
+      <linearGradient id="c1barterSky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor={p.cyan50} />
+        <stop offset="100%" stopColor={p.teal50} />
+      </linearGradient>
+    </defs>
+    <rect x={8} y={12} width={304} height={176} rx={26} fill="url(#c1barterSky)" />
+    <circle cx={270} cy={42} r={20} fill={p.amber100} />
+    <path d="M8 142q48-26 98 0t98 0q50-26 108 2v44H8Z" fill={p.green100} />
+    <path d="M22 132h68l10 38H16Z" fill={p.amber100} />
+    <path d="M236 128h62l10 42h-76Z" fill={p.coral100} />
+    <CartoonKid x={92} y={73} shirt={p.green500} />
+    <CartoonKid x={230} y={73} shirt={p.purple500} flip />
+    {place('item-apple', 116, 90, 44)}
+    {place('item-bread', 164, 90, 48)}
+    <Arrow x1={138} y1={108} x2={180} y2={108} color={p.teal500} />
+    <Arrow x1={182} y1={132} x2={140} y2={132} color={p.cyan500} />
+    <circle cx={160} cy={70} r={16} fill={p.white} stroke={p.slate200} strokeWidth={2} />
+    <path d="M153 70h14M160 63v14" stroke={p.teal700} strokeWidth={3} strokeLinecap="round" />
   </g>
 );
 
 const C1BarterExamples: Shape = () => (
   <g>
-    <SoftPanel x={12} y={20} width={296} height={160} fill={p.cyan50}>
-      {place('item-apple', 36, 52, 64)}
-      {place('item-bread', 220, 52, 64)}
-      <Arrow x1={104} y1={75} x2={214} y2={75} color={p.teal500} />
-      <Arrow x1={214} y1={125} x2={104} y2={125} color={p.cyan500} />
-      <g transform="translate(126 74)">
-        <rect width={68} height={52} rx={16} fill={p.white} stroke={p.slate200} strokeWidth={2} />
-        <path d="M18 26h32" stroke={p.navy} strokeWidth={4} strokeLinecap="round" />
-        <circle cx={18} cy={26} r={5} fill={p.coral500} />
-        <circle cx={50} cy={26} r={5} fill={p.amber500} />
-      </g>
-    </SoftPanel>
+    <rect x={8} y={12} width={304} height={176} rx={26} fill={p.amber50} />
+    <path d="M8 145q55-24 108 0t98 0q50-22 98 0v43H8Z" fill={p.green100} />
+    <CartoonKid x={86} y={72} shirt={p.cyan500} />
+    <CartoonKid x={234} y={72} shirt={p.coral500} flip hair="#3f251f" skin="#9d6848" />
+    {place('item-apple', 116, 95, 46)}
+    {place('item-bread', 160, 95, 50)}
+    <path d="M137 112c16-15 31-15 46 0" stroke={p.teal500} strokeWidth={4} fill="none" strokeLinecap="round" />
+    <path d="M178 105l8 7-9 5" stroke={p.teal500} strokeWidth={4} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M184 132c-16 15-31 15-46 0" stroke={p.cyan700} strokeWidth={4} fill="none" strokeLinecap="round" />
+    <path d="M143 139l-8-7 9-5" stroke={p.cyan700} strokeWidth={4} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+    <g transform="translate(134 29)">
+      <rect width={52} height={36} rx={18} fill={p.white} stroke={p.slate200} strokeWidth={2} />
+      {place('item-fish', 4, -4, 42)}
+    </g>
   </g>
 );
 
 const C1BarterProblem: Shape = () => (
   <g>
-    <SoftPanel x={12} y={20} width={296} height={160} fill={p.purple50}>
-      {place('item-apple', 34, 54, 58)}
-      {place('item-bread', 228, 54, 58)}
-      <path d="M104 82h104" stroke={p.slate300} strokeWidth={5} strokeLinecap="round" strokeDasharray="9 10" />
-      <circle cx={160} cy={82} r={27} fill={p.white} stroke={p.coral500} strokeWidth={3} />
-      <path d="M148 70l24 24M172 70l-24 24" stroke={p.coral500} strokeWidth={6} strokeLinecap="round" />
-      <path d="M87 132c20 17 44 25 73 25s53-8 73-25" stroke={p.purple500} strokeWidth={4} fill="none" strokeLinecap="round" />
-      <circle cx={87} cy={132} r={5} fill={p.purple500} />
-      <circle cx={233} cy={132} r={5} fill={p.purple500} />
-    </SoftPanel>
+    <rect x={8} y={12} width={304} height={176} rx={26} fill={p.purple50} />
+    <path d="M8 146q65-20 122 0t92 0q52-20 90 0v42H8Z" fill={p.amber50} />
+    <CartoonKid x={88} y={74} shirt={p.cyan500} />
+    <CartoonKid x={232} y={74} shirt={p.green500} flip />
+    {place('item-apple', 116, 96, 44)}
+    {place('item-bread', 165, 94, 50)}
+    <circle cx={160} cy={110} r={23} fill={p.white} stroke={p.coral500} strokeWidth={3} />
+    <path d="M149 99l22 22M171 99l-22 22" stroke={p.coral500} strokeWidth={5} strokeLinecap="round" />
+    <g transform="translate(120 26)">
+      <rect width={80} height={34} rx={17} fill={p.white} stroke={p.slate200} strokeWidth={2} />
+      <circle cx={24} cy={17} r={8} fill={p.coral100} />
+      <circle cx={56} cy={17} r={8} fill={p.amber100} />
+      <path d="M34 17h12" stroke={p.navy} strokeWidth={3} strokeLinecap="round" />
+    </g>
   </g>
 );
 
 const C1MoneyFacilitates: Shape = () => (
   <g>
-    <SoftPanel x={12} y={20} width={296} height={160} fill={p.green50}>
-      {place('item-apple', 28, 54, 56)}
-      <Arrow x1={88} y1={81} x2={132} y2={81} color={p.teal500} />
-      {place('item-banknote', 126, 53, 68)}
-      <Arrow x1={190} y1={81} x2={233} y2={81} color={p.teal500} />
-      {place('item-bread', 228, 54, 56)}
-      <rect x={89} y={127} width={142} height={28} rx={14} fill={p.white} stroke={p.green500} strokeWidth={2.5} />
-      <circle cx={112} cy={141} r={6} fill={p.green500} />
-      <circle cx={160} cy={141} r={6} fill={p.green500} />
-      <circle cx={208} cy={141} r={6} fill={p.green500} />
-      <path d="M119 141h34M167 141h34" stroke={p.green500} strokeWidth={3} strokeLinecap="round" />
-    </SoftPanel>
+    <defs>
+      <linearGradient id="c1shopBg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stopColor={p.green50} />
+        <stop offset="100%" stopColor={p.cyan50} />
+      </linearGradient>
+    </defs>
+    <rect x={8} y={12} width={304} height={176} rx={26} fill="url(#c1shopBg)" />
+    <rect x={174} y={54} width={120} height={100} rx={14} fill={p.white} stroke={p.slate200} strokeWidth={2} />
+    <path d="M174 54h120v23H174Z" fill={p.coral500} />
+    <rect x={184} y={92} width={100} height={12} rx={6} fill={p.amber100} />
+    <rect x={184} y={116} width={100} height={12} rx={6} fill={p.teal100} />
+    <CartoonKid x={89} y={76} shirt={p.blue500 ?? p.cyan500} />
+    <CartoonKid x={238} y={77} shirt={p.green500} flip />
+    {place('item-banknote', 118, 94, 54)}
+    {place('item-bread', 178, 96, 52)}
+    <Arrow x1={144} y1={111} x2={180} y2={111} color={p.green500} />
+    <circle cx={160} cy={48} r={20} fill={p.white} stroke={p.green500} strokeWidth={3} />
+    <path d="M150 48l7 7 14-17" stroke={p.green700} strokeWidth={4} fill="none" strokeLinecap="round" strokeLinejoin="round" />
   </g>
 );
 
 const C1GoodsServices: Shape = () => (
   <g>
-    <SoftPanel x={12} y={20} width={140} height={160} fill={p.teal50}>
-      {place('item-bread', 32, 48, 58)}
-      {place('item-book', 88, 50, 54)}
-      <rect x={34} y={127} width={96} height={24} rx={12} fill={p.white} stroke={p.teal500} strokeWidth={2} />
-      <path d="M52 139h60" stroke={p.teal500} strokeWidth={4} strokeLinecap="round" />
-    </SoftPanel>
-    <SoftPanel x={168} y={20} width={140} height={160} fill={p.cyan50}>
-      {place('item-chair', 187, 46, 62)}
-      {place('item-robot', 240, 52, 54)}
-      <path d="M220 128l15-15M226 113l10 10" stroke={p.cyan700} strokeWidth={5} strokeLinecap="round" />
-      <rect x={188} y={146} width={100} height={12} rx={6} fill={p.cyan500} opacity={0.35} />
-    </SoftPanel>
-    <circle cx={160} cy={100} r={23} fill={p.white} stroke={p.slate200} strokeWidth={2} />
-    <circle cx={160} cy={100} r={15} fill={p.amber500} stroke={p.amber700} strokeWidth={2.5} />
+    <rect x={8} y={12} width={304} height={176} rx={26} fill={p.amber50} />
+    <rect x={18} y={24} width={136} height={152} rx={22} fill={p.teal50} />
+    <rect x={166} y={24} width={136} height={152} rx={22} fill={p.cyan50} />
+    <CartoonKid x={76} y={72} shirt={p.green500} />
+    <CartoonKid x={244} y={72} shirt={p.cyan700} flip />
+    {place('item-bread', 34, 108, 42)}
+    {place('item-book', 90, 108, 42)}
+    {place('item-toy-repair', 196, 100, 56)}
+    <g transform="translate(139 79)">
+      <circle cx={21} cy={21} r={21} fill={p.white} stroke={p.slate200} strokeWidth={2} />
+      <circle cx={21} cy={21} r={13} fill={p.amber500} stroke={p.amber700} strokeWidth={2.5} />
+    </g>
+    <path d="M184 138h88" stroke={p.cyan500} strokeWidth={6} strokeLinecap="round" opacity={0.35} />
   </g>
 );
 
