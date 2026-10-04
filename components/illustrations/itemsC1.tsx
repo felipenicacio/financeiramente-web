@@ -193,6 +193,63 @@ const FinanceBasics: Shape = () => (
   </g>
 );
 
+const CoinModern: Shape = () => (
+  <g>
+    <ellipse cx={60} cy={92} rx={36} ry={9} fill={p.amber100} />
+    <circle cx={60} cy={58} r={39} fill={p.amber700} opacity={0.28} />
+    <circle cx={60} cy={54} r={39} fill={p.amber500} stroke={p.amber700} strokeWidth={3} />
+    <circle cx={60} cy={54} r={29} fill={p.amber100} opacity={0.38} />
+    <circle cx={60} cy={54} r={23} fill="none" stroke={p.amber700} strokeWidth={3} />
+    <path d="M46 53h28M60 39v30" stroke={p.amber700} strokeWidth={4} strokeLinecap="round" />
+    <ellipse cx={46} cy={37} rx={8} ry={4} fill={p.white} opacity={0.55} transform="rotate(-28 46 37)" />
+  </g>
+);
+
+const BanknoteModern: Shape = () => (
+  <g transform="rotate(-6 60 60)">
+    <rect x={10} y={34} width={100} height={58} rx={10} fill={p.green700} opacity={0.18} />
+    <rect x={10} y={29} width={100} height={58} rx={10} fill={p.green100} stroke={p.green700} strokeWidth={3} />
+    <rect x={18} y={37} width={84} height={42} rx={7} fill={p.white} opacity={0.42} />
+    <circle cx={60} cy={58} r={15} fill={p.green500} />
+    <circle cx={60} cy={58} r={9} fill="none" stroke={p.green700} strokeWidth={2.5} />
+    <path d="M25 45h16M79 71h16" stroke={p.green700} strokeWidth={4} strokeLinecap="round" />
+    <ellipse cx={34} cy={41} rx={7} ry={3} fill={p.white} opacity={0.65} />
+  </g>
+);
+
+const CoinsModern: Shape = () => (
+  <g>
+    <ellipse cx={60} cy={100} rx={43} ry={8} fill={p.amber100} />
+    {[84, 72, 60].map((y, index) => (
+      <g key={y}>
+        <ellipse cx={44} cy={y + 5} rx={25} ry={8} fill={p.amber700} opacity={0.36} />
+        <ellipse cx={44} cy={y} rx={25} ry={8} fill={p.amber500} stroke={p.amber700} strokeWidth={2} />
+        {index === 0 ? <ellipse cx={37} cy={y - 2} rx={8} ry={2.5} fill={p.white} opacity={0.5} /> : null}
+      </g>
+    ))}
+    <circle cx={82} cy={48} r={24} fill={p.amber500} stroke={p.amber700} strokeWidth={3} />
+    <circle cx={82} cy={48} r={15} fill="none" stroke={p.amber700} strokeWidth={2.5} />
+    <ellipse cx={73} cy={38} rx={7} ry={3} fill={p.white} opacity={0.55} transform="rotate(-25 73 38)" />
+  </g>
+);
+
+const ToyRepair: Shape = () => (
+  <g>
+    <rect x={24} y={42} width={52} height={42} rx={12} fill={p.purple500} />
+    <circle cx={40} cy={59} r={6} fill={p.white} />
+    <circle cx={60} cy={59} r={6} fill={p.white} />
+    <rect x={36} y={72} width={28} height={18} rx={7} fill={p.purple100} />
+    <path d="M50 42V30" stroke={p.purple700} strokeWidth={4} strokeLinecap="round" />
+    <circle cx={50} cy={27} r={5} fill={p.coral500} />
+    <g transform="translate(66 50) rotate(-35)">
+      <rect x={0} y={0} width={12} height={48} rx={6} fill={p.cyan700} />
+      <path d="M-3 0h18l-3 14H0Z" fill={p.cyan500} />
+      <circle cx={6} cy={41} r={3} fill={p.white} />
+    </g>
+    <path d="M22 96h76" stroke={p.slate200} strokeWidth={6} strokeLinecap="round" />
+  </g>
+);
+
 const PriceTag: Shape = () => (
   <g transform="rotate(-15 60 60)">
     <path
@@ -648,8 +705,11 @@ const Bus: Shape = () => (
 
 export const itemShapesC1 = {
   'item-coin': Coin,
+  'item-coin-modern': CoinModern,
   'item-banknote': Banknote,
+  'item-banknote-modern': BanknoteModern,
   'item-coins': Coins,
+  'item-coins-modern': CoinsModern,
   'item-finance-basics': FinanceBasics,
   'item-pricetag': PriceTag,
   'item-kite': Kite,
@@ -680,6 +740,7 @@ export const itemShapesC1 = {
   'item-paints': Paints,
   'item-boardgame': BoardGame,
   'item-bus': Bus,
+  'item-toy-repair': ToyRepair,
 } satisfies Record<string, Shape>;
 
 export { star };
