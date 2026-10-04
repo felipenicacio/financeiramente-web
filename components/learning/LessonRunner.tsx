@@ -8,6 +8,8 @@ import { EconominhoGuide } from '@/components/econominho/EconominhoGuide';
 import type { Lesson, LessonObject } from '@/lib/content/types';
 import { t } from '@/lib/content/ui';
 
+import { seededRandom, shuffle } from '@/lib/learning';
+
 import { LessonShell, ScreenTitle } from './LessonShell';
 import {
   AffordView,
@@ -60,9 +62,20 @@ function QuizScreen({
 } & Done) {
   const [answer, setAnswer] = useState<string | null>(null);
   const question = object.questions[index]!;
+  // Ordem embaralhada de apresentação: a correção continua resolvida pelo
+  // `id` da alternativa, nunca pela posição. Semeada pelo `id` da pergunta
+  // (estável entre o HTML do build estático e a hidratação no cliente, o
+  // que evita erro de hidratação do React) e memoizada para ficar estável
+  // enquanto a tela estiver na tela (não reembaralha a cada render nem
+  // depois de responder); a próxima pergunta, remontada por `key` em
+  // screensForObject, recebe seu próprio embaralhamento.
+  const shuffledOptions = useMemo(
+    () => shuffle(question.options, seededRandom(question.id)),
+    [question],
+  );
   return (
     <QuizQuestion
-      question={question}
+      question={{ ...question, options: shuffledOptions }}
       counter={t('quizCounter', { current: index + 1, total })}
       answer={answer}
       onAnswer={(optionId) => {

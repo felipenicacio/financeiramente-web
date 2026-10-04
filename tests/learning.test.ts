@@ -19,6 +19,8 @@ import {
   formatMoney,
   goalProgress,
   isInteractive,
+  seededRandom,
+  shuffle,
   storyValues,
   templateTokens,
 } from '@/lib/learning';
@@ -153,6 +155,96 @@ describe('classificação e quiz', () => {
     expect(isInteractive({ type: 'explanation', body: '.' })).toBe(false);
     expect(isInteractive({ type: 'reflection', state: 'ask', text: '.' })).toBe(false);
     expect(isInteractive({ type: 'choice', prompt: '?', options: [] })).toBe(true);
+  });
+});
+
+describe('shuffle: embaralhamento puro e testável (Fisher-Yates)', () => {
+  const items = ['A', 'B', 'C', 'D'] as const;
+
+  it('não muta o array original', () => {
+    const original = [...items];
+    shuffle(items);
+    expect(items).toEqual(original);
+  });
+
+  it('mantém todos os elementos, sem duplicar nem remover', () => {
+    const result = shuffle(items, () => 0.37);
+    expect(result).toHaveLength(items.length);
+    expect([...result].sort()).toEqual([...items].sort());
+  });
+
+  it('com RNG controlado em 0, produz a permutação esperada (determinístico)', () => {
+    // Fisher-Yates com randomFn() => 0: j = 0 em cada passo.
+    // i=3 troca(3,0); i=2 troca(2,0); i=1 troca(1,0) — resultado conhecido.
+    expect(shuffle(items, () => 0)).toEqual(['B', 'C', 'D', 'A']);
+  });
+
+  it('com RNG controlado no limite superior, nunca estoura o índice (j <= i)', () => {
+    // randomFn bem próximo de 1: floor(rand*(i+1)) deve ficar em j === i,
+    // ou seja, nenhuma troca ocorre e a ordem original é preservada.
+    expect(shuffle(items, () => 0.999999)).toEqual([...items]);
+  });
+
+  it('pode alterar a ordem com o RNG de produção (Math.random)', () => {
+    // Não testamos "rode uma vez e espere ordem diferente" (frágil).
+    // Em vez disso, verificamos que o algoritmo é capaz de produzir uma
+    // ordem diferente da original em várias tentativas independentes.
+    const bigArray = Array.from({ length: 30 }, (_, i) => i);
+    const anyDifferent = Array.from({ length: 10 }).some(
+      () => !shuffle(bigArray).every((v, i) => v === bigArray[i]),
+    );
+    expect(anyDifferent).toBe(true);
+  });
+
+  it('IDs permanecem associados aos seus dados ao embaralhar objetos', () => {
+    const options = [
+      { id: 'a', label: 'Primeira' },
+      { id: 'b', label: 'Segunda' },
+      { id: 'c', label: 'Terceira' },
+    ];
+    const result = shuffle(options, () => 0.5);
+    for (const option of result) {
+      const original = options.find((o) => o.id === option.id)!;
+      expect(option.label).toBe(original.label);
+    }
+    expect(result).toHaveLength(options.length);
+  });
+});
+
+describe('seededRandom: aleatoriedade determinística por semente', () => {
+  it('a mesma semente produz sempre a mesma sequência', () => {
+    const seq = (seed: string) => {
+      const rnd = seededRandom(seed);
+      return [rnd(), rnd(), rnd()];
+    };
+    expect(seq('c1-m01-l01-q1')).toEqual(seq('c1-m01-l01-q1'));
+  });
+
+  it('sementes diferentes tendem a produzir sequências diferentes', () => {
+    const rndA = seededRandom('pergunta-a');
+    const rndB = seededRandom('pergunta-b');
+    expect(rndA()).not.toBe(rndB());
+  });
+
+  it('sempre produz números no intervalo [0, 1)', () => {
+    const rnd = seededRandom('qualquer-coisa');
+    for (let i = 0; i < 50; i += 1) {
+      const value = rnd();
+      expect(value).toBeGreaterThanOrEqual(0);
+      expect(value).toBeLessThan(1);
+    }
+  });
+
+  it('usado com shuffle, garante a mesma ordem de apresentação entre chamadas (estável para build e hidratação)', () => {
+    const options = [
+      { id: 'a', label: 'A' },
+      { id: 'b', label: 'B' },
+      { id: 'c', label: 'C' },
+      { id: 'd', label: 'D' },
+    ];
+    const first = shuffle(options, seededRandom('c1-m01-l01-q1'));
+    const second = shuffle(options, seededRandom('c1-m01-l01-q1'));
+    expect(first.map((o) => o.id)).toEqual(second.map((o) => o.id));
   });
 });
 

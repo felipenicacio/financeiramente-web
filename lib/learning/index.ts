@@ -11,6 +11,8 @@ import type {
 
 import { resolveValues } from './expr';
 
+export { seededRandom, shuffle, type RandomFn } from './shuffle';
+
 // ---------- dinheiro e templates ----------
 
 /** Formata reais sem centavos, igual no build, nos testes e no navegador. */
