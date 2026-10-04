@@ -6,7 +6,7 @@ import { econominhoAssets, themePoses } from '@/components/econominho/assets';
 import { moduleThemes } from '@/lib/content/types';
 import ui from '@/content/ui.json';
 import { competencyCodes, sourceCodes } from '@/lib/validation/contentSchemas';
-import type { Lesson } from '@/lib/content/types';
+import type { Lesson, LessonObject, Module } from '@/lib/content/types';
 import competencyCatalog from '@/content/competencies.json';
 import { competencyDescription } from '@/lib/content/competencies';
 
@@ -471,5 +471,153 @@ describe('sem nota, ranking, certificado ou gamificação', () => {
       .filter((f) => /\b(locked|isLocked|unlockModule|requiresCompletion)\b/.test(f.text))
       .map((f) => f.path);
     expect(bloqueios).toEqual([]);
+  });
+});
+
+// ---------- revisão editorial: coerência acerto/erro (Frente 2) ----------
+
+/**
+ * Objetos interativos cujo `explanation`/`feedback` é um texto ÚNICO,
+ * mostrado tanto para quem respondeu certo quanto para quem respondeu
+ * errado — o sinal de certo/errado vem só do título (great/thinkAgain).
+ * Escrever esse texto já assumindo o acerto ("Isso mesmo: ...") produz uma
+ * contradição no caminho de erro (ver docs/editorial-guidelines.md).
+ * `choice` fica de fora de propósito: toda opção é válida, não há
+ * certo/errado a sinalizar.
+ */
+const PALAVRAS_DE_ACERTO =
+  /\b(isso mesmo|muito bem|perfeito|correto|boa escolha|exatamente|exato|parab[ée]ns)\b/i;
+
+function allModuleBundles(): {
+  cycle: string;
+  moduleId: string;
+  module: Module;
+  lessons: Lesson[];
+}[] {
+  return availableModules().flatMap(({ cycle, moduleId }) => {
+    const bundle = loadModuleBundle(cycle, moduleId);
+    if (!bundle.ok) return [];
+    return [{ cycle, moduleId, ...bundle.data }];
+  });
+}
+
+/** Todo objeto de conteúdo do currículo: lições (C1–C4) + avaliação integradora de cada fechamento. */
+function allContentObjects(): LessonObject[] {
+  const bundles = allModuleBundles();
+  const fromLessons = bundles.flatMap(({ lessons }) => lessons.flatMap((lesson) => lesson.content));
+  const fromClosings = bundles.map(({ module }) => module.integrative.object);
+  return [...fromLessons, ...fromClosings];
+}
+
+describe('revisão editorial: coerência acerto/erro', () => {
+  it('"thinkAgain" sinaliza erro com clareza, nunca com linguagem vaga ou de acerto', () => {
+    const texto = ui.thinkAgain;
+    expect(PALAVRAS_DE_ACERTO.test(texto)).toBe(false);
+    expect(/n[ãa]o\b/i.test(texto)).toBe(true);
+  });
+
+  it('"great" sinaliza acerto, nunca é usado como prefixo de erro', () => {
+    expect(PALAVRAS_DE_ACERTO.test(ui.great)).toBe(true);
+  });
+
+  it('trueFalse: nenhum `explanation` (certo ou errado) embute palavra de acerto', () => {
+    const ofensores: string[] = [];
+    for (const obj of allContentObjects()) {
+      if (obj.type !== 'trueFalse') continue;
+      for (const s of obj.statements) {
+        if (PALAVRAS_DE_ACERTO.test(s.explanation)) {
+          ofensores.push(`${s.id}: ${s.explanation}`);
+        }
+      }
+    }
+    expect(ofensores).toEqual([]);
+  });
+
+  it('classify: nenhum `feedback` de item embute palavra de acerto', () => {
+    const ofensores: string[] = [];
+    for (const obj of allContentObjects()) {
+      if (obj.type !== 'classify') continue;
+      for (const item of obj.items) {
+        if (PALAVRAS_DE_ACERTO.test(item.feedback)) {
+          ofensores.push(`${item.id}: ${item.feedback}`);
+        }
+      }
+    }
+    expect(ofensores).toEqual([]);
+  });
+
+  it('compare, afford, change e ordering: `feedback` do objeto não embute palavra de acerto', () => {
+    const ofensores: string[] = [];
+    for (const obj of allContentObjects()) {
+      if (
+        obj.type !== 'compare' &&
+        obj.type !== 'afford' &&
+        obj.type !== 'change' &&
+        obj.type !== 'ordering'
+      ) {
+        continue;
+      }
+      if (PALAVRAS_DE_ACERTO.test(obj.feedback)) {
+        ofensores.push(`${obj.type}: ${obj.feedback}`);
+      }
+    }
+    expect(ofensores).toEqual([]);
+  });
+
+  it('quiz: `explanation` da pergunta (mostrado em toda resposta) não embute palavra de acerto', () => {
+    const ofensores: string[] = [];
+    for (const obj of allContentObjects()) {
+      if (obj.type !== 'quiz') continue;
+      for (const q of obj.questions) {
+        if (PALAVRAS_DE_ACERTO.test(q.explanation)) {
+          ofensores.push(`${q.id}: ${q.explanation}`);
+        }
+      }
+    }
+    expect(ofensores).toEqual([]);
+  });
+
+  it('quiz: `feedback` de uma alternativa ERRADA não embute palavra de acerto', () => {
+    const ofensores: string[] = [];
+    for (const obj of allContentObjects()) {
+      if (obj.type !== 'quiz') continue;
+      for (const q of obj.questions) {
+        const correctId = q.answer.type === 'single' ? q.answer.correctOptionId : null;
+        for (const opt of q.options) {
+          if (opt.id === correctId) continue;
+          if (opt.feedback && PALAVRAS_DE_ACERTO.test(opt.feedback)) {
+            ofensores.push(`${q.id}.${opt.id}: ${opt.feedback}`);
+          }
+        }
+      }
+    }
+    expect(ofensores).toEqual([]);
+  });
+
+  // Contagens estruturais da auditoria (Frente 1 e Frente 2) — qualquer
+  // queda indica conteúdo removido por engano; qualquer alta inesperada
+  // pede nova auditoria de coerência.
+  it('mantém as contagens auditadas de atividades objetivas', () => {
+    const count: Record<string, number> = {};
+    const add = (k: string) => (count[k] = (count[k] ?? 0) + 1);
+    let quizQuestions = 0;
+    let trueFalseStatements = 0;
+    let classifyItems = 0;
+    for (const obj of allContentObjects()) {
+      add(obj.type);
+      if (obj.type === 'quiz') quizQuestions += obj.questions.length;
+      if (obj.type === 'trueFalse') trueFalseStatements += obj.statements.length;
+      if (obj.type === 'classify') classifyItems += obj.items.length;
+    }
+    expect(count.quiz).toBe(56);
+    expect(quizQuestions).toBe(175);
+    expect(count.trueFalse).toBe(55);
+    expect(trueFalseStatements).toBe(165);
+    expect(count.classify).toBe(32);
+    expect(classifyItems).toBe(109);
+    expect(count.compare).toBe(9);
+    expect(count.afford).toBe(2);
+    expect(count.change).toBe(2);
+    expect(count.ordering).toBe(11);
   });
 });

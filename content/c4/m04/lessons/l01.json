@@ -63,13 +63,13 @@
           "id": "s1",
           "text": "Diferentes modalidades de crédito têm regras próprias de prazo e garantia.",
           "isTrue": true,
-          "explanation": "Isso mesmo: cada modalidade organiza isso de um jeito diferente."
+          "explanation": "Cada modalidade organiza isso de um jeito diferente."
         },
         {
           "id": "s2",
           "text": "Um financiamento costuma ter o bem comprado como garantia.",
           "isTrue": true,
-          "explanation": "Exato: o próprio bem financiado costuma servir de garantia."
+          "explanation": "O próprio bem financiado costuma servir de garantia."
         },
         {
           "id": "s3",

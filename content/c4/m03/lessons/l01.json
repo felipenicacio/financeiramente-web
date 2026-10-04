@@ -63,7 +63,7 @@
           "id": "s1",
           "text": "Planejamento de vida financeiro envolve metas de longo prazo.",
           "isTrue": true,
-          "explanation": "Isso mesmo: ele olha além das decisões do dia a dia."
+          "explanation": "Ele olha além das decisões do dia a dia."
         },
         {
           "id": "s2",
@@ -75,7 +75,7 @@
           "id": "s3",
           "text": "Planejar os recursos necessários faz parte do planejamento de vida.",
           "isTrue": true,
-          "explanation": "Exato: a meta e os recursos para alcançá-la caminham juntos."
+          "explanation": "A meta e os recursos para alcançá-la caminham juntos."
         }
       ]
     }

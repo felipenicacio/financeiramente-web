@@ -59,13 +59,13 @@
           "id": "s1",
           "text": "Um viés de consumo afasta a decisão de uma análise puramente racional.",
           "isTrue": true,
-          "explanation": "Isso mesmo: é uma tendência que influencia a decisão além do preço e da necessidade."
+          "explanation": "É uma tendência que influencia a decisão além do preço e da necessidade."
         },
         {
           "id": "s2",
           "text": "Ancoragem é comparar um preço com o primeiro valor visto.",
           "isTrue": true,
-          "explanation": "Exato: o primeiro valor visto costuma servir de referência, mesmo sem ser o mais relevante."
+          "explanation": "O primeiro valor visto costuma servir de referência, mesmo sem ser o mais relevante."
         },
         {
           "id": "s3",

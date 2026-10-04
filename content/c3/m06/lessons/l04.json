@@ -80,7 +80,7 @@
           "id": "s1",
           "text": "Retorno maior costuma vir acompanhado de risco maior.",
           "isTrue": true,
-          "explanation": "Isso mesmo: é uma relação comum em decisões financeiras."
+          "explanation": "É uma relação comum em decisões financeiras."
         },
         {
           "id": "s2",
@@ -92,7 +92,7 @@
           "id": "s3",
           "text": "Entender essa relação ajuda a avaliar melhor uma oferta de investimento.",
           "isTrue": true,
-          "explanation": "Exato: conhecer a relação entre risco e retorno apoia decisões mais conscientes."
+          "explanation": "Conhecer a relação entre risco e retorno apoia decisões mais conscientes."
         }
       ]
     }

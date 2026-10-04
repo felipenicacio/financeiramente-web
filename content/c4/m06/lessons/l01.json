@@ -63,7 +63,7 @@
           "id": "s1",
           "text": "Emprego, inflação e crédito afetam as condições econômicas de uma família.",
           "isTrue": true,
-          "explanation": "Isso mesmo: são fatores de contexto que vão além de decisões pessoais."
+          "explanation": "São fatores de contexto que vão além de decisões pessoais."
         },
         {
           "id": "s2",
@@ -75,7 +75,7 @@
           "id": "s3",
           "text": "A inflação pode reduzir o poder de compra da renda de uma família.",
           "isTrue": true,
-          "explanation": "Exato: com preços mais altos, a mesma renda compra menos."
+          "explanation": "Com preços mais altos, a mesma renda compra menos."
         }
       ]
     }

@@ -55,7 +55,7 @@
           "id": "s1",
           "text": "Quando a demanda sobe e a oferta não muda, o preço tende a subir.",
           "isTrue": true,
-          "explanation": "Isso mesmo: mais procura pela mesma quantidade costuma elevar o preço."
+          "explanation": "Mais procura pela mesma quantidade costuma elevar o preço."
         },
         {
           "id": "s2",
@@ -67,7 +67,7 @@
           "id": "s3",
           "text": "Quando um produto fica abundante, o preço tende a cair.",
           "isTrue": true,
-          "explanation": "Exato: mais oferta disponível costuma reduzir o preço."
+          "explanation": "Mais oferta disponível costuma reduzir o preço."
         }
       ]
     }

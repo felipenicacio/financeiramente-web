@@ -100,7 +100,7 @@
           "id": "s1",
           "text": "Mesada e salário são exemplos de receita.",
           "isTrue": true,
-          "explanation": "Isso mesmo: ambos são valores que entram regularmente."
+          "explanation": "Ambos são valores que entram regularmente."
         },
         {
           "id": "s2",
@@ -112,7 +112,7 @@
           "id": "s3",
           "text": "Um trabalho extra pago no fim de semana também conta como receita.",
           "isTrue": true,
-          "explanation": "Isso mesmo: qualquer valor recebido por um trabalho é receita."
+          "explanation": "Qualquer valor recebido por um trabalho é receita."
         }
       ]
     }

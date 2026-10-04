@@ -40,7 +40,7 @@
           "id": "s1",
           "text": "Usar crédito novo repetidamente só para pagar dívidas antigas é um sinal de alerta.",
           "isTrue": true,
-          "explanation": "Isso mesmo: esse padrão costuma indicar uma dívida crescente."
+          "explanation": "Esse padrão costuma indicar uma dívida crescente."
         },
         {
           "id": "s2",
@@ -52,7 +52,7 @@
           "id": "s3",
           "text": "Buscar orientação diante de sinais de endividamento é um passo válido.",
           "isTrue": true,
-          "explanation": "Exato: conversar com alguém de confiança ajuda a lidar com a situação."
+          "explanation": "Conversar com alguém de confiança ajuda a lidar com a situação."
         }
       ]
     }

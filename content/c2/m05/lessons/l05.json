@@ -54,7 +54,7 @@
         {
           "id": "a",
           "label": "Se vai dar para pagar todas as parcelas até o fim",
-          "reflection": "Isso mesmo: o compromisso só termina com a última parcela paga."
+          "reflection": "O compromisso só termina com a última parcela paga."
         },
         {
           "id": "b",

@@ -101,7 +101,7 @@
           "id": "s1",
           "text": "Cartão e pix movem dinheiro de uma conta, não da carteira.",
           "isTrue": true,
-          "explanation": "Isso mesmo: o dinheiro sai de uma conta bancária, mesmo sem aparecer em papel."
+          "explanation": "O dinheiro sai de uma conta bancária, mesmo sem aparecer em papel."
         },
         {
           "id": "s2",
@@ -113,7 +113,7 @@
           "id": "s3",
           "text": "O carnê divide um valor em partes pagas aos poucos.",
           "isTrue": true,
-          "explanation": "Exatamente: o carnê organiza um pagamento em parcelas combinadas."
+          "explanation": "O carnê organiza um pagamento em parcelas combinadas."
         }
       ]
     }

@@ -55,7 +55,7 @@
           "id": "s1",
           "text": "Salário líquido é o valor que efetivamente chega à conta.",
           "isTrue": true,
-          "explanation": "Isso mesmo: é o valor após os descontos obrigatórios."
+          "explanation": "É o valor após os descontos obrigatórios."
         },
         {
           "id": "s2",
@@ -67,7 +67,7 @@
           "id": "s3",
           "text": "Os descontos entre o salário bruto e líquido incluem tributos e contribuições obrigatórias.",
           "isTrue": true,
-          "explanation": "Exato: esses descontos compõem a diferença entre os dois valores."
+          "explanation": "Esses descontos compõem a diferença entre os dois valores."
         }
       ]
     }

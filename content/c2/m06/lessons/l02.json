@@ -59,7 +59,7 @@
           "label": "Consertar um vazamento que apareceu de repente",
           "situation": "Ninguém esperava esse gasto este mês.",
           "accepted": ["unexpected"],
-          "feedback": "Um gasto que surge sem aviso é exatamente o que a reserva de imprevistos cobre.",
+          "feedback": "Um gasto que surge sem aviso é o que a reserva de imprevistos cobre.",
           "illustration": "item-bench"
         },
         {

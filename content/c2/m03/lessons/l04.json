@@ -60,13 +60,13 @@
           "id": "s2",
           "text": "Embalagens de tamanhos diferentes podem exigir uma conta extra para comparar o preço.",
           "isTrue": true,
-          "explanation": "Isso mesmo: comparar o preço por unidade ajuda a ver qual é realmente mais barato."
+          "explanation": "Comparar o preço por unidade ajuda a ver qual é realmente mais barato."
         },
         {
           "id": "s3",
           "text": "Comparar o preço por unidade ajuda a ver qual embalagem é mais barata de verdade.",
           "isTrue": true,
-          "explanation": "Isso mesmo: essa conta revela o preço real de cada opção."
+          "explanation": "Essa conta revela o preço real de cada opção."
         }
       ]
     }

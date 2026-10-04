@@ -7,7 +7,7 @@ Fonte única: `styles/globals.css` (tokens CSS usados pelo Tailwind) e `theme/to
 - **Uma tarefa por tela.** Título curto, uma decisão, ação principal no rodapé.
 - **Clareza antes de densidade.** Muito espaço em branco, poucos elementos simultâneos.
 - **Cor com função.** Hierarquia, categoria, feedback e progresso. Nunca decorativa, nunca sozinha.
-- **Sem julgamento.** Nenhum vermelho de "erro" nas lições; resposta inesperada usa o tom de conversa (ciano, "Vamos pensar juntos").
+- **Sem julgamento, mas sem ambiguidade.** Nenhum vermelho de "erro" nas lições; resposta errada em atividade objetiva usa ciano, não vermelho — mas o texto ainda precisa dizer com clareza que a resposta está errada ("Essa não é a resposta certa."), nunca com linguagem que soe como acerto.
 - **Mesma marca da infância à adolescência.** O botão principal é navy, não colorido: funciona igual para 6 e para 17 anos.
 
 ## Cores
@@ -34,7 +34,7 @@ Classes `.tone-*` definem `--tone`, `--tone-strong`, `--tone-soft`, `--tone-tint
 | Classe          | Uso                                                 | Base  |
 | --------------- | --------------------------------------------------- | ----- |
 | `tone-positive` | Resposta esperada, "também combina", "combina mais" | Green |
-| `tone-guide`    | "Vamos pensar juntos", "Depois"                     | Cyan  |
+| `tone-guide`    | "Essa não é a resposta certa.", "Depois"            | Cyan  |
 | `tone-neutral`  | Perguntas abertas, reflexão                         | Slate |
 
 Todo tom vem acompanhado de **ícone próprio** (`ConceptIcon`: casa, coração, ampulheta, moeda, etiqueta, troco, escudo, megafone, lupa, brilho, maleta, caixa, mãos, carteira, pote, calendário, caminho) e de rótulo: a cor nunca é a única pista.

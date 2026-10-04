@@ -40,7 +40,7 @@
           "id": "s1",
           "text": "Decisões de vida também envolvem custo de oportunidade.",
           "isTrue": true,
-          "explanation": "Isso mesmo: escolher um caminho sempre deixa outro de lado."
+          "explanation": "Escolher um caminho sempre deixa outro de lado."
         },
         {
           "id": "s2",
@@ -52,7 +52,7 @@
           "id": "s3",
           "text": "Reconhecer o custo de oportunidade ajuda a decidir de olhos abertos.",
           "isTrue": true,
-          "explanation": "Exato: conhecer o que fica de lado apoia uma escolha mais consciente."
+          "explanation": "Conhecer o que fica de lado apoia uma escolha mais consciente."
         }
       ]
     }

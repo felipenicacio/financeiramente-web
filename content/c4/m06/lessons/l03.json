@@ -40,7 +40,7 @@
           "id": "s1",
           "text": "Liquidez é a facilidade de transformar um ativo em dinheiro disponível.",
           "isTrue": true,
-          "explanation": "Isso mesmo: é sobre a rapidez de resgate, não sobre o retorno."
+          "explanation": "É sobre a rapidez de resgate, não sobre o retorno."
         },
         {
           "id": "s2",
@@ -52,7 +52,7 @@
           "id": "s3",
           "text": "Opções de alta liquidez costumam poder ser resgatadas rapidamente.",
           "isTrue": true,
-          "explanation": "Exato: essa é justamente a característica de uma liquidez mais alta."
+          "explanation": "Essa é justamente a característica de uma liquidez mais alta."
         }
       ]
     }

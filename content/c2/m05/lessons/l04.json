@@ -51,7 +51,7 @@
           "id": "s1",
           "text": "Pagar à vista significa quitar o valor todo de uma vez.",
           "isTrue": true,
-          "explanation": "Isso mesmo: não sobra nenhuma parte para pagar depois."
+          "explanation": "Não sobra nenhuma parte para pagar depois."
         },
         {
           "id": "s2",
@@ -63,7 +63,7 @@
           "id": "s3",
           "text": "Pagar à vista pode ser feito em dinheiro, pix ou cartão de débito.",
           "isTrue": true,
-          "explanation": "Isso mesmo: o importante é o valor sair todo de uma vez."
+          "explanation": "O importante é o valor sair todo de uma vez."
         }
       ]
     }

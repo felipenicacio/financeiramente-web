@@ -40,7 +40,7 @@
           "id": "s1",
           "text": "Combinar o valor antes de começar o trabalho ajuda a evitar mal-entendidos.",
           "isTrue": true,
-          "explanation": "Isso mesmo: deixar claro o combinado protege as duas partes."
+          "explanation": "Deixar claro o combinado protege as duas partes."
         },
         {
           "id": "s2",
@@ -52,7 +52,7 @@
           "id": "s3",
           "text": "A forma de pagamento também vale a pena combinar com antecedência.",
           "isTrue": true,
-          "explanation": "Exato: saber como e quando o valor será pago evita surpresas."
+          "explanation": "Saber como e quando o valor será pago evita surpresas."
         }
       ]
     }

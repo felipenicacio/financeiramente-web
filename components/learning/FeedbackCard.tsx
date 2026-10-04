@@ -14,9 +14,14 @@ type Props = {
 };
 
 /**
- * Retorno imediato depois de uma escolha. Nunca diz "errado": quando a
- * resposta não é a esperada, o tom é de conversa ("Vamos pensar juntos").
- * role="status" faz o leitor de tela anunciar o retorno.
+ * Retorno imediato depois de uma escolha. Em atividades objetivas (quiz,
+ * trueFalse, classify, compare, afford, change, ordering) o título sempre
+ * diz com clareza se a resposta está certa ou errada — sem usar "errado"
+ * de um jeito humilhante, mas também sem disfarçar o erro com um tom
+ * acolhedor demais, o que geraria contradição com o `body` (ver
+ * docs/editorial-guidelines.md). Em escolhas reflexivas (`choice`), onde
+ * toda opção é válida, o tom é sempre neutro (`anyAnswer`), nunca de
+ * certo/errado. role="status" faz o leitor de tela anunciar o retorno.
  */
 export function FeedbackCard({ tone, title, body, note, facts }: Props) {
   const ref = useRef<HTMLDivElement>(null);

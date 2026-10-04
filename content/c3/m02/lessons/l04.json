@@ -54,7 +54,7 @@
           "id": "s1",
           "text": "Anotar preços em épocas diferentes ajuda a perceber mudanças reais.",
           "isTrue": true,
-          "explanation": "Isso mesmo: o registro ao longo do tempo revela padrões."
+          "explanation": "O registro ao longo do tempo revela padrões."
         },
         {
           "id": "s2",
@@ -66,7 +66,7 @@
           "id": "s3",
           "text": "Comparar preços ajuda a planejar melhor uma compra futura.",
           "isTrue": true,
-          "explanation": "Exato: conhecer o padrão de preços ajuda a escolher o melhor momento de comprar."
+          "explanation": "Conhecer o padrão de preços ajuda a escolher o melhor momento de comprar."
         }
       ]
     }

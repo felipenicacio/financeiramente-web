@@ -59,7 +59,7 @@
           "id": "s1",
           "text": "Políticas econômicas costumam ter efeitos distributivos.",
           "isTrue": true,
-          "explanation": "Isso mesmo: diferentes grupos podem ser afetados de formas diferentes."
+          "explanation": "Diferentes grupos podem ser afetados de formas diferentes."
         },
         {
           "id": "s2",
@@ -71,7 +71,7 @@
           "id": "s3",
           "text": "Mudanças na tributação são um exemplo de política econômica.",
           "isTrue": true,
-          "explanation": "Exato: tributação é uma das ferramentas usadas em políticas econômicas."
+          "explanation": "Tributação é uma das ferramentas usadas em políticas econômicas."
         }
       ]
     }

@@ -51,7 +51,7 @@
           "id": "s1",
           "text": "Um cenário financeiro organiza decisões possíveis e seus resultados esperados.",
           "isTrue": true,
-          "explanation": "Isso mesmo: ele ajuda a visualizar um caminho possível ao longo do tempo."
+          "explanation": "Ele ajuda a visualizar um caminho possível ao longo do tempo."
         },
         {
           "id": "s2",
@@ -63,7 +63,7 @@
           "id": "s3",
           "text": "Comparar cenários ajuda a visualizar caminhos antes de escolher.",
           "isTrue": true,
-          "explanation": "Exato: essa é a principal utilidade de montar cenários."
+          "explanation": "Essa é a principal utilidade de montar cenários."
         }
       ]
     }

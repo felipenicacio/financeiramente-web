@@ -52,7 +52,7 @@
           "id": "s1",
           "text": "Meu endereço é uma informação pessoal que precisa de cuidado.",
           "isTrue": true,
-          "explanation": "Isso mesmo: endereço, telefone e nome da escola são pessoais."
+          "explanation": "Endereço, telefone e nome da escola são pessoais."
         },
         {
           "id": "s2",

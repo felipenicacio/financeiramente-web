@@ -40,7 +40,7 @@
           "id": "s1",
           "text": "Inadimplência é não conseguir pagar uma dívida na data combinada.",
           "isTrue": true,
-          "explanation": "Isso mesmo: é o não pagamento dentro do prazo combinado."
+          "explanation": "É o não pagamento dentro do prazo combinado."
         },
         {
           "id": "s2",
@@ -52,7 +52,7 @@
           "id": "s3",
           "text": "Acompanhar as datas de vencimento ajuda a evitar o acúmulo de juros.",
           "isTrue": true,
-          "explanation": "Exato: organizar os pagamentos evita que a dívida cresça sem necessidade."
+          "explanation": "Organizar os pagamentos evita que a dívida cresça sem necessidade."
         }
       ]
     }
