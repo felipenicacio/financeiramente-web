@@ -1,0 +1,79 @@
+{
+  "id": "c3-m02-l01",
+  "cycle": "c3",
+  "module": "m02",
+  "order": 1,
+  "title": "Por que os preços sobem e descem",
+  "headline": "Oferta e demanda ajudam a explicar as mudanças de preço.",
+  "objectives": [
+    "Entender a relação entre oferta, demanda e preço",
+    "Reconhecer exemplos do dia a dia dessa relação"
+  ],
+  "competencies": ["F-D4-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF08",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "guide": {
+    "state": "ask",
+    "text": "Por que um mesmo produto pode custar mais em um mês e menos em outro?"
+  },
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Duas forças em equilíbrio",
+      "body": "Oferta é a quantidade disponível de um produto; demanda é o quanto as pessoas querem comprar. Quando a demanda sobe mais do que a oferta, o preço tende a subir. Quando a oferta sobe mais do que a demanda, o preço tende a cair.",
+      "illustration": "item-pricetag"
+    },
+    {
+      "type": "story",
+      "title": "A fruta da estação",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "story-fruit-stand",
+          "text": "Fora da época, uma fruta fica rara e seu preço sobe na feira."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-apple",
+          "text": "Na época certa, a mesma fruta fica abundante e o preço costuma cair."
+        }
+      ],
+      "closing": "A quantidade disponível ajuda a explicar por que o preço da mesma fruta muda ao longo do ano."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre oferta e demanda:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Quando a demanda sobe e a oferta não muda, o preço tende a subir.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: mais procura pela mesma quantidade costuma elevar o preço."
+        },
+        {
+          "id": "s2",
+          "text": "O preço de um produto nunca muda ao longo do ano.",
+          "isTrue": false,
+          "explanation": "Vários produtos mudam de preço conforme a oferta e a demanda variam."
+        },
+        {
+          "id": "s3",
+          "text": "Quando um produto fica abundante, o preço tende a cair.",
+          "isTrue": true,
+          "explanation": "Exato: mais oferta disponível costuma reduzir o preço."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Oferta e demanda ajudam a explicar as mudanças de preço.",
+    "Mais procura com a mesma oferta tende a elevar o preço."
+  ]
+}

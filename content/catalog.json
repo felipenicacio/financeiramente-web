@@ -35,8 +35,15 @@
       "label": "Autonomia inicial",
       "ageRange": "12 a 14 anos",
       "description": "Orçamento, crédito, juros, economia e risco.",
-      "status": "soon",
-      "modules": []
+      "status": "available",
+      "modules": [
+        { "id": "m01", "status": "available" },
+        { "id": "m02", "status": "available" },
+        { "id": "m03", "status": "available" },
+        { "id": "m04", "status": "available" },
+        { "id": "m05", "status": "available" },
+        { "id": "m06", "status": "available" }
+      ]
     },
     {
       "id": "c4",

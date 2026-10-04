@@ -1,0 +1,109 @@
+{
+  "id": "c3-m05-l03",
+  "cycle": "c3",
+  "module": "m05",
+  "order": 3,
+  "title": "Planejando com renda variável",
+  "headline": "Quando a renda esporádica varia, vale prever os meses de entrada menor.",
+  "objectives": [
+    "Aplicar o planejamento a situações de renda esporádica",
+    "Reconhecer a importância de prever meses de menor entrada"
+  ],
+  "competencies": ["F-D7-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF12",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Olhar para além do mês atual",
+      "body": "Quando parte da renda é esporádica, é importante não gastar como se todo mês fosse igual. Prever os meses de entrada menor ajuda a manter o orçamento equilibrado ao longo do tempo.",
+      "illustration": "item-notebook"
+    },
+    {
+      "type": "story",
+      "title": "Os bicos de Luís",
+      "values": {
+        "good": 400,
+        "low": 100
+      },
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-bus",
+          "text": "Em um mês bom, Luís ganhou {good} com bicos extras."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-wallet",
+          "text": "No mês seguinte, ganhou só {low}. Guardar parte do mês bom ajudou a cobrir o mês seguinte."
+        }
+      ],
+      "closing": "Guardar parte da renda nos meses melhores ajuda a atravessar os meses de entrada menor."
+    },
+    {
+      "type": "quiz",
+      "title": "Pensando em renda variável",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "decision",
+          "prompt": "Quando a renda varia de mês a mês, uma estratégia útil é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Guardar parte da renda nos meses melhores"
+            },
+            {
+              "id": "b",
+              "label": "Gastar tudo assim que a renda chega"
+            },
+            {
+              "id": "c",
+              "label": "Ignorar os meses de entrada menor"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Guardar parte nos meses melhores ajuda a cobrir os meses de entrada menor."
+        },
+        {
+          "id": "q2",
+          "kind": "situation",
+          "prompt": "Gastar todo mês como se fosse um mês de renda alta tende a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Deixar os meses de entrada menor mais difíceis"
+            },
+            {
+              "id": "b",
+              "label": "Tornar todos os meses iguais automaticamente"
+            },
+            {
+              "id": "c",
+              "label": "Aumentar a renda dos meses seguintes"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Gastar sempre no nível do mês bom deixa os meses de entrada menor mais apertados."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Com renda esporádica, vale prever os meses de entrada menor.",
+    "Guardar parte da renda nos meses melhores ajuda a equilibrar o orçamento."
+  ]
+}

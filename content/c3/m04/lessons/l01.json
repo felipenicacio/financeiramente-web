@@ -1,0 +1,87 @@
+{
+  "id": "c3-m04-l01",
+  "cycle": "c3",
+  "module": "m04",
+  "order": 1,
+  "title": "Como funciona o cartão de crédito",
+  "headline": "O cartão de crédito adianta o pagamento e cobra depois, numa data combinada.",
+  "objectives": [
+    "Entender o funcionamento básico do cartão de crédito",
+    "Reconhecer a diferença entre comprar e pagar a fatura"
+  ],
+  "competencies": ["F-D6-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF10",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "guide": {
+    "state": "ask",
+    "text": "Quando você compra no cartão de crédito, quem paga primeiro: você ou o banco?"
+  },
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Um adiantamento combinado",
+      "body": "Ao comprar no cartão de crédito, quem adianta o pagamento ao vendedor é o banco ou a operadora do cartão. Quem comprou precisa pagar essa fatura numa data combinada, reunindo todas as compras do período.",
+      "illustration": "item-wallet"
+    },
+    {
+      "type": "concepts",
+      "title": "Duas datas importantes",
+      "intro": "O cartão de crédito tem duas datas que organizam esse ciclo.",
+      "concepts": [
+        {
+          "id": "purchase",
+          "label": "Data da compra",
+          "short": "Quando compra",
+          "description": "O momento em que o produto ou serviço é levado, mesmo sem pagamento imediato.",
+          "icon": "later",
+          "tone": "amber"
+        },
+        {
+          "id": "due",
+          "label": "Data de vencimento",
+          "short": "Quando paga",
+          "description": "O dia combinado para pagar a fatura com todas as compras do período.",
+          "icon": "limit",
+          "tone": "coral"
+        }
+      ],
+      "keyIdea": "Entre a compra e o vencimento, existe um prazo: pagar dentro dele evita juros.",
+      "keyIdeaIllustration": "item-notebook"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre o cartão de crédito:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "No cartão de crédito, o banco ou a operadora adianta o pagamento ao vendedor.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: quem comprou paga depois, na fatura."
+        },
+        {
+          "id": "s2",
+          "text": "A fatura do cartão reúne as compras feitas num período.",
+          "isTrue": true,
+          "explanation": "Exato: todas as compras do ciclo aparecem juntas na fatura."
+        },
+        {
+          "id": "s3",
+          "text": "O cartão de crédito sempre cobra o valor exato da compra, sem nenhum prazo.",
+          "isTrue": false,
+          "explanation": "Existe um prazo entre a compra e o vencimento da fatura."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "O cartão de crédito adianta o pagamento e cobra na fatura.",
+    "Pagar a fatura dentro do prazo evita juros."
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "c3-m06-l05",
+  "cycle": "c3",
+  "module": "m06",
+  "order": 5,
+  "title": "Desemprego, desigualdade e instituições",
+  "headline": "Desemprego e desigualdade afetam a renda das famílias; instituições ajudam a organizar a economia.",
+  "objectives": [
+    "Reconhecer o impacto do desemprego e da desigualdade na vida econômica",
+    "Entender o papel de instituições na organização da economia"
+  ],
+  "competencies": ["F-D9-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF16",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N3",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Temas que afetam famílias e comunidades",
+      "body": "Desemprego é a falta de trabalho remunerado para quem o busca; desigualdade é a diferença nas condições econômicas entre pessoas e grupos. Instituições, como bancos centrais, ajudam a organizar regras da economia.",
+      "illustration": "item-book"
+    },
+    {
+      "type": "concepts",
+      "title": "Peças de um mesmo sistema",
+      "intro": "Esses temas se conectam na vida econômica de um país.",
+      "concepts": [
+        {
+          "id": "unemployment",
+          "label": "Desemprego",
+          "short": "Falta de renda do trabalho",
+          "description": "Quando uma pessoa busca trabalho remunerado e não encontra.",
+          "icon": "work",
+          "tone": "coral"
+        },
+        {
+          "id": "institutions",
+          "label": "Instituições",
+          "short": "Organizam regras",
+          "description": "Órgãos que criam e aplicam regras para a economia funcionar de forma mais organizada.",
+          "icon": "shared",
+          "tone": "teal"
+        }
+      ],
+      "keyIdea": "Desemprego e desigualdade afetam diretamente famílias e comunidades; instituições ajudam a organizar respostas a esses desafios.",
+      "keyIdeaIllustration": "item-notebook"
+    },
+    {
+      "type": "quiz",
+      "title": "Revisando o módulo",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Desigualdade econômica se refere a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Diferenças nas condições econômicas entre pessoas e grupos"
+            },
+            {
+              "id": "b",
+              "label": "Uma situação que afeta só um único país no mundo"
+            },
+            {
+              "id": "c",
+              "label": "A ausência total de qualquer diferença entre pessoas"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Desigualdade descreve diferenças nas condições econômicas entre pessoas e grupos."
+        },
+        {
+          "id": "q2",
+          "kind": "explanation",
+          "prompt": "O papel de instituições como bancos centrais inclui",
+          "options": [
+            {
+              "id": "a",
+              "label": "Ajudar a organizar regras que afetam a economia"
+            },
+            {
+              "id": "b",
+              "label": "Eliminar completamente qualquer risco econômico"
+            },
+            {
+              "id": "c",
+              "label": "Garantir que os preços nunca mudem"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Instituições ajudam a organizar regras e respostas para a economia."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Desemprego e desigualdade afetam a renda de famílias e comunidades.",
+    "Instituições ajudam a organizar regras que dão suporte à economia."
+  ]
+}

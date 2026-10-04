@@ -1,0 +1,168 @@
+{
+  "id": "m06",
+  "cycle": "c3",
+  "order": 6,
+  "code": "C3.6",
+  "title": "Dívida, golpes e riscos",
+  "headline": "Entender como a dívida cresce e reconhecer riscos ajuda a se proteger.",
+  "summary": "Dívida, golpes, juros compostos, risco e desigualdade fazem parte da vida econômica.",
+  "competencies": ["F-D3-C3-01", "F-D8-C3-01", "F-D9-C3-01"],
+  "integrative": {
+    "title": "Juntando tudo",
+    "intro": "Vamos ver o que você descobriu sobre dívida, golpes e riscos?",
+    "object": {
+      "type": "quiz",
+      "title": "O que você descobriu",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Uma dívida pode crescer por motivos como",
+          "options": [
+            {
+              "id": "a",
+              "label": "Gastos maiores que a renda, juros e imprevistos somados"
+            },
+            {
+              "id": "b",
+              "label": "Apenas um único motivo, sempre o mesmo"
+            },
+            {
+              "id": "c",
+              "label": "Nunca ter relação com juros"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Dívidas costumam crescer pela combinação de vários fatores, não só um.",
+          "illustration": "item-wallet"
+        },
+        {
+          "id": "q2",
+          "kind": "explanation",
+          "prompt": "Uma promessa de lucro garantido e muito rápido costuma ser",
+          "options": [
+            {
+              "id": "a",
+              "label": "Um sinal de alerta para possível golpe"
+            },
+            {
+              "id": "b",
+              "label": "Sempre uma oportunidade segura"
+            },
+            {
+              "id": "c",
+              "label": "Uma garantia legal de retorno"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Promessas de ganho garantido e rápido são um sinal clássico de alerta."
+        },
+        {
+          "id": "q3",
+          "kind": "explanation",
+          "prompt": "Juros compostos, com o tempo, fazem uma dívida ou um valor guardado",
+          "options": [
+            {
+              "id": "a",
+              "label": "Crescer de forma acelerada, não apenas constante"
+            },
+            {
+              "id": "b",
+              "label": "Ficar sempre do mesmo tamanho"
+            },
+            {
+              "id": "c",
+              "label": "Diminuir automaticamente"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Juros compostos incidem sobre o valor já acrescido de juros, acelerando o crescimento."
+        },
+        {
+          "id": "q4",
+          "kind": "decision",
+          "prompt": "Entre uma opção de retorno maior e outra mais segura, a diferença principal costuma ser",
+          "options": [
+            {
+              "id": "a",
+              "label": "O risco: retorno maior costuma vir com risco maior"
+            },
+            {
+              "id": "b",
+              "label": "Nenhuma diferença real entre elas"
+            },
+            {
+              "id": "c",
+              "label": "O retorno maior é sempre livre de risco"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Retorno maior costuma estar associado a um risco maior de perda."
+        },
+        {
+          "id": "q5",
+          "kind": "recognition",
+          "prompt": "Desemprego e desigualdade são temas que",
+          "options": [
+            {
+              "id": "a",
+              "label": "Afetam a vida econômica de famílias e comunidades"
+            },
+            {
+              "id": "b",
+              "label": "Não têm relação alguma com o orçamento familiar"
+            },
+            {
+              "id": "c",
+              "label": "Só existem em outros países"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Desemprego e desigualdade afetam diretamente a renda e o orçamento das famílias."
+        }
+      ]
+    }
+  },
+  "conclusion": {
+    "title": "Você concluiu o módulo",
+    "message": "Entender como a dívida cresce, reconhecer sinais de golpe e pensar em risco e retorno ajuda a cuidar melhor do próprio dinheiro, com mais segurança.",
+    "recap": [
+      {
+        "icon": "limit",
+        "tone": "coral",
+        "text": "Dívidas costumam crescer pela soma de vários fatores."
+      },
+      {
+        "icon": "info",
+        "tone": "amber",
+        "text": "Promessas de ganho garantido e rápido são sinal de alerta."
+      },
+      {
+        "icon": "money",
+        "tone": "teal",
+        "text": "Juros compostos aceleram o crescimento de um valor com o tempo."
+      },
+      {
+        "icon": "choice",
+        "tone": "cyan",
+        "text": "Retorno maior costuma vir acompanhado de risco maior."
+      }
+    ]
+  },
+  "theme": "feliz"
+}

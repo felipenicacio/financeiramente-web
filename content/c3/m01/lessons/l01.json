@@ -1,0 +1,79 @@
+{
+  "id": "c3-m01-l01",
+  "cycle": "c3",
+  "module": "m01",
+  "order": 1,
+  "title": "O que é consumo por impulso",
+  "headline": "Comprar por impulso é decidir rápido, guiado pela emoção do momento.",
+  "objectives": [
+    "Reconhecer o que caracteriza uma compra por impulso",
+    "Perceber a diferença entre decisão refletida e decisão impulsiva"
+  ],
+  "competencies": ["F-D1-C3-01"],
+  "sources": [
+    {
+      "source": "MC",
+      "reference": "D1",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "guide": {
+    "state": "ask",
+    "text": "Você já comprou algo rápido demais e depois se perguntou por quê?"
+  },
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Uma decisão rápida demais",
+      "body": "Consumo por impulso acontece quando a decisão de comprar vem antes da reflexão: a emoção do momento, como empolgação ou vontade súbita, empurra a escolha sem dar tempo de pensar com calma.",
+      "illustration": "item-tablet"
+    },
+    {
+      "type": "story",
+      "title": "A vitrine de Bia",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "story-shop",
+          "text": "Bia passou por uma vitrine e sentiu vontade imediata de comprar algo que nem conhecia direito."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-thinking",
+          "text": "Ela parou um instante e percebeu: a vontade tinha vindo rápido demais, sem nenhuma reflexão."
+        }
+      ],
+      "closing": "Perceber a rapidez da vontade já é um primeiro passo para decidir com mais calma."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre consumo por impulso:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Impulso é uma decisão que vem antes da reflexão.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: a emoção do momento guia a escolha primeiro."
+        },
+        {
+          "id": "s2",
+          "text": "Sentir vontade de comprar algo rápido é sempre um erro grave.",
+          "isTrue": false,
+          "explanation": "Sentir vontade é normal; o que ajuda é perceber o padrão e decidir com calma."
+        },
+        {
+          "id": "s3",
+          "text": "Perceber a rapidez de uma vontade ajuda a decidir com mais clareza.",
+          "isTrue": true,
+          "explanation": "Exato: notar o padrão já muda a forma de decidir."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Impulso é uma decisão que vem antes da reflexão.",
+    "Perceber o padrão ajuda a decidir com mais calma."
+  ]
+}

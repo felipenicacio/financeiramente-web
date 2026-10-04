@@ -1,0 +1,115 @@
+{
+  "id": "c3-m06-l03",
+  "cycle": "c3",
+  "module": "m06",
+  "order": 3,
+  "title": "Juros compostos",
+  "headline": "Juros compostos incidem sobre o valor já acrescido de juros anteriores.",
+  "objectives": [
+    "Compreender o conceito de juros compostos",
+    "Reconhecer seu efeito ao longo do tempo"
+  ],
+  "competencies": ["F-D8-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF14",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Juros sobre juros",
+      "body": "Nos juros compostos, cada novo período calcula o valor extra sobre o total anterior, que já inclui os juros do período passado. Por isso, o crescimento acelera com o tempo, seja numa dívida ou num valor guardado.",
+      "illustration": "item-wallet"
+    },
+    {
+      "type": "story",
+      "title": "O valor guardado de Sônia",
+      "values": {
+        "month1": 100,
+        "month2": 110,
+        "month3": 121
+      },
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-jar",
+          "text": "No mês 1, Sônia guardou {month1}."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-coins",
+          "text": "No mês 2, o valor passou para {month2}, com juros sobre {month1}."
+        },
+        {
+          "id": "p3",
+          "illustration": "item-coins",
+          "text": "No mês 3, chegou a {month3}: os juros incidiram sobre um valor já maior."
+        }
+      ],
+      "closing": "Esse é o efeito dos juros compostos: o crescimento acelera porque os juros incidem sobre um total que já inclui juros anteriores."
+    },
+    {
+      "type": "quiz",
+      "title": "Pensando em juros compostos",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "explanation",
+          "prompt": "Nos juros compostos, o cálculo de cada período considera",
+          "options": [
+            {
+              "id": "a",
+              "label": "O valor total anterior, já com os juros incluídos"
+            },
+            {
+              "id": "b",
+              "label": "Somente o valor inicial, sempre do mesmo jeito"
+            },
+            {
+              "id": "c",
+              "label": "Um valor fixo, sem relação com o período anterior"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Os juros compostos incidem sobre o total acumulado, não só sobre o valor inicial."
+        },
+        {
+          "id": "q2",
+          "kind": "situation",
+          "prompt": "Por isso, uma dívida com juros compostos, sem pagamento, tende a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Crescer de forma cada vez mais acelerada"
+            },
+            {
+              "id": "b",
+              "label": "Ficar sempre do mesmo tamanho"
+            },
+            {
+              "id": "c",
+              "label": "Diminuir sozinha com o tempo"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Sem pagamento, os juros compostos aceleram o crescimento da dívida."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Juros compostos incidem sobre o valor total, já com juros anteriores incluídos.",
+    "Esse efeito acelera o crescimento, numa dívida ou num valor guardado."
+  ]
+}

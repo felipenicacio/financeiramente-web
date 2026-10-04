@@ -1,5 +1,5 @@
 /**
- * Registro estático do conteúdo do C1–C2 (currículo v2.0).
+ * Registro estático do conteúdo do C1–C3 (currículo v2.0).
  *
  * Importado em tempo de build: o site não busca nada em rede para exibir o
  * conteúdo. Para publicar um novo ciclo/módulo, criar as pastas em content/ e
@@ -81,6 +81,44 @@ import C2M06L4 from '@/content/c2/m06/lessons/l04.json';
 import C2M06L5 from '@/content/c2/m06/lessons/l05.json';
 import c2Cycle from '@/content/c2/cycle.json';
 
+import C3M01Module from '@/content/c3/m01/module.json';
+import C3M01L1 from '@/content/c3/m01/lessons/l01.json';
+import C3M01L2 from '@/content/c3/m01/lessons/l02.json';
+import C3M01L3 from '@/content/c3/m01/lessons/l03.json';
+import C3M01L4 from '@/content/c3/m01/lessons/l04.json';
+import C3M01L5 from '@/content/c3/m01/lessons/l05.json';
+import C3M02Module from '@/content/c3/m02/module.json';
+import C3M02L1 from '@/content/c3/m02/lessons/l01.json';
+import C3M02L2 from '@/content/c3/m02/lessons/l02.json';
+import C3M02L3 from '@/content/c3/m02/lessons/l03.json';
+import C3M02L4 from '@/content/c3/m02/lessons/l04.json';
+import C3M02L5 from '@/content/c3/m02/lessons/l05.json';
+import C3M03Module from '@/content/c3/m03/module.json';
+import C3M03L1 from '@/content/c3/m03/lessons/l01.json';
+import C3M03L2 from '@/content/c3/m03/lessons/l02.json';
+import C3M03L3 from '@/content/c3/m03/lessons/l03.json';
+import C3M03L4 from '@/content/c3/m03/lessons/l04.json';
+import C3M03L5 from '@/content/c3/m03/lessons/l05.json';
+import C3M04Module from '@/content/c3/m04/module.json';
+import C3M04L1 from '@/content/c3/m04/lessons/l01.json';
+import C3M04L2 from '@/content/c3/m04/lessons/l02.json';
+import C3M04L3 from '@/content/c3/m04/lessons/l03.json';
+import C3M04L4 from '@/content/c3/m04/lessons/l04.json';
+import C3M04L5 from '@/content/c3/m04/lessons/l05.json';
+import C3M05Module from '@/content/c3/m05/module.json';
+import C3M05L1 from '@/content/c3/m05/lessons/l01.json';
+import C3M05L2 from '@/content/c3/m05/lessons/l02.json';
+import C3M05L3 from '@/content/c3/m05/lessons/l03.json';
+import C3M05L4 from '@/content/c3/m05/lessons/l04.json';
+import C3M05L5 from '@/content/c3/m05/lessons/l05.json';
+import C3M06Module from '@/content/c3/m06/module.json';
+import C3M06L1 from '@/content/c3/m06/lessons/l01.json';
+import C3M06L2 from '@/content/c3/m06/lessons/l02.json';
+import C3M06L3 from '@/content/c3/m06/lessons/l03.json';
+import C3M06L4 from '@/content/c3/m06/lessons/l04.json';
+import C3M06L5 from '@/content/c3/m06/lessons/l05.json';
+import c3Cycle from '@/content/c3/cycle.json';
+
 import catalog from '@/content/catalog.json';
 import ui from '@/content/ui.json';
 
@@ -103,7 +141,13 @@ export const rawModules: Record<string, { module: unknown; lessons: unknown[] }>
   'c2/m04': { module: C2M04Module, lessons: [C2M04L1, C2M04L2, C2M04L3, C2M04L4, C2M04L5] },
   'c2/m05': { module: C2M05Module, lessons: [C2M05L1, C2M05L2, C2M05L3, C2M05L4, C2M05L5] },
   'c2/m06': { module: C2M06Module, lessons: [C2M06L1, C2M06L2, C2M06L3, C2M06L4, C2M06L5] },
+  'c3/m01': { module: C3M01Module, lessons: [C3M01L1, C3M01L2, C3M01L3, C3M01L4, C3M01L5] },
+  'c3/m02': { module: C3M02Module, lessons: [C3M02L1, C3M02L2, C3M02L3, C3M02L4, C3M02L5] },
+  'c3/m03': { module: C3M03Module, lessons: [C3M03L1, C3M03L2, C3M03L3, C3M03L4, C3M03L5] },
+  'c3/m04': { module: C3M04Module, lessons: [C3M04L1, C3M04L2, C3M04L3, C3M04L4, C3M04L5] },
+  'c3/m05': { module: C3M05Module, lessons: [C3M05L1, C3M05L2, C3M05L3, C3M05L4, C3M05L5] },
+  'c3/m06': { module: C3M06Module, lessons: [C3M06L1, C3M06L2, C3M06L3, C3M06L4, C3M06L5] },
 };
 
-export const rawCycleSummaries: Record<string, unknown> = { c1: c1Cycle, c2: c2Cycle };
+export const rawCycleSummaries: Record<string, unknown> = { c1: c1Cycle, c2: c2Cycle, c3: c3Cycle };
 export type { CycleSummary };

@@ -1,0 +1,83 @@
+{
+  "id": "c3-m02-l05",
+  "cycle": "c3",
+  "module": "m02",
+  "order": 5,
+  "title": "Meios digitais de pagamento e preço",
+  "headline": "A forma de pagar muda, mas o preço combinado do produto continua o mesmo.",
+  "objectives": [
+    "Diferenciar a forma de pagamento do preço combinado",
+    "Reconhecer meios digitais comuns de pagamento"
+  ],
+  "competencies": ["F-D4-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF01",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Formas digitais, mesmo preço",
+      "body": "Pix, cartões e carteiras digitais mudaram a forma de mover o dinheiro, mas o preço combinado de um produto continua o mesmo, qualquer que seja a forma escolhida para pagar.",
+      "illustration": "item-tablet"
+    },
+    {
+      "type": "concepts",
+      "title": "Meios digitais comuns",
+      "intro": "Vários meios digitais surgiram para facilitar o pagamento do dia a dia.",
+      "concepts": [
+        {
+          "id": "pix",
+          "label": "Pix",
+          "short": "Transferência instantânea",
+          "description": "Move o valor de uma conta para outra, na mesma hora.",
+          "icon": "money",
+          "tone": "teal"
+        },
+        {
+          "id": "wallet",
+          "label": "Carteira digital",
+          "short": "No celular",
+          "description": "Guarda cartões e saldo dentro de um aplicativo no celular.",
+          "icon": "money",
+          "tone": "cyan"
+        }
+      ],
+      "keyIdea": "Nenhum desses meios muda o preço combinado: só facilitam a forma de pagar.",
+      "keyIdeaIllustration": "item-pricetag"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre meios digitais de pagamento:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Pagar por pix muda o preço combinado de um produto.",
+          "isTrue": false,
+          "explanation": "O preço combinado continua o mesmo; só muda a forma de mover o valor."
+        },
+        {
+          "id": "s2",
+          "text": "Carteiras digitais guardam cartões e saldo num aplicativo.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: elas organizam formas de pagamento dentro do celular."
+        },
+        {
+          "id": "s3",
+          "text": "Meios digitais de pagamento são só uma forma de mover o mesmo dinheiro.",
+          "isTrue": true,
+          "explanation": "Exato: a tecnologia muda o caminho do valor, não o seu significado."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Meios digitais mudam a forma de pagar, não o preço combinado.",
+    "Pix e carteiras digitais facilitam mover o mesmo dinheiro."
+  ]
+}

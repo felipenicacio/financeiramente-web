@@ -1,0 +1,109 @@
+{
+  "id": "c3-m03-l02",
+  "cycle": "c3",
+  "module": "m03",
+  "order": 2,
+  "title": "Construindo uma reserva com renda variável",
+  "headline": "Guardar parte dos meses melhores ajuda a atravessar os meses mais fracos.",
+  "objectives": [
+    "Relacionar reserva financeira à renda variável",
+    "Perceber a função de guardar nos meses de renda maior"
+  ],
+  "competencies": ["F-D5-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF10",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Guardar nos meses melhores",
+      "body": "Quando a renda varia, guardar uma parte nos meses de valor mais alto cria uma reserva para os meses mais fracos. Essa reserva funciona como um amortecedor para a renda variável.",
+      "illustration": "item-jar"
+    },
+    {
+      "type": "story",
+      "title": "A reserva de Luís",
+      "values": {
+        "good": 300,
+        "low": 150
+      },
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-coins",
+          "text": "Em um mês bom, Luís recebeu {good} a mais do que precisava gastar."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-jar",
+          "text": "Ele guardou parte desse valor, e isso ajudou quando um mês mais fraco rendeu só {low}."
+        }
+      ],
+      "closing": "Guardar nos meses melhores ajuda a atravessar os meses de renda mais baixa."
+    },
+    {
+      "type": "quiz",
+      "title": "Pensando em reserva",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "explanation",
+          "prompt": "Para quem tem renda variável, uma reserva serve principalmente para",
+          "options": [
+            {
+              "id": "a",
+              "label": "Amortecer os meses em que a renda vem mais baixa"
+            },
+            {
+              "id": "b",
+              "label": "Ser gasta inteira assim que chega"
+            },
+            {
+              "id": "c",
+              "label": "Substituir qualquer forma de trabalho"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "A reserva existe justamente para cobrir os meses de renda mais baixa."
+        },
+        {
+          "id": "q2",
+          "kind": "decision",
+          "prompt": "Nos meses de renda mais alta, uma atitude útil é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Guardar parte do valor extra para os meses mais fracos"
+            },
+            {
+              "id": "b",
+              "label": "Gastar tudo imediatamente"
+            },
+            {
+              "id": "c",
+              "label": "Ignorar que a renda varia"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Guardar parte do valor extra fortalece a reserva para os meses seguintes."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Guardar parte dos meses melhores cria uma reserva útil.",
+    "A reserva amortece os meses de renda mais baixa."
+  ]
+}

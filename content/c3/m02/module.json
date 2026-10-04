@@ -1,0 +1,168 @@
+{
+  "id": "m02",
+  "cycle": "c3",
+  "order": 2,
+  "code": "C3.2",
+  "title": "Preços, oferta, demanda e inflação",
+  "headline": "Preços sobem e descem por motivos que dá para entender e acompanhar.",
+  "summary": "Oferta, demanda e inflação explicam por que os preços mudam ao longo do tempo.",
+  "competencies": ["F-D4-C3-01"],
+  "integrative": {
+    "title": "Juntando tudo",
+    "intro": "Vamos ver o que você descobriu sobre preços, oferta e demanda?",
+    "object": {
+      "type": "quiz",
+      "title": "O que você descobriu",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Quando a procura por um produto aumenta e a quantidade disponível não muda, o preço tende a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Subir"
+            },
+            {
+              "id": "b",
+              "label": "Cair"
+            },
+            {
+              "id": "c",
+              "label": "Ficar sempre igual"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Mais procura com a mesma oferta costuma empurrar o preço para cima.",
+          "illustration": "item-pricetag"
+        },
+        {
+          "id": "q2",
+          "kind": "recognition",
+          "prompt": "Inflação é",
+          "options": [
+            {
+              "id": "a",
+              "label": "O aumento geral dos preços ao longo do tempo"
+            },
+            {
+              "id": "b",
+              "label": "A queda de todos os preços de uma vez"
+            },
+            {
+              "id": "c",
+              "label": "Um tipo de desconto"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Inflação é o aumento geral e contínuo dos preços numa economia."
+        },
+        {
+          "id": "q3",
+          "kind": "explanation",
+          "prompt": "Quando a inflação é alta, o mesmo valor em dinheiro",
+          "options": [
+            {
+              "id": "a",
+              "label": "Compra menos coisas do que antes"
+            },
+            {
+              "id": "b",
+              "label": "Compra sempre a mesma quantidade"
+            },
+            {
+              "id": "c",
+              "label": "Compra mais coisas automaticamente"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Com preços mais altos, o mesmo valor perde poder de compra."
+        },
+        {
+          "id": "q4",
+          "kind": "decision",
+          "prompt": "Comparar o preço de um produto hoje com o de alguns meses atrás ajuda a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Perceber como a inflação afeta o dia a dia"
+            },
+            {
+              "id": "b",
+              "label": "Garantir que o preço nunca mudou"
+            },
+            {
+              "id": "c",
+              "label": "Provar que preços nunca sobem"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Comparar preços ao longo do tempo torna a inflação mais concreta."
+        },
+        {
+          "id": "q5",
+          "kind": "situation",
+          "prompt": "Pagar por pix ou cartão, em vez de dinheiro em espécie,",
+          "options": [
+            {
+              "id": "a",
+              "label": "Muda a forma de pagar, mas não o preço combinado do produto"
+            },
+            {
+              "id": "b",
+              "label": "Sempre deixa o produto mais barato"
+            },
+            {
+              "id": "c",
+              "label": "Sempre deixa o produto mais caro"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "O meio digital muda como o valor é transferido, não o preço combinado."
+        }
+      ]
+    }
+  },
+  "conclusion": {
+    "title": "Você concluiu o módulo",
+    "message": "Oferta, demanda e inflação ajudam a explicar por que os preços mudam. Acompanhar isso é parte de cuidar do próprio dinheiro.",
+    "recap": [
+      {
+        "icon": "price",
+        "tone": "coral",
+        "text": "Mais procura, mesma oferta: preço tende a subir."
+      },
+      {
+        "icon": "limit",
+        "tone": "amber",
+        "text": "Inflação é o aumento geral dos preços."
+      },
+      {
+        "icon": "money",
+        "tone": "teal",
+        "text": "Com inflação, o mesmo valor compra menos."
+      },
+      {
+        "icon": "info",
+        "tone": "cyan",
+        "text": "Meios digitais mudam a forma de pagar, não o preço."
+      }
+    ]
+  },
+  "theme": "comparando"
+}

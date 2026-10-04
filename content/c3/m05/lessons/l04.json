@@ -1,0 +1,64 @@
+{
+  "id": "c3-m05-l04",
+  "cycle": "c3",
+  "module": "m05",
+  "order": 4,
+  "title": "Combinando valor e forma de pagamento",
+  "headline": "Combinar o valor e a forma de pagamento antes de trabalhar evita mal-entendidos.",
+  "objectives": [
+    "Reconhecer a importância de combinar valor e pagamento com antecedência",
+    "Identificar riscos de não deixar isso combinado"
+  ],
+  "competencies": ["F-D7-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF12",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Combinar antes de começar",
+      "body": "Antes de começar um trabalho ou um bico, combinar o valor, a forma e o momento do pagamento ajuda a evitar mal-entendidos entre quem contrata e quem realiza o trabalho.",
+      "illustration": "item-laptop"
+    },
+    {
+      "type": "reflection",
+      "state": "reflect",
+      "text": "Combinar antes é uma forma de cuidado, não de desconfiança.",
+      "body": "Deixar claro o valor e a forma de pagamento protege as duas partes envolvidas no trabalho."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre combinar valor e pagamento:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Combinar o valor antes de começar o trabalho ajuda a evitar mal-entendidos.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: deixar claro o combinado protege as duas partes."
+        },
+        {
+          "id": "s2",
+          "text": "Combinar o pagamento antes é sinal de desconfiança.",
+          "isTrue": false,
+          "explanation": "É uma forma de cuidado e organização, não de desconfiança."
+        },
+        {
+          "id": "s3",
+          "text": "A forma de pagamento também vale a pena combinar com antecedência.",
+          "isTrue": true,
+          "explanation": "Exato: saber como e quando o valor será pago evita surpresas."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Combinar valor e forma de pagamento antes do trabalho evita mal-entendidos.",
+    "Esse cuidado protege quem contrata e quem realiza o trabalho."
+  ]
+}

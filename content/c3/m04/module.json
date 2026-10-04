@@ -1,0 +1,168 @@
+{
+  "id": "m04",
+  "cycle": "c3",
+  "order": 4,
+  "code": "C3.4",
+  "title": "Cartão, parcelamento e juros",
+  "headline": "Parcelar e usar cartão tem um custo que vale a pena entender antes de decidir.",
+  "summary": "Cartão de crédito, parcelamento e juros mudam o custo final de uma compra.",
+  "competencies": ["F-D6-C3-01"],
+  "integrative": {
+    "title": "Juntando tudo",
+    "intro": "Vamos ver o que você descobriu sobre cartão, parcelamento e juros?",
+    "object": {
+      "type": "quiz",
+      "title": "O que você descobriu",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Juros são",
+          "options": [
+            {
+              "id": "a",
+              "label": "Um valor extra cobrado por atrasar ou parcelar um pagamento"
+            },
+            {
+              "id": "b",
+              "label": "Um desconto por pagar em dia"
+            },
+            {
+              "id": "c",
+              "label": "O mesmo que o preço do produto"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Juros são o custo extra cobrado por atrasar um pagamento ou dividi-lo em parcelas.",
+          "illustration": "item-wallet"
+        },
+        {
+          "id": "q2",
+          "kind": "explanation",
+          "prompt": "Comprar parcelado com juros costuma deixar o custo total",
+          "options": [
+            {
+              "id": "a",
+              "label": "Maior do que o preço à vista"
+            },
+            {
+              "id": "b",
+              "label": "Igual ao preço à vista"
+            },
+            {
+              "id": "c",
+              "label": "Sempre menor do que o preço à vista"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Quando há juros, a soma das parcelas supera o preço combinado à vista."
+        },
+        {
+          "id": "q3",
+          "kind": "decision",
+          "prompt": "Antes de parcelar uma compra, é importante",
+          "options": [
+            {
+              "id": "a",
+              "label": "Somar todas as parcelas e comparar com o preço à vista"
+            },
+            {
+              "id": "b",
+              "label": "Olhar só o valor da primeira parcela"
+            },
+            {
+              "id": "c",
+              "label": "Ignorar o número de parcelas"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Somar as parcelas mostra o custo total real da compra parcelada."
+        },
+        {
+          "id": "q4",
+          "kind": "situation",
+          "prompt": "Não pagar a fatura do cartão até a data combinada costuma",
+          "options": [
+            {
+              "id": "a",
+              "label": "Gerar juros e deixar a dívida maior"
+            },
+            {
+              "id": "b",
+              "label": "Cancelar a dívida automaticamente"
+            },
+            {
+              "id": "c",
+              "label": "Reduzir o valor devido"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "O atraso no pagamento costuma gerar juros, aumentando o valor devido."
+        },
+        {
+          "id": "q5",
+          "kind": "recognition",
+          "prompt": "Inadimplência é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Não conseguir pagar uma dívida até a data combinada"
+            },
+            {
+              "id": "b",
+              "label": "Pagar uma conta antes do prazo"
+            },
+            {
+              "id": "c",
+              "label": "Guardar dinheiro todo mês"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Inadimplência é deixar de pagar uma dívida na data combinada."
+        }
+      ]
+    }
+  },
+  "conclusion": {
+    "title": "Você concluiu o módulo",
+    "message": "Cartão e parcelamento são ferramentas úteis, mas têm custo. Somar o total das parcelas antes de decidir ajuda a evitar surpresas.",
+    "recap": [
+      {
+        "icon": "later",
+        "tone": "coral",
+        "text": "Juros são o custo extra de atrasar ou parcelar um pagamento."
+      },
+      {
+        "icon": "money",
+        "tone": "amber",
+        "text": "Parcelado com juros costuma custar mais do que à vista."
+      },
+      {
+        "icon": "info",
+        "tone": "teal",
+        "text": "Somar todas as parcelas revela o custo total real."
+      },
+      {
+        "icon": "limit",
+        "tone": "cyan",
+        "text": "Atrasar o pagamento do cartão aumenta a dívida com juros."
+      }
+    ]
+  },
+  "theme": "lendo"
+}

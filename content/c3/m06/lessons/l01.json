@@ -1,0 +1,87 @@
+{
+  "id": "c3-m06-l01",
+  "cycle": "c3",
+  "module": "m06",
+  "order": 1,
+  "title": "Como uma dívida cresce",
+  "headline": "Uma dívida costuma crescer pela soma de vários fatores, não só um.",
+  "objectives": [
+    "Reconhecer fatores que contribuem para o crescimento de uma dívida",
+    "Entender a dívida como resultado de causas múltiplas"
+  ],
+  "competencies": ["F-D3-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF13",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N3",
+  "estimatedMinutes": 5,
+  "guide": {
+    "state": "ask",
+    "text": "Você já parou para pensar em tudo que pode fazer uma dívida crescer?"
+  },
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Mais de um motivo ao mesmo tempo",
+      "body": "Uma dívida raramente cresce por um único motivo. Gastar mais do que a renda permite, juros sobre o valor não pago e imprevistos, como uma despesa inesperada, costumam se somar ao longo do tempo.",
+      "illustration": "item-wallet"
+    },
+    {
+      "type": "concepts",
+      "title": "Fatores que se somam",
+      "intro": "Vários fatores juntos ajudam a explicar como uma dívida cresce.",
+      "concepts": [
+        {
+          "id": "spending",
+          "label": "Gastar além da renda",
+          "short": "Mais sai do que entra",
+          "description": "Quando as despesas do mês superam a renda disponível, de forma repetida.",
+          "icon": "limit",
+          "tone": "coral"
+        },
+        {
+          "id": "unexpected",
+          "label": "Imprevistos",
+          "short": "Despesas inesperadas",
+          "description": "Situações que surgem sem planejamento e exigem dinheiro extra.",
+          "icon": "info",
+          "tone": "amber"
+        }
+      ],
+      "keyIdea": "Juros sobre o valor não pago, somados a gastos maiores que a renda e a imprevistos, ajudam a explicar por que uma dívida cresce.",
+      "keyIdeaIllustration": "item-notebook"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre o crescimento de uma dívida:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Uma dívida costuma crescer pela soma de vários fatores.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: gastos, juros e imprevistos costumam se somar."
+        },
+        {
+          "id": "s2",
+          "text": "Imprevistos nunca afetam o tamanho de uma dívida.",
+          "isTrue": false,
+          "explanation": "Imprevistos são um dos fatores que podem levar ao aumento de uma dívida."
+        },
+        {
+          "id": "s3",
+          "text": "Gastar de forma repetida além da renda pode levar ao endividamento.",
+          "isTrue": true,
+          "explanation": "Exato: esse é um dos fatores mais comuns no crescimento de uma dívida."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Uma dívida costuma crescer pela soma de vários fatores.",
+    "Gastos acima da renda, juros e imprevistos fazem parte dessa soma."
+  ]
+}

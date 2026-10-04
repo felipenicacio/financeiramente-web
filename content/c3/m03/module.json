@@ -1,0 +1,168 @@
+{
+  "id": "m03",
+  "cycle": "c3",
+  "order": 3,
+  "code": "C3.3",
+  "title": "Orçamento com renda variável",
+  "headline": "Quando a renda muda todo mês, o orçamento pede mais atenção.",
+  "summary": "Renda variável, reserva e imprevistos pedem um orçamento mais flexível e acompanhado de perto.",
+  "competencies": ["F-D5-C3-01"],
+  "integrative": {
+    "title": "Juntando tudo",
+    "intro": "Vamos ver o que você descobriu sobre orçamento com renda variável?",
+    "object": {
+      "type": "quiz",
+      "title": "O que você descobriu",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Renda variável é aquela que",
+          "options": [
+            {
+              "id": "a",
+              "label": "Muda de valor a cada período"
+            },
+            {
+              "id": "b",
+              "label": "É sempre exatamente igual todo mês"
+            },
+            {
+              "id": "c",
+              "label": "Nunca existe na prática"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Renda variável muda de valor conforme o período, diferente da renda fixa.",
+          "illustration": "item-notebook"
+        },
+        {
+          "id": "q2",
+          "kind": "decision",
+          "prompt": "Com renda variável, planejar o orçamento pelo mês de menor renda ajuda a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Evitar gastos maiores do que a renda consegue cobrir"
+            },
+            {
+              "id": "b",
+              "label": "Gastar sempre o valor do melhor mês"
+            },
+            {
+              "id": "c",
+              "label": "Ignorar qualquer planejamento"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Planejar pelo pior cenário reduz o risco de faltar dinheiro num mês mais fraco."
+        },
+        {
+          "id": "q3",
+          "kind": "explanation",
+          "prompt": "Uma reserva financeira serve, entre outras coisas, para",
+          "options": [
+            {
+              "id": "a",
+              "label": "Cobrir meses em que a renda variável vem menor"
+            },
+            {
+              "id": "b",
+              "label": "Ser gasta assim que chega qualquer valor"
+            },
+            {
+              "id": "c",
+              "label": "Substituir todo o orçamento mensal"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "A reserva amortece os meses de renda mais baixa."
+        },
+        {
+          "id": "q4",
+          "kind": "situation",
+          "prompt": "Revisar o orçamento com frequência é especialmente útil quando",
+          "options": [
+            {
+              "id": "a",
+              "label": "A renda muda de valor de um mês para o outro"
+            },
+            {
+              "id": "b",
+              "label": "A renda é sempre idêntica"
+            },
+            {
+              "id": "c",
+              "label": "Não existe nenhuma despesa"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Quando a renda varia, revisar com frequência ajuda a ajustar o plano a tempo."
+        },
+        {
+          "id": "q5",
+          "kind": "decision",
+          "prompt": "Diante de um mês de renda mais baixa, o mais sensato é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Ajustar despesas e, se houver, usar parte da reserva"
+            },
+            {
+              "id": "b",
+              "label": "Gastar normalmente, como se nada tivesse mudado"
+            },
+            {
+              "id": "c",
+              "label": "Parar de anotar qualquer gasto"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Ajustar o plano, com ou sem reserva, é o caminho mais sustentável."
+        }
+      ]
+    }
+  },
+  "conclusion": {
+    "title": "Você concluiu o módulo",
+    "message": "Renda variável pede um orçamento mais flexível. Reserva e revisão frequente ajudam a atravessar os meses mais fracos.",
+    "recap": [
+      {
+        "icon": "income",
+        "tone": "amber",
+        "text": "Renda variável muda de valor a cada período."
+      },
+      {
+        "icon": "save",
+        "tone": "teal",
+        "text": "A reserva ajuda a cobrir meses mais fracos."
+      },
+      {
+        "icon": "later",
+        "tone": "coral",
+        "text": "Planejar pelo pior mês reduz riscos."
+      },
+      {
+        "icon": "care",
+        "tone": "cyan",
+        "text": "Revisar o orçamento com frequência ajuda a ajustar a tempo."
+      }
+    ]
+  },
+  "theme": "explicando"
+}

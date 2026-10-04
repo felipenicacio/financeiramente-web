@@ -1,0 +1,87 @@
+{
+  "id": "c3-m05-l01",
+  "cycle": "c3",
+  "module": "m05",
+  "order": 1,
+  "title": "Trabalho formal e informal",
+  "headline": "O trabalho formal segue um registro combinado; o informal, não.",
+  "objectives": [
+    "Diferenciar trabalho formal e informal",
+    "Reconhecer exemplos de cada tipo no dia a dia"
+  ],
+  "competencies": ["F-D7-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF11",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "guide": {
+    "state": "ask",
+    "text": "Você sabe diferenciar um trabalho formal de um informal?"
+  },
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Dois tipos de combinado",
+      "body": "Trabalho formal segue um registro combinado entre quem contrata e quem trabalha, com direitos e deveres definidos. Trabalho informal não segue esse mesmo tipo de registro, embora também envolva um combinado entre as pessoas.",
+      "illustration": "item-laptop"
+    },
+    {
+      "type": "concepts",
+      "title": "Formal e informal",
+      "intro": "Os dois tipos de trabalho geram renda, mas de formas diferentes.",
+      "concepts": [
+        {
+          "id": "formal",
+          "label": "Trabalho formal",
+          "short": "Com registro",
+          "description": "Segue um registro combinado, com direitos e deveres definidos.",
+          "icon": "work",
+          "tone": "teal"
+        },
+        {
+          "id": "informal",
+          "label": "Trabalho informal",
+          "short": "Sem o mesmo registro",
+          "description": "Não segue o mesmo tipo de registro do trabalho formal.",
+          "icon": "work",
+          "tone": "amber"
+        }
+      ],
+      "keyIdea": "Os dois tipos existem e geram renda; conhecer as diferenças ajuda a entender o próprio combinado de trabalho.",
+      "keyIdeaIllustration": "item-notebook"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre trabalho formal e informal:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "O trabalho formal segue um registro combinado entre as partes.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: existe um registro com direitos e deveres definidos."
+        },
+        {
+          "id": "s2",
+          "text": "O trabalho informal não existe na prática.",
+          "isTrue": false,
+          "explanation": "O trabalho informal existe e também gera renda para quem trabalha."
+        },
+        {
+          "id": "s3",
+          "text": "Conhecer o tipo de trabalho ajuda a entender o combinado envolvido.",
+          "isTrue": true,
+          "explanation": "Exato: cada tipo tem características próprias que vale conhecer."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Trabalho formal segue um registro combinado, com direitos definidos.",
+    "Trabalho informal não segue o mesmo tipo de registro."
+  ]
+}

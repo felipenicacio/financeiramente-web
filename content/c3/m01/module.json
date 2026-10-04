@@ -1,0 +1,168 @@
+{
+  "id": "m01",
+  "cycle": "c3",
+  "order": 1,
+  "code": "C3.1",
+  "title": "Consumo por impulso e pressão social",
+  "headline": "Entender o que leva a comprar sem pensar ajuda a decidir com mais calma.",
+  "summary": "Impulso e pressão de grupo influenciam decisões de compra. Reconhecer isso é o primeiro passo para escolher com mais autonomia.",
+  "competencies": ["F-D1-C3-01", "F-D2-C3-01"],
+  "integrative": {
+    "title": "Juntando tudo",
+    "intro": "Vamos ver o que você descobriu sobre impulso e pressão social?",
+    "object": {
+      "type": "quiz",
+      "title": "O que você descobriu",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Consumo por impulso é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Comprar algo sem pensar com calma antes"
+            },
+            {
+              "id": "b",
+              "label": "Planejar uma compra com antecedência"
+            },
+            {
+              "id": "c",
+              "label": "Comparar preços antes de decidir"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Impulso é decidir rápido, movido pela emoção do momento.",
+          "illustration": "item-tablet"
+        },
+        {
+          "id": "q2",
+          "kind": "explanation",
+          "prompt": "Uma sensação de urgência criada por um anúncio costuma servir para",
+          "options": [
+            {
+              "id": "a",
+              "label": "Fazer a pessoa decidir rápido, sem pensar muito"
+            },
+            {
+              "id": "b",
+              "label": "Dar mais tempo para a pessoa refletir"
+            },
+            {
+              "id": "c",
+              "label": "Explicar todos os detalhes do produto"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "A urgência é um recurso para reduzir o tempo de reflexão antes da compra."
+        },
+        {
+          "id": "q3",
+          "kind": "recognition",
+          "prompt": "Pressão de grupo numa decisão de compra acontece quando",
+          "options": [
+            {
+              "id": "a",
+              "label": "Amigos influenciam o que alguém decide comprar"
+            },
+            {
+              "id": "b",
+              "label": "Uma pessoa decide sozinha, sem influência de ninguém"
+            },
+            {
+              "id": "c",
+              "label": "O preço de um produto muda sozinho"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Pressão de grupo é a influência de outras pessoas sobre uma escolha."
+        },
+        {
+          "id": "q4",
+          "kind": "decision",
+          "prompt": "Uma forma simples de evitar uma compra por impulso é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Esperar um tempo antes de decidir"
+            },
+            {
+              "id": "b",
+              "label": "Decidir o mais rápido possível"
+            },
+            {
+              "id": "c",
+              "label": "Ignorar completamente o preço"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Uma pausa reduz o efeito da emoção do momento sobre a decisão."
+        },
+        {
+          "id": "q5",
+          "kind": "situation",
+          "prompt": "Perceber que uma vontade de comprar está ligada à emoção do momento ajuda porque",
+          "options": [
+            {
+              "id": "a",
+              "label": "Permite decidir com mais clareza, sem se sentir mal por isso"
+            },
+            {
+              "id": "b",
+              "label": "Significa que a pessoa nunca mais pode comprar nada"
+            },
+            {
+              "id": "c",
+              "label": "Prova que a pessoa fez algo errado"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Reconhecer o padrão ajuda a decidir com mais clareza, sem julgamento."
+        }
+      ]
+    }
+  },
+  "conclusion": {
+    "title": "Você concluiu o módulo",
+    "message": "Impulso e pressão de grupo influenciam decisões de compra. Reconhecer isso, sem culpa, ajuda a decidir com mais calma.",
+    "recap": [
+      {
+        "icon": "later",
+        "tone": "amber",
+        "text": "Impulso é decidir rápido, movido pela emoção."
+      },
+      {
+        "icon": "persuade",
+        "tone": "purple",
+        "text": "Anúncios usam urgência para reduzir a reflexão."
+      },
+      {
+        "icon": "choice",
+        "tone": "teal",
+        "text": "Amigos e grupos também influenciam escolhas."
+      },
+      {
+        "icon": "wait",
+        "tone": "coral",
+        "text": "Uma pausa curta ajuda a decidir com mais clareza."
+      }
+    ]
+  },
+  "theme": "pensando"
+}

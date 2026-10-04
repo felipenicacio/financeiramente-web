@@ -1,0 +1,112 @@
+{
+  "id": "c3-m05-l05",
+  "cycle": "c3",
+  "module": "m05",
+  "order": 5,
+  "title": "Trabalho, renda e o orçamento",
+  "headline": "Entender a origem da renda ajuda a planejar o orçamento com mais precisão.",
+  "objectives": [
+    "Relacionar o tipo de renda ao planejamento do orçamento",
+    "Revisar as diferenças entre os tipos de trabalho e renda"
+  ],
+  "competencies": ["F-D7-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF12",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Conhecer a origem da renda",
+      "body": "Saber se a renda é formal ou informal, frequente ou esporádica, ajuda a decidir quanto é seguro planejar gastar em cada mês, sem comprometer os meses seguintes.",
+      "illustration": "item-wallet"
+    },
+    {
+      "type": "ordering",
+      "prompt": "Ordene os passos para planejar com renda variável:",
+      "items": [
+        {
+          "id": "step1",
+          "label": "Anotar todas as entradas de renda do mês"
+        },
+        {
+          "id": "step2",
+          "label": "Separar o que é frequente do que é esporádico"
+        },
+        {
+          "id": "step3",
+          "label": "Guardar parte da renda nos meses melhores"
+        },
+        {
+          "id": "step4",
+          "label": "Ajustar os gastos nos meses de entrada menor"
+        }
+      ],
+      "correct": ["step1", "step2", "step3", "step4"],
+      "feedback": "Separar o tipo de renda e guardar parte nos meses melhores ajuda a atravessar os meses mais fracos."
+    },
+    {
+      "type": "quiz",
+      "title": "Revisando trabalho e renda",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Conhecer a origem da renda ajuda principalmente a",
+          "options": [
+            {
+              "id": "a",
+              "label": "Planejar os gastos de forma mais segura"
+            },
+            {
+              "id": "b",
+              "label": "Garantir que a renda nunca mude"
+            },
+            {
+              "id": "c",
+              "label": "Evitar qualquer tipo de trabalho esporádico"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Entender a renda ajuda a planejar gastos com mais segurança."
+        },
+        {
+          "id": "q2",
+          "kind": "explanation",
+          "prompt": "Separar renda frequente de esporádica é útil porque",
+          "options": [
+            {
+              "id": "a",
+              "label": "Cada tipo pede uma forma diferente de planejamento"
+            },
+            {
+              "id": "b",
+              "label": "Os dois tipos são exatamente iguais"
+            },
+            {
+              "id": "c",
+              "label": "Só a renda frequente deve ser considerada"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Cada tipo de renda tem características próprias que pedem atenção diferente."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Conhecer a origem da renda ajuda a planejar o orçamento com segurança.",
+    "Separar renda frequente de esporádica apoia esse planejamento."
+  ]
+}

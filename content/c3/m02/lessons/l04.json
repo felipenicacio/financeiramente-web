@@ -1,0 +1,78 @@
+{
+  "id": "c3-m02-l04",
+  "cycle": "c3",
+  "module": "m02",
+  "order": 4,
+  "title": "Comparando preços ao longo do tempo",
+  "headline": "Acompanhar o preço de um produto ao longo dos meses ajuda a perceber mudanças reais.",
+  "objectives": [
+    "Comparar preços do mesmo produto em momentos diferentes",
+    "Reconhecer a utilidade de acompanhar preços ao longo do tempo"
+  ],
+  "competencies": ["F-D4-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF03",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Um mesmo produto, vários momentos",
+      "body": "Anotar o preço de um produto em diferentes épocas do ano ajuda a enxergar padrões reais: o que varia por sazonalidade e o que mostra uma tendência de alta mais constante, ligada à inflação.",
+      "illustration": "item-notebook"
+    },
+    {
+      "type": "compare",
+      "prompt": "Em qual mês o mesmo produto custou mais?",
+      "target": "most",
+      "products": [
+        {
+          "id": "jan",
+          "label": "Preço em janeiro",
+          "price": 18,
+          "illustration": "item-pricetag"
+        },
+        {
+          "id": "jun",
+          "label": "Preço em junho",
+          "price": 22,
+          "illustration": "item-pricetag"
+        }
+      ],
+      "feedback": "O preço de junho foi maior: comparar meses ajuda a perceber essa mudança."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre acompanhar preços ao longo do tempo:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Anotar preços em épocas diferentes ajuda a perceber mudanças reais.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: o registro ao longo do tempo revela padrões."
+        },
+        {
+          "id": "s2",
+          "text": "Todo aumento de preço é sempre inflação.",
+          "isTrue": false,
+          "explanation": "Alguns aumentos são pontuais, ligados à sazonalidade, não só à inflação geral."
+        },
+        {
+          "id": "s3",
+          "text": "Comparar preços ajuda a planejar melhor uma compra futura.",
+          "isTrue": true,
+          "explanation": "Exato: conhecer o padrão de preços ajuda a escolher o melhor momento de comprar."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Comparar preços ao longo do tempo ajuda a perceber mudanças reais.",
+    "Nem todo aumento pontual é inflação geral."
+  ]
+}

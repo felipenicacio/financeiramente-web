@@ -1,0 +1,83 @@
+{
+  "id": "c3-m02-l02",
+  "cycle": "c3",
+  "module": "m02",
+  "order": 2,
+  "title": "O que é inflação",
+  "headline": "Inflação é o aumento geral dos preços ao longo do tempo.",
+  "objectives": [
+    "Entender o conceito de inflação",
+    "Diferenciar o aumento de um único preço do aumento geral de preços"
+  ],
+  "competencies": ["F-D4-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF01",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Não é só um produto",
+      "body": "Quando o preço de um único produto sobe, pode ser só uma mudança pontual. Inflação é diferente: é quando os preços, de forma geral, sobem ao longo do tempo em toda a economia.",
+      "illustration": "item-pricetag"
+    },
+    {
+      "type": "concepts",
+      "title": "Um aumento geral",
+      "intro": "Inflação afeta vários produtos e serviços ao mesmo tempo, não só um item isolado.",
+      "concepts": [
+        {
+          "id": "single",
+          "label": "Preço isolado",
+          "short": "Um produto",
+          "description": "O preço de um único item muda, por um motivo específico.",
+          "icon": "price",
+          "tone": "amber"
+        },
+        {
+          "id": "general",
+          "label": "Inflação",
+          "short": "Vários preços",
+          "description": "Os preços sobem de forma geral, afetando várias compras do dia a dia.",
+          "icon": "limit",
+          "tone": "coral"
+        }
+      ],
+      "keyIdea": "Inflação é um fenômeno amplo: afeta o orçamento como um todo, não só uma compra isolada.",
+      "keyIdeaIllustration": "item-notebook"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre inflação:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Inflação é o aumento geral dos preços ao longo do tempo.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: é um fenômeno amplo, não um único preço."
+        },
+        {
+          "id": "s2",
+          "text": "Inflação afeta só um produto por vez.",
+          "isTrue": false,
+          "explanation": "Inflação afeta vários produtos e serviços ao mesmo tempo."
+        },
+        {
+          "id": "s3",
+          "text": "A inflação pode mudar o orçamento de uma família ao longo do tempo.",
+          "isTrue": true,
+          "explanation": "Exato: com preços mais altos, o mesmo orçamento rende menos."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Inflação é o aumento geral dos preços, não de um único produto.",
+    "Ela afeta o orçamento de toda a família ao longo do tempo."
+  ]
+}

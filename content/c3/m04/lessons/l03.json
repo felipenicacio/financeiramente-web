@@ -1,0 +1,108 @@
+{
+  "id": "c3-m04-l03",
+  "cycle": "c3",
+  "module": "m04",
+  "order": 3,
+  "title": "Somando o custo total do parcelamento",
+  "headline": "Somar todas as parcelas mostra o custo real de uma compra parcelada.",
+  "objectives": [
+    "Calcular o custo total de uma compra parcelada",
+    "Comparar o total parcelado com o preço à vista"
+  ],
+  "competencies": ["F-D6-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF09",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Multiplicar para comparar",
+      "body": "Para saber o custo real de uma compra parcelada, é preciso multiplicar o valor de cada parcela pelo número de parcelas. Esse total, comparado ao preço à vista, mostra se há juros envolvidos.",
+      "illustration": "item-notebook"
+    },
+    {
+      "type": "compare",
+      "prompt": "Qual opção tem o custo total maior para o mesmo produto?",
+      "target": "most",
+      "products": [
+        {
+          "id": "avista",
+          "label": "À vista",
+          "price": 300,
+          "illustration": "item-pricetag"
+        },
+        {
+          "id": "parcelado",
+          "label": "10 parcelas de R$ 35",
+          "price": 350,
+          "illustration": "item-wallet"
+        }
+      ],
+      "feedback": "O parcelado soma R$ 350, mais caro do que os R$ 300 à vista: a diferença são os juros."
+    },
+    {
+      "type": "quiz",
+      "title": "Pensando no custo total",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "situation",
+          "prompt": "Um produto de R$ 300 à vista é oferecido em 12 parcelas de R$ 30. O custo total parcelado é",
+          "options": [
+            {
+              "id": "a",
+              "label": "R$ 360, mais caro do que à vista"
+            },
+            {
+              "id": "b",
+              "label": "R$ 300, igual ao preço à vista"
+            },
+            {
+              "id": "c",
+              "label": "R$ 250, mais barato do que à vista"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "12 parcelas de R$ 30 somam R$ 360, valor maior do que o preço à vista."
+        },
+        {
+          "id": "q2",
+          "kind": "decision",
+          "prompt": "Antes de parcelar, o cuidado mais importante é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Somar o total das parcelas e comparar com o preço à vista"
+            },
+            {
+              "id": "b",
+              "label": "Olhar só o número de parcelas"
+            },
+            {
+              "id": "c",
+              "label": "Escolher sempre o maior número de parcelas"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Somar as parcelas revela se o parcelamento tem juros embutidos."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Multiplicar parcela por quantidade mostra o custo total real.",
+    "Comparar o total parcelado com o preço à vista revela se há juros."
+  ]
+}

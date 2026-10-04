@@ -1,0 +1,104 @@
+{
+  "id": "c3-m06-l04",
+  "cycle": "c3",
+  "module": "m06",
+  "order": 4,
+  "title": "Risco e retorno",
+  "headline": "Um retorno maior costuma vir acompanhado de um risco maior de perda.",
+  "objectives": [
+    "Compreender a relação entre risco e retorno",
+    "Reconhecer que retorno alto sem risco é incomum"
+  ],
+  "competencies": ["F-D8-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF15",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Uma relação quase sempre presente",
+      "body": "Risco é a chance de perder parte ou todo um valor aplicado; retorno é o quanto esse valor pode crescer. De forma geral, opções com retorno maior costumam envolver um risco maior de perda.",
+      "illustration": "item-pricetag"
+    },
+    {
+      "type": "classify",
+      "prompt": "Classifique cada situação pelo risco envolvido:",
+      "categories": [
+        {
+          "id": "baixo",
+          "label": "Risco baixo",
+          "short": "Retorno estável",
+          "icon": "save",
+          "tone": "teal"
+        },
+        {
+          "id": "alto",
+          "label": "Risco alto",
+          "short": "Retorno instável",
+          "icon": "limit",
+          "tone": "coral"
+        }
+      ],
+      "items": [
+        {
+          "id": "jar",
+          "label": "Guardar numa opção de retorno baixo e estável",
+          "situation": "O valor cresce pouco, mas de forma previsível.",
+          "accepted": ["baixo"],
+          "feedback": "Retorno baixo e estável costuma andar junto com risco baixo.",
+          "illustration": "item-jar"
+        },
+        {
+          "id": "promise",
+          "label": "Aplicar numa oferta de retorno alto e garantido",
+          "situation": "A oferta promete ganho rápido e muito acima do comum, sem explicar como.",
+          "accepted": ["alto"],
+          "feedback": "Promessas de retorno alto e garantido escondem, quase sempre, um risco alto.",
+          "illustration": "item-pricetag"
+        },
+        {
+          "id": "mixed",
+          "label": "Aplicar numa opção que varia com o mercado",
+          "situation": "O valor pode subir ou cair, sem garantia de resultado fixo.",
+          "accepted": ["alto"],
+          "feedback": "Uma opção que varia conforme o mercado, sem garantia, envolve risco mais alto.",
+          "illustration": "item-coins"
+        }
+      ]
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre risco e retorno:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Retorno maior costuma vir acompanhado de risco maior.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: é uma relação comum em decisões financeiras."
+        },
+        {
+          "id": "s2",
+          "text": "Uma opção com retorno alto garantido e sem risco é comum de existir.",
+          "isTrue": false,
+          "explanation": "Esse tipo de oferta é raro e costuma ser um sinal de alerta."
+        },
+        {
+          "id": "s3",
+          "text": "Entender essa relação ajuda a avaliar melhor uma oferta de investimento.",
+          "isTrue": true,
+          "explanation": "Exato: conhecer a relação entre risco e retorno apoia decisões mais conscientes."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Retorno maior costuma vir acompanhado de risco maior.",
+    "Uma oferta sem risco e com retorno alto garantido é rara e pede atenção."
+  ]
+}

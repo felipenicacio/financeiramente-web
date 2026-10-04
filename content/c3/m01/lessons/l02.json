@@ -1,0 +1,168 @@
+{
+  "id": "c3-m01-l02",
+  "cycle": "c3",
+  "module": "m01",
+  "order": 2,
+  "title": "Gatilhos que aceleram a decisão",
+  "headline": "Urgência, escassez e novidade são gatilhos comuns usados para acelerar uma compra.",
+  "objectives": [
+    "Reconhecer gatilhos comuns usados em vendas",
+    "Relacionar cada gatilho a uma estratégia de venda"
+  ],
+  "competencies": ["F-D1-C3-01"],
+  "sources": [
+    {
+      "source": "MC",
+      "reference": "D1",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "concepts",
+      "title": "Três gatilhos comuns",
+      "intro": "Algumas estratégias de venda são feitas para acelerar a decisão de compra.",
+      "concepts": [
+        {
+          "id": "urgency",
+          "label": "Urgência",
+          "short": "“Só hoje”",
+          "description": "Cria a sensação de que é preciso decidir rápido, sem tempo para pensar.",
+          "icon": "later",
+          "tone": "coral"
+        },
+        {
+          "id": "scarcity",
+          "label": "Escassez",
+          "short": "“Últimas unidades”",
+          "description": "Sugere que o produto vai acabar, aumentando a pressa de decidir.",
+          "icon": "limit",
+          "tone": "amber"
+        },
+        {
+          "id": "novelty",
+          "label": "Novidade",
+          "short": "“Lançamento”",
+          "description": "Desperta curiosidade só por ser novo, mesmo sem necessidade real.",
+          "icon": "ad",
+          "tone": "purple"
+        }
+      ],
+      "keyIdea": "Reconhecer um gatilho não significa ignorá-lo: significa decidir com mais consciência.",
+      "keyIdeaIllustration": "item-magnifier"
+    },
+    {
+      "type": "classify",
+      "prompt": "Identifique o gatilho usado em cada frase de anúncio.",
+      "categories": [
+        {
+          "id": "urgency",
+          "label": "Urgência",
+          "short": "Pressa",
+          "icon": "later",
+          "tone": "coral"
+        },
+        {
+          "id": "scarcity",
+          "label": "Escassez",
+          "short": "Vai acabar",
+          "icon": "limit",
+          "tone": "amber"
+        },
+        {
+          "id": "novelty",
+          "label": "Novidade",
+          "short": "É novo",
+          "icon": "ad",
+          "tone": "purple"
+        }
+      ],
+      "items": [
+        {
+          "id": "today",
+          "label": "“Promoção válida só até meia-noite”",
+          "situation": "O anúncio dá um prazo bem curto para decidir.",
+          "accepted": ["urgency"],
+          "feedback": "Um prazo curto é um gatilho clássico de urgência.",
+          "illustration": "story-ad-claim"
+        },
+        {
+          "id": "last",
+          "label": "“Restam só três unidades no estoque”",
+          "situation": "O anúncio avisa que o produto está quase acabando.",
+          "accepted": ["scarcity"],
+          "feedback": "A ideia de que vai acabar é um gatilho de escassez.",
+          "illustration": "story-ad-loud"
+        },
+        {
+          "id": "new",
+          "label": "“Chegou a versão mais nova, nunca vista antes”",
+          "situation": "O anúncio destaca que é algo totalmente novo.",
+          "accepted": ["novelty"],
+          "feedback": "Destacar que é novo desperta curiosidade: gatilho de novidade.",
+          "illustration": "story-ad-tablet"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Pensando sobre gatilhos",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "explanation",
+          "prompt": "Por que reconhecer um gatilho de venda é útil?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Ajuda a decidir com mais consciência, sem se deixar levar só pela pressa"
+            },
+            {
+              "id": "b",
+              "label": "Faz a pessoa nunca mais comprar nada"
+            },
+            {
+              "id": "c",
+              "label": "Não muda em nada a forma de decidir"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Reconhecer o gatilho dá espaço para pensar antes de decidir."
+        },
+        {
+          "id": "q2",
+          "kind": "recognition",
+          "prompt": "A frase “últimas unidades” é um exemplo de gatilho de",
+          "options": [
+            {
+              "id": "a",
+              "label": "Escassez"
+            },
+            {
+              "id": "b",
+              "label": "Novidade"
+            },
+            {
+              "id": "c",
+              "label": "Nenhum gatilho"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "A ideia de que algo vai acabar é a base do gatilho de escassez."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Urgência, escassez e novidade são gatilhos comuns usados para vender.",
+    "Reconhecer um gatilho ajuda a decidir com mais consciência."
+  ]
+}

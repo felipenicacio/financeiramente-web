@@ -1,0 +1,64 @@
+{
+  "id": "c3-m06-l02",
+  "cycle": "c3",
+  "module": "m06",
+  "order": 2,
+  "title": "Reconhecendo sinais de golpe",
+  "headline": "Alguns sinais ajudam a reconhecer uma possível tentativa de golpe.",
+  "objectives": [
+    "Reconhecer sinais gerais de alerta relacionados a golpes financeiros",
+    "Entender a importância de verificar antes de decidir"
+  ],
+  "competencies": ["F-D8-C3-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF14",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 5,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Sinais que merecem atenção",
+      "body": "Promessas de lucro garantido, pressa para decidir na hora e pedidos de dados pessoais ou senhas são sinais que merecem atenção. Verificar com calma, antes de qualquer decisão, é uma forma importante de proteção.",
+      "illustration": "item-tablet"
+    },
+    {
+      "type": "reflection",
+      "state": "reflect",
+      "text": "Desconfiar não é falta de educação: é cuidado.",
+      "body": "Parar para verificar antes de decidir protege o seu dinheiro e as suas informações."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre sinais de golpe:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Promessas de lucro garantido e muito rápido são um sinal de alerta.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: ganhos garantidos e imediatos raramente existem de verdade."
+        },
+        {
+          "id": "s2",
+          "text": "Pressa para decidir na hora é um sinal de segurança.",
+          "isTrue": false,
+          "explanation": "Pressa excessiva é, na verdade, um sinal de alerta comum em golpes."
+        },
+        {
+          "id": "s3",
+          "text": "Parar para verificar antes de decidir é uma forma de se proteger.",
+          "isTrue": true,
+          "explanation": "Exato: checar com calma ajuda a evitar decisões precipitadas."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Promessas de lucro garantido e pressa para decidir são sinais de alerta.",
+    "Verificar com calma antes de decidir é uma forma de proteção."
+  ]
+}
