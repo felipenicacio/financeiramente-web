@@ -1,10 +1,15 @@
+import { act } from 'react';
+import { hydrateRoot } from 'react-dom/client';
+import { renderToString } from 'react-dom/server';
+
 import { cleanup, render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import { LessonRunner } from '@/components/learning/LessonRunner';
 import { ModuleClosing } from '@/components/learning/ModuleClosing';
 import type { Lesson, LessonObject, Module } from '@/lib/content/types';
+import { resetSessionSeedForTests } from '@/lib/learning/useSessionSeed';
 import { SessionProvider } from '@/lib/session/SessionProvider';
 
 /**
@@ -283,7 +288,100 @@ describe('quiz: a correção é pelo ID da alternativa, nunca pela posição', (
   });
 });
 
+describe('quiz: identidade da tela (lição + objeto + pergunta) e hidratação', () => {
+  const makeSingleQuestionQuiz = (): LessonObject => ({
+    type: 'quiz',
+    questions: [
+      {
+        id: 'q1',
+        kind: 'recognition' as const,
+        prompt: 'Pergunta repetida entre lições',
+        options: ['Zebra', 'Mapa', 'Girafa', 'Navio'].map((label, i) => ({
+          id: `opt${i}`,
+          label,
+        })),
+        answer: { type: 'single' as const, correctOptionId: 'opt0' },
+        explanation: '.',
+      },
+    ],
+  });
+
+  it('duas perguntas de id "q1" em lições diferentes não ficam acopladas à mesma ordem', () => {
+    // Semear só por question.id ("q1") faria toda pergunta "q1" do
+    // currículo cair sempre na mesma ordem visual — o mesmo tipo de
+    // padrão previsível que a auditoria encontrou nos quizzes. Fixamos
+    // Math.random (usado só para gerar a sessionSeed) para garantir que a
+    // única variável entre as duas renderizações seja o id da lição.
+    resetSessionSeedForTests();
+    const randomSpy = vi.spyOn(Math, 'random').mockReturnValue(0.42);
+
+    const renderAndCaptureOrder = (lessonId: string) => {
+      render(
+        <LessonRunner
+          cycle="c1"
+          moduleId="m01"
+          stepLabels={['Lição', 'Fechamento']}
+          currentStep={0}
+          lesson={{ ...lessonWith([makeSingleQuestionQuiz()]), id: lessonId }}
+          next={{ href: '/proxima/', label: 'Próxima lição' }}
+        />,
+      );
+      const order = screen
+        .getAllByRole('button')
+        .map((b) => /Zebra|Mapa|Girafa|Navio/.exec(b.textContent ?? '')?.[0])
+        .filter((label): label is string => Boolean(label));
+      cleanup();
+      return order;
+    };
+
+    const orderLessonA = renderAndCaptureOrder('c1-m01-l01');
+    const orderLessonB = renderAndCaptureOrder('c2-m03-l04');
+
+    randomSpy.mockRestore();
+    expect(orderLessonA).not.toEqual(orderLessonB);
+  });
+
+  it('a ordem embaralhada do quiz não gera divergência de hidratação (React não acusa erro)', () => {
+    resetSessionSeedForTests();
+    const lesson = lessonWith([makeSingleQuestionQuiz()]);
+    const element = (
+      <LessonRunner
+        cycle="c1"
+        moduleId="m01"
+        stepLabels={['Lição', 'Fechamento']}
+        currentStep={0}
+        lesson={lesson}
+        next={{ href: '/proxima/', label: 'Próxima lição' }}
+      />
+    );
+
+    // "Servidor": o mesmo HTML que o build estático geraria.
+    const html = renderToString(element);
+    const container = document.createElement('div');
+    container.innerHTML = html;
+    document.body.appendChild(container);
+
+    const consoleErrors: unknown[][] = [];
+    const errorSpy = vi.spyOn(console, 'error').mockImplementation((...args: unknown[]) => {
+      consoleErrors.push(args);
+    });
+
+    // "Cliente": hidrata sobre o HTML do servidor. Se a ordem calculada
+    // aqui divergir da acima, o React loga um erro de hidratação.
+    act(() => {
+      hydrateRoot(container, element);
+    });
+
+    errorSpy.mockRestore();
+    document.body.removeChild(container);
+
+    expect(consoleErrors).toHaveLength(0);
+  });
+});
+
 describe('ordering: seleção e ordenação reversíveis antes da confirmação', () => {
+  const confirmar = () => screen.getByRole('button', { name: /confirmar ordem/i });
+
   it('estado inicial: nenhum item selecionado', () => {
     setup([ordering]);
     expect(screen.getByText('Ordene os passos')).toBeInTheDocument();
@@ -291,7 +389,7 @@ describe('ordering: seleção e ordenação reversíveis antes da confirmação'
     expect(continuar()).toBeDisabled();
   });
 
-  it('selecionar A, B, C numera 1, 2, 3 e libera o avanço', async () => {
+  it('selecionar A, B, C numera 1, 2, 3, mas NÃO libera o avanço antes de confirmar', async () => {
     const user = setup([ordering]);
     await user.click(screen.getByRole('button', { name: 'Passo A' }));
     await user.click(screen.getByRole('button', { name: 'Passo B' }));
@@ -306,7 +404,9 @@ describe('ordering: seleção e ordenação reversíveis antes da confirmação'
       expect.stringContaining('2'),
       expect.stringContaining('3'),
     ]);
-    expect(continuar()).toBeEnabled();
+    // Sequência completa, mas ainda não confirmada: "Continuar" trava.
+    expect(continuar()).toBeDisabled();
+    expect(confirmar()).toBeInTheDocument();
   });
 
   it('desfazer um item do meio retira da sequência e renumera os seguintes', async () => {
@@ -328,7 +428,20 @@ describe('ordering: seleção e ordenação reversíveis antes da confirmação'
     expect(screen.getByRole('button', { name: 'Passo B' })).toBeInTheDocument();
   });
 
-  it('readicionar o item removido vai para o fim da sequência', async () => {
+  it('remover um item depois de completar a sequência mantém "Continuar" desabilitado', async () => {
+    const user = setup([ordering]);
+    await user.click(screen.getByRole('button', { name: 'Passo A' }));
+    await user.click(screen.getByRole('button', { name: 'Passo B' }));
+    await user.click(screen.getByRole('button', { name: 'Passo C' }));
+    expect(continuar()).toBeDisabled();
+    // Completou e ainda não confirmou — remover um item não pode deixar
+    // "Continuar" destravado por engano (bug corrigido nesta rodada).
+    await user.click(screen.getByRole('button', { name: /Retirar Passo B/ }));
+    expect(continuar()).toBeDisabled();
+    expect(screen.queryByRole('button', { name: /confirmar ordem/i })).not.toBeInTheDocument();
+  });
+
+  it('readicionar o item removido vai para o fim da sequência e permite confirmar de novo', async () => {
     const user = setup([ordering]);
     await user.click(screen.getByRole('button', { name: 'Passo A' }));
     await user.click(screen.getByRole('button', { name: 'Passo B' }));
@@ -343,6 +456,34 @@ describe('ordering: seleção e ordenação reversíveis antes da confirmação'
       expect.stringContaining('Passo C'),
       expect.stringContaining('Passo B'),
     ]);
+    expect(continuar()).toBeDisabled();
+    expect(confirmar()).toBeInTheDocument();
+  });
+
+  it('confirmar chama onComplete e libera "Continuar"', async () => {
+    const user = setup([ordering]);
+    await user.click(screen.getByRole('button', { name: 'Passo A' }));
+    await user.click(screen.getByRole('button', { name: 'Passo B' }));
+    await user.click(screen.getByRole('button', { name: 'Passo C' }));
+    expect(continuar()).toBeDisabled();
+    await user.click(confirmar());
+    expect(continuar()).toBeEnabled();
+  });
+
+  it('depois de confirmar, não é possível mudar a sequência', async () => {
+    const user = setup([ordering]);
+    await user.click(screen.getByRole('button', { name: 'Passo A' }));
+    await user.click(screen.getByRole('button', { name: 'Passo B' }));
+    await user.click(screen.getByRole('button', { name: 'Passo C' }));
+    await user.click(confirmar());
+
+    // O botão de confirmação some; os itens da sequência ficam travados.
+    expect(screen.queryByRole('button', { name: /confirmar ordem/i })).not.toBeInTheDocument();
+    const retirarA = screen.getByRole('button', { name: /Retirar Passo A/ });
+    expect(retirarA).toBeDisabled();
+    await user.click(retirarA);
+    const list = screen.getByRole('list');
+    expect(within(list).getAllByRole('listitem')).toHaveLength(3);
     expect(continuar()).toBeEnabled();
   });
 

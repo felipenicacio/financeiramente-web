@@ -83,6 +83,7 @@
   "rememberTitle": "Para lembrar",
   "orderingPick": "Toque na ordem que você acha certa.",
   "orderingRemove": "Retirar {label} da sequência",
+  "orderingConfirm": "Confirmar ordem",
   "orderingRight": "A ordem era assim",
   "trueFalseCounter": "Respondidas: {current} de {total}",
   "isTrue": "Verdadeiro",

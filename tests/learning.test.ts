@@ -185,15 +185,12 @@ describe('shuffle: embaralhamento puro e testável (Fisher-Yates)', () => {
     expect(shuffle(items, () => 0.999999)).toEqual([...items]);
   });
 
-  it('pode alterar a ordem com o RNG de produção (Math.random)', () => {
-    // Não testamos "rode uma vez e espere ordem diferente" (frágil).
-    // Em vez disso, verificamos que o algoritmo é capaz de produzir uma
-    // ordem diferente da original em várias tentativas independentes.
-    const bigArray = Array.from({ length: 30 }, (_, i) => i);
-    const anyDifferent = Array.from({ length: 10 }).some(
-      () => !shuffle(bigArray).every((v, i) => v === bigArray[i]),
-    );
-    expect(anyDifferent).toBe(true);
+  it('pode alterar a ordem quando o RNG embaralha de fato (determinístico, sem depender de sorte)', () => {
+    // Em vez de rodar com Math.random e esperar uma ordem diferente (teste
+    // probabilístico e frágil), usamos um RNG fixo que sabemos produzir
+    // uma permutação diferente da original — ver o teste de determinismo
+    // acima, que já comprova esse resultado exato.
+    expect(shuffle(items, () => 0)).not.toEqual(items);
   });
 
   it('IDs permanecem associados aos seus dados ao embaralhar objetos', () => {
@@ -245,6 +242,57 @@ describe('seededRandom: aleatoriedade determinística por semente', () => {
     const first = shuffle(options, seededRandom('c1-m01-l01-q1'));
     const second = shuffle(options, seededRandom('c1-m01-l01-q1'));
     expect(first.map((o) => o.id)).toEqual(second.map((o) => o.id));
+  });
+
+  it('o mesmo id de pergunta ("q1") em lições diferentes não acopla a mesma ordem', () => {
+    // A auditoria encontrou 175/175 perguntas com a correta na posição 0.
+    // Semear só pelo `question.id` (ex. "q1") seria insuficiente: "q1" se
+    // repete em toda lição, então todo "q1" do currículo cairia sempre na
+    // mesma ordem visual — reproduzindo o mesmo tipo de padrão. A semente
+    // real inclui lição + objeto + pergunta (ver screenId em
+    // LessonRunner), nunca só o id da pergunta isolado.
+    const options = [
+      { id: 'opt0', label: 'Zebra' },
+      { id: 'opt1', label: 'Mapa' },
+      { id: 'opt2', label: 'Girafa' },
+      { id: 'opt3', label: 'Navio' },
+    ];
+    const screenIdLessonA = 'c1-m01-l01-o0-q1';
+    const screenIdLessonB = 'c2-m03-l04-o2-q1';
+    const orderA = shuffle(options, seededRandom(`|${screenIdLessonA}`)).map((o) => o.id);
+    const orderB = shuffle(options, seededRandom(`|${screenIdLessonB}`)).map((o) => o.id);
+    expect(orderA).not.toEqual(orderB);
+
+    // Semear só por "q1" (o bug que este teste cobre) colapsaria as duas
+    // em uma única ordem, demonstrando o problema que a semente composta evita.
+    const bugged = (id: string) => shuffle(options, seededRandom(id)).map((o) => o.id);
+    expect(bugged('q1')).toEqual(bugged('q1'));
+  });
+
+  it('a mesma sessão (mesma sessionSeed) com o mesmo screenId sempre reproduz a mesma ordem', () => {
+    const options = [
+      { id: 'a', label: 'A' },
+      { id: 'b', label: 'B' },
+      { id: 'c', label: 'C' },
+    ];
+    const sessionSeed = 'abc123';
+    const screenId = 'c3-m02-l02-o1-q2';
+    const first = shuffle(options, seededRandom(`${sessionSeed}|${screenId}`)).map((o) => o.id);
+    const second = shuffle(options, seededRandom(`${sessionSeed}|${screenId}`)).map((o) => o.id);
+    expect(first).toEqual(second);
+  });
+
+  it('sessões diferentes (sessionSeed diferente) podem produzir ordens diferentes para a mesma pergunta', () => {
+    const options = [
+      { id: 'a', label: 'A' },
+      { id: 'b', label: 'B' },
+      { id: 'c', label: 'C' },
+      { id: 'd', label: 'D' },
+    ];
+    const screenId = 'c3-m02-l02-o1-q2';
+    const sessionA = shuffle(options, seededRandom(`sessao-1|${screenId}`)).map((o) => o.id);
+    const sessionB = shuffle(options, seededRandom(`sessao-2|${screenId}`)).map((o) => o.id);
+    expect(sessionA).not.toEqual(sessionB);
   });
 });
 

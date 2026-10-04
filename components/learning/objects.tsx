@@ -488,21 +488,34 @@ export function OrderingView({ object, onComplete }: { object: OrderingObject } 
     return shuffle(object.items, seededRandom(seed));
   }, [object]);
   const [picked, setPicked] = useState<string[]>([]);
+  const [confirmed, setConfirmed] = useState(false);
   const done = picked.length === object.items.length;
-  const correct = done && picked.every((id, i) => id === object.correct[i]);
+  const correct = confirmed && picked.every((id, i) => id === object.correct[i]);
 
   // Toggle: clicar num item do banco adiciona ao fim da sequência; clicar
-  // num item já escolhido o retira e recalcula a numeração dos que ficaram.
-  // Reversível em qualquer momento antes ou depois de completar a
-  // sequência — não há "confirmar" separado, então desfazer mesmo após
-  // completar volta a tela ao estado "em andamento" (sem feedback).
+  // num item já escolhido (e ainda não confirmado) o retira e recalcula a
+  // numeração dos que ficaram. Tudo reversível — selecionar, desmarcar,
+  // reconstruir a ordem — até o usuário confirmar explicitamente. Só a
+  // confirmação chama `onComplete` e trava a tela; completar a sequência
+  // por si só (picked.length === items.length) NÃO libera o avanço nem
+  // mostra feedback, exatamente para não destravar "Continuar" antes da
+  // hora e depois deixá-lo destravado mesmo se o usuário desfizer um item.
   const pick = (id: string) => {
-    const next = [...picked, id];
-    setPicked(next);
-    if (next.length === object.items.length) onComplete();
+    if (confirmed) return;
+    setPicked((prev) => [...prev, id]);
   };
   const unpick = (id: string) => {
+    if (confirmed) return;
     setPicked((prev) => prev.filter((pickedId) => pickedId !== id));
+  };
+  const confirm = () => {
+    if (!done || confirmed) return;
+    setConfirmed(true);
+    onComplete();
+  };
+  const tryAnother = () => {
+    setConfirmed(false);
+    setPicked([]);
   };
 
   return (
@@ -522,8 +535,9 @@ export function OrderingView({ object, onComplete }: { object: OrderingObject } 
                   type="button"
                   aria-pressed={true}
                   aria-label={t('orderingRemove', { label: item.label })}
+                  disabled={confirmed}
                   onClick={() => unpick(id)}
-                  className="flex min-h-11 w-full items-center gap-3 rounded-card bg-accent-soft p-3 text-left ring-1 ring-inset ring-accent-tint transition-[box-shadow,background-color] enabled:active:scale-[0.99]"
+                  className="flex min-h-11 w-full items-center gap-3 rounded-card bg-accent-soft p-3 text-left ring-1 ring-inset ring-accent-tint transition-[box-shadow,background-color] enabled:active:scale-[0.99] disabled:cursor-default disabled:opacity-80"
                 >
                   <span className="grid size-8 shrink-0 place-items-center rounded-full bg-accent-strong text-caption font-bold text-white">
                     {index + 1}
@@ -532,7 +546,9 @@ export function OrderingView({ object, onComplete }: { object: OrderingObject } 
                     <Illustration name={item.illustration} className="size-9" />
                   ) : null}
                   <span className="min-w-0 flex-1 font-medium">{item.label}</span>
-                  <Icon name="close" className="size-4 shrink-0 text-ink-muted" />
+                  {!confirmed ? (
+                    <Icon name="close" className="size-4 shrink-0 text-ink-muted" />
+                  ) : null}
                 </button>
               </li>
             );
@@ -558,6 +574,14 @@ export function OrderingView({ object, onComplete }: { object: OrderingObject } 
               />
             ))}
         </div>
+      ) : !confirmed ? (
+        <button
+          type="button"
+          onClick={confirm}
+          className="inline-flex min-h-13 items-center justify-center gap-2 self-start rounded-full bg-accent-strong px-6 text-lead font-semibold text-white transition-transform active:scale-[0.99]"
+        >
+          {t('orderingConfirm')}
+        </button>
       ) : (
         <FeedbackCard
           tone={correct ? 'positive' : 'guide'}
@@ -575,10 +599,10 @@ export function OrderingView({ object, onComplete }: { object: OrderingObject } 
           }
         />
       )}
-      {done ? (
+      {confirmed ? (
         <button
           type="button"
-          onClick={() => setPicked([])}
+          onClick={tryAnother}
           className="self-start text-label font-semibold text-accent-strong underline-offset-4 hover:underline"
         >
           {t('tryAnother')}
