@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react';
 
 import { ConceptIcon, Illustration, type SceneLabels } from '@/components/illustrations';
+import { Icon } from '@/components/ui/Icon';
 import type {
   AffordObject,
   ChangeObject,
@@ -26,6 +27,8 @@ import {
   fillTemplate,
   formatMoney,
   isAcceptedCategory,
+  seededRandom,
+  shuffle,
   storyMoneyLabels,
 } from '@/lib/learning';
 import { EconominhoGuide } from '@/components/econominho/EconominhoGuide';
@@ -474,14 +477,50 @@ export function ChoiceView({ object, onComplete }: { object: ChoiceObject } & Do
 // ---------- ordenação ----------
 
 export function OrderingView({ object, onComplete }: { object: OrderingObject } & Done) {
-  // Ordem embaralhada de forma estável (sem depender de aleatório no build).
+  // Ordem embaralhada de apresentação do banco de itens: estável enquanto a
+  // tela estiver ativa (a tela é remontada por `key` a cada nova atividade,
+  // o que gera um novo embaralhamento). Nunca ordena pelo `id` nem por
+  // qualquer critério que possa revelar a sequência correta. Semeada pelo
+  // conteúdo do próprio objeto (estável entre o HTML do build estático e a
+  // hidratação no cliente, o que evita erro de hidratação do React).
   const shuffled = useMemo(() => {
-    const items = [...object.items];
-    return items.sort((a, b) => (a.id < b.id ? 1 : -1));
-  }, [object.items]);
+    const seed = object.prompt + object.items.map((item) => item.id).join('|');
+    return shuffle(object.items, seededRandom(seed));
+  }, [object]);
   const [picked, setPicked] = useState<string[]>([]);
+  const [confirmed, setConfirmed] = useState(false);
   const done = picked.length === object.items.length;
-  const correct = done && picked.every((id, i) => id === object.correct[i]);
+  const correct = confirmed && picked.every((id, i) => id === object.correct[i]);
+
+  // Toggle: clicar num item do banco adiciona ao fim da sequência; clicar
+  // num item já escolhido (e ainda não confirmado) o retira e recalcula a
+  // numeração dos que ficaram. Tudo reversível — selecionar, desmarcar,
+  // reconstruir a ordem — até o usuário confirmar explicitamente. Só a
+  // confirmação chama `onComplete` e trava a tela; completar a sequência
+  // por si só (picked.length === items.length) NÃO libera o avanço nem
+  // mostra feedback, exatamente para não destravar "Continuar" antes da
+  // hora e depois deixá-lo destravado mesmo se o usuário desfizer um item.
+  const pick = (id: string) => {
+    if (confirmed) return;
+    setPicked((prev) => [...prev, id]);
+  };
+  const unpick = (id: string) => {
+    if (confirmed) return;
+    setPicked((prev) => prev.filter((pickedId) => pickedId !== id));
+  };
+  const confirm = () => {
+    if (!done || confirmed) return;
+    setConfirmed(true);
+    onComplete();
+  };
+  // Sem "tentar outra" aqui: diferente de outras atividades, confirmar o
+  // ordering já chamou `onComplete` e destravou "Continuar" no LessonRunner.
+  // Reabrir a edição (voltando `confirmed`/`picked`) deixaria o pai destravado
+  // com a atividade de volta a incompleta — inconsistente — e não existe hoje
+  // um `onIncomplete` para avisar o pai do recuo. Antes de confirmar a
+  // atividade já é 100% reversível (selecionar, desmarcar, reconstruir a
+  // ordem quantas vezes quiser); depois de confirmar, o resultado fica
+  // congelado de propósito.
 
   return (
     <section className="flex flex-col gap-5">
@@ -490,25 +529,36 @@ export function OrderingView({ object, onComplete }: { object: OrderingObject } 
       ) : null}
       <ScreenTitle>{object.prompt}</ScreenTitle>
 
-      <ol className="flex flex-col gap-2">
-        {picked.map((id, index) => {
-          const item = object.items.find((i) => i.id === id)!;
-          return (
-            <li
-              key={id}
-              className="flex items-center gap-3 rounded-card bg-accent-soft p-3 ring-1 ring-inset ring-accent-tint"
-            >
-              <span className="grid size-8 shrink-0 place-items-center rounded-full bg-accent-strong text-caption font-bold text-white">
-                {index + 1}
-              </span>
-              {item.illustration ? (
-                <Illustration name={item.illustration} className="size-9" />
-              ) : null}
-              <span className="font-medium">{item.label}</span>
-            </li>
-          );
-        })}
-      </ol>
+      {picked.length > 0 ? (
+        <ol className="flex flex-col gap-2">
+          {picked.map((id, index) => {
+            const item = object.items.find((i) => i.id === id)!;
+            return (
+              <li key={id}>
+                <button
+                  type="button"
+                  aria-pressed={true}
+                  aria-label={t('orderingRemove', { label: item.label })}
+                  disabled={confirmed}
+                  onClick={() => unpick(id)}
+                  className="flex min-h-11 w-full items-center gap-3 rounded-card bg-accent-soft p-3 text-left ring-1 ring-inset ring-accent-tint transition-[box-shadow,background-color] enabled:active:scale-[0.99] disabled:cursor-default disabled:opacity-80"
+                >
+                  <span className="grid size-8 shrink-0 place-items-center rounded-full bg-accent-strong text-caption font-bold text-white">
+                    {index + 1}
+                  </span>
+                  {item.illustration ? (
+                    <Illustration name={item.illustration} className="size-9" />
+                  ) : null}
+                  <span className="min-w-0 flex-1 font-medium">{item.label}</span>
+                  {!confirmed ? (
+                    <Icon name="close" className="size-4 shrink-0 text-ink-muted" />
+                  ) : null}
+                </button>
+              </li>
+            );
+          })}
+        </ol>
+      ) : null}
 
       {!done ? (
         <div className="flex flex-col gap-3">
@@ -524,14 +574,18 @@ export function OrderingView({ object, onComplete }: { object: OrderingObject } 
                     <Illustration name={item.illustration} className="size-10" />
                   ) : undefined
                 }
-                onSelect={() => {
-                  const next = [...picked, item.id];
-                  setPicked(next);
-                  if (next.length === object.items.length) onComplete();
-                }}
+                onSelect={() => pick(item.id)}
               />
             ))}
         </div>
+      ) : !confirmed ? (
+        <button
+          type="button"
+          onClick={confirm}
+          className="inline-flex min-h-13 items-center justify-center gap-2 self-start rounded-full bg-accent-strong px-6 text-lead font-semibold text-white transition-transform active:scale-[0.99]"
+        >
+          {t('orderingConfirm')}
+        </button>
       ) : (
         <FeedbackCard
           tone={correct ? 'positive' : 'guide'}
@@ -549,15 +603,6 @@ export function OrderingView({ object, onComplete }: { object: OrderingObject } 
           }
         />
       )}
-      {done ? (
-        <button
-          type="button"
-          onClick={() => setPicked([])}
-          className="self-start text-label font-semibold text-accent-strong underline-offset-4 hover:underline"
-        >
-          {t('tryAnother')}
-        </button>
-      ) : null}
     </section>
   );
 }

@@ -1,10 +1,15 @@
+import { act } from 'react';
+import { hydrateRoot } from 'react-dom/client';
+import { renderToString } from 'react-dom/server';
+
 import { cleanup, render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import { LessonRunner } from '@/components/learning/LessonRunner';
 import { ModuleClosing } from '@/components/learning/ModuleClosing';
 import type { Lesson, LessonObject, Module } from '@/lib/content/types';
+import { resetSessionSeedForTests } from '@/lib/learning/useSessionSeed';
 import { SessionProvider } from '@/lib/session/SessionProvider';
 
 /**
@@ -55,6 +60,40 @@ const classify: LessonObject = {
     feedback: 'Retorno.',
     illustration: money.illustration,
   })),
+};
+
+/** Quiz com a alternativa correta em posições variadas (nunca a primeira). */
+const quizWithCorrectAt = (correctIndex: number): LessonObject => {
+  const labels = ['Zebra', 'Mapa', 'Girafa', 'Navio'];
+  return {
+    type: 'quiz',
+    questions: [
+      {
+        id: 'posq',
+        kind: 'recognition' as const,
+        prompt: 'Pergunta de posição',
+        options: labels.map((label, i) => ({
+          id: `opt${i}`,
+          label,
+          feedback: i === correctIndex ? 'Boa escolha.' : 'Pense de novo.',
+        })),
+        answer: { type: 'single' as const, correctOptionId: `opt${correctIndex}` },
+        explanation: 'Explicação da pergunta.',
+      },
+    ],
+  };
+};
+
+const ordering: LessonObject = {
+  type: 'ordering',
+  prompt: 'Ordene os passos',
+  items: [
+    { id: 'a', label: 'Passo A' },
+    { id: 'b', label: 'Passo B' },
+    { id: 'c', label: 'Passo C' },
+  ],
+  correct: ['a', 'b', 'c'],
+  feedback: 'Retorno da ordenação.',
 };
 
 const trueFalse = (id: string): LessonObject => ({
@@ -188,6 +227,305 @@ describe('LessonRunner: estado não vaza entre telas', () => {
 
   it('o primeiro objeto interativo mantém "Continuar" travado até responder', () => {
     setup([choice('P')]);
+    expect(continuar()).toBeDisabled();
+  });
+});
+
+describe('quiz: a correção é pelo ID da alternativa, nunca pela posição', () => {
+  it.each([0, 1, 2, 3])(
+    'alternativa correta originalmente na posição %i: acertar marca "chosen-ok"',
+    async (correctIndex) => {
+      const user = setup([quizWithCorrectAt(correctIndex)]);
+      const labels = ['Zebra', 'Mapa', 'Girafa', 'Navio'];
+      await user.click(screen.getByRole('button', { name: labels[correctIndex] }));
+      expect(screen.getByText(/^Boa escolha\./)).toBeInTheDocument();
+      expect(continuar()).toBeEnabled();
+    },
+  );
+
+  it('escolher a alternativa errada mostra o feedback dela, não o da correta', async () => {
+    const user = setup([quizWithCorrectAt(2)]);
+    await user.click(screen.getByRole('button', { name: 'Zebra' }));
+    expect(screen.getByText(/Pense de novo\./)).toBeInTheDocument();
+    expect(screen.queryByText(/^Boa escolha\./)).not.toBeInTheDocument();
+  });
+
+  it('a ordem de apresentação não muda depois que o usuário responde', async () => {
+    const user = setup([quizWithCorrectAt(1)]);
+    const labelOrder = () =>
+      screen
+        .getAllByRole('button')
+        .map((b) => /Zebra|Mapa|Girafa|Navio/.exec(b.textContent ?? '')?.[0])
+        .filter((label): label is string => Boolean(label));
+    const before = labelOrder();
+    await user.click(screen.getByRole('button', { name: 'Mapa' }));
+    expect(labelOrder()).toEqual(before);
+  });
+
+  it('nova pergunta (tela nova) pode receber uma nova ordem, mas a correção continua pelo ID', async () => {
+    const quizMultiplo: LessonObject = {
+      type: 'quiz',
+      questions: [0, 1, 2, 3].map((correctIndex) => ({
+        id: `q${correctIndex}`,
+        kind: 'recognition' as const,
+        prompt: `Pergunta ${correctIndex}`,
+        options: ['Zebra', 'Mapa', 'Girafa', 'Navio'].map((label, i) => ({
+          id: `opt${i}`,
+          label,
+        })),
+        answer: { type: 'single' as const, correctOptionId: `opt${correctIndex}` },
+        explanation: '.',
+      })),
+    };
+    const user = setup([quizMultiplo]);
+    const labels = ['Zebra', 'Mapa', 'Girafa', 'Navio'];
+    for (const correctIndex of [0, 1, 2, 3]) {
+      await user.click(screen.getByRole('button', { name: labels[correctIndex] }));
+      expect(continuar()).toBeEnabled();
+      await user.click(continuar());
+    }
+    expect(screen.getByRole('link', { name: /próxima lição/i })).toBeInTheDocument();
+  });
+});
+
+describe('quiz: identidade da tela (lição + objeto + pergunta) e hidratação', () => {
+  const makeSingleQuestionQuiz = (): LessonObject => ({
+    type: 'quiz',
+    questions: [
+      {
+        id: 'q1',
+        kind: 'recognition' as const,
+        prompt: 'Pergunta repetida entre lições',
+        options: ['Zebra', 'Mapa', 'Girafa', 'Navio'].map((label, i) => ({
+          id: `opt${i}`,
+          label,
+        })),
+        answer: { type: 'single' as const, correctOptionId: 'opt0' },
+        explanation: '.',
+      },
+    ],
+  });
+
+  it('duas perguntas de id "q1" em lições diferentes não ficam acopladas à mesma ordem', () => {
+    // Semear só por question.id ("q1") faria toda pergunta "q1" do
+    // currículo cair sempre na mesma ordem visual — o mesmo tipo de
+    // padrão previsível que a auditoria encontrou nos quizzes. Fixamos
+    // Math.random (usado só para gerar a sessionSeed) para garantir que a
+    // única variável entre as duas renderizações seja o id da lição.
+    resetSessionSeedForTests();
+    const randomSpy = vi.spyOn(Math, 'random').mockReturnValue(0.42);
+
+    const renderAndCaptureOrder = (lessonId: string) => {
+      render(
+        <LessonRunner
+          cycle="c1"
+          moduleId="m01"
+          stepLabels={['Lição', 'Fechamento']}
+          currentStep={0}
+          lesson={{ ...lessonWith([makeSingleQuestionQuiz()]), id: lessonId }}
+          next={{ href: '/proxima/', label: 'Próxima lição' }}
+        />,
+      );
+      const order = screen
+        .getAllByRole('button')
+        .map((b) => /Zebra|Mapa|Girafa|Navio/.exec(b.textContent ?? '')?.[0])
+        .filter((label): label is string => Boolean(label));
+      cleanup();
+      return order;
+    };
+
+    const orderLessonA = renderAndCaptureOrder('c1-m01-l01');
+    const orderLessonB = renderAndCaptureOrder('c2-m03-l04');
+
+    randomSpy.mockRestore();
+    expect(orderLessonA).not.toEqual(orderLessonB);
+  });
+
+  it('a ordem embaralhada do quiz não gera divergência de hidratação (React não acusa erro)', () => {
+    resetSessionSeedForTests();
+    const lesson = lessonWith([makeSingleQuestionQuiz()]);
+    const element = (
+      <LessonRunner
+        cycle="c1"
+        moduleId="m01"
+        stepLabels={['Lição', 'Fechamento']}
+        currentStep={0}
+        lesson={lesson}
+        next={{ href: '/proxima/', label: 'Próxima lição' }}
+      />
+    );
+
+    // "Servidor": o mesmo HTML que o build estático geraria.
+    const html = renderToString(element);
+    const container = document.createElement('div');
+    container.innerHTML = html;
+    document.body.appendChild(container);
+
+    const consoleErrors: unknown[][] = [];
+    const errorSpy = vi.spyOn(console, 'error').mockImplementation((...args: unknown[]) => {
+      consoleErrors.push(args);
+    });
+
+    // "Cliente": hidrata sobre o HTML do servidor. Se a ordem calculada
+    // aqui divergir da acima, o React loga um erro de hidratação.
+    act(() => {
+      hydrateRoot(container, element);
+    });
+
+    errorSpy.mockRestore();
+    document.body.removeChild(container);
+
+    expect(consoleErrors).toHaveLength(0);
+  });
+});
+
+describe('ordering: seleção e ordenação reversíveis antes da confirmação', () => {
+  const confirmar = () => screen.getByRole('button', { name: /confirmar ordem/i });
+
+  it('estado inicial: nenhum item selecionado', () => {
+    setup([ordering]);
+    expect(screen.getByText('Ordene os passos')).toBeInTheDocument();
+    expect(screen.queryByText('Passo A')).toBeInTheDocument();
+    expect(continuar()).toBeDisabled();
+  });
+
+  it('selecionar A, B, C numera 1, 2, 3, mas NÃO libera o avanço antes de confirmar', async () => {
+    const user = setup([ordering]);
+    await user.click(screen.getByRole('button', { name: 'Passo A' }));
+    await user.click(screen.getByRole('button', { name: 'Passo B' }));
+    await user.click(screen.getByRole('button', { name: 'Passo C' }));
+    const list = screen.getByRole('list');
+    expect(
+      within(list)
+        .getAllByRole('listitem')
+        .map((li) => li.textContent),
+    ).toEqual([
+      expect.stringContaining('1'),
+      expect.stringContaining('2'),
+      expect.stringContaining('3'),
+    ]);
+    // Sequência completa, mas ainda não confirmada: "Continuar" trava.
+    expect(continuar()).toBeDisabled();
+    expect(confirmar()).toBeInTheDocument();
+  });
+
+  it('desfazer um item do meio retira da sequência e renumera os seguintes', async () => {
+    const user = setup([ordering]);
+    await user.click(screen.getByRole('button', { name: 'Passo A' }));
+    await user.click(screen.getByRole('button', { name: 'Passo B' }));
+    await user.click(screen.getByRole('button', { name: 'Passo C' }));
+    // Retira "Passo B" (posição 2) clicando no item já selecionado.
+    await user.click(screen.getByRole('button', { name: /Retirar Passo B/ }));
+
+    const list = screen.getByRole('list');
+    const items = within(list).getAllByRole('listitem');
+    expect(items).toHaveLength(2);
+    expect(items[0]!.textContent).toContain('1');
+    expect(items[0]!.textContent).toContain('Passo A');
+    expect(items[1]!.textContent).toContain('2');
+    expect(items[1]!.textContent).toContain('Passo C');
+    // "Passo B" volta para o banco de itens disponíveis.
+    expect(screen.getByRole('button', { name: 'Passo B' })).toBeInTheDocument();
+  });
+
+  it('remover um item depois de completar a sequência mantém "Continuar" desabilitado', async () => {
+    const user = setup([ordering]);
+    await user.click(screen.getByRole('button', { name: 'Passo A' }));
+    await user.click(screen.getByRole('button', { name: 'Passo B' }));
+    await user.click(screen.getByRole('button', { name: 'Passo C' }));
+    expect(continuar()).toBeDisabled();
+    // Completou e ainda não confirmou — remover um item não pode deixar
+    // "Continuar" destravado por engano (bug corrigido nesta rodada).
+    await user.click(screen.getByRole('button', { name: /Retirar Passo B/ }));
+    expect(continuar()).toBeDisabled();
+    expect(screen.queryByRole('button', { name: /confirmar ordem/i })).not.toBeInTheDocument();
+  });
+
+  it('readicionar o item removido vai para o fim da sequência e permite confirmar de novo', async () => {
+    const user = setup([ordering]);
+    await user.click(screen.getByRole('button', { name: 'Passo A' }));
+    await user.click(screen.getByRole('button', { name: 'Passo B' }));
+    await user.click(screen.getByRole('button', { name: 'Passo C' }));
+    await user.click(screen.getByRole('button', { name: /Retirar Passo B/ }));
+    await user.click(screen.getByRole('button', { name: 'Passo B' }));
+
+    const list = screen.getByRole('list');
+    const items = within(list).getAllByRole('listitem');
+    expect(items.map((li) => li.textContent)).toEqual([
+      expect.stringContaining('Passo A'),
+      expect.stringContaining('Passo C'),
+      expect.stringContaining('Passo B'),
+    ]);
+    expect(continuar()).toBeDisabled();
+    expect(confirmar()).toBeInTheDocument();
+  });
+
+  it('confirmar chama onComplete e libera "Continuar"', async () => {
+    const user = setup([ordering]);
+    await user.click(screen.getByRole('button', { name: 'Passo A' }));
+    await user.click(screen.getByRole('button', { name: 'Passo B' }));
+    await user.click(screen.getByRole('button', { name: 'Passo C' }));
+    expect(continuar()).toBeDisabled();
+    await user.click(confirmar());
+    expect(continuar()).toBeEnabled();
+  });
+
+  it('depois de confirmar, não é possível mudar a sequência', async () => {
+    const user = setup([ordering]);
+    await user.click(screen.getByRole('button', { name: 'Passo A' }));
+    await user.click(screen.getByRole('button', { name: 'Passo B' }));
+    await user.click(screen.getByRole('button', { name: 'Passo C' }));
+    await user.click(confirmar());
+
+    // O botão de confirmação some; os itens da sequência ficam travados.
+    expect(screen.queryByRole('button', { name: /confirmar ordem/i })).not.toBeInTheDocument();
+    const retirarA = screen.getByRole('button', { name: /Retirar Passo A/ });
+    expect(retirarA).toBeDisabled();
+    await user.click(retirarA);
+    const list = screen.getByRole('list');
+    expect(within(list).getAllByRole('listitem')).toHaveLength(3);
+    expect(continuar()).toBeEnabled();
+  });
+
+  it('depois de confirmar, não existe "Tentar novamente" e "Continuar" permanece coerente', async () => {
+    const user = setup([ordering]);
+    await user.click(screen.getByRole('button', { name: 'Passo A' }));
+    await user.click(screen.getByRole('button', { name: 'Passo B' }));
+    await user.click(screen.getByRole('button', { name: 'Passo C' }));
+    await user.click(confirmar());
+
+    expect(continuar()).toBeEnabled();
+    // Reabrir a edição depois de confirmado destravaria "Continuar" com a
+    // atividade de volta a incompleta — por isso o ordering não oferece
+    // "Tentar novamente" (diferente de outras atividades, cujo uso não deixa
+    // o estado do pai inconsistente).
+    expect(screen.queryByRole('button', { name: /testar outra escolha/i })).not.toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: /confirmar ordem/i })).not.toBeInTheDocument();
+    for (const label of ['Passo A', 'Passo B', 'Passo C']) {
+      expect(screen.getByRole('button', { name: new RegExp(`Retirar ${label}`) })).toBeDisabled();
+    }
+    const list = screen.getByRole('list');
+    expect(within(list).getAllByRole('listitem')).toHaveLength(3);
+    expect(continuar()).toBeEnabled();
+  });
+
+  it('desmarcar o primeiro item recalcula a numeração dos demais', async () => {
+    const user = setup([ordering]);
+    await user.click(screen.getByRole('button', { name: 'Passo A' }));
+    await user.click(screen.getByRole('button', { name: 'Passo B' }));
+    await user.click(screen.getByRole('button', { name: /Retirar Passo A/ }));
+    const list = screen.getByRole('list');
+    const items = within(list).getAllByRole('listitem');
+    expect(items).toHaveLength(1);
+    expect(items[0]!.textContent).toContain('1');
+    expect(items[0]!.textContent).toContain('Passo B');
+  });
+
+  it('desmarcar o último item some com a sequência inteira ao esvaziar', async () => {
+    const user = setup([ordering]);
+    await user.click(screen.getByRole('button', { name: 'Passo A' }));
+    await user.click(screen.getByRole('button', { name: /Retirar Passo A/ }));
+    expect(screen.queryByRole('list')).not.toBeInTheDocument();
     expect(continuar()).toBeDisabled();
   });
 });

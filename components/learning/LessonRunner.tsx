@@ -8,6 +8,9 @@ import { EconominhoGuide } from '@/components/econominho/EconominhoGuide';
 import type { Lesson, LessonObject } from '@/lib/content/types';
 import { t } from '@/lib/content/ui';
 
+import { seededRandom, shuffle } from '@/lib/learning';
+import { useSessionSeed } from '@/lib/learning/useSessionSeed';
+
 import { LessonShell, ScreenTitle } from './LessonShell';
 import {
   AffordView,
@@ -52,17 +55,38 @@ function QuizScreen({
   object,
   index,
   total,
+  screenId,
   onComplete,
 }: {
   object: Extract<LessonObject, { type: 'quiz' }>;
   index: number;
   total: number;
+  /** Identidade única da tela: lição + objeto + pergunta (nunca só o `id`
+   *  da pergunta, que pode se repetir entre lições, ex. "q1"). */
+  screenId: string;
 } & Done) {
   const [answer, setAnswer] = useState<string | null>(null);
   const question = object.questions[index]!;
+  // Semente da sessão: vazia no servidor e na hidratação inicial (mesmo
+  // HTML dos dois lados), só passa a variar depois do primeiro commit no
+  // cliente — ver useSessionSeed. Isso garante que a mesma pergunta não
+  // caia sempre na mesma ordem visual em toda sessão (o problema original:
+  // 175/175 perguntas tinham a correta na posição 0), sem gerar
+  // incompatibilidade de hidratação.
+  const sessionSeed = useSessionSeed();
+  // Ordem embaralhada de apresentação: a correção continua resolvida pelo
+  // `id` da alternativa, nunca pela posição. Semeada pela sessão + pela
+  // identidade completa da tela (lição-objeto-pergunta), memoizada para
+  // ficar estável enquanto a pergunta estiver na tela (não reembaralha a
+  // cada render nem depois de responder); a próxima pergunta, remontada
+  // por `key` em screensForObject, recebe seu próprio embaralhamento.
+  const shuffledOptions = useMemo(
+    () => shuffle(question.options, seededRandom(`${sessionSeed}|${screenId}`)),
+    [question, screenId, sessionSeed],
+  );
   return (
     <QuizQuestion
-      question={question}
+      question={{ ...question, options: shuffledOptions }}
       counter={t('quizCounter', { current: index + 1, total })}
       answer={answer}
       onAnswer={(optionId) => {
@@ -153,18 +177,26 @@ export function screensForObject(object: LessonObject, keyBase: string): Screen[
         },
       ];
     case 'quiz':
-      return object.questions.map((question, index) => ({
-        key: `${keyBase}-${question.id}`,
-        interactive: true,
-        render: ({ onComplete }) => (
-          <QuizScreen
-            object={object}
-            index={index}
-            total={object.questions.length}
-            onComplete={onComplete}
-          />
-        ),
-      }));
+      return object.questions.map((question, index) => {
+        // Identidade completa da tela: o `id` da pergunta ("q1", "q2"...)
+        // sozinho não é único — pode se repetir entre lições e módulos.
+        // `keyBase` já é prefixado pela lição (ou pelo módulo, no
+        // fechamento) por quem chama `screensForObject`.
+        const screenId = `${keyBase}-${question.id}`;
+        return {
+          key: screenId,
+          interactive: true,
+          render: ({ onComplete }) => (
+            <QuizScreen
+              object={object}
+              index={index}
+              total={object.questions.length}
+              screenId={screenId}
+              onComplete={onComplete}
+            />
+          ),
+        };
+      });
     default: {
       // Exaustividade: um tipo novo não compila sem tratamento aqui.
       const _never: never = object;
@@ -199,7 +231,7 @@ function LessonSummaryView({ lesson }: { lesson: Lesson }) {
 export function LessonRunner({ cycle, moduleId, stepLabels, currentStep, lesson, next }: Props) {
   const screens = useMemo<Screen[]>(() => {
     const content = lesson.content.flatMap((object, index) =>
-      screensForObject(object, `o${index}`),
+      screensForObject(object, `${lesson.id}-o${index}`),
     );
     const summary: Screen = {
       key: 'resumo',

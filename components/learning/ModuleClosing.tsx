@@ -64,7 +64,7 @@ export function ModuleClosing({ cycle, moduleId, stepLabels, currentStep, module
   useMarkDone(cycle, moduleId);
 
   const screens = useMemo<Screen[]>(() => {
-    const activity = screensForObject(module.integrative.object, 'atividade');
+    const activity = screensForObject(module.integrative.object, `${cycle}-${moduleId}-atividade`);
     const conclusion: Screen = {
       key: 'descobrimos',
       interactive: false,
@@ -72,7 +72,7 @@ export function ModuleClosing({ cycle, moduleId, stepLabels, currentStep, module
       render: () => <ConclusionView module={module} />,
     };
     return [...activity, conclusion];
-  }, [module]);
+  }, [module, cycle, moduleId]);
 
   const [index, setIndex] = useState(0);
   const [unlocked, setUnlocked] = useState(() => !screens[0]!.interactive);
