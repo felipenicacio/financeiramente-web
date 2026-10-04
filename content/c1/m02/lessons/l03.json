@@ -30,12 +30,12 @@
       "panels": [
         {
           "id": "p1",
-          "illustration": "item-coat",
+          "illustration": "c1-context-changes",
           "text": "Está muito frio e o casaco do Téo ficou pequeno. Ele precisa de um casaco."
         },
         {
           "id": "p2",
-          "illustration": "item-sneaker",
+          "illustration": "c1-context-changes",
           "text": "No calor, um casaco novo não faz falta. Aí ele vira um desejo, não uma necessidade."
         }
       ],
@@ -45,7 +45,7 @@
       "type": "explanation",
       "title": "Depende da situação",
       "body": "A mesma coisa pode ser necessidade numa hora e desejo em outra. O que muda é a situação: o clima, o momento, o que já se tem.",
-      "illustration": "item-coat",
+      "illustration": "c1-context-changes",
       "bullets": [
         {
           "text": "Casaco no frio: faz falta agora.",
