@@ -218,6 +218,178 @@ const DonePath: Shape = () => (
   </g>
 );
 
+// ---------- C1 · M01: dinheiro no dia a dia ----------
+
+const SoftPanel = ({
+  x,
+  y,
+  width,
+  height,
+  fill,
+  children,
+}: {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  fill: string;
+  children: React.ReactNode;
+}) => (
+  <g>
+    <rect x={x} y={y} width={width} height={height} rx={24} fill={fill} />
+    {children}
+  </g>
+);
+
+const Arrow = ({
+  x1,
+  y1,
+  x2,
+  y2,
+  color,
+}: {
+  x1: number;
+  y1: number;
+  x2: number;
+  y2: number;
+  color: string;
+}) => (
+  <g>
+    <path
+      d={`M${x1} ${y1} C${(x1 + x2) / 2} ${y1 - 10}, ${(x1 + x2) / 2} ${y2 - 10}, ${x2} ${y2}`}
+      stroke={color}
+      strokeWidth={5}
+      fill="none"
+      strokeLinecap="round"
+    />
+    <path
+      d={`M${x2 - 9} ${y2 - 5} L${x2} ${y2} L${x2 - 8} ${y2 + 7}`}
+      stroke={color}
+      strokeWidth={5}
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </g>
+);
+
+const C1FinanceActions: Shape = () => (
+  <g>
+    <SoftPanel x={10} y={12} width={142} height={78} fill={p.amber50}>
+      {place('item-banknote', 28, 20, 56)}
+      <circle cx={114} cy={50} r={18} fill={p.amber500} stroke={p.amber700} strokeWidth={2.5} />
+      <path d="M95 50h-20" stroke={p.green700} strokeWidth={4} strokeLinecap="round" />
+      <path d="m82 43-9 7 9 7" stroke={p.green700} strokeWidth={4} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+    </SoftPanel>
+    <SoftPanel x={168} y={12} width={142} height={78} fill={p.coral50}>
+      {place('item-pricetag', 185, 19, 58)}
+      {place('item-book', 242, 22, 50)}
+      <path d="M232 50h-18" stroke={p.coral500} strokeWidth={4} strokeLinecap="round" />
+    </SoftPanel>
+    <SoftPanel x={10} y={104} width={142} height={78} fill={p.cyan50}>
+      {place('item-apple', 28, 116, 52)}
+      {place('item-bread', 88, 116, 52)}
+      <Arrow x1={76} y1={137} x2={96} y2={137} color={p.cyan700} />
+      <Arrow x1={96} y1={158} x2={76} y2={158} color={p.cyan500} />
+    </SoftPanel>
+    <SoftPanel x={168} y={104} width={142} height={78} fill={p.teal50}>
+      {place('item-jar', 212, 108, 72)}
+      <circle cx={206} cy={124} r={10} fill={p.amber500} stroke={p.amber700} strokeWidth={2} />
+      <Arrow x1={204} y1={135} x2={225} y2={145} color={p.teal500} />
+    </SoftPanel>
+    <circle cx={160} cy={97} r={26} fill={p.white} />
+    <circle cx={160} cy={97} r={20} fill={p.amber500} stroke={p.amber700} strokeWidth={3} />
+    <circle cx={160} cy={97} r={11} fill="none" stroke={p.amber700} strokeWidth={2} />
+  </g>
+);
+
+const C1BarterStart: Shape = () => (
+  <g>
+    <SoftPanel x={22} y={28} width={118} height={138} fill={p.coral50}>
+      {place('item-apple', 49, 48, 64)}
+      <rect x={48} y={121} width={68} height={10} rx={5} fill={p.coral500} opacity={0.5} />
+      <circle cx={82} cy={142} r={7} fill={p.coral500} />
+    </SoftPanel>
+    <SoftPanel x={180} y={28} width={118} height={138} fill={p.amber50}>
+      {place('item-bread', 207, 51, 64)}
+      <rect x={206} y={121} width={68} height={10} rx={5} fill={p.amber500} opacity={0.55} />
+      <circle cx={240} cy={142} r={7} fill={p.amber500} />
+    </SoftPanel>
+    <Arrow x1={132} y1={76} x2={187} y2={76} color={p.teal500} />
+    <Arrow x1={188} y1={120} x2={133} y2={120} color={p.cyan500} />
+    <circle cx={160} cy={99} r={20} fill={p.white} stroke={p.slate200} strokeWidth={2} />
+    <path d="M149 99h22M160 88v22" stroke={p.teal700} strokeWidth={4} strokeLinecap="round" />
+  </g>
+);
+
+const C1BarterExamples: Shape = () => (
+  <g>
+    <SoftPanel x={12} y={20} width={296} height={160} fill={p.cyan50}>
+      {place('item-apple', 36, 52, 64)}
+      {place('item-bread', 220, 52, 64)}
+      <Arrow x1={104} y1={75} x2={214} y2={75} color={p.teal500} />
+      <Arrow x1={214} y1={125} x2={104} y2={125} color={p.cyan500} />
+      <g transform="translate(126 74)">
+        <rect width={68} height={52} rx={16} fill={p.white} stroke={p.slate200} strokeWidth={2} />
+        <path d="M18 26h32" stroke={p.navy} strokeWidth={4} strokeLinecap="round" />
+        <circle cx={18} cy={26} r={5} fill={p.coral500} />
+        <circle cx={50} cy={26} r={5} fill={p.amber500} />
+      </g>
+    </SoftPanel>
+  </g>
+);
+
+const C1BarterProblem: Shape = () => (
+  <g>
+    <SoftPanel x={12} y={20} width={296} height={160} fill={p.purple50}>
+      {place('item-apple', 34, 54, 58)}
+      {place('item-bread', 228, 54, 58)}
+      <path d="M104 82h104" stroke={p.slate300} strokeWidth={5} strokeLinecap="round" strokeDasharray="9 10" />
+      <circle cx={160} cy={82} r={27} fill={p.white} stroke={p.coral500} strokeWidth={3} />
+      <path d="M148 70l24 24M172 70l-24 24" stroke={p.coral500} strokeWidth={6} strokeLinecap="round" />
+      <path d="M87 132c20 17 44 25 73 25s53-8 73-25" stroke={p.purple500} strokeWidth={4} fill="none" strokeLinecap="round" />
+      <circle cx={87} cy={132} r={5} fill={p.purple500} />
+      <circle cx={233} cy={132} r={5} fill={p.purple500} />
+    </SoftPanel>
+  </g>
+);
+
+const C1MoneyFacilitates: Shape = () => (
+  <g>
+    <SoftPanel x={12} y={20} width={296} height={160} fill={p.green50}>
+      {place('item-apple', 28, 54, 56)}
+      <Arrow x1={88} y1={81} x2={132} y2={81} color={p.teal500} />
+      {place('item-banknote', 126, 53, 68)}
+      <Arrow x1={190} y1={81} x2={233} y2={81} color={p.teal500} />
+      {place('item-bread', 228, 54, 56)}
+      <rect x={89} y={127} width={142} height={28} rx={14} fill={p.white} stroke={p.green500} strokeWidth={2.5} />
+      <circle cx={112} cy={141} r={6} fill={p.green500} />
+      <circle cx={160} cy={141} r={6} fill={p.green500} />
+      <circle cx={208} cy={141} r={6} fill={p.green500} />
+      <path d="M119 141h34M167 141h34" stroke={p.green500} strokeWidth={3} strokeLinecap="round" />
+    </SoftPanel>
+  </g>
+);
+
+const C1GoodsServices: Shape = () => (
+  <g>
+    <SoftPanel x={12} y={20} width={140} height={160} fill={p.teal50}>
+      {place('item-bread', 32, 48, 58)}
+      {place('item-book', 88, 50, 54)}
+      <rect x={34} y={127} width={96} height={24} rx={12} fill={p.white} stroke={p.teal500} strokeWidth={2} />
+      <path d="M52 139h60" stroke={p.teal500} strokeWidth={4} strokeLinecap="round" />
+    </SoftPanel>
+    <SoftPanel x={168} y={20} width={140} height={160} fill={p.cyan50}>
+      {place('item-chair', 187, 46, 62)}
+      {place('item-robot', 240, 52, 54)}
+      <path d="M220 128l15-15M226 113l10 10" stroke={p.cyan700} strokeWidth={5} strokeLinecap="round" />
+      <rect x={188} y={146} width={100} height={12} rx={6} fill={p.cyan500} opacity={0.35} />
+    </SoftPanel>
+    <circle cx={160} cy={100} r={23} fill={p.white} stroke={p.slate200} strokeWidth={2} />
+    <circle cx={160} cy={100} r={15} fill={p.amber500} stroke={p.amber700} strokeWidth={2.5} />
+  </g>
+);
+
 // ---------- C1 · M02: feira ----------
 
 const Stall = ({ color }: { color: string }) => (
@@ -479,6 +651,12 @@ export const sceneShapes = {
   'story-shop': StoryShop,
   'story-crossroads': StoryCrossroads,
   'done-path': DonePath,
+  'c1-finance-actions': C1FinanceActions,
+  'c1-barter-start': C1BarterStart,
+  'c1-barter-examples': C1BarterExamples,
+  'c1-barter-problem': C1BarterProblem,
+  'c1-money-facilitates': C1MoneyFacilitates,
+  'c1-goods-services': C1GoodsServices,
   'module-market': ModuleMarket,
   'story-pocket': StoryPocket,
   'story-fruit-stand': StoryFruitStand,
