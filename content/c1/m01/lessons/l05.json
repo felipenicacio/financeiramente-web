@@ -89,7 +89,7 @@
           "situation": "Você compra um pão na padaria.",
           "accepted": ["good"],
           "feedback": "O pão dá para pegar e comer. É uma coisa.",
-          "illustration": "item-bread"
+          "illustration": "c1-m01-l05-bread"
         },
         {
           "id": "haircut",
@@ -97,7 +97,7 @@
           "situation": "Alguém corta o seu cabelo.",
           "accepted": ["service"],
           "feedback": "Cortar cabelo é um trabalho que alguém faz. É um serviço.",
-          "illustration": "item-chair"
+          "illustration": "c1-m01-l05-haircut"
         },
         {
           "id": "book",
@@ -105,7 +105,7 @@
           "situation": "Você compra um livro de histórias.",
           "accepted": ["good"],
           "feedback": "O livro dá para pegar e ler. É uma coisa.",
-          "illustration": "item-book"
+          "illustration": "c1-m01-l05-book"
         },
         {
           "id": "repair",
@@ -113,7 +113,7 @@
           "situation": "Alguém conserta o seu brinquedo quebrado.",
           "accepted": ["service"],
           "feedback": "Consertar é um trabalho. É um serviço.",
-          "illustration": "item-toy-repair"
+          "illustration": "c1-m01-l05-repair"
         }
       ],
       "prompt": "Coisa ou serviço?",
