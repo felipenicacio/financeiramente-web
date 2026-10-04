@@ -44,7 +44,7 @@
         {
           "id": "a",
           "label": "Ela oferece algo útil que outras pessoas querem e estão dispostas a pagar",
-          "reflection": "Isso mesmo: criar valor é oferecer algo que resolve ou agrada alguém."
+          "reflection": "Criar valor é oferecer algo que resolve ou agrada alguém."
         },
         {
           "id": "b",
@@ -66,7 +66,7 @@
           "id": "s1",
           "text": "Criar valor é oferecer algo útil que outra pessoa quer.",
           "isTrue": true,
-          "explanation": "Isso mesmo: é a base de qualquer trabalho ou negócio."
+          "explanation": "É a base de qualquer trabalho ou negócio."
         },
         {
           "id": "s2",
@@ -78,7 +78,7 @@
           "id": "s3",
           "text": "Oferecer um serviço útil pode se transformar em uma fonte de renda.",
           "isTrue": true,
-          "explanation": "Exato: é assim que muitas ideias simples viram trabalho."
+          "explanation": "É assim que muitas ideias simples viram trabalho."
         }
       ]
     }

@@ -83,7 +83,7 @@
           "id": "s3",
           "text": "Trocar maçãs por pão é um exemplo de troca.",
           "isTrue": true,
-          "explanation": "Exato: uma coisa pela outra, sem dinheiro."
+          "explanation": "Uma coisa pela outra, sem dinheiro."
         }
       ],
       "prompt": "Sobre as trocas de antigamente:"

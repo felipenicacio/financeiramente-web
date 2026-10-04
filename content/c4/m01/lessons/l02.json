@@ -59,13 +59,13 @@
           "id": "s1",
           "text": "Uma escolha intertemporal compara um benefício agora com um benefício futuro.",
           "isTrue": true,
-          "explanation": "Isso mesmo: ela pesa o presente contra o futuro."
+          "explanation": "Ela pesa o presente contra o futuro."
         },
         {
           "id": "s2",
           "text": "Guardar parte da renda para o futuro é um exemplo de escolha intertemporal.",
           "isTrue": true,
-          "explanation": "Exato: envolve abrir mão de algo agora por um benefício futuro."
+          "explanation": "Envolve abrir mão de algo agora por um benefício futuro."
         },
         {
           "id": "s3",

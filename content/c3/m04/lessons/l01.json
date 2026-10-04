@@ -63,13 +63,13 @@
           "id": "s1",
           "text": "No cartão de crédito, o banco ou a operadora adianta o pagamento ao vendedor.",
           "isTrue": true,
-          "explanation": "Isso mesmo: quem comprou paga depois, na fatura."
+          "explanation": "Quem comprou paga depois, na fatura."
         },
         {
           "id": "s2",
           "text": "A fatura do cartão reúne as compras feitas num período.",
           "isTrue": true,
-          "explanation": "Exato: todas as compras do ciclo aparecem juntas na fatura."
+          "explanation": "Todas as compras do ciclo aparecem juntas na fatura."
         },
         {
           "id": "s3",

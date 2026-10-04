@@ -59,7 +59,7 @@
           "id": "s1",
           "text": "Inflação é o aumento geral dos preços ao longo do tempo.",
           "isTrue": true,
-          "explanation": "Isso mesmo: é um fenômeno amplo, não um único preço."
+          "explanation": "É um fenômeno amplo, não um único preço."
         },
         {
           "id": "s2",
@@ -71,7 +71,7 @@
           "id": "s3",
           "text": "A inflação pode mudar o orçamento de uma família ao longo do tempo.",
           "isTrue": true,
-          "explanation": "Exato: com preços mais altos, o mesmo orçamento rende menos."
+          "explanation": "Com preços mais altos, o mesmo orçamento rende menos."
         }
       ]
     }

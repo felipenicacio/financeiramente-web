@@ -44,7 +44,7 @@
           "id": "s1",
           "text": "Troco é o dinheiro que volta quando pagamos mais do que o preço.",
           "isTrue": true,
-          "explanation": "Isso mesmo: a parte que sobra volta para você."
+          "explanation": "A parte que sobra volta para você."
         },
         {
           "id": "s2",
@@ -56,7 +56,7 @@
           "id": "s3",
           "text": "O troco é a diferença entre o que você pagou e o preço.",
           "isTrue": true,
-          "explanation": "Exato: pagou menos o preço é o troco."
+          "explanation": "Pagou menos o preço é o troco."
         }
       ]
     }

@@ -60,13 +60,13 @@
           "id": "s2",
           "text": "O custo total soma juros e taxas ao longo de todo o prazo.",
           "isTrue": true,
-          "explanation": "Isso mesmo: esse total mostra o valor real que será pago."
+          "explanation": "Esse total mostra o valor real que será pago."
         },
         {
           "id": "s3",
           "text": "Modalidades diferentes podem ter custos totais bem diferentes.",
           "isTrue": true,
-          "explanation": "Exato: por isso vale comparar antes de decidir."
+          "explanation": "Por isso vale comparar antes de decidir."
         }
       ]
     }

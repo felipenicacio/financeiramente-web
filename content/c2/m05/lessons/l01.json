@@ -84,7 +84,7 @@
           "id": "s1",
           "text": "Renda normalmente vem de um trabalho, serviço ou venda.",
           "isTrue": true,
-          "explanation": "Isso mesmo: é a troca de algo útil por um pagamento."
+          "explanation": "É a troca de algo útil por um pagamento."
         },
         {
           "id": "s2",
@@ -96,7 +96,7 @@
           "id": "s3",
           "text": "Vender algo que você mesmo fez também pode gerar renda.",
           "isTrue": true,
-          "explanation": "Isso mesmo: vender um produto feito por você é uma forma de criar valor."
+          "explanation": "Vender um produto feito por você é uma forma de criar valor."
         }
       ]
     }

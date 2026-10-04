@@ -81,13 +81,13 @@
           "id": "s2",
           "text": "Adiar uma compra pode ajudar a alcançar uma meta maior.",
           "isTrue": true,
-          "explanation": "Isso mesmo: o valor que ficaria numa compra pode seguir rumo a outro objetivo."
+          "explanation": "O valor que ficaria numa compra pode seguir rumo a outro objetivo."
         },
         {
           "id": "s3",
           "text": "Não existe uma única resposta certa sobre esperar ou não.",
           "isTrue": true,
-          "explanation": "Exato: depende do que cada pessoa valoriza mais naquele momento."
+          "explanation": "Depende do que cada pessoa valoriza mais naquele momento."
         }
       ]
     }

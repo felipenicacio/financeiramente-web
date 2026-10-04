@@ -55,7 +55,7 @@
           "id": "s1",
           "text": "Com o real desvalorizado, é preciso mais reais para comprar a mesma moeda estrangeira.",
           "isTrue": true,
-          "explanation": "Isso mesmo: a desvalorização aumenta a quantidade de reais necessária."
+          "explanation": "A desvalorização aumenta a quantidade de reais necessária."
         },
         {
           "id": "s2",
@@ -67,7 +67,7 @@
           "id": "s3",
           "text": "Viagens internacionais tendem a custar mais com o real desvalorizado.",
           "isTrue": true,
-          "explanation": "Exato: a mesma quantidade de moeda estrangeira passa a custar mais em reais."
+          "explanation": "A mesma quantidade de moeda estrangeira passa a custar mais em reais."
         }
       ]
     }

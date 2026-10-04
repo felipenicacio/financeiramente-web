@@ -87,7 +87,7 @@
           "id": "s1",
           "text": "O poder de compra sobre produtos importados depende também da taxa de câmbio.",
           "isTrue": true,
-          "explanation": "Isso mesmo: o câmbio influencia o preço em reais do produto importado."
+          "explanation": "O câmbio influencia o preço em reais do produto importado."
         },
         {
           "id": "s2",
@@ -99,7 +99,7 @@
           "id": "s3",
           "text": "Com o real mais valorizado, produtos importados tendem a ficar mais baratos em reais.",
           "isTrue": true,
-          "explanation": "Exato: um real mais valorizado reduz o custo em reais de produtos importados."
+          "explanation": "Um real mais valorizado reduz o custo em reais de produtos importados."
         }
       ]
     }

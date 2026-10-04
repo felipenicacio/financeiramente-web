@@ -55,13 +55,13 @@
           "id": "s1",
           "text": "Juros são um valor extra cobrado por atrasar ou parcelar um pagamento.",
           "isTrue": true,
-          "explanation": "Isso mesmo: é o custo de adiar o pagamento no tempo."
+          "explanation": "É o custo de adiar o pagamento no tempo."
         },
         {
           "id": "s2",
           "text": "Pagar a fatura inteira na data combinada nunca gera juros sobre esse valor.",
           "isTrue": true,
-          "explanation": "Exato: pagar o total evita a cobrança de juros sobre essa fatura."
+          "explanation": "Pagar o total evita a cobrança de juros sobre essa fatura."
         },
         {
           "id": "s3",

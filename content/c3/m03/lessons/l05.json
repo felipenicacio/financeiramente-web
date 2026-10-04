@@ -57,13 +57,13 @@
           "id": "s2",
           "text": "Revisar com frequência ajuda a ajustar o plano antes de um problema crescer.",
           "isTrue": true,
-          "explanation": "Isso mesmo: quanto antes se percebe, mais fácil é ajustar."
+          "explanation": "Quanto antes se percebe, mais fácil é ajustar."
         },
         {
           "id": "s3",
           "text": "Olhar os números regularmente é um hábito útil para quem tem renda variável.",
           "isTrue": true,
-          "explanation": "Exato: o hábito sustenta o planejamento ao longo do tempo."
+          "explanation": "O hábito sustenta o planejamento ao longo do tempo."
         }
       ]
     }

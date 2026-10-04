@@ -63,7 +63,7 @@
           "id": "s1",
           "text": "O trabalho formal segue um registro combinado entre as partes.",
           "isTrue": true,
-          "explanation": "Isso mesmo: existe um registro com direitos e deveres definidos."
+          "explanation": "Existe um registro com direitos e deveres definidos."
         },
         {
           "id": "s2",
@@ -75,7 +75,7 @@
           "id": "s3",
           "text": "Conhecer o tipo de trabalho ajuda a entender o combinado envolvido.",
           "isTrue": true,
-          "explanation": "Exato: cada tipo tem características próprias que vale conhecer."
+          "explanation": "Cada tipo tem características próprias que vale conhecer."
         }
       ]
     }

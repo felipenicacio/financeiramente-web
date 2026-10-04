@@ -80,7 +80,7 @@
           "id": "s1",
           "text": "Renda frequente chega em intervalos regulares.",
           "isTrue": true,
-          "explanation": "Isso mesmo: ela se repete em períodos parecidos, como todo mês."
+          "explanation": "Ela se repete em períodos parecidos, como todo mês."
         },
         {
           "id": "s2",
@@ -92,7 +92,7 @@
           "id": "s3",
           "text": "Saber se a renda é frequente ou esporádica ajuda a planejar o orçamento.",
           "isTrue": true,
-          "explanation": "Exato: cada tipo pede uma forma diferente de organizar os gastos."
+          "explanation": "Cada tipo pede uma forma diferente de organizar os gastos."
         }
       ]
     }

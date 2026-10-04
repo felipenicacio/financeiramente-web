@@ -58,7 +58,7 @@
           "id": "s1",
           "text": "Ter um objetivo claro ajuda a manter o hábito de guardar dinheiro.",
           "isTrue": true,
-          "explanation": "Isso mesmo: um motivo dá sentido ao esforço de guardar."
+          "explanation": "Um motivo dá sentido ao esforço de guardar."
         },
         {
           "id": "s2",
@@ -70,7 +70,7 @@
           "id": "s3",
           "text": "Lembrar do motivo ajuda a resistir a uma compra por impulso.",
           "isTrue": true,
-          "explanation": "Isso mesmo: o motivo funciona como um lembrete na hora da tentação."
+          "explanation": "O motivo funciona como um lembrete na hora da tentação."
         }
       ]
     }

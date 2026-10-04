@@ -65,13 +65,13 @@
           "id": "s2",
           "text": "Carteiras digitais guardam cartões e saldo num aplicativo.",
           "isTrue": true,
-          "explanation": "Isso mesmo: elas organizam formas de pagamento dentro do celular."
+          "explanation": "Elas organizam formas de pagamento dentro do celular."
         },
         {
           "id": "s3",
           "text": "Meios digitais de pagamento são só uma forma de mover o mesmo dinheiro.",
           "isTrue": true,
-          "explanation": "Exato: a tecnologia muda o caminho do valor, não o seu significado."
+          "explanation": "A tecnologia muda o caminho do valor, não o seu significado."
         }
       ]
     }

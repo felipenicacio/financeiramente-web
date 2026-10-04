@@ -40,7 +40,7 @@
           "id": "s1",
           "text": "Promessas de lucro garantido e muito rápido são um sinal de alerta.",
           "isTrue": true,
-          "explanation": "Isso mesmo: ganhos garantidos e imediatos raramente existem de verdade."
+          "explanation": "Ganhos garantidos e imediatos raramente existem de verdade."
         },
         {
           "id": "s2",
@@ -52,7 +52,7 @@
           "id": "s3",
           "text": "Parar para verificar antes de decidir é uma forma de se proteger.",
           "isTrue": true,
-          "explanation": "Exato: checar com calma ajuda a evitar decisões precipitadas."
+          "explanation": "Checar com calma ajuda a evitar decisões precipitadas."
         }
       ]
     }

@@ -47,7 +47,7 @@
           "id": "s1",
           "text": "O preço mostra quanto precisamos pagar por uma coisa.",
           "isTrue": true,
-          "explanation": "Isso mesmo: o preço é quanto custa."
+          "explanation": "O preço é quanto custa."
         },
         {
           "id": "s2",

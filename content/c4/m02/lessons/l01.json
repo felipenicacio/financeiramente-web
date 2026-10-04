@@ -63,7 +63,7 @@
           "id": "s1",
           "text": "A taxa de câmbio mostra quanto de uma moeda equivale a outra.",
           "isTrue": true,
-          "explanation": "Isso mesmo: é a relação de valor entre duas moedas."
+          "explanation": "É a relação de valor entre duas moedas."
         },
         {
           "id": "s2",
@@ -75,7 +75,7 @@
           "id": "s3",
           "text": "Produtos importados e viagens internacionais são afetados pela taxa de câmbio.",
           "isTrue": true,
-          "explanation": "Exato: ambos dependem da conversão entre moedas."
+          "explanation": "Ambos dependem da conversão entre moedas."
         }
       ]
     }

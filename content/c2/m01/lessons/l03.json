@@ -55,7 +55,7 @@
           "id": "s1",
           "text": "O preço é o mesmo para qualquer pessoa que comprar o produto.",
           "isTrue": true,
-          "explanation": "Isso mesmo: o preço está na etiqueta e vale para todo mundo."
+          "explanation": "O preço está na etiqueta e vale para todo mundo."
         },
         {
           "id": "s2",
@@ -67,7 +67,7 @@
           "id": "s3",
           "text": "Uma lembrança de família pode valer mais do que o preço que custou.",
           "isTrue": true,
-          "explanation": "Exato: o valor afetivo não aparece na etiqueta."
+          "explanation": "O valor afetivo não aparece na etiqueta."
         }
       ]
     }

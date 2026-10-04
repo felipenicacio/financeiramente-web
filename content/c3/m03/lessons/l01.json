@@ -55,7 +55,7 @@
           "id": "s1",
           "text": "Renda variável muda de valor conforme o período.",
           "isTrue": true,
-          "explanation": "Isso mesmo: o valor recebido não é sempre o mesmo."
+          "explanation": "O valor recebido não é sempre o mesmo."
         },
         {
           "id": "s2",
@@ -67,7 +67,7 @@
           "id": "s3",
           "text": "Trabalho por conta própria costuma ter renda variável.",
           "isTrue": true,
-          "explanation": "Exato: o valor recebido muda conforme a demanda de cada período."
+          "explanation": "O valor recebido muda conforme a demanda de cada período."
         }
       ]
     }
