@@ -74,6 +74,125 @@ const Coins: Shape = () => (
   </g>
 );
 
+/**
+ * C1.1 · Lição 1 · Parte 1 — "Finanças é cuidar do dinheiro".
+ * A imagem resume as quatro ações citadas no texto: receber, gastar/trocar
+ * e guardar. A moeda central representa o dinheiro; os elementos ao redor
+ * mostram usos diferentes, sem sugerir que uma escolha seja "a certa".
+ */
+const FinanceBasics: Shape = () => (
+  <g>
+    <circle cx={60} cy={58} r={22} fill={p.amber500} stroke={p.amber700} strokeWidth={3} />
+    <circle cx={60} cy={58} r={13} fill="none" stroke={p.amber700} strokeWidth={2.5} />
+
+    <g>
+      <rect
+        x={12}
+        y={13}
+        width={34}
+        height={23}
+        rx={6}
+        fill={p.green100}
+        stroke={p.green700}
+        strokeWidth={2}
+        transform="rotate(-8 29 24.5)"
+      />
+      <circle cx={29} cy={24} r={6} fill={p.green500} />
+      <path
+        d="M41 33c6 3 10 7 13 12"
+        stroke={p.green700}
+        strokeWidth={3}
+        fill="none"
+        strokeLinecap="round"
+      />
+      <path
+        d="M51 40l4 6-7-1"
+        stroke={p.green700}
+        strokeWidth={3}
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </g>
+
+    <g transform="translate(78 12) rotate(10 15 17)">
+      <path
+        d="M3 5h17l12 12-12 12H3a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3Z"
+        fill={p.coral100}
+        stroke={p.coral500}
+        strokeWidth={2}
+      />
+      <circle cx={22} cy={17} r={3} fill={p.white} stroke={p.coral500} strokeWidth={2} />
+      <rect x={7} y={12} width={10} height={3} rx={1.5} fill={p.coral700} />
+      <rect x={7} y={18} width={7} height={3} rx={1.5} fill={p.coral500} />
+    </g>
+
+    <g>
+      <path
+        d="M18 72c8 9 16 12 27 12"
+        stroke={p.cyan500}
+        strokeWidth={3.5}
+        fill="none"
+        strokeLinecap="round"
+      />
+      <path
+        d="M39 78l7 6-8 4"
+        stroke={p.cyan500}
+        strokeWidth={3.5}
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M45 96c-10 1-19-2-27-10"
+        stroke={p.cyan700}
+        strokeWidth={3.5}
+        fill="none"
+        strokeLinecap="round"
+      />
+      <path
+        d="M23 91l-6-6 8-3"
+        stroke={p.cyan700}
+        strokeWidth={3.5}
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </g>
+
+    <g>
+      <rect x={78} y={72} width={28} height={9} rx={3} fill={p.teal700} />
+      <rect
+        x={73}
+        y={79}
+        width={38}
+        height={31}
+        rx={11}
+        fill={p.teal50}
+        stroke={p.teal500}
+        strokeWidth={2.5}
+      />
+      <ellipse cx={92} cy={99} rx={11} ry={3.5} fill={p.amber500} />
+      <circle cx={92} cy={89} r={5} fill={p.amber500} stroke={p.amber700} strokeWidth={1.5} />
+      <path
+        d="M72 65c7-4 13-5 19-4"
+        stroke={p.teal500}
+        strokeWidth={3}
+        fill="none"
+        strokeLinecap="round"
+      />
+      <path
+        d="M87 57l6 4-6 4"
+        stroke={p.teal500}
+        strokeWidth={3}
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </g>
+  </g>
+);
+
 const PriceTag: Shape = () => (
   <g transform="rotate(-15 60 60)">
     <path
@@ -531,6 +650,7 @@ export const itemShapesC1 = {
   'item-coin': Coin,
   'item-banknote': Banknote,
   'item-coins': Coins,
+  'item-finance-basics': FinanceBasics,
   'item-pricetag': PriceTag,
   'item-kite': Kite,
   'item-backpack': Backpack,
