@@ -487,6 +487,28 @@ describe('ordering: seleção e ordenação reversíveis antes da confirmação'
     expect(continuar()).toBeEnabled();
   });
 
+  it('depois de confirmar, não existe "Tentar novamente" e "Continuar" permanece coerente', async () => {
+    const user = setup([ordering]);
+    await user.click(screen.getByRole('button', { name: 'Passo A' }));
+    await user.click(screen.getByRole('button', { name: 'Passo B' }));
+    await user.click(screen.getByRole('button', { name: 'Passo C' }));
+    await user.click(confirmar());
+
+    expect(continuar()).toBeEnabled();
+    // Reabrir a edição depois de confirmado destravaria "Continuar" com a
+    // atividade de volta a incompleta — por isso o ordering não oferece
+    // "Tentar novamente" (diferente de outras atividades, cujo uso não deixa
+    // o estado do pai inconsistente).
+    expect(screen.queryByRole('button', { name: /testar outra escolha/i })).not.toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: /confirmar ordem/i })).not.toBeInTheDocument();
+    for (const label of ['Passo A', 'Passo B', 'Passo C']) {
+      expect(screen.getByRole('button', { name: new RegExp(`Retirar ${label}`) })).toBeDisabled();
+    }
+    const list = screen.getByRole('list');
+    expect(within(list).getAllByRole('listitem')).toHaveLength(3);
+    expect(continuar()).toBeEnabled();
+  });
+
   it('desmarcar o primeiro item recalcula a numeração dos demais', async () => {
     const user = setup([ordering]);
     await user.click(screen.getByRole('button', { name: 'Passo A' }));

@@ -513,10 +513,14 @@ export function OrderingView({ object, onComplete }: { object: OrderingObject } 
     setConfirmed(true);
     onComplete();
   };
-  const tryAnother = () => {
-    setConfirmed(false);
-    setPicked([]);
-  };
+  // Sem "tentar outra" aqui: diferente de outras atividades, confirmar o
+  // ordering já chamou `onComplete` e destravou "Continuar" no LessonRunner.
+  // Reabrir a edição (voltando `confirmed`/`picked`) deixaria o pai destravado
+  // com a atividade de volta a incompleta — inconsistente — e não existe hoje
+  // um `onIncomplete` para avisar o pai do recuo. Antes de confirmar a
+  // atividade já é 100% reversível (selecionar, desmarcar, reconstruir a
+  // ordem quantas vezes quiser); depois de confirmar, o resultado fica
+  // congelado de propósito.
 
   return (
     <section className="flex flex-col gap-5">
@@ -599,15 +603,6 @@ export function OrderingView({ object, onComplete }: { object: OrderingObject } 
           }
         />
       )}
-      {confirmed ? (
-        <button
-          type="button"
-          onClick={tryAnother}
-          className="self-start text-label font-semibold text-accent-strong underline-offset-4 hover:underline"
-        >
-          {t('tryAnother')}
-        </button>
-      ) : null}
     </section>
   );
 }
