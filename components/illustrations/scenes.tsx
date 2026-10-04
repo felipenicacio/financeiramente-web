@@ -414,7 +414,7 @@ const C1MoneyFacilitates: Shape = () => (
     <path d="M174 54h120v23H174Z" fill={p.coral500} />
     <rect x={184} y={92} width={100} height={12} rx={6} fill={p.amber100} />
     <rect x={184} y={116} width={100} height={12} rx={6} fill={p.teal100} />
-    <CartoonKid x={89} y={76} shirt={p.blue500 ?? p.cyan500} />
+    <CartoonKid x={89} y={76} shirt={p.cyan500} />
     <CartoonKid x={238} y={77} shirt={p.green500} flip />
     {place('item-banknote', 118, 94, 54)}
     {place('item-bread', 178, 96, 52)}
