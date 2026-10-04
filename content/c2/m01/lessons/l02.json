@@ -1,0 +1,108 @@
+{
+  "id": "c2-m01-l02",
+  "cycle": "c2",
+  "module": "m01",
+  "order": 2,
+  "title": "Vantagens de cada forma de pagar",
+  "headline": "Cada forma de pagamento tem uma vantagem e um cuidado a observar.",
+  "objectives": [
+    "Comparar vantagens e desvantagens de formas de pagamento",
+    "Relacionar cada forma a uma situação do dia a dia"
+  ],
+  "competencies": ["F-D4-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF02",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Nem sempre a mesma forma serve",
+      "body": "Pagar em dinheiro ajuda a sentir o gasto na hora. O cartão de crédito pode parcelar, mas cria um compromisso para o futuro. O pix é rápido, mas pede cuidado com os dados de quem recebe.",
+      "illustration": "item-tablet"
+    },
+    {
+      "type": "classify",
+      "prompt": "Associe cada situação à forma de pagar mais indicada.",
+      "categories": [
+        {
+          "id": "cash",
+          "label": "Dinheiro",
+          "short": "Na mão",
+          "icon": "money",
+          "tone": "amber"
+        },
+        {
+          "id": "pix",
+          "label": "Pix",
+          "short": "Pelo celular",
+          "icon": "money",
+          "tone": "teal"
+        },
+        {
+          "id": "installment",
+          "label": "Carnê",
+          "short": "Em partes",
+          "icon": "later",
+          "tone": "coral"
+        }
+      ],
+      "items": [
+        {
+          "id": "feira",
+          "label": "Comprar uma fruta na banca da feira",
+          "situation": "O feirante só aceita dinheiro ou pix.",
+          "accepted": ["cash", "pix"],
+          "feedback": "Em lugares simples, dinheiro ou pix costumam resolver rápido.",
+          "illustration": "story-fruit-stand"
+        },
+        {
+          "id": "bike",
+          "label": "Comprar uma bicicleta cara",
+          "situation": "O valor é alto para pagar de uma vez.",
+          "accepted": ["installment"],
+          "feedback": "Um valor alto pode ser dividido em partes combinadas, com atenção ao total pago.",
+          "illustration": "item-bus"
+        },
+        {
+          "id": "send",
+          "label": "Mandar dinheiro para alguém longe, na hora",
+          "situation": "A pessoa precisa receber o valor agora.",
+          "accepted": ["pix"],
+          "feedback": "O pix transfere o valor na mesma hora, de uma conta para outra.",
+          "illustration": "item-tablet"
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "O carnê divide um valor alto em partes. Qual é o cuidado principal ao escolher essa forma?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Saber se vai conseguir pagar todas as partes combinadas",
+          "reflection": "Exatamente: um compromisso dividido continua sendo um compromisso até o fim."
+        },
+        {
+          "id": "b",
+          "label": "Nenhum, parcelar é sempre a melhor opção",
+          "reflection": "Parcelar ajuda, mas exige lembrar de pagar cada parte até o fim."
+        },
+        {
+          "id": "c",
+          "label": "Só escolher a forma mais rápida",
+          "reflection": "Rapidez importa menos aqui do que conseguir cumprir o combinado."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Cada forma de pagar tem uma vantagem para uma situação diferente.",
+    "Dividir em partes exige lembrar de pagar até o fim."
+  ]
+}

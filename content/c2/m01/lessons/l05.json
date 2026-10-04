@@ -1,0 +1,71 @@
+{
+  "id": "c2-m01-l05",
+  "cycle": "c2",
+  "module": "m01",
+  "order": 5,
+  "title": "Troco: a diferença a seu favor",
+  "headline": "Quando você paga mais do que o preço, o troco devolve a diferença.",
+  "objectives": [
+    "Calcular o troco em uma compra",
+    "Perceber a relação entre valor pago, preço e troco"
+  ],
+  "competencies": ["F-D4-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF05/06",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "De onde vem o troco",
+      "body": "Quando o valor pago é maior do que o preço do produto, a diferença volta para você: isso é o troco. A conta é simples: o que você pagou, menos o preço do produto.",
+      "illustration": "item-coins"
+    },
+    {
+      "type": "change",
+      "prompt": "Você pagou {paid} por um lanche de {price}. Quanto volta de troco?",
+      "paid": 20,
+      "product": {
+        "id": "snack",
+        "label": "Lanche",
+        "price": 14,
+        "illustration": "item-snack"
+      },
+      "options": [4, 6, 8],
+      "feedback": "20 menos 14 é 6: esse é o troco que deve voltar para você."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre o troco:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "O troco é sempre o valor pago menos o preço do produto.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: troco = valor pago − preço."
+        },
+        {
+          "id": "s2",
+          "text": "Se você paga o valor exato, ainda assim recebe troco.",
+          "isTrue": false,
+          "explanation": "Se o valor pago é igual ao preço, não sobra diferença: não há troco."
+        },
+        {
+          "id": "s3",
+          "text": "Conferir o troco ajuda a perceber se a conta fechou certo.",
+          "isTrue": true,
+          "explanation": "Exato: conferir o troco é uma forma simples de cuidar do próprio dinheiro."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Troco é a diferença entre o valor pago e o preço do produto.",
+    "Conferir o troco ajuda a perceber se a conta fechou certo."
+  ]
+}

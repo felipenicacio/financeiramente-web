@@ -1,0 +1,168 @@
+{
+  "id": "m01",
+  "cycle": "c2",
+  "order": 1,
+  "code": "C2.1",
+  "title": "Pagar de um jeito ou de outro",
+  "headline": "Dinheiro, cartão, pix ou carnê: cada forma de pagar tem suas regras.",
+  "summary": "Hoje existem várias formas de pagar. Conhecer cada uma ajuda a entender preço, troco e desconto.",
+  "competencies": ["F-D4-C2-01"],
+  "integrative": {
+    "title": "Juntando tudo",
+    "intro": "Vamos ver o que você descobriu sobre as formas de pagar?",
+    "object": {
+      "type": "quiz",
+      "title": "O que você descobriu",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Pix, cartão e carnê têm algo em comum: são todos",
+          "options": [
+            {
+              "id": "a",
+              "label": "Formas de pagar"
+            },
+            {
+              "id": "b",
+              "label": "Tipos de moeda"
+            },
+            {
+              "id": "c",
+              "label": "Produtos à venda"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Dinheiro, cartão, pix e carnê são formas diferentes de pagar a mesma compra.",
+          "illustration": "item-wallet"
+        },
+        {
+          "id": "q2",
+          "kind": "decision",
+          "prompt": "Pagar com dinheiro em espécie tem qual vantagem?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Você vê exatamente quanto está gastando"
+            },
+            {
+              "id": "b",
+              "label": "Sempre dá desconto"
+            },
+            {
+              "id": "c",
+              "label": "Nunca precisa de troco"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Com dinheiro em espécie, o valor sai fisicamente da carteira: é mais fácil perceber o gasto."
+        },
+        {
+          "id": "q3",
+          "kind": "explanation",
+          "prompt": "Qual é a diferença entre preço e valor?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Preço é o número na etiqueta; valor é o quanto algo importa para você"
+            },
+            {
+              "id": "b",
+              "label": "São sempre a mesma coisa"
+            },
+            {
+              "id": "c",
+              "label": "Valor é sempre maior que o preço"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "O preço está na etiqueta. O valor é pessoal: a mesma coisa pode valer mais para uma pessoa que para outra."
+        },
+        {
+          "id": "q4",
+          "kind": "situation",
+          "prompt": "Um produto custa R$ 20 com 10 por cento de desconto. O que isso significa?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Você paga um pouco menos que R$ 20"
+            },
+            {
+              "id": "b",
+              "label": "Você paga R$ 20 a mais"
+            },
+            {
+              "id": "c",
+              "label": "O produto ficou mais caro"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Desconto é uma redução sobre o preço: você paga menos do que o valor original."
+        },
+        {
+          "id": "q5",
+          "kind": "recognition",
+          "prompt": "Troco é o valor que você recebe quando",
+          "options": [
+            {
+              "id": "a",
+              "label": "Paga mais do que o preço do produto"
+            },
+            {
+              "id": "b",
+              "label": "Paga menos do que o preço"
+            },
+            {
+              "id": "c",
+              "label": "Compra pelo pix"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "O troco é a diferença entre o que você pagou e o preço: paid - price."
+        }
+      ]
+    }
+  },
+  "conclusion": {
+    "title": "Você concluiu o módulo",
+    "message": "Existem várias formas de pagar, cada uma com suas vantagens. Preço, valor, desconto e troco ajudam a entender quanto sai do seu bolso.",
+    "recap": [
+      {
+        "icon": "money",
+        "tone": "amber",
+        "text": "Dinheiro, cartão, pix e carnê são formas de pagar."
+      },
+      {
+        "icon": "price",
+        "tone": "coral",
+        "text": "Preço é o número; valor é o quanto algo importa."
+      },
+      {
+        "icon": "change",
+        "tone": "teal",
+        "text": "Desconto reduz o preço; troco devolve a diferença."
+      },
+      {
+        "icon": "info",
+        "tone": "cyan",
+        "text": "Cada forma de pagar tem uma regra diferente."
+      }
+    ]
+  },
+  "theme": "descoberta"
+}

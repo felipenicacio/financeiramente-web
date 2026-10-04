@@ -6,18 +6,18 @@ Conteúdo fixo, escrito, revisado e aprovado antes da publicação. **Sem login,
 
 ## Status
 
-Ciclo **C1 (6–8 anos)** completo no currículo v2.0: 6 módulos, 30 lições, abertos em qualquer ordem.
+Ciclos **C1 (6–8 anos)** e **C2 (9–11 anos)** completos no currículo v2.0: 6 módulos e 30 lições em cada um, abertos em qualquer ordem.
 
-| Módulo | Título                             |
-| ------ | ---------------------------------- |
-| C1.1   | O dinheiro está por toda parte     |
-| C1.2   | Quero, preciso ou posso esperar?   |
-| C1.3   | Preço, comparação e troco          |
-| C1.4   | Trabalho, renda, bens e serviços   |
-| C1.5   | Guardar e cuidar                   |
-| C1.6   | Escolhas, influência e convivência |
+| C1                                      | C2                                                    |
+| --------------------------------------- | ----------------------------------------------------- |
+| C1.1 O dinheiro está por toda parte     | C2.1 Pagar de um jeito ou de outro                    |
+| C1.2 Quero, preciso ou posso esperar?   | C2.2 Esperar vale a pena: metas e prioridades         |
+| C1.3 Preço, comparação e troco          | C2.3 Comparar de verdade: preço, qualidade e promoção |
+| C1.4 Trabalho, renda, bens e serviços   | C2.4 Orçamento da família: receita, despesa e saldo   |
+| C1.5 Guardar e cuidar                   | C2.5 Trabalho, renda e compromisso                    |
+| C1.6 Escolhas, influência e convivência | C2.6 Guardar, proteger e contribuir                   |
 
-Arquitetura **ciclo → módulo → lição → objetos**: cada módulo tem 5 lições; cada lição tem de 2 a 4 objetos educacionais de tipos variados (explicação, história, conceitos, classificação, comparação, troco, escolha, ordenação, V/F, quiz, reflexão). Cada módulo fecha com avaliação integradora e a síntese "O que descobrimos?" — sem nota e sem certificado. Ciclos C2–C4 em preparação. Detalhes em [docs/content-architecture.md](docs/content-architecture.md).
+Arquitetura **ciclo → módulo → lição → objetos**: cada módulo tem 5 lições; cada lição tem de 2 a 4 objetos educacionais de tipos variados (explicação, história, conceitos, classificação, comparação, troco, escolha, ordenação, V/F, quiz, reflexão). Cada módulo fecha com avaliação integradora e a síntese "O que descobrimos?" — sem nota e sem certificado. Ciclos C3–C4 em preparação. Detalhes em [docs/content-architecture.md](docs/content-architecture.md).
 
 O guia **Econominho** usa os assets individuais aprovados (v2, em `public/econominho/`), com falas por estado pedagógico.
 

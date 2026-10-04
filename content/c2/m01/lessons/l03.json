@@ -1,0 +1,79 @@
+{
+  "id": "c2-m01-l03",
+  "cycle": "c2",
+  "module": "m01",
+  "order": 3,
+  "title": "Preço e valor não são a mesma coisa",
+  "headline": "O preço está na etiqueta. O valor é o quanto algo importa para você.",
+  "objectives": [
+    "Diferenciar preço de valor",
+    "Perceber que o valor pode mudar de pessoa para pessoa"
+  ],
+  "competencies": ["F-D4-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF03",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "guide": {
+    "state": "discover",
+    "text": "Será que a coisa mais cara é sempre a que mais importa?"
+  },
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Dois números, dois sentidos",
+      "body": "O preço é o número fixo na etiqueta: todo mundo paga o mesmo. O valor é como cada pessoa enxerga aquilo: pode ser prático, bonito, divertido ou importante para alguém e não para outra.",
+      "illustration": "item-pricetag"
+    },
+    {
+      "type": "story",
+      "title": "A caneta da vovó",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-pencil",
+          "text": "Nina tem uma caneta simples que custou pouco na papelaria."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-sparkles",
+          "text": "Mas foi a vovó quem deu de presente. Para Nina, essa caneta vale muito mais do que o preço dela."
+        }
+      ],
+      "closing": "O preço de uma coisa nem sempre mostra o quanto ela vale para alguém."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre preço e valor:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "O preço é o mesmo para qualquer pessoa que comprar o produto.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: o preço está na etiqueta e vale para todo mundo."
+        },
+        {
+          "id": "s2",
+          "text": "O valor que uma coisa tem para você é sempre igual ao preço dela.",
+          "isTrue": false,
+          "explanation": "Nem sempre: algo barato pode valer muito, e algo caro pode valer pouco para você."
+        },
+        {
+          "id": "s3",
+          "text": "Uma lembrança de família pode valer mais do que o preço que custou.",
+          "isTrue": true,
+          "explanation": "Exato: o valor afetivo não aparece na etiqueta."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Preço é o número na etiqueta; valor é o quanto algo importa.",
+    "A mesma coisa pode valer mais para uma pessoa do que para outra."
+  ]
+}

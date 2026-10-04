@@ -1,0 +1,99 @@
+{
+  "id": "c2-m02-l04",
+  "cycle": "c2",
+  "module": "m02",
+  "order": 4,
+  "title": "Esperar para juntar vale a pena",
+  "headline": "Adiar uma compra pode significar alcançar algo maior depois.",
+  "objectives": [
+    "Perceber o valor de adiar uma compra para alcançar uma meta",
+    "Relacionar espera com planejamento, não com desistência"
+  ],
+  "competencies": ["F-D1-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF10",
+      "role": "principal"
+    },
+    {
+      "source": "FB1",
+      "reference": "cap. 3",
+      "role": "complementar"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "guide": {
+    "state": "consequence",
+    "text": "O que acontece quando a gente escolhe esperar por algo maior?"
+  },
+  "content": [
+    {
+      "type": "story",
+      "title": "O fone ou a viagem",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-tablet",
+          "text": "Téo tem R$ 50 guardados e viu um fone de ouvido simples do mesmo valor."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-crossroads",
+          "text": "Mas a família está planejando uma viagem, e ele também quer levar algum dinheiro extra para esse passeio."
+        }
+      ],
+      "question": {
+        "prompt": "O que Téo pode fazer com os R$ 50?",
+        "options": [
+          {
+            "id": "a",
+            "label": "Comprar o fone agora",
+            "reflection": "Pode escolher isso: resolve uma vontade na hora, mas usa todo o valor guardado."
+          },
+          {
+            "id": "b",
+            "label": "Guardar para levar na viagem",
+            "reflection": "Também é uma escolha válida: o valor fica disponível para outro momento que ele também quer aproveitar."
+          }
+        ]
+      },
+      "closing": "Não existe resposta única: esperar é uma escolha, não uma obrigação."
+    },
+    {
+      "type": "explanation",
+      "title": "O que esperar pode trazer",
+      "body": "Esperar não significa abrir mão da vontade: pode significar guardar energia e dinheiro para algo que você valoriza ainda mais, ou simplesmente ganhar tempo para decidir com calma.",
+      "illustration": "item-calendar"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre esperar para alcançar uma meta:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Esperar sempre significa desistir da vontade.",
+          "isTrue": false,
+          "explanation": "Esperar pode ser parte do plano, não uma desistência."
+        },
+        {
+          "id": "s2",
+          "text": "Adiar uma compra pode ajudar a alcançar uma meta maior.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: o valor que ficaria numa compra pode seguir rumo a outro objetivo."
+        },
+        {
+          "id": "s3",
+          "text": "Não existe uma única resposta certa sobre esperar ou não.",
+          "isTrue": true,
+          "explanation": "Exato: depende do que cada pessoa valoriza mais naquele momento."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Esperar pode ser parte do plano para alcançar algo maior.",
+    "Não existe uma resposta única: depende do que você valoriza."
+  ]
+}

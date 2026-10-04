@@ -1,0 +1,134 @@
+{
+  "id": "c2-m06-l02",
+  "cycle": "c2",
+  "module": "m06",
+  "order": 2,
+  "title": "Guardar para imprevistos também",
+  "headline": "Uma reserva ajuda a família a lidar com gastos inesperados sem susto.",
+  "objectives": [
+    "Entender o conceito de reserva para imprevistos",
+    "Diferenciar reserva de imprevistos de poupança para metas"
+  ],
+  "competencies": ["F-D8-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF10",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Um colchão para imprevistos",
+      "body": "Além de guardar para metas, muitas famílias também guardam uma parte do dinheiro só para imprevistos: um conserto, um remédio, algo que surge sem aviso.",
+      "illustration": "item-stethoscope"
+    },
+    {
+      "type": "classify",
+      "prompt": "Classifique cada situação de uso do dinheiro guardado.",
+      "categories": [
+        {
+          "id": "goal",
+          "label": "Meta planejada",
+          "short": "Objetivo certo",
+          "icon": "goal",
+          "tone": "teal"
+        },
+        {
+          "id": "unexpected",
+          "label": "Imprevisto",
+          "short": "Surgiu sem aviso",
+          "icon": "limit",
+          "tone": "coral"
+        }
+      ],
+      "items": [
+        {
+          "id": "trip",
+          "label": "Juntar para uma viagem de férias já planejada",
+          "situation": "A família sabe há meses que vai viajar.",
+          "accepted": ["goal"],
+          "feedback": "Uma viagem planejada com antecedência é uma meta, não um imprevisto.",
+          "illustration": "item-boat"
+        },
+        {
+          "id": "leak",
+          "label": "Consertar um vazamento que apareceu de repente",
+          "situation": "Ninguém esperava esse gasto este mês.",
+          "accepted": ["unexpected"],
+          "feedback": "Um gasto que surge sem aviso é exatamente o que a reserva de imprevistos cobre.",
+          "illustration": "item-bench"
+        },
+        {
+          "id": "game",
+          "label": "Juntar para um jogo de tabuleiro em três meses",
+          "situation": "É uma compra desejada e já planejada com tempo.",
+          "accepted": ["goal"],
+          "feedback": "Um objetivo planejado com tempo é uma meta, não um imprevisto.",
+          "illustration": "item-boardgame"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "title": "Pensando em reservas",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "explanation",
+          "prompt": "Para que serve uma reserva de imprevistos?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Cobrir gastos inesperados sem bagunçar o orçamento do mês"
+            },
+            {
+              "id": "b",
+              "label": "Ser gasta em qualquer vontade do momento"
+            },
+            {
+              "id": "c",
+              "label": "Substituir o orçamento mensal"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "A reserva existe para amortecer o impacto de um gasto que ninguém esperava."
+        },
+        {
+          "id": "q2",
+          "kind": "decision",
+          "prompt": "Qual é a diferença entre poupar para uma meta e manter uma reserva de imprevistos?",
+          "options": [
+            {
+              "id": "a",
+              "label": "A meta tem um objetivo certo; a reserva cobre o inesperado"
+            },
+            {
+              "id": "b",
+              "label": "Não existe nenhuma diferença entre as duas"
+            },
+            {
+              "id": "c",
+              "label": "A reserva é sempre maior que qualquer meta"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "A meta tem destino certo; a reserva está pronta para o que ninguém previu."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Uma reserva de imprevistos cobre gastos que ninguém esperava.",
+    "Ela é diferente de guardar dinheiro para uma meta planejada."
+  ]
+}

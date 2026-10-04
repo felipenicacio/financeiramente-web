@@ -1,0 +1,168 @@
+{
+  "id": "m04",
+  "cycle": "c2",
+  "order": 4,
+  "code": "C2.4",
+  "title": "Orçamento da família: receita, despesa e saldo",
+  "headline": "Orçamento organiza o que entra e o que sai, para o saldo fechar no fim do mês.",
+  "summary": "Toda família lida com receitas, despesas e imprevistos. Organizar isso é o que chamamos de orçamento.",
+  "competencies": ["F-D5-C2-01", "F-D3-C2-01"],
+  "integrative": {
+    "title": "Juntando tudo",
+    "intro": "Vamos ver o que você descobriu sobre orçamento?",
+    "object": {
+      "type": "quiz",
+      "title": "O que você descobriu",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Orçamento é uma ferramenta para",
+          "options": [
+            {
+              "id": "a",
+              "label": "Organizar o que entra e o que sai do dinheiro"
+            },
+            {
+              "id": "b",
+              "label": "Gastar sem nenhum controle"
+            },
+            {
+              "id": "c",
+              "label": "Guardar segredos financeiros"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Orçamento organiza receitas e despesas para planejar melhor.",
+          "illustration": "item-notebook"
+        },
+        {
+          "id": "q2",
+          "kind": "recognition",
+          "prompt": "Receita é",
+          "options": [
+            {
+              "id": "a",
+              "label": "O dinheiro que entra"
+            },
+            {
+              "id": "b",
+              "label": "O dinheiro que sai"
+            },
+            {
+              "id": "c",
+              "label": "Um tipo de desconto"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Receita é tudo que entra: salário, mesada, renda extra."
+        },
+        {
+          "id": "q3",
+          "kind": "recognition",
+          "prompt": "Despesa é",
+          "options": [
+            {
+              "id": "a",
+              "label": "O dinheiro que sai"
+            },
+            {
+              "id": "b",
+              "label": "O dinheiro que entra"
+            },
+            {
+              "id": "c",
+              "label": "Um tipo de meta"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Despesa é tudo que sai: contas, compras, gastos do dia a dia."
+        },
+        {
+          "id": "q4",
+          "kind": "explanation",
+          "prompt": "Um saldo positivo no fim do mês significa que",
+          "options": [
+            {
+              "id": "a",
+              "label": "A receita foi maior do que a despesa"
+            },
+            {
+              "id": "b",
+              "label": "A despesa foi maior do que a receita"
+            },
+            {
+              "id": "c",
+              "label": "Não entrou nem saiu dinheiro"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Saldo positivo acontece quando sobra dinheiro: a receita superou a despesa."
+        },
+        {
+          "id": "q5",
+          "kind": "situation",
+          "prompt": "Quando acontece um imprevisto no orçamento da família, o melhor é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Conversar e ajustar o plano, sem culpar ninguém"
+            },
+            {
+              "id": "b",
+              "label": "Fingir que não aconteceu"
+            },
+            {
+              "id": "c",
+              "label": "Parar de fazer qualquer orçamento"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Imprevistos acontecem com qualquer família: o importante é ajustar o plano com calma."
+        }
+      ]
+    }
+  },
+  "conclusion": {
+    "title": "Você concluiu o módulo",
+    "message": "Orçamento organiza receita, despesa e saldo. Imprevistos acontecem, e ajustar o plano faz parte de cuidar do dinheiro.",
+    "recap": [
+      {
+        "icon": "income",
+        "tone": "green",
+        "text": "Receita é o que entra; despesa é o que sai."
+      },
+      {
+        "icon": "care",
+        "tone": "teal",
+        "text": "Saldo positivo é quando a receita supera a despesa."
+      },
+      {
+        "icon": "limit",
+        "tone": "amber",
+        "text": "Imprevistos acontecem com qualquer família."
+      },
+      {
+        "icon": "info",
+        "tone": "cyan",
+        "text": "Um orçamento simples ajuda a planejar o mês."
+      }
+    ]
+  },
+  "theme": "explicando"
+}

@@ -1,0 +1,90 @@
+{
+  "id": "c2-m05-l02",
+  "cycle": "c2",
+  "module": "m05",
+  "order": 2,
+  "title": "Criar valor: ideias que viram trabalho",
+  "headline": "Oferecer algo útil para outras pessoas pode se transformar em renda.",
+  "objectives": [
+    "Compreender o conceito de criar valor",
+    "Reconhecer exemplos simples de criação de valor"
+  ],
+  "competencies": ["F-D7-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF13",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "story",
+      "title": "A ideia da Nina",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-paints",
+          "text": "Nina gosta de desenhar e percebeu que algumas pessoas adorariam ter um cartão personalizado."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-coins",
+          "text": "Ela passou a fazer cartões para quem pedia, combinando um valor justo por cada um."
+        }
+      ],
+      "closing": "Nina transformou algo que sabia fazer em uma forma simples de criar valor para outras pessoas."
+    },
+    {
+      "type": "choice",
+      "prompt": "O que faz da ideia da Nina uma forma de criar valor?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Ela oferece algo útil que outras pessoas querem e estão dispostas a pagar",
+          "reflection": "Isso mesmo: criar valor é oferecer algo que resolve ou agrada alguém."
+        },
+        {
+          "id": "b",
+          "label": "Ela só desenha para ela mesma",
+          "reflection": "Se fosse só para ela, não geraria renda: falta a troca com outra pessoa."
+        },
+        {
+          "id": "c",
+          "label": "Ela pede dinheiro sem entregar nada em troca",
+          "reflection": "Isso não seria criar valor: falta algo útil sendo oferecido de verdade."
+        }
+      ]
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre criar valor:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Criar valor é oferecer algo útil que outra pessoa quer.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: é a base de qualquer trabalho ou negócio."
+        },
+        {
+          "id": "s2",
+          "text": "Só adultos podem ter ideias que criam valor.",
+          "isTrue": false,
+          "explanation": "Ideias simples, como as da Nina, mostram que criar valor não tem idade mínima."
+        },
+        {
+          "id": "s3",
+          "text": "Oferecer um serviço útil pode se transformar em uma fonte de renda.",
+          "isTrue": true,
+          "explanation": "Exato: é assim que muitas ideias simples viram trabalho."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Criar valor é oferecer algo útil que outra pessoa quer.",
+    "Ideias simples também podem gerar valor para alguém."
+  ]
+}

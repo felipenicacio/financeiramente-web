@@ -1,0 +1,75 @@
+{
+  "id": "c2-m05-l04",
+  "cycle": "c2",
+  "module": "m05",
+  "order": 4,
+  "title": "Pagar à vista",
+  "headline": "Pagar à vista é quitar o valor todo de uma vez, na hora da compra.",
+  "objectives": [
+    "Entender o que é pagamento à vista",
+    "Reconhecer situações em que pagar à vista é possível"
+  ],
+  "competencies": ["F-D6-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF45LF01",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Tudo de uma vez",
+      "body": "Pagar à vista é entregar o valor completo no momento da compra, seja em dinheiro, pix ou cartão de débito. Depois de pago, não existe mais compromisso pendente com aquela compra.",
+      "illustration": "item-coins"
+    },
+    {
+      "type": "story",
+      "title": "A compra do Davi",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-book",
+          "text": "Davi comprou um livro e pagou o valor todo na hora, pelo pix."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-pocket",
+          "text": "Assim que o pagamento foi feito, a compra estava completamente quitada, sem nenhuma pendência."
+        }
+      ],
+      "closing": "Pagar à vista encerra o compromisso logo na hora da compra."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre pagar à vista:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Pagar à vista significa quitar o valor todo de uma vez.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: não sobra nenhuma parte para pagar depois."
+        },
+        {
+          "id": "s2",
+          "text": "Depois de pagar à vista, ainda existe um compromisso pendente.",
+          "isTrue": false,
+          "explanation": "Ao pagar à vista, a compra já está totalmente quitada."
+        },
+        {
+          "id": "s3",
+          "text": "Pagar à vista pode ser feito em dinheiro, pix ou cartão de débito.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: o importante é o valor sair todo de uma vez."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Pagar à vista é quitar o valor todo na hora da compra.",
+    "Depois do pagamento, não resta compromisso pendente."
+  ]
+}

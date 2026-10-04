@@ -1,0 +1,104 @@
+{
+  "id": "c2-m02-l02",
+  "cycle": "c2",
+  "module": "m02",
+  "order": 2,
+  "title": "Prioridades: o que vem primeiro",
+  "headline": "Quando há mais de uma vontade, prioridade ajuda a escolher a ordem.",
+  "objectives": [
+    "Reconhecer situações que pedem prioridade",
+    "Organizar vontades em uma ordem de importância"
+  ],
+  "competencies": ["F-D1-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF09",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Escolher uma ordem",
+      "body": "Quando existe mais de uma vontade ao mesmo tempo, prioridade é decidir o que vem primeiro. Isso não significa desistir do resto, só organizar a ordem.",
+      "illustration": "item-calendar"
+    },
+    {
+      "type": "classify",
+      "prompt": "Organize cada vontade da Nina pela prioridade.",
+      "categories": [
+        {
+          "id": "first",
+          "label": "Primeiro",
+          "short": "Mais urgente",
+          "icon": "goal",
+          "tone": "teal"
+        },
+        {
+          "id": "later",
+          "label": "Pode esperar",
+          "short": "Menos urgente",
+          "icon": "wait",
+          "tone": "amber"
+        }
+      ],
+      "items": [
+        {
+          "id": "shoes",
+          "label": "Trocar o tênis furado",
+          "situation": "O tênis atual não serve mais para usar na escola.",
+          "accepted": ["first"],
+          "feedback": "Um tênis furado afeta o dia a dia agora: entra na frente da fila.",
+          "illustration": "item-sneaker"
+        },
+        {
+          "id": "stickers",
+          "label": "Comprar um álbum de figurinhas novo",
+          "situation": "Ela já tem um álbum em andamento, mas viu um novo na loja.",
+          "accepted": ["later"],
+          "feedback": "Um álbum novo é legal, mas pode esperar um pouco mais.",
+          "illustration": "item-stickers"
+        },
+        {
+          "id": "book",
+          "label": "Comprar o segundo livro de uma coleção",
+          "situation": "Ela terminou o primeiro livro e quer continuar a história.",
+          "accepted": ["later"],
+          "feedback": "Dá para aproveitar outros livros ou esperar até juntar o valor.",
+          "illustration": "item-book"
+        }
+      ]
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre prioridades:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Prioridade é decidir o que fazer primeiro, não desistir do resto.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: o que não é prioridade agora pode vir depois."
+        },
+        {
+          "id": "s2",
+          "text": "Toda vontade tem sempre a mesma importância.",
+          "isTrue": false,
+          "explanation": "Algumas vontades são mais urgentes que outras, dependendo da situação."
+        },
+        {
+          "id": "s3",
+          "text": "Depois de decidir a prioridade, as outras vontades deixam de existir.",
+          "isTrue": false,
+          "explanation": "Elas continuam existindo: só passam a esperar a vez."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Prioridade é decidir o que vem primeiro entre várias vontades.",
+    "O que não é prioridade agora pode vir depois."
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "id": "c2-m06-l01",
+  "cycle": "c2",
+  "module": "m06",
+  "order": 1,
+  "title": "Poupar com um motivo",
+  "headline": "Guardar dinheiro fica mais fácil quando existe um motivo claro.",
+  "objectives": [
+    "Relacionar poupança a um objetivo definido",
+    "Perceber a diferença entre guardar sem rumo e poupar com meta"
+  ],
+  "competencies": ["F-D8-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF10",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "guide": {
+    "state": "ask",
+    "text": "Você guarda dinheiro pensando em algo especial?"
+  },
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Um motivo muda tudo",
+      "body": "Guardar dinheiro sem nenhum motivo é mais fácil de desistir. Quando existe um objetivo claro, como uma viagem ou um presente, fica mais fácil manter o hábito.",
+      "illustration": "item-jar"
+    },
+    {
+      "type": "story",
+      "title": "O pote do Caio",
+      "values": {
+        "goal": 120
+      },
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-jar",
+          "text": "Caio tem um pote onde guarda parte do que recebe, pensando num fone de ouvido de {goal}."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-sparkles",
+          "text": "Toda vez que fica tentado a gastar à toa, ele lembra do motivo e decide guardar um pouco mais."
+        }
+      ],
+      "closing": "Ter um motivo claro ajuda a manter o hábito de poupar."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre poupar com um motivo:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Ter um objetivo claro ajuda a manter o hábito de guardar dinheiro.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: um motivo dá sentido ao esforço de guardar."
+        },
+        {
+          "id": "s2",
+          "text": "Guardar dinheiro só faz sentido para quem é adulto.",
+          "isTrue": false,
+          "explanation": "Guardar com um motivo pode ser praticado em qualquer idade."
+        },
+        {
+          "id": "s3",
+          "text": "Lembrar do motivo ajuda a resistir a uma compra por impulso.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: o motivo funciona como um lembrete na hora da tentação."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Poupar com um motivo claro ajuda a manter o hábito.",
+    "Um objetivo dá sentido ao esforço de guardar dinheiro."
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "id": "c2-m04-l02",
+  "cycle": "c2",
+  "module": "m04",
+  "order": 2,
+  "title": "Receita e despesa",
+  "headline": "Receita entra, despesa sai: a base de qualquer orçamento.",
+  "objectives": [
+    "Diferenciar receita de despesa",
+    "Classificar exemplos do dia a dia em receita ou despesa"
+  ],
+  "competencies": ["F-D5-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF12",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Duas setas, dois sentidos",
+      "body": "Receita é o dinheiro que entra, como salário, mesada ou um trabalho extra. Despesa é o dinheiro que sai, como contas, alimentação e compras.",
+      "illustration": "item-wallet",
+      "bullets": [
+        {
+          "text": "Receita: entra no bolso ou na conta.",
+          "icon": "income",
+          "tone": "green"
+        },
+        {
+          "text": "Despesa: sai do bolso ou da conta.",
+          "icon": "price",
+          "tone": "coral"
+        }
+      ]
+    },
+    {
+      "type": "classify",
+      "prompt": "Classifique cada item como receita ou despesa.",
+      "categories": [
+        {
+          "id": "income",
+          "label": "Receita",
+          "short": "Entra",
+          "icon": "income",
+          "tone": "green"
+        },
+        {
+          "id": "expense",
+          "label": "Despesa",
+          "short": "Sai",
+          "icon": "price",
+          "tone": "coral"
+        }
+      ],
+      "items": [
+        {
+          "id": "allowance",
+          "label": "Mesada recebida no início do mês",
+          "situation": "Um valor combinado que chega todo mês.",
+          "accepted": ["income"],
+          "feedback": "Mesada é receita: um valor que entra regularmente.",
+          "illustration": "item-coins"
+        },
+        {
+          "id": "grocery",
+          "label": "Compra de alimentos no mercado",
+          "situation": "A família paga pelas compras do mês.",
+          "accepted": ["expense"],
+          "feedback": "Comprar alimentos é despesa: o dinheiro sai para pagar algo necessário.",
+          "illustration": "item-apple"
+        },
+        {
+          "id": "job",
+          "label": "Pagamento por um trabalho extra de fim de semana",
+          "situation": "Alguém da família fez um serviço e recebeu por isso.",
+          "accepted": ["income"],
+          "feedback": "Um pagamento recebido por trabalho também é receita.",
+          "illustration": "item-chair"
+        },
+        {
+          "id": "bus",
+          "label": "Passagem de ônibus para ir ao trabalho",
+          "situation": "O valor é pago toda vez que alguém usa o transporte.",
+          "accepted": ["expense"],
+          "feedback": "Transporte é um gasto recorrente: entra como despesa.",
+          "illustration": "item-bus"
+        }
+      ]
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre receita e despesa:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Mesada e salário são exemplos de receita.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: ambos são valores que entram regularmente."
+        },
+        {
+          "id": "s2",
+          "text": "Despesa é qualquer valor que entra no orçamento.",
+          "isTrue": false,
+          "explanation": "Despesa é o que sai, não o que entra. Quem entra é a receita."
+        },
+        {
+          "id": "s3",
+          "text": "Um trabalho extra pago no fim de semana também conta como receita.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: qualquer valor recebido por um trabalho é receita."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Receita é o que entra; despesa é o que sai.",
+    "Reconhecer os dois ajuda a entender o orçamento da família."
+  ]
+}

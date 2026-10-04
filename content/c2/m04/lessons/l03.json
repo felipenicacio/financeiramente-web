@@ -1,0 +1,115 @@
+{
+  "id": "c2-m04-l03",
+  "cycle": "c2",
+  "module": "m04",
+  "order": 3,
+  "title": "Saldo: o que sobra ou o que falta",
+  "headline": "Saldo é a diferença entre tudo que entrou e tudo que saiu.",
+  "objectives": [
+    "Calcular um saldo simples a partir de receita e despesa",
+    "Entender o que significa saldo positivo e negativo"
+  ],
+  "competencies": ["F-D5-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF14",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "A conta do saldo",
+      "body": "Saldo é a receita menos a despesa. Se sobra dinheiro, o saldo é positivo. Se falta, o saldo é negativo: foi gasto mais do que entrou.",
+      "illustration": "item-notebook"
+    },
+    {
+      "type": "story",
+      "title": "O mês da família de Téo",
+      "values": {
+        "income": 400,
+        "expense": 350
+      },
+      "derived": [
+        {
+          "name": "balance",
+          "expr": "income - expense"
+        }
+      ],
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-wallet",
+          "text": "A família de Téo recebeu {income} de receita neste mês."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-notebook",
+          "text": "As despesas do mês somaram {expense}, e sobraram {balance}."
+        }
+      ],
+      "closing": "O saldo positivo mostra que a receita foi maior do que a despesa nesse mês."
+    },
+    {
+      "type": "quiz",
+      "title": "Calculando o saldo",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "situation",
+          "prompt": "Se a receita do mês foi R$ 300 e a despesa foi R$ 350, o saldo é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Negativo: faltaram R$ 50"
+            },
+            {
+              "id": "b",
+              "label": "Positivo: sobraram R$ 50"
+            },
+            {
+              "id": "c",
+              "label": "Zero"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "300 menos 350 é -50: o saldo ficou negativo, faltando R$ 50."
+        },
+        {
+          "id": "q2",
+          "kind": "explanation",
+          "prompt": "Um saldo negativo recorrente é um sinal para",
+          "options": [
+            {
+              "id": "a",
+              "label": "Rever as despesas ou buscar formas de aumentar a receita"
+            },
+            {
+              "id": "b",
+              "label": "Ignorar e continuar do mesmo jeito"
+            },
+            {
+              "id": "c",
+              "label": "Parar de anotar os gastos"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Um saldo negativo repetido pede ajustes: rever gastos ou buscar mais receita."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Saldo é a receita menos a despesa.",
+    "Saldo positivo é quando sobra; negativo é quando falta."
+  ]
+}

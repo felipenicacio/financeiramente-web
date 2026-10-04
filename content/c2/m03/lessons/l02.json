@@ -1,0 +1,75 @@
+{
+  "id": "c2-m03-l02",
+  "cycle": "c2",
+  "module": "m03",
+  "order": 2,
+  "title": "Preço baixo não é tudo",
+  "headline": "Qualidade também entra na conta de uma boa compra.",
+  "objectives": [
+    "Perceber que qualidade influencia uma escolha de compra",
+    "Comparar produtos considerando preço e durabilidade"
+  ],
+  "competencies": ["F-D2-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF04",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Barato pode sair caro",
+      "body": "Um produto mais barato que estraga rápido pode custar mais, no fim, do que um um pouco mais caro que dura bastante. Vale pensar no preço junto com a qualidade.",
+      "illustration": "item-sneaker"
+    },
+    {
+      "type": "compare",
+      "prompt": "Qual tênis custa menos por mês de uso, considerando a durabilidade?",
+      "target": "least",
+      "products": [
+        {
+          "id": "cheap",
+          "label": "Tênis simples: dura 2 meses, custa",
+          "price": 40,
+          "illustration": "item-sneaker"
+        },
+        {
+          "id": "mid",
+          "label": "Tênis reforçado: dura 6 meses, custa",
+          "price": 60,
+          "illustration": "item-sneaker"
+        }
+      ],
+      "feedback": "O tênis simples custa R$ 20 por mês de uso; o reforçado custa R$ 10 por mês. O mais barato na etiqueta nem sempre é o mais barato no uso."
+    },
+    {
+      "type": "choice",
+      "prompt": "Você precisa de uma mochila para usar todo dia na escola. O que considerar além do preço?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Se o material é resistente para o uso diário",
+          "reflection": "Isso mesmo: durabilidade importa para algo usado com frequência."
+        },
+        {
+          "id": "b",
+          "label": "Só a cor da mochila",
+          "reflection": "A cor pode importar, mas sozinha não garante que a mochila vai durar."
+        },
+        {
+          "id": "c",
+          "label": "Nada além do preço mais baixo",
+          "reflection": "O preço mais baixo pode não durar: vale pensar no uso que você vai dar."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Preço baixo não garante a melhor escolha.",
+    "Durabilidade e uso pesam tanto quanto o preço na etiqueta."
+  ]
+}

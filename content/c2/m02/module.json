@@ -1,0 +1,168 @@
+{
+  "id": "m02",
+  "cycle": "c2",
+  "order": 2,
+  "code": "C2.2",
+  "title": "Esperar vale a pena: metas e prioridades",
+  "headline": "Definir uma meta e esperar um pouco pode valer mais do que comprar na hora.",
+  "summary": "Toda meta pede prioridade: decidir o que vem primeiro para alcançar o que você quer.",
+  "competencies": ["F-D1-C2-01"],
+  "integrative": {
+    "title": "Juntando tudo",
+    "intro": "Vamos ver o que você descobriu sobre metas e prioridades?",
+    "object": {
+      "type": "quiz",
+      "title": "O que você descobriu",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "recognition",
+          "prompt": "Uma meta financeira é",
+          "options": [
+            {
+              "id": "a",
+              "label": "Algo que você planeja alcançar guardando dinheiro"
+            },
+            {
+              "id": "b",
+              "label": "Um gasto feito sem pensar"
+            },
+            {
+              "id": "c",
+              "label": "Uma conta de banco"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Meta é um objetivo definido, alcançado aos poucos com planejamento.",
+          "illustration": "item-jar"
+        },
+        {
+          "id": "q2",
+          "kind": "decision",
+          "prompt": "Definir prioridades significa",
+          "options": [
+            {
+              "id": "a",
+              "label": "Decidir o que é mais importante fazer primeiro"
+            },
+            {
+              "id": "b",
+              "label": "Fazer tudo ao mesmo tempo"
+            },
+            {
+              "id": "c",
+              "label": "Nunca escolher nada"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Prioridade é a ordem: o que vem primeiro, o que pode esperar."
+        },
+        {
+          "id": "q3",
+          "kind": "recognition",
+          "prompt": "Uma meta de curto prazo é alcançada",
+          "options": [
+            {
+              "id": "a",
+              "label": "Em pouco tempo, como algumas semanas"
+            },
+            {
+              "id": "b",
+              "label": "Só depois de muitos anos"
+            },
+            {
+              "id": "c",
+              "label": "Sem nenhum planejamento"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Curto prazo é logo ali; médio e longo prazo levam mais tempo."
+        },
+        {
+          "id": "q4",
+          "kind": "situation",
+          "prompt": "Esperar para comprar algo que você quer",
+          "options": [
+            {
+              "id": "a",
+              "label": "Pode ajudar a alcançar uma meta maior"
+            },
+            {
+              "id": "b",
+              "label": "É sempre desistir da vontade"
+            },
+            {
+              "id": "c",
+              "label": "Nunca vale a pena"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Esperar não é desistir: é organizar o tempo para alcançar algo que importa mais."
+        },
+        {
+          "id": "q5",
+          "kind": "explanation",
+          "prompt": "Um plano para uma meta geralmente tem",
+          "options": [
+            {
+              "id": "a",
+              "label": "Um valor, um prazo e passos para chegar lá"
+            },
+            {
+              "id": "b",
+              "label": "Só um desejo, sem organização"
+            },
+            {
+              "id": "c",
+              "label": "Nenhuma relação com tempo"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Um plano organiza quanto, até quando e como chegar à meta."
+        }
+      ]
+    }
+  },
+  "conclusion": {
+    "title": "Você concluiu o módulo",
+    "message": "Metas ajudam a organizar o que você quer alcançar. Prioridade é decidir o que vem primeiro, e esperar pode ser parte do plano.",
+    "recap": [
+      {
+        "icon": "goal",
+        "tone": "teal",
+        "text": "Meta é um objetivo organizado com tempo e valor."
+      },
+      {
+        "icon": "choice",
+        "tone": "amber",
+        "text": "Prioridade é decidir o que vem primeiro."
+      },
+      {
+        "icon": "later",
+        "tone": "coral",
+        "text": "Curto, médio e longo prazo têm tempos diferentes."
+      },
+      {
+        "icon": "wait",
+        "tone": "purple",
+        "text": "Esperar pode ser parte do caminho até a meta."
+      }
+    ]
+  },
+  "theme": "pensando"
+}

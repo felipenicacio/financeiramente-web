@@ -1,0 +1,48 @@
+{
+  "cycle": "c2",
+  "title": "O que descobrimos?",
+  "intro": "Depois dos seis módulos, veja quantas ideias você já consegue aplicar no dia a dia.",
+  "discoveries": [
+    {
+      "text": "Existem várias formas de pagar, e cada uma tem sua regra.",
+      "icon": "money",
+      "tone": "amber",
+      "module": "m01"
+    },
+    {
+      "text": "Uma meta é uma vontade com valor, prazo e um plano.",
+      "icon": "goal",
+      "tone": "teal",
+      "module": "m02"
+    },
+    {
+      "text": "Comparar de verdade olha preço, qualidade e necessidade real.",
+      "icon": "info",
+      "tone": "cyan",
+      "module": "m03"
+    },
+    {
+      "text": "Orçamento organiza receita, despesa e saldo.",
+      "icon": "care",
+      "tone": "purple",
+      "module": "m04"
+    },
+    {
+      "text": "Trabalho cria valor, e pagar a prazo é um compromisso até o fim.",
+      "icon": "work",
+      "tone": "green",
+      "module": "m05"
+    },
+    {
+      "text": "Guardar com um motivo, proteger dados e entender a vida em comunidade.",
+      "icon": "save",
+      "tone": "coral",
+      "module": "m06"
+    }
+  ],
+  "guide": {
+    "state": "reflect",
+    "text": "Qual dessas ideias você já pode conversar com a sua família esta semana?"
+  },
+  "closing": "Essas ideias aparecem numa compra, num anúncio, no orçamento de casa. Vale revisitar sempre que surgir uma dessas situações."
+}

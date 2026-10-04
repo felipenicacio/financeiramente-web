@@ -1,0 +1,123 @@
+{
+  "id": "c2-m03-l05",
+  "cycle": "c2",
+  "module": "m03",
+  "order": 5,
+  "title": "Decidindo com calma: a lista de compras",
+  "headline": "Uma lista simples ajuda a comparar sem se perder nas opções.",
+  "objectives": [
+    "Reconhecer a utilidade de uma lista antes de comprar",
+    "Organizar passos para decidir uma compra com calma"
+  ],
+  "competencies": ["F-D2-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF04",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "story",
+      "title": "A lista da Nina",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-notebook",
+          "text": "Antes de ir à papelaria, Nina escreveu uma lista do que realmente precisava."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-shop",
+          "text": "Na loja, ela viu vários produtos chamativos, mas seguiu a lista e comparou preços dos itens que precisava."
+        }
+      ],
+      "closing": "A lista ajudou Nina a comparar com calma, sem se perder nas opções."
+    },
+    {
+      "type": "ordering",
+      "prompt": "Coloque os passos de uma boa comparação na ordem certa.",
+      "instructions": "Pense no que vem primeiro para decidir uma compra com calma.",
+      "items": [
+        {
+          "id": "list",
+          "label": "Escrever o que realmente é necessário",
+          "illustration": "item-notebook"
+        },
+        {
+          "id": "search",
+          "label": "Comparar preço e qualidade entre as opções",
+          "illustration": "item-magnifier"
+        },
+        {
+          "id": "decide",
+          "label": "Escolher a opção que melhor atende à necessidade",
+          "illustration": "item-pricetag"
+        }
+      ],
+      "correct": ["list", "search", "decide"],
+      "feedback": "Primeiro organiza, depois compara, e só então decide: essa ordem ajuda a escolher com calma."
+    },
+    {
+      "type": "quiz",
+      "title": "Comparando com calma",
+      "questions": [
+        {
+          "id": "q1",
+          "kind": "decision",
+          "prompt": "Uma lista de compras ajuda principalmente porque",
+          "options": [
+            {
+              "id": "a",
+              "label": "Organiza o que você realmente precisa comprar"
+            },
+            {
+              "id": "b",
+              "label": "Faz você gastar mais rápido"
+            },
+            {
+              "id": "c",
+              "label": "Impede qualquer comparação"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "A lista foca a atenção no que é necessário, facilitando a comparação."
+        },
+        {
+          "id": "q2",
+          "kind": "situation",
+          "prompt": "Ao ver um produto fora da lista chamando atenção, o que ajuda a decidir com calma?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Parar e pensar se ele realmente é necessário"
+            },
+            {
+              "id": "b",
+              "label": "Comprar na hora, sem pensar"
+            },
+            {
+              "id": "c",
+              "label": "Ignorar a lista por completo"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Parar e pensar ajuda a manter o foco no que realmente importa."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Uma lista ajuda a comparar com calma, sem se perder nas opções.",
+    "Organizar, comparar e só depois decidir é um bom caminho."
+  ]
+}

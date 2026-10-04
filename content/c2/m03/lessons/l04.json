@@ -1,0 +1,78 @@
+{
+  "id": "c2-m03-l04",
+  "cycle": "c2",
+  "module": "m03",
+  "order": 4,
+  "title": "Comparando marcas e embalagens",
+  "headline": "Embalagens diferentes pedem contas diferentes para comparar de verdade.",
+  "objectives": [
+    "Comparar produtos com embalagens de tamanhos diferentes",
+    "Perceber que marca não garante sozinha a melhor escolha"
+  ],
+  "competencies": ["F-D2-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF35LF04",
+      "role": "principal"
+    }
+  ],
+  "sensitivity": "N1",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Marca, tamanho e preço",
+      "body": "Uma marca conhecida pode custar mais sem necessariamente ser melhor para o que você precisa. E embalagens de tamanhos diferentes pedem uma conta a mais para comparar de verdade.",
+      "illustration": "item-pricetag"
+    },
+    {
+      "type": "compare",
+      "prompt": "Qual suco tem o melhor preço, considerando o mesmo tamanho de embalagem?",
+      "target": "least",
+      "products": [
+        {
+          "id": "brand-a",
+          "label": "Marca conhecida",
+          "price": 9,
+          "illustration": "item-juice"
+        },
+        {
+          "id": "brand-b",
+          "label": "Marca simples",
+          "price": 6,
+          "illustration": "item-juice"
+        }
+      ],
+      "feedback": "No mesmo tamanho, a marca simples custa menos. A marca conhecida nem sempre é a melhor escolha de preço."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre comparar marcas e embalagens:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Uma marca mais famosa é sempre a de melhor qualidade.",
+          "isTrue": false,
+          "explanation": "Fama não garante qualidade: vale comparar características reais."
+        },
+        {
+          "id": "s2",
+          "text": "Embalagens de tamanhos diferentes podem exigir uma conta extra para comparar o preço.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: comparar o preço por unidade ajuda a ver qual é realmente mais barato."
+        },
+        {
+          "id": "s3",
+          "text": "Comparar o preço por unidade ajuda a ver qual embalagem é mais barata de verdade.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: essa conta revela o preço real de cada opção."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Marca conhecida não garante sozinha a melhor escolha.",
+    "Comparar embalagens de tamanhos diferentes pede uma conta a mais."
+  ]
+}

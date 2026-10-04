@@ -1,0 +1,80 @@
+{
+  "id": "c2-m06-l04",
+  "cycle": "c2",
+  "module": "m06",
+  "order": 4,
+  "title": "Para que servem os impostos",
+  "headline": "Parte do dinheiro pago vira serviços usados por toda a comunidade.",
+  "objectives": [
+    "Reconhecer, em nível introdutório, a função dos impostos",
+    "Relacionar impostos a serviços públicos usados no dia a dia"
+  ],
+  "competencies": ["F-D9-C2-01"],
+  "sources": [
+    {
+      "source": "AV-C",
+      "reference": "EF67LF09",
+      "role": "principal"
+    },
+    {
+      "source": "BNCC",
+      "reference": "EF04CO",
+      "role": "complementar"
+    }
+  ],
+  "sensitivity": "N2",
+  "estimatedMinutes": 4,
+  "content": [
+    {
+      "type": "explanation",
+      "title": "Uma parte que vira coisa de todos",
+      "body": "Quando alguém compra um produto ou recebe um salário, uma parte desse valor costuma ir para o governo, como imposto. Esse dinheiro ajuda a pagar escolas, hospitais, ruas e outros serviços usados por toda a comunidade.",
+      "illustration": "item-chalkboard"
+    },
+    {
+      "type": "story",
+      "title": "A escola de Lúcia",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-chalkboard",
+          "text": "Lúcia estuda numa escola pública perto de casa, sem pagar mensalidade."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-street",
+          "text": "Parte do dinheiro que mantém essa escola vem dos impostos pagos por várias pessoas da cidade."
+        }
+      ],
+      "closing": "Serviços como escolas e hospitais públicos são financiados, em parte, pelos impostos."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre impostos:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Impostos ajudam a financiar serviços usados por toda a comunidade.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: escolas, hospitais e ruas são exemplos de serviços financiados assim."
+        },
+        {
+          "id": "s2",
+          "text": "O dinheiro dos impostos desaparece sem nenhuma utilidade.",
+          "isTrue": false,
+          "explanation": "O dinheiro dos impostos é usado para manter serviços públicos."
+        },
+        {
+          "id": "s3",
+          "text": "Só quem tem muito dinheiro paga algum tipo de imposto.",
+          "isTrue": false,
+          "explanation": "Vários impostos aparecem em compras do dia a dia, de qualquer valor."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Impostos ajudam a financiar serviços usados por toda a comunidade.",
+    "Escolas, hospitais e ruas são exemplos desses serviços."
+  ]
+}
