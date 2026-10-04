@@ -66,6 +66,23 @@
       "intro": "O trabalho pode produzir coisas ou ajudar pessoas:"
     },
     {
+      "type": "story",
+      "title": "Fazendo e ajudando",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "story-bakery",
+          "text": "O seu Jorge faz pães na padaria: ele produz um bem, uma coisa que dá para pegar."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-bus",
+          "text": "A motorista Lúcia leva as pessoas no ônibus: ela faz um serviço, ajuda alguém."
+        }
+      ],
+      "closing": "Tem trabalho que produz coisas e tem trabalho que ajuda pessoas."
+    },
+    {
       "type": "classify",
       "categories": [
         {

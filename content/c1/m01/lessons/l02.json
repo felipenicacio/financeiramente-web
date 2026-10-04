@@ -44,6 +44,29 @@
       "title": "Quando não existia dinheiro"
     },
     {
+      "type": "explanation",
+      "title": "Isso se chama troca",
+      "body": "Quando você dá uma coisa para receber outra, sem usar dinheiro, isso é uma troca (também chamada de escambo).",
+      "illustration": "item-apple",
+      "bullets": [
+        {
+          "text": "Você dá o que tem de sobra.",
+          "icon": "trade",
+          "tone": "purple"
+        },
+        {
+          "text": "E recebe o que está precisando.",
+          "icon": "good",
+          "tone": "teal"
+        },
+        {
+          "text": "Só funciona se os dois quiserem a troca.",
+          "icon": "info",
+          "tone": "amber"
+        }
+      ]
+    },
+    {
       "type": "trueFalse",
       "statements": [
         {

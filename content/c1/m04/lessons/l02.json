@@ -20,13 +20,30 @@
     }
   ],
   "sensitivity": "N1",
-  "estimatedMinutes": 3,
+  "estimatedMinutes": 4,
   "content": [
     {
       "type": "explanation",
       "body": "Muitas pessoas trabalham para alguém: numa loja, numa escola ou numa empresa. Elas fazem o trabalho combinado e recebem dinheiro por isso.",
       "title": "Trabalhar para alguém",
       "illustration": "item-chalkboard"
+    },
+    {
+      "type": "story",
+      "title": "Um trabalho combinado",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-chalkboard",
+          "text": "A professora Marta dá aula numa escola todos os dias."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-income",
+          "text": "No fim do mês, ela recebe dinheiro pelo trabalho dela."
+        }
+      ],
+      "closing": "Quem trabalha para alguém faz o combinado e recebe por isso."
     },
     {
       "type": "choice",

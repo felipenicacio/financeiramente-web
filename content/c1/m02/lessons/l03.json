@@ -44,6 +44,24 @@
       "title": "Depende da situação"
     },
     {
+      "type": "explanation",
+      "title": "Depende da situação",
+      "body": "A mesma coisa pode ser necessidade numa hora e desejo em outra. O que muda é a situação: o clima, o momento, o que já se tem.",
+      "illustration": "item-coat",
+      "bullets": [
+        {
+          "text": "Casaco no frio: faz falta agora.",
+          "icon": "need",
+          "tone": "teal"
+        },
+        {
+          "text": "Casaco no calor: dá para esperar.",
+          "icon": "wait",
+          "tone": "amber"
+        }
+      ]
+    },
+    {
       "type": "classify",
       "categories": [
         {

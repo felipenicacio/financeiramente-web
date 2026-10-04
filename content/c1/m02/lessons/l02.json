@@ -20,13 +20,30 @@
     }
   ],
   "sensitivity": "N1",
-  "estimatedMinutes": 3,
+  "estimatedMinutes": 4,
   "content": [
     {
       "type": "explanation",
       "body": "Querer é ter vontade de algo que deixa a gente feliz, mas que não faz falta para o dia a dia. Querer coisas é totalmente normal.",
       "title": "Querer é ter vontade",
       "illustration": "item-stickers"
+    },
+    {
+      "type": "story",
+      "title": "Deu vontade",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-stickers",
+          "text": "Você vê uns adesivos lindos na loja e fica com vontade de levar."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-thinking",
+          "text": "Querer é normal. Dá para decidir com calma se leva agora ou espera."
+        }
+      ],
+      "closing": "Ter vontade não é problema: o importante é escolher o que fazer com ela."
     },
     {
       "type": "choice",

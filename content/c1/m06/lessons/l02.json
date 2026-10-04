@@ -58,6 +58,23 @@
       "intro": "Um anúncio pode fazer duas coisas ao mesmo tempo:"
     },
     {
+      "type": "story",
+      "title": "Dois tipos de frase",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "story-ad-claim",
+          "text": "O anúncio diz: “Este robô tem quatro peças.” Isso dá para conferir."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-ad-loud",
+          "text": "E também diz: “Todo mundo quer!”, com música alta. Isso é para te convencer."
+        }
+      ],
+      "closing": "Um anúncio costuma misturar informação com frases que tentam convencer."
+    },
+    {
       "type": "classify",
       "categories": [
         {

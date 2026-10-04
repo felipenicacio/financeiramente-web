@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { EconominhoGuide } from '@/components/econominho/EconominhoGuide';
-import { econominhoAssets } from '@/components/econominho/assets';
+import { econominhoAssets, themePoses, type ThemePose } from '@/components/econominho/assets';
 import { AppHeader } from '@/components/layout/AppHeader';
 import { ContentError } from '@/components/layout/ContentError';
 import { PageContainer } from '@/components/layout/PageContainer';
@@ -16,10 +16,8 @@ import { routes, slugFromOrder } from '@/lib/learning/steps';
 
 type Params = { ciclo: string; modulo: string };
 
-const THEME_KEYS = ['m01', 'm02', 'm03', 'm04'] as const;
-type ThemeKey = (typeof THEME_KEYS)[number];
-const isThemeKey = (value: string | undefined): value is ThemeKey =>
-  (THEME_KEYS as readonly string[]).includes(value ?? '');
+const isThemeKey = (value: string | undefined): value is ThemePose =>
+  (themePoses as readonly string[]).includes(value ?? '');
 
 export const dynamicParams = false;
 

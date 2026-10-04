@@ -87,6 +87,23 @@
       "keyIdeaIllustration": "item-coat"
     },
     {
+      "type": "story",
+      "title": "Jogo agora ou bicicleta depois?",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-boardgame",
+          "text": "A Bia viu um jogo novo e deu vontade de comprar."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-jar",
+          "text": "Mas ela está juntando para uma bicicleta. Ela para e pensa qual é mais importante para ela agora."
+        }
+      ],
+      "closing": "Nem toda vontade precisa ser atendida na hora."
+    },
+    {
       "type": "choice",
       "prompt": "A Bia quer um jogo novo, mas está juntando para uma bicicleta. O que ela pode fazer?",
       "options": [

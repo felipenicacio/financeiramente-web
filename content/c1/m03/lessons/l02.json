@@ -23,30 +23,22 @@
   "estimatedMinutes": 4,
   "content": [
     {
-      "type": "compare",
-      "prompt": "Qual custa mais?",
-      "target": "most",
-      "products": [
+      "type": "explanation",
+      "title": "Comparar preços",
+      "body": "Comparar é olhar os preços lado a lado para ver qual custa mais e qual custa menos. Isso ajuda a escolher com mais calma.",
+      "illustration": "item-pricetag",
+      "bullets": [
         {
-          "id": "notebook",
-          "label": "Caderno",
-          "price": 5,
-          "illustration": "item-notebook"
+          "text": "Mais caro: o preço é maior.",
+          "icon": "price",
+          "tone": "coral"
         },
         {
-          "id": "book",
-          "label": "Livro",
-          "price": 10,
-          "illustration": "item-book"
-        },
-        {
-          "id": "pencil",
-          "label": "Lápis",
-          "price": 2,
-          "illustration": "item-pencil"
+          "text": "Mais barato: o preço é menor.",
+          "icon": "price",
+          "tone": "teal"
         }
-      ],
-      "feedback": "O livro tem o maior preço. Isso não quer dizer que é melhor: só custa mais."
+      ]
     },
     {
       "type": "compare",
@@ -73,6 +65,30 @@
         }
       ],
       "feedback": "O pão tem o menor preço. Comparar ajuda a saber quanto vamos usar do dinheiro."
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Sobre comparar preços:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Comparar ajuda a ver qual custa mais e qual custa menos.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: é para isso que a gente compara."
+        },
+        {
+          "id": "s2",
+          "text": "O mais caro é sempre o melhor para você.",
+          "isTrue": false,
+          "explanation": "Nem sempre. Depende do que você precisa e quer."
+        },
+        {
+          "id": "s3",
+          "text": "O menor preço é o do mais barato.",
+          "isTrue": true,
+          "explanation": "Exato: menor preço, mais barato."
+        }
+      ]
     }
   ],
   "summary": [

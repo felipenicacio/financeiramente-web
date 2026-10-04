@@ -45,6 +45,29 @@
       "title": "A meta da Nina"
     },
     {
+      "type": "explanation",
+      "title": "Juntar para uma meta",
+      "body": "Meta é algo que você quer e vai juntando aos poucos para conseguir. Para chegar lá, alguns passos ajudam.",
+      "illustration": "item-jar",
+      "bullets": [
+        {
+          "text": "Escolher a meta.",
+          "icon": "goal",
+          "tone": "purple"
+        },
+        {
+          "text": "Saber quanto ela custa.",
+          "icon": "price",
+          "tone": "amber"
+        },
+        {
+          "text": "Guardar um pouco de cada vez.",
+          "icon": "save",
+          "tone": "teal"
+        }
+      ]
+    },
+    {
       "type": "ordering",
       "prompt": "Coloque os passos de juntar para uma meta na ordem.",
       "items": [

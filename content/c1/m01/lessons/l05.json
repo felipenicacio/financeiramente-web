@@ -47,6 +47,27 @@
       ]
     },
     {
+      "type": "choice",
+      "prompt": "No salão você paga pelo corte de cabelo. E se levar também um shampoo?",
+      "options": [
+        {
+          "id": "a",
+          "label": "O corte é serviço e o shampoo é coisa",
+          "reflection": "Isso mesmo: às vezes você paga por um serviço e por uma coisa na mesma hora."
+        },
+        {
+          "id": "b",
+          "label": "Os dois são coisas",
+          "reflection": "O shampoo dá para pegar (coisa), mas cortar o cabelo é um trabalho que alguém faz (serviço)."
+        },
+        {
+          "id": "c",
+          "label": "Os dois são serviços",
+          "reflection": "Cortar é serviço, mas o shampoo você leva para casa: é uma coisa."
+        }
+      ]
+    },
+    {
       "type": "classify",
       "categories": [
         {

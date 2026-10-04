@@ -25,13 +25,30 @@
     }
   ],
   "sensitivity": "N1",
-  "estimatedMinutes": 3,
+  "estimatedMinutes": 4,
   "content": [
     {
       "type": "explanation",
       "body": "Precisar é quando algo faz falta de verdade. Comida, água, um lugar para dormir e cuidar da saúde são coisas que a gente precisa.",
       "title": "Precisar é o que faz falta",
       "illustration": "item-bottle"
+    },
+    {
+      "type": "story",
+      "title": "Quando faz falta de verdade",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "story-street",
+          "text": "Num dia muito quente, você fica com sede de verdade."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-bottle",
+          "text": "Água não é só vontade: o corpo precisa dela. Isso é uma necessidade."
+        }
+      ],
+      "closing": "Necessidade é o que faz falta mesmo, não só o que dá vontade."
     },
     {
       "type": "classify",

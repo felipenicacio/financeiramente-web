@@ -46,21 +46,28 @@
       "feedback": "O troco é a diferença entre o que você pagou e o preço."
     },
     {
-      "type": "change",
-      "prompt": "O pão custa {price}. Você paga com {paid}. Quanto volta?",
-      "paid": 5,
-      "product": {
-        "id": "bread",
-        "label": "Pão",
-        "price": 2,
-        "illustration": "item-bread"
-      },
-      "options": [
-        2,
-        3,
-        5
-      ],
-      "feedback": "Pagamos mais do que o preço, então uma parte volta. Esse é o troco."
+      "type": "trueFalse",
+      "prompt": "Sobre o troco:",
+      "statements": [
+        {
+          "id": "s1",
+          "text": "Troco é o dinheiro que volta quando pagamos mais do que o preço.",
+          "isTrue": true,
+          "explanation": "Isso mesmo: a parte que sobra volta para você."
+        },
+        {
+          "id": "s2",
+          "text": "Se você paga o valor exato, ainda sobra troco.",
+          "isTrue": false,
+          "explanation": "Não: pagando certinho, não volta nada."
+        },
+        {
+          "id": "s3",
+          "text": "O troco é a diferença entre o que você pagou e o preço.",
+          "isTrue": true,
+          "explanation": "Exato: pagou menos o preço é o troco."
+        }
+      ]
     }
   ],
   "summary": [

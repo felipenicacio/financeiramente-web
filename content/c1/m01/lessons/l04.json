@@ -109,6 +109,26 @@
       ],
       "prompt": "Moeda ou cédula?",
       "instructions": "Leia e escolha: isso é moeda ou cédula?"
+    },
+    {
+      "type": "compare",
+      "prompt": "Qual costuma valer mais?",
+      "target": "most",
+      "products": [
+        {
+          "id": "coin",
+          "label": "Uma moeda",
+          "price": 1,
+          "illustration": "item-coin"
+        },
+        {
+          "id": "note",
+          "label": "Uma cédula",
+          "price": 10,
+          "illustration": "item-banknote"
+        }
+      ],
+      "feedback": "As cédulas costumam valer mais que as moedas. Por isso guardamos as duas com cuidado."
     }
   ],
   "summary": [

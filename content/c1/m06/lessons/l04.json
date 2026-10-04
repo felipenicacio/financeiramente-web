@@ -34,6 +34,23 @@
       "illustration": "item-tablet"
     },
     {
+      "type": "story",
+      "title": "O jogo pede dados",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-tablet",
+          "text": "Um jogo pede seu nome, endereço e telefone para continuar."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-thinking",
+          "text": "Antes de escrever qualquer coisa, você chama um adulto de confiança."
+        }
+      ],
+      "closing": "Informações pessoais pedem cuidado: um adulto de confiança ajuda a decidir."
+    },
+    {
       "type": "trueFalse",
       "statements": [
         {

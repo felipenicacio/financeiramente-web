@@ -48,6 +48,24 @@
       "feedback": "A caixa pequena custa menos. A grande tem mais lápis, mas custa mais. Você escolhe o que faz sentido."
     },
     {
+      "type": "explanation",
+      "title": "Comparar é pensar junto",
+      "body": "Comparar não é só olhar o preço. Também dá para pensar quanto você vai usar e se precisa de muito ou de pouco.",
+      "illustration": "item-magnifier",
+      "bullets": [
+        {
+          "text": "Quanto custa cada um.",
+          "icon": "price",
+          "tone": "amber"
+        },
+        {
+          "text": "Do que você precisa de verdade.",
+          "icon": "need",
+          "tone": "teal"
+        }
+      ]
+    },
+    {
       "type": "choice",
       "prompt": "A caixa grande custa mais. Isso quer dizer que você deve comprar sempre a mais cara?",
       "options": [

@@ -44,6 +44,27 @@
       "title": "Do trabalho à renda"
     },
     {
+      "type": "choice",
+      "prompt": "Quando alguém da família trabalha, o dinheiro que entra tem um nome. Qual é?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Renda",
+          "reflection": "Isso mesmo: renda é o dinheiro que a família recebe."
+        },
+        {
+          "id": "b",
+          "label": "Troco",
+          "reflection": "Troco é o que volta numa compra. A renda é o que entra pelo trabalho."
+        },
+        {
+          "id": "c",
+          "label": "Preço",
+          "reflection": "Preço é quanto uma coisa custa. Renda é o dinheiro que entra."
+        }
+      ]
+    },
+    {
       "type": "reflection",
       "state": "summary",
       "text": "Trabalho vira bens, serviços e renda. E a renda é dividida entre as escolhas da família.",

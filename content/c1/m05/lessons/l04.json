@@ -29,6 +29,23 @@
       "illustration": "item-backpack"
     },
     {
+      "type": "story",
+      "title": "Dura mais",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-backpack",
+          "text": "A mochila bem guardada aguenta o ano todo."
+        },
+        {
+          "id": "p2",
+          "illustration": "item-book",
+          "text": "O livro cuidado ainda pode passar para outra criança depois."
+        }
+      ],
+      "closing": "Cuidar bem faz as coisas durarem e ajuda a economizar."
+    },
+    {
       "type": "classify",
       "categories": [
         {

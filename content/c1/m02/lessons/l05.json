@@ -87,6 +87,27 @@
       "closing": "Não existe uma única resposta certa. Cada escolha traz algo agora e muda o que acontece depois."
     },
     {
+      "type": "choice",
+      "prompt": "Você ganhou um dinheiro de presente e está juntando para uma bola. O que ajuda a juntar mais rápido?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Guardar uma partinha agora",
+          "reflection": "Boa: guardar um pouco de cada vez deixa a meta mais perto."
+        },
+        {
+          "id": "b",
+          "label": "Gastar tudo em outra coisa",
+          "reflection": "Você pode, mas aí a bola vai demorar mais para chegar."
+        },
+        {
+          "id": "c",
+          "label": "Esperar e pensar com calma",
+          "reflection": "Esperar é uma escolha esperta quando você quer algo maior."
+        }
+      ]
+    },
+    {
       "type": "reflection",
       "state": "reflect",
       "text": "Esperar não é desistir. É escolher o melhor momento para algo que a gente quer.",

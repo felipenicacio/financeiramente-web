@@ -20,13 +20,30 @@
     }
   ],
   "sensitivity": "N1",
-  "estimatedMinutes": 3,
+  "estimatedMinutes": 4,
   "content": [
     {
       "type": "explanation",
       "body": "Guardar é deixar um pouco de dinheiro para depois, em vez de gastar tudo agora. Guardando um pouco de cada vez, dá para alcançar algo maior lá na frente.",
       "title": "Guardar é para depois",
       "illustration": "item-jar"
+    },
+    {
+      "type": "story",
+      "title": "Aos poucos enche",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-jar",
+          "text": "Você começa a guardar uma partinha num pote."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-jar",
+          "text": "Semana após semana o pote enche, e aquilo que você quer fica mais perto."
+        }
+      ],
+      "closing": "Guardar um pouco de cada vez é o jeito de alcançar algo maior."
     },
     {
       "type": "choice",

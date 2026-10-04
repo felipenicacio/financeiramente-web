@@ -30,6 +30,23 @@
       "illustration": "item-wallet"
     },
     {
+      "type": "story",
+      "title": "O que cabe hoje",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-wallet",
+          "text": "Você tem um dinheiro no bolso para gastar hoje."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-shop",
+          "text": "Você olha os preços: o que cabe dá para levar; o que custa mais fica para outro dia."
+        }
+      ],
+      "closing": "Ver o que cabe ajuda a escolher sem susto na hora de pagar."
+    },
+    {
       "type": "afford",
       "prompt": "Você tem {budget}. O que dá para comprar?",
       "budget": 10,

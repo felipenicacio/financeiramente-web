@@ -1,4 +1,4 @@
-import { existsSync } from 'node:fs';
+import { existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 import {
@@ -7,7 +7,7 @@ import {
   loadCycleSummary,
   loadModuleBundle,
 } from '@/lib/content';
-import { econominhoAssets } from '@/components/econominho/assets';
+import { econominhoAssets, themePoses } from '@/components/econominho/assets';
 import { competencyCodes, sourceCodes } from '@/lib/validation/contentSchemas';
 import type { Lesson } from '@/lib/content/types';
 import competencyCatalog from '@/content/competencies.json';
@@ -62,10 +62,41 @@ describe('módulos e lições do C1', () => {
     expect(new Set(ids).size).toBe(ids.length);
   });
 
-  it('cada lição tem de 2 a 4 objetos de tipos variados', () => {
+  it('cada lição tem de 2 a 4 objetos', () => {
     for (const lesson of allLessons()) {
       expect(lesson.content.length).toBeGreaterThanOrEqual(2);
       expect(lesson.content.length).toBeLessThanOrEqual(4);
+    }
+  });
+
+  // Barra de qualidade do template C1 (herdada por C2–C4):
+  // arco ensinar → mostrar → aplicar, sem repetir tipo e sempre com interação.
+  it('cada lição tem ao menos 3 objetos (arco completo)', () => {
+    for (const lesson of allLessons()) {
+      expect(lesson.content.length).toBeGreaterThanOrEqual(3);
+    }
+  });
+
+  it('cada lição usa tipos de objeto variados (sem repetir tipo)', () => {
+    for (const lesson of allLessons()) {
+      const types = lesson.content.map((object) => object.type);
+      expect(new Set(types).size).toBe(types.length);
+    }
+  });
+
+  it('cada lição tem ao menos um objeto interativo', () => {
+    const interactive = new Set([
+      'classify',
+      'compare',
+      'afford',
+      'change',
+      'choice',
+      'ordering',
+      'trueFalse',
+      'quiz',
+    ]);
+    for (const lesson of allLessons()) {
+      expect(lesson.content.some((object) => interactive.has(object.type))).toBe(true);
     }
   });
 });
@@ -131,10 +162,27 @@ describe('assets oficiais do Econominho', () => {
     }
   });
 
-  it('as imagens temáticas m01..m04 existem', () => {
-    for (const key of ['m01', 'm02', 'm03', 'm04'] as const) {
-      const rel = econominhoAssets.theme(key).replace(/^.*?(\/econominho\/)/, 'econominho/');
+  it('cada pose de tema existe no disco', () => {
+    for (const pose of themePoses) {
+      const rel = econominhoAssets.theme(pose).replace(/^.*?(\/econominho\/)/, 'econominho/');
       expect(existsSync(join(root, 'public', rel))).toBe(true);
     }
+  });
+
+  it('o theme de cada módulo é uma pose válida', () => {
+    const valid = new Set<string>(themePoses);
+    for (const { cycle, moduleId } of modules) {
+      const bundle = loadModuleBundle(cycle, moduleId);
+      if (!bundle.ok) continue;
+      const { theme } = bundle.data.module;
+      if (theme) expect(valid.has(theme)).toBe(true);
+    }
+  });
+
+  it('não sobra nenhum asset do pacote antigo (econominho-assets-v1)', () => {
+    const dir = join(root, 'public', 'econominho', 'character');
+    const pngs = readdirSync(dir).filter((name) => name.endsWith('.png'));
+    // Todos os PNGs de personagem devem ser os v2 aprovados.
+    for (const name of pngs) expect(name.endsWith('-v2.png')).toBe(true);
   });
 });

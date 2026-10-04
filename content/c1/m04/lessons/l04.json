@@ -34,6 +34,23 @@
       "illustration": "item-wallet"
     },
     {
+      "type": "story",
+      "title": "O dinheiro que entra",
+      "panels": [
+        {
+          "id": "p1",
+          "illustration": "item-wallet",
+          "text": "Quando alguém da casa trabalha, entra um dinheiro: é a renda."
+        },
+        {
+          "id": "p2",
+          "illustration": "story-family-choice",
+          "text": "Com a renda, a família decide junto o que comprar e o que guardar."
+        }
+      ],
+      "closing": "Bens e serviços são o trabalho; a renda é o dinheiro que entra por ele."
+    },
+    {
       "type": "classify",
       "categories": [
         {
