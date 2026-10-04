@@ -524,6 +524,134 @@ const StoryTwoChoices: Shape = ({ labels }) => (
   </g>
 );
 
+// ---------- C1 · M02: escolhas, necessidades e espera ----------
+
+const C1NeedNow: Shape = () => (
+  <g>
+    <rect x={8} y={12} width={304} height={176} rx={26} fill={p.cyan50} />
+    <circle cx={270} cy={42} r={22} fill={p.amber100} />
+    <path d="M270 11v14M270 59v14M239 42h14M287 42h14" stroke={p.amber500} strokeWidth={4} strokeLinecap="round" />
+    <path d="M8 150q58-22 108 0t96 0q52-22 100 0v38H8Z" fill={p.green100} />
+    <CartoonKid x={102} y={74} shirt={p.cyan500} />
+    {place('item-bottle', 142, 78, 74)}
+    <path d="M132 118c10-10 22-14 34-13" stroke={p.cyan700} strokeWidth={4} fill="none" strokeLinecap="round" />
+    <path d="m160 99 8 6-9 4" stroke={p.cyan700} strokeWidth={4} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+    <g transform="translate(205 52)">
+      <rect width={75} height={72} rx={18} fill={p.white} stroke={p.slate200} strokeWidth={2} />
+      {place('item-bread', 7, 9, 55)}
+      {place('item-toothbrush', 36, 22, 44)}
+    </g>
+  </g>
+);
+
+const C1WantStickers: Shape = () => (
+  <g>
+    <rect x={8} y={12} width={304} height={176} rx={26} fill={p.coral50} />
+    <rect x={184} y={28} width={112} height={132} rx={18} fill={p.white} stroke={p.slate200} strokeWidth={2} />
+    <rect x={184} y={28} width={112} height={24} rx={12} fill={p.coral100} />
+    {place('item-stickers', 200, 58, 80)}
+    <CartoonKid x={102} y={76} shirt={p.purple500} />
+    <g transform="translate(52 28)">
+      <circle cx={22} cy={18} r={18} fill={p.white} stroke={p.slate200} strokeWidth={2} />
+      <path d="m22 7 4.5 9.1 10 1.5-7.2 7 1.7 10-9-4.8-9 4.8 1.7-10-7.2-7 10-1.5Z" fill={p.amber500} />
+    </g>
+    <path d="M132 72c20-16 42-19 63-14" stroke={p.coral500} strokeWidth={4} fill="none" strokeLinecap="round" />
+    <path d="m188 51 10 7-11 5" stroke={p.coral500} strokeWidth={4} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+  </g>
+);
+
+const C1ContextChanges: Shape = () => (
+  <g>
+    <rect x={8} y={12} width={146} height={176} rx={24} fill={p.cyan50} />
+    <rect x={166} y={12} width={146} height={176} rx={24} fill={p.amber50} />
+    <circle cx={46} cy={40} r={18} fill={p.white} opacity={0.9} />
+    <path d="M46 18v10M46 52v10M24 40h10M58 40h10" stroke={p.cyan500} strokeWidth={3.5} strokeLinecap="round" />
+    <CartoonKid x={82} y={76} shirt={p.teal500} />
+    {place('item-coat', 99, 88, 60)}
+    <circle cx={270} cy={38} r={20} fill={p.amber100} />
+    <path d="M270 9v12M270 55v12M241 38h12M287 38h12" stroke={p.amber500} strokeWidth={3.5} strokeLinecap="round" />
+    <CartoonKid x={238} y={76} shirt={p.coral500} flip />
+    {place('item-coat', 178, 92, 56)}
+    <path d="M152 38v124" stroke={p.white} strokeWidth={6} strokeLinecap="round" />
+    <circle cx={145} cy={110} r={18} fill={p.white} stroke={p.slate200} strokeWidth={2} />
+    <path d="M138 111l6 6 11-15" stroke={p.green700} strokeWidth={3} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+    <circle cx={175} cy={110} r={18} fill={p.white} stroke={p.slate200} strokeWidth={2} />
+    <path d="M167 102l16 16M183 102l-16 16" stroke={p.coral500} strokeWidth={3} strokeLinecap="round" />
+  </g>
+);
+
+const C1ThreeWays: Shape = () => (
+  <g>
+    <rect x={8} y={12} width={304} height={176} rx={26} fill={p.purple50} />
+    <circle cx={71} cy={76} r={47} fill={p.teal50} stroke={p.teal100} strokeWidth={3} />
+    <circle cx={160} cy={76} r={47} fill={p.coral50} stroke={p.coral100} strokeWidth={3} />
+    <circle cx={249} cy={76} r={47} fill={p.amber50} stroke={p.amber100} strokeWidth={3} />
+    {place('item-bottle', 43, 46, 56)}
+    {place('item-stickers', 132, 44, 58)}
+    {place('item-sneaker', 219, 44, 60)}
+    <path d="M71 126v32M160 126v32M249 126v32" stroke={p.slate300} strokeWidth={4} strokeLinecap="round" />
+    <circle cx={71} cy={160} r={10} fill={p.teal500} />
+    <circle cx={160} cy={160} r={10} fill={p.coral500} />
+    <circle cx={249} cy={160} r={10} fill={p.amber500} />
+  </g>
+);
+
+const C1GameBike: Shape = () => (
+  <g>
+    <rect x={8} y={12} width={304} height={176} rx={26} fill={p.green50} />
+    <CartoonKid x={102} y={78} shirt={p.purple500} />
+    {place('item-boardgame', 34, 98, 58)}
+    <g transform="translate(177 44)">
+      <circle cx={50} cy={49} r={44} fill={p.white} stroke={p.slate200} strokeWidth={2} />
+      <circle cx={32} cy={62} r={14} fill="none" stroke={p.cyan700} strokeWidth={4} />
+      <circle cx={68} cy={62} r={14} fill="none" stroke={p.cyan700} strokeWidth={4} />
+      <path d="M32 62 44 38h18l8 24M44 38 56 62M43 45h18" stroke={p.cyan700} strokeWidth={4} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M54 32h11" stroke={p.coral500} strokeWidth={4} strokeLinecap="round" />
+    </g>
+    <path d="M129 72c24-18 49-21 70-14" stroke={p.green500} strokeWidth={4} fill="none" strokeLinecap="round" />
+    <path d="m192 52 10 6-10 6" stroke={p.green500} strokeWidth={4} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+  </g>
+);
+
+const C1GiftMoney: Shape = ({ labels }) => (
+  <g>
+    <rect x={8} y={12} width={304} height={176} rx={26} fill={p.coral50} />
+    <CartoonKid x={103} y={78} shirt={p.green500} />
+    <g transform="translate(177 48) rotate(-6)">
+      <rect width={96} height={58} rx={10} fill={p.green100} stroke={p.green700} strokeWidth={3} />
+      <text x={48} y={36} fontSize={18} fontWeight={700} fill={p.green700} textAnchor="middle">
+        {labels.gift}
+      </text>
+    </g>
+    <path d="M138 82c18-10 35-12 50-8" stroke={p.coral500} strokeWidth={4} fill="none" strokeLinecap="round" />
+  </g>
+);
+
+const C1SavingGoal: Shape = ({ labels }) => (
+  <g>
+    <rect x={8} y={12} width={304} height={176} rx={26} fill={p.amber50} />
+    <CartoonKid x={92} y={78} shirt={p.cyan500} />
+    {place('item-jar', 132, 66, 90)}
+    {place('item-ball', 230, 78, 62)}
+    <PriceTag x={135} y={32} label={labels.saved} color={p.teal500} />
+    <PriceTag x={228} y={42} label={labels.goalPrice} color={p.cyan500} />
+    <path d="M187 100c16-10 31-11 45-6" stroke={p.amber700} strokeWidth={4} fill="none" strokeLinecap="round" />
+    <path d="m225 87 10 6-10 6" stroke={p.amber700} strokeWidth={4} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+  </g>
+);
+
+const C1StickerChoice: Shape = ({ labels }) => (
+  <g>
+    <rect x={8} y={12} width={304} height={176} rx={26} fill={p.purple50} />
+    <CartoonKid x={94} y={78} shirt={p.green500} />
+    <rect x={177} y={34} width={112} height={126} rx={18} fill={p.white} stroke={p.slate200} strokeWidth={2} />
+    {place('item-stickers', 196, 52, 78)}
+    <PriceTag x={203} y={130} label={labels.temptationPrice} color={p.coral500} />
+    <path d="M127 76c23-17 45-20 67-14" stroke={p.purple500} strokeWidth={4} fill="none" strokeLinecap="round" />
+    <path d="m187 56 10 6-10 6" stroke={p.purple500} strokeWidth={4} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+  </g>
+);
+
 // ---------- C1 · M03: anúncios ----------
 
 const Bursts = ({ x, y }: { x: number; y: number }) => (
@@ -714,6 +842,14 @@ export const sceneShapes = {
   'story-fruit-stand': StoryFruitStand,
   'story-kite-stand': StoryKiteStand,
   'story-two-choices': StoryTwoChoices,
+  'c1-need-now': C1NeedNow,
+  'c1-want-stickers': C1WantStickers,
+  'c1-context-changes': C1ContextChanges,
+  'c1-three-ways': C1ThreeWays,
+  'c1-game-bike': C1GameBike,
+  'c1-gift-money': C1GiftMoney,
+  'c1-saving-goal': C1SavingGoal,
+  'c1-sticker-choice': C1StickerChoice,
   'module-ads': ModuleAds,
   'story-ad-tablet': StoryAdTablet,
   'story-ad-loud': StoryAdLoud,
