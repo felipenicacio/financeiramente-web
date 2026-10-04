@@ -66,7 +66,7 @@
           "examples": [
             {
               "label": "Jogo novo",
-              "illustration": "item-boardgame"
+              "illustration": "c1-game-bike"
             },
             {
               "label": "Tênis novo",
@@ -78,7 +78,7 @@
       "title": "Três jeitos de olhar uma vontade",
       "intro": "Quando bate uma vontade, dá para perguntar: eu preciso, eu quero ou posso esperar?",
       "keyIdea": "A mesma coisa pode mudar de lugar: um casaco é preciso no frio, mas pode esperar no calor.",
-      "keyIdeaIllustration": "item-coat"
+      "keyIdeaIllustration": "c1-context-changes"
     },
     {
       "type": "story",
@@ -91,7 +91,7 @@
         },
         {
           "id": "p2",
-          "illustration": "story-jar",
+          "illustration": "c1-game-bike",
           "text": "Mas ela está juntando para uma bicicleta. Ela para e pensa qual é mais importante para ela agora."
         }
       ],
