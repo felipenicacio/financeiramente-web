@@ -30,6 +30,12 @@ const rasterIllustrations = {
   'c1-m02-l03-p1': '/econominho/lessons/c1/m02/l03-p1.png',
   'c1-m02-l03-p2': '/econominho/lessons/c1/m02/l03-p2.png',
   'c1-m02-l03-p3': '/econominho/lessons/c1/m02/l03-p3.png',
+  'c1-m02-l04-p1': '/econominho/lessons/c1/m02/l04-p1.png',
+  'c1-m02-l04-p2': '/econominho/lessons/c1/m02/l04-p2.png',
+  'c1-m02-l04-p3': '/econominho/lessons/c1/m02/l04-p3.png',
+  'c1-m02-l05-p1': '/econominho/lessons/c1/m02/l05-p1.png',
+  'c1-m02-l05-p2': '/econominho/lessons/c1/m02/l05-p2.png',
+  'c1-m02-l05-p3': '/econominho/lessons/c1/m02/l05-p3.png',
 } as const;
 
 type RasterKey = keyof typeof rasterIllustrations;

@@ -27,7 +27,7 @@
       "panels": [
         {
           "id": "p1",
-          "illustration": "c1-gift-money",
+          "illustration": "c1-m02-l05-p1",
           "text": "No aniversário, o Téo ganhou {gift} de presente da tia Rosa."
         },
         {

@@ -78,7 +78,7 @@
       "title": "Três jeitos de olhar uma vontade",
       "intro": "Quando bate uma vontade, dá para perguntar: eu preciso, eu quero ou posso esperar?",
       "keyIdea": "A mesma coisa pode mudar de lugar: um casaco é preciso no frio, mas pode esperar no calor.",
-      "keyIdeaIllustration": "c1-context-changes"
+      "keyIdeaIllustration": "c1-m02-l04-p1"
     },
     {
       "type": "story",
@@ -86,12 +86,12 @@
       "panels": [
         {
           "id": "p1",
-          "illustration": "item-boardgame",
+          "illustration": "c1-m02-l04-p2",
           "text": "A Bia viu um jogo novo e deu vontade de comprar."
         },
         {
           "id": "p2",
-          "illustration": "c1-game-bike",
+          "illustration": "c1-m02-l04-p2",
           "text": "Mas ela está juntando para uma bicicleta. Ela para e pensa qual é mais importante para ela agora."
         }
       ],
@@ -99,6 +99,7 @@
     },
     {
       "type": "choice",
+      "illustration": "c1-m02-l04-p3",
       "prompt": "A Bia quer um jogo novo, mas está juntando para uma bicicleta. O que ela pode fazer?",
       "options": [
         {
