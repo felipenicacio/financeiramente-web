@@ -488,7 +488,12 @@ describe('sem nota, ranking, certificado ou gamificação', () => {
 const PALAVRAS_DE_ACERTO =
   /\b(isso mesmo|muito bem|perfeito|correto|boa escolha|exatamente|exato|parab[ée]ns)\b/i;
 
-function allModuleBundles(): { cycle: string; moduleId: string; module: Module; lessons: Lesson[] }[] {
+function allModuleBundles(): {
+  cycle: string;
+  moduleId: string;
+  module: Module;
+  lessons: Lesson[];
+}[] {
   return availableModules().flatMap(({ cycle, moduleId }) => {
     const bundle = loadModuleBundle(cycle, moduleId);
     if (!bundle.ok) return [];

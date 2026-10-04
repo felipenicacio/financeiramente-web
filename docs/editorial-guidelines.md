@@ -38,11 +38,11 @@ Limites validados: rótulo até 40 caracteres, linha até 90, parágrafo até 22
 
 ## Retornos (feedback)
 
-| Situação                                   | Título                          | Tom                    |
-| ------------------------------------------- | -------------------------------- | ---------------------- |
-| Atividade objetiva, resposta certa          | "Isso mesmo!"                    | Verde                  |
-| Atividade objetiva, resposta errada         | "Essa não é a resposta certa."   | Ciano (nunca vermelho) |
-| Escolha reflexiva (`choice`), qualquer opção | "Boa escolha para pensar!"       | Neutro                 |
+| Situação                                     | Título                         | Tom                    |
+| -------------------------------------------- | ------------------------------ | ---------------------- |
+| Atividade objetiva, resposta certa           | "Isso mesmo!"                  | Verde                  |
+| Atividade objetiva, resposta errada          | "Essa não é a resposta certa." | Ciano (nunca vermelho) |
+| Escolha reflexiva (`choice`), qualquer opção | "Boa escolha para pensar!"     | Neutro                 |
 
 Em atividade objetiva, o retorno sempre deixa claro se a resposta está certa ou errada (ver "Acerto e erro em atividades objetivas" acima) — nunca com linguagem que soe como acerto no caminho de erro. Em escolha reflexiva, não existe "errado": o retorno explica a consequência da opção escolhida, sem julgamento. Opções de quiz que representam ideias equivocadas ("Ele não devia querer") recebem `feedback` próprio que desfaz a ideia, com o mesmo cuidado de não soar como confirmação de acerto quando a opção é a errada.
 
