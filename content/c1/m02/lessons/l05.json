@@ -27,17 +27,17 @@
       "panels": [
         {
           "id": "p1",
-          "illustration": "story-gift",
+          "illustration": "c1-gift-money",
           "text": "No aniversário, o Téo ganhou {gift} de presente da tia Rosa."
         },
         {
           "id": "p2",
-          "illustration": "story-jar",
+          "illustration": "c1-saving-goal",
           "text": "Ele está juntando para uma bola de {goalPrice}. Já tem {saved} no pote."
         },
         {
           "id": "p3",
-          "illustration": "story-shop",
+          "illustration": "c1-sticker-choice",
           "text": "Na banca, ele viu figurinhas por {temptationPrice}. O Téo adora figurinhas!"
         }
       ],
