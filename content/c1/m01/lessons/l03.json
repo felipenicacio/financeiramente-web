@@ -29,7 +29,7 @@
       "type": "explanation",
       "body": "O dinheiro resolveu um problema das trocas. Em vez de procurar alguém que queira exatamente o que você tem, você usa dinheiro: todo mundo aceita. Assim fica mais fácil comprar e vender.",
       "title": "O dinheiro facilita tudo",
-      "illustration": "c1-money-facilitates"
+      "illustration": "c1-m01-l03-p1"
     },
     {
       "type": "story",
@@ -37,12 +37,12 @@
       "panels": [
         {
           "id": "p1",
-          "illustration": "c1-barter-problem",
+          "illustration": "c1-m01-l02-p3",
           "text": "Sem dinheiro, para conseguir pão você precisa achar um padeiro que queira justo o que você tem para trocar."
         },
         {
           "id": "p2",
-          "illustration": "c1-money-facilitates",
+          "illustration": "c1-m01-l03-p1",
           "text": "Com dinheiro é mais rápido: você paga, o padeiro aceita e pronto."
         }
       ],
