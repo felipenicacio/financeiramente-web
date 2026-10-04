@@ -1,4 +1,4 @@
-import { ConceptIcon, Illustration } from '@/components/illustrations';
+import { ConceptIcon, Illustration, isRasterKey } from '@/components/illustrations';
 import type { Concept } from '@/lib/content/types';
 
 /**
@@ -33,7 +33,12 @@ export function ConceptCard({ concept }: { concept: Concept }) {
                 key={example.label}
                 className="flex flex-col items-center gap-2 rounded-card bg-background p-4 text-center"
               >
-                <Illustration name={example.illustration} className="size-20" />
+                <Illustration
+                  name={example.illustration}
+                  className={
+                    isRasterKey(example.illustration) ? 'h-auto w-full max-w-xs' : 'size-20'
+                  }
+                />
                 <span className="text-label font-semibold">{example.label}</span>
               </li>
             ))}

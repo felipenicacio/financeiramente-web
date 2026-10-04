@@ -48,7 +48,7 @@ export const illustrationKeys = [
   ...Object.keys(rasterIllustrations),
 ] as IllustrationName[];
 
-function isRasterKey(name: string): name is RasterKey {
+export function isRasterKey(name: string): name is RasterKey {
   return name in rasterIllustrations;
 }
 
