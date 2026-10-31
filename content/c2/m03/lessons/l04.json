@@ -51,6 +51,26 @@
             "correctOptionId": "brand-a"
           },
           "explanation": "O suco de 1 litro custa R$ 9 por litro. Duas embalagens de 500 mL custam R$ 12 por litro. Comparar a mesma quantidade evita conclusões erradas pelo preço da embalagem."
+        },
+        {
+          "id": "q2",
+          "kind": "recognition",
+          "prompt": "Quanto custa por litro o suco vendido em embalagem de 500 mL por R$ 6?",
+          "options": [
+            {
+              "id": "a",
+              "label": "R$ 6 por litro"
+            },
+            {
+              "id": "b",
+              "label": "R$ 12 por litro"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "b"
+          },
+          "explanation": "500 mL é meio litro, portanto 1 litro custa R$ 12."
         }
       ]
     },
