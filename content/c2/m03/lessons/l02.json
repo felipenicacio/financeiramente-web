@@ -9,7 +9,9 @@
     "Perceber que qualidade influencia uma escolha de compra",
     "Comparar produtos considerando preço e durabilidade"
   ],
-  "competencies": ["F-D2-C2-01"],
+  "competencies": [
+    "F-D2-C2-01"
+  ],
   "sources": [
     {
       "source": "AV-C",
@@ -23,28 +25,34 @@
     {
       "type": "explanation",
       "title": "Barato pode sair caro",
-      "body": "Um produto mais barato que estraga rápido pode custar mais, no fim, do que um um pouco mais caro que dura bastante. Vale pensar no preço junto com a qualidade.",
+      "body": "Um produto mais barato que estraga rápido pode custar mais, no fim, do que outro um pouco mais caro que dura bastante. Vale pensar no preço junto com a qualidade.",
       "illustration": "item-sneaker"
     },
     {
-      "type": "compare",
-      "prompt": "Qual tênis custa menos por mês de uso, considerando a durabilidade?",
-      "target": "least",
-      "products": [
+      "type": "quiz",
+      "title": "Custo por mês de uso",
+      "questions": [
         {
-          "id": "cheap",
-          "label": "Tênis simples: dura 2 meses, custa",
-          "price": 40,
-          "illustration": "item-sneaker"
-        },
-        {
-          "id": "mid",
-          "label": "Tênis reforçado: dura 6 meses, custa",
-          "price": 60,
-          "illustration": "item-sneaker"
+          "id": "q1",
+          "kind": "calculation",
+          "prompt": "Qual tênis custa menos por mês de uso, considerando a durabilidade?",
+          "options": [
+            {
+              "id": "cheap",
+              "label": "Tênis simples: custa R$ 40 e dura 2 meses (R$ 20 por mês)"
+            },
+            {
+              "id": "mid",
+              "label": "Tênis reforçado: custa R$ 60 e dura 6 meses (R$ 10 por mês)"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "mid"
+          },
+          "explanation": "O tênis simples custa R$ 40 ÷ 2 = R$ 20 por mês; o reforçado custa R$ 60 ÷ 6 = R$ 10 por mês. Em seis meses, o reforçado economiza R$ 60 em comparação com três tênis simples."
         }
-      ],
-      "feedback": "O tênis simples custa R$ 20 por mês de uso; o reforçado custa R$ 10 por mês. O mais barato na etiqueta nem sempre é o mais barato no uso."
+      ]
     },
     {
       "type": "choice",
