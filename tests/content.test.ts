@@ -622,7 +622,6 @@ describe('revisão editorial: coerência acerto/erro', () => {
   });
 });
 
-
 describe('regressões pedagógicas de comparação', () => {
   it('identifica o tênis de menor custo mensal', () => {
     const bundle = loadModuleBundle('c2', 'm03');

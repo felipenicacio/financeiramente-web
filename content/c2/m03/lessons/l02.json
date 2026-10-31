@@ -9,9 +9,7 @@
     "Perceber que qualidade influencia uma escolha de compra",
     "Comparar produtos considerando preço e durabilidade"
   ],
-  "competencies": [
-    "F-D2-C2-01"
-  ],
+  "competencies": ["F-D2-C2-01"],
   "sources": [
     {
       "source": "AV-C",

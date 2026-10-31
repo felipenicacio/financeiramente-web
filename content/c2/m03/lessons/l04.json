@@ -9,9 +9,7 @@
     "Comparar produtos com embalagens de tamanhos diferentes",
     "Perceber que marca não garante sozinha a melhor escolha"
   ],
-  "competencies": [
-    "F-D2-C2-01"
-  ],
+  "competencies": ["F-D2-C2-01"],
   "sources": [
     {
       "source": "AV-C",
