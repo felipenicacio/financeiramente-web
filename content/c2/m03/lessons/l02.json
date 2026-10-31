@@ -51,6 +51,26 @@
             "correctOptionId": "mid"
           },
           "explanation": "O tênis simples custa R$ 40 ÷ 2 = R$ 20 por mês; o reforçado custa R$ 60 ÷ 6 = R$ 10 por mês. Em seis meses, o reforçado economiza R$ 60 em comparação com três tênis simples."
+        },
+        {
+          "id": "q2",
+          "kind": "recognition",
+          "prompt": "Qual opção mostra a conta correta do custo mensal?",
+          "options": [
+            {
+              "id": "a",
+              "label": "R$ 60 ÷ 6 = R$ 10 por mês"
+            },
+            {
+              "id": "b",
+              "label": "R$ 60 ÷ 6 = R$ 20 por mês"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "a"
+          },
+          "explanation": "Dividir o preço pelos meses de uso permite comparar os custos mensais."
         }
       ]
     },
