@@ -9,7 +9,9 @@
     "Comparar produtos com embalagens de tamanhos diferentes",
     "Perceber que marca não garante sozinha a melhor escolha"
   ],
-  "competencies": ["F-D2-C2-01"],
+  "competencies": [
+    "F-D2-C2-01"
+  ],
   "sources": [
     {
       "source": "AV-C",
@@ -27,24 +29,30 @@
       "illustration": "item-pricetag"
     },
     {
-      "type": "compare",
-      "prompt": "Qual suco tem o melhor preço, considerando o mesmo tamanho de embalagem?",
-      "target": "least",
-      "products": [
+      "type": "quiz",
+      "title": "Comparando preços por litro",
+      "questions": [
         {
-          "id": "brand-a",
-          "label": "Marca conhecida",
-          "price": 9,
-          "illustration": "item-juice"
-        },
-        {
-          "id": "brand-b",
-          "label": "Marca simples",
-          "price": 6,
-          "illustration": "item-juice"
+          "id": "q1",
+          "kind": "situation",
+          "prompt": "Um suco de 1 litro custa R$ 9 e outro de 500 mL custa R$ 6. Qual tem o menor preço por litro?",
+          "options": [
+            {
+              "id": "brand-a",
+              "label": "O suco de 1 litro, que custa R$ 9 por litro"
+            },
+            {
+              "id": "brand-b",
+              "label": "O suco de 500 mL, que custa R$ 12 por litro"
+            }
+          ],
+          "answer": {
+            "type": "single",
+            "correctOptionId": "brand-a"
+          },
+          "explanation": "O suco de 1 litro custa R$ 9 por litro. Duas embalagens de 500 mL custam R$ 12 por litro. Comparar a mesma quantidade evita conclusões erradas pelo preço da embalagem."
         }
-      ],
-      "feedback": "No mesmo tamanho, a marca simples custa menos. A marca conhecida nem sempre é a melhor escolha de preço."
+      ]
     },
     {
       "type": "trueFalse",
