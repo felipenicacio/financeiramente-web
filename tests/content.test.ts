@@ -609,13 +609,13 @@ describe('revisão editorial: coerência acerto/erro', () => {
       if (obj.type === 'trueFalse') trueFalseStatements += obj.statements.length;
       if (obj.type === 'classify') classifyItems += obj.items.length;
     }
-    expect(count.quiz).toBe(56);
-    expect(quizQuestions).toBe(175);
+    expect(count.quiz).toBe(58);
+    expect(quizQuestions).toBe(179);
     expect(count.trueFalse).toBe(55);
     expect(trueFalseStatements).toBe(165);
     expect(count.classify).toBe(32);
     expect(classifyItems).toBe(109);
-    expect(count.compare).toBe(9);
+    expect(count.compare).toBe(7);
     expect(count.afford).toBe(2);
     expect(count.change).toBe(2);
     expect(count.ordering).toBe(11);
