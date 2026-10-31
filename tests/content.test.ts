@@ -621,3 +621,31 @@ describe('revisão editorial: coerência acerto/erro', () => {
     expect(count.ordering).toBe(11);
   });
 });
+
+
+describe('regressões pedagógicas de comparação', () => {
+  it('identifica o tênis de menor custo mensal', () => {
+    const bundle = loadModuleBundle('c2', 'm03');
+    expect(bundle.ok).toBe(true);
+    if (!bundle.ok) return;
+    const lesson = bundle.data.lessons.find((item) => item.id === 'c2-m03-l02');
+    const quiz = lesson?.content.find((item) => item.type === 'quiz');
+    expect(quiz?.type).toBe('quiz');
+    if (quiz?.type !== 'quiz') return;
+    const question = quiz.questions[0]!;
+    expect(question.answer).toEqual({ type: 'single', correctOptionId: 'mid' });
+    expect(40 / 2).toBeGreaterThan(60 / 6);
+  });
+
+  it('compara preços por litro, não apenas preços de embalagem', () => {
+    const bundle = loadModuleBundle('c2', 'm03');
+    expect(bundle.ok).toBe(true);
+    if (!bundle.ok) return;
+    const lesson = bundle.data.lessons.find((item) => item.id === 'c2-m03-l04');
+    const quiz = lesson?.content.find((item) => item.type === 'quiz');
+    expect(quiz?.type).toBe('quiz');
+    if (quiz?.type !== 'quiz') return;
+    expect(quiz.questions[0]?.answer).toEqual({ type: 'single', correctOptionId: 'brand-a' });
+    expect(9 / 1).toBeLessThan(6 / 0.5);
+  });
+});
