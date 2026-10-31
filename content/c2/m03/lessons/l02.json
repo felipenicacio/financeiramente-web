@@ -34,7 +34,7 @@
       "questions": [
         {
           "id": "q1",
-          "kind": "calculation",
+          "kind": "situation",
           "prompt": "Qual tênis custa menos por mês de uso, considerando a durabilidade?",
           "options": [
             {
